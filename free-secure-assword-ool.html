@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Strong Password Generator | Free Secure Password Tool</title>
+    <meta name="description" content="Free random strong password generator. Create secure, customizable passwords with letters, numbers and symbols instantly. No sign up, 100% free.">
+    <meta name="author" content="Free Online Tool">
+    <link rel="canonical" href="">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui, Arial, sans-serif;}
+        body{max-width:900px;margin:0 auto;padding:20px;color:#333;background:#f9fafb;}
+        h1{font-size:28px;margin:20px 0;color:#111;}
+        h2{font-size:22px;margin:30px 0 12px;color:#222;}
+        p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+        .tool-card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 2px 8px #00000010;margin:25px 0;}
+        .pass-box{display:flex;gap:10px;margin-bottom:20px;}
+        #passwordOutput{flex:1;padding:14px;border:1px solid #ddd;border-radius:8px;font-size:16px;}
+        button{padding:14px 20px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;}
+        button:hover{background:#1d4ed8;}
+        .option-item{margin:12px 0;font-size:16px;}
+        ul{padding-left:20px;margin:15px 0;}
+        li{margin:8px 0;line-height:1.6;}
+    </style>
+</head>
+<body>
+
+    <h1>Random Strong Password Generator</h1>
+    <p>Use our free strong password generator to create secure and random passwords for your accounts. Customize password length and include numbers, symbols, uppercase and lowercase letters for maximum security. No registration required, completely free to use.</p>
+
+    <div class="tool-card">
+        <div class="pass-box">
+            <input type="text" id="passwordOutput" readonly placeholder="Your secure password will appear here">
+            <button id="generateBtn">Generate</button>
+        </div>
+        <div class="option-item">
+            <label>Password Length: <input type="number" id="passLength" value="16" min="6" max="32"></label>
+        </div>
+        <div class="option-item">
+            <input type="checkbox" id="useSymbol" checked>
+            <label for="useSymbol"> Include Symbols</label>
+        </div>
+        <div class="option-item">
+            <input type="checkbox" id="useNumber" checked>
+            <label for="useNumber"> Include Numbers</label>
+        </div>
+    </div>
+
+    <h2>How to Use</h2>
+    <ul>
+        <li>Set your preferred password length from 6 to 32 characters</li>
+        <li>Check or uncheck symbols and numbers according to your needs</li>
+        <li>Click the Generate button to create a random strong password instantly</li>
+        <li>Copy and use your secure password for any online account</li>
+    </ul>
+
+    <h2>Main Features</h2>
+    <ul>
+        <li>100% free and safe password generation tool</li>
+        <li>Customizable password length and character types</li>
+        <li>Supports uppercase, lowercase, numbers and symbols</li>
+        <li>No data storage, all generation works locally</li>
+        <li>Mobile-friendly and fast loading</li>
+    </ul>
+
+    <h2>FAQ</h2>
+    <p><strong>Is this password generator safe?</strong><br/>Yes. All passwords are generated locally in your browser, no data is uploaded or stored on any server.</p>
+    <p><strong>What is the best password length?</strong><br/>We recommend 16 characters or longer with mixed letters, numbers and symbols for strong security.</p>
+    <p><strong>Can I create passwords without symbols?</strong><br/>Absolutely. You can uncheck the symbol option to generate letter and number only passwords.</p>
+
+    <script>
+        const generateBtn = document.getElementById('generateBtn');
+        const passwordOutput = document.getElementById('passwordOutput');
+        const passLength = document.getElementById('passLength');
+        const useSymbol = document.getElementById('useSymbol');
+        const useNumber = document.getElementById('useNumber');
+
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        const numbers = '0123456789';
+        const symbols = '!@#$%^&*()_+-=[]{}|;:,.?';
+
+        generateBtn.addEventListener('click', () => {
+            let chars = letters;
+            if(useNumber.checked) chars += numbers;
+            if(useSymbol.checked) chars += symbols;
+
+            let result = '';
+            for(let i = 0; i < passLength.value; i++){
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            passwordOutput.value = result;
+        });
+    </script>
+
+</body>
+</html>
