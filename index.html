@@ -3,64 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Character Count Calculator | Free Text Length Tool</title>
-    <meta name="description" content="Free online character count calculator. Quickly count text characters, letters and spaces. No registration, no download, 100% free.">
-    <meta name="author" content="Free Online Tool">
-    <link rel="canonical" href="">
+    <title>Free Online Tools | Fast & No Sign Up Utility Tools</title>
+    <meta name="description" content="Collection of free online tools for daily use, including character count, password generator and more. 100% free, no registration, no download required.">
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui, Arial, sans-serif;}
-        body{max-width:900px;margin:0 auto;padding:20px;color:#333;background:#f9fafb;}
-        h1{font-size:28px;margin:20px 0;color:#111;}
-        h2{font-size:22px;margin:30px 0 12px;color:#222;}
-        p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
-        .tool-card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 2px 8px #00000010;margin:25px 0;}
-        textarea{width:100%;height:180px;padding:15px;border:1px solid #ddd;border-radius:8px;font-size:16px;resize:none;}
-        .result{margin-top:15px;font-size:18px;font-weight:bold;color:#2563eb;}
-        ul{padding-left:20px;margin:15px 0;}
-        li{margin:8px 0;line-height:1.6;}
+        body{max-width:900px;margin:0 auto;padding:20px;background:#f9fafb;}
+        h1{font-size:30px;margin:20px 0;color:#111;text-align:center;}
+        p{text-align:center;color:#555;font-size:17px;margin-bottom:40px;}
+        .tool-list{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+        .tool-item{background:#fff;padding:25px;border-radius:12px;box-shadow:0 2px 8px #00000010;text-decoration:none;color:#222;transition:0.2s;}
+        .tool-item:hover{transform:translateY(-3px);box-shadow:0 4px 12px #00000015;}
+        .tool-item h3{margin-bottom:10px;color:#111;}
+        .tool-item p{text-align:left;margin:0;color:#666;font-size:15px;}
+        @media(max-width:600px){.tool-list{grid-template-columns:1fr;}}
     </style>
 </head>
 <body>
+    <h1>Free Online Utility Tools</h1>
+    <p>Free, fast and easy-to-use online tools for everyday tasks. No sign up, no watermark, completely free.</p>
 
-    <h1>Online Character Count Calculator</h1>
-    <p>Use our free online character count calculator to quickly check the total number of characters, letters, and spaces in your text. This tool is 100% free, no sign up required and works instantly in your browser.</p>
-
-    <div class="tool-card">
-        <textarea id="textInput" placeholder="Paste or type your text here..."></textarea>
-        <div class="result" id="result">Character Count: 0 | With Spaces: 0</div>
+    <div class="tool-list">
+        <a href="./character-count.html" class="tool-item">
+            <h3>Character Count Calculator</h3>
+            <p>Free online text character counter, count letters and spaces instantly.</p>
+        </a>
+        <a href="./password-generator.html" class="tool-item">
+            <h3>Strong Password Generator</h3>
+            <p>Generate random secure passwords with custom length and symbols.</p>
+        </a>
     </div>
-
-    <h2>How to Use</h2>
-    <ul>
-        <li>Enter or paste your text into the text box above</li>
-        <li>The character count will update automatically</li>
-        <li>Get instant results with or without spaces</li>
-    </ul>
-
-    <h2>Main Features</h2>
-    <ul>
-        <li>100% free and no hidden fees</li>
-        <li>No account registration required</li>
-        <li>Fast real-time text counting</li>
-        <li>Works on mobile and desktop</li>
-        <li>No software download needed</li>
-    </ul>
-
-    <h2>FAQ</h2>
-    <p><strong>What is a character count calculator?</strong><br/>It is a free online tool that helps you count total characters, letters and spaces in any text content instantly.</p>
-    <p><strong>Is this tool free to use?</strong><br/>Yes, this character count tool is completely free for all users.</p>
-    <p><strong>Does it count spaces?</strong><br/>Our tool shows both results: character count with spaces and without spaces.</p>
-
-    <script>
-        const textInput = document.getElementById('textInput');
-        const result = document.getElementById('result');
-        textInput.addEventListener('input', () => {
-            const text = textInput.value;
-            const noSpace = text.replace(/\s/g,'').length;
-            const withSpace = text.length;
-            result.innerText = `Character Count (No Spaces): ${noSpace} | With Spaces: ${withSpace}`;
-        });
-    </script>
-
 </body>
 </html>
