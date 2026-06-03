@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Letter Counter for Short Writing | Free Tool</title>
+    <meta name="description" content="Free online letter counter for short writing projects. Instantly count total letters with and without spaces for essays, notes and short paragraphs.">
+    <link rel="canonical" href="https://yourdomain.com/letter-counter.html">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://*.monetag.com 'unsafe-inline';img-src 'self' https://*.monetag.com data:;connect-src https://*.monetag.com;">
+    <!-- <meta name="monetag-verification" content="xxx"> -->
+    <!-- <script src="monetag广告代码"></script> -->
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui, Arial, sans-serif;}
+        body{max-width:900px;margin:0 auto;padding:20px;color:#333;background:#f9fafb;}
+        .nav{margin-bottom:30px;}
+        .nav a{color:#2563eb;text-decoration:none;margin-right:15px;}
+        .nav a:hover{text-decoration:underline;}
+        h1{font-size:28px;margin:20px 0;color:#111;}
+        h2{font-size:22px;margin:30px 0 12px;color:#222;}
+        p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+        .tool-card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 2px 8px #00000010;margin:25px 0;}
+        textarea{width:100%;height:180px;padding:15px;border:1px solid #ddd;border-radius:8px;font-size:16px;resize:none;}
+        .result{margin-top:15px;font-size:18px;font-weight:bold;color:#2563eb;}
+        ul{padding-left:20px;margin:15px 0;}
+        li{margin:8px 0;line-height:1.6;}
+        .ad-box{width:100%;min-height:100px;margin:25px auto;text-align:center;border-radius:8px;overflow:hidden;}
+    </style>
+
+     <!-- Monetag MultiTag广告head嵌入 -->
+    <script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+    <div class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./signup-password.html">Signup Password Generator</a>
+        <a href="./letter-counter.html">Letter Counter</a>
+    </div>
+
+    <h1>Online Letter Counter for Short Writing</h1>
+    <p>Count total letters instantly for your short writing, homework drafts and personal notes. Separate stats for text including or excluding spaces.</p>
+
+    <div class="ad-box"></div>
+
+    <div class="tool-card">
+        <textarea id="inputText" placeholder="Paste your short writing content here..."></textarea>
+        <div class="result" id="countResult">Letters No Space: 0 | Letters With Space: 0</div>
+    </div>
+
+    <h2>Core Features</h2>
+    <ul>
+        <li>Real-time letter counting as you type content</li>
+        <li>Dual counting mode: exclude/include blank spaces</li>
+        <li>Optimized specially for short articles & casual writing</li>
+        <li>No signup, install or hidden fees to use</li>
+        <li>Fully responsive for phone and desktop writers</li>
+    </ul>
+
+    <h2>Common Use Cases</h2>
+    <ul>
+        <li>Check length limits for school short writing tasks</li>
+        <li>Edit personal journals and short paragraph drafts</li>
+        <li>Restrict bio text length for online profiles</li>
+        <li>Adjust captions and short descriptive content</li>
+    </ul>
+
+    <div class="ad-box" style="margin-top:40px;"></div>
+
+<script>
+const textDom = document.getElementById('inputText');
+const resDom = document.getElementById('countResult');
+textDom.oninput = function(){
+    const all = this.value;
+    const noSpace = all.replace(/\s/g,'').length;
+    const withSpace = all.length;
+    resDom.textContent = `Letters No Space: ${noSpace} | Letters With Space: ${withSpace}`;
+}
+</script>
+</body>
+</html>
