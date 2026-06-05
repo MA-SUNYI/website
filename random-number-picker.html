@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Random Number Picker Generator | Free Tool</title>
+<meta name="description" content="Free online random number picker generator to draw random integers between custom min and max value for raffle, game and classroom draw.">
+<link rel="canonical" href="https://www.xiake.icu/random-number-picker.html">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://*.monetag.com https://quge5.com https://6opo.com 'unsafe-inline';img-src 'self' https://*.monetag.com https://quge5.com https://6opo.com data:;connect-src https://*.monetag.com https://quge5.com https://6opo.com;">
+<!--<meta name="monetag-verification" content="xxx">-->
+<!--<script src="monetag广告JS"></script>-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;}
+input{width:150px;padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:15px;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./percent-error.html">Percentage Error Calculator</a>
+    <a href="./random-number-picker.html">Random Number Picker</a>
+</div>
+
+<h1>Online Random Number Picker Generator</h1>
+<p>Generate random integer numbers between custom minimum and maximum value for lucky draw, raffle and classroom random selection.</p>
+<div class="ad-box"></div>
+<div class="tool-card">
+    <div class="input-row">
+        <label>Min:</label>
+        <input type="number" id="minNum" value="1">
+        <label>Max:</label>
+        <input type="number" id="maxNum" value="100">
+        <button id="pickBtn">Pick Random Number</button>
+    </div>
+    <div class="result-text" id="numRes">Your random number:</div>
+</div>
+
+<h2>Core Features</h2>
+<ul>
+<li>Custom minimum and maximum random range setting</li>
+<li>One click to generate single random integer</li>
+<li>Suitable for lucky raffle, classroom quiz pick</li>
+<li>No download or registration required</li>
+</ul>
+
+<h2>Typical Scenarios</h2>
+<ul>
+<li>Company lucky draw & prize raffle selection</li>
+<li>Teacher random student pick for class quiz</li>
+<li>Casual party game and random selection activity</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const pickBtn = document.getElementById('pickBtn');
+const minNum = document.getElementById('minNum');
+const maxNum = document.getElementById('maxNum');
+const numRes = document.getElementById('numRes');
+pickBtn.onclick = ()=>{
+    let min = parseInt(minNum.value);
+    let max = parseInt(maxNum.value);
+    if(min>max){
+        numRes.textContent="Min cannot bigger than Max";
+        return;
+    }
+    let rd = Math.floor(Math.random()*(max-min+1))+min;
+    numRes.textContent = `Your random number: ${rd}`;
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>
