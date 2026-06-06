@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Area of Circle Calculator | Free Math Tool</title>
+<meta name="description" content="Free online area of circle calculator. Calculate circle area by radius quickly for math study, engineering and daily calculation.">
+<link rel="canonical" href="https://www.xiake.icu/circle-area.html">
+<meta name="keywords" content="area of circle calculator, online circle area tool, calculate circle area from radius, free math calculator, geometry calculator">
+<meta name="referrer" content="no-referrer">
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;align-items:center;}
+input{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:220px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:15px;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./circle-area.html">Circle Area Calculator</a>
+    <a href="./word-counter.html">Word Counter Tool</a>
+</div>
+
+<h1>Online Area of Circle Calculator</h1>
+<p>Calculate the area of a circle instantly by entering its radius. Suitable for geometry homework, design work and daily math calculation.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="radius" placeholder="Enter circle radius" step="0.01">
+        <button id="calcBtn">Calculate Area</button>
+    </div>
+    <div class="result-text" id="resOut">Calculation Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Standard circle area formula: A = π × r²</li>
+<li>Support integer and decimal radius input</li>
+<li>Accurate calculation with reserved decimal places</li>
+<li>Mobile and desktop fully responsive layout</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Middle school geometry math homework</li>
+<li>Architecture and engineering measurement</li>
+<li>Art design and circular size calculation</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const calcBtn = document.getElementById('calcBtn');
+const radius = document.getElementById('radius');
+const resOut = document.getElementById('resOut');
+const PI = Math.PI;
+
+calcBtn.onclick = function(){
+    let r = parseFloat(radius.value);
+    if(isNaN(r) || r <= 0){
+        resOut.textContent = "Please enter a valid positive radius";
+        return;
+    }
+    let area = PI * r * r;
+    resOut.textContent = `Circle Area = ${area.toFixed(4)}`;
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>
