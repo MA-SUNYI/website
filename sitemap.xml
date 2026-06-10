@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<!-- 网站首页 -->
 <url>
 <loc>https://www.xiake.icu/</loc>
 <lastmod>2026-06-10</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
-
-<!-- 工具页面列表 -->
 <url>
 <loc>https://www.xiake.icu/signup-password.html</loc>
 <lastmod>2026-06-10</lastmod>
