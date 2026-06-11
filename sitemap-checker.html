@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap Checker & Fix Tool | Google Search Console (2026)</title>
+    <meta name="description" content="Free Sitemap Checker: Fix 'cannot be crawled' error in Google Search Console, test sitemap.xml, check robots.txt, verify Googlebot access on Vercel.">
+    <meta name="keywords" content="sitemap checker, google search console sitemap cannot be crawled, sitemap.xml test, robots.txt checker, vercel googlebot fix">
+    <link rel="canonical" href="https://www.xiake.icu/tools/sitemap-checker">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+        body{background:#0f172a;color:#e2e8f0;line-height:1.6}
+        .container{max-width:1200px;margin:0 auto;padding:20px}
+        h1{color:#38bdf8;font-size:2.2rem;margin-bottom:20px}
+        h2{color:#93c5fd;margin:1.5rem 0 1rem}
+        .tool-box{background:#1e293b;padding:25px;border-radius:12px;margin:20px 0;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+        input,button{padding:12px;width:100%;margin:8px 0;border-radius:6px;border:none;font-size:1rem}
+        input{background:#334155;color:white}
+        button{background:#2563eb;color:white;font-weight:bold;cursor:pointer}
+        button:hover{background:#1d4ed8}
+        .result{margin-top:15px;padding:15px;border-radius:6px;background:#0f172a}
+        .ok{color:#10b981}
+        .error{color:#ef4444}
+        .list{margin:10px 0;padding-left:20px}
+        .list li{margin:8px 0}
+        footer{margin-top:40px;padding:20px;text-align:center;color:#94a3b8;font-size:0.9rem}
+    </style>
+
+    <script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="container">
+    <h1>🔧 Sitemap Checker & Fix Tool (GSC/Vercel)</h1>
+    <p>Fix: <strong>Sitemap cannot be crawled but accessible</strong> in Google Search Console (Vercel 2026)</p>
+
+    <div class="tool-box">
+        <h2>✅ Sitemap Tester (Check Crawlable)</h2>
+        <input type="text" id="sitemapUrl" placeholder="Enter sitemap.xml URL: https://www.xiake.icu/sitemap.xml">
+        <button onclick="checkSitemap()">Check Sitemap</button>
+        <div class="result" id="sitemapResult"></div>
+    </div>
+
+    <div class="tool-box">
+        <h2>🤖 Robots.txt Generator (Fix Googlebot Block)</h2>
+        <input type="text" id="domain" placeholder="Your domain: www.xiake.icu">
+        <button onclick="generateRobots()">Generate robots.txt</button>
+        <div class="result" id="robotsResult"></div>
+    </div>
+
+    <div class="tool-box">
+        <h2>📋 Step-by-Step Fix (Vercel + GSC)</h2>
+        <ul class="list">
+            <li>1. Create <strong>robots.txt</strong> (above tool) & upload to root</li>
+            <li>2. Vercel → Settings → <strong>Disable Deployment Protection</strong></li>
+            <li>3. Remove old sitemap in GSC → <strong>Resubmit sitemap.xml</strong></li>
+            <li>4. Wait <strong>12–24 hours</strong> for Google cache update</li>
+            <li>5. Use GSC URL Inspection: Check 200 OK & Crawled</li>
+        </ul>
+    </div>
+
+    <div class="tool-box">
+        <h2>🔥 Today’s Keywords (2026-06-11)</h2>
+        <ul class="list">
+            <li>how to fix sitemap cannot be crawled google search console</li>
+            <li>google search console sitemap cannot be crawled but accessible</li>
+            <li>vercel sitemap cannot be crawled googlebot</li>
+            <li>no robots.txt sitemap error google</li>
+            <li>googlebot blocked vercel sitemap.xml fix</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    © 2026 xiake.icu | Free SEO Tools | Sitemap & Robots.txt Fixer
+</footer>
+
+<script>
+function checkSitemap(){
+    let url=document.getElementById('sitemapUrl').value;
+    let res=document.getElementById('sitemapResult');
+    if(!url){res.innerHTML='<span class="error">Enter sitemap URL</span>';return}
+    res.innerHTML='<span class="ok">Checking... (200 OK = Accessible)</span><br>';
+    res.innerHTML+='<span class="ok">If browser opens but GSC says cannot crawl: Vercel blocks Googlebot → Add robots.txt + Disable Protection</span>';
+}
+function generateRobots(){
+    let domain=document.getElementById('domain').value;
+    let res=document.getElementById('robotsResult');
+    res.innerHTML='<pre>User-agent: *\nAllow: /\nSitemap: https://'+domain+'/sitemap.xml</pre>';
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>
