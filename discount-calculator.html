@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discount Calculator | Free Price Off Calculator Online</title>
+<meta name="description" content="Free online discount calculator. Calculate final price, savings amount after discount quickly for shopping and business use.">
+<link rel="canonical" href="https://www.xiake.icu/discount-calculator.html">
+<meta name="keywords" content="discount calculator, price off calculator, calculate discount price, savings calculator, online shopping discount tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;align-items:center;}
+input{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:200px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:15px;line-height:1.8;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./random-name-picker.html">Random Name Picker</a>
+    <a href="./discount-calculator.html">Discount Calculator</a>
+</div>
+
+<h1>Discount Calculator</h1>
+<p>Calculate discounted price and total savings instantly by entering original price and discount percentage.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="originalPrice" placeholder="Original Price" step="0.01" min="0">
+        <input type="number" id="discountPercent" placeholder="Discount %" step="0.1" min="0" max="100">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="discountResult">Calculation result will show here</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Calculate final price after discount</li>
+<li>Show total money you save</li>
+<li>Support decimal price and discount rate</li>
+<li>Accurate calculation results</li>
+<li>Easy to use for daily shopping and business</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Calculate price during shopping promotions</li>
+<li>Compute discount for retail business</li>
+<li>Budget planning for daily consumption</li>
+<li>Quick price checking for sales activities</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const calcBtn = document.getElementById('calcBtn');
+const originalPrice = document.getElementById('originalPrice');
+const discountPercent = document.getElementById('discountPercent');
+const discountResult = document.getElementById('discountResult');
+
+calcBtn.onclick = function(){
+    let price = parseFloat(originalPrice.value);
+    let discount = parseFloat(discountPercent.value);
+    if(isNaN(price) || isNaN(discount) || price < 0 || discount < 0 || discount > 100){
+        discountResult.textContent = "Please enter valid price and discount percentage";
+        return;
+    }
+    let saveMoney = price * discount / 100;
+    let finalPrice = price - saveMoney;
+    discountResult.innerHTML = `Original Price: ${price.toFixed(2)}<br>
+You Save: ${saveMoney.toFixed(2)}<br>
+Final Price: ${finalPrice.toFixed(2)}`;
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>
