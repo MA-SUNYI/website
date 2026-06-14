@@ -138,4 +138,16 @@
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
+<url>
+<loc>https://www.xiake.icu/image-resizer.html</loc>
+<lastmod>2026-06-15</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.xiake.icu/coin-flip.html</loc>
+<lastmod>2026-06-15</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 </urlset>
