@@ -174,4 +174,16 @@
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
+<url>
+<loc>https://www.xiake.icu/percentage-calculator.html</loc>
+<lastmod>2026-06-18</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.xiake.icu/random-number-generator.html</loc>
+<lastmod>2026-06-18</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 </urlset>

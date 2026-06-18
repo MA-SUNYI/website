@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Number Generator | Free Online Integer Picker</title>
+<meta name="description" content="Free random number generator to create random integers between custom min and max values for raffles, games, classroom and lucky draws.">
+<link rel="canonical" href="https://www.xiake.icu/random-number-generator.html">
+<meta name="keywords" content="random number generator, online integer picker, random number between two numbers, raffle number tool, free random generator">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://*.monetag.com https://quge5.com https://6opo.com 'unsafe-inline';img-src 'self' https://*.monetag.com https://quge5.com https://6opo.com data:;connect-src https://*.monetag.com https://quge5.com https://6opo.com;">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;text-align:center;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;align-items:center;justify-content:center;}
+input{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;width:160px;}
+button{padding:13px 26px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;margin-top:10px;}
+button:hover{background:#1d5bcc;}
+.number-display{font-size:40px;font-weight:bold;color:#2563eb;margin:25px 0;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./percentage-calculator.html">Percentage Calculator</a>
+    <a href="./random-number-generator.html">Random Number Generator</a>
+</div>
+
+<h1>Random Number Generator</h1>
+<p>Generate a truly random integer between your custom minimum and maximum value for raffles, games and random selection.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="minVal" placeholder="Minimum Number" value="1">
+        <input type="number" id="maxVal" placeholder="Maximum Number" value="100">
+    </div>
+    <div class="number-display" id="numResult">???</div>
+    <button id="generateNumBtn">Generate Random Number</button>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Custom min and max range for any integer interval</li>
+<li>True browser-side random integer generation</li>
+<li>Unlimited free random number draws</li>
+<li>Simple interface for classroom and raffle use</li>
+<li>Mobile responsive, works on all devices</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Lucky raffle and giveaway random winner picking</li>
+<li>Classroom random student number selection games</li>
+<li>Board game and tabletop random value generator</li>
+<li>Random lottery number simulation and decision making</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const generateNumBtn = document.getElementById('generateNumBtn');
+const minVal = document.getElementById('minVal');
+const maxVal = document.getElementById('maxVal');
+const numResult = document.getElementById('numResult');
+
+generateNumBtn.onclick = function(){
+    let min = parseInt(minVal.value);
+    let max = parseInt(maxVal.value);
+    if(isNaN(min) || isNaN(max) || min >= max){
+        numResult.textContent = "Min must be smaller than Max";
+        return;
+    }
+    let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+    numResult.textContent = randomNum;
+}
+</script>
+</body>
+</html>
