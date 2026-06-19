@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Simple Counter | Free Digital Tally Click Counter</title>
+<meta name="description" content="Free online simple tally counter to count up/down for inventory, classroom attendance, events and manual tally tracking.">
+<link rel="canonical" href="https://www.xiake.icu/simple-counter.html">
+<meta name="keywords" content="simple counter online, digital tally counter, click counter, attendance counter, inventory tally tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;text-align:center;}
+.counter-display{font-size:60px;font-weight:bold;color:#2563eb;margin:20px 0;}
+.btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+button{padding:14px 26px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:18px;}
+button.reset{background:#dc2626;}
+button:hover{background:#1d5bcc;}
+button.reset:hover{background:#b91c1c;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./volume-converter.html">Volume Converter</a>
+    <a href="./simple-counter.html">Simple Counter</a>
+</div>
+
+<h1>Online Simple Counter</h1>
+<p>Free digital tally counter with count up, count down and reset buttons for attendance, inventory and event tally.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="counter-display" id="countDisplay">0</div>
+    <div class="btn-row">
+        <button id="minusBtn">- Minus 1</button>
+        <button id="plusBtn">Plus 1 +</button>
+        <button class="reset" id="resetBtn">Reset Zero</button>
+    </div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>One tap to increase or decrease tally number</li>
+>Full reset button to clear all counts instantly</li>
+<li>Large clear number display easy to read from distance</li>
+<li>Works offline in browser, no internet required mid-count</li>
+<li>Unlimited counting, fully free for all daily tally needs</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Teacher count classroom student attendance</li>
+<li>Shop inventory stock manual tally counting</li>
+<li>Event visitor, participant and audience counter</li>
+<li>Sports game score simple temporary tally tracking</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+let countNum = 0;
+const countDisplay = document.getElementById('countDisplay');
+const plusBtn = document.getElementById('plusBtn');
+const minusBtn = document.getElementById('minusBtn');
+const resetBtn = document.getElementById('resetBtn');
+
+plusBtn.onclick = ()=>{
+    countNum++;
+    countDisplay.textContent = countNum;
+}
+minusBtn.onclick = ()=>{
+    countNum--;
+    countDisplay.textContent = countNum;
+}
+resetBtn.onclick = ()=>{
+    countNum = 0;
+    countDisplay.textContent = countNum;
+}
+</script>
+</body>
+</html>
