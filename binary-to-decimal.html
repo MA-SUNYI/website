@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binary to Decimal Converter | Free Online Base 2 to Base 10 Math Tool</title>
+<meta name="description" content="Free binary to decimal converter to translate binary 0/1 strings into standard decimal numbers for coding, computer science homework and digital logic study.">
+<link rel="canonical" href="https://www.xiake.icu/binary-to-decimal.html">
+<meta name="keywords" content="binary to decimal converter, base 2 to base 10 calculator, coding student math tool, binary number translator, 8-bit binary converter">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;align-items:center;}
+input{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:320px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:15px;line-height:1.8;white-space:pre-wrap;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./binary-to-decimal.html">Binary to Decimal</a>
+    <a href="./date-difference-calculator.html">Date Difference Calculator</a>
+</div>
+
+<h1>Binary to Decimal Converter</h1>
+<p>Convert binary digit string (only 0 and 1) into standard decimal base-10 number for computer science class and programming practice.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="text" id="binaryInput" placeholder="Enter binary digits (only 0 and 1, e.g. 101101)">
+        <button id="convertBinBtn">Convert To Decimal</button>
+    </div>
+    <div class="result-text" id="binResult">Decimal conversion result will display here</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Auto filter invalid characters, only accept 0 and 1 binary digits</li>
+>Support short 4-bit, 8-bit, 16-bit long binary string conversion</li>
+<li>Show simple conversion formula reference for homework writing</li>
+<li>All calculation run locally inside browser, no data upload</li>
+<li>100% free for CS students, coding beginners and digital logic learning</li>
+</ul>
+
+<h2>Conversion Formula Reference</h2>
+<ul>
+<li>Each binary digit multiply by power of 2 based on position, sum all values = decimal number</li>
+<li>Example: Binary 101 = 1×2² + 0×2¹ + 1×2⁰ = 5</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Computer science college binary conversion homework</li>
+<li>Programming beginner binary number practice and debugging</li>
+<li>Digital electronics & logic circuit class calculation</li>
+<li>Self-study base number system conversion exercise</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const convertBinBtn = document.getElementById('convertBinBtn');
+const binaryInput = document.getElementById('binaryInput');
+const binResult = document.getElementById('binResult');
+
+convertBinBtn.onclick = function(){
+    let binStr = binaryInput.value.trim();
+    if(!binStr){
+        binResult.textContent = "Please input binary digits (0 and 1 only)";
+        return;
+    }
+    // Check invalid character
+    if(/[^01]/.test(binStr)){
+        binResult.textContent = "Error: Binary only contains 0 and 1, remove other characters";
+        return;
+    }
+    let decimalNum = parseInt(binStr, 2);
+    binResult.textContent = `Binary Input: ${binStr}
+Equivalent Decimal Number: ${decimalNum}
+Formula: Sum(digit × 2^position) from right to left`;
+}
+</script>
+</body>
+</html>
