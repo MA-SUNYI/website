@@ -438,4 +438,16 @@
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
+<url>
+<loc>https://www.xiake.icu/pool-volume-calculator.html</loc>
+<lastmod>2026-07-20</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.xiake.icu/calorie-deficit-calculator.html</loc>
+<lastmod>2026-07-20</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 </urlset>
