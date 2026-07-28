@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://*.monetag.com">
+<meta name="theme-color" content="#2563eb">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<title>Concrete Stair Calculator | Calculate Risers, Treads & Stair Dimensions</title>
+<meta name="description" content="Free concrete stair calculator. Input total vertical rise to compute number of steps, riser height and tread depth for porch, patio and outdoor concrete stairs.">
+<link rel="canonical" href="https://www.xiake.icu/concrete-stair-calculator.html">
+<meta name="keywords" content="concrete stair calculator, stair riser tread estimator, porch concrete steps layout, staircase dimension tool">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="Concrete Stair Calculator | Calculate Risers, Treads & Stair Dimensions">
+<meta property="og:description" content="Free concrete stair calculator. Input total vertical rise to compute number of steps, riser height and tread depth for porch, patio and outdoor concrete stairs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/concrete-stair-calculator.html">
+<meta name="twitter:card" content="summary">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;line-height:1.65;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;font-weight:600;}
+h2{font-size:21px;margin:32px 0 12px;color:#222;font-weight:600;border-bottom:1px solid #eee;padding-bottom:6px;}
+h3{font-size:18px;margin:16px 0 8px;color:#333;}
+p{font-size:16px;margin:10px 0;color:#333;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:150px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;transition:0.2s;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:15px;line-height:1.8;white-space:pre-wrap;background:#f0f7ff;padding:14px;border-radius:8px;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:32px auto;border-radius:9px;text-align:center;overflow:hidden;background:#f8f9fa;}
+.related-tools{margin-top:40px;padding:20px;background:#f8f9fa;border-radius:12px;}
+.related-tools a{display:inline-block;margin:8px 12px 8px 0;color:#2563eb;font-weight:500;}
+.copy-tip{font-size:14px;color:#555;margin-top:6px;}
+</style>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./rainwater-harvesting-calculator.html">Rainwater Harvesting Calculator</a>
+    <a href="./concrete-stair-calculator.html">Concrete Stair Calculator</a>
+</div>
+
+<h1>Concrete Stair Calculator – Design Safe Porch & Patio Concrete Steps</h1>
+<p>Building outdoor concrete stairs requires balanced riser height and tread depth to follow building safety guidelines. Uneven step heights create trip hazards. This calculator computes ideal number of steps, riser height and horizontal tread length based on your total vertical elevation change for porch, patio and walkway concrete stair projects.</p>
+
+<div class="ad-box"></div>
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" min="6" step="0.5" id="totalRise" placeholder="Total Rise (inches)">
+        <input type="number" min="4" max="8" value="6.5" id="targetRiser" placeholder="Target Riser Height (in)">
+        <button id="calcStairBtn">Calculate Stair Dimensions</button>
+    </div>
+    <div class="result-text" id="stairResult">Stair layout dimensions shown here</div>
+    <p class="copy-tip">Tip: Most building codes recommend risers between 4" and 7.75 inches for safety.</p>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Calculate optimal number of risers and steps for concrete outdoor staircases</li>
+<li>Find uniform riser height to avoid uneven dangerous steps</li>
+<li>Estimate total horizontal run needed for your concrete stair formwork</li>
+<li>Designed for DIY builders, contractors for porch, patio and entry concrete steps</li>
+<li>Helps comply with standard residential stair safety specifications</li>
+</ul>
+
+<h2>Common Use Cases</h2>
+<ul>
+<li>Planning formwork for new concrete porch entry stairs</li>
+<li>Rebuilding damaged outdoor concrete steps with consistent sizing</li>
+<li>Designing walkway stairs for backyard patios and landscape projects</li>
+<li>Verifying stair dimensions meet local residential building guidelines</li>
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Q: What is the safe range for outdoor stair risers?</h3>
+<p>A: Standard guidelines: minimum 4 inches, maximum 7.75 inches riser height.</p>
+<h3>Q: How deep should concrete stair treads be?</h3>
+<p>A: Outdoor tread depth commonly 10–14 inches for comfortable walking.</p>
+
+<div class="ad-box"></div>
+<div class="related-tools">
+<h2>Related Construction & Outdoor Calculators</h2>
+<a href="./rainwater-harvesting-calculator.html">Rainwater Harvesting Calculator</a>
+</div>
+
+<script>
+const calcStairBtn = document.getElementById('calcStairBtn');
+const totalRise = document.getElementById('totalRise');
+const targetRiser = document.getElementById('targetRiser');
+const stairResult = document.getElementById('stairResult');
+
+calcStairBtn.onclick = function(){
+    const rise = Number(totalRise.value);
+    const target = Number(targetRiser.value);
+    if(isNaN(rise) || rise < 6 || target < 4){
+        stairResult.textContent = "Enter valid total rise and target riser height";
+        return;
+    }
+    let riserCount = Math.round(rise / target);
+    if(riserCount < 1) riserCount = 1;
+    const actualRiser = rise / riserCount;
+    const stepCount = riserCount - 1;
+    stairResult.textContent = `Total Vertical Rise: ${rise}"
+Target Riser Height: ${target}"
+
+Number of Risers: ${riserCount}
+Number of Steps: ${stepCount}
+Uniform Actual Riser Height: ${actualRiser.toFixed(2)} inches
+
+Guideline: Keep risers between 4.0" ~ 7.75" for safe outdoor stairs`;
+}
+</script>
+</body>
+</html>
