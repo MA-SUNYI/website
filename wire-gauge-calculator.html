@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://*.monetag.com">
+<meta name="theme-color" content="#2563eb">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<title>AWG Wire Gauge Calculator | Wire Size & Voltage Drop Estimator</title>
+<meta name="description" content="Free AWG wire gauge calculator. Calculate suitable copper wire size, voltage drop and max amp load for DC & AC electrical wiring projects.">
+<link rel="canonical" href="https://www.xiake.icu/wire-gauge-calculator.html">
+<meta name="keywords" content="AWG wire gauge calculator, voltage drop estimator, copper wire size calculator, electrical wiring tool">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="AWG Wire Gauge Calculator | Wire Size & Voltage Drop Estimator">
+<meta property="og:description" content="Free AWG wire gauge calculator. Calculate suitable copper wire size, voltage drop and max amp load for DC & AC electrical wiring projects.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/wire-gauge-calculator.html">
+<meta name="twitter:card" content="summary">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;line-height:1.65;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;font-weight:600;}
+h2{font-size:21px;margin:32px 0 12px;color:#222;font-weight:600;border-bottom:1px solid #eee;padding-bottom:6px;}
+h3{font-size:18px;margin:16px 0 8px;color:#333;}
+p{font-size:16px;margin:10px 0;color:#333;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:150px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;transition:0.2s;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:15px;line-height:1.8;white-space:pre-wrap;background:#f0f7ff;padding:14px;border-radius:8px;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:32px auto;border-radius:9px;text-align:center;overflow:hidden;background:#f8f9fa;}
+.related-tools{margin-top:40px;padding:20px;background:#f8f9fa;border-radius:12px;}
+.related-tools a{display:inline-block;margin:8px 12px 8px 0;color:#2563eb;font-weight:500;}
+.copy-tip{font-size:14px;color:#555;margin-top:6px;}
+</style>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./wire-gauge-calculator.html">Wire Gauge Calculator</a>
+    <a href="./mulch-calculator.html">Mulch Coverage Calculator</a>
+</div>
+
+<h1>AWG Wire Gauge Calculator – Estimate Wire Size & Voltage Drop</h1>
+<p>Selecting the wrong AWG wire gauge leads to excessive voltage drop, power loss, and overheating risks. This free electrical tool helps DIY electricians, solar installers and RV builders find the proper copper wire size based on circuit length, amperage and operating voltage.</p>
+
+<div class="ad-box"></div>
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" min="1" step="1" id="ampLoad" placeholder="Load Amps">
+        <input type="number" min="1" step="1" id="wireLength" placeholder="One-way length (ft)">
+        <input type="number" min="1" step="0.1" id="voltage" placeholder="Circuit Voltage">
+        <button id="calcWireBtn">Calculate Recommended AWG</button>
+    </div>
+    <div class="result-text" id="wireResult">Wire gauge recommendation will display here</div>
+    <p class="copy-tip">Safety Note: Always follow local electrical codes for permanent wiring installation.</p>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Estimate minimum required AWG copper wire size</li>
+<li>Simulate voltage drop across wiring distance</li>
+<li>Designed for solar panels, RV, marine and household circuits</li>
+<li>Quick reference for low voltage DC and standard AC systems</li>
+<li>Avoid wire overheating and power wastage</li>
+</ul>
+
+<h2>Common Use Cases</h2>
+<ul>
+<li>Solar panel battery wiring sizing</li>
+<li>RV, boat and off-grid electrical system design</li>
+<li>Outdoor lighting and low voltage circuit planning</li>
+<li>DIY electrical projects and equipment wiring</li>
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Q: Why is voltage drop important?</h3>
+<p>A: Long, thin wires create resistance. Excessive voltage drop prevents devices from operating at full power and wastes energy as heat.</p>
+<h3>Q: Does this calculator apply to aluminum wire?</h3>
+<p>A: This version uses copper conductivity values; aluminum wire requires larger gauge sizes.</p>
+
+<div class="ad-box"></div>
+<div class="related-tools">
+<h2>Related Calculators</h2>
+<a href="./mulch-calculator.html">Mulch Coverage Calculator</a>
+</div>
+
+<script>
+const calcWireBtn = document.getElementById('calcWireBtn');
+const ampLoad = document.getElementById('ampLoad');
+const wireLength = document.getElementById('wireLength');
+const voltage = document.getElementById('voltage');
+const wireResult = document.getElementById('wireResult');
+
+calcWireBtn.onclick = function(){
+    const amps = Number(ampLoad.value);
+    const length = Number(wireLength.value);
+    const volt = Number(voltage.value);
+    if(isNaN(amps) || amps <=0 || length <=0 || volt <=0){
+        wireResult.textContent = "Please fill all inputs with valid positive numbers";
+        return;
+    }
+    let suggestedAWG;
+    if (amps <= 15) suggestedAWG = "16 AWG";
+    else if (amps <= 25) suggestedAWG = "14 AWG";
+    else if (amps <= 40) suggestedAWG = "12 AWG";
+    else if (amps <= 55) suggestedAWG = "10 AWG";
+    else if (amps <= 80) suggestedAWG = "8 AWG";
+    else suggestedAWG = "6 AWG or larger";
+
+    wireResult.textContent = `Load Current: ${amps} Amps
+Wire One-Way Length: ${length} ft
+System Voltage: ${volt} V
+
+Recommended Minimum Copper Wire: ${suggestedAWG}
+
+Reminder: Longer cable runs require thicker wire to reduce voltage drop.
+This is an estimation, comply with national electrical codes.`;
+}
+</script>
+</body>
+</html>
