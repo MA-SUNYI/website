@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Unit Price Calculator | Compare Price Per Unit</title>
+<meta name="description" content="Free online unit price calculator: compare the real cost per ounce, pound, kg or liter of two products and find the cheaper deal instantly. No sign up.">
+<link rel="canonical" href="https://www.xiake.icu/unit-price-calculator.html">
+<meta name="keywords" content="online unit price calculator, compare price per unit, cost per ounce calculator, grocery price comparison, cheaper per kg tool">
+<meta name="referrer" content="no-referrer">
+<!--<meta name="monetag-verification" content="你的验证串">-->
+<!--<script src="Monetag广告JS"></script>-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:15px;line-height:1.9;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./discount-calculator.html">Discount Calculator</a>
+    <a href="./sales-tax-calculator.html">Sales Tax Calculator</a>
+</div>
+
+<h1>Online Unit Price Calculator</h1>
+<p>Stop guessing which package is the better deal. Enter the price and size of two products to see the true cost per unit and instantly find the cheaper one.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="priceA" placeholder="Item A Price $">
+        <input type="number" id="sizeA" placeholder="Size">
+        <select id="unitA">
+            <option value="oz">oz</option>
+            <option value="lb">lb</option>
+            <option value="g">g</option>
+            <option value="kg">kg</option>
+            <option value="mL">mL</option>
+            <option value="L">L</option>
+            <option value="floz">fl oz</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="priceB" placeholder="Item B Price $">
+        <input type="number" id="sizeB" placeholder="Size">
+        <select id="unitB">
+            <option value="oz">oz</option>
+            <option value="lb">lb</option>
+            <option value="g">g</option>
+            <option value="kg">kg</option>
+            <option value="mL">mL</option>
+            <option value="L">L</option>
+            <option value="floz">fl oz</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <button id="calcBtn">Compare</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Compare two products by true cost per unit</li>
+<li>Supports oz, lb, g, kg, mL, L and fl oz</li>
+<li>Auto-normalizes to price per 100g or per 100mL</li>
+<li>Highlights the cheaper deal instantly</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Grocery bulk-buy vs small-pack value check</li>
+<li>Compare price per liter of detergents and drinks</li>
+<li>Find the real cost per kg at the butcher or market</li>
+<li>Budget shopping and coupon deal verification</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const priceA = document.getElementById('priceA');
+const sizeA = document.getElementById('sizeA');
+const unitA = document.getElementById('unitA');
+const priceB = document.getElementById('priceB');
+const sizeB = document.getElementById('sizeB');
+const unitB = document.getElementById('unitB');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+const UNITS = {
+    oz:   {type:'weight', toBase:28.3495},
+    lb:   {type:'weight', toBase:453.592},
+    g:    {type:'weight', toBase:1},
+    kg:   {type:'weight', toBase:1000},
+    mL:   {type:'volume', toBase:1},
+    L:    {type:'volume', toBase:1000},
+    floz: {type:'volume', toBase:29.5735}
+};
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:4});
+}
+
+calcBtn.onclick = function(){
+    let pA = parseFloat(priceA.value);
+    let sA = parseFloat(sizeA.value);
+    let pB = parseFloat(priceB.value);
+    let sB = parseFloat(sizeB.value);
+    let uA = UNITS[unitA.value];
+    let uB = UNITS[unitB.value];
+
+    if([pA,sA,pB,sB].some(v=>isNaN(v)) || sA<=0 || sB<=0 || pA<0 || pB<0){
+        resOut.textContent = "Please enter valid positive size and price for both items";
+        return;
+    }
+
+    // price per 100 of base unit
+    let per100A = pA / (sA * uA.toBase / 100);
+    let per100B = pB / (sB * uB.toBase / 100);
+    let baseLabelA = uA.type === 'weight' ? 'per 100g' : 'per 100mL';
+    let baseLabelB = uB.type === 'weight' ? 'per 100g' : 'per 100mL';
+
+    let line = `Item A: $${fmt(pA/sA)} per ${unitA.value} ($${fmt(per100A)} ${baseLabelA})<br>`;
+    line += `Item B: $${fmt(pB/sB)} per ${unitB.value} ($${fmt(per100B)} ${baseLabelB})<br>`;
+
+    if(uA.type === uB.type){
+        if(Math.abs(per100A - per100B) < 1e-9){
+            line += `Both cost the same per ${baseLabelA}.`;
+        } else if(per100A < per100B){
+            let pct = (per100B - per100A) / per100B * 100;
+            line += `Item A is cheaper: about ${pct.toFixed(1)}% less ${baseLabelA} than Item B.`;
+        } else {
+            let pct = (per100A - per100B) / per100A * 100;
+            line += `Item B is cheaper: about ${pct.toFixed(1)}% less ${baseLabelB} than Item A.`;
+        }
+    } else {
+        line += `Use the same unit type (weight vs volume) for a fair comparison.`;
+    }
+    resOut.innerHTML = line;
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>
