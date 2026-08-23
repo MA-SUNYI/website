@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Loan Interest Calculator | Simple & Compound</title>
+<meta name="description" content="Free online loan interest calculator: estimate simple and compound interest, total repayment and daily accrual for personal loans, savings and debt planning.">
+<link rel="canonical" href="https://www.xiake.icu/loan-interest-calculator.html">
+<meta name="keywords" content="online loan interest calculator, simple interest calculator, compound interest estimate, loan total repayment, free finance tool">
+<meta name="referrer" content="no-referrer">
+<!--<meta name="monetag-verification" content="你的验证串">-->
+<!--<script src="Monetag广告JS"></script>-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:15px;line-height:2;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./interest-rate-calculator.html">Interest Rate Calculator</a>
+    <a href="./car-loan-calculator.html">Car Loan Calculator</a>
+</div>
+
+<h1>Online Loan Interest Calculator</h1>
+<p>Estimate the interest, total repayment and daily accrual of a loan or deposit. Choose simple or compound interest and see how the rate and term change your cost.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="principal" placeholder="Principal $">
+        <input type="number" id="rate" placeholder="Annual Rate %">
+        <input type="number" id="years" placeholder="Term (years)">
+    </div>
+    <div class="input-row">
+        <label for="mode">Type</label>
+        <select id="mode">
+            <option value="simple">Simple Interest</option>
+            <option value="compound">Compound (annual)</option>
+        </select>
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Estimate simple and compound interest</li>
+<li>Show total repayment and daily interest</li>
+<li>Adjust principal, rate and term instantly</li>
+<li>Responsive design for mobile and desktop</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Plan personal loan and credit card cost</li>
+<li>Compare savings growth vs loan interest</li>
+<li>Check daily interest accrual for budgeting</li>
+<li>Student and small-business finance estimates</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const principal = document.getElementById('principal');
+const rate = document.getElementById('rate');
+const years = document.getElementById('years');
+const mode = document.getElementById('mode');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let p = parseFloat(principal.value);
+    let r = parseFloat(rate.value);
+    let t = parseFloat(years.value);
+    if(isNaN(p)||isNaN(r)||isNaN(t)||p<0||r<0||t<0){
+        resOut.textContent = "Please enter valid non-negative numbers";
+        return;
+    }
+    let interest, total;
+    if(mode.value === 'simple'){
+        interest = p * (r/100) * t;
+        total = p + interest;
+    } else {
+        total = p * Math.pow(1 + r/100, t);
+        interest = total - p;
+    }
+    let daily = interest / (t * 365);
+    resOut.innerHTML =
+        `Interest: $${fmt(interest)}<br>` +
+        `Total Repayment: $${fmt(total)}<br>` +
+        `Daily Interest: $${fmt(daily)}`;
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>
