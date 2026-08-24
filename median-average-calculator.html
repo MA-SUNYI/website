@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Median & Average Calculator | Mean, Median, Mode</title>
+<meta name="description" content="Free online median and average calculator. Paste a list of numbers to get mean, median and mode instantly for homework, statistics and data analysis.">
+<link rel="canonical" href="https://www.xiake.icu/median-average-calculator.html">
+<meta name="keywords" content="online median average calculator, mean median mode calculator, calculate average of numbers, free statistics tool, data set analyzer">
+<meta name="referrer" content="no-referrer">
+<!--<meta name="monetag-verification" content="你的验证串">-->
+<!--<script src="Monetag广告JS"></script>-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+textarea{width:100%;height:160px;padding:15px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;resize:none;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:15px;line-height:2;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./lcm-calculator.html">LCM Calculator</a>
+    <a href="./square-root-calculator.html">Square Root Calculator</a>
+</div>
+
+<h1>Online Median &amp; Average Calculator</h1>
+<p>Paste a list of numbers and instantly get the mean, median and mode. Great for homework, survey results, grade books and quick data analysis.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <textarea id="numInput" placeholder="Enter numbers separated by space, comma or newline, e.g. 12, 7, 9, 20, 7"></textarea>
+    <div class="input-row" style="margin-top:14px;">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Compute mean, median and mode in one click</li>
+<li>Parse numbers split by space, comma or newline</li>
+<li>Show sorted value count and sum</li>
+<li>Responsive design for mobile and desktop</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>School statistics and math homework</li>
+<li>Average exam scores and survey responses</li>
+<li>Summarize sales or experiment data sets</li>
+<li>Quick central-tendency checks at work</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const numInput = document.getElementById('numInput');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {maximumFractionDigits:4});
+}
+
+calcBtn.onclick = function(){
+    let raw = numInput.value.trim();
+    if(!raw){
+        resOut.textContent = "Please enter at least one number";
+        return;
+    }
+    let parts = raw.split(/[\s,;]+/).filter(Boolean);
+    let nums = [];
+    for(let p of parts){
+        let v = parseFloat(p);
+        if(isNaN(v)){
+            resOut.textContent = `Invalid number: "${p}"`;
+            return;
+        }
+        nums.push(v);
+    }
+    if(nums.length === 0){
+        resOut.textContent = "No valid numbers found";
+        return;
+    }
+    let n = nums.length;
+    let sum = nums.reduce((a,b)=>a+b, 0);
+    let mean = sum / n;
+
+    let sorted = [...nums].sort((a,b)=>a-b);
+    let median;
+    if(n % 2 === 1){
+        median = sorted[(n-1)/2];
+    } else {
+        median = (sorted[n/2 - 1] + sorted[n/2]) / 2;
+    }
+
+    let freq = {};
+    let maxF = 0;
+    for(let v of nums){
+        let k = v.toString();
+        freq[k] = (freq[k]||0) + 1;
+        if(freq[k] > maxF) maxF = freq[k];
+    }
+    let modes = Object.keys(freq).filter(k=>freq[k]===maxF).map(Number);
+    let modeText = (modes.length === n || maxF === 1)
+        ? "No mode"
+        : modes.map(fmt).join(", ");
+
+    resOut.innerHTML =
+        `Count: ${n}<br>` +
+        `Sum: ${fmt(sum)}<br>` +
+        `Mean (Average): ${fmt(mean)}<br>` +
+        `Median: ${fmt(median)}<br>` +
+        `Mode: ${modeText}`;
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>
