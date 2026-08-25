@@ -654,4 +654,16 @@
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
+<url>
+<loc>https://www.xiake.icu/date-calculator.html</loc>
+<lastmod>2026-08-25</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.xiake.icu/grade-calculator.html</loc>
+<lastmod>2026-08-25</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 </urlset>
