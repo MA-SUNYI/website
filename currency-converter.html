@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Currency Converter | Free Exchange Tool</title>
+<meta name="description" content="Free online currency converter. Enter an amount and two currency codes to convert using your own exchange rate, with the reverse rate shown instantly.">
+<link rel="canonical" href="https://www.xiake.icu/currency-converter.html">
+<meta name="keywords" content="online currency converter, free exchange rate tool, convert money between currencies, travel money calculator, custom rate converter">
+<meta name="referrer" content="no-referrer">
+<!--<meta name="monetag-verification" content="你的验证串">-->
+<!--<script src="Monetag广告JS"></script>-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:150px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:15px;line-height:2;}
+.note{font-size:14px;color:#777;margin-top:10px;line-height:1.6;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./unit-price-calculator.html">Unit Price Calculator</a>
+    <a href="./tip-calculator.html">Tip Calculator</a>
+</div>
+
+<h1>Online Currency Converter</h1>
+<p>Convert an amount between two currencies using your own exchange rate. Great for travel budgeting, comparing prices abroad, or any conversion where you already know today's rate.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="amount" placeholder="Amount">
+        <input type="text" id="from" placeholder="From (e.g. USD)" maxlength="6">
+        <input type="text" id="to" placeholder="To (e.g. EUR)" maxlength="6">
+    </div>
+    <div class="input-row">
+        <label for="rate">1 <span id="lblFromFrom">From</span> =</label>
+        <input type="number" id="rate" placeholder="Rate to To" step="any">
+        <span id="lblTo">To</span>
+        <button id="calcBtn">Convert</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <div class="note">You enter the exchange rate, so the tool works fully offline. Replace it with today's rate for live estimates.</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Convert any amount between two currencies</li>
+<li>Use your own rate — no internet needed</li>
+<li>Shows the reverse rate automatically</li>
+<li>Responsive design for mobile and desktop</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Plan travel spending in a foreign currency</li>
+<li>Compare prices while shopping abroad</li>
+<li>Convert invoice or salary amounts</li>
+<li>Quick rate math before exchanging cash</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const amount = document.getElementById('amount');
+const from = document.getElementById('from');
+const to = document.getElementById('to');
+const rate = document.getElementById('rate');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+const lblFromFrom = document.getElementById('lblFromFrom');
+const lblTo = document.getElementById('lblTo');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:4});
+}
+function syncLabels(){
+    let f = (from.value || 'From').toUpperCase();
+    let t = (to.value || 'To').toUpperCase();
+    lblFromFrom.textContent = f;
+    lblTo.textContent = t;
+}
+from.oninput = syncLabels;
+to.oninput = syncLabels;
+
+calcBtn.onclick = function(){
+    let amt = parseFloat(amount.value);
+    let r = parseFloat(rate.value);
+    if(isNaN(amt) || amt < 0){
+        resOut.textContent = "Please enter a valid amount";
+        return;
+    }
+    if(isNaN(r) || r <= 0){
+        resOut.textContent = "Please enter a valid exchange rate";
+        return;
+    }
+    let converted = amt * r;
+    let reverse = 1 / r;
+    resOut.innerHTML =
+        `${fmt(amt)} ${(from.value||'FROM').toUpperCase()} = ${fmt(converted)} ${(to.value||'TO').toUpperCase()}<br>` +
+        `Reverse rate: 1 ${(to.value||'TO').toUpperCase()} = ${fmt(reverse)} ${(from.value||'FROM').toUpperCase()}`;
+}
+syncLabels();
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>
