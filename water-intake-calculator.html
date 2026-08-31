@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Water Intake Calculator | Daily Hydration</title>
+<meta name="description" content="Free online water intake calculator. Estimate your daily water needs from body weight and activity level, in liters, milliliters and cups.">
+<link rel="canonical" href="https://www.xiake.icu/water-intake-calculator.html">
+<meta name="keywords" content="online water intake calculator, daily water needs, how much water to drink, hydration by weight, free health tool">
+<meta name="referrer" content="no-referrer">
+<!--<meta name="monetag-verification" content="你的验证串">-->
+<!--<script src="Monetag广告JS"></script>-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+.note{font-size:14px;color:#777;margin-top:10px;line-height:1.6;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./calorie-calculator.html">Calorie Calculator</a>
+    <a href="./protein-calculator.html">Protein Calculator</a>
+</div>
+
+<h1>Online Water Intake Calculator</h1>
+<p>Estimate how much water you should drink each day from your body weight and activity level. Results are shown in liters, milliliters and cups as a simple daily target.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <label for="unit">Units</label>
+        <select id="unit">
+            <option value="metric">Metric (kg)</option>
+            <option value="imperial">Imperial (lb)</option>
+        </select>
+        <input type="number" id="weight" placeholder="Body weight">
+    </div>
+    <div class="input-row">
+        <label for="activity">Activity</label>
+        <select id="activity">
+            <option value="30">Low (little exercise)</option>
+            <option value="35" selected>Moderate</option>
+            <option value="40">High (intense training)</option>
+        </select>
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <div class="note">General guideline only — adjust for climate, health and thirst. Not medical advice.</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Estimate daily water from weight and activity</li>
+<li>Show liters, milliliters and cups</li>
+<li>Switch metric and imperial units</li>
+<li>Responsive design for mobile and desktop</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Set a daily hydration goal</li>
+<li>Adjust water for workout intensity</li>
+<li>Pair with calorie and protein plans</li>
+<li>Build a simple wellness routine</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const unit = document.getElementById('unit');
+const weight = document.getElementById('weight');
+const activity = document.getElementById('activity');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:1, maximumFractionDigits:1});
+}
+
+calcBtn.onclick = function(){
+    let w = parseFloat(weight.value);
+    let perKg = parseFloat(activity.value);
+    if(isNaN(w) || w <= 0){
+        resOut.textContent = "Enter a valid body weight";
+        return;
+    }
+    let kg = (unit.value === 'imperial') ? w / 2.20462 : w;
+    let ml = kg * perKg;
+    let liters = ml / 1000;
+    let cups = ml / 240;
+    resOut.innerHTML =
+        `Daily water: ${fmt(liters)} L (${fmt(ml)} mL)<br>` +
+        `About ${fmt(cups)} cups (240 mL)`;
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>

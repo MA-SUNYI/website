@@ -714,4 +714,16 @@
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
+<url>
+<loc>https://www.xiake.icu/monthly-budget-calculator.html</loc>
+<lastmod>2026-08-31</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.xiake.icu/water-intake-calculator.html</loc>
+<lastmod>2026-08-31</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 </urlset>
