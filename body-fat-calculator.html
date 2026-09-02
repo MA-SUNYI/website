@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Body Fat Calculator | Estimate Body Fat %</title>
+<meta name="description" content="Free online body fat calculator using the U.S. Navy method. Estimate body fat percentage from height, weight, waist and other measurements for men and women.">
+<link rel="canonical" href="https://www.xiake.icu/body-fat-calculator.html">
+<meta name="keywords" content="online body fat calculator, estimate body fat percentage, navy body fat method, body fat for men women, free fitness tool">
+<meta name="referrer" content="no-referrer">
+<!--<meta name="monetag-verification" content="你的验证串">-->
+<!--<script src="Monetag广告JS"></script>-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:150px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+.note{font-size:14px;color:#777;margin-top:10px;line-height:1.6;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./bmi-calculator.html">BMI Calculator</a>
+    <a href="./calorie-calculator.html">Calorie Calculator</a>
+</div>
+
+<h1>Online Body Fat Calculator</h1>
+<p>Estimate your body fat percentage with the U.S. Navy method, using height, weight, waist and (for women) hip and neck measurements. A fuller picture of body composition than BMI alone.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <label for="sex">Sex</label>
+        <select id="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <label for="unit">Units</label>
+        <select id="unit">
+            <option value="metric">Metric (cm, kg)</option>
+            <option value="imperial">Imperial (in, lb)</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="height" placeholder="Height">
+        <input type="number" id="weight" placeholder="Weight">
+        <input type="number" id="neck" placeholder="Neck">
+    </div>
+    <div class="input-row">
+        <input type="number" id="waist" placeholder="Waist">
+        <input type="number" id="hip" placeholder="Hip (women)">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <div class="note">Estimate only — for fitness tracking, not medical diagnosis. Results vary by body shape.</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Estimate body fat % with the Navy method</li>
+<li>Separate formulas for men and women</li>
+<li>Metric and imperial units supported</li>
+<li>Pair with BMI for context</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Track body composition while training</li>
+<li>Compare against BMI for context</li>
+<li>Set realistic fitness targets</li>
+<li>Monitor progress without a scale alone</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const sex = document.getElementById('sex');
+const unit = document.getElementById('unit');
+const height = document.getElementById('height');
+const weight = document.getElementById('weight');
+const neck = document.getElementById('neck');
+const waist = document.getElementById('waist');
+const hip = document.getElementById('hip');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:1, maximumFractionDigits:1});
+}
+
+function toKg(v){ return (unit.value === 'imperial') ? v / 2.20462 : v; }
+
+calcBtn.onclick = function(){
+    let h = parseFloat(height.value);
+    let w = parseFloat(weight.value);
+    let n = parseFloat(neck.value);
+    let wc = parseFloat(waist.value);
+    let hp = parseFloat(hip.value);
+    if([h,w,n,wc].some(isNaN) || h<=0 || w<=0 || n<=0 || wc<=0){
+        resOut.textContent = "Enter height, weight, neck and waist";
+        return;
+    }
+    if(sex.value === 'female' && (isNaN(hp) || hp<=0)){
+        resOut.textContent = "Women: also enter hip measurement";
+        return;
+    }
+    // U.S. Navy method, measurements converted to inches
+    let toIn = v => (unit.value === 'imperial') ? v : v / 2.54;
+    let H = toIn(h), N = toIn(n), WC = toIn(wc), HP = toIn(hp);
+    let bf;
+    if(sex.value === 'male'){
+        bf = 86.010*Math.log10(WC - N) - 70.041*Math.log10(H) + 36.76;
+    } else {
+        bf = 163.205*Math.log10(WC + HP - N) - 97.684*Math.log10(H) - 78.387;
+    }
+    if(isNaN(bf) || bf < 1 || bf > 70){
+        resOut.textContent = "Result out of expected range — check measurements";
+        return;
+    }
+    let kg = toKg(w);
+    let fatMass = kg * (bf/100);
+    let lean = kg - fatMass;
+    resOut.innerHTML =
+        `Estimated body fat: ${fmt(bf)}%<br>` +
+        `Fat mass: ${fmt(fatMass)} kg<br>` +
+        `Lean mass: ${fmt(lean)} kg`;
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>
