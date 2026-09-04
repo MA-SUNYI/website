@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Ideal Weight Calculator | Healthy Weight Range</title>
+<meta name="description" content="Free online ideal weight calculator. Estimate a healthy weight range from height using the Robinson and Miller formulas for men and women.">
+<link rel="canonical" href="https://www.xiake.icu/ideal-weight-calculator.html">
+<meta name="keywords" content="online ideal weight calculator, healthy weight range, robinson formula, miller formula, free health tool">
+<meta name="referrer" content="no-referrer">
+<!--<meta name="monetag-verification" content="你的验证串">-->
+<!--<script src="Monetag广告JS"></script>-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:150px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+.note{font-size:14px;color:#777;margin-top:10px;line-height:1.6;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./bmi-calculator.html">BMI Calculator</a>
+    <a href="./body-fat-calculator.html">Body Fat Calculator</a>
+</div>
+
+<h1>Online Ideal Weight Calculator</h1>
+<p>Estimate a healthy weight range from your height using the Robinson and Miller formulas. A simple reference point that complements BMI and body fat, shown in both metric and imperial.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <label for="sex">Sex</label>
+        <select id="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <label for="unit">Units</label>
+        <select id="unit">
+            <option value="metric">Metric (cm)</option>
+            <option value="imperial">Imperial (ft/in)</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <label for="feet">Feet</label>
+        <input type="number" id="feet" placeholder="Feet" style="min-width:90px;">
+        <label for="inches">Inches</label>
+        <input type="number" id="inches" placeholder="Inches" style="min-width:90px;">
+        <label for="cm">or cm</label>
+        <input type="number" id="cm" placeholder="Height cm" style="min-width:110px;">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <div class="note">Reference estimate only — healthy weight varies by build, muscle and age. Not medical advice.</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Estimate ideal weight from height</li>
+<li>Robinson and Miller formulas</li>
+<li>Metric and imperial units</li>
+<li>Pair with BMI and body fat views</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Get a healthy weight reference point</li>
+<li>Set a realistic fitness target</li>
+<li>Compare against current BMI</li>
+<li>Plan a cut or bulk around a range</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const sex = document.getElementById('sex');
+const unit = document.getElementById('unit');
+const feet = document.getElementById('feet');
+const inches = document.getElementById('inches');
+const cm = document.getElementById('cm');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmtPound(n){ return n.toLocaleString('en-US', {minimumFractionDigits:1, maximumFractionDigits:1}); }
+function fmtKg(n){ return n.toLocaleString('en-US', {minimumFractionDigits:1, maximumFractionDigits:1}); }
+
+calcBtn.onclick = function(){
+    let totalIn;
+    if(unit.value === 'imperial'){
+        let f = parseFloat(feet.value);
+        let i = parseFloat(inches.value) || 0;
+        if(isNaN(f) || f <= 0){
+            resOut.textContent = "Enter a valid height in feet/inches";
+            return;
+        }
+        totalIn = f * 12 + i;
+    } else {
+        let c = parseFloat(cm.value);
+        if(isNaN(c) || c <= 0){
+            resOut.textContent = "Enter a valid height in cm";
+            return;
+        }
+        totalIn = c / 2.54;
+    }
+    let robinson, miller;
+    if(sex.value === 'male'){
+        robinson = 52 + 1.9 * (totalIn - 60);
+        miller = 56.2 + 1.41 * (totalIn - 60);
+    } else {
+        robinson = 49 + 1.7 * (totalIn - 60);
+        miller = 53.1 + 1.36 * (totalIn - 60);
+    }
+    if(robinson <= 0 || miller <= 0){
+        resOut.textContent = "Height out of expected range";
+        return;
+    }
+    let robKg = robinson / 2.20462;
+    let milKg = miller / 2.20462;
+    resOut.innerHTML =
+        `Robinson: ${fmtPound(robinson)} lb (${fmtKg(robKg)} kg)<br>` +
+        `Miller: ${fmtPound(miller)} lb (${fmtKg(milKg)} kg)`;
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script></body>
+</html>
