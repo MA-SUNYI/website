@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Card Payoff Calculator | Months & Interest to Be Debt-Free</title>
+<meta name="description" content="Free credit card payoff calculator: months to clear a balance and total interest by balance, APR and monthly payment.">
+<link rel="canonical" href="https://www.xiake.icu/credit-card-payoff-calculator.html">
+<meta name="keywords" content="credit card payoff calculator, debt free calculator, credit card interest, monthly payment plan, free finance tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Credit Card Payoff Calculator","description":"Free credit card payoff calculator. Find how many months it takes to clear a balance and the total interest paid from balance, APR and monthly payment.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/credit-card-payoff-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Credit Card Payoff Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free credit card payoff calculator. Enter your balance, APR and monthly payment to see how many months until the card is paid off and the total interest you will pay."}},{"@type":"Question","name":"Is the Credit Card Payoff Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Credit Card Payoff Calculator | Months & Interest to Be Debt-Free">
+<meta property="og:description" content="Free credit card payoff calculator: months to clear a balance and total interest by balance, APR and monthly payment.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/credit-card-payoff-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Credit Card Payoff Calculator | Months & Interest to Be Debt-Free">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free credit card payoff calculator: months to clear a balance and total interest by balance, APR and monthly payment.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./loan-payment-calculator.html">Loan Payment Calculator</a>
+    <a href="./loan-interest-calculator.html">Loan Interest Calculator</a>
+</div>
+
+<h1>Credit Card Payoff Calculator</h1>
+<p>Find out how long it takes to pay off a credit card balance and how much interest you will pay. Enter your current balance, the card's annual APR and the monthly amount you plan to pay.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="balance" placeholder="Balance $">
+        <input type="number" id="apr" placeholder="APR %">
+        <input type="number" id="payment" placeholder="Monthly payment $">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Estimate months until the balance is zero</li>
+<li>Show total interest paid over the payoff period</li>
+<li>Reveal the cost of only paying the minimum</li>
+<li>Responsive design for mobile and desktop</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Plan a debt-free date you can actually hit</li>
+<li>Compare "pay $200 vs $300 a month" outcomes</li>
+<li>See how a lower APR shortens the payoff</li>
+<li>Motivate a payoff plan with a real interest number</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const balance = document.getElementById('balance');
+const apr = document.getElementById('apr');
+const payment = document.getElementById('payment');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let b = parseFloat(balance.value);
+    let a = parseFloat(apr.value);
+    let p = parseFloat(payment.value);
+    if([b,a,p].some(isNaN) || b<=0 || a<0 || p<=0){
+        resOut.textContent = "Enter a valid balance, APR and monthly payment";
+        return;
+    }
+    let monthlyRate = a/100/12;
+    if(monthlyRate === 0){
+        let months = Math.ceil(b / p);
+        resOut.innerHTML =
+            `Months to pay off: ${months}<br>` +
+            `Total interest: $0.00<br>` +
+            `Total paid: $${fmt(b)}`;
+        return;
+    }
+    if(p <= b * monthlyRate){
+        resOut.textContent = "Monthly payment is too low to ever clear the balance. Increase it above the monthly interest.";
+        return;
+    }
+    let bal = b;
+    let totalInterest = 0;
+    let months = 0;
+    while(bal > 0.005 && months < 1200){
+        let interest = bal * monthlyRate;
+        bal += interest;
+        totalInterest += interest;
+        let pay = Math.min(p, bal);
+        bal -= pay;
+        months++;
+    }
+    resOut.innerHTML =
+        `Months to pay off: ${months} (~${(months/12).toFixed(1)} yrs)<br>` +
+        `Total interest: $${fmt(totalInterest)}<br>` +
+        `Total paid: $${fmt(b + totalInterest)}`;
+}
+</script>
+</body>
+</html>
