@@ -132,6 +132,16 @@ calcGpaBtn.onclick = function(){
     gpaRes.textContent = `Your Current GPA: ${gpa.toFixed(2)}`;
 }
 </script>
+<!-- THIN-SECTION -->
+<h2>How GPA is computed</h2>
+<p>Each course grade becomes grade points (A=4, B=3, …), multiplied by credits, summed and divided by total credits. Weighted by credits, not a flat average of grades.</p>
+<h2>Why it matters</h2>
+<p>Scholarships, honors and grad-school cuts usually use cumulative GPA, so a 1-credit class and a 4-credit class do not count equally. The calculator weights them right.</p>
+<h2>Common mistake</h2>
+<p>Averaging percentages instead of points. A 90% is not always a 4.0 depending on the school's scale; enter the points your institution uses.</p>
+<h2>FAQ</h2>
+<p><strong>What if my school uses a 4.3 or 5.0 scale?</strong> Adjust the point values to your catalog; the math is the same.</p>
+<p><strong>Does it include pass/fail?</strong> Usually not — those carry no points, so exclude them from the credit total.</p>
 <script>
 (function(jwl){
 var d = document,

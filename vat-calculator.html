@@ -126,6 +126,16 @@ calcBtn.onclick = function(){
         `Gross (incl. VAT): $${fmt(gross)}`;
 }
 </script>
+<!-- THIN-SECTION -->
+<h2>How VAT is handled</h2>
+<p>Add VAT: gross = net × (1 + rate%). Remove VAT: net = gross ÷ (1 + rate%). The reverse uses division, because VAT was calculated on the net, not the gross.</p>
+<h2>Why it matters</h2>
+<p>In the EU and many countries VAT is already in the shelf price, so businesses reclaim input VAT and remit only the margin. Splitting net/VAT correctly is required for invoices.</p>
+<h2>Common mistake</h2>
+<p>Subtracting the rate from the gross to get net. A €120 inclusive price at 20% is €100 net, not €96.</p>
+<h2>FAQ</h2>
+<p><strong>VAT vs GST?</strong> Same consumption-tax idea, different name and filing; the math is identical.</p>
+<p><strong>Which rate do I use?</strong> Use the rate for the item type and country — reduced rates apply to food, books and similar in many places.</p>
 <script>
 (function(jwl){
 var d = document,
