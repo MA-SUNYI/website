@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Insurance Coverage Calculator | How Much Do You Need</title>
+<meta name="description" content="Free life insurance coverage calculator: estimate how much coverage you need from income, dependents, debts and existing savings.">
+<link rel="canonical" href="https://www.xiake.icu/insurance-calculator.html">
+<meta name="keywords" content="life insurance calculator, how much life insurance, coverage need estimator, insurance coverage, free finance tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Life Insurance Coverage Calculator","description":"Free life insurance coverage calculator. Estimate how much coverage you need from annual income, dependents, outstanding debts and existing savings.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/insurance-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Life Insurance Coverage Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free life insurance coverage calculator. Enter your income, how many years your dependents need support, outstanding debts and existing savings to estimate the coverage amount that would replace your income and clear obligations."}},{"@type":"Question","name":"Is the Life Insurance Coverage Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Life Insurance Coverage Calculator | How Much Do You Need">
+<meta property="og:description" content="Free life insurance coverage calculator: estimate how much coverage you need from income, dependents, debts and existing savings.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/insurance-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Life Insurance Coverage Calculator | How Much Do You Need">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free life insurance coverage calculator: estimate how much coverage you need from income, dependents, debts and existing savings.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./emergency-fund-calculator.html">Emergency Fund</a>
+    <a href="./retirement-calculator.html">Retirement</a>
+</div>
+
+<h1>Life Insurance Coverage Calculator</h1>
+<p>Estimate how much life insurance you actually need. The calculator replaces your income for the years your dependents rely on it, clears your debts, and accounts for what you already have saved. It's a planning estimate, not a quote.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="income" placeholder="Annual income $">
+        <input type="number" id="years" placeholder="Years of support">
+        <input type="number" id="debts" placeholder="Outstanding debts $">
+        <input type="number" id="future" placeholder="Future costs (edu etc) $">
+        <input type="number" id="savings" placeholder="Existing savings $">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Estimate income-replacement coverage need</li>
+<li>Add outstanding debts and future obligations</li>
+<li>Subtract what you already have saved</li>
+<li>Works for families, singles with dependents, business owners</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Check if your current policy is enough</li>
+<li>Size coverage before getting quotes</li>
+<li>Model a growing family's rising need</li>
+<li>Compare term vs the number you actually need</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const income = document.getElementById('income');
+const years = document.getElementById('years');
+const debts = document.getElementById('debts');
+const future = document.getElementById('future');
+const savings = document.getElementById('savings');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let inc = parseFloat(income.value);
+    let y = parseFloat(years.value);
+    let d = parseFloat(debts.value);
+    let f = parseFloat(future.value);
+    let s = parseFloat(savings.value);
+    if([inc,y].some(isNaN) || inc<0 || y<0){
+        resOut.textContent = "Enter a valid annual income and years of support";
+        return;
+    }
+    if(isNaN(d)||d<0) d=0;
+    if(isNaN(f)||f<0) f=0;
+    if(isNaN(s)||s<0) s=0;
+    let incomeNeed = inc * y;
+    let gross = incomeNeed + d + f;
+    let need = Math.max(0, gross - s);
+    resOut.innerHTML =
+        `Income replacement: $${fmt(incomeNeed)}<br>` +
+        `Plus debts & future costs: $${fmt(d + f)}<br>` +
+        `Minus existing savings: $${fmt(s)}<br>` +
+        `Estimated coverage needed: $${fmt(need)}`;
+}
+</script>
+</body>
+</html>
