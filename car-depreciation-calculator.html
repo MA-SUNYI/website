@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Depreciation Calculator | Value After Years</title>
+<meta name="description" content="Free car depreciation calculator: estimate a vehicle's value after a set number of years and see the total and annual depreciation.">
+<link rel="canonical" href="https://www.xiake.icu/car-depreciation-calculator.html">
+<meta name="keywords" content="car depreciation calculator, car value after years, vehicle depreciation, car resale value, free finance tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Car Depreciation Calculator","description":"Free car depreciation calculator. Estimate the value of a vehicle after a number of years at an annual depreciation rate, and see the total and yearly loss.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/car-depreciation-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Car Depreciation Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free car depreciation calculator. Enter the purchase price, an annual depreciation rate and the number of years to estimate the car's remaining value, the total depreciation and the average loss per year."}},{"@type":"Question","name":"Is the Car Depreciation Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Car Depreciation Calculator | Value After Years">
+<meta property="og:description" content="Free car depreciation calculator: estimate a vehicle's value after a set number of years and see the total and annual depreciation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/car-depreciation-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Car Depreciation Calculator | Value After Years">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free car depreciation calculator: estimate a vehicle's value after a set number of years and see the total and annual depreciation.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./car-loan-calculator.html">Car Loan</a>
+    <a href="./fuel-cost-calculator.html">Fuel Cost</a>
+</div>
+
+<h1>Car Depreciation Calculator</h1>
+<p>Cars lose value the moment you drive off the lot. See how much. Enter the purchase price, an annual depreciation rate and how many years you'll keep it, and get the estimated value, total depreciation and average loss per year.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="price" placeholder="Purchase price $">
+        <input type="number" id="rate" placeholder="Annual depreciation %">
+        <input type="number" id="years" placeholder="Years">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Estimate the car's value after N years</li>
+<li>Show total depreciation and yearly average</li>
+<li>Model the steep first-year drop</li>
+<li>Works for new and used vehicles</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>See the real cost of buying new vs used</li>
+<li>Estimate trade-in value years ahead</li>
+<li>Compare holding a car 3 vs 7 years</li>
+<li>Decide when to sell before value dives</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const price = document.getElementById('price');
+const rate = document.getElementById('rate');
+const years = document.getElementById('years');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let p = parseFloat(price.value);
+    let r = parseFloat(rate.value);
+    let y = parseFloat(years.value);
+    if([p,r,y].some(isNaN) || p<=0 || r<0 || r>100 || y<=0){
+        resOut.textContent = "Enter a valid price, a depreciation rate (0-100) and positive years";
+        return;
+    }
+    let value = p * Math.pow(1 - r/100, y);
+    let lost = p - value;
+    let perYear = lost / y;
+    resOut.innerHTML =
+        `Estimated value after ${y} yr: $${fmt(value)}<br>` +
+        `Total depreciation: $${fmt(lost)}<br>` +
+        `Kept ${(value/p*100).toFixed(1)}% of price<br>` +
+        `Average loss per year: $${fmt(perYear)}`;
+}
+</script>
+</body>
+</html>
