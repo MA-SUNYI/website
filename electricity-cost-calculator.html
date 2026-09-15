@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electricity Cost Calculator | Appliance Running Cost</title>
+<meta name="description" content="Free electricity cost calculator: enter watts, hours per day and your rate per kWh to see daily, monthly and yearly running cost.">
+<link rel="canonical" href="https://www.xiake.icu/electricity-cost-calculator.html">
+<meta name="keywords" content="electricity cost calculator, appliance running cost, kwh calculator, energy cost, free utility tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Electricity Cost Calculator","description":"Free electricity cost calculator. Enter an appliance's wattage, hours of use per day and your electricity rate per kWh to see the daily, monthly and yearly running cost.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/electricity-cost-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Electricity Cost Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free electricity cost calculator. Enter the wattage of an appliance, how many hours a day you use it and your electricity rate per kWh to see how much energy it uses and what it costs per day, month and year."}},{"@type":"Question","name":"Is the Electricity Cost Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Electricity Cost Calculator | Appliance Running Cost">
+<meta property="og:description" content="Free electricity cost calculator: enter watts, hours per day and your rate per kWh to see daily, monthly and yearly running cost.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/electricity-cost-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Electricity Cost Calculator | Appliance Running Cost">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free electricity cost calculator: enter watts, hours per day and your rate per kWh to see daily, monthly and yearly running cost.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./water-bill-calculator.html">Water Bill</a>
+    <a href="./monthly-budget-calculator.html">Monthly Budget</a>
+</div>
+
+<h1>Electricity Cost Calculator</h1>
+<p>Find out what an appliance actually costs to run. Enter its wattage, how many hours a day you use it, and your electricity rate per kWh. See the energy used and the daily, monthly and yearly cost.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="watts" placeholder="Power (watts)">
+        <input type="number" id="hours" placeholder="Hours per day">
+        <input type="number" id="rate" placeholder="Rate per kWh ($)">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Compute energy use in kWh per day, month and year</li>
+<li>Show running cost at your own rate</li>
+<li>Works for AC, heater, fridge, dryer, PC and more</li>
+<li>Instant comparison of two appliances</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>See what an AC or heater costs per month</li>
+<li>Decide whether an old fridge is worth replacing</li>
+<li>Estimate a new appliance's energy cost</li>
+<li>Find the biggest power draws in your home</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const watts = document.getElementById('watts');
+const hours = document.getElementById('hours');
+const rate = document.getElementById('rate');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let w = parseFloat(watts.value);
+    let h = parseFloat(hours.value);
+    let r = parseFloat(rate.value);
+    if([w,h,r].some(isNaN) || w<=0 || h<0 || h>24 || r<0){
+        resOut.textContent = "Enter valid watts, hours per day (0-24) and a rate";
+        return;
+    }
+    let kwhDay = (w * h) / 1000;
+    let kwhMonth = kwhDay * 30;
+    let kwhYear = kwhDay * 365;
+    let cDay = kwhDay * r;
+    let cMonth = cDay * 30;
+    let cYear = cDay * 365;
+    resOut.innerHTML =
+        `Energy: ${kwhDay.toFixed(3)} kWh/day (${kwhMonth.toFixed(1)} kWh/mo)<br>` +
+        `Daily cost: $${fmt(cDay)}<br>` +
+        `Monthly cost: $${fmt(cMonth)}<br>` +
+        `Yearly cost: $${fmt(cYear)}`;
+}
+</script>
+</body>
+</html>
