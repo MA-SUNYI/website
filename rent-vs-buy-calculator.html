@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rent vs Buy Calculator | Which Is Cheaper Over Time</title>
+<meta name="description" content="Free rent vs buy calculator: compare renting and buying over the years you'll stay, including equity, appreciation and rent growth.">
+<link rel="canonical" href="https://www.xiake.icu/rent-vs-buy-calculator.html">
+<meta name="keywords" content="rent vs buy calculator, renting vs buying a home, is it better to rent or buy, homeownership cost, free finance tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rent vs Buy Calculator","description":"Free rent vs buy calculator. Compare the cost of renting against buying a home over a number of years, including equity, price appreciation and rent growth.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/rent-vs-buy-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Rent vs Buy Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free rent vs buy calculator. Enter monthly rent, rent growth, home price, down payment, mortgage rate, appreciation and years, to see which option leaves you ahead."}},{"@type":"Question","name":"Is the Rent vs Buy Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Rent vs Buy Calculator | Which Is Cheaper Over Time">
+<meta property="og:description" content="Free rent vs buy calculator: compare renting and buying over a set number of years, including equity, appreciation and rent growth.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/rent-vs-buy-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rent vs Buy Calculator | Which Is Cheaper Over Time">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free rent vs buy calculator: compare renting and buying over a set number of years, including equity, appreciation and rent growth.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./mortgage-calculator.html">Mortgage</a>
+    <a href="./down-payment-calculator.html">Down Payment</a>
+</div>
+
+<h1>Rent vs Buy Calculator</h1>
+<p>Is it cheaper to rent or buy? Compare the two over the years you plan to stay. The calculator tracks rent paid and rent growth against the cost of owning — down payment, loan payments and upkeep — versus the equity and appreciation you build.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="rent" placeholder="Monthly rent $">
+        <input type="number" id="rentGrowth" placeholder="Rent growth % / yr">
+        <input type="number" id="price" placeholder="Home price $">
+        <input type="number" id="down" placeholder="Down payment $">
+        <input type="number" id="rate" placeholder="Mortgage rate %">
+        <input type="number" id="term" placeholder="Loan term (years)">
+        <input type="number" id="appreciation" placeholder="Home appreciation % / yr">
+        <input type="number" id="years" placeholder="Years you'll stay">
+        <button id="calcBtn">Compare</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Compare total rent paid vs cost of owning</li>
+<li>Model rent growth and home appreciation</li>
+<li>Account for mortgage payoff and equity built</li>
+<li>Estimate the upkeep cost of owning (1% rule)</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Decide whether to rent or buy in a city</li>
+<li>See how long you must stay to break even</li>
+<li>Test if high rent beats a big mortgage</li>
+<li>Compare outcomes over 3, 5 or 10 years</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const rent = document.getElementById('rent');
+const rentGrowth = document.getElementById('rentGrowth');
+const price = document.getElementById('price');
+const down = document.getElementById('down');
+const rate = document.getElementById('rate');
+const term = document.getElementById('term');
+const appreciation = document.getElementById('appreciation');
+const years = document.getElementById('years');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return Math.abs(n).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let r0 = parseFloat(rent.value);
+    let rg = parseFloat(rentGrowth.value);
+    let hp = parseFloat(price.value);
+    let dp = parseFloat(down.value);
+    let rt = parseFloat(rate.value);
+    let lt = parseFloat(term.value);
+    let ap = parseFloat(appreciation.value);
+    let y = parseFloat(years.value);
+    if([r0,hp,dp,rt,lt,y].some(isNaN) || r0<0 || hp<=0 || dp<0 || rt<0 || lt<=0 || y<=0){
+        resOut.textContent = "Enter valid rent, home price, down payment, rate, loan term and years";
+        return;
+    }
+    if(isNaN(rg)||rg<0) rg=0;
+    if(isNaN(ap)||ap<0) ap=0;
+    if(y > lt) y = lt; // can't stay past the loan term in this model
+
+    // --- Renting path: total rent over y years (with growth), down payment invested at 5% ---
+    let totalRent = 0;
+    let rentNow = r0;
+    for(let yr=0; yr<y; yr++){
+        totalRent += rentNow * 12;
+        rentNow *= (1 + rg/100);
+    }
+    let investRate = 0.05;
+    let rentedAssets = dp * Math.pow(1+investRate, y);
+
+    // --- Buying path ---
+    let loan = hp - dp;
+    let mr = rt/100/12;
+    let nTotal = lt*12;      // full amortization term
+    let n = y*12;            // months actually held
+    let pmt;
+    if(loan <= 0){ pmt = 0; }
+    else if(mr === 0){ pmt = loan/nTotal; }
+    else { pmt = loan * mr * Math.pow(1+mr,nTotal) / (Math.pow(1+mr,nTotal)-1); }
+
+    let bal = loan, paidInterest = 0, paidPrincipal = 0;
+    for(let m=1; m<=n; m++){
+        let i = bal * mr;
+        let pr = pmt - i;
+        if(pr > bal) pr = bal;
+        bal -= pr;
+        paidInterest += i;
+        paidPrincipal += pr;
+    }
+    let ownerCosts = dp + paidPrincipal + paidInterest;      // cash out (down + loan payments)
+    let upkeep = hp * 0.01 * y;                               // 1% of price per year
+    ownerCosts += upkeep;
+    let homeValue = hp * Math.pow(1+ap/100, y);
+    let ownerNet = homeValue - bal - upkeep;                  // equity after selling, minus upkeep spent
+    let renterNet = rentedAssets;                             // renter's invested down payment
+    // Compare on equal footing: renter paid rent; owner paid mortgage+upkeep but holds equity.
+    let ownerPosition = ownerNet;
+    let renterPosition = renterNet;
+    let diff = ownerPosition - renterPosition;
+
+    let verdict;
+    if(Math.abs(diff) < 1){
+        verdict = "Roughly a tie";
+    } else if(diff > 0){
+        verdict = "Buying leaves you ahead by $" + fmt(diff);
+    } else {
+        verdict = "Renting leaves you ahead by $" + fmt(Math.abs(diff));
+    }
+
+    resOut.innerHTML =
+        `Total rent paid: $${fmt(totalRent)}<br>` +
+        `Home value after ${y} yr: $${fmt(homeValue)}<br>` +
+        `Remaining loan balance: $${fmt(bal)}<br>` +
+        `Equity (home value − loan): $${fmt(homeValue - bal)}<br>` +
+        `Upkeep spent (1%/yr): $${fmt(upkeep)}<br>` +
+        `Buying net position: $${fmt(ownerPosition)}<br>` +
+        `Renting net position: $${fmt(renterPosition)}<br>` +
+        `<span style="color:#0f9d58">${verdict}</span>`;
+}
+</script>
+</body>
+</html>
