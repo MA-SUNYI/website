@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CD Calculator | Certificate of Deposit Maturity Value</title>
+<meta name="description" content="Free CD calculator: enter deposit, APY and term to see the maturity value and total interest earned on a certificate of deposit.">
+<link rel="canonical" href="https://www.xiake.icu/cd-calculator.html">
+<meta name="keywords" content="cd calculator, certificate of deposit calculator, apy calculator, savings interest calculator, free banking tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CD Calculator","description":"Free CD calculator. Enter a deposit, APY and term in months to see the maturity value and total interest earned on a certificate of deposit.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/cd-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the CD Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free CD calculator. Enter the amount you deposit, the APY and the term in months to see what the certificate of deposit will be worth at maturity and how much interest it earns."}},{"@type":"Question","name":"Is the CD Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="CD Calculator | Certificate of Deposit Maturity Value">
+<meta property="og:description" content="Free CD calculator: enter deposit, APY and term to see the maturity value and total interest earned on a certificate of deposit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/cd-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CD Calculator | Certificate of Deposit Maturity Value">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free CD calculator: enter deposit, APY and term to see the maturity value and total interest earned on a certificate of deposit.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./compound-interest-calculator.html">Compound Interest</a>
+    <a href="./savings-goal-calculator.html">Savings Goal</a>
+</div>
+
+<h1>CD Calculator</h1>
+<p>See what a certificate of deposit is worth at maturity. Enter the amount you deposit, the APY the bank offers and the term length. The calculator grows your balance at the APY and shows the final value plus the interest earned.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="deposit" placeholder="Deposit amount $">
+        <input type="number" id="apy" placeholder="APY %">
+        <input type="number" id="months" placeholder="Term (months)">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Compute maturity value from deposit and APY</li>
+<li>Show total interest earned over the term</li>
+<li>Monthly compounding of the APY</li>
+<li>Compare different terms side by side</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Compare a 12-month vs 60-month CD</li>
+<li>Check what a $10,000 deposit earns</li>
+<li>Decide if a CD beats a savings account</li>
+<li>Plan for a known future expense</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const deposit = document.getElementById('deposit');
+const apy = document.getElementById('apy');
+const months = document.getElementById('months');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let p = parseFloat(deposit.value);
+    let a = parseFloat(apy.value);
+    let m = parseFloat(months.value);
+    if([p,a,m].some(isNaN) || p<=0 || a<0 || m<=0){
+        resOut.textContent = "Enter a valid deposit, APY and term in months";
+        return;
+    }
+    let mr = Math.pow(1 + a/100, 1/12) - 1;
+    let maturity = p * Math.pow(1+mr, m);
+    let interest = maturity - p;
+    resOut.innerHTML =
+        `Maturity value: $${fmt(maturity)}<br>` +
+        `Interest earned: $${fmt(interest)}<br>` +
+        `APY applied: ${a.toFixed(3)}%<br>` +
+        `Return on deposit: ${(interest/p*100).toFixed(2)}%`;
+}
+</script>
+</body>
+</html>
