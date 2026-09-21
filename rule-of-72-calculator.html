@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rule of 72 Calculator | Years to Double Your Money</title>
+<meta name="description" content="Free rule of 72 calculator: enter an interest or return rate to estimate how many years it takes to double your money, plus the exact figure.">
+<link rel="canonical" href="https://www.xiake.icu/rule-of-72-calculator.html">
+<meta name="keywords" content="rule of 72 calculator, years to double money, doubling time calculator, compound growth estimate, free finance tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rule of 72 Calculator","description":"Free rule of 72 calculator. Enter an annual return or interest rate to estimate the years needed to double your money, alongside the exact calculation.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/rule-of-72-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Rule of 72 Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free rule of 72 calculator. Enter an annual rate of return or interest rate to estimate how many years it takes to double your money using the rule of 72, together with the exact doubling time."}},{"@type":"Question","name":"Is the Rule of 72 Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Rule of 72 Calculator | Years to Double Your Money">
+<meta property="og:description" content="Free rule of 72 calculator: enter an interest or return rate to estimate how many years it takes to double your money, plus the exact figure.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/rule-of-72-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rule of 72 Calculator | Years to Double Your Money">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free rule of 72 calculator: enter an interest or return rate to estimate how many years it takes to double your money, plus the exact figure.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./compound-interest-calculator.html">Compound Interest</a>
+    <a href="./investment-return-calculator.html">Investment Return</a>
+</div>
+
+<h1>Rule of 72 Calculator</h1>
+<p>The rule of 72 is the fastest way to estimate doubling time: divide 72 by your annual rate. Enter a rate below to get the estimate, the exact doubling time and a quick table of how your money grows.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="rate" placeholder="Annual rate %">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Rule of 72 doubling estimate</li>
+<li>Exact doubling time from the true formula</li>
+<li>Growth table at each doubling</li>
+<li>See how small rate changes matter</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Sanity-check a return assumption</li>
+<li>Show a kid how compounding works</li>
+<li>Compare savings vs investment rates</li>
+<li>Estimate when a sum will double</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const rate = document.getElementById('rate');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let r = parseFloat(rate.value);
+    if(isNaN(r) || r<=0 || r>100){
+        resOut.textContent = "Enter an annual rate between 0 and 100";
+        return;
+    }
+    let est = 72 / r;
+    let exact = Math.log(2) / Math.log(1 + r/100);
+    let rows = "";
+    let value = 1000;
+    for(let d=0; d<4; d++){
+        rows += `<tr><td>${d === 0 ? "Start" : d + "×"}</td><td>${d === 0 ? 0 : (exact*d).toFixed(1)}</td><td>$${fmt(value)}</td></tr>`;
+        value *= 2;
+    }
+    resOut.innerHTML =
+        `Rule of 72 estimate: <strong>${est.toFixed(1)} years</strong><br>` +
+        `Exact doubling time: ${exact.toFixed(2)} years<br>` +
+        `Estimate error: ${(Math.abs(est-exact)/exact*100).toFixed(1)}%<br>` +
+        `<table><thead><tr><th>Doubling</th><th>Years</th><th>Value of $1,000</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+</script>
+</body>
+</html>
