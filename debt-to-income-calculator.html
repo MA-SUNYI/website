@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt to Income Calculator | DTI Ratio for a Mortgage</title>
+<meta name="description" content="Free debt to income calculator: enter gross income and monthly debts to see your DTI ratio and whether lenders are likely to approve.">
+<link rel="canonical" href="https://www.xiake.icu/debt-to-income-calculator.html">
+<meta name="keywords" content="debt to income calculator, dti ratio, mortgage qualification, 43 percent dti, how much can i borrow, free finance tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Debt to Income Calculator","description":"Free debt to income calculator. Enter gross monthly income and monthly debt payments to see your DTI ratio and how lenders typically view it.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/debt-to-income-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Debt to Income Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free debt to income calculator. Enter your gross monthly income and your total monthly debt payments to see your DTI ratio, and compare it to common lender limits."}},{"@type":"Question","name":"Is the Debt to Income Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Debt to Income Calculator | DTI Ratio for a Mortgage">
+<meta property="og:description" content="Free debt to income calculator: enter gross income and monthly debts to see your DTI ratio and whether lenders are likely to approve.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/debt-to-income-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Debt to Income Calculator | DTI Ratio for a Mortgage">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free debt to income calculator: enter gross income and monthly debts to see your DTI ratio and whether lenders are likely to approve.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./mortgage-calculator.html">Mortgage</a>
+    <a href="./debt-payoff-calculator.html">Debt Payoff</a>
+</div>
+
+<h1>Debt to Income Calculator</h1>
+<p>Your debt-to-income ratio is the number lenders check first. Enter your gross monthly income and your monthly debt payments — housing, loans, cards — to see your DTI and where you stand against the limits lenders actually use.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="income" placeholder="Gross monthly income $">
+        <input type="number" id="housing" placeholder="Housing payment $ (rent/mortgage)">
+        <input type="number" id="debts" placeholder="Other monthly debts $">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Front-end and back-end DTI ratios</li>
+<li>Compare against 28% / 36% / 43% thresholds</li>
+<li>See how much debt room you have left</li>
+<li>Test the effect of paying off a card</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Check if you qualify for a mortgage</li>
+<li>See how a car loan changes your DTI</li>
+<li>Plan which debt to clear first</li>
+<li>Set a safe housing budget</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const income = document.getElementById('income');
+const housing = document.getElementById('housing');
+const debts = document.getElementById('debts');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let inc = parseFloat(income.value);
+    let h = parseFloat(housing.value);
+    let d = parseFloat(debts.value);
+    if(isNaN(inc) || inc<=0){
+        resOut.textContent = "Enter a valid gross monthly income";
+        return;
+    }
+    if(isNaN(h)||h<0) h = 0;
+    if(isNaN(d)||d<0) d = 0;
+    let front = h / inc * 100;
+    let back = (h + d) / inc * 100;
+
+    let verdict;
+    if(back <= 28) verdict = "Excellent — well within typical limits";
+    else if(back <= 36) verdict = "Healthy — most lenders will be comfortable";
+    else if(back <= 43) verdict = "Acceptable — usually still approvable";
+    else if(back <= 50) verdict = "High — limited loan options";
+    else verdict = "Very high — difficult to qualify";
+
+    // max total debt at 36% and 43%
+    let max36 = inc * 0.36 - h;
+    let max43 = inc * 0.43 - h;
+
+    resOut.innerHTML =
+        `Front-end DTI (housing only): ${front.toFixed(1)}%<br>` +
+        `Back-end DTI (all debts): <span style="color:#0f9d58">${back.toFixed(1)}%</span><br>` +
+        `${verdict}<br>` +
+        `<table><thead><tr><th>Limit</th><th>Max total debt</th><th>Room left</th></tr></thead><tbody>` +
+        `<tr><td>28%</td><td>$${fmt(inc*0.28)}</td><td>$${fmt(inc*0.28 - h - d)}</td></tr>` +
+        `<tr><td>36%</td><td>$${fmt(inc*0.36)}</td><td>$${fmt(max36 - d)}</td></tr>` +
+        `<tr><td>43%</td><td>$${fmt(inc*0.43)}</td><td>$${fmt(max43 - d)}</td></tr>` +
+        `</tbody></table>`;
+}
+</script>
+</body>
+</html>
