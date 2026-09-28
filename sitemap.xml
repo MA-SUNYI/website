@@ -1008,4 +1008,16 @@
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
+<url>
+<loc>https://www.xiake.icu/roi-calculator.html</loc>
+<lastmod>2026-09-28</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://www.xiake.icu/payback-period-calculator.html</loc>
+<lastmod>2026-09-28</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
 </urlset>

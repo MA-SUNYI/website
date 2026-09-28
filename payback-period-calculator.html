@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payback Period Calculator | Years to Recover Investment</title>
+<meta name="description" content="Free payback period calculator: enter your initial investment and annual cash flow to see how long it takes to recover the cost.">
+<link rel="canonical" href="https://www.xiake.icu/payback-period-calculator.html">
+<meta name="keywords" content="payback period calculator, payback period formula, years to recover investment, capital budgeting, cash flow, free business tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Payback Period Calculator","description":"Free payback period calculator. Enter the initial investment and expected annual cash flow to see how many years it takes to recover the cost, plus a cumulative cash flow table.","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/payback-period-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Payback Period Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It divides your initial investment by the annual cash flow it generates to show how many years and months pass before you recover the cost, with a year-by-year cumulative table."}},{"@type":"Question","name":"Is the Payback Period Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Payback Period Calculator | Years to Recover Investment">
+<meta property="og:description" content="Free payback period calculator: enter your initial investment and annual cash flow to see how long it takes to recover the cost.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/payback-period-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Payback Period Calculator | Years to Recover Investment">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free payback period calculator: enter your initial investment and annual cash flow to see how long it takes to recover the cost.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./roi-calculator.html">ROI</a>
+    <a href="./break-even-calculator.html">Break Even</a>
+</div>
+
+<h1>Payback Period Calculator</h1>
+<p>How long until this thing pays for itself? That's the payback period, and it's the question every equipment purchase, marketing spend and side project really comes down to. Enter the upfront cost and the cash it generates per year to see exactly when you break even on the investment.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="invest" placeholder="Initial investment $">
+        <input type="number" id="cash" placeholder="Annual cash flow $">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Payback period in years and months</li>
+<li>Year-by-year cumulative cash flow table</li>
+<li>Total recovered and remaining balance</li>
+<li>Handles cash flow that never repays</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Evaluate an equipment purchase</li>
+<li>Judge a marketing or ad spend</li>
+<li>Compare two projects by recovery speed</li>
+<li>Check when a side project turns a profit</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const invest = document.getElementById('invest');
+const cash = document.getElementById('cash');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let inv = parseFloat(invest.value);
+    let cf = parseFloat(cash.value);
+    if(isNaN(inv) || isNaN(cf) || inv <= 0){
+        resOut.textContent = "Enter a valid initial investment and annual cash flow";
+        return;
+    }
+    if(cf <= 0){
+        resOut.innerHTML = `With no positive cash flow, the investment never pays back on its own.`;
+        return;
+    }
+    let yearsExact = inv / cf;
+    let wholeYears = Math.floor(yearsExact);
+    let months = Math.round((yearsExact - wholeYears) * 12);
+    if(months === 12){ wholeYears += 1; months = 0; }
+
+    let html =
+        `Payback period: <span style="color:#0f9d58">${wholeYears} year(s) ${months} month(s)</span><br>` +
+        `Exactly: ${yearsExact.toFixed(2)} years<br>` +
+        `Total recovered over that period: $${fmt(inv)}`;
+
+    // cumulative table for the first up-to-6 years, and the recovery year
+    let showYears = Math.min(Math.max(wholeYears + 2, 3), 6);
+    html += `<table><thead><tr><th>Year</th><th>Cash flow</th><th>Cumulative</th><th>Balance</th></tr></thead><tbody>`;
+    let cum = 0;
+    for(let y = 1; y <= showYears; y++){
+        cum += cf;
+        let bal = inv - cum;
+        html += `<tr><td>${y}</td><td>$${fmt(cf)}</td><td>$${fmt(cum)}</td><td>$${fmt(bal)}</td></tr>`;
+    }
+    html += `</tbody></table>`;
+
+    if(cf * 100 < inv){
+        html += `<br>Note: at this cash flow the full payback takes over a century — check the numbers.`;
+    }
+    resOut.innerHTML = html;
+}
+</script>
+</body>
+</html>

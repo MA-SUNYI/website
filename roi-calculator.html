@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROI Calculator | Return on Investment Percentage</title>
+<meta name="description" content="Free ROI calculator: enter the amount invested and the amount returned to get net profit, return on investment percentage and annualized ROI.">
+<link rel="canonical" href="https://www.xiake.icu/roi-calculator.html">
+<meta name="keywords" content="roi calculator, return on investment, roi percentage, annualized roi, investment gain, free finance tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ROI Calculator","description":"Free ROI calculator. Enter the amount invested, the amount returned and the holding period to get net profit, return on investment percentage and annualized ROI.","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/roi-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the ROI Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It subtracts your investment cost from the amount returned to get net profit, divides by the cost to get the ROI percentage, and optionally annualizes that return over your holding period."}},{"@type":"Question","name":"Is the ROI Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="ROI Calculator | Return on Investment Percentage">
+<meta property="og:description" content="Free ROI calculator: enter the amount invested and the amount returned to get net profit, return on investment percentage and annualized ROI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/roi-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ROI Calculator | Return on Investment Percentage">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free ROI calculator: enter the amount invested and the amount returned to get net profit, return on investment percentage and annualized ROI.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./investment-return-calculator.html">Investment Return</a>
+    <a href="./payback-period-calculator.html">Payback Period</a>
+</div>
+
+<h1>ROI Calculator</h1>
+<p>Return on investment is the cleanest way to compare two uses of money — as long as you measure it the same way. Enter what you put in, what you got back, and how long you held it, and see net profit, ROI percentage, and the annualized number that makes different deals comparable.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="cost" placeholder="Amount invested $">
+        <input type="number" id="gain" placeholder="Amount returned $">
+        <input type="number" id="years" placeholder="Holding period (years, optional)">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Net profit and ROI percentage</li>
+<li>Annualized ROI for comparing deals</li>
+<li>Total return multiple on your money</li>
+<li>Handles losses as well as gains</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Compare two investments of different sizes</li>
+<li>Check whether a project paid off</li>
+<li>Annualize a return to compare against the market</li>
+<li>Measure marketing or equipment spend</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const cost = document.getElementById('cost');
+const gain = document.getElementById('gain');
+const years = document.getElementById('years');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let c = parseFloat(cost.value);
+    let g = parseFloat(gain.value);
+    if(isNaN(c) || isNaN(g) || c <= 0){
+        resOut.textContent = "Enter a valid amount invested and amount returned";
+        return;
+    }
+    let net = g - c;
+    let roi = net / c * 100;
+    let multiple = g / c;
+
+    let html =
+        `Net profit: <span style="color:${net>=0?'#0f9d58':'#d93025'}">$${fmt(net)}</span><br>` +
+        `Return on investment: <span style="color:${roi>=0?'#0f9d58':'#d93025'}">${roi.toFixed(2)}%</span><br>` +
+        `Total return multiple: ${multiple.toFixed(3)}x your money`;
+
+    let y = parseFloat(years.value);
+    if(!isNaN(y) && y > 0){
+        // annualized ROI = (multiple)^(1/years) - 1
+        if(multiple > 0){
+            let ann = (Math.pow(multiple, 1/y) - 1) * 100;
+            html += `<br><br>Annualized ROI: <span style="color:${ann>=0?'#0f9d58':'#d93025'}">${ann.toFixed(2)}%</span> per year` +
+                    `<br><br>A ${roi.toFixed(1)}% total return over ${y} year(s) is a ${ann.toFixed(2)}% annual return — ` +
+                    `that's the number to compare against other options.`;
+        }
+    } else {
+        html += `<br><br>Add a holding period to see the annualized ROI, which is what makes two different deals comparable.`;
+    }
+    resOut.innerHTML = html;
+}
+</script>
+</body>
+</html>
