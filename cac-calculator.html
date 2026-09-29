@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAC Calculator | Customer Acquisition Cost</title>
+<meta name="description" content="Free CAC calculator: enter marketing and sales spend and new customers won to get customer acquisition cost and how it compares to lifetime value.">
+<link rel="canonical" href="https://www.xiake.icu/cac-calculator.html">
+<meta name="keywords" content="cac calculator, customer acquisition cost, cac formula, ltv to cac ratio, marketing cost per customer, free business tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CAC Calculator","description":"Free customer acquisition cost calculator. Enter marketing and sales spend plus new customers won to get CAC, and compare it against customer lifetime value with the LTV:CAC ratio.","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/cac-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the CAC Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It divides total acquisition spend (marketing plus sales) by the number of new customers won to get your customer acquisition cost, and shows the LTV:CAC ratio when you supply a lifetime value."}},{"@type":"Question","name":"Is the CAC Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="CAC Calculator | Customer Acquisition Cost">
+<meta property="og:description" content="Free CAC calculator: enter marketing and sales spend and new customers won to get customer acquisition cost and how it compares to lifetime value.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/cac-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CAC Calculator | Customer Acquisition Cost">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free CAC calculator: enter marketing and sales spend and new customers won to get customer acquisition cost and how it compares to lifetime value.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./ltv-calculator.html">LTV</a>
+    <a href="./break-even-calculator.html">Break Even</a>
+</div>
+
+<h1>CAC Calculator</h1>
+<p>What does it actually cost you to win one customer? Not the ad spend you see in one channel — the whole thing, including the salaries of the people who close the deals. That total, divided by the customers you won, is your CAC, and it decides whether growth makes you money or eats you alive.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="spend" placeholder="Marketing + sales spend $">
+        <input type="number" id="customers" placeholder="New customers won">
+        <input type="number" id="ltv" placeholder="Lifetime value (optional) $">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Customer acquisition cost from total spend</li>
+<li>LTV:CAC ratio when you add lifetime value</li>
+<li>CAC payback verdict: healthy, watch, or losing money</li>
+<li>Spend breakdown per customer per month</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Check whether paid ads are profitable</li>
+<li>Compare CAC across channels or campaigns</li>
+<li>Set a defensible marketing budget</li>
+<li>Test if a growth plan can pay for itself</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const spend = document.getElementById('spend');
+const customers = document.getElementById('customers');
+const ltv = document.getElementById('ltv');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let s = parseFloat(spend.value);
+    let n = parseFloat(customers.value);
+    if(isNaN(s) || isNaN(n) || s < 0 || n <= 0){
+        resOut.textContent = "Enter a valid total spend and a customer count greater than zero";
+        return;
+    }
+    let cac = s / n;
+    let html = `Customer acquisition cost: <span style="color:#2563eb">$${fmt(cac)}</span> per customer<br>` +
+               `Total spend: $${fmt(s)} across ${n.toLocaleString()} customers`;
+
+    let l = parseFloat(ltv.value);
+    if(!isNaN(l) && l > 0){
+        let ratio = l / cac;
+        let verdict, color;
+        if(ratio >= 3){ verdict = "healthy — the standard benchmark is 3x or better"; color = "#0f9d58"; }
+        else if(ratio >= 1){ verdict = "thin — you make money, but too little margin for error"; color = "#e08b00"; }
+        else { verdict = "losing money — you pay more to win a customer than they return"; color = "#d93025"; }
+        html += `<br><br>LTV:CAC ratio: <span style="color:${color};font-size:22px">${ratio.toFixed(2)}x</span><br>` +
+                `Verdict: <span style="color:${color}">${verdict}</span><br>` +
+                `Profit per customer: $${fmt(l - cac)}`;
+    } else {
+        html += `<br><br>Add a lifetime value to see the LTV:CAC ratio — the number that says whether growth is profitable.`;
+    }
+    resOut.innerHTML = html;
+}
+</script>
+</body>
+</html>
