@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Loan Calculator | Monthly Payment & Total Interest</title>
+<meta name="description" content="Free personal loan calculator: enter loan amount, interest rate and term to see your monthly payment, total interest and total cost. Includes an origination-fee APR estimate.">
+<link rel="canonical" href="https://www.xiake.icu/personal-loan-calculator.html">
+<meta name="keywords" content="personal loan calculator, loan payment calculator, monthly loan payment, total interest, personal loan apr, free finance tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Personal Loan Calculator","description":"Free personal loan calculator. Enter your loan amount, annual interest rate and repayment term to see the fixed monthly payment, total interest and total cost. Add an origination fee to estimate the effective APR.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/personal-loan-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Personal Loan Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It takes your loan amount, annual percentage rate and repayment term and works out your fixed monthly payment, total interest and total cost. If you add an origination fee it also estimates your effective APR after the fee."}},{"@type":"Question","name":"Is the Personal Loan Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your numbers are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Personal Loan Calculator | Monthly Payment & Total Interest">
+<meta property="og:description" content="Free personal loan calculator: enter loan amount, interest rate and term to see your monthly payment, total interest and total cost.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/personal-loan-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Personal Loan Calculator | Monthly Payment & Total Interest">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free personal loan calculator: enter loan amount, interest rate and term to see your monthly payment, total interest and total cost.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./loan-payment-calculator.html">Loan Payment</a>
+    <a href="./debt-to-income-calculator.html">Debt-to-Income</a>
+</div>
+
+<h1>Personal Loan Calculator</h1>
+<p>A personal loan quote tells you the rate but rarely the real number you care about: what leaves your account every month, and what it costs in interest by the end. Enter the amount, rate and term below — the calculator returns your fixed monthly payment, total interest and total cost, and if you add an origination fee it shows the effective APR you actually pay.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="amt" placeholder="Loan amount $">
+        <input type="number" id="rate" placeholder="Interest rate % APR">
+        <input type="number" id="term" placeholder="Term (years)">
+        <input type="number" id="fee" placeholder="Origination fee % (opt)">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="sched"></table>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Fixed monthly payment on a standard amortizing loan</li>
+<li>Total interest and total cost over the full term</li>
+<li>Effective APR after an origination fee</li>
+<li>Year-by-year amortization: interest, principal and balance</li>
+<li>No registration or software installation</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Compare two loan offers at different rates and fees</li>
+<li>See what a 3-year vs 5-year term really costs</li>
+<li>Find the break-even point where extra rate beats a fee</li>
+<li>Check a consolidation loan against your current payments</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const amt = document.getElementById('amt');
+const rate = document.getElementById('rate');
+const term = document.getElementById('term');
+const fee = document.getElementById('fee');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+const sched = document.getElementById('sched');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let P = parseFloat(amt.value);
+    let r = parseFloat(rate.value);
+    let y = parseFloat(term.value);
+    if(isNaN(P) || P<=0 || isNaN(r) || r<0 || isNaN(y) || y<=0){
+        resOut.textContent = "Enter a valid loan amount, interest rate and term";
+        sched.innerHTML = '';
+        return;
+    }
+    let n = Math.round(y*12);
+    let mr = r/100/12;
+    let pmt;
+    if(mr === 0){ pmt = P/n; }
+    else { pmt = P*mr*Math.pow(1+mr,n)/(Math.pow(1+mr,n)-1); }
+    let totalPay = pmt*n;
+    let totalInt = totalPay - P;
+
+    let html =
+        `Monthly payment: <span style="color:#0f9d58;font-size:22px">$${fmt(pmt)}</span><br>` +
+        `Total of ${n} payments: $${fmt(totalPay)}<br>` +
+        `Total interest: $${fmt(totalInt)}<br>` +
+        `Total cost (principal + interest): $${fmt(totalPay)}`;
+
+    let f = parseFloat(fee.value);
+    if(!isNaN(f) && f>0){
+        let received = P*(1 - f/100);
+        let lo = 0.000001, hi = 1.0;
+        function pv(i){ return (i===0) ? pmt*n : pmt*(1-Math.pow(1+i,-n))/i; }
+        for(let k=0;k<120;k++){
+            let mid = (lo+hi)/2;
+            if(pv(mid) > received){ lo = mid; } else { hi = mid; }
+        }
+        let ei = (lo+hi)/2;
+        let effApr = (Math.pow(1+ei,12)-1)*100;
+        html += `<br><br>Origination fee: ${f}% ($${fmt(P*f/100)})<br>` +
+                `Amount you actually receive: $${fmt(received)}<br>` +
+                `Effective APR: <span style="color:#d93025">${effApr.toFixed(2)}%</span> (vs ${r}% nominal)`;
+    }
+    resOut.innerHTML = html;
+
+    let balance = P, yr = 1, yInt = 0, yPrin = 0;
+    let rows = '<tr><th>Year</th><th>Interest Paid</th><th>Principal Paid</th><th>Balance</th></tr>';
+    for(let m=1; m<=n; m++){
+        let i = (mr===0) ? 0 : balance*mr;
+        let pr = pmt - i;
+        if(pr > balance) pr = balance;
+        balance -= pr;
+        if(balance < 0) balance = 0;
+        yInt += i; yPrin += pr;
+        if(m%12 === 0 || m === n){
+            rows += `<tr><td>${yr}</td><td>$${fmt(yInt)}</td><td>$${fmt(yPrin)}</td><td>$${fmt(balance)}</td></tr>`;
+            yr++; yInt = 0; yPrin = 0;
+        }
+    }
+    sched.innerHTML = rows;
+}
+</script>
+</body>
+</html>
