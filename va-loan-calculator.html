@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VA Loan Calculator | 0% Down Payment with Funding Fee</title>
+<meta name="description" content="Free VA loan calculator: enter home price, down payment, rate and term to see your monthly payment with the VA funding fee and no monthly mortgage insurance, plus total cost.">
+<link rel="canonical" href="https://www.xiake.icu/va-loan-calculator.html">
+<meta name="keywords" content="va loan calculator, va mortgage calculator, va funding fee, va home loan payment, 0 down mortgage, free mortgage tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"VA Loan Calculator","description":"Free VA loan calculator. Enter home price, down payment, interest rate and term to estimate your monthly payment including the one-time VA funding fee, with no monthly mortgage insurance, plus the total cost over the loan.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/va-loan-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the VA Loan Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It estimates your VA monthly payment including the one-time funding fee, shows the financed loan balance, and confirms there is no monthly mortgage insurance — then totals your cost over the full term."}},{"@type":"Question","name":"Is the VA Loan Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your numbers are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="VA Loan Calculator | 0% Down Payment with Funding Fee">
+<meta property="og:description" content="Free VA loan calculator: enter home price, down payment, rate and term to see your monthly payment with the VA funding fee and no monthly mortgage insurance.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/va-loan-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VA Loan Calculator | 0% Down Payment with Funding Fee">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free VA loan calculator: enter home price, down payment, rate and term to see your monthly payment with the VA funding fee and no monthly mortgage insurance.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./mortgage-calculator.html">Mortgage</a>
+    <a href="./fha-loan-calculator.html">FHA Loan</a>
+</div>
+
+<h1>VA Loan Calculator</h1>
+<p>The VA loan's headline perk is 0% down — but the cost that surprises buyers is the **VA funding fee**, a one-time charge that replaces the monthly mortgage insurance you'd pay on an FHA or low-down conventional loan. Enter your home price, down payment and rate to see the real VA payment (principal, interest and the funding fee rolled in) and confirm the absence of monthly MIP.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="price" placeholder="Home price $">
+        <input type="number" id="dp" placeholder="Down payment % (0 for VA)">
+        <input type="number" id="rate" placeholder="Interest rate %">
+        <input type="number" id="term" placeholder="Term (years)">
+        <input type="number" id="fee" placeholder="Funding fee % (2.15)">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Loan amount and the VA funding fee added to the balance</li>
+<li>Monthly principal &amp; interest on the financed amount</li>
+<li>Confirms no monthly mortgage insurance on a VA loan</li>
+<li>Total monthly payment with optional tax and insurance</li>
+<li>Total funding fee, total interest and total cost over the term</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>See the true 0%-down VA payment before you shop</li>
+<li>Compare VA vs FHA — VA drops monthly MIP, adds a funding fee</li>
+<li>Test how a 5% down payment lowers the funding fee to 1.5%</li>
+<li>Roll the payment into your budget with the <a href="./house-affordability-calculator.html" style="color:#2363e0">House Affordability Calculator</a></li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const price = document.getElementById('price');
+const dp = document.getElementById('dp');
+const rate = document.getElementById('rate');
+const term = document.getElementById('term');
+const fee = document.getElementById('fee');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+const resTbl = document.getElementById('resTbl');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let pr = parseFloat(price.value);
+    let d = parseFloat(dp.value);
+    let r = parseFloat(rate.value);
+    let y = parseFloat(term.value);
+    let f = parseFloat(fee.value);
+    if(isNaN(pr) || pr<=0 || isNaN(d) || d<0 || d>=100 || isNaN(r) || r<0 || isNaN(y) || y<=0){
+        resOut.textContent = "Enter a valid home price, down payment %, rate and term";
+        resTbl.innerHTML = '';
+        return;
+    }
+    if(isNaN(f) || f<0) f = 2.15;
+    let loan = pr * (1 - d/100);
+    let fundingFee = loan * f/100;
+    let financed = loan + fundingFee;
+    let n = Math.round(y*12);
+    let mr = r/100/12;
+    let pmtPI;
+    if(mr === 0){ pmtPI = financed/n; }
+    else { pmtPI = financed*mr*Math.pow(1+mr,n)/(Math.pow(1+mr,n)-1); }
+    let totalMonthly = pmtPI;
+    let totalInt = pmtPI*n - financed;
+    let totalCost = pmtPI*n + fundingFee;
+
+    resOut.innerHTML =
+        `Monthly P&amp;I: <span style="color:#0f9d58;font-size:22px">$${fmt(pmtPI)}</span><br>` +
+        `No monthly mortgage insurance on a VA loan<br>` +
+        `Total monthly payment: <span style="color:#0f9d58">$${fmt(totalMonthly)}</span>`;
+
+    resTbl.innerHTML =
+        '<tr><th>Line item</th><th>Value</th></tr>' +
+        `<tr><td>Loan amount</td><td>$${fmt(loan)}</td></tr>` +
+        `<tr><td>VA funding fee (${f}%)</td><td>$${fmt(fundingFee)}</td></tr>` +
+        `<tr><td>Financed loan balance</td><td>$${fmt(financed)}</td></tr>` +
+        `<tr><td>Monthly P&amp;I</td><td>$${fmt(pmtPI)}</td></tr>` +
+        `<tr><td>Monthly mortgage insurance</td><td>$0.00</td></tr>` +
+        `<tr><td>Total funding fee</td><td>$${fmt(fundingFee)}</td></tr>` +
+        `<tr><td>Total interest</td><td>$${fmt(totalInt)}</td></tr>` +
+        `<tr><td>Total cost (P&amp;I + funding fee)</td><td>$${fmt(totalCost)}</td></tr>`;
+}
+</script>
+</body>
+</html>
