@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Lease Calculator | Monthly Payment, Depreciation & Money Factor</title>
+<meta name="description" content="Free auto lease calculator: enter vehicle price, down payment, residual value, money factor and term to see your monthly lease payment, total lease cost and cost per mile.">
+<link rel="canonical" href="https://www.xiake.icu/auto-lease-calculator.html">
+<meta name="keywords" content="auto lease calculator, car lease payment, lease money factor, residual value, monthly lease cost, free car tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Auto Lease Calculator","description":"Free auto lease calculator. Enter the vehicle price, down payment, residual value, money factor and lease term to estimate your monthly lease payment, the total cost of the lease and the cost per mile.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/auto-lease-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Auto Lease Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It computes your monthly lease payment from the vehicle price, down payment, residual value, money factor and term, then shows the total lease cost and the cost per mile driven."}},{"@type":"Question","name":"Is the Auto Lease Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and none of your numbers are uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Auto Lease Calculator | Monthly Payment, Depreciation & Money Factor">
+<meta property="og:description" content="Free auto lease calculator: enter vehicle price, down payment, residual value, money factor and term to see your monthly lease payment, total lease cost and cost per mile.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/auto-lease-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Auto Lease Calculator | Monthly Payment, Depreciation & Money Factor">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free auto lease calculator: enter vehicle price, down payment, residual value, money factor and term to see your monthly lease payment, total lease cost and cost per mile.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./car-loan-calculator.html">Car Loan</a>
+    <a href="./fuel-cost-calculator.html">Fuel Cost</a>
+</div>
+
+<h1>Auto Lease Calculator</h1>
+<p>A lease payment is just two parts added together: the **depreciation** you eat while driving the car, plus the **finance charge** on the money the lessor has tied up. Enter the vehicle price, your down payment, the residual value (what the car is worth at lease-end), the money factor and the term to see the real monthly number — including sales tax — and the total cost of the lease.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="msrp" placeholder="Vehicle price $">
+        <input type="number" id="down" placeholder="Down payment $">
+        <input type="number" id="trade" placeholder="Trade-in value $">
+        <input type="number" id="res" placeholder="Residual value %">
+        <input type="number" id="mf" placeholder="Money factor (0.00125)">
+        <input type="number" id="term" placeholder="Term (months)">
+        <input type="number" id="tax" placeholder="Sales tax %">
+        <input type="number" id="miles" placeholder="Annual miles">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Net capitalized cost after down payment and trade-in</li>
+<li>Monthly depreciation from price minus residual value</li>
+<li>Monthly finance charge from the money factor</li>
+<li>Pre-tax payment plus the sales-tax portion</li>
+<li>Total lease cost and cost per mile driven</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Compare leasing vs buying with the <a href="./car-loan-calculator.html" style="color:#2363e0">Car Loan Calculator</a></li>
+<li>See how a higher residual value lowers your payment</li>
+<li>Test mileage allowances before you overpay for extra miles</li>
+<li>Estimate fuel impact with the <a href="./fuel-cost-calculator.html" style="color:#2363e0">Fuel Cost Calculator</a></li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const msrp = document.getElementById('msrp');
+const down = document.getElementById('down');
+const trade = document.getElementById('trade');
+const res = document.getElementById('res');
+const mf = document.getElementById('mf');
+const term = document.getElementById('term');
+const tax = document.getElementById('tax');
+const miles = document.getElementById('miles');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+const resTbl = document.getElementById('resTbl');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let c = parseFloat(msrp.value);
+    let d = parseFloat(down.value);
+    let t = parseFloat(trade.value);
+    let rpct = parseFloat(res.value);
+    let m = parseFloat(mf.value);
+    let nmon = parseFloat(term.value);
+    let tx = parseFloat(tax.value);
+    let am = parseFloat(miles.value);
+    if(isNaN(c) || c<=0 || isNaN(rpct) || rpct<=0 || rpct>=100 || isNaN(m) || m<0 || isNaN(nmon) || nmon<=0){
+        resOut.textContent = "Enter a valid vehicle price, residual %, money factor and term";
+        resTbl.innerHTML = '';
+        return;
+    }
+    if(isNaN(d) || d<0) d = 0;
+    if(isNaN(t)) t = 0;
+    if(isNaN(tx) || tx<0) tx = 0;
+    let netCap = c - d - t;
+    if(netCap <= 0){ resOut.textContent = "Down payment and trade-in exceed the vehicle price"; resTbl.innerHTML = ''; return; }
+    let residual = c * rpct/100;
+    let depPerMo = (netCap - residual) / nmon;
+    let finPerMo = (netCap + residual) * m;
+    let preTax = depPerMo + finPerMo;
+    let taxMo = preTax * tx/100;
+    let monthly = preTax + taxMo;
+    let totalCost = monthly * nmon + d;
+    let cpm = (isNaN(am) || am<=0) ? 0 : totalCost / (am * nmon/12);
+
+    resOut.innerHTML =
+        `Monthly lease payment: <span style="color:#0f9d58;font-size:22px">$${fmt(monthly)}</span>` +
+        (tx>0 ? `<br>Includes $${fmt(taxMo)}/mo sales tax` : ``);
+
+    resTbl.innerHTML =
+        '<tr><th>Line item</th><th>Value</th></tr>' +
+        `<tr><td>Net capitalized cost</td><td>$${fmt(netCap)}</td></tr>` +
+        `<tr><td>Residual value (${rpct}%)</td><td>$${fmt(residual)}</td></tr>` +
+        `<tr><td>Monthly depreciation</td><td>$${fmt(depPerMo)}</td></tr>` +
+        `<tr><td>Monthly finance charge</td><td>$${fmt(finPerMo)}</td></tr>` +
+        `<tr><td>Pre-tax monthly</td><td>$${fmt(preTax)}</td></tr>` +
+        (tx>0 ? `<tr><td>Monthly sales tax (${tx}%)</td><td>$${fmt(taxMo)}</td></tr>` : ``) +
+        `<tr><td>Total monthly payment</td><td>$${fmt(monthly)}</td></tr>` +
+        `<tr><td>Total lease cost</td><td>$${fmt(totalCost)}</td></tr>` +
+        (cpm>0 ? `<tr><td>Cost per mile</td><td>$${fmt(cpm)}</td></tr>` : ``);
+}
+</script>
+</body>
+</html>
