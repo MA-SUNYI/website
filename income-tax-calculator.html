@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Income Tax Calculator | Federal Tax, Marginal & Effective Rate</title>
+<meta name="description" content="Free federal income tax calculator: enter your filing status and taxable income to see your 2024 federal tax, marginal rate and effective rate with a bracket-by-bracket breakdown.">
+<link rel="canonical" href="https://www.xiake.icu/income-tax-calculator.html">
+<meta name="keywords" content="income tax calculator, federal tax calculator, marginal tax rate, effective tax rate, 2024 tax brackets, free tax tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Income Tax Calculator","description":"Free federal income tax calculator. Enter your filing status and taxable income to estimate your 2024 federal tax using the progressive brackets, plus your marginal and effective tax rates and a bracket-by-bracket breakdown.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/income-tax-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Income Tax Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It applies the 2024 federal brackets to your taxable income to show your federal tax, your marginal rate (the rate on your last dollar) and your effective rate (tax divided by total income), with a breakdown per bracket."}},{"@type":"Question","name":"Is the Income Tax Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs in your browser, needs no registration, and your numbers are not uploaded anywhere. State taxes, credits and the AMT are not included."}}]}
+</script>
+<meta property="og:title" content="Income Tax Calculator | Federal Tax, Marginal & Effective Rate">
+<meta property="og:description" content="Free federal income tax calculator: enter filing status and taxable income to see your 2024 federal tax, marginal rate and effective rate with a bracket breakdown.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/income-tax-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Income Tax Calculator | Federal Tax, Marginal & Effective Rate">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free federal income tax calculator: enter filing status and taxable income to see your 2024 federal tax, marginal rate and effective rate with a bracket breakdown.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./capital-gains-tax-calculator.html">Capital Gains</a>
+    <a href="./salary-comparison-calculator.html">Salary Compare</a>
+</div>
+
+<h1>Income Tax Calculator</h1>
+<p>In the U.S. federal system your income is taxed in **layers**, not all at one rate. The first slice is taxed at 10%, the next at 12%, and so on — which is why your **marginal rate** (the rate on your top dollar) is higher than your **effective rate** (tax paid ÷ total income). Enter your filing status and taxable income to see the real number and a bracket-by-bracket breakdown. This uses the 2024 brackets and excludes state tax, credits and the AMT.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <select id="status">
+            <option value="single">Single</option>
+            <option value="joint">Married Filing Jointly</option>
+        </select>
+        <input type="number" id="income" placeholder="Taxable income $">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Progressive 2024 federal brackets for single and joint filers</li>
+<li>Total federal tax on your taxable income</li>
+<li>Marginal rate (top bracket) and effective rate</li>
+<li>Per-bracket breakdown of what you owe</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>See how a raise lands in a higher bracket — and why it still pays</li>
+<li>Compare the tax bite on ordinary vs investment income with the <a href="./capital-gains-tax-calculator.html" style="color:#2363e0">Capital Gains Tax Calculator</a></li>
+<li>Check take-home impact with the <a href="./salary-comparison-calculator.html" style="color:#2363e0">Salary Comparison Calculator</a></li>
+<li>Plan withholdings alongside the <a href="./monthly-budget-calculator.html" style="color:#2363e0">Monthly Budget Calculator</a></li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const brackets = {
+  single: [[0.10,11600],[0.12,47150],[0.22,100525],[0.24,191950],[0.32,243725],[0.35,609350],[0.37,Infinity]],
+  joint:  [[0.10,23200],[0.12,94300],[0.22,201050],[0.24,383900],[0.32,487450],[0.35,731200],[0.37,Infinity]]
+};
+
+const status = document.getElementById('status');
+const income = document.getElementById('income');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+const resTbl = document.getElementById('resTbl');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+function calcTax(inc, st){
+    const b = brackets[st];
+    let tax = 0, prev = 0, marginal = 0, rows = [];
+    for(let i=0;i<b.length;i++){
+        const rate = b[i][0], upTo = b[i][1];
+        if(inc > prev){
+            const taxed = Math.min(inc, upTo) - prev;
+            const t = taxed * rate;
+            tax += t;
+            marginal = rate;
+            if(taxed > 0) rows.push([rate, prev, Math.min(inc,upTo), taxed, t]);
+        }
+        prev = upTo;
+    }
+    return {tax, marginal, rows};
+}
+
+calcBtn.onclick = function(){
+    let inc = parseFloat(income.value);
+    let st = status.value;
+    if(isNaN(inc) || inc < 0){
+        resOut.textContent = "Enter a valid taxable income";
+        resTbl.innerHTML = '';
+        return;
+    }
+    let r = calcTax(inc, st);
+    let eff = inc === 0 ? 0 : r.tax / inc * 100;
+
+    resOut.innerHTML =
+        `Federal tax: <span style="color:#0f9d58;font-size:22px">$${fmt(r.tax)}</span><br>` +
+        `Marginal rate: ${(r.marginal*100).toFixed(0)}% &nbsp;|&nbsp; Effective rate: ${eff.toFixed(2)}%`;
+
+    let html = '<tr><th>Bracket</th><th>From</th><th>To</th><th>Taxed</th><th>Tax</th></tr>';
+    r.rows.forEach(row => {
+        html += `<tr><td>${(row[0]*100).toFixed(0)}%</td><td>$${fmt(row[1])}</td><td>$${fmt(row[2])}</td><td>$${fmt(row[3])}</td><td>$${fmt(row[4])}</td></tr>`;
+    });
+    html += `<tr><td><b>Total</b></td><td></td><td></td><td></td><td><b>$${fmt(r.tax)}</b></td></tr>`;
+    resTbl.innerHTML = html;
+}
+</script>
+</body>
+</html>

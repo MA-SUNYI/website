@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Gains Tax Calculator | Short-Term vs Long-Term Rate</title>
+<meta name="description" content="Free capital gains tax calculator: enter your gain, holding period and income to compare short-term (ordinary) vs long-term (0/15/20%) tax and the savings from holding over a year.">
+<link rel="canonical" href="https://www.xiake.icu/capital-gains-tax-calculator.html">
+<meta name="keywords" content="capital gains tax calculator, long-term capital gains, short-term capital gains, 0 15 20 tax rate, investment tax, free tax tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+.radios{display:flex;gap:18px;align-items:center;font-size:16px;margin-bottom:8px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Capital Gains Tax Calculator","description":"Free capital gains tax calculator. Enter your gain, holding period and other taxable income to compare the short-term (ordinary) tax rate with the long-term 0/15/20% rate and see the savings from holding an asset over one year.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/capital-gains-tax-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Capital Gains Tax Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It compares the tax on an investment gain if sold in under a year (taxed as ordinary income) versus over a year (taxed at the long-term 0%, 15% or 20% rate), and shows the dollars saved by waiting."}},{"@type":"Question","name":"Is the Capital Gains Tax Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs in your browser, needs no registration, and your numbers are not uploaded anywhere. It excludes the 3.8% NIIT and state tax."}}]}
+</script>
+<meta property="og:title" content="Capital Gains Tax Calculator | Short-Term vs Long-Term Rate">
+<meta property="og:description" content="Free capital gains tax calculator: enter your gain, holding period and income to compare short-term vs long-term tax and the savings from holding over a year.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/capital-gains-tax-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Capital Gains Tax Calculator | Short-Term vs Long-Term Rate">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free capital gains tax calculator: enter your gain, holding period and income to compare short-term vs long-term tax and the savings from holding over a year.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./income-tax-calculator.html">Income Tax</a>
+    <a href="./investment-return-calculator.html">Investment Return</a>
+</div>
+
+<h1>Capital Gains Tax Calculator</h1>
+<p>The single biggest factor in your investment tax bill is **how long you held the asset**. Sell in under a year and the gain is taxed as ordinary income at your top marginal rate. Hold for more than a year and it qualifies for the lower **long-term rates of 0%, 15% or 20%** — which rate depends on your total taxable income. Enter your gain, holding period and income to see both scenarios and the savings from waiting.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <select id="status">
+            <option value="single">Single</option>
+            <option value="joint">Married Filing Jointly</option>
+        </select>
+        <input type="number" id="gain" placeholder="Capital gain $">
+        <input type="number" id="other" placeholder="Other taxable income $">
+    </div>
+    <div class="radios">
+        <label><input type="radio" name="period" value="short" checked> Short-term (&lt; 1 year)</label>
+        <label><input type="radio" name="period" value="long"> Long-term (&gt; 1 year)</label>
+    </div>
+    <button id="calcBtn">Calculate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Short-term tax at your ordinary marginal rate</li>
+<li>Long-term tax at the 0/15/20% rate by income</li>
+<li>Dollars saved by holding past the one-year mark</li>
+<li>Works for single and joint filers (2024 thresholds)</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Decide whether to sell now or wait a few weeks for long-term treatment</li>
+<li>Compare with ordinary income tax via the <a href="./income-tax-calculator.html" style="color:#2363e0">Income Tax Calculator</a></li>
+<li>Model the after-tax return with the <a href="./investment-return-calculator.html" style="color:#2363e0">Investment Return Calculator</a></li>
+<li>Note: the 3.8% Net Investment Income Tax is not included here</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const brackets = {
+  single: [[0.10,11600],[0.12,47150],[0.22,100525],[0.24,191950],[0.32,243725],[0.35,609350],[0.37,Infinity]],
+  joint:  [[0.10,23200],[0.12,94300],[0.22,201050],[0.24,383900],[0.32,487450],[0.35,731200],[0.37,Infinity]]
+};
+
+function margRate(inc, st){
+    const b = brackets[st];
+    let prev = 0, marginal = 0;
+    for(let i=0;i<b.length;i++){
+        const rate = b[i][0], upTo = b[i][1];
+        if(inc > prev){ marginal = rate; }
+        prev = upTo;
+    }
+    return marginal;
+}
+
+function ltRate(total, st){
+    const z = st === 'single' ? [47025, 518900] : [94050, 583750];
+    if(total <= z[0]) return 0.0;
+    if(total <= z[1]) return 0.15;
+    return 0.20;
+}
+
+const status = document.getElementById('status');
+const gain = document.getElementById('gain');
+const other = document.getElementById('other');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+const resTbl = document.getElementById('resTbl');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let g = parseFloat(gain.value);
+    let o = parseFloat(other.value);
+    let st = status.value;
+    let period = document.querySelector('input[name="period"]:checked').value;
+    if(isNaN(g) || g < 0 || isNaN(o) || o < 0){
+        resOut.textContent = "Enter a valid gain and other taxable income";
+        resTbl.innerHTML = '';
+        return;
+    }
+    let total = o + g;
+    let shortRate = margRate(total, st);
+    let shortTax = g * shortRate;
+    let longR = ltRate(total, st);
+    let longTax = g * longR;
+    let savings = shortTax - longTax;
+
+    let chosenTax = period === 'short' ? shortTax : longTax;
+    let chosenRate = period === 'short' ? shortRate : longR;
+    let label = period === 'short' ? 'Short-term (ordinary)' : 'Long-term';
+
+    resOut.innerHTML =
+        `${label} tax on gain: <span style="color:#0f9d58;font-size:22px">$${fmt(chosenTax)}</span><br>` +
+        `Rate applied: ${(chosenRate*100).toFixed(0)}% &nbsp;|&nbsp; Savings by holding 1+ yr: $${fmt(savings)}`;
+
+    resTbl.innerHTML =
+        '<tr><th>Scenario</th><th>Rate</th><th>Tax on gain</th></tr>' +
+        `<tr><td>Short-term (ordinary)</td><td>${(shortRate*100).toFixed(0)}%</td><td>$${fmt(shortTax)}</td></tr>` +
+        `<tr><td>Long-term (${longR*100 === 0 ? '0' : longR*100}%)</td><td>${(longR*100).toFixed(0)}%</td><td>$${fmt(longTax)}</td></tr>` +
+        `<tr><td><b>Savings (long vs short)</b></td><td></td><td><b>$${fmt(savings)}</b></td></tr>`;
+}
+</script>
+</body>
+</html>
