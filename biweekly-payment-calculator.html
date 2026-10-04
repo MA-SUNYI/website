@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biweekly Payment Calculator | Pay Off Your Loan Years Early</title>
+<meta name="description" content="Free biweekly payment calculator: enter loan amount, rate and term to compare standard monthly payments with biweekly payments and see the interest saved and years cut off your loan.">
+<link rel="canonical" href="https://www.xiake.icu/biweekly-payment-calculator.html">
+<meta name="keywords" content="biweekly payment calculator, biweekly mortgage calculator, pay off loan early, accelerated payments, interest saved, free loan tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Biweekly Payment Calculator","description":"Free biweekly payment calculator. Enter your loan amount, interest rate and term to compare a standard monthly schedule with a biweekly schedule (half the monthly payment every two weeks) and see the interest saved and the years cut off your loan.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/biweekly-payment-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Biweekly Payment Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It shows your standard monthly payment, then simulates paying half that amount every two weeks (26 payments a year = 13 monthly payments) to reveal how much interest you save and how many years you shave off the loan."}},{"@type":"Question","name":"Is the Biweekly Payment Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs in your browser, needs no registration, and your numbers are not uploaded anywhere."}}]}
+</script>
+<meta property="og:title" content="Biweekly Payment Calculator | Pay Off Your Loan Years Early">
+<meta property="og:description" content="Free biweekly payment calculator: enter loan amount, rate and term to compare standard monthly payments with biweekly payments and see the interest saved and years cut off your loan.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/biweekly-payment-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Biweekly Payment Calculator | Pay Off Your Loan Years Early">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free biweekly payment calculator: enter loan amount, rate and term to compare standard monthly payments with biweekly payments and see the interest saved and years cut off your loan.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./mortgage-calculator.html">Mortgage</a>
+    <a href="./loan-payment-calculator.html">Loan Payment</a>
+</div>
+
+<h1>Biweekly Payment Calculator</h1>
+<p>Paying **half your monthly payment every two weeks** sounds the same as monthly — but there are 52 weeks in a year, so you make **26 half-payments, equal to 13 full payments** instead of 12. That one extra payment a year attacks the principal early and can cut a 30-year loan by several years. Enter your loan amount, rate and term to see the interest saved and the time shaved off.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="amount" placeholder="Loan amount $">
+        <input type="number" id="rate" placeholder="Annual rate %">
+        <input type="number" id="term" placeholder="Term (years)">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Standard monthly payment from the amortization formula</li>
+<li>Biweekly payment (half the monthly amount)</li>
+<li>Simulated payoff time under the biweekly schedule</li>
+<li>Interest saved and years eliminated versus monthly</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>See how a 30-year mortgage shrinks to ~25 years</li>
+<li>Compare the base schedule with the <a href="./mortgage-calculator.html" style="color:#2363e0">Mortgage Calculator</a></li>
+<li>Pair with the <a href="./loan-payment-calculator.html" style="color:#2363e0">Loan Payment Calculator</a> for car or personal loans</li>
+<li>Check affordability first with the <a href="./house-affordability-calculator.html" style="color:#2363e0">House Affordability Calculator</a></li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const amount = document.getElementById('amount');
+const rate = document.getElementById('rate');
+const term = document.getElementById('term');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+const resTbl = document.getElementById('resTbl');
+
+function fmt(n){
+    return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+calcBtn.onclick = function(){
+    let P = parseFloat(amount.value);
+    let apr = parseFloat(rate.value);
+    let y = parseFloat(term.value);
+    if(isNaN(P) || P<=0 || isNaN(apr) || apr<0 || isNaN(y) || y<=0){
+        resOut.textContent = "Enter a valid loan amount, rate and term";
+        resTbl.innerHTML = '';
+        return;
+    }
+    let n = Math.round(y*12);
+    let mr = apr/100/12;
+    let monthly;
+    if(mr === 0){ monthly = P/n; }
+    else { monthly = P*mr*Math.pow(1+mr,n)/(Math.pow(1+mr,n)-1); }
+
+    // Standard schedule totals
+    let stdTotalPaid = monthly * n;
+    let stdInterest = stdTotalPaid - P;
+
+    // Biweekly simulation
+    let bi = monthly / 2;
+    let periodRate = Math.pow(1 + apr/100, 1/26) - 1; // per 2-week period
+    let bal = P;
+    let periods = 0;
+    let biTotalPaid = 0;
+    while(bal > 0.01 && periods < 2000){
+        let interest = bal * periodRate;
+        let principal = bi - interest;
+        if(principal <= 0){ // payment too small to cover interest (rate too high)
+            break;
+        }
+        bal -= principal;
+        biTotalPaid += bi;
+        periods++;
+    }
+    let biYears = periods / 26;
+    let biInterest = biTotalPaid - P;
+    let interestSaved = stdInterest - biInterest;
+    let yearsSaved = y - biYears;
+
+    resOut.innerHTML =
+        `Standard monthly: <span style="color:#0f9d58;font-size:22px">$${fmt(monthly)}</span><br>` +
+        `Biweekly payment: $${fmt(bi)} &nbsp;|&nbsp; Payoff: ${biYears.toFixed(1)} yrs &nbsp;|&nbsp; Interest saved: $${fmt(interestSaved)}`;
+
+    resTbl.innerHTML =
+        '<tr><th>Metric</th><th>Monthly</th><th>Biweekly</th></tr>' +
+        `<tr><td>Payment</td><td>$${fmt(monthly)}/mo</td><td>$${fmt(bi)}/2wk</td></tr>` +
+        `<tr><td>Payoff time</td><td>${y.toFixed(1)} yrs</td><td>${biYears.toFixed(1)} yrs</td></tr>` +
+        `<tr><td>Total interest</td><td>$${fmt(stdInterest)}</td><td>$${fmt(biInterest)}</td></tr>` +
+        `<tr><td><b>Interest saved</b></td><td></td><td><b>$${fmt(interestSaved)}</b></td></tr>` +
+        `<tr><td><b>Years saved</b></td><td></td><td><b>${yearsSaved.toFixed(1)} yrs</b></td></tr>`;
+}
+</script>
+</body>
+</html>
