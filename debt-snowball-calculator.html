@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt Snowball Calculator | Snowball vs Avalanche Payoff</title>
+<meta name="description" content="Free debt snowball calculator: enter your debts (balance, minimum payment, rate), add an extra monthly payment, and compare the snowball method (smallest balance first) against the avalanche method (highest rate first).">
+<link rel="canonical" href="https://www.xiake.icu/debt-snowball-calculator.html">
+<meta name="keywords" content="debt snowball calculator, debt avalanche calculator, payoff method, debt free, extra payment, free debt tool">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:130px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+.hint{font-size:14px;color:#777;margin-top:6px;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Debt Snowball Calculator","description":"Free debt snowball calculator. Enter each debt's balance, minimum payment and interest rate, add an extra monthly payment, and compare the snowball method (smallest balance first) against the avalanche method (highest rate first) for months to debt-free and total interest.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/debt-snowball-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between snowball and avalanche?","acceptedAnswer":{"@type":"Answer","text":"The snowball method pays off the smallest balance first for quick psychological wins; the avalanche method pays the highest interest rate first and usually saves the most money. This calculator shows both so you can choose."}},{"@type":"Question","name":"Can I add an extra monthly payment?","acceptedAnswer":{"@type":"Answer","text":"Yes. Any extra amount you enter is thrown at the focused debt each month (on top of all minimum payments), and the minimums freed as debts clear roll into the next one automatically."}}]}
+</script>
+<meta property="og:title" content="Debt Snowball Calculator | Snowball vs Avalanche Payoff">
+<meta property="og:description" content="Free debt snowball calculator: enter your debts (balance, minimum payment, rate), add an extra monthly payment, and compare the snowball method (smallest balance first) against the avalanche method (highest rate first).">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/debt-snowball-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Debt Snowball Calculator | Snowball vs Avalanche Payoff">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free debt snowball calculator: enter your debts (balance, minimum payment, rate), add an extra monthly payment, and compare the snowball method (smallest balance first) against the avalanche method (highest rate first).">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./debt-payoff-calculator.html">Debt Payoff</a>
+    <a href="./debt-to-income-calculator.html">Debt-to-Income</a>
+    <a href="./credit-score-calculator.html">Credit Score</a>
+</div>
+
+<h1>Debt Snowball Calculator</h1>
+<p>Two popular strategies promise to get you debt-free, and they disagree on where to aim first. The **snowball** method attacks the smallest balance first — you feel progress fast, which keeps you motivated. The **avalanche** method attacks the highest interest rate first — it usually saves the most money. This calculator runs both on your real numbers and tells you the months to freedom and total interest for each, so you can pick the one you'll actually stick with. Enter your debts and any extra payment you can spare.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <p class="hint">Enter each debt. Leave a row blank to skip it. Add any extra amount you can pay on top of the minimums.</p>
+    <div class="input-row">
+        <input type="number" id="bal1" placeholder="Balance 1 $">
+        <input type="number" id="min1" placeholder="Min 1 $">
+        <input type="number" id="rate1" placeholder="Rate 1 %">
+        <input type="number" id="bal2" placeholder="Balance 2 $">
+        <input type="number" id="min2" placeholder="Min 2 $">
+        <input type="number" id="rate2" placeholder="Rate 2 %">
+    </div>
+    <div class="input-row">
+        <input type="number" id="bal3" placeholder="Balance 3 $">
+        <input type="number" id="min3" placeholder="Min 3 $">
+        <input type="number" id="rate3" placeholder="Rate 3 %">
+        <input type="number" id="bal4" placeholder="Balance 4 $">
+        <input type="number" id="min4" placeholder="Min 4 $">
+        <input type="number" id="rate4" placeholder="Rate 4 %">
+        <input type="number" id="extra" placeholder="Extra $ / mo">
+    </div>
+    <button id="calcBtn">Calculate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Compares snowball vs avalanche on your exact debts</li>
+<li>Rolls freed minimum payments into the next debt automatically</li>
+<li>Shows months to debt-free and total interest for each method</li>
+<li>Highlights the interest you save by going avalanche</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Model a single consolidated payment with the <a href="./debt-payoff-calculator.html" style="color:#2363e0">Debt Payoff Calculator</a></li>
+<li>Check your borrowing capacity with the <a href="./debt-to-income-calculator.html" style="color:#2363e0">Debt-to-Income Calculator</a></li>
+<li>See how your score affects loan rates with the <a href="./credit-score-calculator.html" style="color:#2363e0">Credit Score Calculator</a></li>
+<li>Plan a consolidation loan with the <a href="./personal-loan-calculator.html" style="color:#2363e0">Personal Loan Calculator</a></li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const ids = [1,2,3,4].map(i=>({bal:document.getElementById('bal'+i), min:document.getElementById('min'+i), rate:document.getElementById('rate'+i)}));
+const extra = document.getElementById('extra');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+const resTbl = document.getElementById('resTbl');
+
+function fmt(n){ return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+
+function simulate(debts, extraAmt, orderKey){
+  let d = debts.map(x=>({bal:x.bal, min:x.min, rate:x.rate}));
+  let order = [...d.keys()].sort((a,b)=>{
+    if(orderKey==='snowball') return d[a].bal - d[b].bal;
+    return d[b].rate - d[a].rate; // avalanche: highest rate first
+  });
+  let month=0, totalInt=0, freedMin=0;
+  while(d.some(x=>x.bal>0.005) && month<1200){
+    month++;
+    d.forEach(x=>{ if(x.bal>0.005){ let i=x.bal*x.rate/100/12; x.bal+=i; totalInt+=i; } });
+    let focused = order.find(idx=> d[idx].bal>0.005);
+    if(focused===undefined) break;
+    d.forEach((x,idx)=>{
+      if(x.bal>0.005 && idx!==focused){
+        let p=Math.min(x.min, x.bal); x.bal-=p;
+        if(x.bal<=0.005){ x.bal=0; freedMin+=x.min; }
+      }
+    });
+    let fx=d[focused];
+    let p=Math.min(fx.min + freedMin + extraAmt, fx.bal);
+    fx.bal-=p;
+    if(fx.bal<=0.005){ fx.bal=0; freedMin+=fx.min; }
+  }
+  return {months:month, interest:totalInt};
+}
+
+calcBtn.onclick = function(){
+  let debts=[];
+  for(const r of ids){
+    let b=parseFloat(r.bal.value), m=parseFloat(r.min.value), rt=parseFloat(r.rate.value);
+    if(!isNaN(b) && b>0){
+      if(isNaN(m)||m<=0) m=b/ (12*5); // fallback min if blank
+      if(isNaN(rt)||rt<0) rt=0;
+      debts.push({bal:b, min:m, rate:rt});
+    }
+  }
+  let ex=parseFloat(extra.value); if(isNaN(ex)||ex<0) ex=0;
+  if(debts.length===0){ resOut.textContent="Enter at least one debt balance"; resTbl.innerHTML=''; return; }
+
+  let snow = simulate(debts, ex, 'snowball');
+  let aval = simulate(debts, ex, 'avalanche');
+  let save = snow.interest - aval.interest;
+
+  resOut.innerHTML = `Debt-free in <span style="color:#0f9d58;font-size:22px">${(snow.months/12).toFixed(1)} yrs</span> (snowball) &nbsp;|&nbsp; Avalanche saves <span style="color:#0f9d58">$${fmt(save)}</span> in interest`;
+
+  resTbl.innerHTML =
+    '<tr><th>Method</th><th>Months to free</th><th>Years</th><th>Total interest</th></tr>' +
+    `<tr><td>Snowball (smallest first)</td><td>${snow.months}</td><td>${(snow.months/12).toFixed(1)}</td><td>$${fmt(snow.interest)}</td></tr>` +
+    `<tr><td>Avalanche (highest rate first)</td><td>${aval.months}</td><td>${(aval.months/12).toFixed(1)}</td><td>$${fmt(aval.interest)}</td></tr>`;
+}
+</script>
+</body>
+</html>
