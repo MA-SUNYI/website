@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roth IRA Calculator | Tax-Free Growth & Roth vs Traditional</title>
+<meta name="description" content="Free Roth IRA calculator: enter your age, current balance, annual contribution, return and tax rates to project your tax-free retirement balance and compare Roth vs Traditional IRA after-tax value.">
+<link rel="canonical" href="https://www.xiake.icu/roth-ira-calculator.html">
+<meta name="keywords" content="roth ira calculator, roth ira, traditional ira, roth vs traditional, retirement calculator, tax free growth, ira contribution limit">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:160px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Roth IRA Calculator","description":"Free Roth IRA calculator. Enter your current age, balance, annual contribution, expected return and marginal tax rates to project your tax-free retirement balance and compare Roth vs Traditional IRA after-tax value.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/roth-ira-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Roth IRA Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It compounds your current balance and annual contributions forward to your retirement age at the return you enter, then shows the tax-free Roth balance, total contributions and tax-free growth. It also contrasts that against a Traditional IRA where the same balance is taxed at withdrawal."}},{"@type":"Question","name":"What are the 2024 Roth IRA contribution limits?","acceptedAnswer":{"@type":"Answer","text":"You can contribute up to $7,000 per year ($8,000 if you are age 50 or older). The deduction is not allowed above certain MAGI thresholds ($161,000 single / $240,000 married filing jointly for 2024), but you can still contribute and the growth stays tax-free."}}]}
+</script>
+<meta property="og:title" content="Roth IRA Calculator | Tax-Free Growth & Roth vs Traditional">
+<meta property="og:description" content="Free Roth IRA calculator: enter your age, current balance, annual contribution, return and tax rates to project your tax-free retirement balance and compare Roth vs Traditional IRA after-tax value.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/roth-ira-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Roth IRA Calculator | Tax-Free Growth & Roth vs Traditional">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free Roth IRA calculator: enter your age, current balance, annual contribution, return and tax rates to project your tax-free retirement balance and compare Roth vs Traditional IRA after-tax value.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./401k-calculator.html">401(k)</a>
+    <a href="./retirement-calculator.html">Retirement</a>
+    <a href="./paycheck-calculator.html">Paycheck</a>
+</div>
+
+<h1>Roth IRA Calculator</h1>
+<p>A Roth IRA is one of the few places in the tax code where the government lets you pay tax up front and then never touch your gains again. Every dollar of growth comes out completely tax-free in retirement. This calculator projects that tax-free balance and, because the "Roth vs Traditional" choice comes down to tax timing, it also shows what the same account would be worth after tax inside a Traditional IRA. Enter your details to see which wins for you.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="age" placeholder="Current age">
+        <input type="number" id="ret" placeholder="Retirement age">
+        <input type="number" id="bal" placeholder="Current balance $">
+        <input type="number" id="contrib" placeholder="Annual contribution $">
+    </div>
+    <div class="input-row">
+        <input type="number" id="retn" placeholder="Annual return %">
+        <input type="number" id="taxNow" placeholder="Tax now %">
+        <input type="number" id="taxRet" placeholder="Tax in retirement %">
+    </div>
+    <button id="calcBtn">Calculate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Compounds balance and annual contributions to retirement age</li>
+<li>Shows the full tax-free Roth balance and total growth</li>
+<li>Compares against a Traditional IRA taxed at withdrawal</li>
+<li>Notes the 2024 contribution cap of $7,000 ($8,000 at age 50+)</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>See how the same dollars behave in the <a href="./401k-calculator.html" style="color:#2363e0">401(k) Calculator</a></li>
+<li>Plan the income side with the <a href="./retirement-calculator.html" style="color:#2363e0">Retirement Calculator</a></li>
+<li>Check the paycheck impact of saving with the <a href="./paycheck-calculator.html" style="color:#2363e0">Paycheck Calculator</a></li>
+<li>Project dividends tax-free too with the <a href="./dividend-calculator.html" style="color:#2363e0">Dividend Calculator</a></li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+const age = document.getElementById('age');
+const ret = document.getElementById('ret');
+const bal = document.getElementById('bal');
+const contrib = document.getElementById('contrib');
+const retn = document.getElementById('retn');
+const taxNow = document.getElementById('taxNow');
+const taxRet = document.getElementById('taxRet');
+const calcBtn = document.getElementById('calcBtn');
+const resOut = document.getElementById('resOut');
+const resTbl = document.getElementById('resTbl');
+
+function fmt(n){ return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+
+calcBtn.onclick = function(){
+  let a = parseFloat(age.value);
+  let r = parseFloat(ret.value);
+  let b0 = parseFloat(bal.value);
+  let c = parseFloat(contrib.value);
+  let rt = parseFloat(retn.value);
+  let tn = parseFloat(taxNow.value);
+  let tr = parseFloat(taxRet.value);
+  if(isNaN(a)||isNaN(r)||isNaN(c)||isNaN(rt)||isNaN(tn)||isNaN(tr) || r<=a || c<0){
+    resOut.textContent = "Enter valid ages, contribution, return and tax rates";
+    resTbl.innerHTML='';
+    return;
+  }
+  if(isNaN(b0)||b0<0) b0=0;
+
+  let years = Math.round(r - a);
+  let balance = b0;
+  for(let y=1; y<=years; y++){
+    balance = balance*(1+rt/100) + c;
+  }
+  let totContrib = b0 + c*years;
+  let rothGrowth = balance - totContrib;            // tax-free
+  let rothFinal = balance;                           // entirely tax-free
+  let tradAfterTax = balance * (1 - tr/100);         // taxed at withdrawal
+  let diff = rothFinal - tradAfterTax;
+
+  resOut.innerHTML = `Tax-free Roth balance at age ${r}: <span style="color:#0f9d58;font-size:22px">$${fmt(rothFinal)}</span>`;
+
+  let rows = '<tr><th>Result</th><th>Amount</th></tr>'
+    + `<tr><td>Roth IRA (tax-free)</td><td>$${fmt(rothFinal)}</td></tr>`
+    + `<tr><td>&nbsp;&nbsp;Total contributions</td><td>$${fmt(totContrib)}</td></tr>`
+    + `<tr><td>&nbsp;&nbsp;Tax-free growth</td><td>$${fmt(rothGrowth)}</td></tr>`
+    + `<tr><td>Traditional IRA (after ${tr}% tax)</td><td>$${fmt(tradAfterTax)}</td></tr>`
+    + `<tr><td><b>Roth advantage</b></td><td><b>$${fmt(diff)}</b></td></tr>`;
+
+  resTbl.innerHTML = rows;
+}
+</script>
+</body>
+</html>
