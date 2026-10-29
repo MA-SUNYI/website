@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Cost Calculator | First Year, Annual and Lifetime Cost</title>
+<meta name="description" content="Free pet cost calculator: estimate monthly, yearly and lifetime cost of a dog or cat, with first-year setup, vet care, insurance and grooming broken out.">
+<link rel="canonical" href="https://www.xiake.icu/pet-cost-calculator.html">
+<meta name="keywords" content="pet cost calculator, cost of owning a dog, cat cost per year, lifetime pet cost, first year dog cost, pet insurance cost, monthly pet expenses">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Pet Cost Calculator","description":"Free pet cost calculator for the US. Estimate the monthly, yearly and lifetime cost of a dog or cat, including first-year adoption and setup, routine vet care, insurance, grooming and supplies, and see the cost per day.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/pet-cost-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a dog cost in the first year compared with later years?","acceptedAnswer":{"@type":"Answer","text":"A medium dog runs about $700 in one-time setup on top of roughly $2,800 of recurring cost, so the first year lands near $3,500 and the second year around $2,800. The gap is adoption or purchase, spay or neuter, microchipping, starter vaccines and the initial crate, bed and leash purchase."}},{"@type":"Question","name":"Is pet insurance cheaper than saving the premium myself?","acceptedAnswer":{"@type":"Answer","text":"For a medium dog at $55 a month, premiums total $6,600 over ten years. Most pets never generate a single bill that large, so self-insuring into a dedicated account usually wins on expected value. Insurance pays off when one event is large enough to be unaffordable, which is a cash-flow question rather than an average one."}},{"@type":"Question","name":"Why can a large dog cost less over its life than a medium one?","acceptedAnswer":{"@type":"Answer","text":"Lifespan. A large dog spends roughly $3,800 a year but typically lives nine years, about $35,000 total, while a medium dog spends $2,800 a year over eleven years, near $31,500. Higher annual cost partly cancels against fewer years, so the lifetime gap is smaller than the annual gap suggests."}},{"@type":"Question","name":"What is not included in this pet cost estimate?","acceptedAnswer":{"@type":"Answer","text":"Emergency and specialist care, boarding or sitting while you travel, professional dog walking, prescription diets, behavioural training, property damage and end-of-life care. Each can add hundreds or thousands over a pet's life and none of them appear in a routine-expense model."}},{"@type":"Question","name":"How much should I keep aside for an emergency vet visit?","acceptedAnswer":{"@type":"Answer","text":"A common planning figure is $2,000 to $3,000 per pet. Foreign-body surgery, fracture repair and bloat treatment routinely exceed $3,000, and a single emergency can erase several years of insurance-premium savings, which is why an emergency fund matters more than a low monthly average."}},{"@type":"Question","name":"Do cats really cost about half what dogs cost?","acceptedAnswer":{"@type":"Answer","text":"Per year, close to it: roughly $1,500 for a cat against $2,000 to $3,800 for a dog, mostly because grooming and boarding are smaller line items and food volume is lower. Over a full life the gap narrows, because cats commonly live fifteen years against nine to eleven for a dog."}}]}
+</script>
+<meta property="og:title" content="Pet Cost Calculator | First Year, Annual and Lifetime Cost">
+<meta property="og:description" content="Free pet cost calculator: estimate monthly, yearly and lifetime cost of a dog or cat, with first-year setup, vet care, insurance and grooming broken out.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/pet-cost-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pet Cost Calculator | First Year, Annual and Lifetime Cost">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free pet cost calculator: estimate monthly, yearly and lifetime cost of a dog or cat, with first-year setup, vet care, insurance and grooming broken out.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./monthly-budget-calculator.html">Monthly Budget</a>
+    <a href="./emergency-fund-calculator.html">Emergency Fund</a>
+    <a href="./wedding-guest-budget-calculator.html">Wedding Budget</a>
+</div>
+
+<h1>Pet Cost Calculator</h1>
+<p>Adoption fees are the cheapest part of a pet. What actually decides whether you can afford one is the recurring line: food, routine vet care, insurance, grooming and the small supplies that never stop. This calculator breaks a dog or cat down by size and life stage, adds the one-time first-year setup, and returns the monthly, annual and lifetime figure so you can compare a $45-a-month food budget with what the whole animal really costs. Defaults are US planning averages, not quotes, and every field is editable.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <select id="petType">
+            <option value="dog" selected>Dog</option>
+            <option value="cat">Cat</option>
+        </select>
+        <select id="petSize">
+            <option value="small">Small — under 20 lb</option>
+            <option value="medium" selected>Medium — 20 to 50 lb</option>
+            <option value="large">Large — 50 lb and up</option>
+        </select>
+        <select id="petStage">
+            <option value="young">Puppy or kitten — first 18 months</option>
+            <option value="adult" selected>Adult</option>
+            <option value="senior">Senior — last third of life</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="food" placeholder="Food &amp; treats per month $" step="1">
+        <input type="number" id="vet" placeholder="Routine vet care per year $" step="1">
+        <input type="number" id="ins" placeholder="Insurance per month $" step="1">
+    </div>
+    <div class="input-row">
+        <input type="number" id="groom" placeholder="Grooming per month $" step="1">
+        <input type="number" id="supp" placeholder="Supplies &amp; toys per month $" step="1">
+        <input type="number" id="other" placeholder="Other monthly cost $ (walking, boarding)" step="1" value="0">
+    </div>
+    <div class="input-row">
+        <input type="number" id="oneTime" placeholder="First-year one-time setup $" step="1">
+        <input type="number" id="life" placeholder="Expected lifespan (years)" step="1">
+    </div>
+    <button id="calcBtn">Calculate Cost</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">Changing pet type, size or life stage reloads the default amounts. Overwrite any field to use your own numbers. Emergency care, boarding, training and end-of-life costs are not included.</p>
+</div>
+
+<h2>How the Pet Cost Calculator Works</h2>
+<p>Annual cost is built from five recurring lines plus one-time setup:</p>
+<p><b>Monthly recurring</b> = food and treats + insurance + grooming + supplies and toys + other care + (routine vet care &divide; 12).</p>
+<p><b>Annual cost</b> = monthly recurring &times; 12. Note that routine vet care is entered yearly because that is how it is billed, then spread across the months so the monthly figure is honest.</p>
+<p><b>Lifetime cost</b> = first-year one-time setup + (annual cost &times; expected lifespan).</p>
+<p>Worked example. A medium adult dog, all defaults: food $65, insurance $55, grooming $55, supplies $25, other $0, routine vet $400 a year. Monthly recurring is $65 + $55 + $55 + $25 + $33.33 = <b>$233.33</b>. Annual cost is <b>$2,800</b>. First-year one-time setup for a medium dog &mdash; adoption or purchase, spay or neuter, microchip, starter vaccines, crate, bed, bowls and leash &mdash; is about <b>$700</b>, so the first year lands at <b>$3,500</b> and every year after that at $2,800. Over an eleven-year life the total is $700 + ($2,800 &times; 11) = <b>$31,500</b>, which works out to <b>$7.67 a day</b>.</p>
+<p>The life-stage selector is not cosmetic. A puppy or kitten carries extra vaccine rounds, deworming and often a spay or neuter inside the first eighteen months, which is why the veterinary line is scaled up by 30%. A senior pet reverses the pattern: dental cleanings, bloodwork, arthritis management and more frequent checkups push routine care up by roughly 60% while food volume falls. Neither adjustment touches insurance, because premiums are set by age band rather than by your own spending.</p>
+
+<h2>Typical Annual and Lifetime Cost</h2>
+<p>US planning averages at adult stage, moderate cost of living, insurance included:</p>
+<table>
+<tr><th>Pet</th><th>Monthly</th><th>Annual</th><th>Lifetime</th><th>Per day</th></tr>
+<tr><td>Small dog (under 20 lb)</td><td>$169</td><td>$2,030</td><td>$29,100 over 14 yr</td><td>$5.56</td></tr>
+<tr><td>Medium dog (20&ndash;50 lb)</td><td>$233</td><td>$2,800</td><td>$31,500 over 11 yr</td><td>$7.67</td></tr>
+<tr><td>Large dog (50 lb and up)</td><td>$317</td><td>$3,800</td><td>$35,000 over 9 yr</td><td>$10.42</td></tr>
+<tr><td>Cat</td><td>$126</td><td>$1,510</td><td>$23,150 over 15 yr</td><td>$4.14</td></tr>
+</table>
+<p>Two things stand out. First, the annual gap between a small dog and a large one is nearly double, but the lifetime gap is only about 20%, because the large dog lives five fewer years. Second, a cat is roughly half the annual cost of a medium dog yet lands within a quarter of its lifetime total, for the same reason in reverse. If you are choosing between a cat and a large dog on lifetime grounds rather than annual grounds, the difference is far smaller than the yearly numbers imply.</p>
+
+<h2>First Year versus Every Year After</h2>
+<p>New owners consistently under-budget the first year because the one-time costs arrive before any routine exists. For a dog they typically include an adoption fee of $50 to $600, spay or neuter at $200 to $500, microchipping around $45, a first round of vaccines and deworming at $100 to $200, and $300 or more of crate, bed, bowls, leash, collar and carrier. A cat is cheaper on almost every line except the litter box setup, which runs $100 to $200 including a covered box, scooper and starter litter.</p>
+<p>The second year is the one to plan against, not the first. It is the year with no setup costs and no novelty discount, and it is usually the lowest annual figure you will ever see. From there, costs drift up: food prices rise, insurance premiums climb with age, and dental work starts appearing around year four or five for most breeds.</p>
+
+<h2>Is Pet Insurance Worth the Premium?</h2>
+<p>Run the arithmetic rather than the marketing. A medium dog at $55 a month pays $660 a year and <b>$6,600</b> over ten years, with a deductible and a reimbursement percentage usually sitting at 80% or 90% of the covered bill after you meet it. A cat at $30 a month pays $360 a year, or $5,400 over fifteen years.</p>
+<p>On expected value, self-insuring wins for most pets, because most pets never produce a single bill that large. The case for insurance is not the average, it is the tail: a foreign-body surgery at $3,000 to $5,000, a cruciate repair at $3,000 to $6,000, or bloat surgery north of $5,000. If one of those would force you to choose between the pet and your rent, the premium is buying solvency, not savings. If you have $3,000 sitting in a dedicated account, the same money does the job without a deductible and without a coverage exclusion list.</p>
+<p>Whichever route you take, an emergency fund is not optional. The calculator deliberately leaves emergencies out of the recurring model, because averaging them in produces a comfortable monthly number that fails on the one night it matters.</p>
+
+<h2>Mistakes That Distort a Pet Budget</h2>
+<p><b>Budgeting food only.</b> Food is usually a third of the recurring cost, not the whole of it. Insurance, grooming and routine vet care together typically exceed it.</p>
+<p><b>Assuming the adoption fee is the price.</b> The fee buys the animal; the first year buys the life. Setup plus twelve months of care is five to six times the adoption fee in most cases.</p>
+<p><b>Forgetting that grooming is breed-specific, not size-specific.</b> A doodle needs a $70 to $90 appointment every six to eight weeks regardless of weight. The size selector gives an average, and averages hide the expensive breeds.</p>
+<p><b>Treating lifetime totals as one number.</b> A lifetime cost of $31,500 is $2,800 a year, which is $233 a month. Nobody pays the lifetime figure. Budget the month, hold an emergency fund for the tail, and the lifetime number stops being frightening and starts being useful.</p>
+<p><b>Ignoring the second pet discount that does not exist.</b> Insurance, food and vet care do not get cheaper per animal. Two dogs cost close to twice one dog, minus a small saving on shared supplies.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Check affordability before adopting, using realistic rather than aspirational numbers</li>
+<li>Compare a cat against a small dog on annual cost rather than on adoption fee</li>
+<li>Decide whether insurance or a self-funded emergency account fits your cash position</li>
+<li>Rebuild the budget when a pet enters its senior years and vet costs step up</li>
+<li>Set a monthly pet line in the <a href="./monthly-budget-calculator.html" style="color:#2363e0">Monthly Budget Calculator</a></li>
+<li>Size the emergency reserve with the <a href="./emergency-fund-calculator.html" style="color:#2363e0">Emergency Fund Calculator</a></li>
+</ul>
+
+<h2>Where This Estimate Stops</h2>
+<p>These are planning averages for the US at a moderate cost of living. Actual spending varies by region, by breed and by how much you are willing to pay for premium food or a specialist. Boarding and sitting while you travel can add $40 to $85 a night and are only captured if you put an average into the other-cost field. Prescription diets for a medical condition can cost two to three times a normal food budget. Property damage from a puppy, behavioural training at $50 to $150 a session, and end-of-life care are all outside the model. Insurance quotes depend on breed, age and ZIP code and should be confirmed with an actual quote rather than taken from these defaults.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>How much does a dog cost in the first year compared with later years?</h3>
+<p>A medium dog runs about $700 in one-time setup on top of roughly $2,800 of recurring cost, so the first year lands near $3,500 and the second year around $2,800. The gap is adoption, spay or neuter, microchipping, starter vaccines and the initial crate, bed and leash purchase.</p>
+<h3>Is pet insurance cheaper than saving the premium myself?</h3>
+<p>For a medium dog at $55 a month, premiums total $6,600 over ten years. Most pets never generate a bill that large, so self-insuring into a dedicated account usually wins on expected value. Insurance pays off when one event is large enough to be unaffordable, which is a cash-flow question rather than an average one.</p>
+<h3>Why can a large dog cost less over its life than a medium one?</h3>
+<p>Lifespan. A large dog spends about $3,800 a year but lives around nine years, near $35,000 total, while a medium dog spends $2,800 a year over eleven years, near $31,500. Higher annual cost partly cancels against fewer years.</p>
+<h3>What is not included in this estimate?</h3>
+<p>Emergency and specialist care, boarding while you travel, professional walking, prescription diets, behavioural training, property damage and end-of-life care. Each can add hundreds or thousands over a pet's life.</p>
+<h3>How much should I keep aside for an emergency vet visit?</h3>
+<p>A common planning figure is $2,000 to $3,000 per pet. Foreign-body surgery, fracture repair and bloat treatment routinely exceed $3,000, and one emergency can erase several years of premium savings.</p>
+<h3>Do cats really cost about half what dogs cost?</h3>
+<p>Per year, close to it: about $1,500 for a cat against $2,000 to $3,800 for a dog, mainly because grooming and boarding are smaller lines and food volume is lower. Over a full life the gap narrows, since cats commonly live fifteen years against nine to eleven for a dog.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var typeEl=document.getElementById('petType'), sizeEl=document.getElementById('petSize'), stageEl=document.getElementById('petStage');
+var foodEl=document.getElementById('food'), vetEl=document.getElementById('vet'), insEl=document.getElementById('ins');
+var groomEl=document.getElementById('groom'), suppEl=document.getElementById('supp'), otherEl=document.getElementById('other');
+var oneEl=document.getElementById('oneTime'), lifeEl=document.getElementById('life');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+var DEF={
+  dog:{small:{food:45,vet:350,ins:30,groom:45,supp:20,one:650,life:14},
+       medium:{food:65,vet:400,ins:55,groom:55,supp:25,one:700,life:11},
+       large:{food:95,vet:500,ins:75,groom:75,supp:30,one:800,life:9}},
+  cat:{small:{food:40,vet:250,ins:30,groom:15,supp:20,one:500,life:15},
+       medium:{food:40,vet:250,ins:30,groom:15,supp:20,one:500,life:15},
+       large:{food:40,vet:250,ins:30,groom:15,supp:20,one:500,life:15}}
+};
+
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function num(el,def){ var v=parseFloat(el.value); return (isNaN(v)?def:v); }
+
+function loadDefaults(){
+  var d=DEF[typeEl.value][sizeEl.value];
+  foodEl.value=d.food; vetEl.value=d.vet; insEl.value=d.ins;
+  groomEl.value=d.groom; suppEl.value=d.supp; oneEl.value=d.one; lifeEl.value=d.life;
+  if(typeEl.value==='cat'){ sizeEl.disabled=true; } else { sizeEl.disabled=false; }
+}
+
+typeEl.onchange=loadDefaults; sizeEl.onchange=loadDefaults;
+
+calcBtn.onclick=function(){
+  var stage=stageEl.value;
+  var stageFactor = stage==='young' ? 1.3 : (stage==='senior' ? 1.6 : 1.0);
+  var food=num(foodEl,0), vet=num(vetEl,0)*stageFactor, ins=num(insEl,0);
+  var groom=num(groomEl,0), supp=num(suppEl,0), other=num(otherEl,0);
+  var one=num(oneEl,0), life=num(lifeEl,0);
+
+  var monthly = food + ins + groom + supp + other + vet/12;
+  if(monthly<=0){ resOut.textContent="Enter at least one recurring cost"; resTbl.innerHTML=''; return; }
+  if(life<1) life=1;
+  var annual = monthly*12;
+  var firstYear = one + annual;
+  var lifetime = one + annual*life;
+  var perDay = monthly/30.4;
+
+  var rows='<tr><th>Line item</th><th>Per month</th><th>Per year</th></tr>'
+    +'<tr><td>Food and treats</td><td>$'+usd(food)+'</td><td>$'+usd(food*12)+'</td></tr>'
+    +'<tr><td>Routine vet care'+(stage!=='adult'?' (stage adjusted)':'')+'</td><td>$'+usd(vet/12)+'</td><td>$'+usd(vet)+'</td></tr>'
+    +'<tr><td>Insurance</td><td>$'+usd(ins)+'</td><td>$'+usd(ins*12)+'</td></tr>'
+    +'<tr><td>Grooming</td><td>$'+usd(groom)+'</td><td>$'+usd(groom*12)+'</td></tr>'
+    +'<tr><td>Supplies and toys</td><td>$'+usd(supp)+'</td><td>$'+usd(supp*12)+'</td></tr>'
+    +(other>0?'<tr><td>Other care</td><td>$'+usd(other)+'</td><td>$'+usd(other*12)+'</td></tr>':'')
+    +'<tr><td><b>Recurring total</b></td><td><b>$'+usd(monthly)+'</b></td><td><b>$'+usd(annual)+'</b></td></tr>'
+    +'<tr><td>One-time setup (first year)</td><td></td><td>$'+usd(one)+'</td></tr>'
+    +'<tr><td><b>First-year total</b></td><td><b>$'+usd(monthly+one/12)+'</b></td><td><b>$'+usd(firstYear)+'</b></td></tr>'
+    +'<tr><td>5-year total</td><td></td><td>$'+usd(one+annual*5)+'</td></tr>'
+    +'<tr><td>10-year total</td><td></td><td>$'+usd(one+annual*10)+'</td></tr>'
+    +'<tr><td><b>Lifetime total ('+life+' yr)</b></td><td></td><td><b>$'+usd(lifetime)+'</b></td></tr>'
+    +'<tr><td>Cost per day</td><td>$'+usd(perDay)+'</td><td>$'+usd(perDay*365)+'</td></tr>';
+  resTbl.innerHTML=rows;
+  resOut.innerHTML='This pet costs <span style="color:#0f9d58;font-size:22px">$'+usd(monthly)+'</span> a month &mdash; $'+usd(lifetime)+' over its life';
+}
+
+loadDefaults();
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>

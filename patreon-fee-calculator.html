@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patreon Fee Calculator | What You Really Keep Per Patron</title>
+<meta name="description" content="Free Patreon fee calculator: see platform fees, payment processing and iOS charges on every pledge, plus the net you keep per patron each month.">
+<link rel="canonical" href="https://www.xiake.icu/patreon-fee-calculator.html">
+<meta name="keywords" content="patreon fee calculator, how much does patreon take, patreon platform fee, patreon net income, payment processing fee, patreon ios fee, membership payout">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Patreon Fee Calculator","description":"Free Patreon fee calculator for creators. Enter your tier price, paying members, plan rate and payment mix to see the platform fee, payment processing, iOS charges, your real net per patron and the monthly income you keep.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/patreon-fee-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does Patreon actually take from a $5 pledge?","acceptedAnswer":{"@type":"Answer","text":"On the standard 10 percent plan with a US card, about $0.95 of a $5 pledge disappears: $0.50 platform fee plus $0.445 in payment processing at 2.9 percent plus $0.30. That leaves $4.06, an effective rate of 18.9 percent rather than the 10 percent the pricing page advertises."}},{"@type":"Question","name":"Why does a $3 tier show a lower fee rate than a $5 tier?","acceptedAnswer":{"@type":"Answer","text":"Pledges of $3 or less are billed at a small-charge processing rate with a smaller fixed component. At $3 the total fee comes to about $0.55 on the small-charge rate but $0.687 on the standard rate, so $3 clears better than $5 in percentage terms. The crossover sits just above $3."}},{"@type":"Question","name":"Is the platform fee charged before or after payment processing?","acceptedAnswer":{"@type":"Answer","text":"Before. Patreon calculates the platform fee on the pledge amount, excluding sales tax, and payment processing is charged separately on the same amount. The two do not compound, so the effective rate is roughly the platform rate plus the processing rate plus the fixed fee divided by the pledge."}},{"@type":"Question","name":"Do annual memberships reduce my total fees?","acceptedAnswer":{"@type":"Answer","text":"Yes, because the fixed processing charge is applied once a year instead of twelve times. On a $5 tier billed annually at $50, total fees are $6.75 against $11.34 for twelve monthly charges. The catch is that you also collected $10 less, so the discount has to be earned back through lower churn."}},{"@type":"Question","name":"How much does the iOS app take from a membership?","acceptedAnswer":{"@type":"Answer","text":"Apple takes 30 percent of the pledge on in-app purchases. Patreon does not add its own processing fee on those transactions but the platform fee still applies, so a $5 iOS membership nets about $3.00 instead of $4.06. Patrons who check out on mobile web in the US avoid the App Store cut."}},{"@type":"Question","name":"Can I avoid processing fees by choosing a different Patreon plan?","acceptedAnswer":{"@type":"Answer","text":"No. Payment processing is separate from the plan and is charged at the same rate whatever your platform fee is. Moving from a legacy 8 percent plan to the standard 10 percent plan raises your platform fee by two points but leaves processing untouched, so the total change is exactly those two points."}}]}
+</script>
+<meta property="og:title" content="Patreon Fee Calculator | What You Really Keep Per Patron">
+<meta property="og:description" content="Free Patreon fee calculator: see platform fees, payment processing and iOS charges on every pledge, plus the net you keep per patron each month.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/patreon-fee-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Patreon Fee Calculator | What You Really Keep Per Patron">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free Patreon fee calculator: see platform fees, payment processing and iOS charges on every pledge, plus the net you keep per patron each month.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./substack-fee-calculator.html">Substack Fees</a>
+    <a href="./youtube-money-calculator.html">YouTube Money</a>
+    <a href="./profit-margin-calculator.html">Profit Margin</a>
+</div>
+
+<h1>Patreon Fee Calculator</h1>
+<p>Patreon's pricing page prints 10% in large type, and most creators build a budget straight from it. What actually lands in your bank account is usually 14% to 19% of each pledge, because the platform cut rests on top of transaction costs rather than replacing them, and a fixed $0.30 does disproportionate harm to a $5 tier. This page takes your tier price, paying member count, plan rate and card-versus-wallet blend, then returns net per patron, the true rate you are paying, and the headcount required to reach a monthly income figure.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="tier" placeholder="Tier price per month $" value="5" step="0.01">
+        <input type="number" id="patrons" placeholder="Paying members" value="400" step="1">
+        <input type="number" id="target" placeholder="Monthly net goal $ (optional)" step="1">
+    </div>
+    <div class="input-row">
+        <select id="plan">
+            <option value="0.10" selected>Standard plan — 10% (new pages)</option>
+            <option value="0.08">Legacy Pro — 8%</option>
+            <option value="0.05">Legacy Founders — 5%</option>
+            <option value="0.11">Legacy Pro + Merch — 11%</option>
+        </select>
+        <select id="proc">
+            <option value="0.029" selected>Card / Apple Pay or US PayPal — 2.9% + $0.30</option>
+            <option value="0.039">PayPal outside the US — 3.9% + $0.30</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="ios" placeholder="Share of pledges via iOS %" value="0" step="1" min="0" max="100">
+        <input type="number" id="annual" placeholder="Share on annual billing %" value="0" step="1" min="0" max="100">
+        <input type="number" id="disc" placeholder="Annual discount %" value="16.67" step="0.01">
+    </div>
+    <button id="calcBtn">Show My Net</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">Rates modelled: standard 10% platform fee on the pledge excluding sales tax; processing 2.9% + $0.30 on card and US PayPal, 3.9% + $0.30 on non-US PayPal; 5% + $0.10 on pledges of $3 or less; Apple's 30% on iOS in-app purchases. Payout, currency conversion and tax withholding are not included.</p>
+</div>
+
+<h2>How the Patreon Fee Calculator Works</h2>
+<p>Two charges stack on every successfully processed payment, and they are calculated independently on the same base:</p>
+<p><b>Platform fee</b> &mdash; 10% of the pledge for any page published after 4 August 2025. Older pages that have stayed continuously published keep their legacy rate: 5% for Founders, 8% for Pro, 11% for Pro plus Merch. The fee applies to the payment amount before sales tax, and it also applies to one-time digital product sales, not just memberships.</p>
+<p><b>Payment processing</b> &mdash; 2.9% plus $0.30 per transaction on cards and Apple Pay and on US PayPal, or 3.9% plus $0.30 on PayPal outside the US. Pledges of $3 or less are billed at a small-charge rate instead, roughly 5% plus $0.10, which exists because a fixed $0.30 on a $1 pledge would otherwise cost 30% of the transaction all by itself.</p>
+<p>So for a normal monthly pledge: <b>Net = Pledge &minus; (Pledge &times; 10%) &minus; (Pledge &times; 2.9% + $0.30)</b>. Inside the iOS app the second term becomes a flat <b>30%</b> and processing drops away, because Apple handles the payment: <b>Net = Pledge &minus; (Pledge &times; 10%) &minus; (Pledge &times; 30%)</b>.</p>
+<p>Worked example, and it is the one most creators should run first. A $5 tier, standard plan, 400 members, all paying by card on the web. Platform fee is $0.50. Processing is $5 &times; 2.9% = $0.145, plus $0.30, so $0.445. Total fees are <b>$0.945</b>, and net per patron is <b>$4.055</b>. On 400 members that is $2,000 collected and <b>$1,622</b> kept. The effective rate is <b>18.9%</b>, not 10%.</p>
+<p>Change one variable and the picture moves. At 40% of pledges coming from the iOS app, average net per patron falls to $3.63 and the effective rate climbs past 27%. At $25 a tier, the fixed $0.30 shrinks to a rounding error: platform $2.50, processing $1.025, net <b>$21.475</b>, effective rate <b>14.1%</b>.</p>
+
+<h2>What Each Pledge Size Actually Nets</h2>
+<p>Standard 10% plan, card payment, monthly billing, no iOS:</p>
+<table>
+<tr><th>Pledge</th><th>Platform fee</th><th>Processing</th><th>Net to you</th><th>Effective rate</th></tr>
+<tr><td>$1</td><td>$0.10</td><td>$0.15</td><td>$0.75</td><td>25.0%</td></tr>
+<tr><td>$2</td><td>$0.20</td><td>$0.20</td><td>$1.60</td><td>20.0%</td></tr>
+<tr><td>$3</td><td>$0.30</td><td>$0.25</td><td>$2.45</td><td>18.3%</td></tr>
+<tr><td>$5</td><td>$0.50</td><td>$0.445</td><td>$4.06</td><td>18.9%</td></tr>
+<tr><td>$10</td><td>$1.00</td><td>$0.59</td><td>$8.41</td><td>15.9%</td></tr>
+<tr><td>$25</td><td>$2.50</td><td>$1.03</td><td>$21.48</td><td>14.1%</td></tr>
+<tr><td>$50</td><td>$5.00</td><td>$1.75</td><td>$43.25</td><td>13.5%</td></tr>
+</table>
+<p>The $3 line is the one worth staring at. It clears at 18.3%, better than the $5 tier at 18.9%, because $3 is still inside the small-charge band where the fixed fee is only $0.10. Above $3 the standard rate kicks in and the fixed $0.30 has to be absorbed by a slightly larger pledge. The result is a fee-rate curve that dips at $3, jumps at $4, then declines steadily as the fixed component is diluted. If your lowest tier is $4 or $5, you are paying a premium for a number that feels rounder.</p>
+<p>The practical read: below $5 a tier, a meaningful share of each pledge is structural overhead you cannot optimise away. At $1 you keep 75 cents, so a $1,000 month needs 1,334 paying members. At $5 you keep $4.06, so the same $1,000 needs 247. The tier price is the single largest lever on your take-home rate, well ahead of any plan upgrade.</p>
+
+<h2>Annual Billing Changes Both Sides of the Equation</h2>
+<p>Patreon's annual option typically trades two months free for a twelve-month commitment, a discount near 16.67%. The fee mechanics improve in two ways at once: the fixed processing charge is applied once instead of twelve times, and the platform fee applies to a larger single payment.</p>
+<p>Run the $5 tier annually. Annual charge is $50, platform fee $5.00, processing $50 &times; 2.9% + $0.30 = $1.75, total fees <b>$6.75</b>, net <b>$43.25</b>, or <b>$3.60</b> a month averaged out. Twelve monthly charges would have produced $48.66 net. So annual billing costs you <b>$5.41</b> a year per patron in exchange for removing eleven months of churn exposure. On a $5 tier that is a good trade: one prevented cancellation is worth more than the discount.</p>
+<p>Where it goes wrong is on cheap tiers. A $2 annual pledge collects $20, pays $2.00 platform and $0.68 processing, netting $17.32, or $1.44 a month against $1.60 monthly. You gave up 10% of revenue to save about 4% of fees. The discount has to be justified by retention, never by the fee saving alone.</p>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Four platform rates, so legacy Founders, Pro and Pro plus Merch pages can check their own number</li>
+<li>Drops to the small-charge rate the moment a tier is priced at $3 or below</li>
+<li>Blends month-to-month and prepaid annual members in whatever proportion you type</li>
+<li>Carves out Apple's 30% for whichever slice of patrons buys inside the app</li>
+<li>Returns net per patron, true rate, monthly take and yearly take</li>
+<li>Back-solves the headcount behind any monthly income figure</li>
+</ul>
+
+<h2>Mistakes That Inflate Your Real Fee Rate</h2>
+<p><b>Building a budget from the 10% sticker.</b> Ten percent is the platform cut, not the total. Add processing and the effective rate lands between 13% and 19% depending on tier size, and no plan change fixes that gap.</p>
+<p><b>Pricing a tier at $4 or $5 instead of $3.</b> The small-charge band ends just above $3, so a $4 tier pays the standard 2.9% + $0.30 and nets $3.18 against $2.45 at $3. You collect $1 more and hand over $0.73 of it.</p>
+<p><b>Ignoring the iOS share.</b> Apple's 30% is not a fee you can negotiate or plan around, but it is a fee you can measure. Creators with a mobile-heavy following often find a quarter of their revenue running at a 40% true rate, which drags the whole month down.</p>
+<p><b>Reading annual plans as free money.</b> The discount is real money out the door on day one. It only pays for itself if retention improves enough to offset it, and on sub-$5 tiers the arithmetic rarely works.</p>
+<p><b>Forgetting that failed payments still cost you.</b> A declined card is retried, and processing is charged on success only, but a patron who churns after a decline is revenue you have to replace at full acquisition cost. Card expiry is the most common cause and the easiest to prevent with an annual plan.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Test a $3, $5, $10 and $25 ladder before you publish a single tier</li>
+<li>Weigh whether a plan upgrade earns back its extra points</li>
+<li>Price the real cost of nudging patrons onto prepaid annual memberships</li>
+<li>Quantify what a mobile-heavy following costs once Apple takes its share</li>
+<li>Turn an income figure into a headcount you can actually chase</li>
+</ul>
+
+<h2>Where This Estimate Stops</h2>
+<p>Patreon's rate card shifts, and it shifts by payout currency: EUR, GBP and CAD transactions run near 3.4% plus a local fixed amount, and the $3 small-charge line has local equivalents that do not translate cleanly. Sales tax and VAT sit outside the fee base and are collected on top, yet they still change what a patron is asked to pay, which moves conversion. Payout charges, currency exchange when your bank account is not denominated in USD, and whatever income tax you owe are all beyond this model. Read the output as a planning figure, then check the plan details panel in your creator dashboard before you set prices from it.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>How much does Patreon actually take from a $5 pledge?</h3>
+<p>About $0.95 on the standard plan with a US card: $0.50 platform fee plus $0.445 processing at 2.9% + $0.30. You keep $4.06, an effective rate of 18.9%, not the 10% the pricing page leads with.</p>
+<h3>Why does a $3 tier show a lower fee rate than a $5 tier?</h3>
+<p>Because $3 and below is billed at a small-charge processing rate with a $0.10 fixed component instead of $0.30. Total fees at $3 come to $0.55, or 18.3%, while $5 pays $0.945, or 18.9%. The advantage disappears the moment you round up to $4.</p>
+<h3>Is the platform fee charged before or after payment processing?</h3>
+<p>Both are charged on the pledge amount, excluding sales tax, and neither compounds on the other. That is why the effective rate is close to the platform rate plus the processing rate plus the fixed fee divided by the pledge.</p>
+<h3>Do annual memberships reduce my total fees?</h3>
+<p>Yes. A $5 tier billed at $50 a year pays $6.75 in total fees against $11.34 across twelve monthly charges. But you also collected $10 less, so the fee saving of $4.59 does not cover the $10 discount. Annual billing is a retention tool, not a fee optimisation.</p>
+<h3>How much does the iOS app take from a membership?</h3>
+<p>Apple takes 30% of the pledge on in-app purchases, and Patreon still charges its platform fee but no processing. A $5 membership nets $3.00 instead of $4.06. US patrons who complete checkout on mobile web avoid the App Store cut entirely.</p>
+<h3>Can I avoid processing fees by choosing a different Patreon plan?</h3>
+<p>No. Processing is charged independently of your plan at the same rate either way. Moving from a legacy 8% plan to the standard 10% plan raises your platform fee by exactly two points and leaves processing unchanged.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var tierEl=document.getElementById('tier'), patronsEl=document.getElementById('patrons'), targetEl=document.getElementById('target');
+var planEl=document.getElementById('plan'), procEl=document.getElementById('proc');
+var iosEl=document.getElementById('ios'), annualEl=document.getElementById('annual'), discEl=document.getElementById('disc');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function num(el,def){ var v=parseFloat(el.value); return (isNaN(v)?def:v); }
+
+function detail(g, isIos, isAnnual){
+  var plan=parseFloat(planEl.value);
+  var pr=parseFloat(procEl.value);
+  var disc=Math.max(0,Math.min(60,num(discEl,0)))/100;
+  var gross = isAnnual ? g*12*(1-disc) : g;
+  var platform = gross*plan;
+  var proc=0, apple=0;
+  if(isIos){
+    apple = gross*0.30;
+  } else if(g<=3){
+    proc = gross*0.05 + 0.10;
+  } else {
+    proc = gross*pr + 0.30;
+  }
+  var net = gross - platform - proc - apple;
+  var out = {gross:gross, platform:platform, proc:proc, apple:apple, net:net};
+  if(isAnnual){
+    for(var k in out){ out[k]=out[k]/12; }
+  }
+  return out;
+}
+
+calcBtn.onclick=function(){
+  var g=num(tierEl,0), p=Math.round(num(patronsEl,0));
+  if(g<=0){ resOut.textContent="Enter a tier price"; resTbl.innerHTML=''; return; }
+  if(p<1){ resOut.textContent="Enter at least one paying member"; resTbl.innerHTML=''; return; }
+  var iosShare=Math.max(0,Math.min(100,num(iosEl,0)))/100;
+  var annShare=Math.max(0,Math.min(100,num(annualEl,0)))/100;
+
+  var combos=[];
+  [false,true].forEach(function(isIos){
+    [false,true].forEach(function(isAnn){
+      combos.push({ios:isIos, ann:isAnn, w:(isIos?iosShare:1-iosShare)*(isAnn?annShare:1-annShare), d:detail(g,isIos,isAnn)});
+    });
+  });
+
+  var tot={gross:0,platform:0,proc:0,apple:0,net:0};
+  combos.forEach(function(c){
+    for(var k in tot){ tot[k]+=c.w*c.d[k]*p; }
+  });
+  var perPatron=tot.net/p;
+  var effRate=tot.gross>0?(1-tot.net/tot.gross)*100:0;
+
+  var rows='<tr><th>Line item</th><th>Per month</th><th>Per year</th></tr>'
+    +'<tr><td>Collected at your list price</td><td>$'+usd(g*p)+'</td><td>$'+usd(g*p*12)+'</td></tr>'
+    +'<tr><td>Collected after annual discounts</td><td>$'+usd(tot.gross)+'</td><td>$'+usd(tot.gross*12)+'</td></tr>'
+    +'<tr><td>Platform fee</td><td>&minus;$'+usd(tot.platform)+'</td><td>&minus;$'+usd(tot.platform*12)+'</td></tr>'
+    +'<tr><td>Payment processing</td><td>&minus;$'+usd(tot.proc)+'</td><td>&minus;$'+usd(tot.proc*12)+'</td></tr>'
+    +(tot.apple>0?'<tr><td>Apple App Store fee</td><td>&minus;$'+usd(tot.apple)+'</td><td>&minus;$'+usd(tot.apple*12)+'</td></tr>':'')
+    +'<tr><td><b>Net to you</b></td><td><b>$'+usd(tot.net)+'</b></td><td><b>$'+usd(tot.net*12)+'</b></td></tr>'
+    +'<tr><td>Net per patron</td><td>$'+usd(perPatron)+'</td><td>$'+usd(perPatron*12)+'</td></tr>'
+    +'<tr><td>Effective fee rate</td><td>'+effRate.toFixed(1)+'%</td><td>'+effRate.toFixed(1)+'%</td></tr>';
+
+  var tgt=num(targetEl,0);
+  if(tgt>0 && perPatron>0){
+    var need=Math.ceil(tgt/perPatron);
+    rows+='<tr><td>Members needed for $'+usd(tgt)+'/mo net</td><td>'+need.toLocaleString('en-US')+'</td><td>'+need.toLocaleString('en-US')+'</td></tr>';
+  }
+  resTbl.innerHTML=rows;
+  resOut.innerHTML='You keep <span style="color:#0f9d58;font-size:22px">$'+usd(perPatron)+'</span> of a $'+usd(g)+' pledge &mdash; an effective rate of '+effRate.toFixed(1)+'%';
+}
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>
