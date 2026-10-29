@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Fee Calculator | Plan Cost, Card Fees & Net Payout</title>
+<meta name="description" content="Free Shopify fee calculator: price Basic, Grow and Advanced at your real revenue, add card processing and gateway fees, and see your net payout per month.">
+<link rel="canonical" href="https://www.xiake.icu/shopify-fee-calculator.html">
+<meta name="keywords" content="shopify fee calculator, shopify transaction fees, shopify pricing plans, shopify payments fees, shopify profit calculator, ecommerce fee calculator">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Shopify Fee Calculator","description":"Free Shopify fee calculator for US stores. Enter monthly revenue and average order value to price the Basic, Grow and Advanced plans with card processing and third-party gateway fees.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/shopify-fee-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does Shopify take per sale on the Basic plan?","acceptedAnswer":{"@type":"Answer","text":"On Shopify Payments, Basic charges 2.9 percent plus 30 cents per online order, on top of the 39 dollar monthly subscription. In-person POS orders on the same plan cost 2.6 percent plus 10 cents. Rates fall to 2.7 and 2.5 percent on Grow and to 2.5 and 2.4 percent on Advanced."}},{"@type":"Question","name":"At what monthly revenue does upgrading from Basic to Grow pay off?","acceptedAnswer":{"@type":"Answer","text":"Around 33,000 dollars in monthly card revenue. The subscription difference is 66 dollars a month and the card rate difference is 0.2 percentage points, so 66 divided by 0.002 gives the crossover. Below that line the cheaper subscription wins; above it the lower rate does."}},{"@type":"Question","name":"Do I still pay a Shopify fee if I use Stripe or PayPal?","acceptedAnswer":{"@type":"Answer","text":"Yes. Any gateway other than Shopify Payments triggers Shopify's own transaction fee of 2 percent on Basic, 1 percent on Grow and 0.5 percent on Advanced, and that fee is charged on top of whatever the outside processor takes."}},{"@type":"Question","name":"Is the 5 dollar Starter plan cheaper for a new store?","acceptedAnswer":{"@type":"Answer","text":"Only at very low volume, and it has real limits: no custom domain checkout flow and a 5 percent online card rate. At 1,000 dollars a month Starter costs 50 dollars in fees while Basic costs about 72 dollars, so Starter wins on paper. At 5,000 dollars a month Basic costs 203 dollars and Starter costs 250 dollars, and the gap widens from there."}},{"@type":"Question","name":"Why is my effective rate higher than 2.9 percent?","acceptedAnswer":{"@type":"Answer","text":"Two reasons. The 30 cent fixed component is charged per order, so small average order values push the effective rate up. And the subscription is a flat cost that gets divided across your revenue, which hurts most in a slow month."}},{"@type":"Question","name":"Does this calculator include apps, themes or shipping labels?","acceptedAnswer":{"@type":"Answer","text":"No. It covers the plan subscription and payment processing only. Paid apps, premium themes, domain renewals, Shopify Shipping labels, chargebacks and currency conversion are separate line items that belong in your cost of goods or overhead."}}]}
+</script>
+<meta property="og:title" content="Shopify Fee Calculator | Plan Cost, Card Fees & Net Payout">
+<meta property="og:description" content="Free Shopify fee calculator: price Basic, Grow and Advanced at your real revenue, add card processing and gateway fees, and see your net payout per month.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/shopify-fee-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shopify Fee Calculator | Plan Cost, Card Fees & Net Payout">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free Shopify fee calculator: price Basic, Grow and Advanced at your real revenue, add card processing and gateway fees, and see your net payout per month.">
+</head>
+<body>
+
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./etsy-fee-calculator.html">Etsy Fees</a>
+    <a href="./profit-margin-calculator.html">Profit Margin</a>
+    <a href="./break-even-calculator.html">Break Even</a>
+</div>
+
+<h1>Shopify Fee Calculator</h1>
+<p>Shopify advertises a monthly price, but what actually leaves your account is the plan fee plus card processing on every order, plus a transaction fee if you route payments through anything other than Shopify Payments. Those three lines interact: a cheap plan with a high card rate can cost more than an expensive plan with a low one, and the answer flips at a specific revenue level. This calculator prices all three US plans at your real numbers so you can see the effective rate, not just the sticker price.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="rev" placeholder="Monthly revenue $" step="100">
+        <input type="number" id="aov" placeholder="Average order value $" step="1" value="80">
+    </div>
+    <div class="input-row">
+        <select id="billing">
+            <option value="m">Billed monthly</option>
+            <option value="y">Billed yearly (about 25% off)</option>
+        </select>
+        <select id="gateway">
+            <option value="shopify">Shopify Payments (no extra fee)</option>
+            <option value="third">Third-party gateway (adds Shopify fee)</option>
+        </select>
+    </div>
+    <button id="calcBtn">Compare Plans</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">US rates: Basic $39/mo or $29/mo yearly, 2.9% + 30 cents; Grow $105 or $79, 2.7% + 30 cents; Advanced $399 or $299, 2.5% + 30 cents. Third-party gateway fee: 2%, 1% and 0.5%. Excludes apps, themes, shipping labels and tax on fees.</p>
+</div>
+
+<h2>How the Shopify Fee Calculator Works</h2>
+<p>Shopify bills in two layers, and the second one scales with sales rather than with your plan alone. The formula behind the result is:</p>
+<p><b>Monthly cost = plan fee + orders x (average order value x card rate + fixed fee) + revenue x gateway fee</b></p>
+<p>The plan fee is whatever you pay Shopify each month for the subscription. Orders come from dividing monthly revenue by average order value, so the same revenue costs more when customers buy in small increments. The card rate and the fixed fee are charged on the amount the customer actually pays, which includes shipping and tax collected, not just the product price. The gateway fee only appears when you use a processor other than Shopify Payments, and it is a percentage of revenue, not of profit.</p>
+<p>Worked example. A store doing <b>$20,000 a month with an $80 average order value</b> processes 250 orders. On Basic: 2.9% of $80 is $2.32, plus 30 cents gives $2.62 per order, times 250 is $655, plus the $39 subscription for <b>$694 total, or 3.47% of revenue</b>. On Grow the card rate drops to 2.7%, so each order costs $2.46 and the month totals $720, or 3.60%. On Advanced the rate falls again to 2.5%, but the $399 subscription more than eats the saving: $974, or 4.87%. Basic wins at this size, which surprises sellers who assume the flagship plan is the efficient one.</p>
+<p>Switch that same store to a third-party gateway and the picture changes by plan, not by rate. Basic adds 2% of revenue, or $400, taking the month to $1,094 and the effective rate to 5.47%. Grow adds 1%, or $200, for $920. Advanced adds 0.5%, or $100, for $1,074. At $20,000 a month, Grow suddenly beats Advanced on total cost even though Advanced has the lower card rate.</p>
+
+<h2>What Each Plan Costs at Your Volume</h2>
+<p>Monthly billing, Shopify Payments, $80 average order value:</p>
+<table>
+<tr><th>Monthly revenue</th><th>Basic</th><th>Grow</th><th>Advanced</th></tr>
+<tr><td>$5,000</td><td>$203 (4.06%)</td><td>$259 (5.17%)</td><td>$543 (10.85%)</td></tr>
+<tr><td>$10,000</td><td>$366 (3.67%)</td><td>$412 (4.12%)</td><td>$686 (6.87%)</td></tr>
+<tr><td>$20,000</td><td>$694 (3.47%)</td><td>$720 (3.60%)</td><td>$974 (4.87%)</td></tr>
+<tr><td>$50,000</td><td>$1,676 (3.35%)</td><td>$1,642 (3.28%)</td><td>$1,836 (3.67%)</td></tr>
+<tr><td>$100,000</td><td>$3,314 (3.31%)</td><td>$3,180 (3.18%)</td><td>$3,274 (3.27%)</td></tr>
+<tr><td>$200,000</td><td>$6,589 (3.29%)</td><td>$6,255 (3.13%)</td><td>$6,149 (3.07%)</td></tr>
+</table>
+<p>Two things stand out. First, the effective rate settles around 3.1 to 3.3 percent once volume is high, because the fixed 30 cents stops mattering and the subscription becomes a rounding error. Second, the cheap plans are not uniformly cheap: at $5,000 a month Advanced costs 10.85% of revenue, which is a brutal number for a store running thin margins on physical goods.</p>
+
+<h2>Where Upgrading Pays for Itself</h2>
+<p>Each step up buys 0.2 percentage points off the card rate and charges a higher subscription. That makes the break-even a division problem. From Basic to Grow the subscription rises $66 a month, so upgrading pays from <b>$33,000 a month</b> in card revenue onward, where 0.2% of revenue equals $66. From Grow to Advanced the subscription gap is $294, so the break-even sits at <b>$147,000 a month</b>.</p>
+<p>The yearly billing discount changes the arithmetic but not the pattern. Paying $29, $79 or $299 instead of $39, $105 or $399 lowers every column by the same dollar amount, which pulls each crossover slightly lower, because the monthly equivalent of the subscription is what enters the formula.</p>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Prices Basic, Grow and Advanced side by side at the same revenue and order size</li>
+<li>Handles monthly and yearly billing, including the annual discount</li>
+<li>Adds the correct third-party gateway fee per plan, not a flat 2%</li>
+<li>Reports total cost, effective rate as a share of revenue, cost per order and net revenue</li>
+<li>Flags the cheapest plan for your inputs instead of leaving you to eyeball the table</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Check whether a plan upgrade is justified before the next billing cycle</li>
+<li>Model the real cost of keeping your current outside payment processor</li>
+<li>Price a product launch by seeing how a lower average order value raises the fee rate</li>
+<li>Compare Shopify's all-in cut with marketplace fees using the <a href="./etsy-fee-calculator.html" style="color:#2363e0">Etsy Fee Calculator</a></li>
+<li>Check whether the resulting margin still works with the <a href="./profit-margin-calculator.html" style="color:#2363e0">Profit Margin Calculator</a></li>
+</ul>
+
+<h2>Why the Sticker Price Misleads</h2>
+<p><b>Comparing plans by subscription only.</b> The $39 plan looks like the budget choice until you notice it carries the highest card rate. At $50,000 a month, Grow is already $34 cheaper than Basic despite costing $66 more in subscription.</p>
+<p><b>Ignoring what the fixed fee does to small orders.</b> A store selling $15 items pays 30 cents on a $15 order, which is 2% of the order on top of the 2.9% rate. The effective processing cost is closer to 4.9% before the subscription is counted. Two stores with identical revenue can pay very different fee rates purely because of basket size.</p>
+<p><b>Assuming Shopify Payments is available and uniform.</b> It is not offered in every country, and even in the US, American Express and cards issued outside the country can carry higher rates than the headline number. Selling in a currency different from your payout currency adds a conversion charge on top.</p>
+<p><b>Forgetting that fees are charged on tax and shipping.</b> The card rate applies to the full amount collected. If you pass sales tax through to the state, you are still paying a percentage of it to the processor, which is a real cost that never shows up in a product margin spreadsheet.</p>
+
+<h2>The Cost You Do Not See on the Pricing Page</h2>
+<p>Two items matter more to cash flow than the plan table. The first is payout timing: card revenue arrives on a schedule that lags the sale, and a reserve or hold can push it back further after a spike in chargebacks. The second is refunds and disputes. Refunding an order generally does not return the processing fee, so a return costs the fee twice: once on the original charge, once on the reversal. At $20,000 a month with a 6% return rate, that is roughly $39 a month in fees on merchandise that came back. Neither line appears on the pricing page, and neither is modeled above, which is why the effective rate a seller reports from their bank statement is almost always slightly worse than the rate a fee calculator returns.</p>
+
+<h2>Where This Estimate Stops</h2>
+<p>Rates here reflect published US pricing and change without much notice, so confirm the current numbers on Shopify's pricing page before you commit to a plan based on this page. The calculator deliberately excludes Shopify Plus, whose pricing is negotiated; in-person POS costs, which use a different rate card; paid apps and themes; shipping labels; chargebacks; and any tax Shopify adds to its own bill. It also assumes a single currency and a single gateway, so multi-currency stores should treat the result as a floor rather than a final number.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>How much does Shopify take per sale on the Basic plan?</h3>
+<p>On Shopify Payments, Basic charges 2.9 percent plus 30 cents per online order, on top of the 39 dollar monthly subscription. In-person POS orders on the same plan cost 2.6 percent plus 10 cents. Rates fall to 2.7 and 2.5 percent on Grow and to 2.5 and 2.4 percent on Advanced.</p>
+<h3>At what monthly revenue does upgrading from Basic to Grow pay off?</h3>
+<p>Around 33,000 dollars in monthly card revenue. The subscription difference is 66 dollars a month and the card rate difference is 0.2 percentage points, so 66 divided by 0.002 gives the crossover. Below that line the cheaper subscription wins; above it the lower rate does.</p>
+<h3>Do I still pay a Shopify fee if I use Stripe or PayPal?</h3>
+<p>Yes. Any gateway other than Shopify Payments triggers Shopify's own transaction fee of 2 percent on Basic, 1 percent on Grow and 0.5 percent on Advanced, and that fee is charged on top of whatever the outside processor takes.</p>
+<h3>Is the 5 dollar Starter plan cheaper for a new store?</h3>
+<p>Only at very low volume, and it has real limits: no custom domain checkout flow and a 5 percent online card rate. At 1,000 dollars a month Starter costs 50 dollars in fees while Basic costs about 72 dollars, so Starter wins on paper. At 5,000 dollars a month Basic costs 203 dollars and Starter costs 250 dollars, and the gap widens from there.</p>
+<h3>Why is my effective rate higher than 2.9 percent?</h3>
+<p>Two reasons. The 30 cent fixed component is charged per order, so small average order values push the effective rate up. And the subscription is a flat cost that gets divided across your revenue, which hurts most in a slow month.</p>
+<h3>Does this calculator include apps, themes or shipping labels?</h3>
+<p>No. It covers the plan subscription and payment processing only. Paid apps, premium themes, domain renewals, Shopify Shipping labels, chargebacks and currency conversion are separate line items that belong in your cost of goods or overhead.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var PLANS=[
+  {name:'Basic', m:39, y:29, r:0.029, f:0.30, tp:0.02},
+  {name:'Grow', m:105, y:79, r:0.027, f:0.30, tp:0.01},
+  {name:'Advanced', m:399, y:299, r:0.025, f:0.30, tp:0.005}
+];
+var revEl=document.getElementById('rev'), aovEl=document.getElementById('aov');
+var billEl=document.getElementById('billing'), gwEl=document.getElementById('gateway');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+function pricePlan(plan, rev, aov, yearly, third){
+  var orders=rev/aov;
+  var sub=yearly?plan.y:plan.m;
+  var proc=orders*(aov*plan.r+plan.f);
+  var gw=third?rev*plan.tp:0;
+  var total=sub+proc+gw;
+  return {orders:orders, sub:sub, proc:proc, gw:gw, total:total, rate:rev>0?total/rev*100:0, perOrder:orders>0?total/orders:0, net:rev-total};
+}
+
+function computeShopify(rev, aov, yearly, third){
+  var out=[];
+  for(var i=0;i<PLANS.length;i++){ out.push({plan:PLANS[i], res:pricePlan(PLANS[i], rev, aov, yearly, third)}); }
+  return out;
+}
+
+calcBtn.onclick=function(){
+  var rev=parseFloat(revEl.value), aov=parseFloat(aovEl.value);
+  if(!(rev>0)){ resOut.textContent="Enter your monthly revenue"; resTbl.innerHTML=''; return; }
+  if(!(aov>0)){ resOut.textContent="Enter your average order value"; resTbl.innerHTML=''; return; }
+  var yearly=billEl.value==='y', third=gwEl.value==='third';
+  var rows=computeShopify(rev, aov, yearly, third);
+  var best=rows[0];
+  for(var i=1;i<rows.length;i++){ if(rows[i].res.total<best.res.total) best=rows[i]; }
+
+  var html='<tr><th>Line</th><th>Basic</th><th>Grow</th><th>Advanced</th></tr>';
+  html+='<tr><td>Orders per month</td><td colspan="3">'+Math.round(rows[0].res.orders)+'</td></tr>';
+  html+='<tr><td>Plan subscription</td>';
+  for(var i=0;i<rows.length;i++){ html+='<td>$'+usd(rows[i].res.sub)+'</td>'; }
+  html+='</tr><tr><td>Card processing</td>';
+  for(var i=0;i<rows.length;i++){ html+='<td>$'+usd(rows[i].res.proc)+'</td>'; }
+  html+='</tr><tr><td>Gateway fee</td>';
+  for(var i=0;i<rows.length;i++){ html+='<td>$'+usd(rows[i].res.gw)+'</td>'; }
+  html+='</tr><tr><td><b>Total monthly cost</b></td>';
+  for(var i=0;i<rows.length;i++){ html+='<td><b>$'+usd(rows[i].res.total)+'</b></td>'; }
+  html+='</tr><tr><td>Effective rate</td>';
+  for(var i=0;i<rows.length;i++){ html+='<td>'+rows[i].res.rate.toFixed(2)+'%</td>'; }
+  html+='</tr><tr><td>Cost per order</td>';
+  for(var i=0;i<rows.length;i++){ html+='<td>$'+usd(rows[i].res.perOrder)+'</td>'; }
+  html+='</tr><tr><td>You keep</td>';
+  for(var i=0;i<rows.length;i++){ html+='<td>$'+usd(rows[i].res.net)+'</td>'; }
+  html+='</tr>';
+  resTbl.innerHTML=html;
+  resOut.innerHTML='Cheapest at $'+usd(rev)+'/mo: <span style="color:#0f9d58;font-size:22px">'+best.plan.name+'</span> at $'+usd(best.res.total)+' per month ('+best.res.rate.toFixed(2)+'% of revenue)';
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>

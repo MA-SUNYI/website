@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscription Cost Calculator | True Monthly & Yearly Spend</title>
+<meta name="description" content="Free subscription cost calculator: total streaming, music, software and AI subscriptions across monthly and yearly billing, with daily and five-year costs.">
+<link rel="canonical" href="https://www.xiake.icu/subscription-cost-calculator.html">
+<meta name="keywords" content="subscription cost calculator, how much do i spend on subscriptions, subscription tracker, monthly subscription total, streaming cost calculator, recurring expenses calculator">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Subscription Cost Calculator","description":"Free subscription cost calculator. Add up to six recurring charges, mix monthly and yearly billing, and see the true monthly, yearly and five-year cost plus what the money would grow to if invested.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/subscription-cost-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does the average US household spend on subscriptions?","acceptedAnswer":{"@type":"Answer","text":"Self-reported surveys land around 60 to 90 dollars a month, while audits of actual bank and card statements usually find 130 to 220 dollars. The gap is almost never dishonesty; it is annual renewals, app store charges and free trials that converted quietly."}},{"@type":"Question","name":"Should a yearly subscription be divided by 12 or by 52?","acceptedAnswer":{"@type":"Answer","text":"By 12 to get a monthly equivalent, because the bill arrives once a year and you are spreading that single charge across twelve months. Dividing by 52 only makes sense for something you actually want to express per week. Mixing the two is the most common way people undercount their total."}},{"@type":"Question","name":"My total looks too low compared with my bank statement. What am I missing?","acceptedAnswer":{"@type":"Answer","text":"Usually four things: annual renewals that do not appear in a monthly scan, subscriptions billed through Apple or Google rather than directly, charges split with family members where the plan sits in someone else's name, and price increases that quietly raised a bill you set up years ago."}},{"@type":"Question","name":"Is it worth cancelling a service I only use twice a month?","acceptedAnswer":{"@type":"Answer","text":"Compare cost per use, not cost per month. A 16 dollar service used twice costs 8 dollars a session, which may still be cheaper than renting the same title individually. A 16 dollar service used once every two months costs 32 dollars a session, and that is the number that should decide it."}},{"@type":"Question","name":"How do I count a subscription I share with family?","acceptedAnswer":{"@type":"Answer","text":"Count only your share of the payment, and note who holds the card. If you pay the full 25 dollar family plan and three people reimburse you, your real cost is the net amount after those transfers, not the headline price."}},{"@type":"Question","name":"What return should I use in the invested instead comparison?","acceptedAnswer":{"@type":"Answer","text":"Seven percent a year is the long-run nominal figure people usually cite for a broad US stock index. It is an illustration of opportunity cost, not a promise: real returns vary widely and can be negative over a five-year window. The point of the comparison is the size of the number, not its precision."}}]}
+</script>
+<meta property="og:title" content="Subscription Cost Calculator | True Monthly & Yearly Spend">
+<meta property="og:description" content="Free subscription cost calculator: total streaming, music, software and AI subscriptions across monthly and yearly billing, with daily and five-year costs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/subscription-cost-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Subscription Cost Calculator | True Monthly & Yearly Spend">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free subscription cost calculator: total streaming, music, software and AI subscriptions across monthly and yearly billing, with daily and five-year costs.">
+</head>
+<body>
+
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./monthly-budget-calculator.html">Monthly Budget</a>
+    <a href="./pet-cost-calculator.html">Pet Cost</a>
+    <a href="./savings-goal-calculator.html">Savings Goal</a>
+</div>
+
+<h1>Subscription Cost Calculator</h1>
+<p>Subscriptions are priced to be forgettable: a few dollars a month, charged automatically, never reviewed. Individually they are trivial. Added together they are often the third largest line in a household budget, behind housing and food. This calculator normalizes every charge to a monthly figure, including the annual plans that never show up in a monthly scan, then shows the yearly total, the daily cost and what the same money would be worth if it had been invested instead.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="text" id="n1" placeholder="Service name (optional)">
+        <input type="number" id="p1" placeholder="Price $" step="0.01">
+        <select id="c1">
+            <option value="month">per month</option>
+            <option value="year">per year</option>
+            <option value="quarter">per quarter</option>
+            <option value="week">per week</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="text" id="n2" placeholder="Service name (optional)">
+        <input type="number" id="p2" placeholder="Price $" step="0.01">
+        <select id="c2">
+            <option value="month">per month</option>
+            <option value="year">per year</option>
+            <option value="quarter">per quarter</option>
+            <option value="week">per week</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="text" id="n3" placeholder="Service name (optional)">
+        <input type="number" id="p3" placeholder="Price $" step="0.01">
+        <select id="c3">
+            <option value="month">per month</option>
+            <option value="year">per year</option>
+            <option value="quarter">per quarter</option>
+            <option value="week">per week</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="text" id="n4" placeholder="Service name (optional)">
+        <input type="number" id="p4" placeholder="Price $" step="0.01">
+        <select id="c4">
+            <option value="month">per month</option>
+            <option value="year">per year</option>
+            <option value="quarter">per quarter</option>
+            <option value="week">per week</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="text" id="n5" placeholder="Service name (optional)">
+        <input type="number" id="p5" placeholder="Price $" step="0.01">
+        <select id="c5">
+            <option value="month">per month</option>
+            <option value="year">per year</option>
+            <option value="quarter">per quarter</option>
+            <option value="week">per week</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="text" id="n6" placeholder="Service name (optional)">
+        <input type="number" id="p6" placeholder="Price $" step="0.01">
+        <select id="c6">
+            <option value="month">per month</option>
+            <option value="year">per year</option>
+            <option value="quarter">per quarter</option>
+            <option value="week">per week</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="income" placeholder="Monthly take-home pay $ (optional)" step="100">
+        <input type="number" id="ret" placeholder="Return if invested %" value="7" step="0.1">
+    </div>
+    <button id="calcBtn">Total My Subscriptions</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">Yearly plans are divided by 12, quarterly by 3, weekly multiplied by 52 then divided by 12. The invested comparison assumes the monthly total is contributed at the start of each period at a constant annual return.</p>
+</div>
+
+<h2>How the Subscription Cost Calculator Works</h2>
+<p>Every billing cycle is converted to a monthly equivalent first, because adding a 15.99 monthly charge to a 119.99 annual charge directly produces a meaningless number. The conversion is:</p>
+<p><b>Monthly equivalent = price / 12 for annual, price / 3 for quarterly, price x 52 / 12 for weekly, unchanged for monthly</b></p>
+<p>Then <b>total monthly = sum of all monthly equivalents</b>, and <b>annual = monthly x 12</b>. The daily figure divides the monthly total by 30.44, the average number of days in a month, which is more accurate across a year than dividing by 30. The invested comparison uses the future value of a series of monthly contributions:</p>
+<p><b>FV = monthly x ((1 + r/12)^(12n) - 1) / (r/12)</b></p>
+<p>Worked example, five services: 15.99 and 9.99 billed monthly, 8.00 billed monthly, one plan at 59.99 a year and one at 199 a year. The monthly charges add to 33.98. The annual plans convert to 4.9992 and 16.5833, so the monthly equivalent is <b>55.56</b> and the year costs <b>666.75</b>. Over five years that is <b>3,333.75</b> in cash. Invested at 7% instead, the same 55.56 a month grows to roughly <b>3,978</b>, about 644 dollars more than the subscriptions cost.</p>
+<p>That 644 dollar gap is not an argument for cancelling everything. It is the correct size of the trade: about 13% of the five-year spend, not the tripled number people often imagine. The honest question is whether those five services delivered 3,333 dollars of value, and the cost per use column is what answers it.</p>
+
+<h2>What Typical Households Actually Pay</h2>
+<p>Monthly figures for a US household, one subscription per category:</p>
+<table>
+<tr><th>Category</th><th>Typical monthly</th><th>Typical yearly</th></tr>
+<tr><td>Video streaming (1 to 3 services)</td><td>$15 to $45</td><td>$180 to $540</td></tr>
+<tr><td>Music streaming</td><td>$11 to $17</td><td>$132 to $204</td></tr>
+<tr><td>Cloud storage</td><td>$3 to $10</td><td>$36 to $120</td></tr>
+<tr><td>AI assistant (ChatGPT Plus, Claude Pro, Gemini)</td><td>$20 to $40</td><td>$240 to $480</td></tr>
+<tr><td>Fitness or wellness app</td><td>$10 to $30</td><td>$120 to $360</td></tr>
+<tr><td>News and publications</td><td>$5 to $25</td><td>$60 to $300</td></tr>
+<tr><td>Gaming or app subscriptions</td><td>$5 to $20</td><td>$60 to $240</td></tr>
+</table>
+<p>A household with one line in each row lands between 69 and 187 dollars a month, or 828 to 2,244 a year. The AI row is the newest and the fastest growing: two years ago it barely existed in these budgets, and it now rivals video streaming in size.</p>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Six slots, each with its own billing cycle, so monthly and annual plans can sit in the same total</li>
+<li>Converts yearly, quarterly and weekly charges to a common monthly basis</li>
+<li>Reports monthly, yearly, five-year and per-day cost from the same inputs</li>
+<li>Shows the share of take-home pay the category consumes, if you supply income</li>
+<li>Calculates what the same monthly outflow would grow to if invested instead</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Audit a card statement once a quarter and enter every recurring charge you find</li>
+<li>Decide between a monthly and an annual plan for a service you expect to keep</li>
+<li>See whether a bundle is genuinely cheaper than the individual services it replaces</li>
+<li>Check the subscription line against the rest of the budget with the <a href="./monthly-budget-calculator.html" style="color:#2363e0">Monthly Budget Calculator</a></li>
+<li>Weigh recurring costs against one-off spending using the <a href="./savings-goal-calculator.html" style="color:#2363e0">Savings Goal Calculator</a></li>
+</ul>
+
+<h2>Why the Total Always Surprises People</h2>
+<p><b>Annual plans are invisible in a monthly scan.</b> A 119.99 a year plan is 10 dollars a month, but it appears as a single charge once, in a month you were not looking. Roughly a third of the gap between what people guess they spend and what they actually spend comes from annual renewals.</p>
+<p><b>Free trials convert without a notification you will notice.</b> The charge is small, the email goes to a promotions tab, and three months later it is part of the baseline. Treat the trial end date as a calendar event, not a memory test.</p>
+<p><b>Price increases are applied silently.</b> Streaming services have raised prices repeatedly, usually by a dollar or two, and the increase arrives without a new decision from you. A budget built two years ago understates today's total by 15 to 25 percent.</p>
+<p><b>Per-month framing hides per-use cost.</b> A 20 dollar service used daily is cheap; the same 20 dollars used twice a month is not. Subscription pricing is deliberately expressed in a unit that discourages that division.</p>
+
+<h2>Where This Estimate Stops</h2>
+<p>The calculator totals what you enter, so its accuracy depends entirely on the audit behind it. It does not read your bank account, detect forgotten charges or know about subscriptions billed through an app store under a different merchant name. It also treats every charge as a flat amount: usage-based bills, annual price escalators and promotional rates that expire after six or twelve months will drift from the result. Currency is not converted, so keep every price in the same currency before entering it.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>How much does the average US household spend on subscriptions?</h3>
+<p>Self-reported surveys land around 60 to 90 dollars a month, while audits of actual bank and card statements usually find 130 to 220 dollars. The gap is almost never dishonesty; it is annual renewals, app store charges and free trials that converted quietly.</p>
+<h3>Should a yearly subscription be divided by 12 or by 52?</h3>
+<p>By 12 to get a monthly equivalent, because the bill arrives once a year and you are spreading that single charge across twelve months. Dividing by 52 only makes sense for something you actually want to express per week. Mixing the two is the most common way people undercount their total.</p>
+<h3>My total looks too low compared with my bank statement. What am I missing?</h3>
+<p>Usually four things: annual renewals that do not appear in a monthly scan, subscriptions billed through Apple or Google rather than directly, charges split with family members where the plan sits in someone else's name, and price increases that quietly raised a bill you set up years ago.</p>
+<h3>Is it worth cancelling a service I only use twice a month?</h3>
+<p>Compare cost per use, not cost per month. A 16 dollar service used twice costs 8 dollars a session, which may still be cheaper than renting the same title individually. A 16 dollar service used once every two months costs 32 dollars a session, and that is the number that should decide it.</p>
+<h3>How do I count a subscription I share with family?</h3>
+<p>Count only your share of the payment, and note who holds the card. If you pay the full 25 dollar family plan and three people reimburse you, your real cost is the net amount after those transfers, not the headline price.</p>
+<h3>What return should I use in the invested instead comparison?</h3>
+<p>Seven percent a year is the long-run nominal figure people usually cite for a broad US stock index. It is an illustration of opportunity cost, not a promise: real returns vary widely and can be negative over a five-year window. The point of the comparison is the size of the number, not its precision.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var SLOTS=[1,2,3,4,5,6];
+var priceEls=[], cycleEls=[], nameEls=[];
+for(var k=0;k<SLOTS.length;k++){
+  priceEls.push(document.getElementById('p'+SLOTS[k]));
+  cycleEls.push(document.getElementById('c'+SLOTS[k]));
+  nameEls.push(document.getElementById('n'+SLOTS[k]));
+}
+var incomeEl=document.getElementById('income'), retEl=document.getElementById('ret');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+function toMonthly(price, cycle){
+  if(cycle==='year') return price/12;
+  if(cycle==='quarter') return price/3;
+  if(cycle==='week') return price*52/12;
+  return price;
+}
+
+function futureValue(monthly, annualRate, years){
+  var i=annualRate/100/12, n=years*12;
+  if(i===0) return monthly*n;
+  return monthly*(Math.pow(1+i,n)-1)/i;
+}
+
+function computeSubs(prices, cycles){
+  var total=0, items=[];
+  for(var i=0;i<prices.length;i++){
+    var p=prices[i];
+    if(!(p>0)) continue;
+    var m=toMonthly(p, cycles[i]);
+    total+=m;
+    items.push({price:p, cycle:cycles[i], monthly:m, yearly:m*12, share:0});
+  }
+  for(var j=0;j<items.length;j++){ items[j].share = total>0 ? items[j].monthly/total*100 : 0; }
+  return {items:items, monthly:total, yearly:total*12, fiveYear:total*60, daily:total/30.44};
+}
+
+calcBtn.onclick=function(){
+  var prices=[], cycles=[];
+  for(var k=0;k<SLOTS.length;k++){
+    prices.push(parseFloat(priceEls[k].value));
+    cycles.push(cycleEls[k].value);
+  }
+  var r=computeSubs(prices, cycles);
+  if(!(r.monthly>0)){ resOut.textContent="Enter at least one subscription price"; resTbl.innerHTML=''; return; }
+  var income=parseFloat(incomeEl.value), rate=parseFloat(retEl.value);
+  if(isNaN(rate)) rate=7;
+  var fv5=futureValue(r.monthly, rate, 5);
+
+  var html='<tr><th>Service</th><th>As entered</th><th>Per month</th><th>Per year</th><th>Share</th></tr>';
+  for(var i=0;i<r.items.length;i++){
+    var it=r.items[i];
+    var label=(nameEls[i]&&nameEls[i].value)?nameEls[i].value:'Item '+(i+1);
+    var cyc=it.cycle==='year'?'/yr':it.cycle==='quarter'?'/qtr':it.cycle==='week'?'/wk':'/mo';
+    html+='<tr><td>'+label+'</td><td>$'+usd(it.price)+cyc+'</td><td>$'+usd(it.monthly)+'</td><td>$'+usd(it.yearly)+'</td><td>'+it.share.toFixed(1)+'%</td></tr>';
+  }
+  html+='<tr><td><b>Total</b></td><td></td><td><b>$'+usd(r.monthly)+'</b></td><td><b>$'+usd(r.yearly)+'</b></td><td>100%</td></tr>';
+  html+='<tr><td>Per day</td><td></td><td colspan="3">$'+usd(r.daily)+'</td></tr>';
+  html+='<tr><td>Five years of payments</td><td></td><td colspan="3">$'+usd(r.fiveYear)+'</td></tr>';
+  html+='<tr><td>Same money invested at '+rate+'% for 5 years</td><td></td><td colspan="3">$'+usd(fv5)+'</td></tr>';
+  if(income>0){ html+='<tr><td>Share of take-home pay</td><td></td><td colspan="3">'+(r.monthly/income*100).toFixed(1)+'%</td></tr>'; }
+  resTbl.innerHTML=html;
+
+  resOut.innerHTML='You pay <span style="color:#2563eb;font-size:22px">$'+usd(r.monthly)+'</span> a month, or <span style="color:#2563eb;font-size:22px">$'+usd(r.yearly)+'</span> a year';
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>
