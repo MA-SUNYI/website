@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM API Cost Calculator: What Token Spend Adds Up To</title>
+<meta name="description" content="Estimate LLM API spend before launch: enter input and output tokens per call, daily call volume and per-million prices for cost per call, month and year.">
+<link rel="canonical" href="https://www.xiake.icu/llm-api-cost-calculator.html">
+<meta name="keywords" content="llm api cost calculator, token cost calculator, openai api cost calculator, prompt token cost, output token pricing, ai api monthly cost, gpt api pricing calculator">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+h3{font-size:17px;margin:18px 0 6px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LLM API Cost Calculator","description":"Free token cost calculator for LLM APIs. Enter input and output tokens per call, daily call volume, cached input share and a per-million-token price to get cost per call, per month and per year before you launch.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/llm-api-cost-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I count tokens without an SDK?","acceptedAnswer":{"@type":"Answer","text":"For English text a rough rule is four characters or about three quarters of a word per token, so 750 words is close to 1,000 tokens. At around $1.25 per million input tokens, one cent buys roughly eight thousand input tokens, which is about six thousand words of prompt. Because the error of a character-ratio estimate is often 10 to 20 percent, treat the result as a budget ceiling rather than an invoice."}},{"@type":"Question","name":"Why do my monthly bills run higher than this calculator predicts?","acceptedAnswer":{"@type":"Answer","text":"Usually because calls are not one-shot. A chat or agent request resends the system prompt plus all earlier turns on every call, so the average input grows with conversation length. If your average chat is six turns, the prompt tokens roughly triple over the exchange. Measure average input tokens per call from real logs, not from the first message."}},{"@type":"Question","name":"Can I turn off output charges by capping max tokens?","acceptedAnswer":{"@type":"Answer","text":"You can cap the ceiling but not the charge. Setting max tokens stops a runaway answer; it does not lower the price of the tokens you do generate. The lever that actually cuts output spend is shorter answers through instructions plus stricter formatting rules like a JSON schema with short fields."}},{"@type":"Question","name":"Is cached input really billed at the same rate as fresh input?","acceptedAnswer":{"@type":"Answer","text":"No, and that is the point. Major providers bill repeated prompt prefixes at a large discount, often around one tenth of the standard input price, once the prefix exceeds a minimum length. Set the cached share here to see how much of your input bill depends on your prompt layout staying stable."}},{"@type":"Question","name":"What happens to cost when I add a long system prompt full of policy text?","acceptedAnswer":{"@type":"Answer","text":"Every call pays for it. Adding 1,500 tokens of instructions to a call with 1,000 input and 500 output tokens raises input spend by 150 percent on that call, which for 100,000 daily calls at $1.25 per million tokens is roughly $3,750 extra a month. Keep policy text short or move it into the cached prefix."}},{"@type":"Question","name":"Should I model a cheaper model at half the price and assume half the cost?","acceptedAnswer":{"@type":"Answer","text":"Only if the cheaper model produces answers you would ship unedited. Cheap models often need longer prompts, more retries, and more repair passes on broken JSON, each of which is a new call. A model that is 80 percent cheaper but needs 1.5 calls per task is still cheaper, but not by the amount the price list suggests."}}]}
+</script>
+<meta property="og:title" content="LLM API Cost Calculator: What Token Spend Adds Up To">
+<meta property="og:description" content="Estimate LLM API spend before launch: enter input and output tokens per call, daily call volume and per-million prices for cost per call, month and year.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/llm-api-cost-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LLM API Cost Calculator: What Token Spend Adds Up To">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Estimate LLM API spend before launch: enter input and output tokens per call, daily call volume and per-million prices for cost per call, month and year.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./word-counter.html">Word Counter</a>
+    <a href="./subscription-cost-calculator.html">Subscriptions</a>
+    <a href="./compound-interest-calculator.html">Compounding</a>
+</div>
+
+<h1>LLM API Cost Calculator</h1>
+<p>Token prices per million sound meaningless until you multiply them by real traffic. This tool takes your average prompt and completion size, your call volume and a model rate, then returns cost per call, per month and per year. It also separates cached input from fresh input, because that single ratio often moves a bill by more than switching models does. Prices are yours to enter, so the math stays correct when providers change their lists.</p>
+<p>Below the calculator you will find the per-call formula with two fully worked examples, a benchmark table for five common workloads, and the four prompt habits that most often turn a cheap prototype into an expensive product.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="inTok" placeholder="Input tokens per call" value="1200" step="1" min="0">
+        <input type="number" id="outTok" placeholder="Output tokens per call" value="400" step="1" min="0">
+        <input type="number" id="calls" placeholder="Calls per day" value="5000" step="1" min="0">
+    </div>
+    <div class="input-row">
+        <input type="number" id="inPrice" placeholder="Input $ per 1M tokens" value="1.25" step="0.01" min="0">
+        <input type="number" id="outPrice" placeholder="Output $ per 1M tokens" value="10" step="0.01" min="0">
+        <input type="number" id="cache" placeholder="Cached input %" value="0" step="1" min="0" max="90">
+    </div>
+    <div class="input-row">
+        <input type="number" id="cachePrice" placeholder="Cached input $ per 1M" value="0.13" step="0.01" min="0">
+        <input type="number" id="days" placeholder="Days per month" value="30" step="1" min="1" max="31">
+        <input type="number" id="budget" placeholder="Monthly budget $ (optional)" step="1" min="0">
+    </div>
+    <button id="calcBtn">Calculate API Cost</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">Cost is priced per million tokens on both sides. Cached input is the share of the prompt prefix that providers bill at the discounted rate; leave it at 0 for a worst-case estimate. Check current prices on the provider's pricing page before budgeting.</p>
+</div>
+
+<h2>How the LLM API Cost Calculator Works</h2>
+<p>Every call is two meters running at different rates: one for the tokens you send, one for the tokens the model writes back. Output usually costs five to ten times more per token, so the cheaper side is rarely the one that surprises you.</p>
+<p>The formula:</p>
+<p><b>Cost per call = (fresh input &divide; 1,000,000 &times; input price) + (cached input &divide; 1,000,000 &times; cached price) + (output &divide; 1,000,000 &times; output price)</b></p>
+<p>Then <b>monthly cost = cost per call &times; calls per day &times; days per month</b>.</p>
+<p>Worked example, using a mid-tier rate of $1.25 input and $10.00 output per million tokens, with 1,200 input and 400 output tokens per call and 5,000 calls a day:</p>
+<ul>
+<li>Input: 1,200 &times; 5,000 = 6,000,000 tokens a day &rarr; 0.006 &times; 1.25 = <b>$7.50</b></li>
+<li>Output: 400 &times; 5,000 = 2,000,000 tokens a day &rarr; 0.002 &times; 10.00 = <b>$20.00</b></li>
+<li>Daily total: <b>$27.50</b>, about <b>$825</b> a month and $9,900 a year.</li>
+</ul>
+<p>Notice that output is 25% of the tokens but 73% of the bill. Now cache 60% of the input at $0.13 per million: fresh input falls to 480 tokens and costs $3.00 a day, cached input costs $0.39 a day, and the daily total drops to $23.39, roughly $702 a month. Shrinking the answer from 400 to 250 tokens instead saves about $9 a day, which is a larger cut. Run both levers before you renegotiate with your vendor.</p>
+
+<h2>Cost Benchmarks by Workload</h2>
+<p>Monthly cost at $1.25 input and $10.00 output per million tokens, 30 days, no caching:</p>
+<table>
+<tr><th>Workload</th><th>Tokens in / out</th><th>Calls per day</th><th>Monthly cost</th></tr>
+<tr><td>Prototype, single user</td><td>1,000 / 500</td><td>200</td><td>$3.75</td></tr>
+<tr><td>Small app, early users</td><td>1,000 / 500</td><td>2,000</td><td>$37.50</td></tr>
+<tr><td>Support bot with history</td><td>4,000 / 300</td><td>5,000</td><td>$1,200.00</td></tr>
+<tr><td>Document summarizer</td><td>15,000 / 800</td><td>1,000</td><td>$802.50</td></tr>
+<tr><td>Content generator</td><td>2,000 / 2,000</td><td>10,000</td><td>$6,750.00</td></tr>
+</table>
+<p>The middle row is where most early products land, and it is often ten times budget. Long conversation history raises input tokens quietly; a support bot carrying four thousand tokens of context per call pays for that context on every single message.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Price a new feature per user before you ship it, and compare that with what the plan charges.</li>
+<li>Check whether a cheaper model actually saves money once retries and longer prompts are counted.</li>
+<li>Find the daily call volume your monthly budget allows.</li>
+<li>Compare prompts of different lengths at the same traffic to see what caching would buy.</li>
+<li>Sanity-check a provider invoice by reproducing it from average token counts.</li>
+</ul>
+
+<h2>Why This Number Deserves a Spreadsheet, Not a Guess</h2>
+<p>Token spend has no natural ceiling. It grows with usage, with history length and with retries, and each of those three expands for reasons your bill sees but your dashboard does not. A support bot priced at 8 cents per conversation today can quietly become 30 cents once users start asking follow-ups, because each follow-up resends the transcript.</p>
+<p>The practical consequence is that you need a per-call cost you can actually defend, measured from logs, not from the first sample message. Then you can put a number on the business decision: is a subscription at $12 a month still profitable when the heavy users average 45 cents of API spend? This page answers the cost half of that question. The other half is how often each user calls you.</p>
+
+<h2>Mistakes That Inflate LLM Bills</h2>
+<p><b>Measuring the demo, not the data.</b> The first prompt you test is short and clean. Production prompts include system instructions, tool schemas, retrieved context and prior turns. Measure a sample of real requests over a week and use the average, not the smallest case.</p>
+<p><b>Ignoring retries and repairs.</b> Each failed parse or tool error costs a full call. A pipeline with a 1.2 calls per task ratio is 20% more expensive than the price sheet implies.</p>
+<p><b>Assuming caching is automatic.</b> Cache discounts usually require a stable prefix above a minimum length, and they expire when unused. An unpredictable prompt layout throws the discount away on most calls.</p>
+<p><b>Ignoring the long-context surcharge.</b> Many models charge a higher or doubled input rate once a request passes a threshold such as 128K tokens. A single large document can cost more than a hundred small ones.</p>
+
+<h2>How Token Spend Compares With Other Infrastructure Bills</h2>
+<p>Teams often ask whether API spend is reasonable in absolute terms. The useful comparison is not with a rival model but with the rest of the hosting stack. A small web app might spend $25 a month on a database, $20 on object storage and $0 on compute within a free tier, and then $800 a month on inference. That imbalance is normal when the product <i>is</i> the model call, but it changes what you can charge: a $9 monthly plan stops making sense the moment heavy users average more than a few dozen cents in tokens.</p>
+<p>The second comparison is against the alternative. For low volume &mdash; say under two hundred calls a day &mdash; a flat chat subscription on a provider's consumer plan can be cheaper than paying per token, as long as nobody needs programmatic access. Once your traffic comes from a server or reaches thousands of calls a day, seat-based pricing stops scaling and per-token cost becomes the real control point.</p>
+<p>Notice too how quickly small prompt decisions compound. Trimming 200 tokens from the prompt of a call that runs 5,000 times a day removes a million tokens a day, which at $1.25 per million is $37.50 a month and $450 a year. Removing 200 tokens from a prompt that runs 500 times a month saves $1.50 a year. The same edit is worth three hundred times more or less depending on where it lands, which is why the traffic field matters as much as the token field.</p>
+
+<h2>Where This Estimate Stops</h2>
+<p>This models per-token text pricing only. It excludes image and audio inputs, embedding calls, fine-tuning charges, batch discounts, regional or negotiated rates, and any minimum commitments. Prices change often and the newer and larger models usually cost more, not less, so enter today's rates rather than a number you remember. The result is a planning estimate, not an invoice reconciliation.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>How do I count tokens without an SDK?</h3>
+<p>For English, four characters or about three quarters of a word per token is a decent rule, so 750 words lands near 1,000 tokens. At $1.25 per million input tokens, one cent buys roughly eight thousand tokens, about six thousand words. Expect a 10 to 20 percent error.</p>
+<h3>Why do monthly bills run higher than this calculator predicts?</h3>
+<p>Usually because calls are not one-shot. Chat and agent requests resend the system prompt and all prior turns, so average input grows with each exchange. If a conversation averages six turns, prompt tokens roughly triple across it. Use token averages measured from logs.</p>
+<h3>Can I cut output charges with a max token cap?</h3>
+<p>A cap limits the ceiling, not the price of tokens you generate. The real lever is shorter, more constrained answers: shorter field names in JSON output, a one-paragraph response rule, or a template the model fills in rather than prose it invents.</p>
+<h3>Is cached input billed at the same rate as fresh input?</h3>
+<p>No. Repeated prompt prefixes are billed at a steep discount, often around one tenth of the standard input rate, above a minimum length. Set the cached share here to see how much of your bill depends on keeping that prefix identical.</p>
+<h3>What does a long system prompt add to the bill?</h3>
+<p>Every call pays for it. Adding 1,500 tokens of policy text to a call with 1,000 input and 500 output tokens raises input spend by 150% on that call. At 100,000 daily calls and $1.25 per million input tokens that is about $5,625 a month for the extra text alone.</p>
+<h3>Does a model that is 80% cheaper cut my cost by 80%?</h3>
+<p>Rarely. Cheaper models often need longer instructions, more retries and repair passes on malformed output, and each of those is another call. The saving is real but usually smaller than the price ratio suggests; model the retry count rather than assuming it stays at one.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var inTokEl=document.getElementById('inTok'), outTokEl=document.getElementById('outTok'), callsEl=document.getElementById('calls');
+var inPriceEl=document.getElementById('inPrice'), outPriceEl=document.getElementById('outPrice'), cacheEl=document.getElementById('cache');
+var cachePriceEl=document.getElementById('cachePrice'), daysEl=document.getElementById('days'), budgetEl=document.getElementById('budget');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+function usd(n){
+  if(n>0 && n<0.01){ return n.toFixed(4); }
+  return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+function num(el){ var v=parseFloat(el.value); return isNaN(v)?0:v; }
+
+function callCost(inT, outT, inP, outP, cachePct, cacheP){
+  var cached=inT*cachePct, fresh=inT-cached;
+  var freshCost=fresh/1e6*inP;
+  var cachedCost=cached/1e6*cacheP;
+  var outCost=outT/1e6*outP;
+  return {fresh:fresh, cached:cached, freshCost:freshCost, cachedCost:cachedCost, outCost:outCost,
+          total:freshCost+cachedCost+outCost};
+}
+
+calcBtn.onclick=function(){
+  var inT=num(inTokEl), outT=num(outTokEl), calls=num(callsEl);
+  var inP=num(inPriceEl), outP=num(outPriceEl);
+  var cachePct=Math.min(Math.max(num(cacheEl),0),90)/100;
+  var cacheP=num(cachePriceEl), days=Math.min(Math.max(Math.round(num(daysEl)),1),31);
+  var budget=num(budgetEl);
+  if(inT+outT<=0){ resOut.textContent="Enter your token counts"; resTbl.innerHTML=''; return; }
+
+  var c=callCost(inT,outT,inP,outP,cachePct,cacheP);
+  var daily=c.total*calls;
+  var monthly=daily*days;
+  var yearly=monthly*12;
+  var plain=callCost(inT,outT,inP,outP,0,cacheP).total*calls*days;
+  var cacheSave=plain-monthly;
+  var outShare=c.total>0?c.outCost/c.total*100:0;
+  var inShare=100-outShare;
+  var callsInBudget=monthly>0?Math.floor(budget/monthly*calls):0;
+
+  var rows='<tr><th>Line item</th><th>Per call</th><th>Per month</th></tr>'
+    +'<tr><td>Fresh input tokens ('+Math.round(c.fresh)+')</td><td>$'+usd(c.freshCost)+'</td><td>$'+usd(c.freshCost*calls*days)+'</td></tr>'
+    +'<tr><td>Cached input tokens ('+Math.round(c.cached)+')</td><td>$'+usd(c.cachedCost)+'</td><td>$'+usd(c.cachedCost*calls*days)+'</td></tr>'
+    +'<tr><td>Output tokens ('+Math.round(outT)+')</td><td>$'+usd(c.outCost)+'</td><td>$'+usd(c.outCost*calls*days)+'</td></tr>'
+    +'<tr><td><b>Total</b></td><td><b>$'+usd(c.total)+'</b></td><td><b>$'+usd(monthly)+'</b></td></tr>'
+    +'<tr><td>Share of cost from output</td><td>'+outShare.toFixed(1)+'%</td><td>'+inShare.toFixed(1)+'% input</td></tr>'
+    +'<tr><td>Daily cost</td><td>&mdash;</td><td>$'+usd(daily)+'</td></tr>'
+    +'<tr><td>Monthly total without caching</td><td>&mdash;</td><td>$'+usd(plain)+'</td></tr>'
+    +'<tr><td>Monthly saving from caching</td><td>&mdash;</td><td>$'+usd(cacheSave)+'</td></tr>'
+    +'<tr><td>Yearly cost</td><td>&mdash;</td><td>$'+usd(yearly)+'</td></tr>';
+  if(budget>0){
+    rows+='<tr><td>Daily calls your $'+usd(budget)+' budget allows</td><td>&mdash;</td><td>'+callsInBudget.toLocaleString('en-US')+'</td></tr>';
+  }
+  resTbl.innerHTML=rows;
+  resOut.innerHTML='Cost per call: <span style="color:#0f9d58;font-size:22px">$'+usd(c.total)+'</span> &nbsp;|&nbsp; Monthly: $'+usd(monthly);
+}
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>

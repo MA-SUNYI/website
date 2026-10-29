@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Substack Fee Calculator: What Writers Keep (2026 Edition)</title>
+<meta name="description" content="Substack fee calculator for US writers: see the 10% platform cut, card processing and recurring billing cut, plus net pay per subscriber and per month.">
+<link rel="canonical" href="https://www.xiake.icu/substack-fee-calculator.html">
+<meta name="keywords" content="substack fee calculator, substack take rate, how much does substack take, substack stripe fee, substack net revenue calculator, substack paid subscription payout, newsletter fee calculator">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+h3{font-size:17px;margin:18px 0 6px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Substack Fee Calculator","description":"Free Substack fee calculator. Enter your subscription price, billing period and paid subscriber count to see Substack's 10% fee, Stripe processing, the 0.7% billing fee, your net per subscriber and monthly take-home.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/substack-fee-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Substack charge 10% on monthly and annual plans the same way?","acceptedAnswer":{"@type":"Answer","text":"Yes. The 10% platform fee has no tier and no volume discount, so a $6 monthly plan and a $60 annual plan each pay $0.60 to Substack. The difference comes from Stripe, where the 30 cent fixed part is charged per transaction, once a month versus once a year."}},{"@type":"Question","name":"What is the extra 0.7% Stripe billing fee on my Substack payouts?","acceptedAnswer":{"@type":"Answer","text":"Stripe Billing charges a recurring payment fee on subscriptions, sometimes shown as Stripe's 0.7% rate for the recurring component. It covers subscription management and invoicing. It is separate from the 2.9% plus 30 cents card processing and is easy to miss because the dashboard shows them on different lines."}},{"@type":"Question","name":"How much does a Substack writer keep from a $50 annual subscription?","acceptedAnswer":{"@type":"Answer","text":"About $43.05. The platform fee takes $5.00, card processing takes $1.75 and the billing fee takes $0.35, for $7.10 in total. That is an effective rate of 14.2%, and the same annual price collected as twelve monthly $4.17 payments would lose about 16.5% instead."}},{"@type":"Question","name":"Do free subscribers and free posts cost me anything?","acceptedAnswer":{"@type":"Answer","text":"No. Substack only charges on paid subscription revenue. Free posts, the subscriber list, the app and email delivery carry no platform fee, which is why the paid conversion rate on your free list matters more to net income than small fee tweaks."}},{"@type":"Question","name":"Should I price my lowest tier at $4 or $5 a month?","acceptedAnswer":{"@type":"Answer","text":"Above $5 if you can. A $4 tier loses 21.1% of each charge to fees against 19.6% at $5, but the bigger effect is in net pay: $3.16 a month per reader at $4 versus $4.02 at $5. The 30 cent processing charge is fixed, so a 25% price increase buys a 27% increase in net."}},{"@type":"Question","name":"Does this substitute for a self-hosted newsletter with Stripe and an email provider?","acceptedAnswer":{"@type":"Answer","text":"Not by itself. Substack bundles hosting, email sending, web hosting and the payment flow for 10%. Self-hosting can cost less on a large list, but you then pay an email provider like Mailchimp or ConvertKit and your own Stripe fees, and you carry the deliverability work. Compare net dollars at your list size, not fee percentages."}}]}
+</script>
+<meta property="og:title" content="Substack Fee Calculator: What Writers Keep (2026 Edition)">
+<meta property="og:description" content="Substack fee calculator for US writers: see the 10% platform cut, card processing and recurring billing cut, plus net pay per subscriber and per month.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/substack-fee-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Substack Fee Calculator: What Writers Keep (2026 Edition)">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Substack fee calculator for US writers: see the 10% platform cut, card processing and recurring billing cut, plus net pay per subscriber and per month.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./etsy-fee-calculator.html">Etsy Fees</a>
+    <a href="./profit-margin-calculator.html">Profit Margin</a>
+    <a href="./savings-goal-calculator.html">Savings Goal</a>
+</div>
+
+<h1>Substack Fee Calculator</h1>
+<p>Substack advertises a flat 10% cut, and that number is honest as far as it goes. What it leaves out is Stripe, which handles every card charge and takes 2.9% plus 30 cents, and Stripe Billing, which adds a recurring payment fee on top. For a $5 monthly tier the three charges together run about 19% of what the reader pays. This calculator runs your price, billing period and subscriber count through all three lines and shows the net that actually reaches your bank account.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="price" placeholder="Price per subscriber $" step="0.01" min="0">
+        <select id="period">
+            <option value="12">Billed monthly</option>
+            <option value="1">Billed annually (price is per year)</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="paid" placeholder="Paid subscribers" value="100" step="1" min="0">
+        <input type="number" id="churn" placeholder="Monthly churn % (optional, e.g. 3)" step="0.1" min="0">
+        <input type="number" id="free" placeholder="Free subscribers (optional)" step="1" min="0">
+    </div>
+    <button id="calcBtn">Calculate Net Revenue</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">US rates: 10% Substack platform fee, 2.9% + $0.30 Stripe card processing per charge, 0.7% Stripe Billing recurring fee. Set your own churn and free list to see annual revenue after attrition and the free-to-paid conversion rate. Estimates only.</p>
+</div>
+
+<h2>How the Substack Fee Calculator Works</h2>
+<p>Three deductions hit every paid reader, in this order:</p>
+<ul>
+<li><b>Platform cut</b> &mdash; 10% of the gross. Taken on what the reader pays, before any card costs. No tier lowers it and volume buys no discount.</li>
+<li><b>Card processing</b> &mdash; 2.9% plus $0.30 on a typical US card. Charged per transaction, so a monthly plan triggers it twelve times a year and an annual plan once.</li>
+<li><b>Stripe Billing cut</b> &mdash; 0.7% on each renewal. It covers subscription management and sits on its own dashboard line, which is why writers quote "just 10% plus Stripe" and lowball themselves.</li>
+</ul>
+<p>For a single charge of <i>P</i> dollars:</p>
+<p><b>Net per charge = P &minus; (0.10 &times; P) &minus; (0.029 &times; P + 0.30) &minus; (0.007 &times; P)</b></p>
+<p>The sequence matters. Card networks do not skim a discounted remainder; it bills on the gross amount charged to the card. So the percentages stack additively: 10% + 2.9% + 0.7% = 13.6% of the price, plus a flat $0.30.</p>
+<p>Worked example: a $6 monthly tier with 100 paid subscribers. Each charge collects $6.00. Substack takes $0.60, card processing takes $0.174 + $0.30 = $0.474, and billing takes $0.042. All deductions come to <b>$1.116</b> per reader, 18.6% of what they paid, leaving <b>$4.884</b> each. Across 100 subscribers that is $600 gross and <b>$488.40</b> net, or $5,860.80 a year.</p>
+<p>Move that entry to $8: deductions become $0.80 + $0.532 + $0.056 = $1.388, so net per subscriber is $6.612 and 100 subscribers clear $661.20 a month. The fixed $0.30 has fallen from 5.0% of the price to 3.75%.</p>
+
+<h2>Effective Fee Rate by Price and Billing Period</h2>
+<p>How much of each payment gets eaten, across eight prices.</p>
+<table>
+<tr><th>Price</th><th>Billed monthly</th><th>Same amount billed annually</th></tr>
+<tr><td>$4</td><td>21.1%</td><td>17.6%</td></tr>
+<tr><td>$5</td><td>19.6%</td><td>16.0%</td></tr>
+<tr><td>$6</td><td>18.6%</td><td>15.1%</td></tr>
+<tr><td>$8</td><td>17.4%</td><td>13.8%</td></tr>
+<tr><td>$10</td><td>16.6%</td><td>13.1%</td></tr>
+<tr><td>$15</td><td>15.6%</td><td>12.0%</td></tr>
+<tr><td>$50</td><td>14.2%</td><td>10.7%</td></tr>
+<tr><td>$100</td><td>13.9%</td><td>10.3%</td></tr>
+</table>
+<p>Two things show up in that grid. First, the flat $0.30 dominates the low end: a $4 monthly tier hands over 21% while a $15 tier hands over 15.6%, and the 10% headline is nowhere near either. Second, the annual column drops faster than the monthly column because the 30 cent charge is paid once a year instead of twelve times. The $50 row is the clearest case &mdash; 14.2% monthly against 10.7% annual, a three and a half point swing with no change in price.</p>
+<p>Net dollars per reader per month, monthly billing: $3.16 at $4, $4.02 at $5, $4.88 at $6, $6.61 at $8, $8.34 at $10, $12.66 at $15, $42.90 at $50 when billed annually.</p>
+<p>Careful reading the monthly column: it applies to a single billing cycle at that figure. If you collect $48 a year as twelve $4 charges, the total fee is about 21.1%, not 17.6%; the annual column assumes a single $48 charge.</p>
+
+<h2>What a Newsletter Actually Keeps: Three Realistic Sizes</h2>
+<p>Percentages are abstract, so here are three publications run end to end at a $7 monthly tier, where each charge nets $7 &minus; $0.70 &minus; $0.503 &minus; $0.049 = <b>$5.748</b>, an effective rate of 17.9%.</p>
+<ul>
+<li><b>New publication, 40 paid readers.</b> Gross $280, net <b>$229.92</b> a month. Fees cost $50.08, but the platform is also providing hosting and email delivery for that amount, which is roughly what a basic email tool charges on its own.</li>
+<li><b>Growing publication, 180 paid readers.</b> Gross $1,260, net <b>$1,034.64</b>. The fee total crosses $225 a month here, enough that a writer with an established list starts comparing email provider quotes.</li>
+<li><b>Established publication, 900 paid readers.</b> Gross $6,300, net <b>$5,173.20</b>. At this size the platform fee is the single largest recurring cost after the writer's own time, and the annual-plan mix matters more than any tier tweak.</li>
+</ul>
+<p>Same 900 readers on annual billing at $70 a year, collecting about $5,250 a month: each charge nets $70 &minus; $7.00 &minus; $2.33 &minus; $0.49 = $60.18, or $5.015 a month, so net is <b>$4,513.50</b> a month and the whole year of $70 charges lands in the bank up front. The annual route keeps slightly less in the example because the hypothetical price offers two months free; at the same annual price the annual route wins. Which one is better depends entirely on what discount you attach to the yearly plan.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>See what a paid tier pays out before you launch it, not after the first statement.</li>
+<li>Decide where to land between $4 and $8 for an entry tier.</li>
+<li>Compare a $6 monthly plan with a $60 annual plan on net dollars, not on the discount percentage.</li>
+<li>Project take-home as the paying audience grows or slips.</li>
+<li>Set a revenue target and work backwards: at 18.6% fees, $1,000 net a month needs about 205 paid subscribers on a $6 tier ($1,230 gross).</li>
+</ul>
+
+<h2>Why the Headline Number Barely Matters</h2>
+<p>Tweaking percentages feels controllable, so writers spend weeks on it. But consider two newsletters of 5,000 free readers, both at $6 a month. Newsletter A converts 2% and keeps $4.88 per subscriber, for 100 paid readers and $488 a month. Newsletter B converts 4% and keeps the same amount per reader, for 200 paid readers and $976 a month. Doubling conversion doubled income; the fee structure never moved. Getting from 18.6% down to 15.1% by switching to annual billing shifts the figure in the annual column by a few tenths of a point and brings a year of cash forward, but it cannot add readers.</p>
+<p>What deductions do change is your floor. Marginal delivery expense for a text newsletter sits near zero, so nearly every paying reader stays profitable. The real constraint is time. A tier priced at $4 needs 25% more readers than a $5 tier for the same net revenue, and if your writing hours are the bottleneck, under-pricing quietly raises your cost per dollar earned.</p>
+
+<h2>Four Habits That Skew Revenue Projections</h2>
+<p><b>Missing the billing cut.</b> Stripe Billing is not inside the processing figure shown by default. A writer modeling 13% total costs on a $10 tier will find payouts about 0.7% lighter than expected every month, which adds up across a list of hundreds.</p>
+<p><b>Applying Stripe to the post-Substack amount.</b> Some spreadsheets compute the platform cut first and then Stripe on the remainder. Real charges are computed on the gross. On a $10 tier the difference is about three cents per reader, trivial per sale and noticeable at scale.</p>
+<p><b>Assuming overseas readers cost the same.</b> This page models the standard US card rate. Many subscribers pay with cards issued elsewhere, in other currencies, which brings currency conversion and higher regional rates. Your effective take-home can drop several points if your audience is mostly outside the US.</p>
+<p><b>Treating gross MRR as income.</b> $1,000 of monthly subscription revenue yields roughly $814 to $866, depending on price and billing period. Budgeting on the gross number is how writers discover their annual plan is short.</p>
+
+<h2>What the Math Leaves Out</h2>
+<p>Platform and payment costs only are modeled. Excluded: federal and state income tax and self-employment tax on the net amount, which for most US writers is several times larger than the fee stack. It also excludes currency conversion, failed payments and chargebacks, refunds, and any spend on promotion or paid recommendations. Substack can change its rate or Stripe's terms, so confirm the current schedule in your publication settings before setting prices. Nothing here is tax advice.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Does Substack charge 10% on monthly and annual plans the same way?</h3>
+<p>Yes. The platform fee has no tier and no volume discount, so a $6 monthly plan and a $60 annual plan each pay $0.60 to Substack. The difference comes from Stripe, where the 30 cent fixed part is charged per transaction.</p>
+<h3>What is the extra 0.7% Stripe billing fee on my payouts?</h3>
+<p>Stripe Billing levies it on subscriptions that bill again without a new checkout. It is separate from the 2.9% plus 30 cents card processing and sits on a different line in the dashboard, which is why it is the most commonly omitted cost in Substack revenue models.</p>
+<h3>How much does a writer keep from a $50 annual subscription?</h3>
+<p>About $43.05. Platform $5.00, card processing $1.75, billing $0.35, for $7.10 total and a 14.2% effective rate. The same annual price split into twelve $4.17 payments would cost about 16.5%.</p>
+<h3>Do free subscribers and free posts cost me anything?</h3>
+<p>No. Fees apply only to paid revenue. Free posts, the list and delivery carry no platform charge, which is why conversion rate moves net income far more than a fee point.</p>
+<h3>Should I price my lowest tier at $4 or $5 a month?</h3>
+<p>Above $5 if you can. A $4 tier loses 21.1% of each charge to fees against 19.6% at $5, but the bigger effect is in net pay: $3.16 a month per reader at $4 versus $4.02 at $5. The 30 cent fixed part shrinks as a share, so a 25% price increase buys a 27% increase in net.</p>
+<h3>Is a self-hosted newsletter cheaper than Substack?</h3>
+<p>Sometimes, but not because of the 10%. Substack bundles hosting, email delivery and checkout. Self-hosting replaces the platform fee with an email provider bill that grows with list size, plus your own Stripe costs and deliverability work. Compare net dollars at your real list size.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var priceEl=document.getElementById('price'), periodEl=document.getElementById('period');
+var paidEl=document.getElementById('paid'), churnEl=document.getElementById('churn'), freeEl=document.getElementById('free');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function num(el){ var v=parseFloat(el.value); return isNaN(v)?0:v; }
+function num0(el){ var v=parseFloat(el.value); return isNaN(v)?0:v; }
+
+function feeModel(price, months){
+  var platform=price*0.10;
+  var card=price*0.029+0.30;
+  var billing=price*0.007;
+  var fees=platform+card+billing;
+  return {
+    price:price, months:months, platform:platform, card:card, billing:billing,
+    fees:fees, net:price-fees,
+    monthly:months===12?price-fees:(price-fees)/12,
+    monthlyFees:months===12?fees:fees/12,
+    rate:price>0?fees/price*100:0
+  };
+}
+
+calcBtn.onclick=function(){
+  var p=num(priceEl), months=parseInt(periodEl.value,10)===1?1:12;
+  var paid=Math.round(num(paidEl)), churn=num(churnEl), freeSubs=Math.round(num(freeEl));
+  if(p<=0){ resOut.textContent="Enter your subscription price"; resTbl.innerHTML=''; return; }
+  if(paid<0) paid=0;
+  if(churn<0) churn=0; if(churn>100) churn=100;
+
+  var m=feeModel(p,months);
+  var div=months;
+  var grossMonthly=p*paid/div;
+  var netMonthly=m.net*paid/div;
+  var keepRate=m.price>0?m.net/m.price*100:0;
+
+  // annual revenue after monthly churn on the paid base, simple geometric attenuation
+  var keep=1-churn/100, grossYear=0, netYear=0;
+  for(var i=0;i<12;i++){
+    var base=paid*Math.pow(keep,i);
+    grossYear+=base*p/div;
+    netYear+=base*m.net/div;
+  }
+
+  var conv = freeSubs>0 && (freeSubs+paid)>0 ? paid/(freeSubs+paid)*100 : 0;
+
+  var rows='<tr><th>Line item</th><th>Per charge</th><th>Per month eq.</th></tr>'
+    +'<tr><td>Price charged to reader</td><td>$'+usd(m.price)+'</td><td>$'+usd(m.price/div)+'</td></tr>'
+    +'<tr><td>Substack platform fee (10%)</td><td>-$'+usd(m.platform)+'</td><td>-$'+usd(m.platform/div)+'</td></tr>'
+    +'<tr><td>Stripe card processing (2.9% + $0.30)</td><td>-$'+usd(m.card)+'</td><td>-$'+usd(m.card/div)+'</td></tr>'
+    +'<tr><td>Stripe Billing fee (0.7%)</td><td>-$'+usd(m.billing)+'</td><td>-$'+usd(m.billing/div)+'</td></tr>'
+    +'<tr><td><b>Total fees per reader</b></td><td><b>-$'+usd(m.fees)+'</b></td><td><b>-$'+usd(m.monthlyFees)+'</b></td></tr>'
+    +'<tr><td>Effective fee rate</td><td>'+m.rate.toFixed(1)+'%</td><td>&mdash;</td></tr>'
+    +'<tr><td><b>Net per reader</b></td><td><b>$'+usd(m.net)+'</b></td><td><b>$'+usd(m.monthly)+'</b></td></tr>'
+    +'<tr><td>Paid subscribers</td><td>&mdash;</td><td>'+paid+'</td></tr>'
+    +'<tr><td><b>Gross monthly revenue</b></td><td>&mdash;</td><td><b>$'+usd(grossMonthly)+'</b></td></tr>'
+    +'<tr><td><b>Net monthly revenue</b></td><td>&mdash;</td><td><b>$'+usd(netMonthly)+'</b></td></tr>'
+    +'<tr><td>Net annual revenue (no churn)</td><td>&mdash;</td><td>$'+usd(m.net*paid*12/div)+'</td></tr>'
+    +'<tr><td>Net annual revenue at '+churn.toFixed(1)+'% monthly churn</td><td>&mdash;</td><td>$'+usd(netYear)+'</td></tr>';
+  if(freeSubs>0){
+    rows+='<tr><td>Free-to-paid conversion</td><td>&mdash;</td><td>'+conv.toFixed(2)+'%</td></tr>';
+  }
+  resTbl.innerHTML=rows;
+  resOut.innerHTML='Net per subscriber: <span style="color:#0f9d58;font-size:22px">$'+usd(m.net)+'</span> &nbsp;|&nbsp; Keep rate '+keepRate.toFixed(1)+'% &nbsp;|&nbsp; Net per month: $'+usd(netMonthly);
+}
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>
