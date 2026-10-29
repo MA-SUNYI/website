@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Payback Period Calculator","description":"Free payback period calculator. Enter the initial investment and expected annual cash flow to see how many years it takes to recover the cost, plus a cumulative cash flow table.","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/payback-period-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Payback Period Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It divides your initial investment by the annual cash flow it generates to show how many years and months pass before you recover the cost, with a year-by-year cumulative table."}},{"@type":"Question","name":"Is the Payback Period Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Payback Period Calculator | Years to Recover Investment">
 <meta property="og:description" content="Free payback period calculator: enter your initial investment and annual cash flow to see how long it takes to recover the cost.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Payback Period Calculator | Years to Recover Investment">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free payback period calculator: enter your initial investment and annual cash flow to see how long it takes to recover the cost.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is payback period calculated?","acceptedAnswer":{"@type":"Answer","text":"Divide the initial investment by the annual cash inflow. $50,000 returning $14,000 a year pays back in 3.6 years."}},{"@type":"Question","name":"What are the limitations of payback period?","acceptedAnswer":{"@type":"Answer","text":"It ignores cash flows after the break-even point, ignores the time value of money, and cannot distinguish between projects of different lifespans."}},{"@type":"Question","name":"What is discounted payback?","acceptedAnswer":{"@type":"Answer","text":"A version that applies a discount rate to future cash flows before accumulating them, addressing the time-value weakness while keeping the same simplicity."}},{"@type":"Question","name":"When is payback the right metric?","acceptedAnswer":{"@type":"Answer","text":"When capital is scarce, the environment is uncertain, or the business needs quick cash recovery. It is a risk filter rather than a profitability measure."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Payback period measures how long an investment takes to return its initial cost. It is the simplest way to rank projects under capital constraints, and it deliberately ignores everything that happens after the money is recovered.</p>
+  <p>For an investment of $50,000 returning $14,000 a year, the payback period is 3.57 years. Two projects with the same payback can have very different total returns, which is the metric's central weakness: a project that pays back in three years and then runs for fifteen is treated identically to one that pays back in three years and stops. Payback measures liquidity recovery, not profitability.</p>
+  <p>Its useful role is as a screening tool under uncertainty. The shorter the payback, the less time the capital is exposed to risk, which is why payback dominates decisions in unstable markets and small businesses with tight cash flow. Use it alongside net present value rather than instead of it.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./roi-calculator.html">ROI</a>
@@ -137,5 +142,17 @@ calcBtn.onclick = function(){
     resOut.innerHTML = html;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How is payback period calculated?</h3>
+<p>Divide the initial investment by the annual cash inflow. $50,000 returning $14,000 a year pays back in 3.6 years.</p>
+<h3>What are the limitations of payback period?</h3>
+<p>It ignores cash flows after the break-even point, ignores the time value of money, and cannot distinguish between projects of different lifespans.</p>
+<h3>What is discounted payback?</h3>
+<p>A version that applies a discount rate to future cash flows before accumulating them, addressing the time-value weakness while keeping the same simplicity.</p>
+<h3>When is payback the right metric?</h3>
+<p>When capital is scarce, the environment is uncertain, or the business needs quick cash recovery. It is a risk filter rather than a profitability measure.</p>
+</section>
 </body>
 </html>

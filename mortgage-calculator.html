@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Mortgage Calculator","description":"Free mortgage calculator. Estimate the monthly principal and interest payment plus property tax and insurance, and see the total interest over the term.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/mortgage-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Mortgage Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free mortgage calculator. Enter the home price, down payment, interest rate and term, plus annual property tax and insurance, to estimate the full monthly payment and total interest over the loan."}},{"@type":"Question","name":"Is the Mortgage Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Mortgage Calculator | Monthly Payment With Taxes & Insurance">
 <meta property="og:description" content="Free mortgage calculator: monthly principal & interest, plus property tax and insurance, with total interest over the loan term.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Mortgage Calculator | Monthly Payment With Taxes & Insurance">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free mortgage calculator: monthly principal & interest, plus property tax and insurance, with total interest over the loan term.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is included in a monthly mortgage payment?","acceptedAnswer":{"@type":"Answer","text":"Principal and interest on the loan, plus property taxes and homeowners insurance, usually collected in escrow. HOA dues and mortgage insurance are separate additions where they apply."}},{"@type":"Question","name":"Is a 15-year mortgage worth the higher payment?","acceptedAnswer":{"@type":"Answer","text":"Often yes if the payment is affordable, because total interest drops substantially. The trade-off is less monthly flexibility and a larger commitment if income becomes uncertain."}},{"@type":"Question","name":"How much down payment do I need?","acceptedAnswer":{"@type":"Answer","text":"Twenty percent avoids mortgage insurance on conventional loans. Many programs accept 3% to 5%, and FHA loans as little as 3.5%, but the insurance cost continues until the equity threshold is met."}},{"@type":"Question","name":"Can I remove mortgage insurance later?","acceptedAnswer":{"@type":"Answer","text":"On conventional loans, PMI can usually be removed once equity reaches 20%, either by request or automatically at 22% under the Homeowners Protection Act."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A mortgage payment has four parts — principal, interest, taxes and insurance, often called PITI. Most online calculators show only the first two and leave buyers unprepared for the real monthly cost, which can be 20% to 30% higher once taxes and insurance are included.</p>
+  <p>The loan portion follows the standard amortisation formula. Borrow $400,000 at 6.5% over 30 years and the principal-and-interest payment is about $2,528. Add property tax at 1.2% of value ($4,800 a year, or $400 a month), homeowners insurance at $1,800 a year ($150 a month), and the true monthly outlay is closer to $3,078. On a $320,000 loan at 6% over 15 years, the payment rises to about $2,700 but total interest falls from roughly $506,000 to $206,000 — a difference that surprises most first-time buyers.</p>
+  <p>Lenders generally approve up to a 43% debt-to-income ratio, but that ceiling is a maximum, not a target. A payment at 43% of gross income leaves very little room for maintenance, repairs and the irregular costs of ownership, which is why many advisors suggest keeping housing under 28% of gross income.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./loan-payment-calculator.html">Loan Payment Calculator</a>
@@ -141,5 +146,17 @@ calcBtn.onclick = function(){
         `Total interest: $${fmt(interest)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is included in a monthly mortgage payment?</h3>
+<p>Principal and interest on the loan, plus property taxes and homeowners insurance, usually collected in escrow. HOA dues and mortgage insurance are separate additions where they apply.</p>
+<h3>Is a 15-year mortgage worth the higher payment?</h3>
+<p>Often yes if the payment is affordable, because total interest drops substantially. The trade-off is less monthly flexibility and a larger commitment if income becomes uncertain.</p>
+<h3>How much down payment do I need?</h3>
+<p>Twenty percent avoids mortgage insurance on conventional loans. Many programs accept 3% to 5%, and FHA loans as little as 3.5%, but the insurance cost continues until the equity threshold is met.</p>
+<h3>Can I remove mortgage insurance later?</h3>
+<p>On conventional loans, PMI can usually be removed once equity reaches 20%, either by request or automatically at 22% under the Homeowners Protection Act.</p>
+</section>
 </body>
 </html>

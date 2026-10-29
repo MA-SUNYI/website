@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"HELOC Calculator","description":"Free HELOC calculator. Enter your home value, first-mortgage balance, draw and repayment periods and the intro and post-intro rates to see your maximum credit line, the interest-only draw payment and the repayment monthly payment.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/heloc-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the HELOC Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It shows the largest home-equity line you can take (by an 85% combined loan-to-value limit), your interest-only payment during the draw period, and the amortized monthly payment during repayment."}},{"@type":"Question","name":"Is the HELOC Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your numbers stay on your device."}}]}
-</script>
 <meta property="og:title" content="HELOC Calculator | Home Equity Line of Credit Payment & Max Line">
 <meta property="og:description" content="Free HELOC calculator: enter home value, mortgage balance, draw and repayment periods and rates to see your max credit line, interest-only draw payment and repayment monthly payment.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="HELOC Calculator | Home Equity Line of Credit Payment & Max Line">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free HELOC calculator: enter home value, mortgage balance, draw and repayment periods and rates to see your max credit line, interest-only draw payment and repayment monthly payment.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much can I borrow with a HELOC?","acceptedAnswer":{"@type":"Answer","text":"Usually up to 80–85% of appraised value minus the existing mortgage balance. On a $450,000 home with a $260,000 balance, an 80% cap allows a line of about $100,000."}},{"@type":"Question","name":"Is HELOC interest tax deductible?","acceptedAnswer":{"@type":"Answer","text":"Only when the funds are used to buy, build or substantially improve the property securing the loan. Using the money to pay off credit cards or fund a holiday generally makes the interest non-deductible."}},{"@type":"Question","name":"What happens when the draw period ends?","acceptedAnswer":{"@type":"Answer","text":"The line closes and the outstanding balance must be repaid over the repayment period, often 10–20 years. Payments typically rise because principal is now included, sometimes by several hundred dollars a month."}},{"@type":"Question","name":"Is a HELOC better than a cash-out refinance?","acceptedAnswer":{"@type":"Answer","text":"A HELOC suits staged or uncertain borrowing and leaves your existing low-rate mortgage untouched. A cash-out refinance gives a fixed rate but resets the whole loan, which is costly if your current mortgage rate is well below today's."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A home equity line of credit borrows against the difference between your home's value and what you still owe. If the house is worth $450,000 and the mortgage balance is $260,000, the gross equity is $190,000 — but most lenders cap total borrowing at 80–85% of value, so the usable line is smaller than the equity figure suggests.</p>
+  <p>During the draw period, typically ten years, you can borrow, repay and borrow again, and payments are often interest-only. That is the trap: an interest-only payment does not reduce the balance at all, so when the repayment period begins the full principal must amortise over the remaining term, and the monthly payment can jump sharply. Planning for that jump is the single most important part of using a HELOC responsibly.</p>
+  <p>HELOC rates are almost always variable and tied to a published index plus a margin. When the index rises, the payment rises with no refinancing required. Because the loan is secured by your home, missing payments puts the property at risk — this is not the same risk profile as a credit card.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./mortgage-calculator.html">Mortgage</a>
@@ -158,5 +163,17 @@ calcBtn.onclick = function(){
         `<tr><td>Est. total interest</td><td>$${fmt(totalInt)}</td></tr>`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How much can I borrow with a HELOC?</h3>
+<p>Usually up to 80–85% of appraised value minus the existing mortgage balance. On a $450,000 home with a $260,000 balance, an 80% cap allows a line of about $100,000.</p>
+<h3>Is HELOC interest tax deductible?</h3>
+<p>Only when the funds are used to buy, build or substantially improve the property securing the loan. Using the money to pay off credit cards or fund a holiday generally makes the interest non-deductible.</p>
+<h3>What happens when the draw period ends?</h3>
+<p>The line closes and the outstanding balance must be repaid over the repayment period, often 10–20 years. Payments typically rise because principal is now included, sometimes by several hundred dollars a month.</p>
+<h3>Is a HELOC better than a cash-out refinance?</h3>
+<p>A HELOC suits staged or uncertain borrowing and leaves your existing low-rate mortgage untouched. A cash-out refinance gives a fixed rate but resets the whole loan, which is costly if your current mortgage rate is well below today's.</p>
+</section>
 </body>
 </html>

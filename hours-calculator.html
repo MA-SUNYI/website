@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Hours Calculator","description":"Free online hours calculator to sum work hours and minutes from clock-in and clock-out times for payroll, timecards and daily work tracking.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/hours-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Hours Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online hours calculator to sum work hours and minutes from clock-in and clock-out times for payroll, timecards and daily work tracking."}},{"@type":"Question","name":"Is the Online Hours Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Hours Calculator | Free Work Time &amp; Payroll Time Card Tool">
 <meta property="og:description" content="Free online hours calculator to sum work hours and minutes from clock-in and clock-out times for payroll, timecards and daily work tracking.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Hours Calculator | Free Work Time &amp; Payroll Time Card Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online hours calculator to sum work hours and minutes from clock-in and clock-out times for payroll, timecards and daily work tracking.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I add hours and minutes together?","acceptedAnswer":{"@type":"Answer","text":"Convert everything to minutes, add, then divide by 60 for hours and take the remainder for minutes. 2:50 plus 1:35 is 170 + 95 = 265 minutes, or 4:25."}},{"@type":"Question","name":"How do I convert minutes to decimal hours?","acceptedAnswer":{"@type":"Answer","text":"Divide by 60. Thirty minutes is 0.5 hours, forty-five minutes is 0.75 hours, and fifteen minutes is 0.25 hours."}},{"@type":"Question","name":"Why is my weekly total slightly off?","acceptedAnswer":{"@type":"Answer","text":"Because decimal hours were rounded at each entry before summing. Sum in minutes first, then convert the final total once."}},{"@type":"Question","name":"Does this work for overnight shifts?","acceptedAnswer":{"@type":"Answer","text":"Yes, provided each shift is entered as a duration rather than as a start and end clock time."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>The hours calculator adds and subtracts durations in hours and minutes. Its purpose is the everyday case: totalling a week of shifts, adding up project time, or working out how long a set of tasks will take in sequence.</p>
+  <p>The arithmetic itself is simple when kept in minutes. Convert each duration to minutes, add, then convert back: a 1:45 session plus 2:20 is 105 + 140 = 245 minutes, or <b>4 hours 5 minutes</b>. Mixing units mid-calculation is where errors appear, since 1.75 hours plus 2.33 hours becomes 4.08 only by luck and 2.33 itself is already rounded, and the rounding compounds across a long list of entries.</p>
+  <p>Payroll and billing usually require decimal hours, so convert once at the very end. Keep track of whether the result includes unpaid breaks, and note that anything crossing midnight must be handled as a single duration rather than two clock times. For a week of shifts, sum in minutes first and convert once.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./hours-calculator.html">Hours Calculator</a>
@@ -115,5 +120,17 @@ Clock Out: ${outTime}
 Total Working Time: ${totalHours} Hours ${totalMins} Minutes`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I add hours and minutes together?</h3>
+<p>Convert everything to minutes, add, then divide by 60 for hours and take the remainder for minutes. 2:50 plus 1:35 is 170 + 95 = 265 minutes, or 4:25.</p>
+<h3>How do I convert minutes to decimal hours?</h3>
+<p>Divide by 60. Thirty minutes is 0.5 hours, forty-five minutes is 0.75 hours, and fifteen minutes is 0.25 hours.</p>
+<h3>Why is my weekly total slightly off?</h3>
+<p>Because decimal hours were rounded at each entry before summing. Sum in minutes first, then convert the final total once.</p>
+<h3>Does this work for overnight shifts?</h3>
+<p>Yes, provided each shift is entered as a duration rather than as a start and end clock time.</p>
+</section>
 </body>
 </html>

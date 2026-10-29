@@ -32,9 +32,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Simple Counter","description":"Free online simple tally counter to count up/down for inventory, classroom attendance, events and manual tally tracking.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/simple-counter.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Simple Counter do?","acceptedAnswer":{"@type":"Answer","text":"Free online simple tally counter to count up/down for inventory, classroom attendance, events and manual tally tracking."}},{"@type":"Question","name":"Is the Online Simple Counter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Simple Counter | Free Digital Tally Click Counter">
 <meta property="og:description" content="Free online simple tally counter to count up/down for inventory, classroom attendance, events and manual tally tracking.">
 <meta property="og:type" content="website">
@@ -47,8 +44,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Simple Counter | Free Digital Tally Click Counter">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online simple tally counter to count up/down for inventory, classroom attendance, events and manual tally tracking.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the counter save my number if I close the tab?","acceptedAnswer":{"@type":"Answer","text":"The count is held in the page's memory while it is open. Closing or refreshing clears it, so write the value down before you leave."}},{"@type":"Question","name":"Can I count down instead of up?","acceptedAnswer":{"@type":"Answer","text":"Increment counting is the default. For a running total that needs to decrease, subtract as you count and reconcile at the end, or use a two-column tally."}},{"@type":"Question","name":"Is there a maximum count?","acceptedAnswer":{"@type":"Answer","text":"No practical limit for counting purposes. The displayed value continues past any hand-tally range you would realistically reach."}},{"@type":"Question","name":"Why would I need an online counter at all?","acceptedAnswer":{"@type":"Answer","text":"Because the device you are holding is already in your hand. For counting repeated physical events — reps, parts, passes — a tap is faster than paper and does not require finding a pen."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A counter sounds too trivial to need a page, but the plain version is genuinely the most useful: no account, no sync, no settings to configure, just a number you can increment while your hands are busy with something else. Clicking, tapping or pressing a key adds one; the value persists while the page is open.</p>
+  <p>The friction that makes people seek a simple counter is almost always the register-wall problem — sites that require a login before you can tally anything. That is a strange requirement for counting, and this tool deliberately avoids it. It also avoids cloud sync, which means your counts never leave the browser.</p>
+  <p>For long counting sessions, keep the tab pinned so an accidental refresh does not reset the total, and note the count somewhere durable before closing. Anyone tallying inventory, attendance, reps or repeated events runs into the same two failure modes: losing the number and miscounting double-taps. The first is a storage problem, the second a UI problem, and neither is solved by adding features.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./volume-converter.html">Volume Converter</a>
@@ -106,5 +111,17 @@ resetBtn.onclick = ()=>{
     countDisplay.textContent = countNum;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Does the counter save my number if I close the tab?</h3>
+<p>The count is held in the page's memory while it is open. Closing or refreshing clears it, so write the value down before you leave.</p>
+<h3>Can I count down instead of up?</h3>
+<p>Increment counting is the default. For a running total that needs to decrease, subtract as you count and reconcile at the end, or use a two-column tally.</p>
+<h3>Is there a maximum count?</h3>
+<p>No practical limit for counting purposes. The displayed value continues past any hand-tally range you would realistically reach.</p>
+<h3>Why would I need an online counter at all?</h3>
+<p>Because the device you are holding is already in your hand. For counting repeated physical events — reps, parts, passes — a tap is faster than paper and does not require finding a pen.</p>
+</section>
 </body>
 </html>

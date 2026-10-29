@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Image Resizer","description":"Free online image resizer. Resize photos, change dimensions, reduce size without quality loss for web and social media.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/image-resizer.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Image Resizer do?","acceptedAnswer":{"@type":"Answer","text":"Free online image resizer. Resize photos, change dimensions, reduce size without quality loss for web and social media."}},{"@type":"Question","name":"Is the Image Resizer free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Image Resizer | Free Online Photo Resize Tool">
 <meta property="og:description" content="Free online image resizer. Resize photos, change dimensions, reduce size without quality loss for web and social media.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Image Resizer | Free Online Photo Resize Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online image resizer. Resize photos, change dimensions, reduce size without quality loss for web and social media.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What size should a web image be?","acceptedAnswer":{"@type":"Answer","text":"Match the widest display size you expect. Full-width heroes are typically 1,600 to 2,000 pixels wide; in-article images 800 to 1,200; thumbnails 200 to 400."}},{"@type":"Question","name":"What DPI do I need for printing?","acceptedAnswer":{"@type":"Answer","text":"300 DPI at final print size is the standard for photographic quality. Large-format prints can drop to 150 DPI without visible loss at normal viewing distance."}},{"@type":"Question","name":"Will resizing larger improve quality?","acceptedAnswer":{"@type":"Answer","text":"No. Enlarging interpolates between existing pixels and produces a softer image. Upscaling cannot restore detail that was never captured."}},{"@type":"Question","name":"Does resizing affect file size directly?","acceptedAnswer":{"@type":"Answer","text":"Strongly. Halving both dimensions reduces pixel count to a quarter, and file size typically drops by a similar proportion before compression."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Resizing an image is a trade between file size, dimensions in pixels, and print quality in dots per inch. The number that matters depends on where the image will be used, and picking the wrong target is why resized images come out either blurry or unnecessarily large.</p>
+  <p>For screen use, pixel dimensions are the whole story. A hero image at 1,920 pixels wide covers a full desktop viewport; a thumbnail at 300 pixels is ample. For print, divide pixel dimensions by the intended DPI: a 3,000-pixel-wide photograph prints at 300 DPI in a 10-inch width, and the same file at 150 DPI stretches to 20 inches, where it will look soft.</p>
+  <p>Always resize downward from the original, never upward from a smaller copy — enlargement cannot invent detail, only interpolate. And keep the original file: resizing is lossy in practice even when the format is lossless, because the resampling step discards information that cannot be recovered later.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./password-generator.html">Password Generator</a>
@@ -127,6 +132,18 @@ resizeBtn.onclick = function(){
     downloadLink.style.display = 'inline-block';
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What size should a web image be?</h3>
+<p>Match the widest display size you expect. Full-width heroes are typically 1,600 to 2,000 pixels wide; in-article images 800 to 1,200; thumbnails 200 to 400.</p>
+<h3>What DPI do I need for printing?</h3>
+<p>300 DPI at final print size is the standard for photographic quality. Large-format prints can drop to 150 DPI without visible loss at normal viewing distance.</p>
+<h3>Will resizing larger improve quality?</h3>
+<p>No. Enlarging interpolates between existing pixels and produces a softer image. Upscaling cannot restore detail that was never captured.</p>
+<h3>Does resizing affect file size directly?</h3>
+<p>Strongly. Halving both dimensions reduces pixel count to a quarter, and file size typically drops by a similar proportion before compression.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

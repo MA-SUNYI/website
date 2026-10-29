@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Random Coin Flip Simulator","description":"Free online random coin flip simulator to generate heads or tails result for games, bets and random decision picking instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/coin-flip.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Random Coin Flip Simulator do?","acceptedAnswer":{"@type":"Answer","text":"Free online random coin flip simulator to generate heads or tails result for games, bets and random decision picking instantly."}},{"@type":"Question","name":"Is the Online Random Coin Flip Simulator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Coin Flip Simulator | Free Heads or Tails Generator">
 <meta property="og:description" content="Free online random coin flip simulator to generate heads or tails result for games, bets and random decision picking instantly.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Coin Flip Simulator | Free Heads or Tails Generator">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online random coin flip simulator to generate heads or tails result for games, bets and random decision picking instantly.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a computer coin flip really 50/50?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each result is drawn independently with equal probability, unlike a physical coin where wear and weight can introduce a small bias."}},{"@type":"Question","name":"Does a previous run of heads affect the next flip?","acceptedAnswer":{"@type":"Answer","text":"No. Flips are independent, so the probability remains 50% regardless of history. Believing otherwise is the gambler's fallacy."}},{"@type":"Question","name":"How many throws before results look balanced?","acceptedAnswer":{"@type":"Answer","text":"Several hundred at least. In twenty flips, a 60/40 split is entirely normal and does not indicate bias."}},{"@type":"Question","name":"Best of three or single flip?","acceptedAnswer":{"@type":"Answer","text":"A single flip is fair by definition. Best of three reduces the impact of one unlucky call but does not change the probability of any individual throw."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A coin flip is the oldest fair randomiser there is, and the digital version has one advantage the physical coin does not: it cannot be biased by an uneven weight distribution or a practised thumb. Each flip is independent, so a run of five heads changes nothing about the sixth flip's odds.</p>
+  <p>The counter-intuitive part is how badly humans estimate what randomness looks like. Asked to write down twenty coin flips, most people produce far too few runs of four or five in a row, because streaks feel non-random. In reality, a run of five identical results turns up roughly once every sixteen sets of five flips. The tool showing five heads in a row is not a malfunction.</p>
+  <p>For decisions, the honest protocol is to declare what each outcome means <i>before</i> flipping. Best of three removes some of the sting of a single unlucky call, though it changes nothing mathematically about any individual flip. Long runs, if you want to test the tool, should land close to a 50/50 split once the sample gets large — small samples routinely look lopsided.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./fraction-decimal.html">Fraction To Decimal Converter</a>
@@ -87,6 +92,18 @@ flipBtn.onclick=()=>{
     flipRes.textContent=`Final Result: ${res}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Is a computer coin flip really 50/50?</h3>
+<p>Yes. Each result is drawn independently with equal probability, unlike a physical coin where wear and weight can introduce a small bias.</p>
+<h3>Does a previous run of heads affect the next flip?</h3>
+<p>No. Flips are independent, so the probability remains 50% regardless of history. Believing otherwise is the gambler's fallacy.</p>
+<h3>How many throws before results look balanced?</h3>
+<p>Several hundred at least. In twenty flips, a 60/40 split is entirely normal and does not indicate bias.</p>
+<h3>Best of three or single flip?</h3>
+<p>A single flip is fair by definition. Best of three reduces the impact of one unlucky call but does not change the probability of any individual throw.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

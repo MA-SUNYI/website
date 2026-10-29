@@ -32,9 +32,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Median &amp; Average Calculator","description":"Free online median and average calculator. Paste a list of numbers to get mean, median and mode instantly for homework, statistics and data analysis.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/median-average-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Median &amp; Average Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online median and average calculator. Paste a list of numbers to get mean, median and mode instantly for homework, statistics and data analysis."}},{"@type":"Question","name":"Is the Online Median &amp; Average Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Median &amp; Average Calculator | Mean, Median, Mode">
 <meta property="og:description" content="Free online median and average calculator. Paste a list of numbers to get mean, median and mode instantly for homework, statistics and data analysis.">
 <meta property="og:type" content="website">
@@ -47,8 +44,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Median &amp; Average Calculator | Mean, Median, Mode">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online median and average calculator. Paste a list of numbers to get mean, median and mode instantly for homework, statistics and data analysis.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When should I use the median instead of the mean?","acceptedAnswer":{"@type":"Answer","text":"When the data has outliers or a long tail. If one value is far from the rest, the mean is pulled toward it and stops describing a typical case; the median is unaffected."}},{"@type":"Question","name":"What is the median of an even number of values?","acceptedAnswer":{"@type":"Answer","text":"The average of the two middle values. For the sorted set 3, 5, 8, 10, the middle pair is 5 and 8, so the median is 6.5."}},{"@type":"Question","name":"Can the mean and median be the same?","acceptedAnswer":{"@type":"Answer","text":"Yes, when the distribution is symmetric. A perfectly balanced set like 1, 2, 3, 4, 5 has a mean and median of 3."}},{"@type":"Question","name":"What is the mode and when is it useful?","acceptedAnswer":{"@type":"Answer","text":"The most frequently occurring value. It is the only meaningful measure for categorical data such as shoe sizes or survey options, where a mean cannot be computed."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>The average (mean) and the median are both measures of the centre of a dataset, and choosing between them changes the answer materially whenever the data is skewed. The mean adds every value and divides by the count; the median sorts the values and takes the middle one.</p>
+  <p>With the set 2, 3, 4, 5, 100, the mean is 22.8 but the median is 4. The single large value drags the mean far away from what most of the data looks like. Salary data, house prices and response times are all famous for this: published means sit well above what a typical person experiences, because a small number of very large values pull the average up.</p>
+  <p>Use the mean when the data is roughly symmetric and every value should count fully. Use the median when outliers exist or when the distribution is heavily skewed — which is why government income statistics and property listings report medians. Reporting both, with the count and range, is the honest minimum for any summary.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./lcm-calculator.html">LCM Calculator</a>
@@ -146,6 +151,18 @@ calcBtn.onclick = function(){
         `Mode: ${modeText}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>When should I use the median instead of the mean?</h3>
+<p>When the data has outliers or a long tail. If one value is far from the rest, the mean is pulled toward it and stops describing a typical case; the median is unaffected.</p>
+<h3>What is the median of an even number of values?</h3>
+<p>The average of the two middle values. For the sorted set 3, 5, 8, 10, the middle pair is 5 and 8, so the median is 6.5.</p>
+<h3>Can the mean and median be the same?</h3>
+<p>Yes, when the distribution is symmetric. A perfectly balanced set like 1, 2, 3, 4, 5 has a mean and median of 3.</p>
+<h3>What is the mode and when is it useful?</h3>
+<p>The most frequently occurring value. It is the only meaningful measure for categorical data such as shoe sizes or survey options, where a mean cannot be computed.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

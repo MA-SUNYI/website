@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Life Insurance Coverage Calculator","description":"Free life insurance coverage calculator. Estimate how much coverage you need from annual income, dependents, outstanding debts and existing savings.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/insurance-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Life Insurance Coverage Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free life insurance coverage calculator. Enter your income, how many years your dependents need support, outstanding debts and existing savings to estimate the coverage amount that would replace your income and clear obligations."}},{"@type":"Question","name":"Is the Life Insurance Coverage Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Life Insurance Coverage Calculator | How Much Do You Need">
 <meta property="og:description" content="Free life insurance coverage calculator: estimate how much coverage you need from income, dependents, debts and existing savings.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Life Insurance Coverage Calculator | How Much Do You Need">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free life insurance coverage calculator: estimate how much coverage you need from income, dependents, debts and existing savings.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much life insurance do I need?","acceptedAnswer":{"@type":"Answer","text":"Enough to cover debts, mortgage, education costs and a multiple of income — commonly 10 to 12 times income, adjusted for existing assets and coverage."}},{"@type":"Question","name":"Term or whole life?","acceptedAnswer":{"@type":"Answer","text":"Term for most families. It provides the same death benefit for a fraction of the cost, and the premium difference can be invested independently."}},{"@type":"Question","name":"Do I need life insurance if I am single with no dependents?","acceptedAnswer":{"@type":"Answer","text":"Usually not for income replacement. Coverage may still make sense to clear shared debts or cover final expenses."}},{"@type":"Question","name":"Does employer coverage suffice?","acceptedAnswer":{"@type":"Answer","text":"Rarely. Group coverage is typically one or two times salary and ends when employment does, which is exactly when coverage is hardest to replace."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Life insurance exists to replace income that others depend on. The amount needed is not a round number — it is the present value of the financial obligations that would remain if the insured person died.</p>
+  <p>A common approach is the DIME method: Debt, Income replacement, Mortgage and Education. Add outstanding debts, ten years of income replacement, the remaining mortgage balance and estimated education costs, then subtract existing assets and coverage. A household with a $250,000 mortgage, $30,000 in other debt, $80,000 income and two children might need roughly $1.3 million, less existing savings and any employer coverage.</p>
+  <p>Term life is usually the right product for this purpose: it costs a fraction of whole life for the same death benefit, and the difference can be invested separately. Whole life bundles a savings component with insurance, and the returns on that component are typically modest relative to the cost. The exception is estate planning for high-net-worth households, where the tax treatment can justify the structure.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./emergency-fund-calculator.html">Emergency Fund</a>
@@ -124,5 +129,17 @@ calcBtn.onclick = function(){
         `Estimated coverage needed: $${fmt(need)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How much life insurance do I need?</h3>
+<p>Enough to cover debts, mortgage, education costs and a multiple of income — commonly 10 to 12 times income, adjusted for existing assets and coverage.</p>
+<h3>Term or whole life?</h3>
+<p>Term for most families. It provides the same death benefit for a fraction of the cost, and the premium difference can be invested independently.</p>
+<h3>Do I need life insurance if I am single with no dependents?</h3>
+<p>Usually not for income replacement. Coverage may still make sense to clear shared debts or cover final expenses.</p>
+<h3>Does employer coverage suffice?</h3>
+<p>Rarely. Group coverage is typically one or two times salary and ends when employment does, which is exactly when coverage is hardest to replace.</p>
+</section>
 </body>
 </html>

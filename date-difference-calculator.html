@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Date Difference Calculator","description":"Free date difference calculator to count total days, months and years between two dates, support deadline countdown and project timeline planning.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/date-difference-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Date Difference Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free date difference calculator to count total days, months and years between two dates, support deadline countdown and project timeline planning."}},{"@type":"Question","name":"Is the Date Difference Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Date Difference Calculator | Days, Months, Years">
 <meta property="og:description" content="Free date difference calculator to count total days, months and years between two dates, support deadline countdown and project timeline planning.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Date Difference Calculator | Days, Months, Years">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free date difference calculator to count total days, months and years between two dates, support deadline countdown and project timeline planning.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many days between two dates?","acceptedAnswer":{"@type":"Answer","text":"Subtract the earlier from the later, counting each full day passed. A span from 1 March to 31 March is 30 days by elapsed counting and 31 if both endpoints count."}},{"@type":"Question","name":"Why do months and days not add up simply?","acceptedAnswer":{"@type":"Answer","text":"Because months have different lengths. A 'month' is between 28 and 31 days, so periods expressed in both months and days require a counting convention to be meaningful."}},{"@type":"Question","name":"Should I count the start date?","acceptedAnswer":{"@type":"Answer","text":"Only if your context requires inclusive counting. Hotel stays and rent periods often do; general duration questions usually do not."}},{"@type":"Question","name":"Does the calculator account for leap years?","acceptedAnswer":{"@type":"Answer","text":"Yes, 29 February is counted whenever it falls inside the span, which shifts the total by one day compared with an ordinary year."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>The date difference calculator measures the gap between two dates and returns it in the units that make sense for the question: days for short spans, weeks and months for medium ones, years for anniversaries and contract terms.</p>
+  <p>The interesting case is partial intervals. From 15 March to 20 April is 36 days — clearly — but how many months? It is one month and a day at either end plus a variable number of days between, so the answer depends on whether you count completed calendar months, average months, or 30-day blocks. Legal documents usually mean completed calendar months; finance often means actual days divided by 365; everyday usage means roughly five weeks. The distinction matters more than the arithmetic.</p>
+  <p>Inclusive counting is the other common requirement. Hotel nights, contract days and interest accrual often count both the start and end date, adding one day to the result. Decide which convention you need before quoting a number, because a one-day discrepancy is exactly the kind that turns into a missed deadline.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./binary-to-decimal.html">Binary to Decimal</a>
@@ -126,5 +131,17 @@ Exact Interval: ${years} Years, ${months} Months, ${days} Days
 Total Full Days Between Dates: ${totalDays} Days`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How many days between two dates?</h3>
+<p>Subtract the earlier from the later, counting each full day passed. A span from 1 March to 31 March is 30 days by elapsed counting and 31 if both endpoints count.</p>
+<h3>Why do months and days not add up simply?</h3>
+<p>Because months have different lengths. A 'month' is between 28 and 31 days, so periods expressed in both months and days require a counting convention to be meaningful.</p>
+<h3>Should I count the start date?</h3>
+<p>Only if your context requires inclusive counting. Hotel stays and rent periods often do; general duration questions usually do not.</p>
+<h3>Does the calculator account for leap years?</h3>
+<p>Yes, 29 February is counted whenever it falls inside the span, which shifts the total by one day compared with an ordinary year.</p>
+</section>
 </body>
 </html>

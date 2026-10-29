@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Down Payment Calculator","description":"Free down payment calculator. Enter a home price and target down payment percent to see the deposit needed and how many months it takes to save at your monthly rate.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/down-payment-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Down Payment Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free down payment calculator. Enter the home price, the down payment percentage you want and how much you can save each month to see the deposit required and the months needed to reach it."}},{"@type":"Question","name":"Is the Down Payment Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Down Payment Calculator | Save Toward a Home Deposit">
 <meta property="og:description" content="Free down payment calculator: see the down payment you need for a home price and target percent, and how many months to save it.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Down Payment Calculator | Save Toward a Home Deposit">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free down payment calculator: see the down payment you need for a home price and target percent, and how many months to save it.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much down payment do I need for a house?","acceptedAnswer":{"@type":"Answer","text":"Twenty percent avoids mortgage insurance on conventional loans, but many programs accept 3% to 5%. The right figure depends on how much cash reserve you keep afterwards."}},{"@type":"Question","name":"What happens if I put down less than 20%?","acceptedAnswer":{"@type":"Answer","text":"Mortgage insurance is added, typically 0.3% to 1.5% of the loan annually, and it usually stays until equity reaches 20%."}},{"@type":"Question","name":"Is a larger down payment always better?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Draining savings to increase a down payment leaves no cushion for repairs or income disruption, which is a larger risk than a slightly higher payment."}},{"@type":"Question","name":"Does a larger down payment reduce the interest rate?","acceptedAnswer":{"@type":"Answer","text":"Often yes. Lenders price risk, and a lower loan-to-value ratio frequently qualifies for a better rate."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A down payment is the portion of a purchase paid upfront rather than financed. On a home it changes the loan amount, the monthly payment, and whether mortgage insurance applies; on a car it reduces both the financed balance and the interest charged on it.</p>
+  <p>For a $450,000 home, a 20% down payment is $90,000 and leaves a $360,000 loan. At 6.5% over 30 years that is about $2,275 a month. Drop to 10% — $45,000 down, $405,000 borrowed — and the payment rises to about $2,560, plus mortgage insurance of roughly $170 a month until equity reaches 20%. The smaller down payment costs around $455 a month more, which is the real price of preserving $45,000 in cash.</p>
+  <p>The decision is therefore not purely financial. Keeping cash for an emergency fund matters more than shaving a payment, and a home bought with a thin reserve is the scenario in which a single repair becomes a crisis. A common compromise is to put down enough to avoid insurance where possible, and never to drain the emergency fund to reach a round percentage.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./mortgage-calculator.html">Mortgage</a>
@@ -132,5 +137,17 @@ calcBtn.onclick = function(){
         `Months to save it: ${months} (~${(months/12).toFixed(1)} yrs)`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How much down payment do I need for a house?</h3>
+<p>Twenty percent avoids mortgage insurance on conventional loans, but many programs accept 3% to 5%. The right figure depends on how much cash reserve you keep afterwards.</p>
+<h3>What happens if I put down less than 20%?</h3>
+<p>Mortgage insurance is added, typically 0.3% to 1.5% of the loan annually, and it usually stays until equity reaches 20%.</p>
+<h3>Is a larger down payment always better?</h3>
+<p>Not necessarily. Draining savings to increase a down payment leaves no cushion for repairs or income disruption, which is a larger risk than a slightly higher payment.</p>
+<h3>Does a larger down payment reduce the interest rate?</h3>
+<p>Often yes. Lenders price risk, and a lower loan-to-value ratio frequently qualifies for a better rate.</p>
+</section>
 </body>
 </html>

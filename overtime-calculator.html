@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Overtime Calculator","description":"Free online overtime calculator. Estimate your overtime pay from hourly rate, regular hours, overtime hours and the overtime multiplier (e.g. 1.5x).","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/overtime-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Overtime Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online overtime calculator. Estimate your overtime pay from hourly rate, regular hours, overtime hours and the overtime multiplier (e.g. 1.5x)."}},{"@type":"Question","name":"Is the Online Overtime Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Overtime Calculator | Overtime Pay Estimator">
 <meta property="og:description" content="Free online overtime calculator. Estimate your overtime pay from hourly rate, regular hours, overtime hours and the overtime multiplier (e.g. 1.5x).">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Overtime Calculator | Overtime Pay Estimator">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online overtime calculator. Estimate your overtime pay from hourly rate, regular hours, overtime hours and the overtime multiplier (e.g. 1.5x).">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is overtime calculated?","acceptedAnswer":{"@type":"Answer","text":"Hours beyond 40 in a workweek are paid at 1.5 times the regular rate. The overtime figure is total pay for those hours at time and a half, not an extra 1.5 times on top of straight pay."}},{"@type":"Question","name":"Does a salary mean no overtime?","acceptedAnswer":{"@type":"Answer","text":"Not automatically. Exemption depends on duties and salary thresholds, not the label. Many salaried employees are entitled to overtime."}},{"@type":"Question","name":"Do bonuses count toward the overtime rate?","acceptedAnswer":{"@type":"Answer","text":"Non-discretionary bonuses generally must be included when calculating the regular rate, which raises the overtime rate."}},{"@type":"Question","name":"Is overtime calculated daily or weekly?","acceptedAnswer":{"@type":"Answer","text":"Federal law uses the workweek in most cases. Some states apply daily overtime rules, which can produce different totals."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Overtime pay depends on classification and jurisdiction, but the common rule in the United States is time and a half for hours beyond 40 in a workweek, calculated on the regular rate of pay. That regular rate is not always the base hourly figure — non-discretionary bonuses must be included when computing it.</p>
+  <p>For someone earning $22 an hour who works 47 hours, the overtime premium applies to 7 hours. Straight time for those hours would be $154; at time and a half it is $231, so the extra is $77 on top of $1,034 in regular pay, totalling <b>$1,265</b>. The frequent error is paying double time for overtime hours rather than an extra half — a costly overpayment, or underpayment if reversed.</p>
+  <p>Salaried employees are not automatically exempt. Exemption depends on duties and salary level, not job title, and misclassifying employees to avoid overtime is one of the most common wage-and-hour violations. When in doubt, the classification test matters more than the contract label.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./hourly-paycheck-calculator.html">Hourly Paycheck Calculator</a>
@@ -133,6 +138,18 @@ calcBtn.onclick = function(){
         `Total pay: $${fmt(total)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How is overtime calculated?</h3>
+<p>Hours beyond 40 in a workweek are paid at 1.5 times the regular rate. The overtime figure is total pay for those hours at time and a half, not an extra 1.5 times on top of straight pay.</p>
+<h3>Does a salary mean no overtime?</h3>
+<p>Not automatically. Exemption depends on duties and salary thresholds, not the label. Many salaried employees are entitled to overtime.</p>
+<h3>Do bonuses count toward the overtime rate?</h3>
+<p>Non-discretionary bonuses generally must be included when calculating the regular rate, which raises the overtime rate.</p>
+<h3>Is overtime calculated daily or weekly?</h3>
+<p>Federal law uses the workweek in most cases. Some states apply daily overtime rules, which can produce different totals.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

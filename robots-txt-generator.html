@@ -32,9 +32,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Robots.txt Generator","description":"Free online robots.txt generator. Create standard robots file to fix Google indexing error, discovered not crawled and Googlebot block issues on Vercel.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/robots-txt-generator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Free Robots.txt Generator do?","acceptedAnswer":{"@type":"Answer","text":"Free online robots.txt generator. Create standard robots file to fix Google indexing error, discovered not crawled and Googlebot block issues on Vercel."}},{"@type":"Question","name":"Is the Free Robots.txt Generator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Free Robots.txt Generator | Fix Google Indexing Error">
 <meta property="og:description" content="Free online robots.txt generator. Create standard robots file to fix Google indexing error, discovered not crawled and Googlebot block issues on Vercel.">
 <meta property="og:type" content="website">
@@ -47,8 +44,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Free Robots.txt Generator | Fix Google Indexing Error">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online robots.txt generator. Create standard robots file to fix Google indexing error, discovered not crawled and Googlebot block issues on Vercel.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I block a folder from search engines?","acceptedAnswer":{"@type":"Answer","text":"Add Disallow: /folder/ under the relevant user-agent. Note that this prevents crawling, not indexing, of pages already discovered."}},{"@type":"Question","name":"What does Disallow: / do?","acceptedAnswer":{"@type":"Answer","text":"Blocks every path on the site. It is useful on staging environments and catastrophic if left in place on a live site."}},{"@type":"Question","name":"Should I block CSS and JavaScript?","acceptedAnswer":{"@type":"Answer","text":"Generally no. Google renders pages to evaluate them, and blocking stylesheets or scripts prevents it from seeing the page as users do."}},{"@type":"Question","name":"How do I remove a page that is already indexed?","acceptedAnswer":{"@type":"Answer","text":"Use a noindex meta tag or the removal tool in Search Console. Blocking it in robots.txt prevents the recrawl that would reveal the noindex."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A robots.txt file tells crawlers which paths they may access. It is a voluntary convention rather than an enforcement mechanism — reputable crawlers respect it, malicious ones ignore it — but it is still the standard way to keep administrative areas out of search results.</p>
+  <p>The syntax is small. User-agent names the crawler, Disallow lists paths it should skip, Allow creates exceptions, and a Sitemap line declares the sitemap location. An empty Disallow means everything is permitted, which is the usual choice for a public site; Disallow: / blocks everything, which is occasionally useful on staging environments but disastrous if left in place at launch.</p>
+  <p>Two mistakes account for most damage. Blocking CSS and JavaScript stops crawlers understanding a page's layout and can hurt rankings, since Google renders pages as a browser would. And blocking a URL does not remove it from the index — pages already indexed need a noindex tag or removal request instead, because a blocked page cannot be recrawled to see the noindex.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./robots-txt-generator.html">Robots.txt Generator</a>
@@ -104,6 +109,18 @@ Sitemap: ${domain}/sitemap.xml`;
     robotsOutput.textContent = code;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I block a folder from search engines?</h3>
+<p>Add Disallow: /folder/ under the relevant user-agent. Note that this prevents crawling, not indexing, of pages already discovered.</p>
+<h3>What does Disallow: / do?</h3>
+<p>Blocks every path on the site. It is useful on staging environments and catastrophic if left in place on a live site.</p>
+<h3>Should I block CSS and JavaScript?</h3>
+<p>Generally no. Google renders pages to evaluate them, and blocking stylesheets or scripts prevents it from seeing the page as users do.</p>
+<h3>How do I remove a page that is already indexed?</h3>
+<p>Use a noindex meta tag or the removal tool in Search Console. Blocking it in robots.txt prevents the recrawl that would reveal the noindex.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

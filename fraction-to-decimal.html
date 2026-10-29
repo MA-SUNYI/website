@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Fraction to Decimal Converter","description":"Free online fraction to decimal converter, convert proper, improper and mixed fractions to decimals with percentage output for student math homework.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/fraction-to-decimal.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Fraction to Decimal Converter do?","acceptedAnswer":{"@type":"Answer","text":"Free online fraction to decimal converter, convert proper, improper and mixed fractions to decimals with percentage output for student math homework."}},{"@type":"Question","name":"Is the Fraction to Decimal Converter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Fraction to Decimal Converter | Free Online Math Calculator">
 <meta property="og:description" content="Free online fraction to decimal converter, convert proper, improper and mixed fractions to decimals with percentage output for student math homework.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Fraction to Decimal Converter | Free Online Math Calculator">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online fraction to decimal converter, convert proper, improper and mixed fractions to decimals with percentage output for student math homework.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is 1/3 as a decimal?","acceptedAnswer":{"@type":"Answer","text":"0.3333…, repeating without end. It cannot be written exactly as a finite decimal, so any quoted figure such as 0.33 or 0.3333 is an approximation."}},{"@type":"Question","name":"How do I convert a fraction to a decimal without a calculator?","acceptedAnswer":{"@type":"Answer","text":"Use long division, or scale the denominator to a power of ten. If the denominator divides into 10, 100 or 1000, multiply both parts to reach that denominator: 3/4 becomes 75/100, which reads directly as 0.75."}},{"@type":"Question","name":"What does a decimal that never ends mean?","acceptedAnswer":{"@type":"Answer","text":"It means the fraction's denominator has a prime factor other than 2 or 5. The decimal still represents an exact value; only its written form is incomplete."}},{"@type":"Question","name":"Is it better to keep a fraction or convert to a decimal?","acceptedAnswer":{"@type":"Answer","text":"Keep fractions when exactness matters, such as in algebra or recipe scaling. Convert to decimals when measuring, comparing magnitudes, or entering values into software."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>This converter covers the same operation as the fraction to decimal page and keeps the interface minimal on purpose: numerators and denominators in, decimal out. Where it differs is in how it treats awkward inputs — improper fractions and values that produce long repeating decimals are handled without truncating the displayed result mid-pattern.</p>
+  <p>The underlying step is straightforward long division. Take 5/16: 16 into 50 goes three times (48), remainder 2; 16 into 20 goes once (16), remainder 4; 16 into 40 goes twice (32), remainder 8; 16 into 80 goes five times (80), remainder 0. The answer is <b>0.3125</b>, terminating after four places because 16 = 2⁴.</p>
+  <p>An improper fraction such as 9/4 converts to 2.25, which is the same as saying 2¼. Some contexts require the decimal, some require the mixed number, and a few require both — test scores and tool sizes are commonly given as the decimal, while recipes and carpentry often stay in fractions. Knowing which one your audience expects prevents needless confusion.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./fraction-to-decimal.html">Fraction to Decimal</a>
@@ -109,5 +114,17 @@ Decimal Value: ${decimal.toFixed(6)}
 Percentage: ${percent.toFixed(2)} %`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is 1/3 as a decimal?</h3>
+<p>0.3333…, repeating without end. It cannot be written exactly as a finite decimal, so any quoted figure such as 0.33 or 0.3333 is an approximation.</p>
+<h3>How do I convert a fraction to a decimal without a calculator?</h3>
+<p>Use long division, or scale the denominator to a power of ten. If the denominator divides into 10, 100 or 1000, multiply both parts to reach that denominator: 3/4 becomes 75/100, which reads directly as 0.75.</p>
+<h3>What does a decimal that never ends mean?</h3>
+<p>It means the fraction's denominator has a prime factor other than 2 or 5. The decimal still represents an exact value; only its written form is incomplete.</p>
+<h3>Is it better to keep a fraction or convert to a decimal?</h3>
+<p>Keep fractions when exactness matters, such as in algebra or recipe scaling. Convert to decimals when measuring, comparing magnitudes, or entering values into software.</p>
+</section>
 </body>
 </html>

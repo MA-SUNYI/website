@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rent vs Buy Calculator","description":"Free rent vs buy calculator. Compare the cost of renting against buying a home over a number of years, including equity, price appreciation and rent growth.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/rent-vs-buy-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Rent vs Buy Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free rent vs buy calculator. Enter monthly rent, rent growth, home price, down payment, mortgage rate, appreciation and years, to see which option leaves you ahead."}},{"@type":"Question","name":"Is the Rent vs Buy Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Rent vs Buy Calculator | Which Is Cheaper Over Time">
 <meta property="og:description" content="Free rent vs buy calculator: compare renting and buying over a set number of years, including equity, appreciation and rent growth.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Rent vs Buy Calculator | Which Is Cheaper Over Time">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free rent vs buy calculator: compare renting and buying over a set number of years, including equity, appreciation and rent growth.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it cheaper to rent or buy?","acceptedAnswer":{"@type":"Answer","text":"It depends almost entirely on how long you stay. Under three years, transaction costs usually make renting cheaper; beyond seven to ten years, buying typically wins if the property appreciates roughly with inflation."}},{"@type":"Question","name":"What costs are easy to forget when buying?","acceptedAnswer":{"@type":"Answer","text":"Closing costs, property taxes, insurance, maintenance at roughly 1% of value per year, HOA dues, and selling costs of 6% to 8% when you eventually move."}},{"@type":"Question","name":"How does opportunity cost affect the comparison?","acceptedAnswer":{"@type":"Answer","text":"A down payment is capital that could otherwise be invested. At a 7% return, $100,000 down represents about $7,000 a year in forgone gains, which must be counted against the benefit of ownership."}},{"@type":"Question","name":"Does the calculator include tax deductions?","acceptedAnswer":{"@type":"Answer","text":"It can, but the benefit is smaller than commonly assumed. The standard deduction covers a large share of mortgage interest for many households, so the marginal saving is often modest."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Renting and buying are compared so often as ideologies that the arithmetic gets lost. The honest version compares total cost of ownership — mortgage interest, taxes, insurance, maintenance, closing costs — against total rent paid, while accounting for the equity a buyer accumulates and the investment return a renter could earn on the same capital.</p>
+  <p>The comparison is more sensitive to holding period than to anything else. Buying typically involves 2% to 5% in closing costs plus 6% to 8% in selling costs, so a purchase needs several years of appreciation just to break even on transaction costs. Under three years, renting almost always wins; over seven to ten years, buying usually pulls ahead, provided the property appreciates at roughly the rate of inflation or better.</p>
+  <p>Two inputs dominate the result and are the ones people guess at. Home appreciation and the opportunity cost of the down payment. If $100,000 invested returns 7% annually, the renter earns about $7,000 a year on that capital, which offsets a meaningful share of rent. Setting that assumption to zero — as many calculators implicitly do — biases every result toward buying.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./mortgage-calculator.html">Mortgage</a>
@@ -184,5 +189,17 @@ calcBtn.onclick = function(){
         `<span style="color:#0f9d58">${verdict}</span>`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Is it cheaper to rent or buy?</h3>
+<p>It depends almost entirely on how long you stay. Under three years, transaction costs usually make renting cheaper; beyond seven to ten years, buying typically wins if the property appreciates roughly with inflation.</p>
+<h3>What costs are easy to forget when buying?</h3>
+<p>Closing costs, property taxes, insurance, maintenance at roughly 1% of value per year, HOA dues, and selling costs of 6% to 8% when you eventually move.</p>
+<h3>How does opportunity cost affect the comparison?</h3>
+<p>A down payment is capital that could otherwise be invested. At a 7% return, $100,000 down represents about $7,000 a year in forgone gains, which must be counted against the benefit of ownership.</p>
+<h3>Does the calculator include tax deductions?</h3>
+<p>It can, but the benefit is smaller than commonly assumed. The standard deduction covers a large share of mortgage interest for many households, so the marginal saving is often modest.</p>
+</section>
 </body>
 </html>

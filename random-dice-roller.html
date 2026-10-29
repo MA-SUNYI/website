@@ -32,9 +32,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Random Dice Roller","description":"Free online random dice roller to roll multiple 6-sided dice, view individual values and total sum for D&D, board games and classroom activities.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/random-dice-roller.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Random Dice Roller do?","acceptedAnswer":{"@type":"Answer","text":"Free online random dice roller to roll multiple 6-sided dice, view individual values and total sum for D&D, board games and classroom activities."}},{"@type":"Question","name":"Is the Random Dice Roller free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Random Dice Roller | Free Virtual Dice Simulator Online">
 <meta property="og:description" content="Free online random dice roller to roll multiple 6-sided dice, view individual values and total sum for D&amp;D, board games and classroom activities.">
 <meta property="og:type" content="website">
@@ -47,8 +44,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Random Dice Roller | Free Virtual Dice Simulator Online">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online random dice roller to roll multiple 6-sided dice, view individual values and total sum for D&amp;D, board games and classroom activities.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are digital dice rolls fair?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each face has equal probability and rolls are independent, so no history influences the next result. The generator is stronger than a physical die, which can be biased by manufacturing or wear."}},{"@type":"Question","name":"Why do two dice favour seven?","acceptedAnswer":{"@type":"Answer","text":"Because seven has the most combinations (1-6, 2-5, 3-4 and their reverses), six of thirty-six. Two and twelve have only one combination each."}},{"@type":"Question","name":"Can I roll a custom number of sides?","acceptedAnswer":{"@type":"Answer","text":"Yes, any side count works, including non-standard dice like d8, d10, d20 and beyond."}},{"@type":"Question","name":"Does the roller keep a history?","acceptedAnswer":{"@type":"Answer","text":"Each roll is independent and nothing carries over. Keep your own tally if you are running a game that depends on cumulative results."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A digital dice roller replaces the physical die when you need a fair result and do not have one to hand — or when the table is not a table. Each roll is independent and uniform, so a six-sided die gives each face a one-in-six chance, exactly as a well-made physical die should.</p>
+  <p>Multiple dice are where the maths gets interesting. Two six-sided dice do not produce eleven equally likely totals: seven appears six times out of thirty-six combinations, while two and twelve appear once each. The distribution is a triangle that peaks in the middle, which is why games that use 2d6 feel far more predictable than games that use a single d20. Neither is broken; the shapes are just different.</p>
+  <p>Whether you are rolling for a board game, a tabletop session or a classroom probability exercise, the tool holds no state between rolls. That independence is the property that matters, and testing it is easy: roll a hundred times and check that each face lands near its expected share.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./fraction-to-decimal.html">Fraction to Decimal</a>
@@ -110,5 +115,17 @@ rollBtn.onclick = function(){
     sumResult.textContent = `Total Sum: ${total}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Are digital dice rolls fair?</h3>
+<p>Yes. Each face has equal probability and rolls are independent, so no history influences the next result. The generator is stronger than a physical die, which can be biased by manufacturing or wear.</p>
+<h3>Why do two dice favour seven?</h3>
+<p>Because seven has the most combinations (1-6, 2-5, 3-4 and their reverses), six of thirty-six. Two and twelve have only one combination each.</p>
+<h3>Can I roll a custom number of sides?</h3>
+<p>Yes, any side count works, including non-standard dice like d8, d10, d20 and beyond.</p>
+<h3>Does the roller keep a history?</h3>
+<p>Each roll is independent and nothing carries over. Keep your own tally if you are running a game that depends on cumulative results.</p>
+</section>
 </body>
 </html>

@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Refinance Calculator","description":"Free refinance calculator. Compare your current loan to a new rate and see the monthly saving, total interest saved and the break-even period on closing costs.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/refinance-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Refinance Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free refinance calculator. Enter your current loan and a proposed new rate to see the lower monthly payment, total interest saved and how many months until closing costs break even."}},{"@type":"Question","name":"Is the Refinance Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Refinance Calculator | Savings & Break-Even on a New Rate">
 <meta property="og:description" content="Free refinance calculator: compare your current loan to a new rate, see monthly savings, total interest saved and the break-even period.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Refinance Calculator | Savings & Break-Even on a New Rate">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free refinance calculator: compare your current loan to a new rate, see monthly savings, total interest saved and the break-even period.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long until refinancing pays for itself?","acceptedAnswer":{"@type":"Answer","text":"Divide total closing costs by the monthly saving. A $6,000 cost against a $284 saving breaks even in about 21 months. Staying past that point makes the refinance worthwhile."}},{"@type":"Question","name":"Should I refinance if I plan to move soon?","acceptedAnswer":{"@type":"Answer","text":"Usually not. If you sell before the break-even point, the closing costs exceed the accumulated saving and the refinance loses money."}},{"@type":"Question","name":"Is a lower payment always a better deal?","acceptedAnswer":{"@type":"Answer","text":"No. Extending the term lowers the payment while raising total interest. Compare total cost, not just the monthly figure."}},{"@type":"Question","name":"What does cash-out refinancing involve?","acceptedAnswer":{"@type":"Answer","text":"Borrowing more than the outstanding balance and taking the difference in cash. It converts equity into debt secured by the home, so the risk profile changes substantially."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Refinancing replaces an existing loan with a new one, usually at a lower rate or a different term. The decision comes down to one question: does the monthly saving exceed the closing costs, and if so, how long until it does?</p>
+  <p>A $300,000 balance at 7.5% with 25 years remaining costs about $2,217 a month. Refinancing to 6% over the same 25 years drops that to roughly $1,933 — a saving of about $284 a month. If closing costs are $6,000, the break-even point is 6000 ÷ 284 ≈ <b>21 months</b>. Plan to stay longer than that and refinancing pays; sell sooner and the closing costs swallow the saving.</p>
+  <p>Two traps are worth naming. Extending the term — going from 25 years remaining back to 30 — can lower the payment while increasing total interest, which is a payment reduction rather than a saving. And cash-out refinancing converts home equity into debt secured against the house, so a missed payment risks the property.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./loan-payment-calculator.html">Loan Payment Calculator</a>
@@ -134,5 +139,17 @@ calcBtn.onclick = function(){
         `Break-even: ${isFinite(breakEven) ? breakEven.toFixed(1)+' months' : 'n/a'}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How long until refinancing pays for itself?</h3>
+<p>Divide total closing costs by the monthly saving. A $6,000 cost against a $284 saving breaks even in about 21 months. Staying past that point makes the refinance worthwhile.</p>
+<h3>Should I refinance if I plan to move soon?</h3>
+<p>Usually not. If you sell before the break-even point, the closing costs exceed the accumulated saving and the refinance loses money.</p>
+<h3>Is a lower payment always a better deal?</h3>
+<p>No. Extending the term lowers the payment while raising total interest. Compare total cost, not just the monthly figure.</p>
+<h3>What does cash-out refinancing involve?</h3>
+<p>Borrowing more than the outstanding balance and taking the difference in cash. It converts equity into debt secured by the home, so the risk profile changes substantially.</p>
+</section>
 </body>
 </html>

@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Debt Payoff Calculator","description":"Free debt payoff calculator. Enter total debt, weighted APR and monthly payment to see months until debt-free and total interest, with extra-payment savings shown.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/debt-payoff-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Debt Payoff Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free debt payoff calculator. Enter your total debt, the weighted APR across it, and your monthly payment to see how many months until you are debt-free and the total interest you will pay."}},{"@type":"Question","name":"Is the Debt Payoff Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Debt Payoff Calculator | Months & Interest to Be Debt-Free">
 <meta property="og:description" content="Free debt payoff calculator: months to clear total debt and total interest by balance, weighted APR and monthly payment, with extra-payment savings.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Debt Payoff Calculator | Months & Interest to Be Debt-Free">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free debt payoff calculator: months to clear total debt and total interest by balance, weighted APR and monthly payment, with extra-payment savings.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is debt payoff time calculated?","acceptedAnswer":{"@type":"Answer","text":"Using the amortisation formula solved for the number of periods: n = -ln(1 - r×P/A) ÷ ln(1+r), where r is the monthly rate, P the balance and A the payment."}},{"@type":"Question","name":"What if my payment is smaller than the monthly interest?","acceptedAnswer":{"@type":"Answer","text":"The balance grows instead of shrinking, and it will never be paid off at that payment level. The payment has to exceed the monthly interest charge before any progress is possible."}},{"@type":"Question","name":"Does a larger payment always shorten the term proportionally?","acceptedAnswer":{"@type":"Answer","text":"No. The relationship is non-linear, and the effect is strongest at the start. Doubling a payment more than halves the interest paid."}},{"@type":"Question","name":"Should I pay off debt or invest?","acceptedAnswer":{"@type":"Answer","text":"Compare the interest rate on the debt with the expected after-tax return on the investment. Guaranteed savings at 20% APR are hard for any investment to beat with certainty."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>The payoff calculator answers a single question with more precision than intuition allows: given a balance, a rate and a fixed payment, how many months until zero, and how much interest will that cost in total?</p>
+  <p>The formula uses a logarithm because the balance decays geometrically. For a $10,000 balance at 18% APR with a $400 monthly payment, the monthly rate is 1.5%, and the payoff comes out at roughly 32 months with about $2,600 in interest. Drop the payment to $250 and the term stretches beyond 60 months, with interest climbing past $6,000. The relationship is not linear: halving the payment more than doubles the cost.</p>
+  <p>There is a hard floor to be aware of. If the monthly payment is less than the monthly interest charge — $10,000 at 18% accrues about $150 a month — the balance never falls, and no number of months will clear it. Any payoff figure in that situation is meaningless, and the payment has to rise above the interest line first.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./credit-card-payoff-calculator.html">Credit Card Payoff</a>
@@ -148,5 +153,17 @@ calcBtn.onclick = function(){
     resOut.innerHTML = out;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How is debt payoff time calculated?</h3>
+<p>Using the amortisation formula solved for the number of periods: n = -ln(1 - r×P/A) ÷ ln(1+r), where r is the monthly rate, P the balance and A the payment.</p>
+<h3>What if my payment is smaller than the monthly interest?</h3>
+<p>The balance grows instead of shrinking, and it will never be paid off at that payment level. The payment has to exceed the monthly interest charge before any progress is possible.</p>
+<h3>Does a larger payment always shorten the term proportionally?</h3>
+<p>No. The relationship is non-linear, and the effect is strongest at the start. Doubling a payment more than halves the interest paid.</p>
+<h3>Should I pay off debt or invest?</h3>
+<p>Compare the interest rate on the debt with the expected after-tax return on the investment. Guaranteed savings at 20% APR are hard for any investment to beat with certainty.</p>
+</section>
 </body>
 </html>

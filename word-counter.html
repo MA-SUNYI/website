@@ -29,9 +29,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Word Counter Tool","description":"Free online word counter tool. Count total words, characters and spaces in your article, essay and notes in real time.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/word-counter.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Word Counter Tool do?","acceptedAnswer":{"@type":"Answer","text":"Free online word counter tool. Count total words, characters and spaces in your article, essay and notes in real time."}},{"@type":"Question","name":"Is the Online Word Counter Tool free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Word Counter Tool | Free Text Count Utility">
 <meta property="og:description" content="Free online word counter tool. Count total words, characters and spaces in your article, essay and notes in real time.">
 <meta property="og:type" content="website">
@@ -44,8 +41,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Word Counter Tool | Free Text Count Utility">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online word counter tool. Count total words, characters and spaces in your article, essay and notes in real time.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does a word counter count hyphenated words?","acceptedAnswer":{"@type":"Answer","text":"Most counters treating whitespace as the separator count a hyphenated compound as one word. A phrase written with spaces counts as several."}},{"@type":"Question","name":"Why do different tools give different counts?","acceptedAnswer":{"@type":"Answer","text":"Because they define a word differently. Whitespace splitting, punctuation handling and language-specific rules all vary between tools."}},{"@type":"Question","name":"How do character limits work on social platforms?","acceptedAnswer":{"@type":"Answer","text":"Most count characters rather than words, and some count a URL as a fixed length regardless of its actual size. Check the platform's own counter before posting."}},{"@type":"Question","name":"Does the counter include spaces?","acceptedAnswer":{"@type":"Answer","text":"Word counts do not; character counts usually do, and most tools report both with and without spaces because different platforms require different figures."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A word count is not one number. Word processors, publishing platforms and search engines each count differently, and the differences are large enough to matter when a limit is enforced.</p>
+  <p>Most counters split on whitespace, so "state-of-the-art" counts as one word while "state of the art" counts as four. Hyphenated compounds, contractions and numbers with decimal points are the usual sources of disagreement. Twitter/X counts URLs as a fixed 23 characters; academic systems often exclude references; Chinese and Japanese text has no spaces at all and is typically counted by character rather than by word.</p>
+  <p>For writing with a hard limit, count the way the platform counts. Submitting 1,050 words to a 1,000-word limit because your editor counted differently is a fixable problem only if you notice before the deadline, not after.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./circle-area.html">Circle Area Calculator</a>
@@ -94,6 +99,18 @@ textInput.oninput = function(){
     countResult.textContent = `Words: ${words} | Characters (with spaces): ${charWithSpace} | Characters (no spaces): ${charNoSpace}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How does a word counter count hyphenated words?</h3>
+<p>Most counters treating whitespace as the separator count a hyphenated compound as one word. A phrase written with spaces counts as several.</p>
+<h3>Why do different tools give different counts?</h3>
+<p>Because they define a word differently. Whitespace splitting, punctuation handling and language-specific rules all vary between tools.</p>
+<h3>How do character limits work on social platforms?</h3>
+<p>Most count characters rather than words, and some count a URL as a fixed length regardless of its actual size. Check the platform's own counter before posting.</p>
+<h3>Does the counter include spaces?</h3>
+<p>Word counts do not; character counts usually do, and most tools report both with and without spaces because different platforms require different figures.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

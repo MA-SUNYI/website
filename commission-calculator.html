@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Commission Calculator","description":"Free commission calculator. Enter sales volume and a commission rate to see the commission earned, optionally adding a base salary for total pay.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/commission-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Commission Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free commission calculator. Enter your sales amount and commission rate to see the commission you earned, and optionally add a base salary to get total pay."}},{"@type":"Question","name":"Is the Commission Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Commission Calculator | Sales Commission & Total Pay">
 <meta property="og:description" content="Free commission calculator: turn sales volume and a commission rate into commission earned, with optional base salary for total pay.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Commission Calculator | Sales Commission & Total Pay">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free commission calculator: turn sales volume and a commission rate into commission earned, with optional base salary for total pay.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is sales commission calculated?","acceptedAnswer":{"@type":"Answer","text":"Multiply the commissionable amount by the rate. On $85,000 at 6%, commission is $5,100. Tiered plans apply different rates to different bands."}},{"@type":"Question","name":"Should commission be based on revenue or profit?","acceptedAnswer":{"@type":"Answer","text":"Revenue-based plans are simpler and predict less. Profit-based plans align seller and company but are harder to forecast when margins vary between products."}},{"@type":"Question","name":"What is a draw against commission?","acceptedAnswer":{"@type":"Answer","text":"An advance paid before commission is earned, later deducted from actual commission. It provides income stability but can create a debt to the employer if sales fall short."}},{"@type":"Question","name":"When is commission typically paid?","acceptedAnswer":{"@type":"Answer","text":"Commonly on the next payroll cycle after the sale is invoiced, or after the customer pays. Confirm the trigger, since deals that close but never pay can affect the payout."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Commission converts sales performance into pay, and the structure of the plan determines whether a good month actually pays well. The most common arrangement is a percentage of revenue or gross profit, sometimes tiered so that higher volumes earn a higher rate.</p>
+  <p>On $85,000 in sales at a flat 6%, the commission is $5,100. A tiered plan might pay 3% up to $50,000 and 8% above it, giving 1,500 + 2,800 = $4,300 — less than the flat rate at this volume, but more once sales pass roughly $72,000. Reading the tier boundaries before comparing offers matters more than comparing headline percentages.</p>
+  <p>Watch for the difference between revenue-based and profit-based commissions. A 5% commission on revenue rewards volume regardless of margin, which can push sales toward discounting. A commission on gross profit aligns the seller with the company but makes the payout harder to predict, especially where product margins vary.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./hourly-paycheck-calculator.html">Paycheck</a>
@@ -119,5 +124,17 @@ calcBtn.onclick = function(){
         `On $${fmt(s)} in sales at ${r}% commission`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How is sales commission calculated?</h3>
+<p>Multiply the commissionable amount by the rate. On $85,000 at 6%, commission is $5,100. Tiered plans apply different rates to different bands.</p>
+<h3>Should commission be based on revenue or profit?</h3>
+<p>Revenue-based plans are simpler and predict less. Profit-based plans align seller and company but are harder to forecast when margins vary between products.</p>
+<h3>What is a draw against commission?</h3>
+<p>An advance paid before commission is earned, later deducted from actual commission. It provides income stability but can create a debt to the employer if sales fall short.</p>
+<h3>When is commission typically paid?</h3>
+<p>Commonly on the next payroll cycle after the sale is invoiced, or after the customer pays. Confirm the trigger, since deals that close but never pay can affect the payout.</p>
+</section>
 </body>
 </html>

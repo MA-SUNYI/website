@@ -27,8 +27,16 @@
     </style>
 
     <script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is my sitemap not being picked up?","acceptedAnswer":{"@type":"Answer","text":"Check that it is declared in robots.txt or submitted in Search Console, that the XML parses without errors, and that Response headers return 200 rather than a redirect."}},{"@type":"Question","name":"Does a sitemap guarantee indexing?","acceptedAnswer":{"@type":"Answer","text":"No. It signals that URLs exist and encourages crawling. Indexing still depends on content quality and crawl budget."}},{"@type":"Question","name":"How many URLs can a sitemap hold?","acceptedAnswer":{"@type":"Answer","text":"Up to 50,000 URLs and 50 MB uncompressed. Beyond that, split into multiple files under a sitemap index."}},{"@type":"Question","name":"Should every page be in the sitemap?","acceptedAnswer":{"@type":"Answer","text":"Only canonical, indexable pages. Including redirects, 404s or noindexed pages wastes crawl budget and dilutes the signal."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A sitemap is only useful if it is valid, current and discoverable. Common failures are XML syntax errors, URLs that return 404, and pages that exist but were never added — the last being the most damaging, since those pages have no other route into the index.</p>
+  <p>Validation requires three checks. First, the XML must parse, with no unescaped ampersands and correct namespace. Second, every listed URL should return a 200; a sitemap full of redirects and errors signals neglect and delays crawl scheduling. Third, compare the URL count against the actual page inventory — the numerical difference is usually where the missing pages hide.</p>
+  <p>Size limits also apply. A single sitemap supports up to 50,000 URLs and 50 MB uncompressed, and larger sites need a sitemap index pointing at several files. Google accepts up to 500 sitemaps in an index, which is ample for almost any content site.</p>
+</section>
+
 <div class="container">
     <h1>🔧 Sitemap Checker & Fix Tool (GSC/Vercel)</h1>
     <p>Fix: <strong>Sitemap cannot be crawled but accessible</strong> in Google Search Console (Vercel 2026)</p>
@@ -88,6 +96,18 @@ function generateRobots(){
     res.innerHTML='<pre>User-agent: *\nAllow: /\nSitemap: https://'+domain+'/sitemap.xml</pre>';
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Why is my sitemap not being picked up?</h3>
+<p>Check that it is declared in robots.txt or submitted in Search Console, that the XML parses without errors, and that Response headers return 200 rather than a redirect.</p>
+<h3>Does a sitemap guarantee indexing?</h3>
+<p>No. It signals that URLs exist and encourages crawling. Indexing still depends on content quality and crawl budget.</p>
+<h3>How many URLs can a sitemap hold?</h3>
+<p>Up to 50,000 URLs and 50 MB uncompressed. Beyond that, split into multiple files under a sitemap index.</p>
+<h3>Should every page be in the sitemap?</h3>
+<p>Only canonical, indexable pages. Including redirects, 404s or noindexed pages wastes crawl budget and dilutes the signal.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

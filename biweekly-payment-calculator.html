@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Biweekly Payment Calculator","description":"Free biweekly payment calculator. Enter your loan amount, interest rate and term to compare a standard monthly schedule with a biweekly schedule (half the monthly payment every two weeks) and see the interest saved and the years cut off your loan.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/biweekly-payment-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Biweekly Payment Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It shows your standard monthly payment, then simulates paying half that amount every two weeks (26 payments a year = 13 monthly payments) to reveal how much interest you save and how many years you shave off the loan."}},{"@type":"Question","name":"Is the Biweekly Payment Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs in your browser, needs no registration, and your numbers are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Biweekly Payment Calculator | Pay Off Your Loan Years Early">
 <meta property="og:description" content="Free biweekly payment calculator: enter loan amount, rate and term to compare standard monthly payments with biweekly payments and see the interest saved and years cut off your loan.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Biweekly Payment Calculator | Pay Off Your Loan Years Early">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free biweekly payment calculator: enter loan amount, rate and term to compare standard monthly payments with biweekly payments and see the interest saved and years cut off your loan.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is biweekly better than just paying extra monthly?","acceptedAnswer":{"@type":"Answer","text":"The financial effect is nearly identical if the total extra amount matches. Paying an extra 1/12 of your payment each month is simpler and needs no lender cooperation, which makes it the safer default when a servicer's biweekly programme has fees."}},{"@type":"Question","name":"Does biweekly work for car loans and student loans?","acceptedAnswer":{"@type":"Answer","text":"Yes, the arithmetic is the same, but many auto and student lenders do not accept partial payments at all. In that case, save the half-payments yourself and send one extra full payment per year."}},{"@type":"Question","name":"How much interest does the extra payment actually save?","acceptedAnswer":{"@type":"Answer","text":"It depends on the rate and the remaining term. The higher the rate and the longer the remaining term, the larger the saving. Run the numbers both ways rather than assuming the gain is small."}},{"@type":"Question","name":"Why 26 payments instead of 24?","acceptedAnswer":{"@type":"Answer","text":"Because 52 weeks divided by 2 is 26, while 12 months times 2 is 24. The two extra half-payments are what create the thirteenth full payment, and that single payment is the whole source of the benefit."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A biweekly payment plan splits one monthly payment into two halves and pays them every two weeks. Because a year has 26 two-week periods rather than 24, you end up making 13 full monthly payments instead of 12 — one extra payment a year, delivered painlessly in small pieces.</p>
+  <p>On a 30-year fixed mortgage, that extra payment usually shortens the term by four to five years and cuts total interest noticeably. The mechanism is straightforward: every extra dollar reduces principal, and interest is charged on the remaining balance, so the saving compounds for the rest of the loan. A $300,000 loan at 6.5% pays off roughly four years and eight months early under this schedule.</p>
+  <p>The catch is that not every lender applies half-payments immediately. Many hold the first half until the second arrives, which delays the principal reduction and can forfeit the benefit entirely. Ask specifically whether partial payments are applied on receipt, and whether the servicer charges a setup fee for a biweekly programme.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./mortgage-calculator.html">Mortgage</a>
@@ -155,5 +160,17 @@ calcBtn.onclick = function(){
         `<tr><td><b>Years saved</b></td><td></td><td><b>${yearsSaved.toFixed(1)} yrs</b></td></tr>`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Is biweekly better than just paying extra monthly?</h3>
+<p>The financial effect is nearly identical if the total extra amount matches. Paying an extra 1/12 of your payment each month is simpler and needs no lender cooperation, which makes it the safer default when a servicer's biweekly programme has fees.</p>
+<h3>Does biweekly work for car loans and student loans?</h3>
+<p>Yes, the arithmetic is the same, but many auto and student lenders do not accept partial payments at all. In that case, save the half-payments yourself and send one extra full payment per year.</p>
+<h3>How much interest does the extra payment actually save?</h3>
+<p>It depends on the rate and the remaining term. The higher the rate and the longer the remaining term, the larger the saving. Run the numbers both ways rather than assuming the gain is small.</p>
+<h3>Why 26 payments instead of 24?</h3>
+<p>Because 52 weeks divided by 2 is 26, while 12 months times 2 is 24. The two extra half-payments are what create the thirteenth full payment, and that single payment is the whole source of the benefit.</p>
+</section>
 </body>
 </html>

@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"401(k) Calculator","description":"Free 401(k) calculator. Enter your current age, salary, contribution percent, employer match, salary growth and expected return to project your 401(k) balance, total employee and employer contributions and total growth at retirement.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/401k-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the 401(k) Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It projects your 401(k) forward to your retirement age, applying your contribution percent, your employer's match, salary growth and a constant annual return, then shows the final balance plus how much came from your own contributions, the employer match and investment growth."}},{"@type":"Question","name":"Are contribution limits included?","acceptedAnswer":{"@type":"Answer","text":"Yes. The employee deferral is capped at the 2024 limit of $23,500 and total annual additions at $69,000, so the projection stays realistic as your salary rises."}}]}
-</script>
 <meta property="og:title" content="401(k) Calculator | Balance, Match & Growth at Retirement">
 <meta property="og:description" content="Free 401(k) calculator: enter your age, salary, contribution percent, employer match, salary growth and return to project your balance, total employee and employer contributions and growth at retirement.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="401(k) Calculator | Balance, Match & Growth at Retirement">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free 401(k) calculator: enter your age, salary, contribution percent, employer match, salary growth and return to project your balance, total employee and employer contributions and growth at retirement.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What annual return should I assume?","acceptedAnswer":{"@type":"Answer","text":"A common planning range is 6–7% nominal for a stock-heavy portfolio, which is roughly 4–5% after inflation. Use a conservative figure for planning and treat the optimistic case as upside rather than a base case."}},{"@type":"Question","name":"Does this calculator include the employer match?","acceptedAnswer":{"@type":"Answer","text":"Enter the combined annual amount if you want the match included. If your employer matches 50% up to 6% of salary, your own 6% contribution becomes 9% total, and that 9% is the number that belongs in the contribution field."}},{"@type":"Question","name":"Why does the projection look so much bigger than the contributions?","acceptedAnswer":{"@type":"Answer","text":"Because compounding is exponential. Contributions add a straight line; returns add a curve on top of it. Over 30 years the growth typically accounts for the majority of the final balance, not the deposits."}},{"@type":"Question","name":"Which contribution limit applies?","acceptedAnswer":{"@type":"Answer","text":"The elective deferral limit is set annually and adjusted for inflation; catch-up contributions are available from age 50. Because limits change, confirm the current year's figure with your plan administrator rather than relying on a fixed number."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A 401(k) projection is really three calculations stacked on top of each other: how much goes in each year, how that balance grows, and what it is worth when you start withdrawing. This tool handles the middle step — compounding — and shows the balance you reach if contributions and returns stay steady.</p>
+  <p>The growth comes from <b>FV = P × ((1 + r)^n − 1) ÷ r</b> for the annual contribution stream, plus the starting balance compounded separately. At a 7% annual return, money doubles roughly every ten years. That single fact explains why starting ten years earlier usually beats increasing the contribution rate later: the earlier money gets an extra doubling, and no contribution increase can buy that back.</p>
+  <p>A critical detail most calculators hide: an employer match is free money and should be counted separately from your own contribution, because it typically stops at 3–6% of salary. Not capturing the full match is the most common and most expensive mistake in retirement saving — it is an immediate 50% or 100% return before any investment growth.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./paycheck-calculator.html">Paycheck</a>
@@ -166,5 +171,17 @@ calcBtn.onclick = function(){
   resTbl.innerHTML = rows + '<tr><th colspan="2" style="text-align:left">Milestones</th></tr>' + mRows;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What annual return should I assume?</h3>
+<p>A common planning range is 6–7% nominal for a stock-heavy portfolio, which is roughly 4–5% after inflation. Use a conservative figure for planning and treat the optimistic case as upside rather than a base case.</p>
+<h3>Does this calculator include the employer match?</h3>
+<p>Enter the combined annual amount if you want the match included. If your employer matches 50% up to 6% of salary, your own 6% contribution becomes 9% total, and that 9% is the number that belongs in the contribution field.</p>
+<h3>Why does the projection look so much bigger than the contributions?</h3>
+<p>Because compounding is exponential. Contributions add a straight line; returns add a curve on top of it. Over 30 years the growth typically accounts for the majority of the final balance, not the deposits.</p>
+<h3>Which contribution limit applies?</h3>
+<p>The elective deferral limit is set annually and adjusted for inflation; catch-up contributions are available from age 50. Because limits change, confirm the current year's figure with your plan administrator rather than relying on a fixed number.</p>
+</section>
 </body>
 </html>

@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Time Zone Converter","description":"Free online time zone converter, convert time between different world time zones quickly for travel, business and international communication.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/time-zone-converter.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Time Zone Converter do?","acceptedAnswer":{"@type":"Answer","text":"Free online time zone converter, convert time between different world time zones quickly for travel, business and international communication."}},{"@type":"Question","name":"Is the Online Time Zone Converter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Time Zone Converter | World Clock Time Calculator">
 <meta property="og:description" content="Free online time zone converter, convert time between different world time zones quickly for travel, business and international communication.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Time Zone Converter | World Clock Time Calculator">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online time zone converter, convert time between different world time zones quickly for travel, business and international communication.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I schedule a meeting across time zones?","acceptedAnswer":{"@type":"Answer","text":"Convert the proposed time into each participant's local zone and confirm in writing with the zone name attached. Avoid quoting a bare time without an offset."}},{"@type":"Question","name":"Why is India not on a whole-hour offset?","acceptedAnswer":{"@type":"Answer","text":"India uses UTC+5:30 to align its single national time zone with the country's geography. Several other countries use fractional offsets for similar reasons."}},{"@type":"Question","name":"Does the converter handle daylight saving?","acceptedAnswer":{"@type":"Answer","text":"It applies the offset in effect on the date you enter, which differs from the offset six months earlier in most DST regions."}},{"@type":"Question","name":"What is UTC and why use it as a base?","acceptedAnswer":{"@type":"Answer","text":"UTC is the global reference time with no offsets or daylight saving. Converting through UTC avoids ambiguity when several zones are involved."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Time zone conversion looks like simple addition until you involve daylight saving, half-hour offsets or a meeting that spans three regions. The converter takes a time in one zone and returns the equivalent in another, accounting for the offset in effect on that date.</p>
+  <p>Offsets are not integers of an hour everywhere. India is UTC+5:30, Nepal is UTC+5:45, and parts of Australia are UTC+9:30. Daylight saving adds another layer: it starts and ends on different dates in the northern and southern hemispheres, and a few regions have abolished it or shifted their rules in recent years. A conversion that ignores the date is wrong twice a year for about half the world.</p>
+  <p>For scheduling, always convert to the participants' local times before agreeing, and state the time zone explicitly in the invitation. '3 pm' without a zone is the single most common cause of missed international meetings, and the error is invisible until someone joins an hour late.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./time-zone-converter.html">Time Zone Converter</a>
@@ -112,6 +117,18 @@ convertBtn.onclick = function(){
     timeRes.textContent = `Converted Time: ${targetTime.toLocaleString()}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I schedule a meeting across time zones?</h3>
+<p>Convert the proposed time into each participant's local zone and confirm in writing with the zone name attached. Avoid quoting a bare time without an offset.</p>
+<h3>Why is India not on a whole-hour offset?</h3>
+<p>India uses UTC+5:30 to align its single national time zone with the country's geography. Several other countries use fractional offsets for similar reasons.</p>
+<h3>Does the converter handle daylight saving?</h3>
+<p>It applies the offset in effect on the date you enter, which differs from the offset six months earlier in most DST regions.</p>
+<h3>What is UTC and why use it as a base?</h3>
+<p>UTC is the global reference time with no offsets or daylight saving. Converting through UTC avoids ambiguity when several zones are involved.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

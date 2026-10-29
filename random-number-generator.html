@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Random Number Generator","description":"Free random number generator to create random integers between custom min and max values for raffles, games, classroom and lucky draws.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/random-number-generator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Random Number Generator do?","acceptedAnswer":{"@type":"Answer","text":"Free random number generator to create random integers between custom min and max values for raffles, games, classroom and lucky draws."}},{"@type":"Question","name":"Is the Random Number Generator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Random Number Generator | Free Online Integer Picker">
 <meta property="og:description" content="Free random number generator to create random integers between custom min and max values for raffles, games, classroom and lucky draws.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Random Number Generator | Free Online Integer Picker">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free random number generator to create random integers between custom min and max values for raffles, games, classroom and lucky draws.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this random number generator truly random?","acceptedAnswer":{"@type":"Answer","text":"It uses the browser's cryptographically secure random source, which produces unpredictable values. It is not a physical entropy source, but for any practical selection purpose it is more than sufficient."}},{"@type":"Question","name":"Can I generate numbers without duplicates?","acceptedAnswer":{"@type":"Answer","text":"Repeated sampling can repeat values. For unique selections, shuffle the full list once instead of drawing repeatedly."}},{"@type":"Question","name":"How do I generate decimals rather than integers?","acceptedAnswer":{"@type":"Answer","text":"Set the range to a decimal value or interpret the integer output as a fraction of the range. For currency-style values, generate integers and divide by 100."}},{"@type":"Question","name":"What is a seeded generator and why would I want one?","acceptedAnswer":{"@type":"Answer","text":"A seeded generator produces the same sequence every time from the same starting value, which is essential for reproducible tests and simulations. Determinism and unpredictability are opposite goals."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A random number generator returns values that cannot be predicted from the ones before them. This tool uses the browser's cryptographic source, which matters when the output is used for anything that could be guessed to someone's advantage: raffles, seeded picks, passphrase components.</p>
+  <p>Two properties determine whether a generator is fit for a purpose. Uniformity means every value in the range is equally likely, so a range of 1–10 should produce each value about 10% of the time. Independence means one draw says nothing about the next. Simple generators that pass basic tests can still fail on a betting site once someone works out the seed, which is why cryptographic sources are the right default where fairness is visible.</p>
+  <p>For repeated draws without duplicates — picking seats, assigning order — use a shuffle rather than repeated sampling, which can return the same value twice. For statistical sampling this tool is fine; for anything requiring reproducibility, such as test fixtures or Monte Carlo studies, a seeded generator is required instead.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./percentage-calculator.html">Percentage Calculator</a>
@@ -102,5 +107,17 @@ generateNumBtn.onclick = function(){
     numResult.textContent = randomNum;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Is this random number generator truly random?</h3>
+<p>It uses the browser's cryptographically secure random source, which produces unpredictable values. It is not a physical entropy source, but for any practical selection purpose it is more than sufficient.</p>
+<h3>Can I generate numbers without duplicates?</h3>
+<p>Repeated sampling can repeat values. For unique selections, shuffle the full list once instead of drawing repeatedly.</p>
+<h3>How do I generate decimals rather than integers?</h3>
+<p>Set the range to a decimal value or interpret the integer output as a fraction of the range. For currency-style values, generate integers and divide by 100.</p>
+<h3>What is a seeded generator and why would I want one?</h3>
+<p>A seeded generator produces the same sequence every time from the same starting value, which is essential for reproducible tests and simulations. Determinism and unpredictability are opposite goals.</p>
+</section>
 </body>
 </html>

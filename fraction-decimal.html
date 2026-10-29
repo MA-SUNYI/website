@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Fraction to Decimal Converter","description":"Free online fraction to decimal converter, input numerator and denominator to convert fraction into decimal value instantly for math homework.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/fraction-decimal.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Fraction to Decimal Converter do?","acceptedAnswer":{"@type":"Answer","text":"Free online fraction to decimal converter, input numerator and denominator to convert fraction into decimal value instantly for math homework."}},{"@type":"Question","name":"Is the Online Fraction to Decimal Converter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Fraction to Decimal Converter | Free Math Calculator">
 <meta property="og:description" content="Free online fraction to decimal converter, input numerator and denominator to convert fraction into decimal value instantly for math homework.">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Fraction to Decimal Converter | Free Math Calculator">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online fraction to decimal converter, input numerator and denominator to convert fraction into decimal value instantly for math homework.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert a fraction to a decimal by hand?","acceptedAnswer":{"@type":"Answer","text":"Divide the top number by the bottom number. For 7/8, work out 7 ÷ 8: 8 goes into 70 eight times (64), leaving 6, which becomes 60; 8 goes in seven times (56), leaving 4, giving 0.875."}},{"@type":"Question","name":"Which fractions give repeating decimals?","acceptedAnswer":{"@type":"Answer","text":"Any fraction whose denominator, once in lowest terms, has a prime factor other than 2 or 5. Thirds, sixths, sevenths and elevenths all repeat; halves, quarters, fifths, eighths, tenths and sixteenths all terminate."}},{"@type":"Question","name":"How many decimal places should I report?","acceptedAnswer":{"@type":"Answer","text":"Enough to preserve the precision of the original value and no more. A measurement given to three significant figures should not produce a decimal quoted to eight."}},{"@type":"Question","name":"Can this tool handle mixed numbers?","acceptedAnswer":{"@type":"Answer","text":"Convert the mixed number to an improper fraction first — for example 2 3/4 becomes 11/4 — then divide. The decimal result is the same either way."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Converting a fraction to a decimal is division, nothing more. The numerator is the dividend, the denominator is the divisor, and the result is the decimal. The only real complexity is knowing when the division terminates and when it repeats forever, because that determines how many digits you can legitimately quote.</p>
+  <p>The rule: a fraction in lowest terms produces a terminating decimal if and only if its denominator factors only into 2s and 5s. So 3/8 terminates (8 = 2³) at 0.375, while 1/3 repeats as 0.333… and 5/6 repeats as 0.8333… Everything else falls into the repeating category. For repeated decimals, writing a vinculum or bracket over the repeating block is more honest than rounding.</p>
+  <p>Rounding matters when the fraction came from a measurement. If 7 of 12 parts failed inspection, 7/12 = 0.58333…, and quoting 0.58 rather than 0.5833 loses real information for a small gain in brevity. Match the precision of the output to the precision of the inputs, and no more.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./fraction-decimal.html">Fraction To Decimal Converter</a>
@@ -103,6 +108,18 @@ calcBtn.onclick=()=>{
     resOut.textContent=`Decimal Result: ${dec}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I convert a fraction to a decimal by hand?</h3>
+<p>Divide the top number by the bottom number. For 7/8, work out 7 ÷ 8: 8 goes into 70 eight times (64), leaving 6, which becomes 60; 8 goes in seven times (56), leaving 4, giving 0.875.</p>
+<h3>Which fractions give repeating decimals?</h3>
+<p>Any fraction whose denominator, once in lowest terms, has a prime factor other than 2 or 5. Thirds, sixths, sevenths and elevenths all repeat; halves, quarters, fifths, eighths, tenths and sixteenths all terminate.</p>
+<h3>How many decimal places should I report?</h3>
+<p>Enough to preserve the precision of the original value and no more. A measurement given to three significant figures should not produce a decimal quoted to eight.</p>
+<h3>Can this tool handle mixed numbers?</h3>
+<p>Convert the mixed number to an improper fraction first — for example 2 3/4 becomes 11/4 — then divide. The decimal result is the same either way.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

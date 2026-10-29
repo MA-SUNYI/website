@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"CAC Calculator","description":"Free customer acquisition cost calculator. Enter marketing and sales spend plus new customers won to get CAC, and compare it against customer lifetime value with the LTV:CAC ratio.","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/cac-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the CAC Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It divides total acquisition spend (marketing plus sales) by the number of new customers won to get your customer acquisition cost, and shows the LTV:CAC ratio when you supply a lifetime value."}},{"@type":"Question","name":"Is the CAC Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="CAC Calculator | Customer Acquisition Cost">
 <meta property="og:description" content="Free CAC calculator: enter marketing and sales spend and new customers won to get customer acquisition cost and how it compares to lifetime value.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="CAC Calculator | Customer Acquisition Cost">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free CAC calculator: enter marketing and sales spend and new customers won to get customer acquisition cost and how it compares to lifetime value.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is customer acquisition cost calculated?","acceptedAnswer":{"@type":"Answer","text":"Total sales and marketing spend in a period, divided by new customers acquired in the same period. Include salaries, ad spend and tools, not just advertising."}},{"@type":"Question","name":"What is a good LTV to CAC ratio?","acceptedAnswer":{"@type":"Answer","text":"Three to one is the common benchmark. Below 1:1 each acquisition loses money; above 5:1 may mean growth is underfunded."}},{"@type":"Question","name":"Should organic customers be included in CAC?","acceptedAnswer":{"@type":"Answer","text":"In the blended figure, yes. But calculate per channel as well, since a strong organic channel can mask an unprofitable paid one."}},{"@type":"Question","name":"Does CAC include sales salaries?","acceptedAnswer":{"@type":"Answer","text":"It should. Fully loaded acquisition cost includes sales team salaries, tooling and commissions alongside ad spend."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Customer acquisition cost (CAC) is total sales and marketing spend divided by the number of new customers acquired in the same period. It answers whether the business can afford its own growth.</p>
+  <p>Spend $60,000 on marketing and sales in a quarter and acquire 300 customers, and CAC is $200. If average customer lifetime value is $900 with a 30% gross margin, the customer contributes $270 in gross profit — leaving $70 of headroom. If CAC exceeds that contribution, every new customer destroys value, and growth simply accelerates the loss.</p>
+  <p>The widely used benchmark is a lifetime value to CAC ratio of at least 3:1. Higher than that may indicate underinvestment in growth; lower than 1:1 means the acquisition is unprofitable. Splitting CAC by channel matters more than the blended figure, because a strong organic channel can hide a paid channel that loses money on every customer.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./ltv-calculator.html">LTV</a>
@@ -128,5 +133,17 @@ calcBtn.onclick = function(){
     resOut.innerHTML = html;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How is customer acquisition cost calculated?</h3>
+<p>Total sales and marketing spend in a period, divided by new customers acquired in the same period. Include salaries, ad spend and tools, not just advertising.</p>
+<h3>What is a good LTV to CAC ratio?</h3>
+<p>Three to one is the common benchmark. Below 1:1 each acquisition loses money; above 5:1 may mean growth is underfunded.</p>
+<h3>Should organic customers be included in CAC?</h3>
+<p>In the blended figure, yes. But calculate per channel as well, since a strong organic channel can mask an unprofitable paid one.</p>
+<h3>Does CAC include sales salaries?</h3>
+<p>It should. Fully loaded acquisition cost includes sales team salaries, tooling and commissions alongside ad spend.</p>
+</section>
 </body>
 </html>

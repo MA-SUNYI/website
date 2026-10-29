@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Percentage Calculator","description":"Free online percentage calculator: find percentage of a number, percentage increase/decrease, and percentage difference instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/percent-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Percentage Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online percentage calculator: find percentage of a number, percentage increase/decrease, and percentage difference instantly."}},{"@type":"Question","name":"Is the Online Percentage Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Percentage Calculator | Free % Tool">
 <meta property="og:description" content="Free online percentage calculator: find percentage of a number, percentage increase/decrease, and percentage difference instantly.">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Percentage Calculator | Free % Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online percentage calculator: find percentage of a number, percentage increase/decrease, and percentage difference instantly.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate what percentage one number is of another?","acceptedAnswer":{"@type":"Answer","text":"Divide the part by the whole and multiply by 100. If 45 out of 250 students passed, 45 ÷ 250 = 0.18, so 18% passed. The calculator here handles the reverse direction — finding the part when you already know the percentage."}},{"@type":"Question","name":"What is the difference between percentage change and percentage points?","acceptedAnswer":{"@type":"Answer","text":"Percentage change describes relative movement; percentage points describe an absolute difference between two percentages. Going from 4% to 6% is a rise of 2 percentage points, but a change of 50%."}},{"@type":"Question","name":"Why does my result have two decimal places?","acceptedAnswer":{"@type":"Answer","text":"The output is rounded to two decimals, which is the standard for currency and most reporting. The underlying calculation is not rounded before display, so chaining results will not accumulate error from the rounding step."}},{"@type":"Question","name":"Can I enter a percentage greater than 100?","acceptedAnswer":{"@type":"Answer","text":"Yes. A percentage above 100 simply means the result exceeds the base number, which is exactly what you want for markups, growth multiples and similar calculations."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A percentage is a fraction with 100 underneath. Whatever result this tool returns, the machine did one multiplication: the base number times the percentage divided by one hundred. That single operation accounts for a surprising share of everyday arithmetic, which is why percentage questions come up in shopping, tips, tax, grades and business reporting alike.</p>
+  <p>The formula is <b>Result = Base × (Percentage ÷ 100)</b>. To find 18% of 250, convert 18% to 0.18 and multiply: 250 × 0.18 = <b>45</b>. Working in decimal form is exactly how you would lay it out in a spreadsheet, so the habit carries over to Excel or Google Sheets without adjustment.</p>
+  <p>The most common error is assuming a percentage change is reversible. A price that rises 20% and then falls 20% does not land back where it began: 100 becomes 120, then falls to 96. The rise was calculated on the smaller number, so the fall was taken off a larger base. Whenever a percentage is applied twice in opposite directions, the base has changed in between.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./percent-calculator.html">Percentage Calculator</a>
@@ -104,6 +109,18 @@ calcBtn.onclick = function(){
     resOut.textContent = `${percent}% of ${base} = ${result.toFixed(2)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I calculate what percentage one number is of another?</h3>
+<p>Divide the part by the whole and multiply by 100. If 45 out of 250 students passed, 45 ÷ 250 = 0.18, so 18% passed. The calculator here handles the reverse direction — finding the part when you already know the percentage.</p>
+<h3>What is the difference between percentage change and percentage points?</h3>
+<p>Percentage change describes relative movement; percentage points describe an absolute difference between two percentages. Going from 4% to 6% is a rise of 2 percentage points, but a change of 50%.</p>
+<h3>Why does my result have two decimal places?</h3>
+<p>The output is rounded to two decimals, which is the standard for currency and most reporting. The underlying calculation is not rounded before display, so chaining results will not accumulate error from the rounding step.</p>
+<h3>Can I enter a percentage greater than 100?</h3>
+<p>Yes. A percentage above 100 simply means the result exceeds the base number, which is exactly what you want for markups, growth multiples and similar calculations.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

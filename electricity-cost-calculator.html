@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Electricity Cost Calculator","description":"Free electricity cost calculator. Enter an appliance's wattage, hours of use per day and your electricity rate per kWh to see the daily, monthly and yearly running cost.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/electricity-cost-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Electricity Cost Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free electricity cost calculator. Enter the wattage of an appliance, how many hours a day you use it and your electricity rate per kWh to see how much energy it uses and what it costs per day, month and year."}},{"@type":"Question","name":"Is the Electricity Cost Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Electricity Cost Calculator | Appliance Running Cost">
 <meta property="og:description" content="Free electricity cost calculator: enter watts, hours per day and your rate per kWh to see daily, monthly and yearly running cost.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Electricity Cost Calculator | Appliance Running Cost">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free electricity cost calculator: enter watts, hours per day and your rate per kWh to see daily, monthly and yearly running cost.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate the cost of running an appliance?","acceptedAnswer":{"@type":"Answer","text":"Watts ÷ 1,000 × hours used × price per kWh. A 1,500 W heater for 2 hours at $0.16 per kWh is 1.5 × 2 × 0.16 = $0.48."}},{"@type":"Question","name":"What uses the most electricity at home?","acceptedAnswer":{"@type":"Answer","text":"Heating and cooling typically lead, followed by water heating and refrigeration. Together these usually account for over 60% of consumption."}},{"@type":"Question","name":"What is a kilowatt-hour?","acceptedAnswer":{"@type":"Answer","text":"One kilowatt of power used for one hour. It is the unit electricity is billed in."}},{"@type":"Question","name":"Is standby power worth worrying about?","acceptedAnswer":{"@type":"Answer","text":"It can be 5% to 10% of usage. Switching off seldom-used devices helps, but heating and cooling remain the larger lever."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Electricity cost is the product of power, time and price. A device rated at 1,500 watts running for two hours uses 3 kilowatt-hours, and at $0.16 per kWh that costs $0.48. The arithmetic is trivial; knowing which appliances dominate the bill is what actually changes behaviour.</p>
+  <p>Ranked by typical monthly consumption: heating and cooling usually lead at 30% to 50% of a household bill, followed by water heating at 12% to 18%, then refrigeration continuously at 5% to 10%. Large single loads matter too — an electric dryer at 3,000 to 5,000 watts used twenty times a month can exceed the cost of every light in the house combined.</p>
+  <p>Standby power is the invisible category. Devices drawing a few watts continuously can account for 5% to 10% of household consumption. It is rarely worth buying hardware to eliminate it, but it makes the case for switching off or unplugging seldom-used equipment.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./water-bill-calculator.html">Water Bill</a>
@@ -118,5 +123,17 @@ calcBtn.onclick = function(){
         `Yearly cost: $${fmt(cYear)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I calculate the cost of running an appliance?</h3>
+<p>Watts ÷ 1,000 × hours used × price per kWh. A 1,500 W heater for 2 hours at $0.16 per kWh is 1.5 × 2 × 0.16 = $0.48.</p>
+<h3>What uses the most electricity at home?</h3>
+<p>Heating and cooling typically lead, followed by water heating and refrigeration. Together these usually account for over 60% of consumption.</p>
+<h3>What is a kilowatt-hour?</h3>
+<p>One kilowatt of power used for one hour. It is the unit electricity is billed in.</p>
+<h3>Is standby power worth worrying about?</h3>
+<p>It can be 5% to 10% of usage. Switching off seldom-used devices helps, but heating and cooling remain the larger lever.</p>
+</section>
 </body>
 </html>

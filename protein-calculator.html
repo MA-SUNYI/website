@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Protein Calculator","description":"Free online protein calculator. Estimate your daily protein needs in grams from body weight and goal — muscle gain, maintenance or fat loss.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/protein-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Protein Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online protein calculator. Estimate your daily protein needs in grams from body weight and goal — muscle gain, maintenance or fat loss."}},{"@type":"Question","name":"Is the Online Protein Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Protein Calculator | Daily Protein Intake">
 <meta property="og:description" content="Free online protein calculator. Estimate your daily protein needs in grams from body weight and goal — muscle gain, maintenance or fat loss.">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Protein Calculator | Daily Protein Intake">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online protein calculator. Estimate your daily protein needs in grams from body weight and goal — muscle gain, maintenance or fat loss.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much protein do I need per day?","acceptedAnswer":{"@type":"Answer","text":"Roughly 0.8 g/kg as a minimum, 1.2–1.6 g/kg for regular exercisers, and up to 2.2 g/kg for strength athletes. Those in a calorie deficit should aim for the higher end."}},{"@type":"Question","name":"Is too much protein harmful?","acceptedAnswer":{"@type":"Answer","text":"For healthy kidneys, research does not support harm at these levels. People with existing kidney disease should follow medical advice instead."}},{"@type":"Question","name":"Does protein timing matter?","acceptedAnswer":{"@type":"Answer","text":"Total daily intake matters most. Spreading it across three or four meals of 25–40 g supports muscle protein synthesis better than concentrating it in one meal."}},{"@type":"Question","name":"Can I get enough protein from plants?","acceptedAnswer":{"@type":"Answer","text":"Yes, with attention to variety. Combining legumes, grains, soy and seeds across the day supplies the full amino acid profile."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Protein needs scale with body weight and activity, and the widely quoted 0.8 g per kilogram figure is a minimum to prevent deficiency, not an optimal target. For anyone training regularly, needs sit considerably higher.</p>
+  <p>General ranges used in sports nutrition: sedentary adults 0.8–1.0 g/kg, recreational exercisers 1.2–1.6 g/kg, strength athletes 1.6–2.2 g/kg, and people in a calorie deficit 1.8–2.4 g/kg to preserve muscle while losing fat. A 75 kg person training four times a week falls in the middle band, needing roughly 90–120 g a day.</p>
+  <p>Distribution matters less than total intake, but it is not irrelevant. Spreading protein across three or four meals of 25–40 g each supports muscle protein synthesis better than a single large serving, which appears to saturate at around 0.4 g/kg per meal. For most people the practical answer is simple: hit the daily total, and do not leave it all to dinner.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./calorie-calculator.html">Calorie Calculator</a>
@@ -125,6 +130,18 @@ calcBtn.onclick = function(){
         `(${g} g per kg of body weight)`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How much protein do I need per day?</h3>
+<p>Roughly 0.8 g/kg as a minimum, 1.2–1.6 g/kg for regular exercisers, and up to 2.2 g/kg for strength athletes. Those in a calorie deficit should aim for the higher end.</p>
+<h3>Is too much protein harmful?</h3>
+<p>For healthy kidneys, research does not support harm at these levels. People with existing kidney disease should follow medical advice instead.</p>
+<h3>Does protein timing matter?</h3>
+<p>Total daily intake matters most. Spreading it across three or four meals of 25–40 g supports muscle protein synthesis better than concentrating it in one meal.</p>
+<h3>Can I get enough protein from plants?</h3>
+<p>Yes, with attention to variety. Combining legumes, grains, soy and seeds across the day supplies the full amino acid profile.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

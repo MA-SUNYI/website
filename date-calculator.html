@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Date Calculator","description":"Free online date calculator: add or subtract days, weeks or months from any date and see the resulting calendar date and weekday instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/date-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Date Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online date calculator: add or subtract days, weeks or months from any date and see the resulting calendar date and weekday instantly."}},{"@type":"Question","name":"Is the Online Date Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Date Calculator | Add or Subtract Days, Weeks, Months">
 <meta property="og:description" content="Free online date calculator: add or subtract days, weeks or months from any date and see the resulting calendar date and weekday instantly.">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Date Calculator | Add or Subtract Days, Weeks, Months">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online date calculator: add or subtract days, weeks or months from any date and see the resulting calendar date and weekday instantly.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I add 90 days to a date?","acceptedAnswer":{"@type":"Answer","text":"Enter the starting date and add 90 days. The result accounts for month lengths automatically, so you do not need to count each month by hand."}},{"@type":"Question","name":"Why does adding one month to January 31 give February 28?","acceptedAnswer":{"@type":"Answer","text":"Because February has no 31st day, so the result is clamped to the last valid day of the target month. In a leap year it lands on the 29th."}},{"@type":"Question","name":"Does the calculator handle leap years?","acceptedAnswer":{"@type":"Answer","text":"Yes. Spans that cross 29 February are one day longer, and the date arithmetic reflects that correctly."}},{"@type":"Question","name":"What is the difference between elapsed days and calendar days?","acceptedAnswer":{"@type":"Answer","text":"Elapsed days counts every day passed, calendar days counts date boundaries crossed. Adding a week always gives seven elapsed days but may shift the calendar date by eight."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>The date calculator handles the arithmetic that calendars make awkward: adding or subtracting days, weeks or months from a given date, and measuring the span between two dates in the unit you actually care about.</p>
+  <p>Month arithmetic is where the complexity lives. Adding one month to 31 January has no clean answer — February has no 31st — and implementations conventionally clamp to the last valid day, giving 28 February (or 29 in a leap year). Adding a month to 31 March gives 30 April by the same rule. This is correct behaviour, not a bug, and it is why 'one month later' is not a single well-defined duration.</p>
+  <p>Leap years add the second wrinkle. A span that includes 29 February is one day longer than the same span in an ordinary year, so the same 365-day count lands on a different calendar date. Any calculation across a multi-year span has to account for this, and a tool that returned the same answer regardless would be quietly wrong.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./date-difference-calculator.html">Date Difference Calculator</a>
@@ -149,6 +154,18 @@ calcBtn.onclick = function(){
         `Weekday: ${weekdays[d.getDay()]}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I add 90 days to a date?</h3>
+<p>Enter the starting date and add 90 days. The result accounts for month lengths automatically, so you do not need to count each month by hand.</p>
+<h3>Why does adding one month to January 31 give February 28?</h3>
+<p>Because February has no 31st day, so the result is clamped to the last valid day of the target month. In a leap year it lands on the 29th.</p>
+<h3>Does the calculator handle leap years?</h3>
+<p>Yes. Spans that cross 29 February are one day longer, and the date arithmetic reflects that correctly.</p>
+<h3>What is the difference between elapsed days and calendar days?</h3>
+<p>Elapsed days counts every day passed, calendar days counts date boundaries crossed. Adding a week always gives seven elapsed days but may shift the calendar date by eight.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

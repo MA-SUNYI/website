@@ -34,9 +34,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Hex to RGB Color Converter","description":"Free online hex to RGB converter. Paste a HEX color code and get the RGB and HSL values plus a live color preview. Also converts RGB back to HEX.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/hex-to-rgb-converter.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Hex to RGB Color Converter do?","acceptedAnswer":{"@type":"Answer","text":"Free online hex to RGB converter. Paste a HEX color code and get the RGB and HSL values plus a live color preview. Also converts RGB back to HEX."}},{"@type":"Question","name":"Is the Online Hex to RGB Color Converter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Hex to RGB Color Converter | Free Tool">
 <meta property="og:description" content="Free online hex to RGB converter. Paste a HEX color code and get the RGB and HSL values plus a live color preview. Also converts RGB back to HEX.">
 <meta property="og:type" content="website">
@@ -49,8 +46,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Hex to RGB Color Converter | Free Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online hex to RGB converter. Paste a HEX color code and get the RGB and HSL values plus a live color preview. Also converts RGB back to HEX.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I read a hex colour code?","acceptedAnswer":{"@type":"Answer","text":"Split it into three pairs after the hash. The first pair is red, the second green, the third blue, each from 00 to FF. #00FF00 is pure green and #FFFFFF is white."}},{"@type":"Question","name":"What does the alpha channel mean in an 8-digit hex code?","acceptedAnswer":{"@type":"Answer","text":"The final pair sets opacity on a 0–255 scale, where FF is fully opaque and 00 fully transparent. CSS also accepts a percentage alpha in rgba() syntax for the same effect."}},{"@type":"Question","name":"Why do hex and rgb give different-looking results?","acceptedAnswer":{"@type":"Answer","text":"They should not. If they differ, check for a shorthand expansion error — #ABC is #AABBCC, not #A0B0C0 — or a colour profile applied by the design software."}},{"@type":"Question","name":"Is hex exclusive to CSS?","acceptedAnswer":{"@type":"Answer","text":"No. It appears in Android resource files, Unity and Godot engine colour pickers, image editors and hardware specifications. The arithmetic is identical everywhere."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Hexadecimal colour codes pack three 8-bit values into six characters. Each pair of hex digits represents one channel — red, green and blue in that order — and each pair converts to a decimal number between 0 and 255. Reading them correctly is a routine need for anyone editing CSS, game assets or design tokens.</p>
+  <p>The conversion is positional, exactly like binary but with sixteen digits per place. Take #FF8C00: FF = 15×16 + 15 = <b>255</b>, 8C = 8×16 + 12 = <b>140</b>, 00 = <b>0</b>. That gives rgb(255, 140, 0), the colour known as dark orange. The multiplier 16 on the first digit is the only thing to remember, and after a dozen conversions it becomes automatic.</p>
+  <p>Shorthand notation compresses repeated digits: #F80 is identical to #FF8800, because each digit is doubled. Modern CSS also accepts #FX (four digits) where the last is alpha, and eight-digit hex where the final pair carries opacity — #FF000080 is red at roughly 50% transparency, since 0x80 is 128 out of 255.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./pixel-size-converter.html">Pixel Size Converter</a>
@@ -158,6 +163,18 @@ rgbBtn.onclick = function(){
     swatch.style.background = hex;
 };
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I read a hex colour code?</h3>
+<p>Split it into three pairs after the hash. The first pair is red, the second green, the third blue, each from 00 to FF. #00FF00 is pure green and #FFFFFF is white.</p>
+<h3>What does the alpha channel mean in an 8-digit hex code?</h3>
+<p>The final pair sets opacity on a 0–255 scale, where FF is fully opaque and 00 fully transparent. CSS also accepts a percentage alpha in rgba() syntax for the same effect.</p>
+<h3>Why do hex and rgb give different-looking results?</h3>
+<p>They should not. If they differ, check for a shorthand expansion error — #ABC is #AABBCC, not #A0B0C0 — or a colour profile applied by the design software.</p>
+<h3>Is hex exclusive to CSS?</h3>
+<p>No. It appears in Android resource files, Unity and Godot engine colour pickers, image editors and hardware specifications. The arithmetic is identical everywhere.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

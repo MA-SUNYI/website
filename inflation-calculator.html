@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Inflation Calculator","description":"Free inflation calculator. Enter an amount, an annual inflation rate and a number of years to see the future cost and how much purchasing power is lost.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/inflation-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Inflation Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free inflation calculator. Enter an amount, an annual inflation rate and a number of years to see what that amount will cost in the future and what its money will be worth in today's terms."}},{"@type":"Question","name":"Is the Inflation Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Inflation Calculator | Future Cost & Purchasing Power">
 <meta property="og:description" content="Free inflation calculator: see what an amount will cost in the future at a given inflation rate, and how much purchasing power it loses.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Inflation Calculator | Future Cost & Purchasing Power">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free inflation calculator: see what an amount will cost in the future at a given inflation rate, and how much purchasing power it loses.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate future cost from inflation?","acceptedAnswer":{"@type":"Answer","text":"Multiply the current cost by (1 + rate)^years. At 3% for ten years, $100 becomes 100 × 1.03^10 = $134.39."}},{"@type":"Question","name":"What is the difference between nominal and real returns?","acceptedAnswer":{"@type":"Answer","text":"Nominal is the raw return; real subtracts inflation. A 6% return during 3% inflation is roughly a 2.9% real gain."}},{"@type":"Question","name":"Is my personal inflation the same as the official rate?","acceptedAnswer":{"@type":"Answer","text":"No. Official inflation is an average across many goods. Households with high housing or healthcare costs often face higher personal inflation."}},{"@type":"Question","name":"How does inflation affect savings accounts?","acceptedAnswer":{"@type":"Answer","text":"If the account pays less than the inflation rate, the real value of the balance falls even though the nominal balance grows."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Inflation measures how much the purchasing power of money falls over time. Expressed as a rate, 3% annual inflation means something costing $100 today will cost $103 next year — the same money buys less, and the gap compounds.</p>
+  <p>Over long horizons the compounding is severe. At 3% annual inflation, $100,000 of purchasing power becomes about $74,400 after ten years and roughly $55,400 after twenty. Put differently, to have the purchasing power of $100,000 in twenty years, you would need about $180,600. That is the number that should drive retirement planning, and it is the one most easily forgotten.</p>
+  <p>The official inflation figure is an average across a basket of goods, so personal inflation can differ substantially. Households spending a large share of income on housing, healthcare or education typically experience higher inflation than the headline rate, because those categories have risen faster than the basket average.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./compound-interest-calculator.html">Compound Interest</a>
@@ -117,5 +122,17 @@ calcBtn.onclick = function(){
         `Inflation factor over ${y} yr: ${factor.toFixed(3)}×`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I calculate future cost from inflation?</h3>
+<p>Multiply the current cost by (1 + rate)^years. At 3% for ten years, $100 becomes 100 × 1.03^10 = $134.39.</p>
+<h3>What is the difference between nominal and real returns?</h3>
+<p>Nominal is the raw return; real subtracts inflation. A 6% return during 3% inflation is roughly a 2.9% real gain.</p>
+<h3>Is my personal inflation the same as the official rate?</h3>
+<p>No. Official inflation is an average across many goods. Households with high housing or healthcare costs often face higher personal inflation.</p>
+<h3>How does inflation affect savings accounts?</h3>
+<p>If the account pays less than the inflation rate, the real value of the balance falls even though the nominal balance grows.</p>
+</section>
 </body>
 </html>

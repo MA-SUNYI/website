@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Time Duration Calculator","description":"Free online time duration calculator. Enter a start and end time to get the exact hours, minutes and seconds between them, for work, study and shifts.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/time-duration-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Time Duration Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online time duration calculator. Enter a start and end time to get the exact hours, minutes and seconds between them, for work, study and shifts."}},{"@type":"Question","name":"Is the Online Time Duration Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Time Duration Calculator | Hours, Minutes, Seconds">
 <meta property="og:description" content="Free online time duration calculator. Enter a start and end time to get the exact hours, minutes and seconds between them, for work, study and shifts.">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Time Duration Calculator | Hours, Minutes, Seconds">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online time duration calculator. Enter a start and end time to get the exact hours, minutes and seconds between them, for work, study and shifts.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate a shift that crosses midnight?","acceptedAnswer":{"@type":"Answer","text":"Treat the end time as belonging to the following day, effectively adding 24 hours before subtracting. A 22:30 to 06:00 shift is 7 hours 30 minutes."}},{"@type":"Question","name":"How do I convert 7 hours 45 minutes to decimal?","acceptedAnswer":{"@type":"Answer","text":"Divide the minutes by 60: 45 ÷ 60 = 0.75, giving 7.75 hours. This form is what payroll systems usually require."}},{"@type":"Question","name":"Should unpaid breaks be subtracted before or after?","acceptedAnswer":{"@type":"Answer","text":"Compute total duration first, then subtract the break. Adjusting the timestamps instead tends to produce errors that are hard to trace later."}},{"@type":"Question","name":"Why is my total minutes off by one?","acceptedAnswer":{"@type":"Answer","text":"Usually because seconds were truncated rather than rounded. Convert to a common unit before summing if precise totals matter."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>The duration calculator works in clock time rather than dates: given a start and end time, it returns the elapsed hours and minutes. It is the tool for timesheets, session lengths, video runtimes and shift calculations.</p>
+  <p>The main complication is crossing midnight. A shift from 22:30 to 06:00 is seven and a half hours, not minus sixteen and a half. Any correct implementation has to detect that the end time is earlier than the start and add 24 hours before subtracting. Manual calculation fails here often enough that it is worth checking any result that looks negative.</p>
+  <p>Paid breaks and unpaid time need separate treatment. If a shift includes 30 unpaid minutes, subtract them after computing total duration rather than trying to adjust the start or end time, which is where most timesheet errors originate. For totals across several days, sum the daily durations and then convert to decimal hours at the end — decimal conversion at each step invites rounding drift.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./date-difference-calculator.html">Date Difference Calculator</a>
@@ -128,6 +133,18 @@ calcBtn.onclick = function(){
         `Decimal hours: ${dec} h`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I calculate a shift that crosses midnight?</h3>
+<p>Treat the end time as belonging to the following day, effectively adding 24 hours before subtracting. A 22:30 to 06:00 shift is 7 hours 30 minutes.</p>
+<h3>How do I convert 7 hours 45 minutes to decimal?</h3>
+<p>Divide the minutes by 60: 45 ÷ 60 = 0.75, giving 7.75 hours. This form is what payroll systems usually require.</p>
+<h3>Should unpaid breaks be subtracted before or after?</h3>
+<p>Compute total duration first, then subtract the break. Adjusting the timestamps instead tends to produce errors that are hard to trace later.</p>
+<h3>Why is my total minutes off by one?</h3>
+<p>Usually because seconds were truncated rather than rounded. Convert to a common unit before summing if precise totals matter.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

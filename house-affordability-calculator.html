@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"House Affordability Calculator","description":"Free house affordability calculator. Enter annual income, monthly debts, down payment and a mortgage rate to see the maximum home price you can afford.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/house-affordability-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the House Affordability Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free house affordability calculator. Enter your annual income, monthly debts, down payment and mortgage rate to see the maximum home price you are likely to qualify for, based on lender debt-to-income limits."}},{"@type":"Question","name":"Is the House Affordability Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="House Affordability Calculator | How Much Home You Can Buy">
 <meta property="og:description" content="Free house affordability calculator: enter income, debts and down payment to see the maximum home price lenders are likely to approve.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="House Affordability Calculator | How Much Home You Can Buy">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free house affordability calculator: enter income, debts and down payment to see the maximum home price lenders are likely to approve.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much house can I afford?","acceptedAnswer":{"@type":"Answer","text":"A common guideline is a payment under 28% of gross monthly income. That figure supports a loan of roughly 45 times the monthly housing budget at current rates, though taxes and insurance reduce the usable amount."}},{"@type":"Question","name":"Should I borrow the maximum the lender approves?","acceptedAnswer":{"@type":"Answer","text":"Usually not. Approval reflects the lender's risk tolerance, not your budget. A payment at the approval ceiling leaves little room for maintenance, savings or income changes."}},{"@type":"Question","name":"What is a debt-to-income ratio?","acceptedAnswer":{"@type":"Answer","text":"Total monthly debt payments divided by gross monthly income. Most lenders prefer it under 36% and rarely exceed 43% for qualified mortgages."}},{"@type":"Question","name":"How much should I keep in reserve after buying?","acceptedAnswer":{"@type":"Answer","text":"Three to six months of expenses is the usual recommendation, plus a separate allowance for immediate repairs and furnishing."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Affordability is not the largest loan a lender will approve. It is the payment you can carry through a job change, a repair bill and a rate adjustment without becoming financially fragile. The two numbers are frequently far apart.</p>
+  <p>The conventional guideline is that housing should stay under 28% of gross monthly income, with total debt under 36% — though lenders will often approve to 43% or higher. On $9,000 gross monthly income, 28% is $2,520, which at 6.5% over 30 years supports a loan of roughly $400,000. At the 43% ceiling the loan figure climbs above $600,000, but the household would be spending nearly half its income on debt service.</p>
+  <p>The gap between those two numbers is where buyers get hurt. Approval is a lender's risk assessment, not a household budget. Running the calculation at 28% and again at 36% gives a useful range: the lower figure is comfortable, the upper figure is achievable but leaves less room for everything else.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./mortgage-calculator.html">Mortgage</a>
@@ -165,5 +170,17 @@ calcBtn.onclick = function(){
         `<table><thead><tr><th>DTI limit</th><th>Max housing</th><th>Max loan</th><th>Max price</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How much house can I afford?</h3>
+<p>A common guideline is a payment under 28% of gross monthly income. That figure supports a loan of roughly 45 times the monthly housing budget at current rates, though taxes and insurance reduce the usable amount.</p>
+<h3>Should I borrow the maximum the lender approves?</h3>
+<p>Usually not. Approval reflects the lender's risk tolerance, not your budget. A payment at the approval ceiling leaves little room for maintenance, savings or income changes.</p>
+<h3>What is a debt-to-income ratio?</h3>
+<p>Total monthly debt payments divided by gross monthly income. Most lenders prefer it under 36% and rarely exceed 43% for qualified mortgages.</p>
+<h3>How much should I keep in reserve after buying?</h3>
+<p>Three to six months of expenses is the usual recommendation, plus a separate allowance for immediate repairs and furnishing.</p>
+</section>
 </body>
 </html>

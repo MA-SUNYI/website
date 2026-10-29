@@ -34,9 +34,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Gas Mileage Calculator","description":"Free online gas mileage calculator: compute MPG or L/100km from distance and fuel. Supports US and metric units for cars, trucks and motorcycles.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/gas-mileage-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Gas Mileage Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online gas mileage calculator: compute MPG or L/100km from distance and fuel. Supports US and metric units for cars, trucks and motorcycles."}},{"@type":"Question","name":"Is the Online Gas Mileage Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Gas Mileage Calculator | MPG &amp; L/100km Tool">
 <meta property="og:description" content="Free online gas mileage calculator: compute MPG or L/100km from distance and fuel. Supports US and metric units for cars, trucks and motorcycles.">
 <meta property="og:type" content="website">
@@ -49,8 +46,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Gas Mileage Calculator | MPG &amp; L/100km Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online gas mileage calculator: compute MPG or L/100km from distance and fuel. Supports US and metric units for cars, trucks and motorcycles.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate mpg?","acceptedAnswer":{"@type":"Answer","text":"Divide miles driven by gallons used to refill. Fill to full, reset the trip, drive, refill to full, then divide."}},{"@type":"Question","name":"Why does my car's computer show better mileage than I calculate?","acceptedAnswer":{"@type":"Answer","text":"Manufacturer systems often estimate rather than measure precisely, and tend to be optimistic by a few percent. Hand calculation across several tanks is more accurate."}},{"@type":"Question","name":"Does driving style really matter?","acceptedAnswer":{"@type":"Answer","text":"Yes, substantially. Aggressive acceleration and high-speed cruising can reduce economy by 15% to 30% compared with moderate driving."}},{"@type":"Question","name":"What is the difference between mpg and L/100km?","acceptedAnswer":{"@type":"Answer","text":"They are inverse measures. Higher mpg is better; lower L/100km is better. Because the relationship is inverse, improving from 15 to 20 mpg saves more fuel than improving from 35 to 40 mpg."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Fuel economy is simple arithmetic — distance divided by fuel used — but the cost of poor economy compounds in ways that are easy to underrate. A vehicle returning 24 mpg instead of 30 mpg costs about 25% more in fuel for the same distance.</p>
+  <p>For 12,000 miles a year at $3.60 per gallon: at 30 mpg the annual fuel cost is $1,440; at 24 mpg it is $1,800; at 18 mpg it is $2,400. The difference between the best and worst case is $960 a year, which over a five-year ownership is nearly $5,000 — enough to outweigh a substantial portion of the purchase price difference between models.</p>
+  <p>Measurement matters as much as the calculation. The trip-computer figure is optimistic in most vehicles, sometimes by 5%. The reliable method is to fill the tank, reset the trip meter, drive normally, then divide miles driven by the gallons needed to refill. Doing that across three tanks gives a figure accurate enough to trust.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./fuel-cost-calculator.html">Fuel Cost Calculator</a>
@@ -134,6 +139,18 @@ calcBtn.onclick = function(){
     }
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I calculate mpg?</h3>
+<p>Divide miles driven by gallons used to refill. Fill to full, reset the trip, drive, refill to full, then divide.</p>
+<h3>Why does my car's computer show better mileage than I calculate?</h3>
+<p>Manufacturer systems often estimate rather than measure precisely, and tend to be optimistic by a few percent. Hand calculation across several tanks is more accurate.</p>
+<h3>Does driving style really matter?</h3>
+<p>Yes, substantially. Aggressive acceleration and high-speed cruising can reduce economy by 15% to 30% compared with moderate driving.</p>
+<h3>What is the difference between mpg and L/100km?</h3>
+<p>They are inverse measures. Higher mpg is better; lower L/100km is better. Because the relationship is inverse, improving from 15 to 20 mpg saves more fuel than improving from 35 to 40 mpg.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

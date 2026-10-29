@@ -30,9 +30,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Random Name Picker","description":"Free random name picker to draw names randomly. Perfect for raffles, classroom selection, games and group activities.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/random-name-picker.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Random Name Picker do?","acceptedAnswer":{"@type":"Answer","text":"Free random name picker to draw names randomly. Perfect for raffles, classroom selection, games and group activities."}},{"@type":"Question","name":"Is the Random Name Picker free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Random Name Picker | Free Online Name Selector Tool">
 <meta property="og:description" content="Free random name picker to draw names randomly. Perfect for raffles, classroom selection, games and group activities.">
 <meta property="og:type" content="website">
@@ -45,8 +42,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Random Name Picker | Free Online Name Selector Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free random name picker to draw names randomly. Perfect for raffles, classroom selection, games and group activities.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I pick multiple winners without repeats?","acceptedAnswer":{"@type":"Answer","text":"Use the no-replacement setting. Each name is removed from the pool once drawn, so the maximum number of winners equals the number of entries."}},{"@type":"Question","name":"Can I weight some names more heavily?","acceptedAnswer":{"@type":"Answer","text":"The picker draws uniformly. For weighting, duplicate the entries in proportion to their weight before drawing."}},{"@type":"Question","name":"Why does my list show duplicate names?","acceptedAnswer":{"@type":"Answer","text":"Usually because of trailing spaces or different capitalisation, which are treated as separate entries. Trim and standardise the list first."}},{"@type":"Question","name":"Is this suitable for a public giveaway?","acceptedAnswer":{"@type":"Answer","text":"Yes, provided you publish the full entry list before drawing and generate the winner in view of the audience so the draw can be verified."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>The name picker draws one or more names from a list you supply, which makes it a small step above a number generator: the mapping from entries to results is visible and verifiable. That transparency is the whole point in classrooms, standups and giveaway draws.</p>
+  <p>Paste one name per line, set how many winners you need, and draw. If the same person cannot win twice, use the no-replacement mode so each pick is removed from the pool. For a giveaway, publish the list first and draw afterwards; drawing before the list is fixed is the most common way online contests become indefensible.</p>
+  <p>Two practical notes. Whitespace and trailing spaces cause names to be treated as distinct entries, so trim the list before pasting. And for large lists, keep the source somewhere durable — a spreadsheet export is far easier to audit later than a list typed into a box.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./random-name-picker.html">Random Name Picker</a>
@@ -103,6 +108,18 @@ clearBtn.onclick = function(){
     pickResult.textContent = "Selected name will appear here";
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I pick multiple winners without repeats?</h3>
+<p>Use the no-replacement setting. Each name is removed from the pool once drawn, so the maximum number of winners equals the number of entries.</p>
+<h3>Can I weight some names more heavily?</h3>
+<p>The picker draws uniformly. For weighting, duplicate the entries in proportion to their weight before drawing.</p>
+<h3>Why does my list show duplicate names?</h3>
+<p>Usually because of trailing spaces or different capitalisation, which are treated as separate entries. Trim and standardise the list first.</p>
+<h3>Is this suitable for a public giveaway?</h3>
+<p>Yes, provided you publish the full entry list before drawing and generate the winner in view of the audience so the draw can be verified.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

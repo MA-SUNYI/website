@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Tip Split Calculator","description":"Free online tip split calculator. Split a bill with a tip among any number of people and see each person's share, the tip amount and the total.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/tip-split-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Tip Split Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online tip split calculator. Split a bill with a tip among any number of people and see each person's share, the tip amount and the total."}},{"@type":"Question","name":"Is the Online Tip Split Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Tip Split Calculator | Split Bill &amp; Tip">
 <meta property="og:description" content="Free online tip split calculator. Split a bill with a tip among any number of people and see each person's share, the tip amount and the total.">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Tip Split Calculator | Split Bill &amp; Tip">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online tip split calculator. Split a bill with a tip among any number of people and see each person's share, the tip amount and the total.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I tip on the pre-tax or post-tax amount?","acceptedAnswer":{"@type":"Answer","text":"Either is defensible. Tipping on the subtotal is the more common convention; tipping on the total adds a small amount and is widely considered generous."}},{"@type":"Question","name":"How do I split a bill with tip?","acceptedAnswer":{"@type":"Answer","text":"Apply the tip to the subtotal first, then divide the total. Dividing first and tipping after can produce inconsistent amounts for each diner."}},{"@type":"Question","name":"What if someone paid with cash?","acceptedAnswer":{"@type":"Answer","text":"Collect cash against the shared total before one card covers the rest. That avoids the common problem of the card paying more than its share when cash falls short."}},{"@type":"Question","name":"How should I handle an automatic gratuity?","acceptedAnswer":{"@type":"Answer","text":"Check the receipt. Large parties often have gratuity added automatically, and tipping again duplicates the charge."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Tipping and splitting are separate calculations that interact badly when the bill is divided first and the tip applied afterwards. Doing it in the right order — tip on the subtotal, then split — keeps the arithmetic consistent and the result defensible.</p>
+  <p>On a $120 bill with a 20% tip, the tip is $24 and the total $144. Split four ways that is $36 each. But if tax and a service charge are present, decide deliberately whether to tip on the subtotal or on the post-tax total. Tipping on the post-tax figure adds a few percent, which many people consider fair and others consider excessive — the point is to choose rather than to leave it ambiguous.</p>
+  <p>Rounding up after splitting is the social friction point. If the split produces $36.20 per person, rounding to $38 covers the gap and usually leaves a slightly better tip. The alternative, collecting exact amounts from four cards, tends to leave a shortfall.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./tip-calculator.html">Tip Calculator</a>
@@ -130,6 +135,18 @@ calcBtn.onclick = function(){
         `Per person (${p}): $${fmt(per)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Should I tip on the pre-tax or post-tax amount?</h3>
+<p>Either is defensible. Tipping on the subtotal is the more common convention; tipping on the total adds a small amount and is widely considered generous.</p>
+<h3>How do I split a bill with tip?</h3>
+<p>Apply the tip to the subtotal first, then divide the total. Dividing first and tipping after can produce inconsistent amounts for each diner.</p>
+<h3>What if someone paid with cash?</h3>
+<p>Collect cash against the shared total before one card covers the rest. That avoids the common problem of the card paying more than its share when cash falls short.</p>
+<h3>How should I handle an automatic gratuity?</h3>
+<p>Check the receipt. Large parties often have gratuity added automatically, and tipping again duplicates the charge.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

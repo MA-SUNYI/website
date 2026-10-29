@@ -34,9 +34,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Salary Comparison Calculator","description":"Free salary comparison calculator. Compare two job offers by base salary, bonus and extra costs to see the real annual difference between them.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/salary-comparison-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Salary Comparison Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free salary comparison calculator. Enter the base salary, bonus and extra annual costs (like commuting or relocation) for two offers to see each one's effective value and the difference between them."}},{"@type":"Question","name":"Is the Salary Comparison Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Salary Comparison Calculator | Compare Two Job Offers">
 <meta property="og:description" content="Free salary comparison calculator: compare two job offers by base pay, bonus and extra costs to see the real annual difference.">
 <meta property="og:type" content="website">
@@ -49,8 +46,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Salary Comparison Calculator | Compare Two Job Offers">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free salary comparison calculator: compare two job offers by base pay, bonus and extra costs to see the real annual difference.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compare two job offers?","acceptedAnswer":{"@type":"Answer","text":"Compare total compensation after tax and adjusted for cost of living: salary, bonus, retirement match, insurance value, and commuting cost and time."}},{"@type":"Question","name":"What is a cost-of-living adjustment?","acceptedAnswer":{"@type":"Answer","text":"A multiplier that converts a salary into equivalent purchasing power in another location. A $100,000 salary at index 130 is worth about $77,000 at index 100."}},{"@type":"Question","name":"How much is a 401(k) match worth?","acceptedAnswer":{"@type":"Answer","text":"Multiply the match percentage by salary. A 6% match on $95,000 is $5,700 a year, before any investment growth."}},{"@type":"Question","name":"Does state tax matter much?","acceptedAnswer":{"@type":"Answer","text":"It can swing take-home pay by several thousand dollars a year. States with no income tax can offset a noticeably lower gross salary."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Comparing two job offers by salary alone misses most of what determines take-home pay. The relevant figure is total compensation after tax, adjusted for cost of living, and it routinely flips the ranking that the headline numbers suggest.</p>
+  <p>Suppose one offer pays $95,000 in a city with a 130 cost-of-living index and another pays $80,000 at an index of 100. The second is worth $104,000 in the first city's terms — nearly 10% more in real purchasing power, despite appearing 16% lower. Add state income tax, which varies from zero to over 13%, and the ranking can shift again.</p>
+  <p>Benefits close the remaining gap. A 6% 401(k) match is worth $5,700 on a $95,000 salary; fully covered health insurance can be worth $8,000 to $12,000; and a defined commute difference of an hour a day is roughly 250 hours a year. Comparing total packages rather than base salary is the only way to make the decision honestly.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./hourly-paycheck-calculator.html">Paycheck</a>
@@ -144,5 +149,17 @@ calcBtn.onclick = function(){
         `${better} pays more by $${fmt(gap)} / year`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I compare two job offers?</h3>
+<p>Compare total compensation after tax and adjusted for cost of living: salary, bonus, retirement match, insurance value, and commuting cost and time.</p>
+<h3>What is a cost-of-living adjustment?</h3>
+<p>A multiplier that converts a salary into equivalent purchasing power in another location. A $100,000 salary at index 130 is worth about $77,000 at index 100.</p>
+<h3>How much is a 401(k) match worth?</h3>
+<p>Multiply the match percentage by salary. A 6% match on $95,000 is $5,700 a year, before any investment growth.</p>
+<h3>Does state tax matter much?</h3>
+<p>It can swing take-home pay by several thousand dollars a year. States with no income tax can offset a noticeably lower gross salary.</p>
+</section>
 </body>
 </html>

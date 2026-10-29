@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Car Depreciation Calculator","description":"Free car depreciation calculator. Estimate the value of a vehicle after a number of years at an annual depreciation rate, and see the total and yearly loss.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/car-depreciation-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Car Depreciation Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free car depreciation calculator. Enter the purchase price, an annual depreciation rate and the number of years to estimate the car's remaining value, the total depreciation and the average loss per year."}},{"@type":"Question","name":"Is the Car Depreciation Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Car Depreciation Calculator | Value After Years">
 <meta property="og:description" content="Free car depreciation calculator: estimate a vehicle's value after a set number of years and see the total and annual depreciation.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Car Depreciation Calculator | Value After Years">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free car depreciation calculator: estimate a vehicle's value after a set number of years and see the total and annual depreciation.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a new car depreciate in the first year?","acceptedAnswer":{"@type":"Answer","text":"Typically around 20%, with 10% to 15% annually afterwards. Vehicles with strong resale — certain trucks and popular models — lose less."}},{"@type":"Question","name":"Is buying a used car always cheaper?","acceptedAnswer":{"@type":"Answer","text":"Usually, because the steepest depreciation has already been absorbed. Two to three years old is often the sweet spot between remaining depreciation and remaining warranty."}},{"@type":"Question","name":"What makes a car depreciate faster?","acceptedAnswer":{"@type":"Answer","text":"High mileage, fleet or rental history, unpopular colours and options, and limited brand resale strength. Accidents and a missing service history also reduce value."}},{"@type":"Question","name":"Does depreciation affect insurance?","acceptedAnswer":{"@type":"Answer","text":"Yes. Insurers settle at market value, which falls with depreciation. Gap insurance exists to cover the difference on a financed vehicle."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A new car loses a large share of its value in the first years, and understanding the curve changes what a sensible purchase looks like. The typical pattern is roughly 20% in the first year, then 10% to 15% annually, with the rate slowing as the vehicle ages.</p>
+  <p>A $35,000 car depreciating 20% in year one and 12% thereafter is worth about $28,000 after a year, $24,640 after two, and roughly $19,100 after four. Over those four years the owner absorbs nearly $16,000 in depreciation alone — before fuel, insurance, maintenance and finance costs. That figure is usually the single largest component of car ownership, and the one people never calculate.</p>
+  <p>The practical implications are direct. Buying two to three years old captures most of the steepest depreciation while the car is still modern. And holding a car longer smooths the curve, since the annual loss falls as the vehicle ages — the opposite of the common habit of trading in every three years.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./car-loan-calculator.html">Car Loan</a>
@@ -115,5 +120,17 @@ calcBtn.onclick = function(){
         `Average loss per year: $${fmt(perYear)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How much does a new car depreciate in the first year?</h3>
+<p>Typically around 20%, with 10% to 15% annually afterwards. Vehicles with strong resale — certain trucks and popular models — lose less.</p>
+<h3>Is buying a used car always cheaper?</h3>
+<p>Usually, because the steepest depreciation has already been absorbed. Two to three years old is often the sweet spot between remaining depreciation and remaining warranty.</p>
+<h3>What makes a car depreciate faster?</h3>
+<p>High mileage, fleet or rental history, unpopular colours and options, and limited brand resale strength. Accidents and a missing service history also reduce value.</p>
+<h3>Does depreciation affect insurance?</h3>
+<p>Yes. Insurers settle at market value, which falls with depreciation. Gap insurance exists to cover the difference on a financed vehicle.</p>
+</section>
 </body>
 </html>

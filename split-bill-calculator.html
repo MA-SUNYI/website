@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Split Bill Calculator","description":"Free online split bill calculator. Divide a total bill among people, add tip and tax, and see each person's share instantly for group dinners and trips.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/split-bill-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Split Bill Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online split bill calculator. Divide a total bill among people, add tip and tax, and see each person's share instantly for group dinners and trips."}},{"@type":"Question","name":"Is the Online Split Bill Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Split Bill Calculator | Share Costs Fairly">
 <meta property="og:description" content="Free online split bill calculator. Divide a total bill among people, add tip and tax, and see each person's share instantly for group dinners and trips.">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Split Bill Calculator | Share Costs Fairly">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online split bill calculator. Divide a total bill among people, add tip and tax, and see each person's share instantly for group dinners and trips.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I split a bill with tax and tip fairly?","acceptedAnswer":{"@type":"Answer","text":"Allocate tax and tip in proportion to each person's order. If one diner's food was 40% of the total, their share of tax and tip should be 40% as well."}},{"@type":"Question","name":"Should we split evenly?","acceptedAnswer":{"@type":"Answer","text":"Even splitting is fair when orders are similar. When they diverge significantly, proportional splitting avoids the awkwardness of one person subsidising another."}},{"@type":"Question","name":"What if the restaurant already added a service charge?","acceptedAnswer":{"@type":"Answer","text":"Check the bill before adding a tip. Automatic gratuity for large parties is common, and tipping on top of it usually duplicates the charge."}},{"@type":"Question","name":"How do I handle someone who did not drink?","acceptedAnswer":{"@type":"Answer","text":"Exclude alcohol from the shared total and allocate it among those who ordered it, then split the food and shared costs proportionally."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Splitting a bill sounds trivial until tax, tip and uneven orders enter the picture. Splitting the total evenly is fair when everyone ordered similarly; it becomes unfair the moment one person had a $45 steak and another had a side salad.</p>
+  <p>The most defensible method is proportional: allocate tax and tip in proportion to what each person ordered. If three people spend $40, $30 and $30 on a $100 bill with 20% tax and tip bringing it to $120, the shares are $48, $36 and $36. That preserves the fairness of the underlying orders while distributing the shared costs exactly.</p>
+  <p>Service charges are the wrinkle worth checking. Some restaurants add a mandatory gratuity to parties above a certain size, and adding a further tip on top is an easy and expensive mistake. Read the receipt before the bill reaches the card reader.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./tip-calculator.html">Tip Calculator</a>
@@ -126,6 +131,18 @@ calcBtn.onclick = function(){
         `Per person (${p}): $${fmt(each)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I split a bill with tax and tip fairly?</h3>
+<p>Allocate tax and tip in proportion to each person's order. If one diner's food was 40% of the total, their share of tax and tip should be 40% as well.</p>
+<h3>Should we split evenly?</h3>
+<p>Even splitting is fair when orders are similar. When they diverge significantly, proportional splitting avoids the awkwardness of one person subsidising another.</p>
+<h3>What if the restaurant already added a service charge?</h3>
+<p>Check the bill before adding a tip. Automatic gratuity for large parties is common, and tipping on top of it usually duplicates the charge.</p>
+<h3>How do I handle someone who did not drink?</h3>
+<p>Exclude alcohol from the shared total and allocate it among those who ordered it, then split the food and shared costs proportionally.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

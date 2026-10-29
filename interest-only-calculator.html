@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Interest Only Mortgage Calculator","description":"Free interest only mortgage calculator. Enter the loan amount, rate, interest-only period and total term to see the interest-only payment, the payment after it ends, and the total interest paid.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/interest-only-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Interest Only Mortgage Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free interest only mortgage calculator. Enter the loan amount, interest rate, interest-only period and total term to see the lower interest-only payment, the larger payment once amortization begins, and the total interest paid."}},{"@type":"Question","name":"Is the Interest Only Mortgage Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Interest Only Mortgage Calculator | Payments & Total Cost">
 <meta property="og:description" content="Free interest only mortgage calculator: see the interest-only payment, the higher payment that follows, and the total interest you pay.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Interest Only Mortgage Calculator | Payments & Total Cost">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free interest only mortgage calculator: see the interest-only payment, the higher payment that follows, and the total interest you pay.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does an interest-only mortgage work?","acceptedAnswer":{"@type":"Answer","text":"During the interest-only period the payment covers only the interest, leaving the balance unchanged. After that period the loan amortises over the remaining term, so the payment rises."}},{"@type":"Question","name":"How much higher is the payment after the reset?","acceptedAnswer":{"@type":"Answer","text":"Substantially. A loan that was interest-only for five years of a thirty-year term can see the payment rise by 30% to 50% depending on the rate and remaining term."}},{"@type":"Question","name":"Is interest-only cheaper overall?","acceptedAnswer":{"@type":"Answer","text":"Rarely. No principal is repaid during the interest-only period, so interest accrues on the full balance for longer, raising total cost unless the property is sold or refinanced first."}},{"@type":"Question","name":"Who benefits from interest-only?","acceptedAnswer":{"@type":"Answer","text":"Borrowers with high but variable income, or a planned lump sum such as a bonus or property sale, who can handle the reset. It is risky for buyers already stretched by the purchase."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>An interest-only mortgage lets the borrower pay only the interest for an initial period, typically five to ten years, with the principal untouched. It lowers the payment substantially, which is its appeal, and defers the entire principal repayment, which is its risk.</p>
+  <p>On a $400,000 loan at 6.5%, the interest-only payment is $2,166.67 a month. The fully amortising payment over 30 years is $2,528. The difference — about $361 a month — is real cash flow, and over a five-year interest-only period it adds up to roughly $21,700 in money not paid toward principal.</p>
+  <p>The risk arrives when the interest-only period ends. The loan must then amortise over the remaining term, and because no principal was repaid, the payment rises sharply — in this example to about $3,034, a 40% jump. Borrowers who relied on the lower payment and have not planned for the reset are the ones who face difficulty. These loans suit borrowers with reliably rising income or an expected lump sum, not those stretching to afford the entry price.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./mortgage-calculator.html">Mortgage</a>
@@ -157,5 +162,17 @@ calcBtn.onclick = function(){
         `Extra interest from going IO: $${fmt(extraInterest)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How does an interest-only mortgage work?</h3>
+<p>During the interest-only period the payment covers only the interest, leaving the balance unchanged. After that period the loan amortises over the remaining term, so the payment rises.</p>
+<h3>How much higher is the payment after the reset?</h3>
+<p>Substantially. A loan that was interest-only for five years of a thirty-year term can see the payment rise by 30% to 50% depending on the rate and remaining term.</p>
+<h3>Is interest-only cheaper overall?</h3>
+<p>Rarely. No principal is repaid during the interest-only period, so interest accrues on the full balance for longer, raising total cost unless the property is sold or refinanced first.</p>
+<h3>Who benefits from interest-only?</h3>
+<p>Borrowers with high but variable income, or a planned lump sum such as a bonus or property sale, who can handle the reset. It is risky for buyers already stretched by the purchase.</p>
+</section>
 </body>
 </html>

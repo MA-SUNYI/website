@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"CD Calculator","description":"Free CD calculator. Enter a deposit, APY and term in months to see the maturity value and total interest earned on a certificate of deposit.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/cd-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the CD Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free CD calculator. Enter the amount you deposit, the APY and the term in months to see what the certificate of deposit will be worth at maturity and how much interest it earns."}},{"@type":"Question","name":"Is the CD Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="CD Calculator | Certificate of Deposit Maturity Value">
 <meta property="og:description" content="Free CD calculator: enter deposit, APY and term to see the maturity value and total interest earned on a certificate of deposit.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="CD Calculator | Certificate of Deposit Maturity Value">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free CD calculator: enter deposit, APY and term to see the maturity value and total interest earned on a certificate of deposit.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does compounding affect a CD?","acceptedAnswer":{"@type":"Answer","text":"More frequent compounding produces slightly more interest because each period's interest begins earning immediately. Daily beats monthly beats annual over the same term."}},{"@type":"Question","name":"What happens if I withdraw early?","acceptedAnswer":{"@type":"Answer","text":"A penalty of three to six months of interest typically applies, and depending on timing it can exceed the interest earned, reducing the principal returned."}},{"@type":"Question","name":"Are CD rates fixed for the whole term?","acceptedAnswer":{"@type":"Answer","text":"For a traditional CD, yes. Bump-up or variable CDs exist but work differently and usually start at lower rates."}},{"@type":"Question","name":"Is a CD a good place for an emergency fund?","acceptedAnswer":{"@type":"Answer","text":"Usually not. The early withdrawal penalty works against the purpose. A high-yield savings account preserves access while still paying interest."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A certificate of deposit pays a fixed rate for a fixed term, in exchange for locking the money up. The trade is simple: certainty of return and a known maturity date, against liquidity and, often, a rate that barely beats inflation.</p>
+  <p>Compounding frequency materially changes the outcome, and it is the detail most comparisons miss. $10,000 at 4.75% for one year yields $475 with annual compounding, $484.51 with monthly compounding, and $485.32 with daily compounding — small differences on one year, but they accumulate over a five-year term where the same deposit reaches about $2,617 in total interest with monthly compounding.</p>
+  <p>Early withdrawal penalties typically cost three to six months of interest, which can wipe out the entire gain if the withdrawal happens early. Before locking money up, confirm that the emergency fund is separate and sufficient; a CD is a poor place for money you might need unexpectedly.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./compound-interest-calculator.html">Compound Interest</a>
@@ -115,5 +120,17 @@ calcBtn.onclick = function(){
         `Return on deposit: ${(interest/p*100).toFixed(2)}%`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How does compounding affect a CD?</h3>
+<p>More frequent compounding produces slightly more interest because each period's interest begins earning immediately. Daily beats monthly beats annual over the same term.</p>
+<h3>What happens if I withdraw early?</h3>
+<p>A penalty of three to six months of interest typically applies, and depending on timing it can exceed the interest earned, reducing the principal returned.</p>
+<h3>Are CD rates fixed for the whole term?</h3>
+<p>For a traditional CD, yes. Bump-up or variable CDs exist but work differently and usually start at lower rates.</p>
+<h3>Is a CD a good place for an emergency fund?</h3>
+<p>Usually not. The early withdrawal penalty works against the purpose. A high-yield savings account preserves access while still paying interest.</p>
+</section>
 </body>
 </html>

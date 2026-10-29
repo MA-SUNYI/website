@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Binary Converter","description":"Free online binary converter. Convert between binary, decimal and hexadecimal instantly, with live two-way conversion for coding, math and study.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/binary-converter.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Binary Converter do?","acceptedAnswer":{"@type":"Answer","text":"Free online binary converter. Convert between binary, decimal and hexadecimal instantly, with live two-way conversion for coding, math and study."}},{"@type":"Question","name":"Is the Online Binary Converter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Binary Converter | Binary, Decimal &amp; Hex">
 <meta property="og:description" content="Free online binary converter. Convert between binary, decimal and hexadecimal instantly, with live two-way conversion for coding, math and study.">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Binary Converter | Binary, Decimal &amp; Hex">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online binary converter. Convert between binary, decimal and hexadecimal instantly, with live two-way conversion for coding, math and study.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert 100 in decimal to binary?","acceptedAnswer":{"@type":"Answer","text":"100 = 64 + 32 + 4, so the bits at 64, 32 and 4 are set: 1100100. Eight-bit representation pads it to 01100100."}},{"@type":"Question","name":"What is the largest number an 8-bit binary value can hold?","acceptedAnswer":{"@type":"Answer","text":"255, which is 11111111. A 16-bit value reaches 65,535 and a 32-bit value reaches about 4.29 billion."}},{"@type":"Question","name":"How are negative numbers stored in binary?","acceptedAnswer":{"@type":"Answer","text":"Most systems use two's complement: invert every bit of the positive value and add one. In 8-bit terms, −5 becomes 11111011."}},{"@type":"Question","name":"Why do programmers still care about binary?","acceptedAnswer":{"@type":"Answer","text":"Bit flags, colour channels, file permissions, subnet masks and hardware registers are all binary in design. Reading them in their native form is often faster than converting."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Binary is base 2, so each position is worth twice the one to its right: 1, 2, 4, 8, 16, 32 and so on. Converting a decimal number to binary means repeatedly subtracting the largest power of two that fits, writing a 1 in that place and a 0 everywhere it does not.</p>
+  <p>Take 45. The largest power of two below it is 32, leaving 13. Next comes 8, leaving 5, then 4, leaving 1, then 1. Place values 32, 8, 4 and 1 are set and the rest are zero: <b>101101</b>. Read right to left, the positions are 1, 2, 4, 8, 16, 32 — a fact worth memorising, since it makes most conversions a few seconds of mental arithmetic.</p>
+  <p>Going the other way is faster. For 11010, mark the position values from the right: 0×1, 1×2, 0×4, 1×8, 1×16. Add them: 2 + 8 + 16 = <b>26</b>. Anyone who works with IP addresses, subnet masks or embedded registers does this routinely, and the ability to do it without a tool is genuinely useful in a debugging session.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./hex-to-rgb-converter.html">Hex to RGB Converter</a>
@@ -130,6 +135,18 @@ convBtn.onclick = function(){
         `Hex: ${hex}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I convert 100 in decimal to binary?</h3>
+<p>100 = 64 + 32 + 4, so the bits at 64, 32 and 4 are set: 1100100. Eight-bit representation pads it to 01100100.</p>
+<h3>What is the largest number an 8-bit binary value can hold?</h3>
+<p>255, which is 11111111. A 16-bit value reaches 65,535 and a 32-bit value reaches about 4.29 billion.</p>
+<h3>How are negative numbers stored in binary?</h3>
+<p>Most systems use two's complement: invert every bit of the positive value and add one. In 8-bit terms, −5 becomes 11111011.</p>
+<h3>Why do programmers still care about binary?</h3>
+<p>Bit flags, colour channels, file permissions, subnet masks and hardware registers are all binary in design. Reading them in their native form is often faster than converting.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

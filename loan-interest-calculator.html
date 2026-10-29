@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Loan Interest Calculator","description":"Free online loan interest calculator: estimate simple and compound interest, total repayment and daily accrual for personal loans, savings and debt planning.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/loan-interest-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Loan Interest Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online loan interest calculator: estimate simple and compound interest, total repayment and daily accrual for personal loans, savings and debt planning."}},{"@type":"Question","name":"Is the Online Loan Interest Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Loan Interest Calculator | Simple &amp; Compound">
 <meta property="og:description" content="Free loan interest calculator: simple/compound interest and total repayment.">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Loan Interest Calculator | Simple &amp; Compound">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free loan interest calculator: simple/compound interest and total repayment.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is monthly loan interest calculated?","acceptedAnswer":{"@type":"Answer","text":"The annual rate is divided by 12 to get the monthly rate, then applied to the outstanding balance each month. Because the balance falls, the interest portion falls with it while the principal portion grows."}},{"@type":"Question","name":"Does a longer loan term always cost more?","acceptedAnswer":{"@type":"Answer","text":"Yes in total interest, almost always. Spreading repayment over more months reduces the payment but keeps interest accruing on a larger balance for longer."}},{"@type":"Question","name":"What is the difference between APR and interest rate?","acceptedAnswer":{"@type":"Answer","text":"The interest rate covers only the borrowing cost. APR also includes fees such as origination charges, so it is the better figure for comparing offers."}},{"@type":"Question","name":"Why do early payments go almost entirely to interest?","acceptedAnswer":{"@type":"Answer","text":"Because interest is charged on the full balance, which is at its largest at the start. As the balance shrinks, the interest share shrinks with it."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Loan interest is the cost of renting money, and the number that matters is not the monthly payment but the total interest paid over the life of the loan. Two offers with the same payment can differ by thousands once the term is taken into account.</p>
+  <p>The calculator uses the standard amortising formula: <b>Payment = P × r × (1+r)^n ÷ ((1+r)^n − 1)</b>, where P is the principal, r the monthly rate (annual ÷ 12 ÷ 100) and n the number of monthly payments. Borrow $20,000 at 6% over five years and the payment lands near $386.66, with total interest around $3,200. Stretch the same loan to eight years and the payment drops to about $263, but total interest rises to roughly $5,250 — the classic trade of lower monthly cost for higher lifetime cost.</p>
+  <p>What surprises borrowers is how much of the early payments go to interest rather than principal. On a $300,000 mortgage at 6.5%, the first payment is about $1,896, of which roughly $1,625 is interest and only $271 reduces the balance. That ratio inverts slowly over the term, which is why extra payments made early save far more than the same amount paid late.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./interest-rate-calculator.html">Interest Rate Calculator</a>
@@ -130,6 +135,18 @@ calcBtn.onclick = function(){
         `Daily Interest: $${fmt(daily)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How is monthly loan interest calculated?</h3>
+<p>The annual rate is divided by 12 to get the monthly rate, then applied to the outstanding balance each month. Because the balance falls, the interest portion falls with it while the principal portion grows.</p>
+<h3>Does a longer loan term always cost more?</h3>
+<p>Yes in total interest, almost always. Spreading repayment over more months reduces the payment but keeps interest accruing on a larger balance for longer.</p>
+<h3>What is the difference between APR and interest rate?</h3>
+<p>The interest rate covers only the borrowing cost. APR also includes fees such as origination charges, so it is the better figure for comparing offers.</p>
+<h3>Why do early payments go almost entirely to interest?</h3>
+<p>Because interest is charged on the full balance, which is at its largest at the start. As the balance shrinks, the interest share shrinks with it.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

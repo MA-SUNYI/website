@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Credit Card Payoff Calculator","description":"Free credit card payoff calculator. Find how many months it takes to clear a balance and the total interest paid from balance, APR and monthly payment.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/credit-card-payoff-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Credit Card Payoff Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free credit card payoff calculator. Enter your balance, APR and monthly payment to see how many months until the card is paid off and the total interest you will pay."}},{"@type":"Question","name":"Is the Credit Card Payoff Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Credit Card Payoff Calculator | Months & Interest to Be Debt-Free">
 <meta property="og:description" content="Free credit card payoff calculator: months to clear a balance and total interest by balance, APR and monthly payment.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Credit Card Payoff Calculator | Months & Interest to Be Debt-Free">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free credit card payoff calculator: months to clear a balance and total interest by balance, APR and monthly payment.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long will it take to pay off my credit card?","acceptedAnswer":{"@type":"Answer","text":"It depends on how much you pay above the minimum. At 24% APR, a $6,000 balance paid at $250 a month clears in about 32 months; paid at the 2% minimum it can take decades."}},{"@type":"Question","name":"Why does paying the minimum take so long?","acceptedAnswer":{"@type":"Answer","text":"Because the minimum is calculated as a percentage of the balance, so it falls as the balance falls. Interest consumes most of each payment, leaving very little for principal."}},{"@type":"Question","name":"Is debt avalanche or snowball better?","acceptedAnswer":{"@type":"Answer","text":"Avalanche saves more interest mathematically. Snowball produces faster psychological wins. Either works if you stick with it, and adherence usually matters more than ordering."}},{"@type":"Question","name":"Does a 0% balance transfer help?","acceptedAnswer":{"@type":"Answer","text":"It can, if you clear the balance within the promotional window. Transfer fees of 3% to 5% apply, and the rate after the window is often higher than before."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Credit card debt compounds against the borrower in a way most people underestimate. A typical card charges 22% to 29% APR, which works out to roughly 1.8% to 2.4% per month applied to the full balance — and unlike a loan, there is no fixed schedule forcing the balance down.</p>
+  <p>Paying only the minimum is where the damage accumulates. On a $6,000 balance at 24% APR with a 2% minimum, the first payment is $120, of which about $120 is interest and almost nothing is principal. The minimum also falls as the balance falls, so the payoff stretches across decades. Raising the payment to $250 a month clears the same balance in about 32 months and saves well over $5,000 in interest.</p>
+  <p>Two strategies work. Avalanche targets the highest rate first, which minimises total interest. Snowball targets the smallest balance first, which produces quicker wins and better adherence. Research on debt repayment consistently finds that the psychological effect of early victories matters more than the mathematically optimal ordering.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./loan-payment-calculator.html">Loan Payment Calculator</a>
@@ -135,5 +140,17 @@ calcBtn.onclick = function(){
         `Total paid: $${fmt(b + totalInterest)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How long will it take to pay off my credit card?</h3>
+<p>It depends on how much you pay above the minimum. At 24% APR, a $6,000 balance paid at $250 a month clears in about 32 months; paid at the 2% minimum it can take decades.</p>
+<h3>Why does paying the minimum take so long?</h3>
+<p>Because the minimum is calculated as a percentage of the balance, so it falls as the balance falls. Interest consumes most of each payment, leaving very little for principal.</p>
+<h3>Is debt avalanche or snowball better?</h3>
+<p>Avalanche saves more interest mathematically. Snowball produces faster psychological wins. Either works if you stick with it, and adherence usually matters more than ordering.</p>
+<h3>Does a 0% balance transfer help?</h3>
+<p>It can, if you clear the balance within the promotional window. Transfer fees of 3% to 5% apply, and the rate after the window is often higher than before.</p>
+</section>
 </body>
 </html>

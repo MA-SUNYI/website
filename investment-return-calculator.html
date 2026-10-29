@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Investment Return Calculator","description":"Free investment return calculator. Project the future value of an initial amount plus monthly contributions at an annual return over a number of years, with invested vs growth split.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/investment-return-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Investment Return Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free investment return calculator. Enter an initial amount, monthly contribution, expected annual return and number of years to project the future value, and see how much comes from your contributions versus growth."}},{"@type":"Question","name":"Is the Investment Return Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Investment Return Calculator | Project Future Value">
 <meta property="og:description" content="Free investment return calculator: project future value from initial amount, monthly contribution, annual return and years, with invested vs growth split.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Investment Return Calculator | Project Future Value">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free investment return calculator: project future value from initial amount, monthly contribution, annual return and years, with invested vs growth split.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate ROI?","acceptedAnswer":{"@type":"Answer","text":"Subtract total cost from total gain, divide by total cost, multiply by 100. Include fees and taxes in the cost figure."}},{"@type":"Question","name":"How do I annualise an ROI?","acceptedAnswer":{"@type":"Answer","text":"Convert to a yearly rate: (1 + ROI)^(1/years) − 1. A 30% return over three years is about 9.1% annualised."}},{"@type":"Question","name":"Should I include taxes in ROI?","acceptedAnswer":{"@type":"Answer","text":"For a personal decision, yes. After-tax return is the only figure that affects your actual wealth, and it can change the ranking between investments."}},{"@type":"Question","name":"What is the difference between ROI and CAGR?","acceptedAnswer":{"@type":"Answer","text":"ROI measures total gain over the whole period. CAGR expresses the same gain as a smooth annual growth rate, which makes comparisons across different timeframes possible."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Return on investment compares the gain from an investment with what it cost to make that gain. Expressed as a percentage, it makes investments of different sizes comparable — which is its entire purpose.</p>
+  <p>The basic formula is <b>ROI = (Gain − Cost) ÷ Cost × 100</b>. Buy for $10,000, sell for $13,500 after $500 in fees, and the net gain is $3,000 against a total cost of $10,500, giving an ROI of <b>28.6%</b>. Note that the fees belong in the cost, not the gain; putting them on the wrong side of the equation is the most common calculation error.</p>
+  <p>Annualising is essential when comparing different holding periods. An ROI of 30% over three years is about 9.1% a year compounded, not 10% — and it is not comparable with a 30% return achieved in one year. For anything held longer than twelve months, convert to an annual figure before drawing any conclusion.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./compound-interest-calculator.html">Compound Interest</a>
@@ -124,5 +129,17 @@ calcBtn.onclick = function(){
         `Growth: $${fmt(growth)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I calculate ROI?</h3>
+<p>Subtract total cost from total gain, divide by total cost, multiply by 100. Include fees and taxes in the cost figure.</p>
+<h3>How do I annualise an ROI?</h3>
+<p>Convert to a yearly rate: (1 + ROI)^(1/years) − 1. A 30% return over three years is about 9.1% annualised.</p>
+<h3>Should I include taxes in ROI?</h3>
+<p>For a personal decision, yes. After-tax return is the only figure that affects your actual wealth, and it can change the ranking between investments.</p>
+<h3>What is the difference between ROI and CAGR?</h3>
+<p>ROI measures total gain over the whole period. CAGR expresses the same gain as a smooth annual growth rate, which makes comparisons across different timeframes possible.</p>
+</section>
 </body>
 </html>

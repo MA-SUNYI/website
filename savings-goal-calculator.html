@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Savings Goal Calculator","description":"Free savings goal calculator. Enter your target amount, current savings, monthly contribution and annual return to see how many months until you reach the goal, and how much comes from contributions vs growth.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/savings-goal-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Savings Goal Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free savings goal calculator. Enter a target amount, what you already have, your monthly contribution and an expected annual return to see how many months until you reach the goal and how much of it is your own contributions versus growth."}},{"@type":"Question","name":"Is the Savings Goal Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Savings Goal Calculator | Months to Reach Your Target">
 <meta property="og:description" content="Free savings goal calculator: months to reach a target amount from current savings, monthly contribution and annual return, with principal vs growth split.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Savings Goal Calculator | Months to Reach Your Target">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free savings goal calculator: months to reach a target amount from current savings, monthly contribution and annual return, with principal vs growth split.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much do I need to save each month?","acceptedAnswer":{"@type":"Answer","text":"Divide the target by the number of months, then reduce the figure if you assume a return. A $30,000 goal over 60 months needs $500 a month at zero return."}},{"@type":"Question","name":"Should I invest money I am saving for a short-term goal?","acceptedAnswer":{"@type":"Answer","text":"Generally not inside two to three years. Market declines arrive without warning, and a short horizon leaves no time to recover before the money is needed."}},{"@type":"Question","name":"Does inflation affect my savings goal?","acceptedAnswer":{"@type":"Answer","text":"Yes. A goal set today in today's prices will cost more when you reach it. Increasing the target by expected inflation over the horizon keeps the plan realistic."}},{"@type":"Question","name":"What if I cannot reach the monthly amount?","acceptedAnswer":{"@type":"Answer","text":"Either extend the timeline or lower the target — those are the only two honest options. Increasing the assumed rate to close the gap is how plans fail quietly."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Saving for a goal is a problem of three variables: how much you need, when you need it, and what return you can earn in the meantime. Fix any two and the third follows.</p>
+  <p>For a $30,000 goal in five years with no investment return, the required contribution is $500 a month. Add a 4% annual return compounded monthly and the required contribution drops to about $453 — a saving of $47 a month purely from where the money sits. Over a shorter horizon the effect shrinks: the same goal in eighteen months at 4% still needs $1,617 a month, against $1,667 at zero return.</p>
+  <p>The timeline should drive the account choice, not the other way round. Goals inside two years belong in cash-like holdings, where the return is small but the principal is safe. Goals beyond five years can reasonably accept market risk. Putting a two-year goal into equities to chase a better rate is the most common way savers end up short exactly when the money is needed.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./emergency-fund-calculator.html">Emergency Fund</a>
@@ -135,5 +140,17 @@ calcBtn.onclick = function(){
         `Total at goal: $${fmt(bal)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How much do I need to save each month?</h3>
+<p>Divide the target by the number of months, then reduce the figure if you assume a return. A $30,000 goal over 60 months needs $500 a month at zero return.</p>
+<h3>Should I invest money I am saving for a short-term goal?</h3>
+<p>Generally not inside two to three years. Market declines arrive without warning, and a short horizon leaves no time to recover before the money is needed.</p>
+<h3>Does inflation affect my savings goal?</h3>
+<p>Yes. A goal set today in today's prices will cost more when you reach it. Increasing the target by expected inflation over the horizon keeps the plan realistic.</p>
+<h3>What if I cannot reach the monthly amount?</h3>
+<p>Either extend the timeline or lower the target — those are the only two honest options. Increasing the assumed rate to close the gap is how plans fail quietly.</p>
+</section>
 </body>
 </html>

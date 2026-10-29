@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Area of Circle Calculator","description":"Free online area of circle calculator. Calculate circle area by radius quickly for math study, engineering and daily calculation.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/circle-area.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Area of Circle Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online area of circle calculator. Calculate circle area by radius quickly for math study, engineering and daily calculation."}},{"@type":"Question","name":"Is the Online Area of Circle Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Area of Circle Calculator | Free Math Tool">
 <meta property="og:description" content="Free online area of circle calculator. Calculate circle area by radius quickly for math study, engineering and daily calculation.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Area of Circle Calculator | Free Math Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online area of circle calculator. Calculate circle area by radius quickly for math study, engineering and daily calculation.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I find the area if I only know the diameter?","acceptedAnswer":{"@type":"Answer","text":"Divide the diameter by two to get the radius, then square it and multiply by π. A 10 cm diameter means a 5 cm radius and an area of about 78.54 cm²."}},{"@type":"Question","name":"What is the difference between area and circumference?","acceptedAnswer":{"@type":"Answer","text":"Area measures the space inside the circle in square units; circumference measures the distance around it in linear units. Area is πr², circumference is 2πr."}},{"@type":"Question","name":"How accurate should I be with π?","acceptedAnswer":{"@type":"Answer","text":"Using 3.14 introduces about 0.05% error, which is fine for most practical uses. Use the calculator's full precision for anything structural or financial."}},{"@type":"Question","name":"Why is the area expressed in square units?","acceptedAnswer":{"@type":"Answer","text":"Because it is a two-dimensional measure: two lengths multiplied together. Reporting cm instead of cm² is a common marking error in school work."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>The area of a circle is π multiplied by the radius squared. With a diameter instead, halve it first — the most frequent error in this calculation, and the one that produces a result four times too large rather than a small rounding difference.</p>
+  <p>For a circle with radius 7 cm, the area is π × 49 ≈ <b>153.94 cm²</b>. For a circle with diameter 14 cm, the radius is 7 cm and the answer is identical; using 14 as the radius instead would give 615.75 cm², exactly four times the correct figure. Whenever a result looks implausibly big, check whether a diameter was substituted for a radius.</p>
+  <p>Pi is irrational, so every area is an approximation. Three decimal places in the result is realistic for practical work; for engineering drawings, keep the calculation in terms of π until the final step so intermediate rounding does not compound. The circumference formula, 2πr, is often confused with the area formula — circumference is a length, area is squared, and the units alone tell you which you have.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./circle-area.html">Circle Area Calculator</a>
@@ -98,6 +103,18 @@ calcBtn.onclick = function(){
     resOut.textContent = `Circle Area = ${area.toFixed(4)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I find the area if I only know the diameter?</h3>
+<p>Divide the diameter by two to get the radius, then square it and multiply by π. A 10 cm diameter means a 5 cm radius and an area of about 78.54 cm².</p>
+<h3>What is the difference between area and circumference?</h3>
+<p>Area measures the space inside the circle in square units; circumference measures the distance around it in linear units. Area is πr², circumference is 2πr.</p>
+<h3>How accurate should I be with π?</h3>
+<p>Using 3.14 introduces about 0.05% error, which is fine for most practical uses. Use the calculator's full precision for anything structural or financial.</p>
+<h3>Why is the area expressed in square units?</h3>
+<p>Because it is a two-dimensional measure: two lengths multiplied together. Reporting cm instead of cm² is a common marking error in school work.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

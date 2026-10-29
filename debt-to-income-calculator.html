@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Debt to Income Calculator","description":"Free debt to income calculator. Enter gross monthly income and monthly debt payments to see your DTI ratio and how lenders typically view it.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/debt-to-income-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Debt to Income Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free debt to income calculator. Enter your gross monthly income and your total monthly debt payments to see your DTI ratio, and compare it to common lender limits."}},{"@type":"Question","name":"Is the Debt to Income Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Debt to Income Calculator | DTI Ratio for a Mortgage">
 <meta property="og:description" content="Free debt to income calculator: enter gross income and monthly debts to see your DTI ratio and whether lenders are likely to approve.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Debt to Income Calculator | DTI Ratio for a Mortgage">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free debt to income calculator: enter gross income and monthly debts to see your DTI ratio and whether lenders are likely to approve.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a good debt-to-income ratio?","acceptedAnswer":{"@type":"Answer","text":"Below 36% is generally considered strong. 43% is the usual maximum for a qualified mortgage, and above that most conventional lenders will decline the application."}},{"@type":"Question","name":"Does DTI include rent or only mortgage debt?","acceptedAnswer":{"@type":"Answer","text":"It includes whatever housing payment applies. For a buyer it is the proposed mortgage; for a renter applying for credit, rent is usually included in the calculation."}},{"@type":"Question","name":"How do student loans affect DTI?","acceptedAnswer":{"@type":"Answer","text":"Lenders often count 1% of the outstanding balance as a monthly obligation, even if the actual payment is lower or currently paused under an income-driven plan."}},{"@type":"Question","name":"Can I lower my DTI quickly?","acceptedAnswer":{"@type":"Answer","text":"Paying down a loan balance or consolidating cards reduces the reported monthly obligation. Increasing documented income has the same effect and sometimes works faster."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Debt-to-income ratio (DTI) is the share of gross monthly income committed to debt payments. It is the single most important number in a mortgage application, and it is calculated two ways that lenders use for different purposes.</p>
+  <p>Front-end DTI covers housing only — mortgage principal, interest, taxes, insurance and HOA dues. Back-end DTI includes housing plus every other obligation: car loans, student loans, credit card minimums, personal loans. On $7,500 gross monthly income with a $1,800 mortgage and $700 in other debt, the front-end ratio is 24% and the back-end is 33%. Both sit comfortably within conventional limits.</p>
+  <p>The thresholds are strict in practice: 36% or below is strong, 43% is the usual maximum for a qualified mortgage, and above 43% most conventional lenders decline. Student loan reporting causes frequent surprises, because lenders often count 1% of the outstanding balance as a monthly payment even when the actual payment is income-driven and currently zero.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./mortgage-calculator.html">Mortgage</a>
@@ -136,5 +141,17 @@ calcBtn.onclick = function(){
         `</tbody></table>`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is a good debt-to-income ratio?</h3>
+<p>Below 36% is generally considered strong. 43% is the usual maximum for a qualified mortgage, and above that most conventional lenders will decline the application.</p>
+<h3>Does DTI include rent or only mortgage debt?</h3>
+<p>It includes whatever housing payment applies. For a buyer it is the proposed mortgage; for a renter applying for credit, rent is usually included in the calculation.</p>
+<h3>How do student loans affect DTI?</h3>
+<p>Lenders often count 1% of the outstanding balance as a monthly obligation, even if the actual payment is lower or currently paused under an income-driven plan.</p>
+<h3>Can I lower my DTI quickly?</h3>
+<p>Paying down a loan balance or consolidating cards reduces the reported monthly obligation. Increasing documented income has the same effect and sometimes works faster.</p>
+</section>
 </body>
 </html>

@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Amortization Calculator","description":"Free amortization calculator. Enter a loan amount, rate and term to get the monthly payment and a year-by-year schedule of principal, interest and remaining balance.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/amortization-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Amortization Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free amortization calculator. Enter a loan amount, annual interest rate and term in years to get the fixed monthly payment and a year-by-year breakdown of how much goes to principal, how much to interest, and the remaining balance."}},{"@type":"Question","name":"Is the Amortization Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Amortization Calculator | Payment Schedule by Year">
 <meta property="og:description" content="Free amortization calculator: monthly payment plus a year-by-year schedule showing principal paid, interest paid and remaining balance.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Amortization Calculator | Payment Schedule by Year">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free amortization calculator: monthly payment plus a year-by-year schedule showing principal paid, interest paid and remaining balance.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is an amortisation schedule?","acceptedAnswer":{"@type":"Answer","text":"A month-by-month table showing the interest charge, the principal reduction and the remaining balance for each payment of a loan."}},{"@type":"Question","name":"Why does the balance fall so slowly at first?","acceptedAnswer":{"@type":"Answer","text":"Interest is charged on the outstanding balance, which is highest at the start. Early payments mostly cover that interest, leaving little to reduce the principal."}},{"@type":"Question","name":"How much can extra payments save?","acceptedAnswer":{"@type":"Answer","text":"Substantially, if made early. An extra $200 a month on a $250,000 30-year loan at 5% typically shortens the term by four to five years and saves well over $40,000 in interest."}},{"@type":"Question","name":"Does the schedule account for escrow?","acceptedAnswer":{"@type":"Answer","text":"No. Property taxes and insurance are collected separately and do not affect the loan balance, so they are excluded from the amortisation table."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>An amortisation schedule shows how each payment splits between interest and principal across the life of a loan. It is the most useful single view of a mortgage, because it makes visible what a payment figure hides: how slowly the balance falls in the early years.</p>
+  <p>On a $250,000 loan at 5% over 30 years, the payment is $1,342.05. In month one, $1,041.67 goes to interest and only $300.38 to principal. By year fifteen the split is roughly even. By the final year almost the entire payment is principal. Total interest across the term comes to about $233,000 — nearly as much as the amount borrowed.</p>
+  <p>This shape explains why extra payments are so powerful early on. An extra $200 a month from the start can cut four to five years off a 30-year term and save tens of thousands in interest, because every extra dollar in year one avoids thirty years of compounding against the borrower. The same $200 added in year twenty saves far less.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./loan-payment-calculator.html">Loan Payment</a>
@@ -140,5 +145,17 @@ calcBtn.onclick = function(){
         `<table><thead><tr><th>Year</th><th>Principal</th><th>Interest</th><th>Balance</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is an amortisation schedule?</h3>
+<p>A month-by-month table showing the interest charge, the principal reduction and the remaining balance for each payment of a loan.</p>
+<h3>Why does the balance fall so slowly at first?</h3>
+<p>Interest is charged on the outstanding balance, which is highest at the start. Early payments mostly cover that interest, leaving little to reduce the principal.</p>
+<h3>How much can extra payments save?</h3>
+<p>Substantially, if made early. An extra $200 a month on a $250,000 30-year loan at 5% typically shortens the term by four to five years and saves well over $40,000 in interest.</p>
+<h3>Does the schedule account for escrow?</h3>
+<p>No. Property taxes and insurance are collected separately and do not affect the loan balance, so they are excluded from the amortisation table.</p>
+</section>
 </body>
 </html>

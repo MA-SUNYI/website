@@ -34,9 +34,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Currency Converter","description":"Free online currency converter. Enter an amount and two currency codes to convert using your own exchange rate, with the reverse rate shown instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/currency-converter.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Currency Converter do?","acceptedAnswer":{"@type":"Answer","text":"Free online currency converter. Enter an amount and two currency codes to convert using your own exchange rate, with the reverse rate shown instantly."}},{"@type":"Question","name":"Is the Online Currency Converter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Currency Converter | Free Exchange Tool">
 <meta property="og:description" content="Free online currency converter. Enter an amount and two currency codes to convert using your own exchange rate, with the reverse rate shown instantly.">
 <meta property="og:type" content="website">
@@ -49,8 +46,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Currency Converter | Free Exchange Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online currency converter. Enter an amount and two currency codes to convert using your own exchange rate, with the reverse rate shown instantly.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a mid-market exchange rate?","acceptedAnswer":{"@type":"Answer","text":"The midpoint between buy and sell prices in the wholesale market, with no markup. It is the reference figure that consumer offers are priced against."}},{"@type":"Question","name":"Why do exchange rates differ between providers?","acceptedAnswer":{"@type":"Answer","text":"Providers apply their own spread and fees on top of the wholesale rate. The difference is their margin, and it varies widely."}},{"@type":"Question","name":"How do I compare currency transfer costs?","acceptedAnswer":{"@type":"Answer","text":"Convert the spread into a percentage of the amount, add any flat fee, and compare total cost. A low headline rate with a high fee can be worse than the reverse."}},{"@type":"Question","name":"Are card exchange rates better than cash?","acceptedAnswer":{"@type":"Answer","text":"Usually yes, especially with cards that charge no foreign transaction fee. Airport kiosks tend to be among the most expensive options."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Currency conversion involves two numbers: the exchange rate and the fee. Most people focus on the rate and ignore the fee, which is usually the larger cost.</p>
+  <p>A quoted rate of 1.08 USD per EUR sounds fine until you notice the provider applies a 3% spread — effectively charging 1.0476. On a €5,000 transfer that spread costs about $160, far more than a flat $15 fee would. Comparing offers requires converting the spread into a percentage and adding any flat charge.</p>
+  <p>Mid-market rates, published by financial data providers, are the reference point before any markup. Travel money, airport kiosks and card FX fees routinely sit two to six percent above that rate, which is why the same purchase can cost meaningfully different amounts depending on which card is used.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./unit-price-calculator.html">Unit Price Calculator</a>
@@ -136,6 +141,18 @@ calcBtn.onclick = function(){
 }
 syncLabels();
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is a mid-market exchange rate?</h3>
+<p>The midpoint between buy and sell prices in the wholesale market, with no markup. It is the reference figure that consumer offers are priced against.</p>
+<h3>Why do exchange rates differ between providers?</h3>
+<p>Providers apply their own spread and fees on top of the wholesale rate. The difference is their margin, and it varies widely.</p>
+<h3>How do I compare currency transfer costs?</h3>
+<p>Convert the spread into a percentage of the amount, add any flat fee, and compare total cost. A low headline rate with a high fee can be worse than the reverse.</p>
+<h3>Are card exchange rates better than cash?</h3>
+<p>Usually yes, especially with cards that charge no foreign transaction fee. Airport kiosks tend to be among the most expensive options.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

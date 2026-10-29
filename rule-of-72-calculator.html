@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rule of 72 Calculator","description":"Free rule of 72 calculator. Enter an annual return or interest rate to estimate the years needed to double your money, alongside the exact calculation.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/rule-of-72-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Rule of 72 Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free rule of 72 calculator. Enter an annual rate of return or interest rate to estimate how many years it takes to double your money using the rule of 72, together with the exact doubling time."}},{"@type":"Question","name":"Is the Rule of 72 Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Rule of 72 Calculator | Years to Double Your Money">
 <meta property="og:description" content="Free rule of 72 calculator: enter an interest or return rate to estimate how many years it takes to double your money, plus the exact figure.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Rule of 72 Calculator | Years to Double Your Money">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free rule of 72 calculator: enter an interest or return rate to estimate how many years it takes to double your money, plus the exact figure.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How accurate is the rule of 72?","acceptedAnswer":{"@type":"Answer","text":"Very accurate for rates between about 6% and 10%, within a few percent of the exact answer. It drifts at very low and very high rates."}},{"@type":"Question","name":"What if I add contributions monthly?","acceptedAnswer":{"@type":"Answer","text":"The rule of 72 assumes a lump sum with no additions. With regular contributions, growth is faster than the rule predicts, so use a compounding calculator instead."}},{"@type":"Question","name":"Can I use it for inflation?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dividing 72 by the inflation rate gives the years until purchasing power halves. At 3%, that is about 24 years."}},{"@type":"Question","name":"Why 72 and not 70?","acceptedAnswer":{"@type":"Answer","text":"Because 72 has more divisors — 2, 3, 4, 6, 8, 9, 12 — making mental division easier. The mathematical constant is closer to 69.3."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>The rule of 72 estimates how long an investment takes to double: divide 72 by the annual return. At 6% annual return, money doubles in roughly twelve years; at 9%, roughly eight. The rule is a mental arithmetic shortcut for compound growth, accurate enough for planning conversations and fast enough to use without a calculator.</p>
+  <p>The approximation works because ln(2) is about 0.693, and 72 happens to divide cleanly by many common rates. It is most accurate between 6% and 10%; at very low rates it underestimates slightly, and at high rates it overestimates. For continuous compounding, 69.3 is the exact numerator, which is why some texts use rule of 69.</p>
+  <p>The corollary is the rule of 72 for inflation: at 3% inflation, purchasing power halves in about 24 years. Run both together and the real picture emerges — an 8% return against 3% inflation means the doubling time in nominal terms is nine years, but the doubling time in real purchasing power is closer to fourteen.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./compound-interest-calculator.html">Compound Interest</a>
@@ -118,5 +123,17 @@ calcBtn.onclick = function(){
         `<table><thead><tr><th>Doubling</th><th>Years</th><th>Value of $1,000</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How accurate is the rule of 72?</h3>
+<p>Very accurate for rates between about 6% and 10%, within a few percent of the exact answer. It drifts at very low and very high rates.</p>
+<h3>What if I add contributions monthly?</h3>
+<p>The rule of 72 assumes a lump sum with no additions. With regular contributions, growth is faster than the rule predicts, so use a compounding calculator instead.</p>
+<h3>Can I use it for inflation?</h3>
+<p>Yes. Dividing 72 by the inflation rate gives the years until purchasing power halves. At 3%, that is about 24 years.</p>
+<h3>Why 72 and not 70?</h3>
+<p>Because 72 has more divisors — 2, 3, 4, 6, 8, 9, 12 — making mental division easier. The mathematical constant is closer to 69.3.</p>
+</section>
 </body>
 </html>

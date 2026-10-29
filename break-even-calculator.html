@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Break Even Calculator","description":"Free break even calculator. Enter fixed costs, unit price and variable cost per unit to get the break-even point in units and in revenue, plus the contribution margin and a profit projection.","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/break-even-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Break Even Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It divides your fixed costs by the contribution margin per unit (price minus variable cost) to show how many units and how much revenue you need to cover costs, plus profit at any volume."}},{"@type":"Question","name":"Is the Break Even Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Break Even Calculator | Units and Revenue to Break Even">
 <meta property="og:description" content="Free break even calculator: enter fixed costs, price and variable cost per unit to see the break-even units and revenue you need.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Break Even Calculator | Units and Revenue to Break Even">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free break even calculator: enter fixed costs, price and variable cost per unit to see the break-even units and revenue you need.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate break-even point?","acceptedAnswer":{"@type":"Answer","text":"Divide fixed costs by the contribution margin per unit (price minus variable cost). $12,000 fixed with $45 contribution gives 267 units."}},{"@type":"Question","name":"What is contribution margin?","acceptedAnswer":{"@type":"Answer","text":"The amount each sale contributes toward fixed costs after variable costs are covered. It is price minus variable cost per unit."}},{"@type":"Question","name":"Should break-even be calculated in units or revenue?","acceptedAnswer":{"@type":"Answer","text":"Both are useful. Units tell you what must be sold; revenue tells you whether that volume is realistic given market size."}},{"@type":"Question","name":"Does break-even include the owner's salary?","acceptedAnswer":{"@type":"Answer","text":"It should, if the owner depends on the business for income. Excluding it produces a break-even figure that looks achievable but leaves the owner unpaid."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Break-even analysis identifies the sales volume at which revenue covers all costs. Below it the business loses money; above it, every additional unit contributes to profit. It is the simplest useful model in business planning.</p>
+  <p>The calculation needs two figures: fixed costs (rent, salaries, software) and contribution margin per unit (price minus variable cost). With $12,000 in monthly fixed costs and a $45 contribution per unit, break-even is 267 units. At a $30 contribution it is 400 units, and at $15 it is 800 — the contribution figure drives the answer far more than the fixed cost does.</p>
+  <p>The common error is classifying costs wrongly. A cost that varies with volume belongs in variable; one that does not belongs in fixed. Getting this wrong distorts the contribution margin and produces a break-even figure that looks precise and is wrong. When a cost is genuinely mixed, such as electricity with both a standing charge and usage, split it into its two components.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./profit-margin-calculator.html">Profit Margin</a>
@@ -140,5 +145,17 @@ calcBtn.onclick = function(){
     resOut.innerHTML = html;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I calculate break-even point?</h3>
+<p>Divide fixed costs by the contribution margin per unit (price minus variable cost). $12,000 fixed with $45 contribution gives 267 units.</p>
+<h3>What is contribution margin?</h3>
+<p>The amount each sale contributes toward fixed costs after variable costs are covered. It is price minus variable cost per unit.</p>
+<h3>Should break-even be calculated in units or revenue?</h3>
+<p>Both are useful. Units tell you what must be sold; revenue tells you whether that volume is realistic given market size.</p>
+<h3>Does break-even include the owner's salary?</h3>
+<p>It should, if the owner depends on the business for income. Excluding it produces a break-even figure that looks achievable but leaves the owner unpaid.</p>
+</section>
 </body>
 </html>

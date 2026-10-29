@@ -36,9 +36,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Dividend Calculator","description":"Free dividend calculator. Enter your initial investment, current dividend yield, annual dividend growth, years and any monthly contribution to see the future value with or without dividend reinvestment (DRIP), the total dividends, and your yield on cost.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/dividend-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Dividend Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It projects your investment forward year by year, growing the dividend at your chosen rate and optionally reinvesting it (DRIP), then shows the final value, total dividends, and your yield on cost at the end."}},{"@type":"Question","name":"Is the Dividend Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs in your browser, needs no registration, and your numbers are not uploaded anywhere. It excludes taxes and price appreciation beyond reinvested dividends."}}]}
-</script>
 <meta property="og:title" content="Dividend Calculator | DRIP, Yield on Cost & Future Value">
 <meta property="og:description" content="Free dividend calculator: enter your investment, yield, dividend growth and years to see the future value with or without reinvestment (DRIP), total dividends and your yield on cost.">
 <meta property="og:type" content="website">
@@ -51,8 +48,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Dividend Calculator | DRIP, Yield on Cost & Future Value">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free dividend calculator: enter your investment, yield, dividend growth and years to see the future value with or without reinvestment (DRIP), total dividends and your yield on cost.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate dividend income?","acceptedAnswer":{"@type":"Answer","text":"Multiply shares held by the dividend per share. 500 shares paying $1.20 each produce $600 a year, or $150 per quarter if paid quarterly."}},{"@type":"Question","name":"What is a good dividend yield?","acceptedAnswer":{"@type":"Answer","text":"Broad market averages sit around 1.5–2%, so anything over 4% deserves a closer look at sustainability. Yields above 7–8% are usually priced for a cut."}},{"@type":"Question","name":"What is the payout ratio?","acceptedAnswer":{"@type":"Answer","text":"Annual dividends divided by annual earnings per share. Below 60% is generally comfortable; above 80–90% leaves little room for a bad year, and above 100% means the company is paying out more than it earns."}},{"@type":"Question","name":"Does the calculator account for dividend growth?","acceptedAnswer":{"@type":"Answer","text":"Not in the base output. If you expect the dividend to grow, raise the per-share figure to a mid-term average and re-run, or treat the result as the first-year income rather than a long-run figure."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Dividend income is calculated from three inputs: the number of shares you hold, the dividend per share, and how frequently it is paid. Annual income is simply shares × dividend per share; quarterly income is that figure divided by four, though the actual payments rarely divide evenly.</p>
+  <p>The number that matters more than the raw income is <b>dividend yield</b>: annual dividend divided by share price. A $2.00 dividend on a $40 stock is a 5% yield; the same $2.00 on an $80 stock is 2.5%. A high yield is not automatically good — it often signals a falling share price or a payout the company cannot sustain. The payout ratio, which compares dividends to earnings, is the check that separates a healthy yield from a warning sign.</p>
+  <p>One detail frequently overlooked: dividends are usually taxed in the year they are paid, and qualified dividends receive different treatment from ordinary ones in the US. Reinvesting does not defer that tax in a taxable account, so the compounding figures assume a tax-advantaged wrapper unless you adjust them yourself.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./compound-interest-calculator.html">Compound Interest</a>
@@ -157,5 +162,17 @@ calcBtn.onclick = function(){
         `<tr><td>Yield on cost at end</td><td>${yoc.toFixed(1)}%</td></tr>`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I calculate dividend income?</h3>
+<p>Multiply shares held by the dividend per share. 500 shares paying $1.20 each produce $600 a year, or $150 per quarter if paid quarterly.</p>
+<h3>What is a good dividend yield?</h3>
+<p>Broad market averages sit around 1.5–2%, so anything over 4% deserves a closer look at sustainability. Yields above 7–8% are usually priced for a cut.</p>
+<h3>What is the payout ratio?</h3>
+<p>Annual dividends divided by annual earnings per share. Below 60% is generally comfortable; above 80–90% leaves little room for a bad year, and above 100% means the company is paying out more than it earns.</p>
+<h3>Does the calculator account for dividend growth?</h3>
+<p>Not in the base output. If you expect the dividend to grow, raise the per-share figure to a mid-term average and re-run, or treat the result as the first-year income rather than a long-run figure.</p>
+</section>
 </body>
 </html>

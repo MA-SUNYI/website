@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Length Unit Converter","description":"Free online length unit converter to convert cm, inch, meter, feet, yard, mile between metric and imperial measurement systems instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/length-unit-converter.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Length Unit Converter do?","acceptedAnswer":{"@type":"Answer","text":"Free online length unit converter to convert cm, inch, meter, feet, yard, mile between metric and imperial measurement systems instantly."}},{"@type":"Question","name":"Is the Online Length Unit Converter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Length Unit Converter | Metric &amp; Imperial Calculator">
 <meta property="og:description" content="Free online length unit converter to convert cm, inch, meter, feet, yard, mile between metric and imperial measurement systems instantly.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Length Unit Converter | Metric &amp; Imperial Calculator">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online length unit converter to convert cm, inch, meter, feet, yard, mile between metric and imperial measurement systems instantly.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many millimetres are in an inch?","acceptedAnswer":{"@type":"Answer","text":"Exactly 25.4. The relationship has been fixed by international agreement since 1959, so conversions in this direction are exact."}},{"@type":"Question","name":"How many kilometres is a mile?","acceptedAnswer":{"@type":"Answer","text":"1.609344. A common approximation of 1.6 is accurate to about 0.6%, adequate for driving estimates but not for surveying."}},{"@type":"Question","name":"What is a nautical mile?","acceptedAnswer":{"@type":"Answer","text":"1,852 metres, defined as one minute of latitude. It is used in navigation because it relates directly to coordinates."}},{"@type":"Question","name":"Why do my conversions disagree slightly between tools?","acceptedAnswer":{"@type":"Answer","text":"Because some tools use rounded factors such as 0.3937 inches per centimetre rather than the exact value. Use exact factors where precision matters."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Length conversion crosses two systems whose units do not relate cleanly. The inch was fixed at exactly 25.4 millimetres in 1959, which makes imperial-to-metric arithmetic exact, but many people still work with rounded factors and accumulate error.</p>
+  <p>Useful exact relationships: 1 inch = 25.4 mm, 1 foot = 30.48 cm, 1 yard = 0.9144 m, 1 mile = 1.609344 km, 1 nautical mile = 1.852 km. The nautical mile is defined by one minute of latitude rather than by any land measurement, which is why it does not fit the pattern.</p>
+  <p>Precision matters most at small scales. Rounding 25.4 mm to 25 introduces a 1.6% error, which is enough to ruin a machined fit. In construction and engineering, convert using the exact factors and round only at the final step — mid-calculation rounding is how dimensions drift out of tolerance.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./percent-error-calculator.html">Percent Error Calculator</a>
@@ -134,5 +139,17 @@ convertBtn.onclick = function(){
     lenResult.textContent = `Result: ${output.toFixed(4)} ${toUnit.options[toUnit.selectedIndex].text}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How many millimetres are in an inch?</h3>
+<p>Exactly 25.4. The relationship has been fixed by international agreement since 1959, so conversions in this direction are exact.</p>
+<h3>How many kilometres is a mile?</h3>
+<p>1.609344. A common approximation of 1.6 is accurate to about 0.6%, adequate for driving estimates but not for surveying.</p>
+<h3>What is a nautical mile?</h3>
+<p>1,852 metres, defined as one minute of latitude. It is used in navigation because it relates directly to coordinates.</p>
+<h3>Why do my conversions disagree slightly between tools?</h3>
+<p>Because some tools use rounded factors such as 0.3937 inches per centimetre rather than the exact value. Use exact factors where precision matters.</p>
+</section>
 </body>
 </html>

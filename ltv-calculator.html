@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"LTV Calculator","description":"Free customer lifetime value calculator. Enter average order value, purchases per year, customer lifespan and profit margin to get LTV, gross LTV and the LTV:CAC ratio.","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/ltv-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the LTV Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It multiplies average order value by purchases per year and customer lifespan to get revenue per customer, then applies your margin to get profit per customer and the LTV:CAC ratio against your acquisition cost."}},{"@type":"Question","name":"Is the LTV Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="LTV Calculator | Customer Lifetime Value">
 <meta property="og:description" content="Free LTV calculator: enter average order value, purchase frequency, customer lifespan and margin to get lifetime value and the LTV:CAC ratio.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="LTV Calculator | Customer Lifetime Value">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free LTV calculator: enter average order value, purchase frequency, customer lifespan and margin to get lifetime value and the LTV:CAC ratio.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is customer lifetime value calculated?","acceptedAnswer":{"@type":"Answer","text":"Multiply average order value by annual purchase frequency and average customer lifespan, then apply the gross margin to get the profit-based figure."}},{"@type":"Question","name":"Should I use revenue or profit for LTV?","acceptedAnswer":{"@type":"Answer","text":"Profit. Comparing acquisition cost against revenue overstates how much the business can afford to spend and is a common cause of unprofitable growth."}},{"@type":"Question","name":"What is a good LTV to CAC ratio?","acceptedAnswer":{"@type":"Answer","text":"Three to one is the standard benchmark. Below 1:1 means acquisition loses money."}},{"@type":"Question","name":"How does retention affect LTV?","acceptedAnswer":{"@type":"Answer","text":"Strongly and non-linearly. Extending average lifespan by 50% raises lifetime value by 50%, which is why retention investments often outperform acquisition spend."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Customer lifetime value estimates the total profit a customer generates over their relationship with the business. It is the figure that makes acquisition spending rational: if a customer is worth $900 in gross profit, paying $200 to acquire one is a good trade and paying $1,200 is not.</p>
+  <p>A simple calculation multiplies average order value by purchase frequency and customer lifespan. A customer spending $80 per order, ordering six times a year, staying three years, generates $1,440 in revenue. Apply a 35% gross margin and the lifetime value in profit terms is <b>$504</b> — which is the number that should be compared with acquisition cost, not the revenue figure.</p>
+  <p>The most common error is using revenue as lifetime value. That overstates the affordable acquisition cost by the gross margin percentage, and in low-margin businesses the difference is the entire decision. A retail business at 8% margin has a customer worth $115 in profit on $1,440 of revenue, and would lose money on any acquisition cost above that.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./cac-calculator.html">CAC</a>
@@ -140,5 +145,17 @@ calcBtn.onclick = function(){
     resOut.innerHTML = html;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How is customer lifetime value calculated?</h3>
+<p>Multiply average order value by annual purchase frequency and average customer lifespan, then apply the gross margin to get the profit-based figure.</p>
+<h3>Should I use revenue or profit for LTV?</h3>
+<p>Profit. Comparing acquisition cost against revenue overstates how much the business can afford to spend and is a common cause of unprofitable growth.</p>
+<h3>What is a good LTV to CAC ratio?</h3>
+<p>Three to one is the standard benchmark. Below 1:1 means acquisition loses money.</p>
+<h3>How does retention affect LTV?</h3>
+<p>Strongly and non-linearly. Extending average lifespan by 50% raises lifetime value by 50%, which is why retention investments often outperform acquisition spend.</p>
+</section>
 </body>
 </html>

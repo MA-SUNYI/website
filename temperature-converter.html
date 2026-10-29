@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Temperature Converter","description":"Free online temperature converter, convert between Celsius, Fahrenheit and Kelvin quickly and accurately.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/temperature-converter.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Temperature Converter do?","acceptedAnswer":{"@type":"Answer","text":"Free online temperature converter, convert between Celsius, Fahrenheit and Kelvin quickly and accurately."}},{"@type":"Question","name":"Is the Online Temperature Converter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Temperature Converter | Celsius Fahrenheit Kelvin">
 <meta property="og:description" content="Free online temperature converter, convert between Celsius, Fahrenheit and Kelvin quickly and accurately.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Temperature Converter | Celsius Fahrenheit Kelvin">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online temperature converter, convert between Celsius, Fahrenheit and Kelvin quickly and accurately.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert Celsius to Fahrenheit?","acceptedAnswer":{"@type":"Answer","text":"Multiply by 9, divide by 5, then add 32. 25°C becomes 45 + 32 = 77°F."}},{"@type":"Question","name":"At what temperature are Celsius and Fahrenheit equal?","acceptedAnswer":{"@type":"Answer","text":"−40 degrees. Below that point, Fahrenheit readings are higher than Celsius; above it, the reverse."}},{"@type":"Question","name":"Is Kelvin measured in degrees?","acceptedAnswer":{"@type":"Answer","text":"No. The unit is simply kelvin, written without a degree symbol, because it is an absolute scale."}},{"@type":"Question","name":"Why is 98.6°F used for body temperature?","acceptedAnswer":{"@type":"Answer","text":"It derives from an 1851 estimate of 37°C. Modern measurements put average body temperature slightly lower, around 36.6°C."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>The three common temperature scales use different reference points, and the conversion between them trips people up mainly on negative numbers and on the Fahrenheit offset.</p>
+  <p>Celsius to Fahrenheit is <b>F = C × 9/5 + 32</b>, and the reverse is <b>C = (F − 32) × 5/9</b>. The scales coincide at −40, which is the one value worth remembering as a sanity check. 100°C boils water, 212°F is the same point, and 37°C body temperature is 98.6°F. Kelvin adds 273.15 to Celsius with no degree symbol, since it is an absolute scale starting at zero.</p>
+  <p>The mental shortcut people use — double it and add 30 — is accurate near room temperature and drifts badly at the extremes. For weather, a useful anchor set is 0°C = 32°F, 10°C = 50°F, 20°C = 68°F and 30°C = 86°F, each exactly correct to the nearest degree.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./age-calculator.html">Age Calculator</a>
@@ -130,6 +135,18 @@ convertBtn.onclick = function(){
     tempRes.textContent = `Result: ${res.toFixed(2)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I convert Celsius to Fahrenheit?</h3>
+<p>Multiply by 9, divide by 5, then add 32. 25°C becomes 45 + 32 = 77°F.</p>
+<h3>At what temperature are Celsius and Fahrenheit equal?</h3>
+<p>−40 degrees. Below that point, Fahrenheit readings are higher than Celsius; above it, the reverse.</p>
+<h3>Is Kelvin measured in degrees?</h3>
+<p>No. The unit is simply kelvin, written without a degree symbol, because it is an absolute scale.</p>
+<h3>Why is 98.6°F used for body temperature?</h3>
+<p>It derives from an 1851 estimate of 37°C. Modern measurements put average body temperature slightly lower, around 36.6°C.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

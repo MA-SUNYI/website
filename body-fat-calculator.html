@@ -34,9 +34,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Body Fat Calculator","description":"Free online body fat calculator using the U.S. Navy method. Estimate body fat percentage from height, weight, waist and other measurements for men and women.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/body-fat-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Body Fat Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online body fat calculator using the U.S. Navy method. Estimate body fat percentage from height, weight, waist and other measurements for men and women."}},{"@type":"Question","name":"Is the Online Body Fat Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Body Fat Calculator | Estimate Body Fat %">
 <meta property="og:description" content="Free body fat calculator (U.S. Navy method) for men and women.">
 <meta property="og:type" content="website">
@@ -49,8 +46,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Body Fat Calculator | Estimate Body Fat %">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free body fat calculator (U.S. Navy method) for men and women.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a healthy body fat percentage?","acceptedAnswer":{"@type":"Answer","text":"Roughly 8–19% for men and 21–32% for women. Athletes are usually lower, and the essential minimums are about 3% for men and 12% for women."}},{"@type":"Question","name":"Is body fat percentage better than BMI?","acceptedAnswer":{"@type":"Answer","text":"It is more informative because it separates fat from lean mass. BMI is faster to calculate and adequate for population-level screening, but it cannot see composition."}},{"@type":"Question","name":"How accurate is the Navy tape method?","acceptedAnswer":{"@type":"Answer","text":"Typically within three to four percentage points of a DEXA scan, provided the measurements are taken consistently and at the correct sites."}},{"@type":"Question","name":"Why are healthy ranges different for men and women?","acceptedAnswer":{"@type":"Answer","text":"Women carry more essential fat for hormonal and reproductive function. The difference is physiological, and applying male targets to women is not appropriate."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Body fat percentage describes what share of total mass is fat tissue, and unlike BMI it distinguishes between fat and lean mass. Two people at identical weight and height can differ by fifteen points of body fat.</p>
+  <p>The widely used US Navy method estimates the figure from tape measurements — waist and neck for men, plus hip for women — combined with height. Healthy ranges are roughly 8–19% for men and 21–32% for women, with athletes commonly below those bands and essential fat floors around 3% for men and 12% for women. The sex difference is physiological, not a double standard: women carry more essential fat for hormonal and reproductive function.</p>
+  <p>Tape-based estimates carry an error margin of three to four percentage points, which is enough to move someone across a category boundary. DEXA scanning is more accurate but costly. For tracking progress over time, consistency of method matters more than absolute accuracy — the same tape, the same time of day, the same person measuring.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./bmi-calculator.html">BMI Calculator</a>
@@ -159,6 +164,18 @@ calcBtn.onclick = function(){
         `Lean mass: ${fmt(lean)} kg`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is a healthy body fat percentage?</h3>
+<p>Roughly 8–19% for men and 21–32% for women. Athletes are usually lower, and the essential minimums are about 3% for men and 12% for women.</p>
+<h3>Is body fat percentage better than BMI?</h3>
+<p>It is more informative because it separates fat from lean mass. BMI is faster to calculate and adequate for population-level screening, but it cannot see composition.</p>
+<h3>How accurate is the Navy tape method?</h3>
+<p>Typically within three to four percentage points of a DEXA scan, provided the measurements are taken consistently and at the correct sites.</p>
+<h3>Why are healthy ranges different for men and women?</h3>
+<p>Women carry more essential fat for hormonal and reproductive function. The difference is physiological, and applying male targets to women is not appropriate.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

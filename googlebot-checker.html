@@ -28,8 +28,16 @@ li{margin:8px 0;line-height:1.6;}
 .ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
 </style>
     <script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why can Googlebot not access my Vercel site?","acceptedAnswer":{"@type":"Answer","text":"Deployment Protection on the free plan returns 403 to unauthenticated clients, including Googlebot. Disabling Vercel Authentication for production resolves it."}},{"@type":"Question","name":"How do I confirm Googlebot is really blocked?","acceptedAnswer":{"@type":"Answer","text":"Request the URL with a Googlebot user agent and inspect the status code. A 403 confirms the block; a 200 means the problem lies elsewhere."}},{"@type":"Question","name":"Does the block affect users?","acceptedAnswer":{"@type":"Answer","text":"No. Browsers can complete the authentication challenge, so the site looks fine when visited normally while crawlers are refused."}},{"@type":"Question","name":"What should I do after fixing it?","acceptedAnswer":{"@type":"Answer","text":"Resubmit the sitemap in Search Console and request indexing for the affected URLs. Recrawling usually begins within a few days."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Vercel's free plan enables Deployment Protection by default, which makes preview deployments — and sometimes the production domain — return 403 to any client that cannot complete an authentication challenge. Googlebot cannot, so it is refused, and Search Console reports the sitemap as unreachable while the same URL opens without issue in your browser.</p>
+  <p>The fix is in the project settings rather than in the code. Under Vercel, open Project Settings, then Deployment Protection, and disable Vercel Authentication for the production environment. Confirm with a request that identifies itself as Googlebot: if the response is 200 rather than 403, the block is gone. After that, resubmit the sitemap in Search Console so the URLs are recrawled.</p>
+  <p>Two related problems produce the same symptom. A robots.txt that disallows the sitemap path will stop the crawl even when the file is reachable, and a sitemap served from a different hostname than the canonical domain splits signals between two origins. Check both before assuming the platform is at fault — the 403 is the most common cause, but it is not the only one.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./robots-txt-generator.html">Robots.txt Generator</a>
@@ -83,6 +91,18 @@ Normal access: 200 OK<br>
 If crawl failed: Please check Vercel Deployment Protection and robots.txt file.`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Why can Googlebot not access my Vercel site?</h3>
+<p>Deployment Protection on the free plan returns 403 to unauthenticated clients, including Googlebot. Disabling Vercel Authentication for production resolves it.</p>
+<h3>How do I confirm Googlebot is really blocked?</h3>
+<p>Request the URL with a Googlebot user agent and inspect the status code. A 403 confirms the block; a 200 means the problem lies elsewhere.</p>
+<h3>Does the block affect users?</h3>
+<p>No. Browsers can complete the authentication challenge, so the site looks fine when visited normally while crawlers are refused.</p>
+<h3>What should I do after fixing it?</h3>
+<p>Resubmit the sitemap in Search Console and request indexing for the affected URLs. Recrawling usually begins within a few days.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

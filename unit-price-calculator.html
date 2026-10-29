@@ -33,9 +33,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Unit Price Calculator","description":"Free online unit price calculator: compare the real cost per ounce, pound, kg or liter of two products and find the cheaper deal instantly. No sign up.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/unit-price-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Unit Price Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online unit price calculator: compare the real cost per ounce, pound, kg or liter of two products and find the cheaper deal instantly. No sign up."}},{"@type":"Question","name":"Is the Online Unit Price Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Unit Price Calculator | Compare Price Per Unit">
 <meta property="og:description" content="Free online unit price calculator: compare the real cost per ounce, pound, kg or liter of two products and find the cheaper deal instantly. No sign up.">
 <meta property="og:type" content="website">
@@ -48,8 +45,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Unit Price Calculator | Compare Price Per Unit">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online unit price calculator: compare the real cost per ounce, pound, kg or liter of two products and find the cheaper deal instantly. No sign up.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate unit price?","acceptedAnswer":{"@type":"Answer","text":"Divide the total price by the quantity in a consistent unit. $4.49 for 750 g is 4.49 ÷ 0.75 = $5.99 per kilogram."}},{"@type":"Question","name":"Is the largest package always the best value?","acceptedAnswer":{"@type":"Answer","text":"No. Volume discounts are inconsistent, and smaller packs frequently beat larger ones on unit price."}},{"@type":"Question","name":"What unit should I compare in?","acceptedAnswer":{"@type":"Answer","text":"Choose one — per 100 g, per kilogram, per litre — and convert everything to it. Mixing units is the most common source of wrong conclusions."}},{"@type":"Question","name":"Does unit price account for waste?","acceptedAnswer":{"@type":"Answer","text":"No. A cheaper per-unit price on a quantity that spoils before use is not a saving. Factor in consumption rate."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Unit price divides the total cost by the quantity to reveal which package is actually cheaper. It sounds trivial, but shelf labelling is inconsistent enough that the calculation is genuinely useful — and the answer is often not the largest pack.</p>
+  <p>A 750 g box at $4.49 works out to $5.99 per kilogram. A 1.2 kg box at $6.99 is $5.83 per kilogram, so the larger box is cheaper — but only by 2.7%. A 500 g box at $2.79 is $5.58 per kilogram, making it the best value of the three despite being the smallest. Larger packages carry a volume discount far less reliably than shoppers assume.</p>
+  <p>Two caveats matter. Unit price ignores quality, waste and storage capacity — a bulk purchase that spoils is not a saving. And the comparison must use a consistent unit: comparing per-ounce against per-100-grams produces nonsense, which is exactly the confusion retailers create by displaying different units side by side.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./discount-calculator.html">Discount Calculator</a>
@@ -173,6 +178,18 @@ calcBtn.onclick = function(){
     resOut.innerHTML = line;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I calculate unit price?</h3>
+<p>Divide the total price by the quantity in a consistent unit. $4.49 for 750 g is 4.49 ÷ 0.75 = $5.99 per kilogram.</p>
+<h3>Is the largest package always the best value?</h3>
+<p>No. Volume discounts are inconsistent, and smaller packs frequently beat larger ones on unit price.</p>
+<h3>What unit should I compare in?</h3>
+<p>Choose one — per 100 g, per kilogram, per litre — and convert everything to it. Mixing units is the most common source of wrong conclusions.</p>
+<h3>Does unit price account for waste?</h3>
+<p>No. A cheaper per-unit price on a quantity that spoils before use is not a saving. Factor in consumption rate.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

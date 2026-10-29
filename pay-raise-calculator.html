@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Pay Raise Calculator","description":"Free pay raise calculator. Enter your current salary and a raise percentage or dollar amount to see the new salary and the increase per year, month and week.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/pay-raise-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Pay Raise Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free pay raise calculator. Enter your current salary and either a raise percentage or a raise amount to see your new salary and how much extra that is per year, month and week."}},{"@type":"Question","name":"Is the Pay Raise Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Pay Raise Calculator | New Salary After a Raise">
 <meta property="og:description" content="Free pay raise calculator: enter your current salary and raise percentage or amount to see your new salary and the increase per year and month.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Pay Raise Calculator | New Salary After a Raise">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free pay raise calculator: enter your current salary and raise percentage or amount to see your new salary and the increase per year and month.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate a percentage raise?","acceptedAnswer":{"@type":"Answer","text":"Multiply current salary by the percentage and add it: $62,000 × 1.04 = $64,480. The monthly increase is the annual difference divided by twelve."}},{"@type":"Question","name":"What is a real raise?","acceptedAnswer":{"@type":"Answer","text":"The increase after subtracting inflation. A 4% raise during 3.5% inflation is a real increase of about 0.5%."}},{"@type":"Question","name":"Can a raise push me into a higher tax bracket and reduce my pay?","acceptedAnswer":{"@type":"Answer","text":"No. Only the income above the threshold is taxed at the higher rate, so take-home pay always rises with a raise."}},{"@type":"Question","name":"How often should I expect a raise?","acceptedAnswer":{"@type":"Answer","text":"Annual reviews are typical, but inflation-linked adjustments are separate from merit increases. Confirm which one you are being offered."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A raise is usually negotiated as a percentage but experienced as a monthly amount, and the gap between the two is what makes an offer hard to judge. A 4% raise on $62,000 is $2,480 a year, or about $207 a month before tax.</p>
+  <p>The number that matters is the real raise — the increase after inflation. A 4% raise during 3.5% inflation is a 0.5% real increase, which is barely ahead of standing still. Over several years of modest raises against higher inflation, nominal pay can rise while purchasing power falls, and that pattern is easy to miss when each individual raise looks reasonable.</p>
+  <p>Tax brackets complicate the monthly picture. A raise that pushes income into a higher marginal bracket does not reduce take-home pay — a persistent myth — but the net gain is smaller than the gross figure suggests. Using the after-tax amount for planning avoids the disappointment of a raise that feels smaller than expected.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./salary-comparison-calculator.html">Salary Comparison</a>
@@ -131,5 +136,17 @@ calcBtn.onclick = function(){
         `Extra per hour (2,080 h/yr): $${fmt(increase/2080)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I calculate a percentage raise?</h3>
+<p>Multiply current salary by the percentage and add it: $62,000 × 1.04 = $64,480. The monthly increase is the annual difference divided by twelve.</p>
+<h3>What is a real raise?</h3>
+<p>The increase after subtracting inflation. A 4% raise during 3.5% inflation is a real increase of about 0.5%.</p>
+<h3>Can a raise push me into a higher tax bracket and reduce my pay?</h3>
+<p>No. Only the income above the threshold is taxed at the higher rate, so take-home pay always rises with a raise.</p>
+<h3>How often should I expect a raise?</h3>
+<p>Annual reviews are typical, but inflation-linked adjustments are separate from merit increases. Confirm which one you are being offered.</p>
+</section>
 </body>
 </html>

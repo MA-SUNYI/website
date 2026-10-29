@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Percentage Calculator","description":"Free online percentage calculator to find percentage of number, discount, tip, percent increase and decrease for shopping, study and daily finance.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/percentage-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Percentage Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online percentage calculator to find percentage of number, discount, tip, percent increase and decrease for shopping, study and daily finance."}},{"@type":"Question","name":"Is the Online Percentage Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Percentage Calculator | Free Percent Increase &amp; Discount Tool">
 <meta property="og:description" content="Free online percentage calculator to find percentage of number, discount, tip, percent increase and decrease for shopping, study and daily finance.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Percentage Calculator | Free Percent Increase &amp; Discount Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online percentage calculator to find percentage of number, discount, tip, percent increase and decrease for shopping, study and daily finance.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What percentage of a number is another number?","acceptedAnswer":{"@type":"Answer","text":"Divide the first number by the second, then multiply by 100. For example, 30 is 30 ÷ 120 × 100 = 25% of 120."}},{"@type":"Question","name":"How do I add or remove a percentage?","acceptedAnswer":{"@type":"Answer","text":"To add, multiply by (1 + rate). To remove, multiply by (1 − rate). A 15% tip on $60 is 60 × 1.15 = $69. A 15% discount on the same amount is 60 × 0.85 = $51."}},{"@type":"Question","name":"Is a 10% discount the same as a 10% refund?","acceptedAnswer":{"@type":"Answer","text":"No. A 10% discount is taken from the price; a 10% refund is returned from what you paid. If both apply to the same order the refund is the smaller amount, because it is calculated on the already-reduced figure."}},{"@type":"Question","name":"Why is percentage used so widely in finance?","acceptedAnswer":{"@type":"Answer","text":"Because it normalises different-sized quantities. A $5 fee is trivial on a $10,000 loan and severe on a $50 one; expressing both as a rate makes the comparison immediate and scale-free."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>This page answers the same family of questions as the percentage calculator, and the two are deliberately kept separate because they serve different search intents: one is used for finding a part of a number, the other for expressing one quantity as a share of another. If you landed here looking for percentage change, note that the direction matters and reversing the two inputs gives a different answer.</p>
+  <p>The core relationship is <b>Part ÷ Whole × 100 = Percentage</b>. A sale item marked down from $80 to $56 means a $24 discount, and 24 ÷ 80 = 0.3, so the discount is <b>30%</b>. Reading the question backwards — 'what is 30% off 80' — is the other calculator's job, and confusing the two is the single most common source of wrong answers in this topic.</p>
+  <p>Percentages compress ratios into a scale everyone reads fluently. That is their whole value, and also their risk: a 3% margin and a 3% interest rate look equally modest on a page, though one is profit and the other is cost. Always ask what the percentage is a percentage <i>of</i> before acting on it.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./percentage-calculator.html">Percentage Calculator</a>
@@ -105,5 +110,17 @@ Remaining amount after discount: ${remaining.toFixed(2)}
 Formula: Base × Percentage ÷ 100`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What percentage of a number is another number?</h3>
+<p>Divide the first number by the second, then multiply by 100. For example, 30 is 30 ÷ 120 × 100 = 25% of 120.</p>
+<h3>How do I add or remove a percentage?</h3>
+<p>To add, multiply by (1 + rate). To remove, multiply by (1 − rate). A 15% tip on $60 is 60 × 1.15 = $69. A 15% discount on the same amount is 60 × 0.85 = $51.</p>
+<h3>Is a 10% discount the same as a 10% refund?</h3>
+<p>No. A 10% discount is taken from the price; a 10% refund is returned from what you paid. If both apply to the same order the refund is the smaller amount, because it is calculated on the already-reduced figure.</p>
+<h3>Why is percentage used so widely in finance?</h3>
+<p>Because it normalises different-sized quantities. A $5 fee is trivial on a $10,000 loan and severe on a $50 one; expressing both as a rate makes the comparison immediate and scale-free.</p>
+</section>
 </body>
 </html>

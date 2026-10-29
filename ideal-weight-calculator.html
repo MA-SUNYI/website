@@ -34,9 +34,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Ideal Weight Calculator","description":"Free online ideal weight calculator. Estimate a healthy weight range from height using the Robinson and Miller formulas for men and women.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/ideal-weight-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Ideal Weight Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online ideal weight calculator. Estimate a healthy weight range from height using the Robinson and Miller formulas for men and women."}},{"@type":"Question","name":"Is the Online Ideal Weight Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Ideal Weight Calculator | Healthy Weight Range">
 <meta property="og:description" content="Free online ideal weight calculator. Estimate a healthy weight range from height using the Robinson and Miller formulas for men and women.">
 <meta property="og:type" content="website">
@@ -49,8 +46,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Ideal Weight Calculator | Healthy Weight Range">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online ideal weight calculator. Estimate a healthy weight range from height using the Robinson and Miller formulas for men and women.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is ideal body weight calculated?","acceptedAnswer":{"@type":"Answer","text":"The Devine formula adds a base weight for the first 152.4 cm of height plus 2.3 kg per additional inch. Several other formulas exist and give slightly different figures."}},{"@type":"Question","name":"Is ideal body weight the same as a healthy weight?","acceptedAnswer":{"@type":"Answer","text":"No. Healthy weight is a range, usually expressed as a BMI band. Ideal body weight is a single figure derived from population averages."}},{"@type":"Question","name":"Do the formulas work for very tall or short people?","acceptedAnswer":{"@type":"Answer","text":"They become less accurate at the extremes, because the linear adjustment does not account for how body proportions change with height."}},{"@type":"Question","name":"Should I use this as a weight loss target?","acceptedAnswer":{"@type":"Answer","text":"Better to use a healthy BMI range plus body composition measurements. A single number ignores build, age and muscle mass entirely."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Ideal body weight formulas estimate a reference weight from height. The Devine formula, published in 1974 for drug dosing, remains the most widely used: 50 kg for the first 152.4 cm of height, plus 2.3 kg for each additional inch in men, with 45.5 kg and 2.3 kg as the equivalents for women.</p>
+  <p>For a 175 cm man, the first 152.4 cm accounts for 50 kg, and the remaining 22.6 cm (about 8.9 inches) adds 20.5 kg, giving roughly <b>70.5 kg</b>. The same height for a woman gives about 66 kg. These are population averages derived from insurance data, not individual targets, and they say nothing about body composition.</p>
+  <p>The formulas were built for a specific population at a specific time and are known to be imprecise at the extremes of height. For anyone significantly taller or shorter than average, the linear adjustment drifts. Treated as a rough reference point alongside a healthy BMI range, they are useful; treated as a personal goal, they are not. A better range comes from combining height, build, age and measured body composition.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./bmi-calculator.html">BMI Calculator</a>
@@ -154,6 +159,18 @@ calcBtn.onclick = function(){
         `Miller: ${fmtPound(miller)} lb (${fmtKg(milKg)} kg)`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How is ideal body weight calculated?</h3>
+<p>The Devine formula adds a base weight for the first 152.4 cm of height plus 2.3 kg per additional inch. Several other formulas exist and give slightly different figures.</p>
+<h3>Is ideal body weight the same as a healthy weight?</h3>
+<p>No. Healthy weight is a range, usually expressed as a BMI band. Ideal body weight is a single figure derived from population averages.</p>
+<h3>Do the formulas work for very tall or short people?</h3>
+<p>They become less accurate at the extremes, because the linear adjustment does not account for how body proportions change with height.</p>
+<h3>Should I use this as a weight loss target?</h3>
+<p>Better to use a healthy BMI range plus body composition measurements. A single number ignores build, age and muscle mass entirely.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

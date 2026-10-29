@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Binary to Decimal Converter","description":"Free binary to decimal converter to translate binary 0/1 strings into standard decimal numbers for coding, computer science homework and digital logic study.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/binary-to-decimal.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Binary to Decimal Converter do?","acceptedAnswer":{"@type":"Answer","text":"Free binary to decimal converter to translate binary 0/1 strings into standard decimal numbers for coding, computer science homework and digital logic study."}},{"@type":"Question","name":"Is the Binary to Decimal Converter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Binary to Decimal Converter | Base 2 to Base 10">
 <meta property="og:description" content="Free binary to decimal converter: turn 0/1 strings into decimal for coding and study.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Binary to Decimal Converter | Base 2 to Base 10">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free binary to decimal converter: turn 0/1 strings into decimal for coding and study.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert binary to decimal by hand?","acceptedAnswer":{"@type":"Answer","text":"Write the place values 1, 2, 4, 8, 16, 32... under each bit starting from the right, then add only the values sitting under a 1. The sum is the decimal value."}},{"@type":"Question","name":"What is the largest number in 8 bits?","acceptedAnswer":{"@type":"Answer","text":"255, which is 11111111 — all eight place values added together. Going one bit further to 9 bits reaches 511, which is why unsigned byte ranges always stop at 255."}},{"@type":"Question","name":"How are negative numbers stored in binary?","acceptedAnswer":{"@type":"Answer","text":"Most systems use two's complement: flip every bit and add one. So -1 in 8 bits is 11111111. This lets the same addition circuitry handle signed and unsigned values."}},{"@type":"Question","name":"What is the fastest way to convert a long binary string?","acceptedAnswer":{"@type":"Answer","text":"Group the bits into nibbles of four from the right, convert each nibble to a hex digit using 8-4-2-1, then convert the hex to decimal. It is much faster than summing dozens of powers by hand."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Binary is base two, so each position counts a power of two rather than a power of ten. Reading the digits right to left, the columns are worth 1, 2, 4, 8, 16, 32 and so on. To convert, add up the column values wherever a 1 appears and ignore the zeros.</p>
+  <p>The worked example is <b>1011</b>: rightmost 1 is worth 1, the next 1 is worth 2, the 0 is worth nothing, and the leftmost 1 is worth 8. Total 1 + 2 + 8 = <b>11</b>. That is the entire method — no tables to memorise, just doubling from the right and summing. An eight-digit byte covers 0 to 255, which is why so many technical limits sit at 255.</p>
+  <p>Binary shows up far more often than people expect: subnet masks, file permission codes, colour channels, bitmask flags in APIs and the output of any hex editor. Being able to read a byte by hand makes those numbers stop looking like noise.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./binary-to-decimal.html">Binary to Decimal</a>
@@ -112,5 +117,17 @@ Equivalent Decimal Number: ${decimalNum}
 Formula: Sum(digit × 2^position) from right to left`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I convert binary to decimal by hand?</h3>
+<p>Write the place values 1, 2, 4, 8, 16, 32... under each bit starting from the right, then add only the values sitting under a 1. The sum is the decimal value.</p>
+<h3>What is the largest number in 8 bits?</h3>
+<p>255, which is 11111111 — all eight place values added together. Going one bit further to 9 bits reaches 511, which is why unsigned byte ranges always stop at 255.</p>
+<h3>How are negative numbers stored in binary?</h3>
+<p>Most systems use two's complement: flip every bit and add one. So -1 in 8 bits is 11111111. This lets the same addition circuitry handle signed and unsigned values.</p>
+<h3>What is the fastest way to convert a long binary string?</h3>
+<p>Group the bits into nibbles of four from the right, convert each nibble to a hex digit using 8-4-2-1, then convert the hex to decimal. It is much faster than summing dozens of powers by hand.</p>
+</section>
 </body>
 </html>

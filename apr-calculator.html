@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"APR Calculator","description":"Free APR calculator. Enter a loan amount, interest rate, term and upfront fees to see the true annual percentage rate and the monthly payment.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/apr-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the APR Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free APR calculator. Enter the loan amount, stated interest rate, term and any upfront fees to see the monthly payment and the true APR, which includes the cost of those fees."}},{"@type":"Question","name":"Is the APR Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="APR Calculator | True Annual Cost of a Loan">
 <meta property="og:description" content="Free APR calculator: enter loan amount, rate, term and upfront fees to see the true annual percentage rate and monthly payment.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="APR Calculator | True Annual Cost of a Loan">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free APR calculator: enter loan amount, rate, term and upfront fees to see the true annual percentage rate and monthly payment.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is included in APR?","acceptedAnswer":{"@type":"Answer","text":"The interest rate plus most fees required to obtain the loan — origination charges, closing costs and, where applicable, mortgage insurance. Discount points are typically included as well."}},{"@type":"Question","name":"Why is APR higher than the interest rate?","acceptedAnswer":{"@type":"Answer","text":"Because fees are spread across the loan and expressed as an annual rate. The quoted rate applies only to the principal; APR measures the total cost of borrowing."}},{"@type":"Question","name":"Is a lower APR always a better deal?","acceptedAnswer":{"@type":"Answer","text":"For a loan held to maturity, generally yes. For a loan repaid early, the fee structure matters more than the APR because the fees do not have time to amortise."}},{"@type":"Question","name":"Does APR apply to credit cards?","acceptedAnswer":{"@type":"Answer","text":"Yes, but without the fee component in most cases. Card APR is effectively the interest rate, with the impact of annual fees shown separately."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>APR — annual percentage rate — is designed to express the true cost of borrowing by folding fees into the rate. Where the nominal interest rate describes only the charge on the principal, APR also accounts for origination fees, closing costs and mortgage insurance, which is why the two figures differ.</p>
+  <p>A $300,000 loan at 6.25% with $6,000 in fees produces an APR around 6.43%. The monthly payment is still calculated from the 6.25% rate, but the effective cost of the money, counting what you paid to obtain it, is the higher figure. On a mortgage held for thirty years, that 0.18-point difference adds up to thousands.</p>
+  <p>APR has one well-known weakness: it assumes you keep the loan to maturity. On a short-held loan, fees spread over a few years weigh far more heavily than APR suggests. That is why comparing ARRs on loans you plan to repay early can mislead, and why the fee amount matters independently of the APR figure.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./loan-payment-calculator.html">Loan Payment</a>
@@ -144,5 +149,17 @@ calcBtn.onclick = function(){
         `<span style="color:#0f9d58">True APR: ${apr.toFixed(3)}%</span> (rate + ${(apr - r).toFixed(3)} pts from fees)`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is included in APR?</h3>
+<p>The interest rate plus most fees required to obtain the loan — origination charges, closing costs and, where applicable, mortgage insurance. Discount points are typically included as well.</p>
+<h3>Why is APR higher than the interest rate?</h3>
+<p>Because fees are spread across the loan and expressed as an annual rate. The quoted rate applies only to the principal; APR measures the total cost of borrowing.</p>
+<h3>Is a lower APR always a better deal?</h3>
+<p>For a loan held to maturity, generally yes. For a loan repaid early, the fee structure matters more than the APR because the fees do not have time to amortise.</p>
+<h3>Does APR apply to credit cards?</h3>
+<p>Yes, but without the fee component in most cases. Card APR is effectively the interest rate, with the impact of annual fees shown separately.</p>
+</section>
 </body>
 </html>

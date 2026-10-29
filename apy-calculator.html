@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"APY Calculator","description":"Free APY calculator. Enter a nominal interest rate, a compounding frequency and an optional balance to see the effective annual yield and what you actually earn.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/apy-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the APY Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free APY calculator. Enter a nominal interest rate and how often it compounds to see the APY, the effective annual yield you actually earn, plus your yearly interest on a given balance."}},{"@type":"Question","name":"Is the APY Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="APY Calculator | Effective Annual Yield vs Nominal Rate">
 <meta property="og:description" content="Free APY calculator: convert a nominal rate into APY for any compounding frequency and see what your account really earns in a year.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="APY Calculator | Effective Annual Yield vs Nominal Rate">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free APY calculator: convert a nominal rate into APY for any compounding frequency and see what your account really earns in a year.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between APR and APY?","acceptedAnswer":{"@type":"Answer","text":"APY includes compounding and measures what a deposit earns. APR excludes compounding and measures what a loan costs, aside from fees being folded in separately."}},{"@type":"Question","name":"Does higher compounding frequency always help?","acceptedAnswer":{"@type":"Answer","text":"Yes for depositors, but with diminishing returns. The difference between monthly and daily compounding is usually a few hundredths of a percentage point."}},{"@type":"Question","name":"How do I compare two savings accounts?","acceptedAnswer":{"@type":"Answer","text":"Compare APY, not nominal rate. APY already reflects compounding, so it is the single number that captures the true annual yield."}},{"@type":"Question","name":"Can APY be negative?","acceptedAnswer":{"@type":"Answer","text":"APY on a deposit is normally positive, but real APY can be negative when inflation exceeds the nominal yield, eroding purchasing power."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>APY is the annualised return on savings or an investment, and unlike APR it includes the effect of compounding. That difference — typically 0.1 to 0.5 percentage points — is why APY is the number to compare between deposit accounts.</p>
+  <p>The conversion is direct. A nominal rate of 4.50% compounded monthly produces an APY of (1 + 0.045/12)^12 − 1, which comes out at <b>4.594%</b>. Compounded daily, the same nominal rate yields 4.602%. Compounded annually, it stays at exactly 4.50%. The nominal rate never moved; only the compounding did.</p>
+  <p>APY is mandatory disclosure for deposit products in the United States precisely because it makes comparison honest. When a bank advertises 4.5% APY and another advertises 4.5% APR, they are not offering the same thing — the first is what you earn, the second is closer to what you pay.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./cd-calculator.html">CD Calculator</a>
@@ -139,5 +144,17 @@ calcBtn.onclick = function(){
         `<table><thead><tr><th>Frequency</th><th>APY</th>${bal>0?`<th>Yearly interest</th>`:`<th>—</th>`}</tr></thead><tbody>${rows}</tbody></table>`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is the difference between APR and APY?</h3>
+<p>APY includes compounding and measures what a deposit earns. APR excludes compounding and measures what a loan costs, aside from fees being folded in separately.</p>
+<h3>Does higher compounding frequency always help?</h3>
+<p>Yes for depositors, but with diminishing returns. The difference between monthly and daily compounding is usually a few hundredths of a percentage point.</p>
+<h3>How do I compare two savings accounts?</h3>
+<p>Compare APY, not nominal rate. APY already reflects compounding, so it is the single number that captures the true annual yield.</p>
+<h3>Can APY be negative?</h3>
+<p>APY on a deposit is normally positive, but real APY can be negative when inflation exceeds the nominal yield, eroding purchasing power.</p>
+</section>
 </body>
 </html>

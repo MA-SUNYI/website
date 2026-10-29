@@ -34,9 +34,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Water Intake Calculator","description":"Free online water intake calculator. Estimate your daily water needs from body weight and activity level, in liters, milliliters and cups.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/water-intake-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Water Intake Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online water intake calculator. Estimate your daily water needs from body weight and activity level, in liters, milliliters and cups."}},{"@type":"Question","name":"Is the Online Water Intake Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Water Intake Calculator | Daily Hydration">
 <meta property="og:description" content="Free online water intake calculator. Estimate your daily water needs from body weight and activity level, in liters, milliliters and cups.">
 <meta property="og:type" content="website">
@@ -49,8 +46,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Water Intake Calculator | Daily Hydration">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online water intake calculator. Estimate your daily water needs from body weight and activity level, in liters, milliliters and cups.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much water should I drink a day?","acceptedAnswer":{"@type":"Answer","text":"About 30–35 ml per kilogram of body weight, or roughly 2–2.5 litres for a typical adult, adjusted for activity and climate."}},{"@type":"Question","name":"Does coffee count toward water intake?","acceptedAnswer":{"@type":"Answer","text":"Yes. Moderate caffeine intake does not cause meaningful net fluid loss, and tea, coffee and milk all contribute to daily hydration."}},{"@type":"Question","name":"Can I drink too much water?","acceptedAnswer":{"@type":"Answer","text":"Yes. Excess intake without corresponding sodium can dilute blood sodium and cause hyponatraemia, which is rare but serious."}},{"@type":"Question","name":"How can I tell if I am hydrated?","acceptedAnswer":{"@type":"Answer","text":"Urine colour is the simplest indicator. Pale straw suggests adequate hydration; consistently dark yellow suggests a shortfall."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Water needs vary with body size, activity and climate, which is why the familiar eight-glasses rule is a rough convenience rather than a recommendation. A more useful starting point is 30–35 ml per kilogram of body weight, adjusted upward for exercise and heat.</p>
+  <p>For a 70 kg adult, that works out to roughly 2.1–2.45 litres a day from all sources. Exercise adds about 0.5–1 litre per hour of moderate activity in temperate conditions, and substantially more in heat. A useful, if unglamorous, check is urine colour: pale straw suggests adequate hydration, while consistently dark yellow points to a shortfall.</p>
+  <p>Overhydration is possible and occasionally dangerous. Drinking far beyond thirst dilutes blood sodium, a condition called hyponatraemia that has occurred in endurance events where participants were advised to drink fixed large volumes regardless of thirst. The practical rule is to drink to thirst, adjust for sweat losses, and not to force fixed quantities.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./calorie-calculator.html">Calorie Calculator</a>
@@ -128,6 +133,18 @@ calcBtn.onclick = function(){
         `About ${fmt(cups)} cups (240 mL)`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How much water should I drink a day?</h3>
+<p>About 30–35 ml per kilogram of body weight, or roughly 2–2.5 litres for a typical adult, adjusted for activity and climate.</p>
+<h3>Does coffee count toward water intake?</h3>
+<p>Yes. Moderate caffeine intake does not cause meaningful net fluid loss, and tea, coffee and milk all contribute to daily hydration.</p>
+<h3>Can I drink too much water?</h3>
+<p>Yes. Excess intake without corresponding sodium can dilute blood sodium and cause hyponatraemia, which is rare but serious.</p>
+<h3>How can I tell if I am hydrated?</h3>
+<p>Urine colour is the simplest indicator. Pale straw suggests adequate hydration; consistently dark yellow suggests a shortfall.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

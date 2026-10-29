@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Net Worth Calculator","description":"Free net worth calculator. Add your assets and liabilities to see your total net worth and the ratio of assets to debt.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/net-worth-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Net Worth Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free net worth calculator. Enter the total value of your assets and your total liabilities to see your net worth and how much of your assets are offset by debt."}},{"@type":"Question","name":"Is the Net Worth Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Net Worth Calculator | Assets Minus Liabilities">
 <meta property="og:description" content="Free net worth calculator: add your assets and liabilities to see your total net worth and the asset-to-debt picture.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Net Worth Calculator | Assets Minus Liabilities">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free net worth calculator: add your assets and liabilities to see your total net worth and the asset-to-debt picture.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I include my home in net worth?","acceptedAnswer":{"@type":"Answer","text":"Include it at market value on the asset side and the mortgage on the liability side. Note that home equity is illiquid and cannot substitute for an emergency fund."}},{"@type":"Question","name":"How often should I calculate net worth?","acceptedAnswer":{"@type":"Answer","text":"Quarterly is usually enough. Monthly tracking adds noise; annual tracking misses trends that are worth catching."}},{"@type":"Question","name":"Is a negative net worth a problem?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily, especially early in a career with student debt. What matters is direction: a negative figure that is shrinking is a good sign."}},{"@type":"Question","name":"What is a good net worth?","acceptedAnswer":{"@type":"Answer","text":"A widely used benchmark is one year of income saved by age 30, rising to about ten times income by 65. The specific target matters less than the trajectory."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Net worth is total assets minus total liabilities. It is a single number that answers a single question: if you sold everything and paid off every debt today, what would remain? That simplicity makes it the most useful long-run financial indicator available.</p>
+  <p>Assets include cash, investment accounts, retirement balances, the market value of property, and the resale value of vehicles. Liabilities include mortgages, car loans, student loans, credit card balances and any other obligation. A household with $80,000 in retirement accounts, $30,000 in cash, a $420,000 home and a $25,000 car against a $280,000 mortgage, a $14,000 car loan and $6,000 in cards has a net worth of $555,000 − $300,000 = <b>$255,000</b>.</p>
+  <p>The number is more useful as a trend than as an absolute. Tracking it quarterly reveals whether the household is genuinely accumulating or merely appearing to, and it is the fastest way to detect the pattern where income rises but net worth does not. Illiquid assets such as a primary residence count, but their value is theoretical until sold and should not be relied on as a cushion.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./savings-goal-calculator.html">Savings Goal</a>
@@ -113,5 +118,17 @@ calcBtn.onclick = function(){
         `Assets to debt: ${ratioText}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Should I include my home in net worth?</h3>
+<p>Include it at market value on the asset side and the mortgage on the liability side. Note that home equity is illiquid and cannot substitute for an emergency fund.</p>
+<h3>How often should I calculate net worth?</h3>
+<p>Quarterly is usually enough. Monthly tracking adds noise; annual tracking misses trends that are worth catching.</p>
+<h3>Is a negative net worth a problem?</h3>
+<p>Not necessarily, especially early in a career with student debt. What matters is direction: a negative figure that is shrinking is a good sign.</p>
+<h3>What is a good net worth?</h3>
+<p>A widely used benchmark is one year of income saved by age 30, rising to about ten times income by 65. The specific target matters less than the trajectory.</p>
+</section>
 </body>
 </html>

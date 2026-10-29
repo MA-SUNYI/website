@@ -32,9 +32,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Decimal to Fraction Converter","description":"Use our free online tool to convert any decimal number to fraction and simplify results. Perfect for math learning and daily calculations.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/decimal-to-fraction.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Decimal to Fraction Converter do?","acceptedAnswer":{"@type":"Answer","text":"Use our free online tool to convert any decimal number to fraction and simplify results. Perfect for math learning and daily calculations."}},{"@type":"Question","name":"Is the Decimal to Fraction Converter free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Decimal to Fraction Converter | Free Online Math Tool">
 <meta property="og:description" content="Use our free online tool to convert any decimal number to fraction and simplify results. Perfect for math learning and daily calculations.">
 <meta property="og:type" content="website">
@@ -47,8 +44,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Decimal to Fraction Converter | Free Online Math Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Use our free online tool to convert any decimal number to fraction and simplify results. Perfect for math learning and daily calculations.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert 0.375 to a fraction?","acceptedAnswer":{"@type":"Answer","text":"Three decimal places means a denominator of 1000, so write 375/1000 and divide both by 125 to get 3/8."}},{"@type":"Question","name":"What is 0.8 as a fraction?","acceptedAnswer":{"@type":"Answer","text":"8/10, which reduces to 4/5. One decimal place means a denominator of ten."}},{"@type":"Question","name":"Can every decimal be written as a fraction?","acceptedAnswer":{"@type":"Answer","text":"Every terminating or repeating decimal can. Decimals that neither terminate nor repeat, such as π, are irrational and cannot be expressed as a ratio of integers."}},{"@type":"Question","name":"How do I handle a decimal greater than one?","acceptedAnswer":{"@type":"Answer","text":"Convert the fractional part first, then attach the whole number. For 2.25, convert 0.25 to 1/4 and write the result as 2 1/4, or as the improper fraction 9/4."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Turning a decimal back into a fraction reverses the process: the digits after the point tell you the denominator, and simplifying finishes the job. This direction is less intuitive than the forward one, but the rule is mechanical and works for any terminating decimal.</p>
+  <p>For each decimal place, add one zero to the denominator. So 0.75 has two places, giving 75/100, which reduces by 25 to <b>3/4</b>. 0.125 has three places, giving 125/1000, which reduces by 125 to <b>1/8</b>. 0.6 has one place, giving 6/10, which reduces to 3/5. The reduction step is what separates a correct answer from a tidy one, and skipping it is the most common marking deduction.</p>
+  <p>Repeating decimals need one extra step. For 0.333…, let x = 0.333…, multiply by 10 to get 10x = 3.333…, subtract the original to get 9x = 3, and conclude x = 1/3. The same trick scales to any repetition length: two repeating digits need multiplication by 100, three digits by 1000.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./word-counter.html">Word Counter</a>
@@ -122,6 +127,18 @@ convertBtn.onclick = function(){
     fracResult.textContent = `${num} = ${simpleNum} / ${simpleDen}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I convert 0.375 to a fraction?</h3>
+<p>Three decimal places means a denominator of 1000, so write 375/1000 and divide both by 125 to get 3/8.</p>
+<h3>What is 0.8 as a fraction?</h3>
+<p>8/10, which reduces to 4/5. One decimal place means a denominator of ten.</p>
+<h3>Can every decimal be written as a fraction?</h3>
+<p>Every terminating or repeating decimal can. Decimals that neither terminate nor repeat, such as π, are irrational and cannot be expressed as a ratio of integers.</p>
+<h3>How do I handle a decimal greater than one?</h3>
+<p>Convert the fractional part first, then attach the whole number. For 2.25, convert 0.25 to 1/4 and write the result as 2 1/4, or as the improper fraction 9/4.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,

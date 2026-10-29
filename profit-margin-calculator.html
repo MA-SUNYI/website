@@ -35,9 +35,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Profit Margin Calculator","description":"Free profit margin calculator. Enter revenue and cost to get gross profit, the profit margin percentage and the markup percentage, plus the margin and markup you need to hit a target profit.","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/profit-margin-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Profit Margin Calculator do?","acceptedAnswer":{"@type":"Answer","text":"It takes your revenue and cost and returns gross profit, the profit margin percentage (profit divided by revenue) and the markup percentage (profit divided by cost), so you can price a product correctly."}},{"@type":"Question","name":"Is the Profit Margin Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Profit Margin Calculator | Margin & Markup Percentages">
 <meta property="og:description" content="Free profit margin calculator: enter revenue and cost to get gross profit, profit margin percentage and markup percentage instantly.">
 <meta property="og:type" content="website">
@@ -50,8 +47,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Profit Margin Calculator | Margin & Markup Percentages">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free profit margin calculator: enter revenue and cost to get gross profit, profit margin percentage and markup percentage instantly.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between gross, operating and net margin?","acceptedAnswer":{"@type":"Answer","text":"Gross margin subtracts only cost of goods sold. Operating margin also subtracts operating expenses. Net margin subtracts everything including tax and interest."}},{"@type":"Question","name":"What is a good profit margin?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on the industry. Grocery retail runs 1–3%, software 15–25%. Compare within your sector, not against a general benchmark."}},{"@type":"Question","name":"How do I improve profit margin?","acceptedAnswer":{"@type":"Answer","text":"Raise prices, reduce COGS through sourcing, or cut operating overhead. Price increases usually move margin fastest but carry demand risk."}},{"@type":"Question","name":"Can margin exceed 100%?","acceptedAnswer":{"@type":"Answer","text":"No. Margin is profit divided by revenue, and profit cannot exceed revenue unless costs are negative, which indicates an accounting error."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>Profit margin expresses profit as a share of revenue, which makes businesses of different sizes comparable. There are three versions, and conflating them is the most common accounting confusion outside of accounting departments.</p>
+  <p>Gross margin is (revenue − cost of goods sold) ÷ revenue. Operating margin also subtracts operating expenses such as salaries, rent and marketing. Net margin subtracts everything, including taxes and interest. A company with $1,000,000 revenue, $600,000 in COGS, $250,000 in operating costs and $50,000 in tax and interest has margins of 40%, 15% and 10% respectively — three correct numbers describing three different things.</p>
+  <p>Benchmarks vary enormously by industry. Grocery retail operates on net margins of 1% to 3%, software on 15% to 25%, and services somewhere between. Judging a supermarket against a software company's margin is meaningless; the comparison only works within a sector.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./break-even-calculator.html">Break Even</a>
@@ -125,5 +130,17 @@ calcBtn.onclick = function(){
             : `<br><br>Cost is zero, so markup is undefined and margin is 100%.`);
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is the difference between gross, operating and net margin?</h3>
+<p>Gross margin subtracts only cost of goods sold. Operating margin also subtracts operating expenses. Net margin subtracts everything including tax and interest.</p>
+<h3>What is a good profit margin?</h3>
+<p>It depends entirely on the industry. Grocery retail runs 1–3%, software 15–25%. Compare within your sector, not against a general benchmark.</p>
+<h3>How do I improve profit margin?</h3>
+<p>Raise prices, reduce COGS through sourcing, or cut operating overhead. Price increases usually move margin fastest but carry demand risk.</p>
+<h3>Can margin exceed 100%?</h3>
+<p>No. Margin is profit divided by revenue, and profit cannot exceed revenue unless costs are negative, which indicates an accounting error.</p>
+</section>
 </body>
 </html>

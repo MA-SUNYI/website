@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Odd Even Checker","description":"Free odd even checker tool to instantly judge whether an integer is odd or even for primary school math practice and homework.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/odd-even-checker.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Odd Even Checker do?","acceptedAnswer":{"@type":"Answer","text":"Free odd even checker tool to instantly judge whether an integer is odd or even for primary school math practice and homework."}},{"@type":"Question","name":"Is the Odd Even Checker free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Odd Even Checker | Free Online Math Number Tester">
 <meta property="og:description" content="Free odd even checker tool to instantly judge whether an integer is odd or even for primary school math practice and homework.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Odd Even Checker | Free Online Math Number Tester">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free odd even checker tool to instantly judge whether an integer is odd or even for primary school math practice and homework.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is zero even or odd?","acceptedAnswer":{"@type":"Answer","text":"Zero is even. It divides by two with no remainder, and it behaves as an even number in every sum and product rule."}},{"@type":"Question","name":"Are negative numbers odd or even?","acceptedAnswer":{"@type":"Answer","text":"The same rules apply. −4 is even and −7 is odd; the sign has no bearing on divisibility by two."}},{"@type":"Question","name":"What is the fastest way to check a large number?","acceptedAnswer":{"@type":"Answer","text":"Look at the final digit only. If it is 0, 2, 4, 6 or 8 the number is even, and no other digit matters."}},{"@type":"Question","name":"Do decimal numbers count as odd or even?","acceptedAnswer":{"@type":"Answer","text":"No. Parity is defined only for whole numbers, so a value like 3.0 counts as odd only after you confirm it is an integer."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A number is even if it divides by two with no remainder, and odd otherwise. The test is simply whether the last digit is 0, 2, 4, 6 or 8 — nothing about the size of the number changes that, which is why the check works instantly on values far too large for mental arithmetic.</p>
+  <p>Beyond the parities themselves, a handful of rules follow directly and are worth knowing. Even + even = even, odd + odd = even, even + odd = odd. Even × anything = even, while odd × odd = odd. These properties underpin a lot of programming: hashing, checksums and hash-table bucketing all lean on parity arithmetic at some level.</p>
+  <p>Negative numbers follow the same rule, since the sign does not affect divisibility. Zero is even under the standard definition, because 0 ÷ 2 = 0 with no remainder. The one edge case worth flagging is decimals — 2.5 is neither odd nor even, as parity is defined only for integers.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./hours-calculator.html">Hours Calculator</a>
@@ -108,5 +113,17 @@ checkBtn.onclick = function(){
     }
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>Is zero even or odd?</h3>
+<p>Zero is even. It divides by two with no remainder, and it behaves as an even number in every sum and product rule.</p>
+<h3>Are negative numbers odd or even?</h3>
+<p>The same rules apply. −4 is even and −7 is odd; the sign has no bearing on divisibility by two.</p>
+<h3>What is the fastest way to check a large number?</h3>
+<p>Look at the final digit only. If it is 0, 2, 4, 6 or 8 the number is even, and no other digit matters.</p>
+<h3>Do decimal numbers count as odd or even?</h3>
+<p>No. Parity is defined only for whole numbers, so a value like 3.0 counts as odd only after you confirm it is an integer.</p>
+</section>
 </body>
 </html>

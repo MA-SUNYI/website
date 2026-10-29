@@ -31,9 +31,6 @@ li{margin:8px 0;line-height:1.6;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Online Square Root Calculator","description":"Free online square root calculator, calculate square root of any positive number quickly for math learning and daily calculation.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/square-root-calculator.html"}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the Online Square Root Calculator do?","acceptedAnswer":{"@type":"Answer","text":"Free online square root calculator, calculate square root of any positive number quickly for math learning and daily calculation."}},{"@type":"Question","name":"Is the Online Square Root Calculator free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs entirely in your browser, needs no registration, and your inputs are not uploaded anywhere."}}]}
-</script>
 <meta property="og:title" content="Online Square Root Calculator | Free Math Tool">
 <meta property="og:description" content="Free online square root calculator, calculate square root of any positive number quickly for math learning and daily calculation.">
 <meta property="og:type" content="website">
@@ -46,8 +43,16 @@ li{margin:8px 0;line-height:1.6;}
 <meta name="twitter:title" content="Online Square Root Calculator | Free Math Tool">
 <meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
 <meta name="twitter:description" content="Free online square root calculator, calculate square root of any positive number quickly for math learning and daily calculation.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the square root of a number squared?","acceptedAnswer":{"@type":"Answer","text":"√(x²) equals the absolute value of x, not x itself. For x = −5, √25 = 5, so the sign is lost — a detail that trips up algebra students regularly."}},{"@type":"Question","name":"How do I estimate a square root without a calculator?","acceptedAnswer":{"@type":"Answer","text":"Bracket it between two perfect squares and interpolate. √70 sits between 8 (64) and 9 (81), roughly a third of the way along, so about 8.37. The estimate is usually within a percent."}},{"@type":"Question","name":"Why does my calculator show an error for a negative input?","acceptedAnswer":{"@type":"Answer","text":"Because no real number squares to a negative value. The result exists only in the complex plane."}},{"@type":"Question","name":"What is the difference between a square root and a cube root?","acceptedAnswer":{"@type":"Answer","text":"A square root undoes squaring (x²); a cube root undoes cubing (x³). Cube roots of negative numbers are defined, since a negative cubed stays negative."}}]}</script>
 </head>
 <body>
+<!-- expanded-content -->
+<section class="expanded-content">
+  <p>A square root asks which number, multiplied by itself, gives the value you started with. For perfect squares the answer is exact — √144 is 12, √625 is 25 — and for everything else it is an irrational number whose decimal expansion never ends and never repeats.</p>
+  <p>There are two ways to find it by hand. The first is approximation: √50 sits between √49 = 7 and √64 = 8, and closer to 7, so around 7.07. The second is Newton's method, which converges fast: start with a guess g, compute (g + n/g)/2, and repeat. Starting at 7 for √50 gives 7.0714 on the first pass, already correct to four digits.</p>
+  <p>Watch for the domain restriction. Square roots are defined only for non-negative real numbers, and a calculator returning an error for a negative input is behaving correctly — the square root of −9 is 3i, a complex number, not a real one. The related but distinct operation, squaring, has no such limit, which is why the two are easy to confuse in reverse.</p>
+</section>
+
 <div class="nav">
     <a href="./index.html">Home</a>
     <a href="./time-zone-converter.html">Time Zone Converter</a>
@@ -99,6 +104,18 @@ calcRootBtn.onclick = function(){
     rootRes.textContent = `Square Root of ${num} = ${result.toFixed(4)}`;
 }
 </script>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is the square root of a number squared?</h3>
+<p>√(x²) equals the absolute value of x, not x itself. For x = −5, √25 = 5, so the sign is lost — a detail that trips up algebra students regularly.</p>
+<h3>How do I estimate a square root without a calculator?</h3>
+<p>Bracket it between two perfect squares and interpolate. √70 sits between 8 (64) and 9 (81), roughly a third of the way along, so about 8.37. The estimate is usually within a percent.</p>
+<h3>Why does my calculator show an error for a negative input?</h3>
+<p>Because no real number squares to a negative value. The result exists only in the complex plane.</p>
+<h3>What is the difference between a square root and a cube root?</h3>
+<p>A square root undoes squaring (x²); a cube root undoes cubing (x³). Cube roots of negative numbers are defined, since a negative cubed stays negative.</p>
+</section>
 <script>
 (function(jwl){
 var d = document,
