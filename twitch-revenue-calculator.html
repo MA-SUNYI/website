@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twitch Revenue Calculator | Real Payout From Subs, Bits, Ads</title>
+<meta name="description" content="Free Twitch revenue calculator: turn tier 1-3 and Prime subs, Bits, ad impressions and sponsorships into monthly take-home after costs and tax.">
+<link rel="canonical" href="https://www.xiake.icu/twitch-revenue-calculator.html">
+<meta name="keywords" content="twitch revenue calculator, twitch sub calculator, how much do twitch streamers make, twitch bits calculator, twitch ad rpm, twitch income calculator, prime sub payout">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Twitch Revenue Calculator","description":"Free Twitch revenue calculator for streamers. Combine tier 1, tier 2, tier 3 and Prime subscriptions, Bits, ad impressions, sponsorships and merch, then subtract monthly costs and tax to see real take-home pay.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/twitch-revenue-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a streamer keep from one Tier 1 subscription?","acceptedAnswer":{"@type":"Answer","text":"At the standard 50/50 split a $4.99 Tier 1 subscription pays $2.50. The Plus Program raises the split to 60/40 once a channel holds 100 Plus Points for three straight months and to 70/30 at 300 points, which lifts a Tier 1 sub to $3.49. Tier 2 subs scale with the same percentage, so 70 percent of $9.99 is $6.99."}},{"@type":"Question","name":"Why is a Prime subscription worth less than a paid Tier 1?","acceptedAnswer":{"@type":"Answer","text":"Prime subs are paid by Amazon at a flat rate of about $2.25 per month rather than a share of the $4.99 list price, and the split percentage does not apply to them. A channel with a large Prime share therefore earns less per subscriber than the headline numbers suggest, which is why the calculator keeps Prime counts in a separate field."}},{"@type":"Question","name":"Do Bits pay out at one cent each no matter how they were bought?","acceptedAnswer":{"@type":"Answer","text":"Yes. The viewer pays roughly $1.40 per 100 Bits depending on bundle size and platform, but the streamer receives exactly $0.01 per Bit cheered. That makes Bits the easiest income line to forecast and the one with the least chargeback risk, since Twitch handles the payment."}},{"@type":"Question","name":"What ad RPM should I enter for Twitch?","acceptedAnswer":{"@type":"Answer","text":"Enter the amount you actually keep per thousand ad impressions, not the gross rate advertisers pay. Small channels commonly see $2 to $4, larger channels with strong ad scheduling and US-heavy audiences see more. If your dashboard reports ad revenue, divide it by impressions and multiply by 1,000."}},{"@type":"Question","name":"Does this calculator include the 50 percent split change above $100,000 in sub revenue?","acceptedAnswer":{"@type":"Answer","text":"No. Twitch has moved some large partners back to a standard split once subscription revenue passes a high annual threshold, but the exact terms are individual contract details. If you are near that level, model the lower split to stay conservative."}},{"@type":"Question","name":"How do I turn a monthly figure into a full-time decision?","acceptedAnswer":{"@type":"Answer","text":"Multiply take-home by twelve, then compare it with your current salary after tax and with the cost of benefits you would lose, especially health coverage. A channel clearing $4,000 a month before tax looks like $48,000 a year, but irregular sponsorship income and no employer contribution usually make it worth less than a salaried equivalent."}}]}
+</script>
+<meta property="og:title" content="Twitch Revenue Calculator | Real Payout From Subs, Bits, Ads">
+<meta property="og:description" content="Free Twitch revenue calculator: turn tier 1-3 and Prime subs, Bits, ad impressions and sponsorships into monthly take-home after costs and tax.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/twitch-revenue-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Twitch Revenue Calculator | Real Payout From Subs, Bits, Ads">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free Twitch revenue calculator: turn tier 1-3 and Prime subs, Bits, ad impressions and sponsorships into monthly take-home after costs and tax.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./twitch-revenue-calculator.html">Twitch Revenue</a>
+    <a href="./youtube-money-calculator.html">YouTube Money</a>
+    <a href="./tiktok-money-calculator.html">TikTok Money</a>
+    <a href="./instagram-engagement-rate-calculator.html">IG Engagement</a>
+</div>
+
+<h1>Twitch Revenue Calculator</h1>
+<p>A Twitch channel is not one income stream with one rate. It is four small ones with four different rules: subscriptions split with the platform, Prime subs paid at a flat rate, Bits converted at a penny each, and ads paid per thousand impressions at whatever rate your audience happens to attract. Sponsorships and merch sit outside all of it.</p>
+<p>This calculator adds those lines together, then subtracts the two things streamers forget: the monthly cost of running a channel and the tax set aside on self-employment income. The result is a take-home number you can actually budget against, plus your Plus Points, which decide whether you are eligible for a better split.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="t1" placeholder="Tier 1 subs" step="1" value="0" title="Tier 1 subscribers">
+        <input type="number" id="t2" placeholder="Tier 2 subs" step="1" value="0" title="Tier 2 subscribers">
+        <input type="number" id="t3" placeholder="Tier 3 subs" step="1" value="0" title="Tier 3 subscribers">
+        <input type="number" id="prime" placeholder="Prime subs" step="1" value="0" title="Prime subscribers">
+    </div>
+    <div class="input-row">
+        <select id="split">
+            <option value="0.5">Split 50/50 (standard)</option>
+            <option value="0.6">Split 60/40 (100+ Plus Points)</option>
+            <option value="0.7">Split 70/30 (300+ Plus Points)</option>
+        </select>
+        <input type="number" id="bits" placeholder="Bits cheered / month" step="100" value="0" title="Bits cheered per month">
+        <input type="number" id="impr" placeholder="Ad impressions / month" step="1000" value="0" title="Ad impressions per month">
+        <input type="number" id="rpm" placeholder="Your ad RPM $" step="0.1" value="3.5" title="Your ad RPM (kept per 1,000 impressions)">
+    </div>
+    <div class="input-row">
+        <input type="number" id="sponsor" placeholder="Sponsorships $ / month" step="1" value="0" title="Sponsorship income per month">
+        <input type="number" id="donations" placeholder="Tips / donations $ / month" step="1" value="0" title="Tips and donations per month">
+        <input type="number" id="merch" placeholder="Merch profit $ / month" step="1" value="0" title="Merch profit per month">
+    </div>
+    <div class="input-row">
+        <input type="number" id="costs" placeholder="Channel costs $ / month" step="1" value="0" title="Channel costs per month">
+        <input type="number" id="taxRate" placeholder="Tax set-aside %" step="1" value="25" title="Tax set-aside percent">
+        <input type="number" id="viewers" placeholder="Avg concurrent viewers" step="1" value="0" title="Average concurrent viewers">
+        <button onclick="run()">Calculate</button>
+    </div>
+    <div class="result-text" id="out">Fill in your subscriber counts to start.</div>
+    <div id="tableWrap"></div>
+    <p class="hint">Prime subs pay a flat $2.25 and ignore the split. Ad RPM is what you keep per 1,000 impressions, not the gross rate advertisers pay. A healthy channel converts 5 to 15 percent of concurrent viewers into subs, so check that ratio stays plausible. Costs should include editing, software, music licensing and hardware depreciation.</p>
+</div>
+
+<h2>How each Twitch income line is calculated</h2>
+<p>Subscriptions are the only line that uses a percentage. A Tier 1 sub costs the viewer $4.99, a Tier 2 costs $9.99 and a Tier 3 costs $24.99. At the standard 50/50 split you keep $2.50, $5.00 and $12.50. At 60/40 those become $2.99, $5.99 and $14.99. At 70/30 they become $3.49, $6.99 and $17.49.</p>
+<p>Prime subs break the pattern. Amazon pays roughly $2.25 per Prime sub per month as a flat fee, so the split percentage does not apply and a Prime sub is worth about a quarter less than a paid Tier 1 in most channels. If 30 percent of your subscribers are Prime, your blended value per sub drops well below the $2.50 headline.</p>
+<p>Bits convert at exactly one cent for the streamer, whatever bundle the viewer bought. Ten thousand Bits is $100, and there is no chargeback exposure because Twitch processes the payment. Ads are impression-based: <strong>ad revenue = impressions / 1,000 x your RPM</strong>. Enter the figure you actually keep, not the gross CPM an advertiser pays.</p>
+<p>A worked example. A channel holds 350 Tier 1, 40 Tier 2, 8 Tier 3 and 120 Prime subs at the 50/50 split, receives 60,000 Bits a month, serves 900,000 ad impressions at a $3.50 RPM, and earns $1,200 in sponsorships, $150 in tips and $200 in merch profit. Subscriptions pay 350 x $2.50 = $875, plus 40 x $5.00 = $200, plus 8 x $12.50 = $100, plus 120 x $2.25 = $270, for $1,445. Bits add $600 and ads add 900 x $3.50 = $3,150. Gross is $6,745. After $400 of channel costs the figure is $6,345, and a 25 percent tax set-aside leaves $4,759 a month, or about $57,100 a year.</p>
+<p>That same channel has 350 + 80 + 48 = 478 Plus Points, comfortably past the 300 that unlocks a 70/30 split. Moving to 70/30 lifts the paid subscription lines from $1,175 to $1,641 and total gross to $7,211, about $466 more a month for a change the streamer does not control but should track.</p>
+
+<h2>What a realistic channel looks like</h2>
+<p>These ranges come from publicly reported creator earnings and should be read as order of magnitude, not benchmarks. The spread inside each band is wider than the band itself.</p>
+<table>
+<tr><th>Channel size</th><th>Monthly take-home (before tax)</th><th>Dominant income line</th></tr>
+<tr><td>Under 50 concurrent viewers</td><td>$50 - $600</td><td>Subs and tips</td></tr>
+<tr><td>50 - 200 concurrent viewers</td><td>$800 - $2,500</td><td>Subs, then ads</td></tr>
+<tr><td>200 - 500 concurrent viewers</td><td>$2,500 - $7,000</td><td>Subs and sponsorships</td></tr>
+<tr><td>500 - 1,500 concurrent viewers</td><td>$7,000 - $20,000</td><td>Sponsorships overtaking subs</td></tr>
+<tr><td>1,500+ concurrent viewers</td><td>$20,000+</td><td>Sponsorships and merch</td></tr>
+</table>
+<p>Two structural facts explain most of the variation. Subscription conversion is usually 5 to 15 percent of concurrent viewers, so a channel with 100 viewers can reasonably hold 50 to 125 subs, and the difference between those two numbers is a $180 monthly gap before anything else moves. Ad income, meanwhile, scales with hours streamed and ads per hour, not with loyalty, which is why variety channels that stream eight hours a day often out-earn tighter communities on ads while losing on subs.</p>
+
+<h2>Common ways streamers use this page</h2>
+<ul>
+<li><strong>Testing a full-time jump.</strong> Compare twelve months of take-home against a salary plus benefits, not against a salary alone.</li>
+<li><strong>Choosing between more ad breaks and a sub push.</strong> Raise impressions and watch the ad line; raise sub counts and watch the sub line. The better return is usually obvious within a few edits.</li>
+<li><strong>Checking whether a sponsorship is priced right.</strong> A $1,200 deal on a channel earning $1,400 from subs is a large share of income, and the calculator shows how much of the month depends on one contract.</li>
+<li><strong>Setting a sub goal.</strong> Add subs until take-home clears the rent, and you have a concrete number for the on-stream goal bar rather than a vague target.</li>
+<li><strong>Comparing platforms.</strong> Run the same audience through a YouTube or TikTok model to see which platform pays better for your format, since the payout mechanics differ sharply.</li>
+</ul>
+
+<h2>Where the estimate drifts from reality</h2>
+<p>The biggest gap is churn. Subscriber counts are a snapshot, and monthly churn of 5 to 10 percent means you have to replace dozens of subs every month just to stand still. A model that assumes a steady 350 Tier 1 subs describes a channel that is working hard behind the scenes to stay at 350.</p>
+<p>The second is tax. A 25 percent set-aside is a planning number, not a tax return. Self-employment income carries both income tax and self-employment tax in the United States, and a streamer in a high-tax state can owe considerably more than a quarter. Withholding too little for two years is the most common financial mistake in this business, and it is not visible in any dashboard.</p>
+<p>The third is that ad income is seasonal and lumpy. Rates climb in the fourth quarter and fall in January, and a single month of heavy ad testing can double impressions without doubling revenue if the extra impressions land on lower-value inventory. Build the annual view from a twelve-month average, not from your best week.</p>
+<p>Finally, the calculator treats sponsorships, tips and merch as steady. They are not. Sponsorship income in particular arrives in bursts and often pays 30 to 60 days after the campaign, which is a cash-flow problem rather than a revenue problem, but it still decides whether you can pay rent in a given month.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>How much does a streamer keep from one Tier 1 subscription?</h3>
+<p>At the standard 50/50 split a $4.99 Tier 1 sub pays $2.50. The Plus Program lifts that to 60/40 at 100 points held for three months and 70/30 at 300 points, where a Tier 1 sub pays $3.49. Higher tiers scale with the same percentage, so 70 percent of $9.99 is $6.99.</p>
+<h3>Why is a Prime subscription worth less than a paid Tier 1?</h3>
+<p>Prime subs are paid by Amazon at a flat rate of about $2.25 a month rather than a share of the list price, and the split percentage does not apply. A channel with a large Prime share earns less per subscriber than the headline numbers suggest, which is why Prime counts get their own field here.</p>
+<h3>Do Bits pay out at one cent each no matter how they were bought?</h3>
+<p>Yes. The viewer pays roughly $1.40 per 100 Bits depending on bundle size, but the streamer receives exactly $0.01 per Bit cheered. That makes Bits the easiest line to forecast and the one with the least chargeback exposure.</p>
+<h3>What ad RPM should I enter for Twitch?</h3>
+<p>Enter what you keep per thousand impressions. Small channels commonly see $2 to $4, larger channels with strong ad scheduling and US-heavy audiences see more. If your dashboard reports ad revenue, divide it by impressions and multiply by 1,000.</p>
+<h3>Does this calculator include the split change above $100,000 in sub revenue?</h3>
+<p>No. Some large partners move back to a standard split once subscription revenue passes a high annual threshold, but the terms are individual contract details. If you are near that level, model the lower split to stay conservative.</p>
+<h3>How do I turn a monthly figure into a full-time decision?</h3>
+<p>Multiply take-home by twelve, then compare with your salary after tax and with the benefits you would lose, especially health coverage. A channel clearing $4,000 a month looks like $48,000 a year, but irregular sponsorship income and no employer contribution usually make it worth less than a salaried equivalent.</p>
+
+<p class="hint">Split percentages, Prime rates and platform fees change without notice. The defaults reflect the standard US terms at the time of writing; override them with your own contract figures where they differ.</p>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+function twitchRevenue(o){
+  var per = function(price){ return Math.round(price * o.split * 100) / 100; };
+  var paid = o.t1 * per(4.99) + o.t2 * per(9.99) + o.t3 * per(24.99);
+  var prime = o.prime * 2.25;
+  var bitsRev = o.bits * 0.01;
+  var ads = o.impr / 1000 * o.rpm;
+  var other = o.sponsor + o.donations + o.merch;
+  var gross = paid + prime + bitsRev + ads + other;
+  var preTax = gross - o.costs;
+  var tax = preTax > 0 ? preTax * o.taxRate : 0;
+  var take = preTax - tax;
+  var subs = o.t1 + o.t2 + o.t3 + o.prime;
+  return {subs:paid,prime:prime,bits:bitsRev,ads:ads,other:other,gross:gross,preTax:preTax,tax:tax,take:take,
+    points:o.t1*1+o.t2*2+o.t3*6, subCount:subs, perSub:subs>0?take/subs:0, perViewer:o.viewers>0?gross/o.viewers:0};
+}
+function usd(n){ return n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+function run(){
+  var num = function(id){ var v = parseFloat(document.getElementById(id).value); return isNaN(v) ? 0 : v; };
+  var o = {t1:num('t1'),t2:num('t2'),t3:num('t3'),prime:num('prime'),split:parseFloat(document.getElementById('split').value),
+    bits:num('bits'),impr:num('impr'),rpm:num('rpm'),sponsor:num('sponsor'),donations:num('donations'),merch:num('merch'),
+    costs:num('costs'),taxRate:num('taxRate')/100,viewers:num('viewers')};
+  var r = twitchRevenue(o);
+  var share = function(v){ return r.gross > 0 ? (v / r.gross * 100).toFixed(1) + '%' : '0%'; };
+  var rows = '<table><tr><th>Source</th><th>Monthly</th><th>Share</th></tr>'
+    + '<tr><td>Subscriptions (tiers 1-3)</td><td>$' + usd(r.subs) + '</td><td>' + share(r.subs) + '</td></tr>'
+    + '<tr><td>Prime subs</td><td>$' + usd(r.prime) + '</td><td>' + share(r.prime) + '</td></tr>'
+    + '<tr><td>Bits</td><td>$' + usd(r.bits) + '</td><td>' + share(r.bits) + '</td></tr>'
+    + '<tr><td>Ads</td><td>$' + usd(r.ads) + '</td><td>' + share(r.ads) + '</td></tr>'
+    + '<tr><td>Sponsors, tips, merch</td><td>$' + usd(r.other) + '</td><td>' + share(r.other) + '</td></tr>'
+    + '<tr><td><b>Gross monthly</b></td><td><b>$' + usd(r.gross) + '</b></td><td>100%</td></tr>'
+    + '<tr><td>Channel costs</td><td>-$' + usd(o.costs) + '</td><td></td></tr>'
+    + '<tr><td>Tax set-aside (' + (o.taxRate*100).toFixed(0) + '%)</td><td>-$' + usd(r.tax) + '</td><td></td></tr>'
+    + '<tr><td><b>Take-home monthly</b></td><td><b>$' + usd(r.take) + '</b></td><td></td></tr>'
+    + '<tr><td>Take-home annual</td><td>$' + usd(r.take * 12) + '</td><td></td></tr>'
+    + '<tr><td>Plus Points (' + r.subCount + ' subs)</td><td>' + r.points + '</td><td></td></tr>'
+    + '<tr><td>Take-home per subscriber</td><td>$' + usd(r.perSub) + '</td><td></td></tr>'
+    + (o.viewers > 0 ? '<tr><td>Gross revenue per concurrent viewer</td><td>$' + usd(r.perViewer) + '</td><td></td></tr>' : '')
+    + '</table>';
+  document.getElementById('tableWrap').innerHTML = rows;
+  var splitNote = r.points >= 300 ? 'Plus Points ' + r.points + ': 70/30 eligible.' : (r.points >= 100 ? 'Plus Points ' + r.points + ': 60/40 eligible.' : 'Plus Points ' + r.points + ': standard split.');
+  document.getElementById('out').innerHTML = r.take >= 0
+    ? 'Take-home: <span style="color:#0f9d58;font-size:22px">$' + usd(r.take) + '</span> / month &nbsp; ' + splitNote
+    : 'Negative after costs: <span style="color:#d93025;font-size:22px">$' + usd(r.take) + '</span> &nbsp; ' + splitNote;
+}
+if (typeof document !== 'undefined' && document.getElementById('t1')) {
+  document.getElementById('t1').addEventListener('keydown', function(e){ if (e.key === 'Enter') run(); });
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
