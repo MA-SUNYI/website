@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Rep Max Calculator: Estimate Your 1RM From Any Work Set</title>
+<meta name="description" content="Estimate your one rep max from any weight and rep count, compare Epley, Brzycki and Lombardi formulas, and get working loads for every percentage.">
+<link rel="canonical" href="https://www.xiake.icu/one-rep-max-calculator.html">
+<meta name="keywords" content="one rep max calculator, 1rm calculator, epley formula, brzycki formula, max bench calculator, 1rm chart, training load percentage, strength calculator">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+h3{font-size:17px;margin:20px 0 6px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#777;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"One Rep Max Calculator","description":"Estimate a one rep max from any weight and rep count, compare the Epley, Brzycki and Lombardi formulas, and see suggested working loads at every percentage of your max.","applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/one-rep-max-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"@type":"Question","name":"Why do the three formulas give different answers?","acceptedAnswer":{"@type":"Answer","text":"Each was fitted to a different lift and a different rep range. Epley came from a small 1985 study of college lifters, Brzycki from bench press data and Lombardi from Olympic weightlifting. They agree closely at low reps and spread apart as reps rise, which is why the average of the three is a safer planning number than any single one."}},{"@type":"Question","name":"How many reps is too many for a reliable estimate?","acceptedAnswer":{"@type":"Answer","text":"Above about ten, the formulas assume a fatigue curve that trained lifters do not follow, and the error can reach ten percent, roughly twenty pounds on a 225 pound bench. A set of five to eight is the sweet spot. If you can only test with high reps, treat the result as a floor rather than a target."}}]}
+</script>
+<meta property="og:title" content="One Rep Max Calculator: Estimate Your 1RM From Any Work Set">
+<meta property="og:description" content="Estimate your one rep max from any weight and rep count, compare Epley, Brzycki and Lombardi formulas, and get working loads for every percentage.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/one-rep-max-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="One Rep Max Calculator: Estimate Your 1RM From Any Work Set">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Estimate your one rep max from any weight and rep count, compare Epley, Brzycki and Lombardi formulas, and get working loads for every percentage.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./running-pace-calculator.html">Running Pace</a>
+    <a href="./calorie-calculator.html">Calorie</a>
+    <a href="./protein-calculator.html">Protein</a>
+</div>
+
+<h1>One Rep Max Calculator</h1>
+<p>Testing a true single is the most accurate way to find your maximum, and also the fastest way to tweak a shoulder in an unheated garage in February. This calculator takes a set you have already done &mdash; any weight, any rep count &mdash; and converts it into an estimated one rep max using three published formulas side by side, then lays out the working loads that follow from that number.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="wt" placeholder="Weight lifted" step="0.5" min="0">
+        <input type="number" id="reps" placeholder="Reps completed" step="1" min="1" max="30">
+        <select id="unit">
+            <option value="lb" selected>Pounds (lb)</option>
+            <option value="kg">Kilograms (kg)</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="bw" placeholder="Bodyweight (optional)" step="0.5" min="0">
+        <select id="round">
+            <option value="5" selected>Round to nearest 5</option>
+            <option value="2.5">Round to nearest 2.5</option>
+            <option value="1">No rounding</option>
+        </select>
+    </div>
+    <button id="calcBtn">Estimate One Rep Max</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">Enter a set taken close to failure with good form. Reps left in the tank understate the estimate; grinding reps past form failure overstate it. Nothing here is medical or coaching advice.</p>
+</div>
+
+<h2>How the estimate is produced</h2>
+<p>All three formulas assume the same shape: the weight you can lift falls off in a predictable curve as reps climb, and that curve can be inverted. Feed in the weight and the reps, get back the load you could move exactly once.</p>
+<p><b>Epley: 1RM = weight &times; (1 + reps &divide; 30)</b></p>
+<p><b>Brzycki: 1RM = weight &times; 36 &divide; (37 &minus; reps)</b></p>
+<p><b>Lombardi: 1RM = weight &times; reps<sup>0.1</sup></b></p>
+<p>Worked example: 225 lb for 5 reps. Epley gives 225 &times; 1.1667 = <b>262.5 lb</b>. Brzycki gives 225 &times; 36 &divide; 32 = <b>253.1 lb</b>. Lombardi gives 225 &times; 5<sup>0.1</sup> = 225 &times; 1.1746 = <b>264.3 lb</b>. The average is <b>260 lb</b>, which is the number to program from, and the spread of eleven pounds between the lowest and highest is the honest measure of how much precision a rep-max estimate actually has.</p>
+<p>Run the same formulas on 135 lb for 12 reps and the spread widens: Epley returns 189 lb, Brzycki 194.4 lb, Lombardi 173.1 lb. A twenty-one pound disagreement on a lift that is barely half your max is a signal, not a rounding issue. The average, 185.5 lb, is still worth knowing, but it should not be treated as a number you load on a bar. Note that these table figures are exact; the calculator above rounds to the nearest 5 by default, which is the increment most plates actually allow.</p>
+
+<h2>Percentage chart: what each max really buys you</h2>
+<p>The practical use of a one rep max is not the single. It is the percentages underneath it, because almost all productive training happens between 65 and 90 percent.</p>
+<table>
+<tr><th>% of 1RM</th><th>Typical reps</th><th>On a 260 lb max</th><th>Common use</th></tr>
+<tr><td>100%</td><td>1</td><td>260 lb</td><td>Testing only</td></tr>
+<tr><td>95%</td><td>2</td><td>247 lb</td><td>Peaking singles</td></tr>
+<tr><td>90%</td><td>3 to 4</td><td>234 lb</td><td>Heavy triples</td></tr>
+<tr><td>85%</td><td>5 to 6</td><td>221 lb</td><td>Strength sets of 5</td></tr>
+<tr><td>80%</td><td>7 to 8</td><td>208 lb</td><td>Classic 5x5 work</td></tr>
+<tr><td>75%</td><td>9 to 10</td><td>195 lb</td><td>Hypertrophy, low fatigue</td></tr>
+<tr><td>70%</td><td>11 to 12</td><td>182 lb</td><td>Volume blocks</td></tr>
+<tr><td>65%</td><td>14 to 15</td><td>169 lb</td><td>Technique, warm-ups</td></tr>
+<tr><td>60%</td><td>18 to 20</td><td>156 lb</td><td>Endurance, deload</td></tr>
+</table>
+<p>Those rep ranges are population averages. A lifter with a high proportion of fast-twitch fibre will get fewer reps at 80 percent than the table suggests, and a lifter built for endurance will get more. Use the table to pick a starting load, then let the actual set dictate the next jump. If 80 percent gives you twelve clean reps, your true max is higher than the estimate, not your work capacity.</p>
+
+<h2>Which formula to trust for which lift</h2>
+<table>
+<tr><th>Formula</th><th>Origin</th><th>Best fit</th><th>Weakness</th></tr>
+<tr><td>Epley</td><td>1985, university lifters</td><td>Bench and overhead press in the 3 to 8 rep range</td><td>Overestimates at very low and very high reps</td></tr>
+<tr><td>Brzycki</td><td>Bench press data, 1993</td><td>Squat and bench at 2 to 10 reps</td><td>Breaks down past about 10 reps; undefined at 37</td></tr>
+<tr><td>Lombardi</td><td>Olympic weightlifting</td><td>Fast lifts, power cleans, snatch pulls</td><td>Compresses the top end, reads low near a true single</td></tr>
+</table>
+<p>For a deadlift, all three tend to read low, because grip and upper-back fatigue limit a high-rep set before the legs do. For a front squat they tend to read high, because the set usually ends on a position failure rather than a strength failure. Neither error is large enough to matter for a training block, and both are large enough to matter if you are choosing an opener for a meet.</p>
+
+<h2>Why the estimate beats the test</h2>
+<p>A genuine one rep max is a skill performance, not a pure strength measurement. It depends on how fresh you are, how well you braced, whether the bar path was right, and whether you had a spotter you trusted. Test it on a bad day and you will spend the next eight weeks training to a number that was never real.</p>
+<p>A rep-max estimate is repeatable. You can run it every fourth week from a standard set of five at the same tempo and see the trend move, which is what programming actually needs. Two lifters with the same estimated max can differ by fifteen pounds on a true single and neither is wrong &mdash; they just tested on different days.</p>
+<p>The estimate is also safer. A set of five at 85 percent carries a fraction of the injury risk of a true single, and it does not require a spotter, a power rack with safeties, or a competition calendar. For anyone past their first year of training, that trade is heavily in favour of the estimate.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Set working weights for a 5x5 or 5/3/1 block without testing a single</li>
+<li>Track strength progress from a fixed set of five every month</li>
+<li>Convert a set in kilos to pounds when following a program written in the other unit</li>
+<li>Sanity-check a program that asks for 90 percent triples when your five-rep set says otherwise</li>
+<li>Estimate a starting load for a lift you have never maxed</li>
+<li>Pair with the <a href="./calorie-calculator.html" style="color:#2363e0">Calorie Calculator</a> when running a strength block in a surplus</li>
+<li>Check recovery load with the <a href="./sleep-cycle-calculator.html" style="color:#2363e0">Sleep Cycle Calculator</a> before a heavy week</li>
+</ul>
+
+<h2>The mistakes that make the number useless</h2>
+<p>The first is testing with a set that was not close to failure. Six reps with four in reserve is not a six-rep max; it is a warm-up, and the formula will quietly return a number twenty pounds light. You do not need to grind, but the last rep should be genuinely hard and the one after it impossible.</p>
+<p>The second is chasing a number instead of a trend. Estimates move two or three percent week to week from sleep, food and caffeine alone. A single reading is noise. Four readings across a training block are a signal, and that is the only way this tool earns its place.</p>
+<p>The third is applying it to exercises where the limiting factor is not the muscle you think. A set of ten on a barbell row usually ends when the lower back gives out, not the lats, so the estimated max describes your hinge endurance rather than your pulling strength. The same applies to any lift where grip, core or positioning fails first.</p>
+<p>Finally, the estimate ignores bodyweight. A 225 lb bench at 150 lb bodyweight and the same bench at 250 lb are not the same achievement, and no formula knows that. If relative strength matters to you, enter your bodyweight above and read the ratio rather than the absolute number.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Why do the three formulas disagree?</h3>
+<p>Each was fitted to a different lift and a different rep range. Epley came from a small study of college lifters, Brzycki from bench press data, Lombardi from weightlifting. They agree closely at low reps and diverge as reps climb, which is exactly why the average is a better planning number than any single formula.</p>
+<h3>How many reps is too many for a reliable estimate?</h3>
+<p>Above about ten, the assumed fatigue curve stops matching how trained lifters actually fail, and the error can reach ten percent &mdash; roughly twenty pounds on a 225 pound bench. Five to eight reps is the sweet spot. A high-rep estimate is a floor, not a target.</p>
+<h3>Should I just test a real one rep max instead?</h3>
+<p>Once or twice a year, in a meet or with safeties and a competent spotter, yes. For week-to-week programming, no. The estimate is repeatable, needs no spotter, and does not cost you a training week recovering from the attempt.</p>
+<h3>Does the formula work for women, beginners and machines?</h3>
+<p>The formulas were built on male barbell lifters, so they read slightly high for beginners and for most machine exercises where the movement is guided and stabilisers do less work. The direction of the error is consistent, which means the trend still works even when the absolute number is a little optimistic.</p>
+<h3>Why did my estimate drop after a good session?</h3>
+<p>Because the input changed, not your strength. One fewer rep at the same weight moves the estimate by four to six percent. Always compare like with like: same exercise, same rep target, same rest, ideally the same time of day.</p>
+<h3>Can I use this for a 20 rep set?</h3>
+<p>You can, but treat the output as a rough ceiling only. At 20 reps the limiting factors are local muscular endurance and pain tolerance rather than maximal strength, and every formula in this tool is extrapolating well outside the data it was built on.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+function roundTo(v,step){
+  if(!step||step<=0){return v;}
+  return Math.round(v/step)*step;
+}
+function oneRepMax(weight,reps){
+  if(weight<=0||reps<1){return null;}
+  if(reps===1){
+    return {epley:weight,brzycki:weight,lombardi:weight,avg:weight,spread:0};
+  }
+  var epley=weight*(1+reps/30);
+  var brzycki=reps<37?weight*36/(37-reps):weight*(1+reps/30);
+  var lombardi=weight*Math.pow(reps,0.1);
+  var avg=(epley+brzycki+lombardi)/3;
+  var hi=Math.max(epley,brzycki,lombardi), lo=Math.min(epley,brzycki,lombardi);
+  return {epley:epley,brzycki:brzycki,lombardi:lombardi,avg:avg,spread:hi-lo};
+}
+function loadTable(max,unit,step){
+  var pct=[100,95,90,85,80,75,70,65,60];
+  var reps=[1,2,3,5,8,10,12,15,20];
+  var out=[];
+  for(var i=0;i<pct.length;i++){
+    out.push({pct:pct[i],reps:reps[i],load:roundTo(max*pct[i]/100,step)});
+  }
+  return out;
+}
+function fmt(v){ return (Math.round(v*10)/10).toFixed(1); }
+function run(){
+  var num=function(id){ var v=parseFloat(document.getElementById(id).value); return isNaN(v)?0:v; };
+  var w=num('wt'), r=Math.round(num('reps')), bw=num('bw');
+  var unit=document.getElementById('unit').value;
+  var step=parseFloat(document.getElementById('round').value);
+  if(w<=0||r<1){
+    document.getElementById('resOut').textContent='Enter a weight and a rep count to estimate';
+    document.getElementById('resTbl').innerHTML='';return;
+  }
+  var res=oneRepMax(w,r);
+  var table=loadTable(res.avg,unit,step);
+  var rows='<tr><th>Method</th><th>Estimated 1RM ('+unit+')</th><th>Difference from average</th></tr>'
+    +'<tr><td>Epley</td><td>'+fmt(res.epley)+'</td><td>'+(res.epley-res.avg>=0?'+':'')+fmt(res.epley-res.avg)+'</td></tr>'
+    +'<tr><td>Brzycki</td><td>'+fmt(res.brzycki)+'</td><td>'+(res.brzycki-res.avg>=0?'+':'')+fmt(res.brzycki-res.avg)+'</td></tr>'
+    +'<tr><td>Lombardi</td><td>'+fmt(res.lombardi)+'</td><td>'+(res.lombardi-res.avg>=0?'+':'')+fmt(res.lombardi-res.avg)+'</td></tr>'
+    +'<tr><td><b>Average (use this)</b></td><td><b>'+fmt(res.avg)+'</b></td><td>spread '+fmt(res.spread)+'</td></tr>';
+  if(bw>0){
+    rows+='<tr><td>Relative strength</td><td>'+fmt(res.avg/bw)+'x bodyweight</td><td>at '+fmt(bw)+' '+unit+' bodyweight</td></tr>';
+  }
+  rows+='<tr><th>Working load</th><th>'+unit+'</th><th>Reps to expect</th></tr>';
+  var htmlrows='';
+  for(var i=0;i<table.length;i++){
+    htmlrows+='<tr><td>'+table[i].pct+'% of max</td><td>'+fmt(table[i].load)+'</td><td style="text-align:right">'+table[i].reps+'</td></tr>';
+  }
+  document.getElementById('resTbl').innerHTML=rows+htmlrows;
+  document.getElementById('resOut').innerHTML='Estimated 1RM: <span style="color:#0f9d58;font-size:22px">'+fmt(roundTo(res.avg,step))+' '+unit+'</span>'
+    +' &nbsp;<span style="font-size:15px;color:#777">from '+fmt(w)+' '+unit+' x '+r+' reps</span>';
+}
+if (typeof document !== 'undefined' && document.getElementById('calcBtn')) {
+  document.getElementById('calcBtn').addEventListener('click', run);
+  document.getElementById('wt').addEventListener('keydown', function(e){ if(e.key==='Enter'){ run(); } });
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>

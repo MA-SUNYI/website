@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tile Calculator: Tiles, Boxes, Grout and Thinset Needed</title>
+<meta name="description" content="Work out how many tiles, boxes, pounds of grout and bags of thinset a floor, wall or backsplash needs, using waste factors that match your layout pattern.">
+<link rel="canonical" href="https://www.xiake.icu/tile-calculator.html">
+<meta name="keywords" content="tile calculator, how many tiles do i need, tiles per square foot, grout calculator, thinset calculator, box of tile coverage, tile waste factor">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+h3{font-size:17px;margin:20px 0 6px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#777;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Tile Calculator","description":"Estimate tiles to buy, boxes to order, grout weight in pounds and thinset bags for a floor, wall or backsplash, based on tile size, joint width and waste factor.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/tile-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"@type":"Question","name":"Should the grout joint width be added to the tile size?","acceptedAnswer":{"@type":"Answer","text":"Yes. A 12 inch tile set with an eighth inch joint actually occupies 12.125 inches of floor, because each tile takes half a joint on every side. Ignoring the joint overstates tile count by about 2 percent at 1/8 inch and closer to 5 percent on small subway tiles, which is roughly a box on a 150 square foot wall."}},{"@type":"Question","name":"Why does a 1x1 mosaic need so much more grout than a 12x12 tile?","acceptedAnswer":{"@type":"Answer","text":"Grout follows joint length, not floor area. A square foot of 12 inch tile has 24 inches of joint line; a square foot of 1 inch mosaic has 288 inches, twelve times as much. That is why the same 120 square foot floor needs about 8 pounds of grout in 12x12 and roughly 100 pounds in 1 inch mosaic."}}]}
+</script>
+<meta property="og:title" content="Tile Calculator: Tiles, Boxes, Grout and Thinset Needed">
+<meta property="og:description" content="Work out how many tiles, boxes, pounds of grout and bags of thinset a floor, wall or backsplash needs, using waste factors that match your layout pattern.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/tile-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tile Calculator: Tiles, Boxes, Grout and Thinset Needed">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Work out how many tiles, boxes, pounds of grout and bags of thinset a floor, wall or backsplash needs, using waste factors that match your layout pattern.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./patio-paver-calculator.html">Patio Paver</a>
+    <a href="./square-footage-calculator.html">Square Footage</a>
+    <a href="./concrete-slab-calculator.html">Concrete Slab</a>
+</div>
+
+<h1>Tile Calculator</h1>
+<p>Tile is priced by the square foot, sold by the box, and glued down with two materials almost nobody counts before the first trip to the store. This calculator returns the tile count, the boxes to order, the grout weight in pounds and the thinset bags for one flat surface. It uses the joint-inclusive tile footprint that manufacturers build their coverage charts on, so the answer lines up with the label on the carton instead of drifting a box or two short.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="len" placeholder="Room length (ft)" step="0.1" min="0">
+        <input type="number" id="wid" placeholder="Room width (ft)" step="0.1" min="0">
+        <input type="number" id="tl" placeholder="Tile length (in)" step="0.25" min="0">
+        <input type="number" id="tw" placeholder="Tile width (in)" step="0.25" min="0">
+    </div>
+    <div class="input-row">
+        <input type="number" id="joint" placeholder="Joint width (in)" step="0.0625" value="0.125" min="0">
+        <input type="number" id="thick" placeholder="Tile thickness (in)" step="0.0625" value="0.375" min="0">
+        <select id="waste">
+            <option value="0.10" selected>Straight lay &mdash; 10% waste</option>
+            <option value="0.15">Diagonal &mdash; 15% waste</option>
+            <option value="0.20">Herringbone / chevron &mdash; 20%</option>
+            <option value="0.25">Small room, many cuts &mdash; 25%</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="boxcov" placeholder="Sq ft per box (label)" step="0.1" min="0">
+        <select id="notch">
+            <option value="95">3/16 in V-notch &mdash; 95 sq ft/bag</option>
+            <option value="85" selected>1/4 in square notch &mdash; 85 sq ft/bag</option>
+            <option value="65">1/4 x 3/8 in notch &mdash; 65 sq ft/bag</option>
+            <option value="40">1/2 x 1/2 in notch &mdash; 40 sq ft/bag</option>
+        </select>
+        <input type="number" id="price" placeholder="Tile price per sq ft ($)" step="0.01" min="0">
+    </div>
+    <button id="calcBtn">Calculate Tile and Materials</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">Planning estimate for one rectangular surface. Subtract cabinets, islands or tub surrounds before entering your dimensions. Mosaic sheets should be entered at sheet size (usually 12 x 12 in), not chip size.</p>
+</div>
+
+<h2>How the numbers are produced</h2>
+<p>Three quantities come out of one chain of arithmetic. First the area, then the tile footprint including its share of the grout joint, then the waste allowance on top:</p>
+<p><b>Tile footprint (sq ft) = (tile length + joint) &times; (tile width + joint) &divide; 144</b></p>
+<p><b>Tiles to lay = surface area &divide; tile footprint, rounded up</b></p>
+<p><b>Tiles to buy = tiles to lay &times; (1 + waste factor), rounded up</b></p>
+<p>The joint appears in both dimensions because every tile owns half a joint on each of its four edges. A 12 inch tile with an eighth inch joint therefore covers 12.125 inches, or 1.021 square feet &mdash; not the 1.00 square foot most people assume when they divide 120 by 1.</p>
+<p>Worked example: a 12 by 10 foot floor is 120 square feet. With 12 by 12 inch tile, a 1/8 inch joint and 10 percent waste, the footprint is 12.125 &times; 12.125 &divide; 144 = <b>1.021 sq ft</b>. That gives 117.5 tiles laid, so 118, and <b>130 tiles to buy</b>. At 15 square feet per box that is <b>9 boxes</b>, or 135 tiles &mdash; five spare, which is the correct amount of spare.</p>
+<p>Grout is not a percentage of the floor. It is the volume of the gaps between tiles:</p>
+<p><b>Joint length per sq ft (in) = 144 &times; (tile length + tile width) &divide; (tile length &times; tile width)</b></p>
+<p><b>Grout (lb) = joint length &times; joint width &times; joint depth &times; 0.0578 &times; area &times; 1.1</b></p>
+<p>For the 12 inch tile above, that is 24 inches of joint per square foot, so 24 &times; 0.125 &times; 0.375 = 1.125 cubic inches per square foot. At about 0.0578 pounds per cubic inch that is 0.065 pounds per square foot, or <b>8.6 pounds</b> for the 120 square foot floor with a 10 percent cushion. One 10 pound box covers it. Thinset is simpler still: area divided by the coverage printed for your trowel notch, rounded up to whole 50 pound bags.</p>
+
+<h2>Tile size, coverage and tile count</h2>
+<p>Square feet per tile, and how many tiles fill one square foot. Joint widths are excluded here to keep the table readable &mdash; the calculator above adds them.</p>
+<table>
+<tr><th>Tile size</th><th>Sq ft per tile</th><th>Tiles per sq ft</th><th>Typical per box</th><th>Best used for</th></tr>
+<tr><td>1 x 1 in mosaic</td><td>0.007</td><td>144</td><td>By the sheet</td><td>Shower pans, niches</td></tr>
+<tr><td>3 x 6 in subway</td><td>0.125</td><td>8.0</td><td>40 to 44</td><td>Backsplashes, tub walls</td></tr>
+<tr><td>4 x 4 in</td><td>0.111</td><td>9.0</td><td>30 to 36</td><td>Small baths, mudrooms</td></tr>
+<tr><td>6 x 6 in</td><td>0.250</td><td>4.0</td><td>22 to 32</td><td>Laundry, powder rooms</td></tr>
+<tr><td>12 x 12 in</td><td>1.000</td><td>1.0</td><td>10 to 15</td><td>Kitchens, halls</td></tr>
+<tr><td>12 x 24 in</td><td>2.000</td><td>0.5</td><td>5 to 8</td><td>Large floors, showers</td></tr>
+<tr><td>18 x 18 in</td><td>2.250</td><td>0.44</td><td>5 to 7</td><td>Open plan living areas</td></tr>
+<tr><td>24 x 24 in</td><td>4.000</td><td>0.25</td><td>3 to 4</td><td>Large format, few grout lines</td></tr>
+</table>
+<p>Box coverage is the number that matters at the register, and it is not standardised. Two 12 by 24 inch porcelain lines can ship 5 tiles and 8 tiles per carton depending on thickness. Read the carton, not the website photo, and enter the square footage rather than the tile count.</p>
+
+<h2>Waste is a layout decision, not a rounding error</h2>
+<table>
+<tr><th>Layout</th><th>Waste</th><th>Why</th><th>Extra on 120 sq ft</th></tr>
+<tr><td>Straight lay, square room</td><td>10%</td><td>Edge cuts only</td><td>12 sq ft</td></tr>
+<tr><td>Diagonal (45 degrees)</td><td>15%</td><td>Every perimeter tile is a triangle</td><td>18 sq ft</td></tr>
+<tr><td>Herringbone or chevron</td><td>20%</td><td>Pattern must terminate cleanly at walls</td><td>24 sq ft</td></tr>
+<tr><td>Small bath, multiple doorways</td><td>25%</td><td>Many short runs, more offcuts</td><td>30 sq ft</td></tr>
+</table>
+<p>The cost of being short is not the tile. It is the second trip, the discontinued shade lot, and a floor with a visible colour seam where the new boxes meet the old. Over-ordering by one box costs perhaps 40 dollars; under-ordering by one box on a 300 square foot floor can mean re-tiling a whole room in a different dye lot. Keep the leftovers dry and they become the repair stock for the next ten years.</p>
+
+<h2>Grout scales with joint length, and small tile punishes you</h2>
+<p>The same 120 square foot floor needs about 8.6 pounds of grout in 12 inch tile and roughly 100 pounds in 1 inch mosaic, because the mosaic has twelve times the joint line per square foot. This is the single most common material shortfall on shower projects, where mosaic is standard and the grout is bought by feel.</p>
+<p>Joint depth is the tile thickness, so thicker stone means more grout per foot of joint, not less. A 3/8 inch saltillo at 3/4 inch thick needs double the grout of a 3/8 inch porcelain at the same joint width. Sealed stone also absorbs more grout into the edges than glazed porcelain, which is why stone installers habitually add another 10 percent.</p>
+
+<h2>Matching the trowel to the tile</h2>
+<p>Thinset coverage is set by the notch, not the tile size, and the notch is set by the tile. A 1/4 inch square notch spreads about 85 square feet per 50 pound bag and is right for tile up to about 12 inches. Above 15 inches the standard practice is a 1/2 inch square notch at roughly 40 square feet per bag, plus back-buttering, which adds close to 18 percent. This calculator applies that back-buttering surcharge automatically once either tile dimension reaches 15 inches, because large-format tile set with a small notch will sound hollow within a year.</p>
+<p>Coverage figures on the bag assume a flat, true substrate. A wavy floor consumes noticeably more mortar as the notch is flattened out to meet the tile, so add a bag on any slab you have not checked with a straightedge.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Price a bathroom floor before choosing between 12 by 24 and 24 by 24 tile</li>
+<li>Confirm a contractor's material list is neither padded nor short</li>
+<li>Size grout and thinset for a shower so the job finishes in one trip</li>
+<li>Estimate a backsplash from counter length and the usual 18 inch height</li>
+<li>Compare material cost per square foot across three tile sizes with the <a href="./square-footage-calculator.html" style="color:#2363e0">Square Footage Calculator</a></li>
+<li>Cost out the hardscape outside with the <a href="./patio-paver-calculator.html" style="color:#2363e0">Patio Paver Calculator</a></li>
+</ul>
+
+<h2>What this calculator does not know</h2>
+<p>It assumes one flat rectangular surface. An L-shaped room has to be split into two rectangles and run twice, and a shower has three walls that each need their own measurement unless you subtract the door opening. It does not subtract a tub, a vanity or a kitchen island, and those omissions are usually larger than the waste factor.</p>
+<p>It also says nothing about whether the substrate will hold tile. Deflection, waterproofing in wet areas, crack isolation membrane and expansion joints are the parts of the job that fail, and none of them appear on a material list. A perfectly calculated tile order over a floor that flexes is still a failed floor.</p>
+<p>Finally, layout is not arithmetic. Where the first course starts decides how large the cut at each wall will be, and a room that is 11 feet 10 inches wide will produce a 1 inch sliver on one side if you centre a 12 inch grid carelessly. Dry-lay two courses before mixing thinset.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Should the grout joint be added to the tile size?</h3>
+<p>Yes. Each tile takes half a joint on all four sides, so a 12 inch tile with a 1/8 inch joint occupies 12.125 inches. Skipping the joint overstates the tile count by about 2 percent on large tile and closer to 5 percent on subway tile, which is most of a box on a typical wall.</p>
+<h3>Why does 1 inch mosaic need twelve times the grout of 12 inch tile?</h3>
+<p>Because grout fills joint length, not floor area. One square foot of 12 inch tile has 24 inches of joint line; one square foot of 1 inch mosaic has 288 inches. Same floor, same joint width, twelve times the grout by weight.</p>
+<h3>How many extra tiles should I keep after the job?</h3>
+<p>Two to three percent of the order, and always from the same shade lot as the installed tile. They are not for the next project &mdash; they are for the cracked tile in year four, when the line may no longer be manufactured in that colour.</p>
+<h3>Can I use this for a shower with three walls?</h3>
+<p>Run it three times, once per wall, and subtract the door opening from the wall that contains it. Shower floors are a separate run with a different tile and a slope, and the drain cutout should be ignored rather than subtracted.</p>
+<h3>Does back-buttering really change the thinset quantity?</h3>
+<p>It adds roughly 18 percent, and it is not optional above about 15 inches. The trowel lines alone leave voids under a large tile; back-buttering fills them. The calculator applies the surcharge automatically at that size.</p>
+<h3>Is it cheaper to buy tile by the box or by the square foot?</h3>
+<p>Boxes are the only real unit at retail, so the square-foot price is a derived figure. Two boxes of 12 by 24 at 8 tiles each cover 32 square feet; the same money in 12 by 12 may cover 30 or 34 depending on the carton. Divide the box price by the coverage printed on the label before comparing anything.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var NOTCH={v316:95,q14:85,r1438:65,q12:40};
+function tileJob(o){
+  var area=o.len*o.wid;
+  var fp=(o.tl+o.joint)*(o.tw+o.joint)/144;
+  var laid=Math.ceil(area/fp);
+  var buy=Math.ceil(laid*(1+o.waste));
+  var perBox=o.boxCov>0?Math.round(o.boxCov/fp):0;
+  if(perBox<1){perBox=0;}
+  var boxes=perBox>0?Math.ceil(buy/perBox):0;
+  var jointLen=144*(o.tl+o.tw)/(o.tl*o.tw);
+  var grout=jointLen*o.joint*o.thick*0.0578*area*1.1;
+  var cover=NOTCH[o.notch]||85;
+  var thin=area/cover;
+  var backButter=(o.tl>=15||o.tw>=15);
+  if(backButter){thin=thin*1.18;}
+  var bags=Math.ceil(thin);
+  var cost=area*(1+o.waste)*o.price;
+  return {area:area,fp:fp,laid:laid,buy:buy,perBox:perBox,boxes:boxes,
+    tilesInBoxes:boxes*perBox,grout:grout,bags:bags,backButter:backButter,cost:cost,cover:cover};
+}
+function money(n){ return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+function run(){
+  var num=function(id,d){ var v=parseFloat(document.getElementById(id).value); return isNaN(v)?(d||0):v; };
+  var o={len:num('len'),wid:num('wid'),tl:num('tl'),tw:num('tw'),
+    joint:num('joint',0.125),thick:num('thick',0.375),
+    waste:parseFloat(document.getElementById('waste').value),
+    boxCov:num('boxcov'),notch:document.getElementById('notch').value,
+    price:num('price')};
+  if(o.len<=0||o.wid<=0||o.tl<=0||o.tw<=0){
+    document.getElementById('resOut').textContent='Enter room size and tile size to calculate';
+    document.getElementById('resTbl').innerHTML='';return;
+  }
+  var r=tileJob(o);
+  var rows='<tr><th>Item</th><th>Quantity</th><th>Notes</th></tr>'
+    +'<tr><td>Surface area</td><td>'+r.area.toFixed(1)+' sq ft</td><td>'+o.len+' ft x '+o.wid+' ft</td></tr>'
+    +'<tr><td>Tile footprint with joint</td><td>'+r.fp.toFixed(3)+' sq ft</td><td>tile plus '+o.joint+' in joint</td></tr>'
+    +'<tr><td>Tiles laid</td><td>'+r.laid+'</td><td>exact fit, no waste</td></tr>'
+    +'<tr><td><b>Tiles to buy</b></td><td><b>'+r.buy+'</b></td><td>includes '+Math.round(o.waste*100)+'% waste</td></tr>'
+    +(r.boxes>0?'<tr><td><b>Boxes to order</b></td><td><b>'+r.boxes+'</b></td><td>'+r.perBox+' per box, '+r.tilesInBoxes+' tiles total</td></tr>':'')
+    +'<tr><td>Grout</td><td>'+r.grout.toFixed(1)+' lb</td><td>'+(r.grout<=10?'one 10 lb box':(r.grout<=25?'one 25 lb bag':'multiple 25 lb bags'))+'</td></tr>'
+    +'<tr><td>Thinset</td><td>'+r.bags+' x 50 lb bag</td><td>'+r.cover+' sq ft/bag'+(r.backButter?', back-buttering included':'')+'</td></tr>'
+    +(r.cost>0?'<tr><td>Tile cost</td><td>$'+money(r.cost)+'</td><td>at $'+o.price.toFixed(2)+'/sq ft</td></tr>':'');
+  document.getElementById('resTbl').innerHTML=rows;
+  document.getElementById('resOut').innerHTML='Buy <span style="color:#0f9d58;font-size:22px">'+r.buy+' tiles</span>'
+    +(r.boxes>0?' &mdash; '+r.boxes+' boxes':'')+', '+r.grout.toFixed(1)+' lb grout, '+r.bags+' thinset bags';
+}
+if (typeof document !== 'undefined' && document.getElementById('calcBtn')) {
+  document.getElementById('calcBtn').addEventListener('click', run);
+  document.getElementById('len').addEventListener('keydown', function(e){ if(e.key==='Enter'){ run(); } });
+}
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
