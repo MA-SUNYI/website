@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aspect Ratio Calculator | Resize Dimensions &amp; Crop Ratios</title>
+<meta name="description" content="Free aspect ratio calculator: simplify any width and height into a clean ratio, lock a 16:9 or 9:16 frame, and get exact pixels for a crop or resize.">
+<link rel="canonical" href="https://www.xiake.icu/aspect-ratio-calculator.html">
+<meta name="keywords" content="aspect ratio calculator, 16:9 calculator, resize image ratio, crop ratio calculator, video aspect ratio, 9:16 vertical">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+h3{font-size:17px;margin:20px 0 6px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Aspect Ratio Calculator","description":"Free aspect ratio calculator that simplifies any width and height into a clean ratio and returns the matching dimension for a locked 16:9, 9:16, 4:5 or custom frame.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/aspect-ratio-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is 1920x1080 exactly 16:9?","acceptedAnswer":{"@type":"Answer","text":"Yes. 1920 divided by 1080 is 1.7777, and dividing both numbers by their greatest common divisor of 120 gives 16:9. Not every widescreen size is exact: 1366x768 reduces to 683:384, which is 1.779, about 0.05 percent wider than 16:9."}},{"@type":"Question","name":"How much of the frame do I lose when cropping 16:9 to 9:16?","acceptedAnswer":{"@type":"Answer","text":"From a 1920x1080 source, a full-height 9:16 crop is 607.5 pixels wide, so you keep 31.6 percent of the original width and throw away 68.4 percent. That is why vertical versions of wide footage are usually reframed rather than centre-cropped."}},{"@type":"Question","name":"Why does 21:9 not match the cinema 2.39:1 ratio?","acceptedAnswer":{"@type":"Answer","text":"21:9 works out to 2.333, while anamorphic cinema prints at 2.39:1. The difference is small but real, so a film mastered at 2.39:1 will show thin bars on a 21:9 panel, and a 2560x1080 monitor is actually 64:27 or 2.370."}},{"@type":"Question","name":"Does changing resolution change the aspect ratio?","acceptedAnswer":{"@type":"Answer","text":"Only if the two dimensions are not scaled by the same factor. Halving both 3840x2160 to 1920x1080 keeps 16:9 exactly. Typing a new width while the height stays fixed is what produces a stretched image."}},{"@type":"Question","name":"Should I crop or letterbox to fit another ratio?","acceptedAnswer":{"@type":"Answer","text":"Crop when the edges carry nothing you need, because it fills the frame and looks native on the platform. Letterbox when the edges matter, since padding preserves the whole image at the cost of bars, which on a vertical feed can leave the subject smaller than a thumbnail."}},{"@type":"Question","name":"What is the difference between aspect ratio and pixel aspect ratio?","acceptedAnswer":{"@type":"Answer","text":"Frame aspect ratio is width divided by height, the shape of the picture. Pixel aspect ratio describes whether individual pixels are square. Older anamorphic video used non-square pixels, so a 720x480 file can still display as 16:9 once the player corrects for a 1.21 pixel aspect ratio."}}]}
+</script>
+<meta property="og:title" content="Aspect Ratio Calculator | Resize Dimensions &amp; Crop Ratios">
+<meta property="og:description" content="Free aspect ratio calculator: simplify any width and height into a clean ratio, lock a 16:9 or 9:16 frame, and get exact pixels for a crop or resize.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/aspect-ratio-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Aspect Ratio Calculator | Resize Dimensions &amp; Crop Ratios">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free aspect ratio calculator: simplify any width and height into a clean ratio, lock a 16:9 or 9:16 frame, and get exact pixels for a crop or resize.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./video-file-size-calculator.html">Video File Size</a>
+    <a href="./image-resizer.html">Image Resizer</a>
+    <a href="./pixel-size-converter.html">Pixel Size Converter</a>
+</div>
+
+<h1>Aspect Ratio Calculator</h1>
+<p>Two numbers describe every image and video frame: its shape and its size. Aspect ratio is the shape, and it survives any resize as long as both dimensions move by the same factor. This calculator reduces a width and height to the smallest whole-number ratio, tells you how far that shape sits from the standard broadcast and social formats, and returns the exact matching dimension once you lock a ratio and type one side. It also shows the megapixel count, which is what actually predicts how heavy the file will be.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="w" placeholder="Width px" value="1920" step="1">
+        <input type="number" id="h" placeholder="Height px" value="1080" step="1">
+    </div>
+    <div class="input-row">
+        <select id="ratioSel">
+            <option value="custom">Ratio: from width / height</option>
+            <option value="16:9">16:9 — HD, 4K, YouTube</option>
+            <option value="9:16">9:16 — Reels, Shorts, TikTok</option>
+            <option value="4:5">4:5 — Instagram portrait</option>
+            <option value="1:1">1:1 — square post</option>
+            <option value="3:2">3:2 — DSLR stills, print</option>
+            <option value="4:3">4:3 — classic TV, tablets</option>
+            <option value="21:9">21:9 — ultrawide monitor</option>
+            <option value="2.39:1">2.39:1 — anamorphic cinema</option>
+        </select>
+        <input type="number" id="newW" placeholder="New width px (optional)" step="1">
+        <input type="number" id="newH" placeholder="New height px (optional)" step="1">
+    </div>
+    <button id="calcBtn">Calculate Ratio</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <div id="ladder"></div>
+</div>
+
+<h2>How the Aspect Ratio Calculator Works</h2>
+<p>The ratio itself is one division. Frame aspect ratio equals width divided by height, so 1920 &times; 1080 gives 1.7777. That decimal is exact enough for engineering, but humans read shapes better as pairs, which is why the same value is written 16:9. To get there, divide both dimensions by their greatest common divisor: the GCD of 1920 and 1080 is 120, so 1920 &divide; 120 = 16 and 1080 &divide; 120 = 9.</p>
+<p><b>Ratio = width &divide; height</b><br>
+<b>Simplified pair = (width &divide; GCD) : (height &divide; GCD)</b><br>
+<b>Missing side = known side &times; (other side of the ratio &divide; its partner)</b><br>
+<b>Megapixels = (width &times; height) &divide; 1,000,000</b></p>
+<p>Worked example. You have a 3840 &times; 2160 export and need a 1280-pixel-wide version that keeps the shape. The ratio reduces to 16:9, so the height is 1280 &times; 9 &divide; 16 = <b>720</b>. The original frame is 3840 &times; 2160 &divide; 1,000,000 = <b>8.29 MP</b>, and the smaller copy is 0.92 MP, about 11 percent of the pixels. Same shape, one ninth of the data.</p>
+<p>Now a case where the shape is not the standard one. A photo straight out of a full-frame camera is 6000 &times; 4000, which reduces by a GCD of 2000 to <b>3:2</b>. Crop it to a square for a marketplace listing and you keep 4000 &times; 4000, discarding a third of the width. That loss is invisible in the calculator but very visible in a product shot where the item sat near the edge.</p>
+
+<h2>How Much You Lose When the Ratio Changes</h2>
+<p>Fitting one ratio inside another always costs something: either pixels cropped away, or empty space added. The numbers below are computed from a 1920 &times; 1080 source.</p>
+<table>
+<tr><th>Target</th><th>Method</th><th>Result</th><th>Share of source kept</th></tr>
+<tr><td>16:9</td><td>No change</td><td>1920 &times; 1080</td><td>100%</td></tr>
+<tr><td>1:1</td><td>Crop width</td><td>1080 &times; 1080</td><td>56.3% of width</td></tr>
+<tr><td>4:5</td><td>Crop width</td><td>864 &times; 1080</td><td>45.0% of width</td></tr>
+<tr><td>9:16</td><td>Crop width</td><td>607 &times; 1080</td><td>31.6% of width</td></tr>
+<tr><td>1:1</td><td>Letterbox</td><td>1080 &times; 1080, 236 px bars</td><td>100%, subject scaled down</td></tr>
+<tr><td>16:9 from 4:3</td><td>Crop height</td><td>1440 &times; 810</td><td>75.0% of height</td></tr>
+</table>
+<p>The pattern is worth memorising: the further a target sits from the source shape, the more brutal the crop. Turning a 16:9 clip into a vertical 9:16 cut keeps under a third of the frame width, which is why repurposing horizontal footage for Shorts usually means reframing around the subject rather than letting a centre crop decide for you.</p>
+
+<h2>Standard Ratios and Where They Show Up</h2>
+<table>
+<tr><th>Ratio</th><th>Decimal</th><th>Typical pixel size</th><th>Common use</th></tr>
+<tr><td>16:9</td><td>1.778</td><td>1920 &times; 1080</td><td>HD and 4K video, YouTube, TVs, desktop</td></tr>
+<tr><td>9:16</td><td>0.563</td><td>1080 &times; 1920</td><td>Reels, Shorts, TikTok, stories</td></tr>
+<tr><td>4:5</td><td>0.800</td><td>1080 &times; 1350</td><td>Instagram feed portrait, mobile-first ads</td></tr>
+<tr><td>1:1</td><td>1.000</td><td>1080 &times; 1080</td><td>Square posts, avatars, product grids</td></tr>
+<tr><td>3:2</td><td>1.500</td><td>3000 &times; 2000</td><td>35 mm stills, 6 &times; 4 inch prints</td></tr>
+<tr><td>4:3</td><td>1.333</td><td>1440 &times; 1080</td><td>Tablets, older TV, document scans</td></tr>
+<tr><td>21:9</td><td>2.333</td><td>2560 &times; 1080</td><td>Ultrawide monitors, cinematic crops</td></tr>
+<tr><td>2.39:1</td><td>2.390</td><td>2048 &times; 858</td><td>Anamorphic cinema, scope framing</td></tr>
+</table>
+<p>Two of these are approximations that get repeated as fact. A 2560 &times; 1080 monitor is 64:27, or 2.370, not 2.333, and cinema scope at 2.39:1 is not the same as 21:9. Neither gap matters when you are choosing a wallpaper; both matter when you are delivering a master and the client measures the bars.</p>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Reduces any width and height to the smallest whole-number ratio using the GCD</li>
+<li>Reports the decimal value and how far it sits from the nearest standard format</li>
+<li>Locks a 16:9, 9:16, 4:5, 1:1, 3:2, 4:3, 21:9 or 2.39:1 frame and solves the missing side</li>
+<li>Shows megapixels so you can judge file weight before exporting</li>
+<li>Returns a width ladder at the active ratio for quick asset sizing</li>
+<li>Runs in the browser with no upload, so unreleased artwork stays local</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Resize a photo for a marketplace listing without stretching it</li>
+<li>Work out the height that pairs with a 1280-pixel-wide hero banner</li>
+<li>Check whether a client's "widescreen" file is really 16:9 before delivery</li>
+<li>Plan a vertical cut of horizontal footage and see how much frame the crop eats</li>
+<li>Size thumbnails and ad variants at one ratio so a template can reuse them</li>
+<li>Convert a phone photo's 4:3 frame into a 16:9 slide background</li>
+</ul>
+
+<h2>Why the Ratio Matters More Than the Resolution</h2>
+<p>Resolution decides how sharp an image looks. Ratio decides whether it looks correct at all. A 4K file at the wrong shape will be letterboxed, pillarboxed or stretched by the platform, and stretching is the only one of the three that actively damages the picture: faces widen, circles become ovals, and no amount of sharpening fixes it afterwards.</p>
+<p>The most common mistake is treating the pixel count as the goal. Someone exports at 1080 &times; 1080 because that is the number they were told, then pads a 16:9 clip into it and ships a video whose actual picture occupies 56 percent of the frame height. The file is technically the right size and practically unusable, because on a phone the subject is now smaller than the interface around it.</p>
+<p>The second mistake is mixing up ratio and resolution when comparing specs. A 1280 &times; 720 video and a 3840 &times; 2160 video are the same shape at different densities; a 1440 &times; 1080 video is a different shape entirely despite having more pixels than the first. If you only remember one rule, remember that ratio is division and resolution is multiplication.</p>
+<p>One limitation worth stating plainly: platforms re-encode and sometimes re-crop what you upload, so the ratio you deliver is a request, not a guarantee. Vertical feeds in particular may trim the top and bottom of a 9:16 file that carries text near the edges. Keep critical content inside a safe margin and treat the calculator as the start of the check, not the end of it.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Is 1920 &times; 1080 exactly 16:9?</h3>
+<p>Yes. Both numbers divide by 120 to give 16 and 9, and 16 &divide; 9 matches 1920 &divide; 1080 to every decimal place. Not every "HD" size is exact, though: 1366 &times; 768 reduces to 683:384, which is 1.779, about 0.05 percent wider than true 16:9, so a pixel-perfect fit leaves a sliver of a bar.</p>
+<h3>How much do I lose cropping 16:9 to 9:16?</h3>
+<p>Starting from 1920 &times; 1080, a full-height vertical crop is 607.5 pixels wide. You keep 31.6 percent of the width and discard 68.4 percent, which is why the operation is usually a reframe rather than a crop.</p>
+<h3>Why is 21:9 not the same as 2.39:1?</h3>
+<p>21 &divide; 9 is 2.333 and scope is 2.390, a gap of about 2.4 percent. Real ultrawide panels are often 2560 &times; 1080, which is 2.370. Small differences, but they decide whether a 2.39:1 master fills the screen or shows hairline bars.</p>
+<h3>Does resizing change the aspect ratio?</h3>
+<p>Not if both dimensions are multiplied by the same number. It changes the moment you type one dimension and leave the other, which is exactly how stretched images get made. Lock the ratio first, then pick the size you need.</p>
+<h3>Should I crop or add bars to fit another ratio?</h3>
+<p>Crop when the edges hold nothing you need: it fills the frame and reads as native on the platform. Letterbox when the edges matter, accepting that bars shrink the subject, which on a vertical feed can make the picture look like a thumbnail inside a black rectangle.</p>
+<h3>What is pixel aspect ratio, and does it affect this calculation?</h3>
+<p>Pixel aspect ratio describes the shape of a single pixel, not the frame. Standard HD uses square pixels, so this tool's maths applies directly. Legacy anamorphic footage does not: a 720 &times; 480 file with a 1.21 pixel aspect ratio displays as 16:9 even though the stored numbers reduce to 3:2.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var PRESETS=[["16:9",16,9],["9:16",9,16],["4:5",4,5],["1:1",1,1],["3:2",3,2],["4:3",4,3],["21:9",21,9],["2.39:1",239,100]];
+
+function gcd(a,b){
+  a=Math.abs(Math.round(a)); b=Math.abs(Math.round(b));
+  while(b){ var t=b; b=a%b; a=t; }
+  return a||1;
+}
+function simplifyRatio(w,h){
+  var g=gcd(w,h);
+  return [Math.round(w/g),Math.round(h/g)];
+}
+function ratioDecimal(w,h){ return h>0 ? w/h : 0; }
+function nearestPreset(w,h){
+  var target=ratioDecimal(w,h), best=PRESETS[0], bestErr=Infinity;
+  for(var i=0;i<PRESETS.length;i++){
+    var p=PRESETS[i], v=p[1]/p[2], err=Math.abs(v-target)/target;
+    if(err<bestErr){ bestErr=err; best=p; }
+  }
+  return {name:best[0],rw:best[1],rh:best[2],err:bestErr};
+}
+function heightForWidth(w,rw,rh){ return w*rh/rw; }
+function widthForHeight(h,rw,rh){ return h*rw/rh; }
+function megapixels(w,h){ return (w*h)/1000000; }
+
+var wEl=document.getElementById('w'), hEl=document.getElementById('h');
+var selEl=document.getElementById('ratioSel'), nwEl=document.getElementById('newW'), nhEl=document.getElementById('newH');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+function val(el){ var v=parseFloat(el.value); return isNaN(v)?0:v; }
+function mp(n){ return n.toFixed(2); }
+
+calcBtn.onclick=function(){
+  var w=val(wEl), h=val(hEl);
+  var sel=selEl.value, rw=0, rh=0, label='';
+
+  if(sel!=='custom'){
+    var parts=sel.split(':');
+    rw=parseFloat(parts[0]); rh=parseFloat(parts[1]);
+    label=sel;
+  } else {
+    if(w<=0||h<=0){
+      resOut.textContent="Enter a width and height, or pick a ratio preset";
+      resTbl.innerHTML=''; return;
+    }
+    var s=simplifyRatio(w,h);
+    rw=s[0]; rh=s[1];
+    label=rw+':'+rh;
+  }
+
+  var dec=rw/rh;
+  var nw=val(nwEl), nh=val(nhEl);
+  var outW, outH;
+
+  if(nw>0 && nh>0){
+    outW=nw; outH=nh;
+  } else if(nw>0){
+    outW=Math.round(nw); outH=Math.round(heightForWidth(nw,rw,rh));
+  } else if(nh>0){
+    outH=Math.round(nh); outW=Math.round(widthForHeight(nh,rw,rh));
+  } else {
+    outW=Math.round(w>0?w:rw); outH=Math.round(w>0?heightForWidth(w,rw,rh):rh);
+  }
+
+  var ratioTxt=label+' = '+dec.toFixed(3);
+  resOut.innerHTML=ratioTxt+'<br><span style="color:#0f9d58;font-size:22px">'+outW+' &times; '+outH+' px</span>';
+
+  var rows='<tr><th>Output</th><th>Value</th></tr>'
+    +'<tr><td>Simplified ratio</td><td>'+label+'</td></tr>'
+    +'<tr><td>Decimal (width &divide; height)</td><td>'+dec.toFixed(3)+'</td></tr>'
+    +'<tr><td>Orientation</td><td>'+(dec>1.02?'Landscape':(dec<0.98?'Portrait':'Square'))+'</td></tr>'
+    +'<tr><td><b>Matching dimensions</b></td><td><b>'+outW+' &times; '+outH+'</b></td></tr>'
+    +'<tr><td>Megapixels</td><td>'+mp(megapixels(outW,outH))+' MP</td></tr>';
+
+  if(w>0&&h>0){
+    var np=nearestPreset(w,h);
+    rows+='<tr><td>Your source ratio</td><td>'+simplifyRatio(w,h)[0]+':'+simplifyRatio(w,h)[1]+'</td></tr>'
+      +'<tr><td>Nearest standard</td><td>'+np.name+' ('+(np.err*100).toFixed(2)+'% off)</td></tr>';
+  }
+
+  resTbl.innerHTML=rows;
+
+  var ladder=[320,640,1080,1280,1920,2560,3840];
+  var t='<table><tr><th>Width</th><th>Height at '+label+'</th><th>Megapixels</th></tr>';
+  for(var i=0;i<ladder.length;i++){
+    var lw=ladder[i], lh=Math.round(heightForWidth(lw,rw,rh));
+    t+='<tr><td>'+lw+'</td><td>'+lh+'</td><td>'+mp(megapixels(lw,lh))+'</td></tr>';
+  }
+  t+='</table>';
+  document.getElementById('ladder').innerHTML=t;
+};
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>

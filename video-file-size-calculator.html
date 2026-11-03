@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video File Size Calculator | Bitrate, Duration and File Size</title>
+<meta name="description" content="Estimate video file size from bitrate and duration, or work backwards from a size limit to the bitrate that fits. Audio and overhead included.">
+<link rel="canonical" href="https://www.xiake.icu/video-file-size-calculator.html">
+<meta name="keywords" content="video file size calculator, bitrate calculator, video size estimator, mb per minute, gb per hour, export size, upload limit">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+h3{font-size:17px;margin:20px 0 6px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Video File Size Calculator","description":"Estimate video file size from video and audio bitrate plus duration, or solve the maximum bitrate that fits an upload or email size limit.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/video-file-size-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is the exported file larger than the calculator says?","acceptedAnswer":{"@type":"Answer","text":"Three reasons stack up. Most encoders run variable bitrate and overshoot the target on busy scenes, the container adds headers and an index worth roughly 1 to 3 percent, and any second audio track, chapter marker or metadata is not part of the bitrate you typed. The overhead field exists so you can add that slack deliberately."}},{"@type":"Question","name":"Does a higher resolution always mean a bigger file?","acceptedAnswer":{"@type":"Answer","text":"No. File size follows bitrate and duration, not pixel count. A 4K clip encoded at 15 Mbps is smaller than a 1080p clip at 40 Mbps. Resolution only matters because it usually forces a higher bitrate to look clean at the same quality."}},{"@type":"Question","name":"How do I fit a video into a 25 MB email limit?","acceptedAnswer":{"@type":"Answer","text":"Solve backwards. For a 3-minute clip, 25 MB allows about 1.11 Mbps of total bitrate, so after a 128 kbps audio track you have roughly 0.98 Mbps for video, which is fine for 720p talking-head footage and poor for anything with motion. Shorter duration or a lower frame rate buys more headroom than tweaking the codec."}},{"@type":"Question","name":"What is the difference between MB and MiB on this page?","acceptedAnswer":{"@type":"Answer","text":"One MB is 1,000,000 bytes and one MiB is 1,048,576 bytes, a gap of about 4.9 percent. Drive makers and most upload forms count megabytes, while Windows and macOS file sizes are shown in mebibytes, so the same file reads larger in one place than the other."}},{"@type":"Question","name":"How much storage does an hour of 4K video take?","acceptedAnswer":{"@type":"Answer","text":"At 45 Mbps, which is a common H.264 4K target, an hour is 20.3 GB. The same hour in H.265 at 22 Mbps is about 9.9 GB. ProRes 422 HQ at 880 Mbps is the outlier at roughly 396 GB per hour, which is why camera-original footage fills cards far faster than the exported file suggests."}},{"@type":"Question","name":"Does frame rate change the file size?","acceptedAnswer":{"@type":"Answer","text":"Only through the bitrate it requires. Sixty frames per second needs roughly 1.5 times the bitrate of thirty for comparable quality, so a 60 fps export at the same bitrate as a 30 fps one will look softer rather than smaller. Duration and bitrate remain the only two inputs in the size formula."}}]}
+</script>
+<meta property="og:title" content="Video File Size Calculator | Bitrate, Duration and File Size">
+<meta property="og:description" content="Estimate video file size from bitrate and duration, or work backwards from a size limit to the bitrate that fits. Audio and overhead included.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/video-file-size-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Video File Size Calculator | Bitrate, Duration and File Size">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Estimate video file size from bitrate and duration, or work backwards from a size limit to the bitrate that fits. Audio and overhead included.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./aspect-ratio-calculator.html">Aspect Ratio</a>
+    <a href="./pixel-size-converter.html">Pixel Size Converter</a>
+    <a href="./image-resizer.html">Image Resizer</a>
+</div>
+
+<h1>Video File Size Calculator</h1>
+<p>A video file weighs what its bitrate and its length say it weighs, and nothing else. Resolution, codec and frame rate only matter because they push the bitrate up or down. This calculator turns bitrate and duration into megabytes, gigabytes and megabytes per minute, adds a separate audio track and a container overhead allowance, and then runs the same maths backwards to answer the more practical question: what bitrate will keep this export under the limit I have to hit?</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="mins" placeholder="Minutes" value="10" step="1" min="0">
+        <input type="number" id="secs" placeholder="Seconds" value="0" step="1" min="0">
+        <input type="number" id="vbit" placeholder="Video bitrate" value="8" step="0.1" min="0">
+        <select id="vunit">
+            <option value="mbps">Mbps</option>
+            <option value="kbps">kbps</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <select id="preset">
+            <option value="">Load a typical bitrate…</option>
+            <option value="5000">720p 30 H.264 — 5 Mbps</option>
+            <option value="8000">1080p 30 H.264 — 8 Mbps</option>
+            <option value="12000">1080p 60 H.264 — 12 Mbps</option>
+            <option value="16000">1440p 30 H.264 — 16 Mbps</option>
+            <option value="45000">4K 30 H.264 — 45 Mbps</option>
+            <option value="22000">4K 30 H.265 — 22 Mbps</option>
+            <option value="25000">Phone 4K 30 HEVC — 25 Mbps</option>
+            <option value="220000">ProRes 422 HQ 1080p — 220 Mbps</option>
+        </select>
+        <input type="number" id="abit" placeholder="Audio kbps" value="128" step="1" min="0">
+    </div>
+    <div class="input-row">
+        <input type="number" id="oh" placeholder="Overhead %" value="2" step="0.5" min="0">
+        <input type="number" id="target" placeholder="Target size MB (optional)" step="0.1" min="0">
+    </div>
+    <button id="calcBtn">Calculate Size</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the Video File Size Calculator Works</h2>
+<p>Bitrate is a rate: bits per second. Multiply it by the number of seconds and you have the total number of bits, and dividing by eight converts bits into bytes because a byte holds eight of them. Everything else is unit bookkeeping.</p>
+<p><b>Total bits = (video kbps + audio kbps) &times; 1,000 &times; seconds</b><br>
+<b>Bytes = total bits &divide; 8</b><br>
+<b>MB = bytes &divide; 1,000,000, then &times; (1 + overhead %)</b><br>
+<b>Maximum video bitrate for a size cap = (target MB &times; 8,000,000 &divide; seconds &divide; (1 + overhead)) &minus; audio kbps</b></p>
+<p>Worked example, forward. A 10-minute clip is 600 seconds. At 8 Mbps the video stream is 8,000,000 &times; 600 = 4,800,000,000 bits, or <b>600 MB</b> before anything else is counted. Add a 128 kbps audio track: 128,000 &times; 600 = 76,800,000 bits, another 9.6 MB. The pair totals 609.6 MB, and a 2 percent container allowance takes it to <b>621.8 MB</b>. Note how little the audio contributes: 1.5 percent of the file. Dropping audio from 320 kbps to 128 kbps saves about 86 MB an hour, which is real but never the lever that rescues an oversized export on its own.</p>
+<p>Worked example, backwards. Gmail refuses attachments over 25 MB and you have a 3-minute clip, 180 seconds. The cap is 25 &times; 8,000,000 = 200,000,000 bits, and dividing by 180 seconds gives 1,111 kbps of total bitrate. Subtract 128 kbps for audio and the video stream may use <b>about 983 kbps</b>. That is enough for a static talking head at 720p and visibly soft for anything with camera movement, which is the honest verdict the arithmetic delivers.</p>
+
+<h2>Typical Bitrates and What They Cost in Storage</h2>
+<p>These are common delivery targets, not laws. Two encoders at the same setting will land in different places, and H.265 buys roughly 30 to 50 percent of the bitrate back at matched quality. Figures are decimal gigabytes, video only.</p>
+<table>
+<tr><th>Format</th><th>Typical bitrate</th><th>GB per hour</th><th>Minutes per GB</th></tr>
+<tr><td>720p 30, H.264</td><td>5 Mbps</td><td>2.25 GB</td><td>26.7</td></tr>
+<tr><td>1080p 30, H.264</td><td>8 Mbps</td><td>3.60 GB</td><td>16.7</td></tr>
+<tr><td>1080p 60, H.264</td><td>12 Mbps</td><td>5.40 GB</td><td>11.1</td></tr>
+<tr><td>1440p 30, H.264</td><td>16 Mbps</td><td>7.20 GB</td><td>8.3</td></tr>
+<tr><td>4K 30, H.265</td><td>22 Mbps</td><td>9.90 GB</td><td>6.1</td></tr>
+<tr><td>4K 30, H.264</td><td>45 Mbps</td><td>20.25 GB</td><td>3.0</td></tr>
+<tr><td>ProRes 422 HQ 1080p</td><td>220 Mbps</td><td>99.0 GB</td><td>0.6</td></tr>
+</table>
+<p>The last row explains a lot of confusion about "4K files being huge". A camera-original master at 880 Mbps writes about 396 GB an hour, while the H.265 export of the same footage may be 10 GB. Both are 4K. The difference is not resolution, it is how much data per second each one chose to keep.</p>
+
+<h2>Why Real Files Miss the Estimate</h2>
+<p><b>Variable bitrate.</b> Almost nothing is encoded at a constant rate. Encoders spend more bits on motion and grain and fewer on static shots, targeting an average. A clip of confetti will overshoot a clip of a white wall at identical settings, and there is no way to know which you have until you encode it.</p>
+<p><b>Container overhead.</b> MP4, MOV and MKV files carry headers, an index and per-track metadata that the bitrate figure never mentions. It usually lands between 1 and 3 percent, which is why the overhead field defaults to 2 instead of zero.</p>
+<p><b>Extra tracks and metadata.</b> A second language track, subtitles, chapters, a thumbnail and a colour profile all add bytes. None of them appear in the bitrate your editor shows.</p>
+<p><b>Two-pass and constant-quality modes.</b> A CRF or constant-quality encode does not have a bitrate target at all, so the number in the encoder box is a prediction rather than an instruction. If you need a guaranteed size, use a bitrate cap or a two-pass VBR encode.</p>
+
+<h2>MB, MiB and Why Your Drive Disagrees</h2>
+<p>This calculator reports decimal megabytes because that is what upload forms, email servers and hosting plans use. Operating systems report mebibytes, where 1 MiB is 1,048,576 bytes. The 4.9 percent gap is small on a phone photo and enormous on a video: a 20.25 GB recording shows up as 18.86 GiB in a file manager, and people reasonably conclude that something was compressed or lost. Nothing was. Two different units were used for the same bytes.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Check whether a render will fit a platform's upload ceiling before starting a two-hour export</li>
+<li>Size a shooting day against available card and drive space</li>
+<li>Pick a bitrate that fits an email or messaging attachment limit</li>
+<li>Compare the storage cost of H.264 and H.265 for the same project</li>
+<li>Estimate cloud backup or archive costs from total footage hours</li>
+<li>Work out how long a live stream can run before hitting a data cap</li>
+</ul>
+
+<h2>Choosing a Bitrate That Actually Looks Right</h2>
+<p>The useful rule is bits per pixel, not bits per second. Divide the bitrate by the pixel count and the frame rate and you get a rough quality index: at 1080p30, 8 Mbps works out to about 0.13 bits per pixel, which is a normal delivery target for H.264. Push 4K30 through the same 8 Mbps and you are at 0.03 bits per pixel, and the result will block and smear in motion no matter how good the encoder is.</p>
+<p>That is why doubling resolution roughly quadruples the bitrate needed for equal quality, and why "4K at 1080p bitrate" is not a shortcut to a smaller high-quality file. If storage is the constraint, the honest options are a more efficient codec, a lower frame rate, or a shorter runtime. Turning the bitrate down is just choosing to lose detail.</p>
+<p>One limit worth stating: this tool estimates the size of a stream, not the size of a finished deliverable. Editors add render caches, proxies and audio stems that never ship, and platforms re-encode what you upload into several renditions. Use the number to plan storage and to clear upload gates, then verify against the actual file once.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Why is the exported file bigger than the calculator predicts?</h3>
+<p>Variable bitrate overshoot on busy scenes, one to three percent of container overhead, and any extra audio track or metadata the bitrate figure ignores. Raise the overhead field to 5 percent when you need a conservative number rather than an accurate one.</p>
+<h3>Does higher resolution always mean a bigger file?</h3>
+<p>No. Size follows bitrate and duration only. A 4K clip at 15 Mbps is smaller than a 1080p clip at 40 Mbps; resolution matters because clean 4K normally demands a much higher bitrate, not because pixels themselves occupy space.</p>
+<h3>How do I hit a 25 MB email limit with a 3-minute video?</h3>
+<p>You have about 1.11 Mbps of total bitrate to spend. After a 128 kbps audio track that leaves roughly 983 kbps for video, fine for a static shot and rough for movement. Cutting to 90 seconds doubles the allowance, which almost always beats fighting the encoder.</p>
+<h3>Should I enter video bitrate or total bitrate?</h3>
+<p>Enter the video stream alone and put audio in its own field. If your software only reports a combined figure, enter it as video and set audio to zero, otherwise you count the audio twice.</p>
+<h3>How much space does an hour of 4K take?</h3>
+<p>About 20.3 GB at 45 Mbps H.264, or 9.9 GB at 22 Mbps H.265. A ProRes 422 HQ master at 880 Mbps is roughly 396 GB for the same hour, which is why camera originals and delivery files should never be planned with the same storage number.</p>
+<h3>Does frame rate change the file size?</h3>
+<p>Not on its own. Sixty frames per second needs roughly 1.5 times the bitrate of thirty for comparable quality, so at a fixed bitrate a 60 fps file is the same size and simply looks softer. Duration and bitrate are the only two terms in the formula.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+function sizeMB(vKbps,aKbps,sec,oh){
+  var bits=(vKbps+aKbps)*1000*sec;
+  return bits/8/1000000*(1+oh/100);
+}
+function sizeMiB(vKbps,aKbps,sec,oh){
+  var bits=(vKbps+aKbps)*1000*sec;
+  return bits/8/1048576*(1+oh/100);
+}
+function maxVideoKbps(targetMB,sec,oh,aKbps){
+  if(sec<=0) return 0;
+  var totalBits=targetMB*1000000*8/(1+oh/100);
+  return totalBits/sec/1000-aKbps;
+}
+function gbPerHour(kbps){ return kbps*3600/8/1000000; }
+
+var minsEl=document.getElementById('mins'), secsEl=document.getElementById('secs');
+var vbitEl=document.getElementById('vbit'), vunitEl=document.getElementById('vunit');
+var abitEl=document.getElementById('abit'), ohEl=document.getElementById('oh');
+var targetEl=document.getElementById('target'), presetEl=document.getElementById('preset');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+function val(el){ var v=parseFloat(el.value); return isNaN(v)?0:v; }
+function fmt(n,d){ return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d}); }
+
+presetEl.onchange=function(){
+  if(this.value){
+    vbitEl.value=(parseFloat(this.value)/1000).toFixed(this.value>=1000?0:1);
+    vunitEl.value='mbps';
+  }
+};
+
+calcBtn.onclick=function(){
+  var mins=val(minsEl), secs=val(secsEl);
+  var total=mins*60+secs;
+  var vbit=val(vbitEl);
+  var vKbps=vunitEl.value==='mbps'?vbit*1000:vbit;
+  var aKbps=val(abitEl), oh=val(ohEl);
+  var target=val(targetEl);
+
+  if(total<=0){
+    resOut.textContent="Enter a duration in minutes or seconds";
+    resTbl.innerHTML=''; return;
+  }
+  if(vKbps<=0 && target<=0){
+    resOut.textContent="Enter a video bitrate, or a target size to solve for one";
+    resTbl.innerHTML=''; return;
+  }
+  if(oh<0) oh=0;
+
+  var rows='<tr><th>Output</th><th>Value</th></tr>'
+    +'<tr><td>Duration</td><td>'+Math.floor(total/60)+' min '+Math.round(total%60)+' s</td></tr>';
+
+  if(vKbps>0){
+    var mb=sizeMB(vKbps,aKbps,total,oh);
+    var mib=sizeMiB(vKbps,aKbps,total,oh);
+    var totalKbps=vKbps+aKbps;
+    resOut.innerHTML='Estimated size: <span style="color:#0f9d58;font-size:22px">'+fmt(mb,1)+' MB</span><br>'
+      +fmt(mb/1000,2)+' GB &middot; total bitrate '+fmt(totalKbps/1000,2)+' Mbps';
+
+    rows+='<tr><td>Video bitrate</td><td>'+fmt(vKbps/1000,2)+' Mbps</td></tr>'
+      +'<tr><td>Audio bitrate</td><td>'+fmt(aKbps,0)+' kbps</td></tr>'
+      +'<tr><td>Total bitrate</td><td>'+fmt(totalKbps/1000,2)+' Mbps</td></tr>'
+      +'<tr><td><b>File size (decimal MB)</b></td><td><b>'+fmt(mb,1)+' MB</b></td></tr>'
+      +'<tr><td>File size (GB, decimal)</td><td>'+fmt(mb/1000,2)+' GB</td></tr>'
+      +'<tr><td>File size (MiB, as your OS shows it)</td><td>'+fmt(mib,1)+' MiB</td></tr>'
+      +'<tr><td>Size per minute of footage</td><td>'+fmt(mb/(total/60),1)+' MB</td></tr>'
+      +'<tr><td>Size per hour of footage</td><td>'+fmt(gbPerHour(totalKbps),2)+' GB</td></tr>';
+  } else {
+    resOut.textContent='Enter a video bitrate to estimate size';
+  }
+
+  if(target>0){
+    var maxK=maxVideoKbps(target,total,oh,aKbps);
+    if(maxK>0){
+      var fits=(vKbps>0 && sizeMB(vKbps,aKbps,total,oh)<=target);
+      var line='To fit '+fmt(target,1)+' MB: video bitrate must stay under <b>'+fmt(maxK/1000,2)+' Mbps</b>';
+      if(vKbps>0){
+        resOut.innerHTML+='<br><span style="font-size:16px;color:'+(fits?'#0f9d58':'#d93025')+'">'
+          +(fits?'Fits':'Over')+' the '+fmt(target,1)+' MB limit. '+line+'</span>';
+      } else {
+        resOut.innerHTML=line;
+      }
+      rows+='<tr><td><b>Max video bitrate for '+fmt(target,1)+' MB</b></td><td><b>'+fmt(maxK/1000,2)+' Mbps</b></td></tr>';
+    } else {
+      rows+='<tr><td>Max video bitrate for '+fmt(target,1)+' MB</td><td>Not possible (audio alone exceeds it)</td></tr>';
+      if(vKbps<=0) resOut.textContent='That target is too small for this duration even with no video stream';
+    }
+  }
+
+  resTbl.innerHTML=rows;
+};
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
