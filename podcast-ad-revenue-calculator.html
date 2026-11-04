@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podcast Ad Revenue Calculator | CPM by Ad Slot &amp; Sponsor</title>
+<meta name="description" content="Estimate podcast ad revenue from downloads, pre-roll, mid-roll and post-roll CPMs and sell-through rate. See revenue per episode, month and blended CPM.">
+<link rel="canonical" href="https://www.xiake.icu/podcast-ad-revenue-calculator.html">
+<meta name="keywords" content="podcast ad revenue calculator, podcast cpm calculator, podcast sponsorship revenue, mid-roll cpm, podcast income calculator, sell-through rate">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Podcast Ad Revenue Calculator","description":"Estimate podcast advertising revenue from average downloads per episode, pre-roll, mid-roll and post-roll CPMs, slot counts and sell-through rate.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/podcast-ad-revenue-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does the calculator apply sell-through rate to every ad slot?","acceptedAnswer":{"@type":"Answer","text":"Because a slot you did not sell earns nothing. Most shows have one or two committed sponsors and leave the rest of the inventory open, so applying a single sell-through figure to the whole slot stack gives a more honest monthly number than assuming every unit is filled at the quoted CPM."}},{"@type":"Question","name":"Should I enter 7-day or 30-day download numbers?","acceptedAnswer":{"@type":"Answer","text":"Use the window your buyer asks for, which in the US is almost always 30 days. The 30-day figure is larger than the 7-day figure for the same episode, so mixing windows between your media kit and this calculator will overstate or understate revenue depending on which one you pick."}},{"@type":"Question","name":"How many downloads do I need before sponsors will talk to me?","acceptedAnswer":{"@type":"Answer","text":"Ad marketplaces commonly set a floor near 5,000 downloads per episode in the measurement window. Below that, direct deals and affiliate arrangements are more realistic than network inventory, and a small B2B or finance audience can still command premium rates because the advertiser is paying for reach into a specific job title."}},{"@type":"Question","name":"Does a podcast network's commission come out of this figure?","acceptedAnswer":{"@type":"Answer","text":"Yes. Networks and sales houses typically keep a share of gross bookings, often in the 20% to 30% range, so your net is the gross figure here minus that commission. Ask whether the commission is applied before or after the agency fee, because a 15% agency fee plus a 25% network cut on the same booking is a materially different number."}},{"@type":"Question","name":"Why is my blended CPM lower than the CPM I quote on my rate card?","acceptedAnswer":{"@type":"Answer","text":"Two reasons. Unsold slots drag the blended figure toward zero, and the cheap placements pull the average down because the blended CPM is total revenue divided by total downloads, not an average of the rates you list. A rate card is a ceiling, not a forecast."}},{"@type":"Question","name":"Can I count YouTube views or Spotify streams as downloads?","acceptedAnswer":{"@type":"Answer","text":"Not directly. A download is a request for the media file inside the measurement window, while a stream is a play event, and the two are counted on different clocks with different de-duplication rules. Use the download figure from your host, and quote video views separately if a sponsor asks for them."}}]}
+</script>
+<meta property="og:title" content="Podcast Ad Revenue Calculator | CPM by Ad Slot &amp; Sponsor">
+<meta property="og:description" content="Estimate podcast ad revenue from downloads, pre-roll, mid-roll and post-roll CPMs and sell-through rate. See revenue per episode, month and blended CPM.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/podcast-ad-revenue-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Podcast Ad Revenue Calculator | CPM by Ad Slot &amp; Sponsor">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Estimate podcast ad revenue from downloads, pre-roll, mid-roll and post-roll CPMs and sell-through rate. See revenue per episode, month and blended CPM.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./twitch-revenue-calculator.html">Twitch Revenue</a>
+    <a href="./youtube-money-calculator.html">YouTube Money</a>
+    <a href="./patreon-fee-calculator.html">Patreon Fees</a>
+</div>
+
+<h1>Podcast Ad Revenue Calculator</h1>
+<p>Podcast advertising is still sold a fairly old-fashioned way: a CPM multiplied against the downloads an episode logs inside its measurement window. Not subscriber count, not follower count, not the number of people who say they listen every week. This calculator takes your downloads, your slot mix and your sell-through rate, then returns revenue per episode, per month and per year, plus the blended CPM you are actually earning. That last figure is the one that tells you which placement is carrying the show and which one is just decoration on your rate card.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="dl" placeholder="Downloads per episode" value="8000">
+        <input type="number" id="eps" placeholder="Episodes per month" value="4">
+        <input type="number" id="fill" placeholder="Sell-through %" value="80">
+    </div>
+    <div class="input-row">
+        <input type="number" id="preCpm" placeholder="Pre-roll CPM $" value="18">
+        <input type="number" id="preSlots" placeholder="Pre-roll slots" value="1">
+    </div>
+    <div class="input-row">
+        <input type="number" id="midCpm" placeholder="Mid-roll CPM $" value="25">
+        <input type="number" id="midSlots" placeholder="Mid-roll slots" value="2">
+    </div>
+    <div class="input-row">
+        <input type="number" id="postCpm" placeholder="Post-roll CPM $" value="12">
+        <input type="number" id="postSlots" placeholder="Post-roll slots" value="1">
+    </div>
+    <button id="calcBtn">Calculate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the revenue math works</h2>
+<p>Each ad slot is priced per thousand downloads, so a slot is worth downloads divided by 1,000, multiplied by its CPM. Multiply that by the number of slots of that type, add the three placement types together, then cut the total by your sell-through rate. Episodes per month turns it into a monthly figure.</p>
+<p><b>Revenue per episode</b> = (downloads / 1,000) x (pre CPM x pre slots + mid CPM x mid slots + post CPM x post slots) x sell-through<br>
+<b>Monthly revenue</b> = revenue per episode x episodes per month<br>
+<b>Blended CPM</b> = monthly revenue / (monthly downloads / 1,000)</p>
+<p>Worked example with 8,000 downloads, four episodes a month, one pre-roll at an $18 CPM, two mid-rolls at $25 and one post-roll at $12, with 80% of slots sold: pre-roll is 8 x 18 = $144, mid-roll is 8 x 25 x 2 = $400, post-roll is 8 x 12 = $96. That is $640 of inventory per episode before sell-through, and $512 after the 80% adjustment. Four episodes brings it to $2,048 a month, or $24,576 a year. Blended CPM is $2,048 divided by 32 (the 32,000 monthly downloads expressed in thousands), which is $64.00. Note that the three slots add up to $80 of face value and you earned $64, because a fifth of the inventory went unsold. On a show of this size that unsold fifth is worth more than any CPM negotiation you are likely to win.</p>
+
+<h2>What CPMs clear in the current US market</h2>
+<p>Host-read spots are the only segment where a small show can still earn a defensible rate, because the advertiser is buying the host's credibility rather than an impression. Dynamic insertion sells for a fraction of that, and the gap has widened as programmatic inventory has grown.</p>
+<table>
+<tr><th>Placement</th><th>Typical US CPM</th><th>What drives the number</th></tr>
+<tr><td>Pre-roll, 15 to 30 seconds</td><td>$15 - $25</td><td>Everyone hears it, but skip rates run highest at the open</td></tr>
+<tr><td>Mid-roll, host-read</td><td>$25 - $40</td><td>Listeners are already invested, so completion is highest</td></tr>
+<tr><td>Post-roll</td><td>$10 - $20</td><td>Cheapest unit because completion falls off a cliff</td></tr>
+<tr><td>Programmatic / dynamically inserted</td><td>$5 - $15</td><td>No host endorsement, no negotiation, no relationship</td></tr>
+<tr><td>Finance, B2B, tech niche</td><td>$35 - $55+</td><td>Small audience, but the advertiser is buying job titles</td></tr>
+<tr><td>Flat-fee direct deal</td><td>Negotiated</td><td>Often lands near $18 - $30 CPM effective at 10k+ downloads</td></tr>
+</table>
+<p>Treat the table as a starting position, not a valuation. A show with 3,000 downloads in a compliance or dental-practice niche routinely beats a general comedy show at 30,000 downloads on CPM, because the buyer is paying to reach a specific person and there are only so many shows that reach them cheaply.</p>
+
+<h2>Downloads are not listeners, and buyers know it</h2>
+<p>The most common mistake in podcast revenue planning is treating downloads as an audience count. A download is a request for the media file, and it fires for auto-downloads on a subscriber's phone, for a second device, for a re-download after a failed sync, and for someone who stopped listening after ninety seconds. The IAB measurement guidelines exist precisely because the raw number is generous, and any media buyer who has run podcast before will ask which window you used before they ask your CPM.</p>
+<p>The second mistake is thinking more slots always means more money. Adding a fourth and fifth unit raises gross inventory on paper, but past roughly three units per episode the listening experience degrades, completion drops, and buyers start discounting your inventory because their own attribution looks worse. The calculator will happily show you a five-slot stack earning more than a three-slot stack; the market is less cooperative. If you want to test it, hold CPM constant and drop sell-through by ten points for each slot added beyond three, and watch how little the total actually moves.</p>
+<p>One more limitation worth stating plainly: this tool models advertising only. Premium subscriber revenue, merch, live events and affiliate income all sit outside the CPM model, and for many shows under 10,000 downloads the subscription tier is the larger and steadier line. A forecast built on ads alone tends to look disappointing for exactly that reason.</p>
+
+<h2>Common usage</h2>
+<ul>
+<li>Build the rate card section of a media kit with a defensible revenue range instead of a guess.</li>
+<li>Decide whether a network offer is worth the commission by comparing gross bookings here against the net they quote you.</li>
+<li>Size the upside of adding a second mid-roll before you commit to a longer episode format.</li>
+<li>Sanity-check a sponsorship offer against the same slots priced at market CPM.</li>
+<li>Plan how many downloads you need for a monthly income target before you start pitching.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<h2>Why does the calculator apply sell-through to every slot?</h2>
+<p>Because an unsold slot earns nothing, and most independent shows are nowhere near fully booked. Applying one sell-through figure across the stack keeps the forecast honest: it is the difference between the inventory you could sell and the inventory you actually did.</p>
+<h2>Should I use 7-day or 30-day downloads?</h2>
+<p>Use whatever your buyer asks for, which in the US is almost always 30 days. Just do not mix windows between your media kit and this tool, because the 30-day number is meaningfully larger than the 7-day number for the same episode and the mismatch will distort every downstream figure.</p>
+<h2>How many downloads before sponsors will talk to me?</h2>
+<p>Marketplaces commonly set a floor around 5,000 per episode in the measurement window. Below that, direct outreach and affiliate deals convert better than network inventory, and a tightly targeted niche audience can still support premium rates because the buyer is paying for access rather than scale.</p>
+<h2>Does a network's commission come out of this figure?</h2>
+<p>Yes. Sales houses typically retain something in the 20% to 30% range of gross bookings, so your net is this number minus that cut. Ask whether the commission applies before or after any agency fee, since stacking a 15% agency fee on top of a 25% network cut is a very different deal from either one alone.</p>
+<h2>Why is my blended CPM lower than the rate I quote?</h2>
+<p>Unsold inventory pulls the blended figure toward zero, and cheap placements pull the average down, because blended CPM is total revenue over total downloads rather than an average of your listed rates. A rate card is a ceiling. The blended number is what you actually earned.</p>
+<h2>Can I count YouTube views or Spotify streams as downloads?</h2>
+<p>Not directly. A download is a file request inside the measurement window; a stream is a play event counted on a different clock with different de-duplication. Quote the download figure from your host, and report video views separately if a sponsor asks for cross-platform reach.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+function computePodcast(i){
+  var d = i.downloads, eps = i.episodes, fill = i.fill/100;
+  if(!(d>0) || !(eps>0)) return null;
+  if(fill<0) fill=0; if(fill>1) fill=1;
+  var units = d/1000;
+  var pre = units * i.preCpm * i.preSlots;
+  var mid = units * i.midCpm * i.midSlots;
+  var post = units * i.postCpm * i.postSlots;
+  var gross = pre + mid + post;
+  var perEp = gross * fill;
+  var monthly = perEp * eps;
+  var annual = monthly * 12;
+  var monthlyDl = d * eps;
+  return {
+    pre: pre*fill, mid: mid*fill, post: post*fill,
+    grossPerEp: gross, perEp: perEp,
+    monthly: monthly, annual: annual,
+    effCpm: monthly/(monthlyDl/1000),
+    perDownload: monthly/monthlyDl,
+    monthlyDl: monthlyDl
+  };
+}
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+function num(id){ var v=parseFloat(document.getElementById(id).value); return isNaN(v)?0:v; }
+function money(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+calcBtn.onclick=function(){
+  var inp={
+    downloads:num('dl'), episodes:num('eps'), fill:num('fill'),
+    preCpm:num('preCpm'), preSlots:num('preSlots'),
+    midCpm:num('midCpm'), midSlots:num('midSlots'),
+    postCpm:num('postCpm'), postSlots:num('postSlots')
+  };
+  var r=computePodcast(inp);
+  if(!r){ resOut.textContent='Enter downloads per episode and episodes per month'; resTbl.innerHTML=''; return; }
+  resOut.innerHTML='Estimated monthly ad revenue: <span style="color:#0f9d58;font-size:22px">$'+money(r.monthly)+'</span>';
+  var rows='<tr><th>Item</th><th>Per episode</th><th>Per month</th></tr>'
+    + '<tr><td>Pre-roll, after sell-through</td><td>$'+money(r.pre)+'</td><td>$'+money(r.pre*inp.episodes)+'</td></tr>'
+    + '<tr><td>Mid-roll, after sell-through</td><td>$'+money(r.mid)+'</td><td>$'+money(r.mid*inp.episodes)+'</td></tr>'
+    + '<tr><td>Post-roll, after sell-through</td><td>$'+money(r.post)+'</td><td>$'+money(r.post*inp.episodes)+'</td></tr>'
+    + '<tr><td><b>Ad revenue</b></td><td><b>$'+money(r.perEp)+'</b></td><td><b>$'+money(r.monthly)+'</b></td></tr>'
+    + '<tr><td>Annual revenue</td><td colspan="2">$'+money(r.annual)+'</td></tr>'
+    + '<tr><td>Blended CPM earned</td><td colspan="2">$'+money(r.effCpm)+'</td></tr>'
+    + '<tr><td>Revenue per download</td><td colspan="2">$'+r.perDownload.toFixed(3)+'</td></tr>'
+    + '<tr><td>Monthly downloads</td><td colspan="2">'+Math.round(r.monthlyDl).toLocaleString('en-US')+'</td></tr>';
+  resTbl.innerHTML=rows;
+};
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>

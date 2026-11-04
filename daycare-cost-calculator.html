@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daycare Cost Calculator | Weekly, Monthly &amp; Yearly Rates</title>
+<meta name="description" content="Turn a weekly daycare rate into monthly and yearly cost, share of household income, and real savings from a dependent care FSA and childcare tax credit.">
+<link rel="canonical" href="https://www.xiake.icu/daycare-cost-calculator.html">
+<meta name="keywords" content="daycare cost calculator, child care cost calculator, daycare per month, infant daycare cost, dependent care fsa, child and dependent care credit">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Daycare Cost Calculator","description":"Calculate the true annual and monthly cost of daycare from a quoted weekly rate, number of children and sibling discount, then subtract dependent care FSA and Child and Dependent Care Credit savings.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/daycare-cost-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the daycare calculator use state averages?","acceptedAnswer":{"@type":"Answer","text":"No. It uses the weekly rate you enter, because a state average is nearly useless for a specific family: within one metro the gap between a licensed center and a home-based provider can run past 50%, and infant rooms are priced very differently from preschool rooms in the same building."}},{"@type":"Question","name":"Why does my dependent care FSA not cover the whole daycare bill?","acceptedAnswer":{"@type":"Answer","text":"The FSA has an annual contribution cap of $7,500 for 2026, which is well below a full year of infant care in most metros, and the money has to be spent on care that lets you work. Anything above the cap is paid with after-tax dollars."}},{"@type":"Question","name":"Can I claim the Child and Dependent Care Credit and use an FSA in the same year?","acceptedAnswer":{"@type":"Answer","text":"Yes, but not on the same dollars. The credit is calculated on up to $3,000 of expenses for one child or $6,000 for two or more, and that base is reduced by whatever the FSA reimbursed, so most families with a funded FSA end up with a credit near zero and should not budget for both."}},{"@type":"Question","name":"Should I enter 52 weeks if the center closes for holidays?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. Tuition is billed on an annualized basis, so a center that closes for ten holidays still charges for those weeks, and quoting the weekly rate times 52 is closer to the real invoice than subtracting closure weeks."}},{"@type":"Question","name":"How does a sibling discount normally work?","acceptedAnswer":{"@type":"Answer","text":"The common structure is 10% off tuition for the additional child, applied to the lower of the two rates, and many centers cap it at one discount per family. Ask whether the discount applies to the older child's cheaper rate or to the infant rate, because the difference over a year is not trivial."}},{"@type":"Question","name":"Is part-time daycare proportionally cheaper?","acceptedAnswer":{"@type":"Answer","text":"Rarely. Three days a week typically costs 60% to 75% of the full-time rate rather than 60%, because the center still has to hold the slot and staff the room. Two-day schedules often land near 55% of full-time tuition."}}]}
+</script>
+<meta property="og:title" content="Daycare Cost Calculator | Weekly, Monthly &amp; Yearly Rates">
+<meta property="og:description" content="Turn a weekly daycare rate into monthly and yearly cost, share of household income, and real savings from a dependent care FSA and childcare tax credit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/daycare-cost-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Daycare Cost Calculator | Weekly, Monthly &amp; Yearly Rates">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Turn a weekly daycare rate into monthly and yearly cost, share of household income, and real savings from a dependent care FSA and childcare tax credit.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./pet-cost-calculator.html">Pet Cost</a>
+    <a href="./moving-cost-calculator.html">Moving Cost</a>
+    <a href="./monthly-budget-calculator.html">Monthly Budget</a>
+</div>
+
+<h1>Daycare Cost Calculator</h1>
+<p>Daycare is the line item that decides whether a second income is worth having. The quoted weekly rate looks manageable until it is multiplied by 52 weeks and set against take-home pay, and the tax breaks that are supposed to soften the blow are smaller and more conditional than most parents expect. Enter the rate you were actually quoted, the number of children, and your household income to see the annual figure, what share of income it eats, and what a dependent care FSA and the Child and Dependent Care Credit genuinely save you.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="rate" placeholder="Weekly rate, first child $" value="332">
+        <input type="number" id="kids" placeholder="Number of children" value="1">
+        <input type="number" id="weeks" placeholder="Weeks per year" value="52">
+    </div>
+    <div class="input-row">
+        <input type="number" id="disc" placeholder="Sibling discount %" value="10">
+        <input type="number" id="income" placeholder="Household income / year $" value="95000">
+        <input type="number" id="mtr" placeholder="Marginal tax rate %" value="22">
+    </div>
+    <div class="input-row">
+        <input type="number" id="fsa" placeholder="Dependent care FSA / year $" value="5000">
+    </div>
+    <button id="calcBtn">Calculate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the cost is calculated</h2>
+<p>The first child is billed at the weekly rate for every week of the year. Each additional child is billed at that same rate reduced by your sibling discount. That total is divided by twelve for the monthly figure and compared against household income, because affordability is a ratio, not a dollar amount.</p>
+<p><b>Annual tuition</b> = weekly rate x weeks x (1 + (children - 1) x (1 - discount))<br>
+<b>Monthly cost</b> = annual tuition / 12<br>
+<b>Share of income</b> = annual tuition / household income<br>
+<b>FSA saving</b> = min(FSA contribution, $7,500) x marginal tax rate<br>
+<b>Credit</b> = 20% x (min(expenses, $3,000 or $6,000) - FSA reimbursed), never below zero<br>
+<b>Net cost</b> = annual tuition - FSA saving - credit</p>
+<p>Worked example for one infant at $332 a week, 52 weeks, in a household earning $95,000: tuition is $17,264 a year, or $1,438.67 a month, which is 18.2% of household income. A $5,000 FSA contribution at a 22% marginal rate saves $1,100 in tax. The credit then comes out at zero, because the FSA already consumed the entire $3,000 expense base the credit is allowed to count. Net cost is $16,164, or $1,347 a month.</p>
+<p>Add a second child at the same rate with a 10% sibling discount and tuition becomes $332 x 52 x 1.9 = $32,801.60 a year, roughly $2,733 a month. The credit base doubles to $6,000, but with $5,000 of FSA applied only $1,000 remains eligible, worth $200. Almost every family that funds an FSA fully discovers the credit is a rounding error next to it, which is why the order of operations matters.</p>
+
+<h2>What care actually costs by type</h2>
+<p>These are national posted-rate ranges, not averages for your zip code. Metro areas such as Seattle, Boston and the Bay Area routinely run 30% to 100% above the top of each band, while rural counties can sit below the bottom.</p>
+<table>
+<tr><th>Care type</th><th>Weekly range</th><th>Rough annual range</th></tr>
+<tr><td>Infant, licensed center</td><td>$150 - $350</td><td>$7,800 - $18,200</td></tr>
+<tr><td>Toddler, licensed center</td><td>$125 - $310</td><td>$6,500 - $16,100</td></tr>
+<tr><td>Preschool, ages 3 to 5</td><td>$100 - $325</td><td>$4,000 - $13,000 (often school-year only)</td></tr>
+<tr><td>Family child care home</td><td>$125 - $225</td><td>$6,500 - $11,700</td></tr>
+<tr><td>Before and after school</td><td>$40 - $125</td><td>$1,500 - $5,000</td></tr>
+<tr><td>Full-time nanny, 40 hours</td><td>$525 - $1,000</td><td>$27,300 - $52,000 before payroll tax</td></tr>
+</table>
+<p>Infant rooms carry the highest price because licensing caps the ratio of caregivers to babies, often at one to four. The cost does not fall as the child grows because the center is cheaper to run; it falls because the ratio loosens. That is also why the cheapest years are the preschool years, and why the bill can jump again the summer before kindergarten if the preschool program runs on a school calendar.</p>
+
+<h2>Why the sticker rate is not the cost</h2>
+<p>Three charges sit outside the weekly rate and almost never appear in the quote given on a tour. Annual registration or supply fees typically run $50 to $200 per child and are billed whether or not the child attends that year. Late pickup is priced aggressively, commonly a dollar a minute after a short grace period, and it is the single easiest fee to trigger on a commute. And part-time care is not priced proportionally: a three-day schedule usually costs 60% to 75% of full-time tuition, because the center still holds the slot and staffs the room.</p>
+<p>The bigger error is comparing gross daycare cost against gross salary. The decision is not "does my paycheck cover daycare" but "what does the second income add after tax, commuting, and the work expenses that come with it". A household in the 22% bracket with a 7.65% payroll tax keeps roughly 70 cents of each additional dollar, so $17,264 of infant care requires about $24,600 of gross salary before it is covered. Plenty of parents decide that is still worth it for career continuity and retirement contributions. Fewer decide it is worth it purely on cash flow for eighteen months.</p>
+<p>One caveat about this calculator: it does not model state credits, employer childcare subsidies, subsidy programs such as CCDF, or the value of a nanny share. Several states offer their own dependent care credit on top of the federal one, and those can be worth a few hundred dollars. Check your state return before treating the net number here as final.</p>
+
+<h2>Common usage</h2>
+<ul>
+<li>Convert a quoted weekly rate into a monthly budget line before signing a contract.</li>
+<li>Test whether a sibling discount makes a second child affordable at the same center.</li>
+<li>Decide how much to elect into a dependent care FSA during open enrollment.</li>
+<li>Compare a center against a home-based provider on an annual basis rather than a weekly one.</li>
+<li>Check the share of household income against the 7% affordability benchmark used by HHS.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<h2>Does the calculator use state averages?</h2>
+<p>No, it uses the weekly rate you type in. A state average hides too much: within one metro the spread between a licensed center and a home-based provider often exceeds 50%, and infant rooms are priced far above preschool rooms in the same building.</p>
+<h2>Why does my dependent care FSA not cover the whole bill?</h2>
+<p>The contribution cap is $7,500 for 2026, well under a full year of infant care in most metros, and the money must pay for care that lets you work. Everything above the cap is paid with after-tax dollars, which is why the FSA closes only part of the gap.</p>
+<h2>Can I claim the Child and Dependent Care Credit and use an FSA in the same year?</h2>
+<p>Yes, but not on the same expenses. The credit counts up to $3,000 for one child and $6,000 for two or more, and that base is reduced by FSA reimbursements, so a fully funded FSA usually leaves a credit close to zero. Do not budget for both as if they stack.</p>
+<h2>Should I enter 52 weeks if the center closes for holidays?</h2>
+<p>Usually yes. Tuition is annualized, so a center that closes for ten holidays still bills those weeks. Weekly rate times 52 tracks the real invoice more closely than deducting closure weeks that never came off the bill.</p>
+<h2>How does a sibling discount normally work?</h2>
+<p>The standard structure is about 10% off for the additional child, applied to the lower of the two rates, and often limited to one discount per family. Ask whether it hits the infant rate or the older child's rate, because over a year that choice is worth several hundred dollars.</p>
+<h2>Is part-time daycare proportionally cheaper?</h2>
+<p>Rarely. Three days a week typically costs 60% to 75% of full-time tuition and two days lands near 55%, because the center holds the slot either way. Ask for the part-time rate card in writing rather than assuming a per-day split.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+function computeDaycare(i){
+  var kids = Math.max(1, Math.round(i.kids||1));
+  var weeks = i.weeks>0 ? i.weeks : 52;
+  var disc = Math.min(100, Math.max(0, i.discount||0))/100;
+  var first = i.rate * weeks;
+  var addl = i.rate * (1-disc) * weeks * (kids-1);
+  var annual = first + addl;
+  if(!(annual>0)) return null;
+  var monthly = annual/12;
+  var share = i.income>0 ? annual/i.income*100 : 0;
+  var fsaUsed = Math.min(Math.max(0, i.fsa||0), 7500);
+  var fsaSaving = fsaUsed * (Math.max(0, i.mtr||0)/100);
+  var cap = kids>=2 ? 6000 : 3000;
+  var creditBase = Math.min(annual, cap) - fsaUsed;
+  if(creditBase<0) creditBase=0;
+  var credit = creditBase * 0.20;
+  var net = annual - fsaSaving - credit;
+  var netMonthly = net/12;
+  var breakeven = (net/12) / 0.70 * 12;
+  return {
+    kids:kids, annual:annual, monthly:monthly, share:share,
+    fsaUsed:fsaUsed, fsaSaving:fsaSaving, cap:cap,
+    creditBase:creditBase, credit:credit, net:net, netMonthly:netMonthly,
+    grossSalaryNeeded:breakeven
+  };
+}
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+function num(id){ var v=parseFloat(document.getElementById(id).value); return isNaN(v)?0:v; }
+function money(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+calcBtn.onclick=function(){
+  var inp={
+    rate:num('rate'), kids:num('kids'), weeks:num('weeks'),
+    discount:num('disc'), income:num('income'), mtr:num('mtr'), fsa:num('fsa')
+  };
+  var r=computeDaycare(inp);
+  if(!r){ resOut.textContent='Enter a weekly rate above zero'; resTbl.innerHTML=''; return; }
+  var band = r.share<7 ? 'within the 7% affordability benchmark'
+           : r.share<12 ? 'above the 7% affordability benchmark'
+           : 'well above the 7% affordability benchmark';
+  resOut.innerHTML='Net cost after tax breaks: <span style="color:#0f9d58;font-size:22px">$'+money(r.net)+'/yr</span>';
+  var rows='<tr><th>Line</th><th>Amount</th></tr>'
+    + '<tr><td>Children priced</td><td>'+r.kids+'</td></tr>'
+    + '<tr><td>Annual tuition (gross)</td><td>$'+money(r.annual)+'</td></tr>'
+    + '<tr><td>Monthly cost</td><td>$'+money(r.monthly)+'</td></tr>'
+    + '<tr><td>Share of household income</td><td>'+r.share.toFixed(1)+'%</td></tr>'
+    + '<tr><td>Dependent care FSA used</td><td>$'+money(r.fsaUsed)+'</td></tr>'
+    + '<tr><td>Tax saved by FSA</td><td>$'+money(r.fsaSaving)+'</td></tr>'
+    + '<tr><td>Credit expense base (cap $'+r.cap.toLocaleString('en-US')+')</td><td>$'+money(r.creditBase)+'</td></tr>'
+    + '<tr><td>Child and dependent care credit</td><td>$'+money(r.credit)+'</td></tr>'
+    + '<tr><td><b>Net annual cost</b></td><td><b>$'+money(r.net)+'</b></td></tr>'
+    + '<tr><td>Net monthly cost</td><td>$'+money(r.netMonthly)+'</td></tr>'
+    + '<tr><td>Gross salary needed to cover it</td><td>$'+money(r.grossSalaryNeeded)+'</td></tr>';
+  resTbl.innerHTML=rows;
+  resOut.innerHTML += '<div style="font-size:15px;font-weight:400;color:#555;margin-top:8px;">That is '+r.share.toFixed(1)+'% of household income, '+band+' of 7%.</div>';
+};
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
