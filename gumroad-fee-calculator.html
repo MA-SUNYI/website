@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gumroad Fee Calculator | What You Actually Keep Per Sale</title>
+<meta name="description" content="Free Gumroad fee calculator: see what the 10% + $0.50 cut, card processing and Discover take, then your net payout, unit profit and break-even price.">
+<link rel="canonical" href="https://www.xiake.icu/gumroad-fee-calculator.html">
+<meta name="keywords" content="gumroad fee calculator, gumroad fees, how much does gumroad take, gumroad payout calculator, gumroad discover fee, digital product profit, creator storefront fees">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Gumroad Fee Calculator","description":"Free Gumroad fee calculator that subtracts the commission, payment handling, withdrawal charges and the Discover marketplace rate, then shows net payout, unit profit and break-even price.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/gumroad-fee-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does Gumroad take from a $25 sale?","acceptedAnswer":{"@type":"Answer","text":"A direct card sale pays 10 percent of $25 plus $0.50, which is $3.00, and card handling adds 2.9 percent plus $0.30, or $1.03. That is $4.03 in total, leaving $20.97. A Discover sale at the flat 30 percent rate leaves $17.50."}},{"@type":"Question","name":"Is Gumroad's 10 percent fee all inclusive?","acceptedAnswer":{"@type":"Answer","text":"No. The commission is 10 percent plus $0.50 and payment handling is billed separately, roughly 2.9 percent plus $0.30 on cards or PayPal's own rate. The only all-in figure is the 30 percent charged when a new customer arrives through Discover."}},{"@type":"Question","name":"What is the Gumroad Discover fee?","acceptedAnswer":{"@type":"Answer","text":"Discover is Gumroad's own marketplace. When a new customer finds your product there and checks out, Gumroad keeps a flat 30 percent with handling included. On a $50 product that is $15.00 instead of about $7.25 on a direct card purchase."}},{"@type":"Question","name":"Do I lose money selling cheap products on Gumroad?","acceptedAnswer":{"@type":"Answer","text":"The two fixed charges total $0.80 per direct card sale, so a $5 download gives up 29 percent and clears $3.55 before your own costs. Below about $4.68 a Discover purchase is actually cheaper, because the marketplace rate has no fixed component."}},{"@type":"Question","name":"When does the 5 percent high-volume rate apply?","acceptedAnswer":{"@type":"Answer","text":"Once paid sales reach $20,000 in a calendar month, new direct sales that month are charged 5 percent plus $0.50 instead of 10 percent plus $0.50. The rate resets on the first of the next month, and Discover stays at 30 percent."}},{"@type":"Question","name":"Are Gumroad withdrawals charged a fee?","acceptedAnswer":{"@type":"Answer","text":"Standard bank transfers are free once the balance clears the minimum. PayPal withdrawals carry 2 percent and US instant transfers cost 3 percent. This tool applies whichever route you pick."}}]}
+</script>
+<meta property="og:title" content="Gumroad Fee Calculator | What You Actually Keep Per Sale">
+<meta property="og:description" content="Free Gumroad fee calculator: see what the 10% + $0.50 cut, card processing and Discover take, then your net payout, unit profit and break-even price.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/gumroad-fee-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gumroad Fee Calculator | What You Actually Keep Per Sale">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free Gumroad fee calculator: see what the 10% + $0.50 cut, card processing and Discover take, then your net payout, unit profit and break-even price.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./etsy-fee-calculator.html">Etsy Fees</a>
+    <a href="./patreon-fee-calculator.html">Patreon Fees</a>
+    <a href="./profit-margin-calculator.html">Profit Margin</a>
+</div>
+
+<h1>Gumroad Fee Calculator</h1>
+<p>Publishing a download on Gumroad takes an afternoon, and the pricing page is short enough to look simple: ten percent, plus fifty cents. That is not the amount that reaches your balance. Card handling, the withdrawal charge and the far steeper marketplace rate all come out of the same purchase. Enter a price here to see every deduction, the all-in take rate and what a creator actually banks, then add your cost per unit to find the point where a launch stops being worth running.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <span style="font-size:14px;color:#555;">Price $</span>
+        <input type="number" id="price" placeholder="Sale price $" min="0" step="0.01" value="29">
+        <span style="font-size:14px;color:#555;">Sales / month</span>
+        <input type="number" id="units" placeholder="Sales per month" min="0" step="1" value="100">
+    </div>
+    <div class="input-row">
+        <span style="font-size:14px;color:#555;">Cost / unit $</span>
+        <input type="number" id="cost" placeholder="Your cost per unit $" min="0" step="0.01" value="3">
+        <select id="source">
+            <option value="direct">Direct sale (10% + $0.50)</option>
+            <option value="volume">Direct, $20k+ month (5% + $0.50)</option>
+            <option value="discover">Gumroad Discover (30% flat)</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <select id="payment">
+            <option value="card">Buyer pays by card</option>
+            <option value="paypal">Buyer pays by PayPal</option>
+        </select>
+        <select id="payout">
+            <option value="bank">Withdraw: bank transfer (free)</option>
+            <option value="paypal">Withdraw: PayPal (2%)</option>
+            <option value="instant">Withdraw: instant (3%)</option>
+        </select>
+    </div>
+    <button id="calcBtn">Calculate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How Gumroad Splits a Purchase</h2>
+<p>Four deductions can land on one checkout, and only the first is advertised.</p>
+<p><b>Commission</b> &mdash; ten percent of the total plus a flat fifty cents on any direct purchase: a link in your newsletter, a button on your own site, your profile. Past $20,000 of paid volume inside a single calendar month, fresh direct purchases that month fall to five percent plus the same fifty cents. Volume is measured monthly, so a creator who clears $20,000 across a year never sees the lower tier.</p>
+<p><b>Payment handling</b> &mdash; separate from the commission. Domestic cards land near 2.9 percent plus $0.30. A PayPal checkout is billed at PayPal's own schedule, roughly 3.49 percent plus $0.49, and cross-border cards or currency conversion add about 1.5 percent and 1 percent more.</p>
+<p><b>Marketplace rate</b> &mdash; a flat 30 percent whenever a stranger discovers the product inside Gumroad's own storefront. Handling is already inside that figure, so 30 percent is genuinely the entire deduction.</p>
+<p><b>Withdrawal charge</b> &mdash; bank transfers are free above the payout minimum, PayPal takes 2 percent and US instant transfers take 3 percent. It comes off the money being moved, not off the sticker.</p>
+<p>Written as a formula: <b>net = (sticker &minus; commission &minus; handling) &times; (1 &minus; withdrawal rate)</b>. Subtract your cost per unit and you have profit; the break-even figure is the lowest sticker that makes that profit zero.</p>
+<p>Worked example: a $29 course, direct card purchase, bank withdrawal, $3 of cost. Commission is $2.90 + $0.50 = $3.40 and handling is $0.84 + $0.30 = $1.14, so $4.54 leaves the transaction, 15.7 percent of the sticker. Net is $24.46 and profit is <b>$21.46</b>. Route the identical $29 through Discover and Gumroad keeps $8.70, leaving $20.30, or $17.30 after cost &mdash; a $4.16 swing on one unit.</p>
+
+<h2>Fee Cost by Sticker Price</h2>
+<p>One unit, direct card purchase, free bank withdrawal, before your own cost:</p>
+<table>
+<tr><th>Sticker</th><th>Total taken</th><th>Net to creator</th><th>All-in take rate</th></tr>
+<tr><td>$5</td><td>$1.45</td><td>$3.55</td><td>29.0%</td></tr>
+<tr><td>$10</td><td>$2.09</td><td>$7.91</td><td>20.9%</td></tr>
+<tr><td>$25</td><td>$4.03</td><td>$20.97</td><td>16.1%</td></tr>
+<tr><td>$50</td><td>$7.25</td><td>$42.75</td><td>14.5%</td></tr>
+<tr><td>$100</td><td>$13.70</td><td>$86.30</td><td>13.7%</td></tr>
+</table>
+<p>Two fixed pieces &mdash; Gumroad's fifty cents and the card networks' thirty &mdash; do all the damage at the low end. They consume 29 percent of a $5 download and 13.7 percent of a $100 one, even though neither percentage rate ever moves. The floor on a direct card purchase is 12.9 percent plus $0.80, and nothing shifts it except crossing that $20,000 month.</p>
+
+<h2>Why Cheap Downloads Give Up So Much</h2>
+<p>Eighty cents of fixed charges do not shrink with the sticker, so the cheapest items carry the heaviest rate. A $4 template that costs nothing to deliver still surrenders about 33 percent. Creators selling a $7 planner rarely notice either: the price looks healthy, the net is $5.30, and once a $3 ad click is counted the unit contributes $2.30.</p>
+<p>Three ways out, in order of effect. Bundle related files into a $29 pack so the fixed charges spread across a bigger number. Raise the sticker and add a bonus rather than discounting into the fixed-fee zone. Or move the cheapest item to a free download that collects an email address, then sell the paid product to that list &mdash; a direct purchase from a warm audience pays 10 percent, not 30.</p>
+
+<h2>The Marketplace Rate Is a Customer Acquisition Cost</h2>
+<p>Thirty percent reads as punitive until it is compared with what a stranger is worth. On a $50 digital product, Discover keeps $15; a paid ad click that converts at 3 percent costs roughly $10 to $30 in spend for the same customer, with no guarantee of conversion. Below about $4.68 the marketplace rate is actually cheaper than a direct purchase, since it carries no fixed charge at all.</p>
+<p>The mistake is absorbing the difference silently. If a meaningful share of volume arrives through Discover, either lift the sticker for that channel or accept a lower contribution per unit when planning the launch &mdash; do not average the two rates and assume the blend holds.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Set a launch price that still clears after handling and withdrawal</li>
+<li>Compare a direct purchase with a Discover purchase on the same file</li>
+<li>Test whether a $7 single or a $29 bundle earns more per visitor</li>
+<li>Decide if a PayPal or instant withdrawal justifies its percentage</li>
+<li>Benchmark against <a href="./etsy-fee-calculator.html" style="color:#2363e0">Etsy fees</a>, <a href="./substack-fee-calculator.html" style="color:#2363e0">Substack fees</a> or <a href="./patreon-fee-calculator.html" style="color:#2363e0">Patreon fees</a> before choosing a storefront</li>
+</ul>
+
+<h2>Limits of This Estimate</h2>
+<p>Gumroad acts as merchant of record, so sales tax and VAT are collected from the buyer on top and remitted for you; they never touch your net and are not modelled here. Affiliate commissions are split proportionally and quietly raise the blend, chargebacks carry their own charge, and any ad spend is your own line item. Rates move without ceremony &mdash; verify the current schedule on Gumroad's own help pages before you commit a price list, and fold average acquisition cost into the cost field if you want a number that reflects a real launch.</p>
+
+<h2>Questions Creators Ask</h2>
+<h3>How much does Gumroad take from a $25 sale?</h3>
+<p>Commission is $2.50 + $0.50 = $3.00 and card handling is $0.725 + $0.30 = $1.03. That is $4.03, or 16.1 percent, leaving $20.97 rather than the $22.50 the headline rate implies.</p>
+<h3>Is the 10 percent commission all inclusive?</h3>
+<p>No. Handling is billed on top at about 2.9 percent plus $0.30 on cards, or PayPal's schedule. Only the 30 percent Discover rate bundles handling in.</p>
+<h3>What is the Discover fee?</h3>
+<p>A flat 30 percent when a new customer finds you in Gumroad's marketplace. On a $50 file that is $15.00 against roughly $7.25 on a direct card purchase.</p>
+<h3>Can a cheap product actually lose money?</h3>
+<p>It can once delivery or support costs are real. Eighty cents of fixed charges on a $5 download leaves $3.55, so a printed insert or a refund eats the margin immediately. Under about $4.68, Discover's flat rate is the cheaper channel.</p>
+<h3>When does the 5 percent tier start?</h3>
+<p>After $20,000 of paid volume in one calendar month, applied only to new direct purchases in that month. Discover is unaffected and the fifty cents stays.</p>
+<h3>Are withdrawals charged?</h3>
+<p>Bank transfers are free above the minimum balance. PayPal costs 2 percent, US instant transfers 3 percent, and this tool applies whichever you select.</p>
+
+<script>
+function gumroadFee(price, units, cost, source, payment, payout){
+  var src = {
+    direct:{rate:0.10, flat:0.50, proc:true},
+    volume:{rate:0.05, flat:0.50, proc:true},
+    discover:{rate:0.30, flat:0, proc:false}
+  }[source] || {rate:0.10, flat:0.50, proc:true};
+  var pay = payment === 'paypal' ? {rate:0.0349, flat:0.49} : {rate:0.029, flat:0.30};
+  var outRate = payout === 'paypal' ? 0.02 : (payout === 'instant' ? 0.03 : 0);
+  var platformFee = price * src.rate + src.flat;
+  var processing = src.proc ? price * pay.rate + pay.flat : 0;
+  var beforePayout = price - platformFee - processing;
+  if(beforePayout < 0){ beforePayout = 0; }
+  var payoutFee = beforePayout * outRate;
+  var net = beforePayout - payoutFee;
+  var profit = net - cost;
+  var margin = price > 0 ? profit / price * 100 : 0;
+  var totalFees = platformFee + processing + payoutFee;
+  var effRate = price > 0 ? totalFees / price * 100 : 0;
+  var beBase = src.rate + (src.proc ? pay.rate : 0);
+  var breakEven = beBase < 1
+    ? (cost / (1 - outRate) + src.flat + (src.proc ? pay.flat : 0)) / (1 - beBase)
+    : 0;
+  var u = units > 0 ? units : 0;
+  return {
+    platformFee: platformFee,
+    processing: processing,
+    payoutFee: payoutFee,
+    totalFees: totalFees,
+    net: net,
+    profit: profit,
+    margin: margin,
+    effRate: effRate,
+    breakEven: breakEven,
+    monthlyNet: net * u,
+    monthlyProfit: profit * u,
+    monthlyGross: price * u
+  };
+}
+
+var calcBtn = document.getElementById('calcBtn'),
+    resOut = document.getElementById('resOut'),
+    resTbl = document.getElementById('resTbl');
+
+function usd(n){
+  return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+if(calcBtn){
+  calcBtn.onclick = function(){
+    var price = parseFloat(document.getElementById('price').value),
+        units = parseFloat(document.getElementById('units').value),
+        cost = parseFloat(document.getElementById('cost').value),
+        source = document.getElementById('source').value,
+        payment = document.getElementById('payment').value,
+        payout = document.getElementById('payout').value;
+    if(isNaN(cost) || cost < 0){ cost = 0; }
+    if(isNaN(units) || units < 0){ units = 0; }
+    if(isNaN(price) || price <= 0){
+      resOut.textContent = 'Enter a sale price above zero';
+      resTbl.innerHTML = '';
+      return;
+    }
+    var f = gumroadFee(price, units, cost, source, payment, payout);
+    var rows = '<tr><th>Line item</th><th>Per sale</th><th>Per month</th></tr>'
+      + '<tr><td>Gross</td><td>$' + usd(price) + '</td><td>$' + usd(f.monthlyGross) + '</td></tr>'
+      + '<tr><td>Platform fee</td><td>&minus;$' + usd(f.platformFee) + '</td><td>&minus;$' + usd(f.platformFee * units) + '</td></tr>'
+      + '<tr><td>Payment processing</td><td>&minus;$' + usd(f.processing) + '</td><td>&minus;$' + usd(f.processing * units) + '</td></tr>'
+      + '<tr><td>Withdrawal fee</td><td>&minus;$' + usd(f.payoutFee) + '</td><td>&minus;$' + usd(f.payoutFee * units) + '</td></tr>'
+      + '<tr><td><b>Net to you</b></td><td><b>$' + usd(f.net) + '</b></td><td><b>$' + usd(f.monthlyNet) + '</b></td></tr>'
+      + '<tr><td>Your cost per unit</td><td>&minus;$' + usd(cost) + '</td><td>&minus;$' + usd(cost * units) + '</td></tr>'
+      + '<tr><td><b>Profit</b></td><td><b>$' + usd(f.profit) + '</b></td><td><b>$' + usd(f.monthlyProfit) + '</b></td></tr>'
+      + '<tr><td>All-in take rate</td><td>' + f.effRate.toFixed(1) + '%</td><td>—</td></tr>'
+      + '<tr><td>Profit margin on price</td><td>' + f.margin.toFixed(1) + '%</td><td>—</td></tr>'
+      + '<tr><td>Break-even price</td><td>$' + usd(f.breakEven) + '</td><td>—</td></tr>';
+    resTbl.innerHTML = rows;
+    resOut.innerHTML = f.profit >= 0
+      ? 'You keep <span style="color:#0f9d58;font-size:22px">$' + usd(f.net) + '</span> per sale'
+      : 'You lose <span style="color:#d93025;font-size:22px">$' + usd(-f.profit) + '</span> per sale';
+  };
+}
+
+if(calcBtn){ calcBtn.onclick(); }
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>

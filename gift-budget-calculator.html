@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Budget Calculator | Per-Person Spend for the Holidays</title>
+<meta name="description" content="Free gift budget calculator: split a holiday or birthday budget across your list, reserve money for tax, wrapping and shipping, and cap each gift price.">
+<link rel="canonical" href="https://www.xiake.icu/gift-budget-calculator.html">
+<meta name="keywords" content="gift budget calculator, holiday gift budget, christmas gift budget calculator, how much to spend per person, gift spending planner, per person gift budget">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Gift Budget Calculator","description":"Free gift budget calculator that divides a total budget across your recipient list, reserves money for wrapping, shipping and sales tax, and shows the maximum sticker price per gift.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/gift-budget-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much should I spend per person on holiday gifts?","acceptedAnswer":{"@type":"Answer","text":"Divide what you can pay without borrowing by the number of people on your list, then hold back 10 to 15 percent for wrapping, shipping and tax. A $900 budget across 12 recipients leaves about $63 of sticker price per gift at a 7 percent sales tax rate."}},{"@type":"Question","name":"Should sales tax come out of the gift budget?","acceptedAnswer":{"@type":"Answer","text":"Yes if you are buying in a state with sales tax, because the tax is charged on top of the sticker price at checkout. The calculator converts your per-person allowance into a pre-tax price by dividing by one plus the tax rate."}},{"@type":"Question","name":"How much does wrapping and shipping add to a gift budget?","acceptedAnswer":{"@type":"Answer","text":"Wrapping paper, a bag, a card and postage commonly add $5 to $12 per gift, and shipping a parcel across the country often costs $10 or more. The 10 percent reserve is a starting point; if you ship most gifts, set it to 15 or 20 percent."}},{"@type":"Question","name":"What if I have already bought some gifts?","acceptedAnswer":{"@type":"Answer","text":"Enter the total you have spent so far. The calculator subtracts it from the gift pool before dividing, so the remaining per-person allowance reflects what is actually left rather than the original plan."}},{"@type":"Question","name":"Is the average holiday spending figure a budget target?","acceptedAnswer":{"@type":"Answer","text":"No. National Retail Federation surveys report what households planned to spend in total on gifts, food, decorations and travel, which has run near $900 to $1,000 per adult in recent years. It is an average of intentions, not a recommendation for your household."}},{"@type":"Question","name":"Are gifts tax deductible?","acceptedAnswer":{"@type":"Answer","text":"Personal gifts are not. Business gifts to clients or employees are deductible up to $25 per recipient per year under IRS Publication 463, and incidental costs such as wrapping and shipping are not counted against that limit."}}]}
+</script>
+<meta property="og:title" content="Gift Budget Calculator | Per-Person Spend for the Holidays">
+<meta property="og:description" content="Free gift budget calculator: split a holiday or birthday budget across your list, reserve money for tax, wrapping and shipping, and cap each gift price.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/gift-budget-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gift Budget Calculator | Per-Person Spend for the Holidays">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free gift budget calculator: split a holiday or birthday budget across your list, reserve money for tax, wrapping and shipping, and cap each gift price.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./monthly-budget-calculator.html">Monthly Budget</a>
+    <a href="./subscription-cost-calculator.html">Subscription Cost</a>
+    <a href="./wedding-guest-budget-calculator.html">Wedding Cost</a>
+</div>
+
+<h1>Gift Budget Calculator</h1>
+<p>Most gift budgets fail in the last week of shopping, when the list is longer than expected and nothing has been set aside for wrapping, postage or sales tax. This calculator starts from the amount you can actually spend, holds back a reserve for the costs around the gift, and turns what is left into a sticker price you can carry into a store without doing arithmetic in the aisle.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <span style="font-size:14px;color:#555;">Budget $</span>
+        <input type="number" id="budget" placeholder="Total budget $" min="0" step="1" value="900">
+        <span style="font-size:14px;color:#555;">People</span>
+        <input type="number" id="people" placeholder="People on your list" min="1" step="1" value="12">
+    </div>
+    <div class="input-row">
+        <span style="font-size:14px;color:#555;">Wrap &amp; ship %</span>
+        <input type="number" id="reserve" placeholder="Reserve for wrap &amp; ship %" min="0" max="60" step="1" value="10">
+        <span style="font-size:14px;color:#555;">Sales tax %</span>
+        <input type="number" id="tax" placeholder="Sales tax %" min="0" max="20" step="0.1" value="7">
+    </div>
+    <div class="input-row">
+        <span style="font-size:14px;color:#555;">Already spent $</span>
+        <input type="number" id="spent" placeholder="Already spent $" min="0" step="1" value="0">
+    </div>
+    <button id="calcBtn">Calculate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the Gift Budget Calculator Works</h2>
+<p>Three deductions happen before anything is divided. The reserve comes off the top, money already spent comes off second, and sales tax is handled by working backwards from the all-in allowance to a pre-tax sticker price.</p>
+<p><b>Reserve = budget &times; reserve percent.</b> This covers wrapping paper, gift bags, cards, tape, postage and the replacement gift for the person you forgot. Standard parcels inside the US commonly run $8 to $15 to ship; a card and wrap add $4 to $8 per gift.</p>
+<p><b>Gift pool = budget &minus; reserve &minus; already spent.</b> This is the money that can actually be spent on merchandise.</p>
+<p><b>Per-person all-in = gift pool &divide; number of recipients.</b></p>
+<p><b>Sticker price = per-person all-in &divide; (1 + tax rate).</b> At 7 percent tax, every $1.07 at the register is $1.00 of gift, so a $67.50 allowance buys a $63.08 gift.</p>
+<p>Worked example: $900 budget, 12 people, 10 percent reserve, 7 percent sales tax, nothing bought yet. The reserve is $90, the gift pool is $810, the all-in allowance is $67.50 per person, and the maximum sticker price is <b>$63.08</b>. Treat that $67.50 as a sticker price instead and the plan overshoots: twelve gifts at $67.50 cost $810 before tax, tax adds $56.70, and the project lands at $956.70 &mdash; $56.70 over budget, because tax was charged on top of the pool rather than taken out of it. The $63.08 figure already accounts for that: twelve gifts at $63.08 cost $756.96, tax is $52.99, and the whole project comes to $899.95.</p>
+
+<h2>What a Per-Person Number Buys You</h2>
+<p>Same $900 budget, 12 recipients, 10 percent reserve, 7 percent tax. Each row is the sticker price of one gift:</p>
+<table>
+<tr><th>Sticker price per gift</th><th>Cost with tax</th><th>All 12 gifts</th><th>Total with reserve</th><th>Against budget</th></tr>
+<tr><td>$20</td><td>$21.40</td><td>$256.80</td><td>$346.80</td><td>$553.20 left</td></tr>
+<tr><td>$40</td><td>$42.80</td><td>$513.60</td><td>$603.60</td><td>$296.40 left</td></tr>
+<tr><td>$60</td><td>$64.20</td><td>$770.40</td><td>$860.40</td><td>$39.60 left</td></tr>
+<tr><td>$80</td><td>$85.60</td><td>$1,027.20</td><td>$1,117.20</td><td>$217.20 over</td></tr>
+</table>
+<p>The jump from $60 to $80 per gift is only $20 on the sticker, but $20 times twelve times 1.07 is $256.80 at the register. Gift budgets rarely break because one present was too generous; they break because a small increase was applied to the whole list at once. This is the single most useful thing the table shows.</p>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Converts a total budget into a per-person allowance before you shop</li>
+<li>Holds back a percentage for wrapping, cards, postage and last-minute extras</li>
+<li>Backs sales tax out of the allowance so the sticker price is realistic</li>
+<li>Accounts for gifts already purchased and recalculates what is left</li>
+<li>Shows four price points side by side so you can see the effect of a splurge</li>
+<li>Works for Christmas, birthdays, weddings, teachers or a whole season of events</li>
+</ul>
+
+<h2>Why the Reserve Is the Part People Skip</h2>
+<p>The gift is the visible cost; everything around it is the one that arrives later. A $50 present with a $6 gift bag, a $4 card and $12 of postage is a $72 transaction, and none of that appears in the per-person number unless you plan for it.</p>
+<p><b>Tax is not a rounding error.</b> At 7 percent, $800 of gifts carries $56 of tax. At 9.5 percent in parts of California or Tennessee it is $76. The calculator divides by one plus the tax rate rather than subtracting a flat percentage, because that is how a register works.</p>
+<p><b>Shipping scales with the list, not the budget.</b> If half your recipients live out of state, the reserve needs to be closer to 20 percent. Sending one $40 gift across the country can cost a third of its value in postage, which is why a gift card or a shared experience often beats a heavy parcel.</p>
+<p><b>Different relationships deserve different amounts, and that is fine.</b> A useful pattern is to run the calculator two or three times: immediate family at the top allowance, extended family at roughly 60 percent of it, and colleagues or teachers at a fixed $15 to $25. The total is what has to fit, not each individual gift.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Set a holiday gift list before Black Friday rather than during it</li>
+<li>Work out a per-person cap for a wedding party or a baby shower</li>
+<li>Split a group gift so each contributor knows their share</li>
+<li>Cap teacher, coach and coworker gifts at a sane flat amount</li>
+<li>Check the total against your <a href="./monthly-budget-calculator.html" style="color:#2363e0">monthly budget</a> or the <a href="./wedding-guest-budget-calculator.html" style="color:#2363e0">cost of attending a wedding</a></li>
+</ul>
+
+<h2>Where This Estimate Stops</h2>
+<p>This is a planning tool, not a ledger. It assumes every recipient gets a gift of similar value and that all gifts are taxed at one rate; in reality some are tax-free clothing in a no-tax state, some are shipped, and some are experiences with no sales tax at all. It also excludes food, decorations and travel, which the National Retail Federation counts inside holiday spending and which frequently exceed the gift line itself. Track actual purchases separately and revisit the reserve after the first week of shopping &mdash; if you have already spent a third of the pool on a quarter of the list, the per-person number needs to come down.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>How much should I spend per person on holiday gifts?</h3>
+<p>There is no correct number, only one you can pay without carrying a balance into January. Divide that amount by the list length and hold back 10 to 15 percent for wrapping, shipping and tax. A $900 budget across 12 people works out to about $63 of sticker price per gift.</p>
+<h3>Should sales tax come out of the gift budget?</h3>
+<p>Yes, if you buy in a state that charges it. Tax is added at checkout on top of the sticker, so the calculator divides your allowance by one plus the rate to find a price that fits once tax is included.</p>
+<h3>How much does wrapping and shipping add to a gift budget?</h3>
+<p>Wrap, bag, card and postage typically add $5 to $12 per gift, and a cross-country parcel often costs $10 or more on its own. The 10 percent default suits local hand-delivered gifts; use 15 to 20 percent if you ship most of them.</p>
+<h3>What if I have already bought some gifts?</h3>
+<p>Put the total spent so far in the last field. It is subtracted from the gift pool before the division, so the allowance reflects what is left rather than the original plan.</p>
+<h3>Is average holiday spending a budget target?</h3>
+<p>No. Survey averages describe what households intended to spend across gifts, food, decorations and travel, and they vary enormously by income and family size. Treat any published average as context, not as a target to match.</p>
+<h3>Are gifts tax deductible?</h3>
+<p>Personal gifts are not. Business gifts to clients or employees are deductible up to $25 per recipient per year under IRS Publication 463, and incidental costs such as wrapping and shipping do not count against that cap.</p>
+
+<script>
+function giftBudget(budget, people, reservePct, taxPct, spent){
+  var reserve = budget * reservePct / 100;
+  var pool = budget - reserve;
+  var remaining = pool - spent;
+  if(remaining < 0){ remaining = 0; }
+  var n = people > 0 ? people : 1;
+  var perAllIn = remaining / n;
+  var perSticker = perAllIn / (1 + taxPct / 100);
+  return {
+    reserve: reserve,
+    pool: pool,
+    remaining: remaining,
+    perAllIn: perAllIn,
+    perSticker: perSticker,
+    taxPerGift: perAllIn - perSticker,
+    totalIfFull: remaining + spent + reserve
+  };
+}
+
+var calcBtn = document.getElementById('calcBtn'),
+    resOut = document.getElementById('resOut'),
+    resTbl = document.getElementById('resTbl');
+
+function usd(n){
+  return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+if(calcBtn){
+  calcBtn.onclick = function(){
+    var budget = parseFloat(document.getElementById('budget').value),
+        people = parseFloat(document.getElementById('people').value),
+        reservePct = parseFloat(document.getElementById('reserve').value),
+        taxPct = parseFloat(document.getElementById('tax').value),
+        spent = parseFloat(document.getElementById('spent').value);
+    if(isNaN(people) || people < 1){ people = 1; }
+    if(isNaN(reservePct) || reservePct < 0){ reservePct = 0; }
+    if(isNaN(taxPct) || taxPct < 0){ taxPct = 0; }
+    if(isNaN(spent) || spent < 0){ spent = 0; }
+    if(isNaN(budget) || budget <= 0){
+      resOut.textContent = 'Enter a budget above zero';
+      resTbl.innerHTML = '';
+      return;
+    }
+    var f = giftBudget(budget, people, reservePct, taxPct, spent);
+    var rows = '<tr><th>Item</th><th>Amount</th></tr>'
+      + '<tr><td>Total budget</td><td>$' + usd(budget) + '</td></tr>'
+      + '<tr><td>Reserve for wrap, ship and extras (' + reservePct + '%)</td><td>$' + usd(f.reserve) + '</td></tr>'
+      + '<tr><td>Already spent</td><td>$' + usd(spent) + '</td></tr>'
+      + '<tr><td><b>Left for gifts</b></td><td><b>$' + usd(f.remaining) + '</b></td></tr>'
+      + '<tr><td>People on the list</td><td>' + people + '</td></tr>'
+      + '<tr><td><b>All-in per person</b></td><td><b>$' + usd(f.perAllIn) + '</b></td></tr>'
+      + '<tr><td>Sales tax per gift</td><td>&minus;$' + usd(f.taxPerGift) + '</td></tr>'
+      + '<tr><td><b>Maximum sticker price per gift</b></td><td><b>$' + usd(f.perSticker) + '</b></td></tr>';
+
+    var marks = [0.6, 0.85, 1, 1.25];
+    var labels = ['Trimmed list', 'Slightly lower', 'On budget', 'Splurge'];
+    var i, s, total;
+    for(i = 0; i < marks.length; i++){
+      s = f.perSticker * marks[i];
+      total = s * (1 + taxPct / 100) * people + f.reserve + spent;
+      rows += '<tr><td>' + labels[i] + ' &mdash; $' + usd(s) + ' per gift (project total)</td><td>$' + usd(total) + '</td></tr>';
+    }
+
+    resTbl.innerHTML = rows;
+    resOut.innerHTML = 'Spend up to <span style="color:#0f9d58;font-size:22px">$' + usd(f.perSticker) + '</span> per gift';
+  };
+}
+
+if(calcBtn){ calcBtn.onclick(); }
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
