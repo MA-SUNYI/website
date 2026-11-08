@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Severance Pay Calculator | Weeks of Pay, PTO and Take-Home</title>
+<meta name="description" content="Estimate severance from salary, years of service and weeks per year: gross package, unused PTO payout, federal and FICA withholding, net take-home.">
+<link rel="canonical" href="https://www.xiake.icu/severance-pay-calculator.html">
+<meta name="keywords" content="severance pay calculator, severance calculator, how much severance will i get, weeks of severance, severance tax, pto payout, layoff package">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Severance Pay Calculator","description":"Estimate a severance package from annual salary, years of service and weeks of pay per year of service, including unused PTO payout and federal, state and FICA withholding on the gross amount.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/severance-pay-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"@type":"Question","name":"Is my employer legally required to pay severance?","acceptedAnswer":{"@type":"Answer","text":"Not under federal law. Private employers in the US owe severance only if an employment contract, a union agreement, a written company policy or a state rule creates the obligation, or if you negotiate it. The WARN Act is a separate notice requirement, not a severance statute."}},{"@type":"Question","name":"Is the 22% withholding on severance my actual tax rate?","acceptedAnswer":{"@type":"Answer","text":"No, it is only a prepayment. Employers commonly withhold a flat 22% federal rate on supplemental wages under $1 million plus 7.65% FICA. Your real liability is settled at filing at your marginal rate, so a large package can mean a balance due in April or a refund if your other income was low that year."}},{"@type":"Question","name":"What does signing the separation agreement cost me?","acceptedAnswer":{"@type":"Answer","text":"Usually the right to sue over the termination. Most packages are conditioned on a release of claims, and if you are 40 or older the ADEA gives you at least 21 days to consider a release in an individual termination, or 45 days in a group layoff, plus a 7-day revocation period after signing."}},{"@type":"Question","name":"Does severance reduce unemployment benefits?","acceptedAnswer":{"@type":"Answer","text":"It depends on the state and on how the money is paid. Some states treat a lump sum as disqualifying income for a period, others disregard it entirely, and salary continuation is more likely to delay benefits than a one-time payment. Check your state unemployment office before you assume either way."}},{"@type":"Question","name":"How is unused vacation time paid out at termination?","acceptedAnswer":{"@type":"Answer","text":"Some states, California among them, require payout of accrued vacation as wages at separation; others leave it to company policy. This calculator uses a 260-day work year to convert days to dollars, so replace that figure with your company's daily rate if it differs."}},{"@type":"Question","name":"Can a severance package include health coverage or equity?","acceptedAnswer":{"@type":"Answer","text":"Yes, and both change the value materially. A paid COBRA period is worth the monthly premium times the number of months, and accelerated vesting of restricted stock or options has its own cash value. Neither appears in the formula-based number, so price them separately before comparing offers."}}]}
+</script>
+<meta property="og:title" content="Severance Pay Calculator | Weeks of Pay, PTO and Take-Home">
+<meta property="og:description" content="Estimate severance from salary, years of service and weeks per year: gross package, unused PTO payout, federal and FICA withholding, net take-home.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/severance-pay-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Severance Pay Calculator | Weeks of Pay, PTO and Take-Home">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Estimate severance from salary, years of service and weeks per year: gross package, unused PTO payout, federal and FICA withholding, net take-home.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./paycheck-calculator.html">Paycheck Calculator</a>
+    <a href="./overtime-calculator.html">Overtime Pay</a>
+    <a href="./self-employment-tax-calculator.html">Self-Employment Tax</a>
+</div>
+
+<h1>Severance Pay Calculator</h1>
+<p>Severance offers arrive with a deadline and a formula buried in a policy document, and the gross number on the letter is not the amount that reaches your account. This calculator applies the standard weeks-per-year formula, adds the PTO payout and any extra lump sum, then subtracts the withholding that actually comes out. It is an estimate of the package, not a legal opinion — the offer letter and your state rules decide the rest.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="salary" placeholder="Annual base salary $" value="96000" step="1000">
+        <input type="number" id="years" placeholder="Years of service" value="7" step="0.5">
+        <input type="number" id="wpy" placeholder="Weeks per year of service" value="2" step="0.5">
+    </div>
+    <div class="input-row">
+        <input type="number" id="cap" placeholder="Cap in weeks (0 = no cap)" value="26" step="1">
+        <input type="number" id="pto" placeholder="Unused PTO days" value="12" step="1">
+        <input type="number" id="extra" placeholder="Extra lump sum $" value="0" step="500">
+    </div>
+    <div class="input-row">
+        <input type="number" id="fed" placeholder="Federal withholding %" value="22" step="1">
+        <input type="number" id="state" placeholder="State withholding %" value="0" step="0.1">
+        <select id="fica">
+            <option value="full">FICA 7.65%</option>
+            <option value="medicare">Medicare only 1.45%</option>
+        </select>
+    </div>
+    <button id="calcBtn">Calculate Package</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">Weekly pay is annual salary divided by 52. PTO is valued at salary divided by 260 working days. Pick "Medicare only" if your salary already passed the Social Security wage base of $184,500 for the year.</p>
+</div>
+
+<h2>How Severance Is Calculated</h2>
+<p>Almost every US severance policy is built from the same three inputs: weekly pay, a number of weeks granted per year of service, and a cap on the total. The formula is short enough to do by hand:</p>
+<p><b>Weekly pay = annual base salary &divide; 52</b><br>
+<b>Weeks granted = weeks per year &times; years of service, capped</b><br>
+<b>Severance = weekly pay &times; weeks granted</b></p>
+<p>Worked example: a $96,000 salary is $1,846.15 a week. Seven years at two weeks per year gives 14 weeks, which is below the usual 26-week ceiling, so severance is 14 &times; $1,846.15 = <b>$25,846.15</b>. Add 12 unused PTO days at $369.23 a day and the gross package is <b>$30,276.92</b>. With 22% federal withholding and 7.65% FICA, roughly $8,977 comes out and about <b>$21,300</b> lands in the account. That is the number to plan around, and it is 30% smaller than the headline.</p>
+<p>The cap does most of the work for long-tenured employees, and it is the first thing to look for in a policy. Two weeks per year at 20 years is 40 weeks on paper, but a 26-week cap turns that into six months of pay. A $150,000 salary at 15 years and three weeks per year would produce 45 weeks uncapped; the same 26-week cap reduces it to <b>$75,000</b> instead of $129,808.</p>
+
+<h2>Common US Formulas and What They Produce</h2>
+<p>Weeks granted by years of service, before any cap. The third column applies the standard 26-week ceiling so you can see where it starts to bite.</p>
+<table>
+<tr><th>Years of service</th><th>1 week per year</th><th>2 weeks per year</th><th>2 weeks, capped at 26</th></tr>
+<tr><td>1</td><td>1 week</td><td>2 weeks</td><td>2 weeks</td></tr>
+<tr><td>3</td><td>3 weeks</td><td>6 weeks</td><td>6 weeks</td></tr>
+<tr><td>5</td><td>5 weeks</td><td>10 weeks</td><td>10 weeks</td></tr>
+<tr><td>10</td><td>10 weeks</td><td>20 weeks</td><td>20 weeks</td></tr>
+<tr><td>15</td><td>15 weeks</td><td>30 weeks</td><td>26 weeks</td></tr>
+<tr><td>20</td><td>20 weeks</td><td>40 weeks</td><td>26 weeks</td></tr>
+</table>
+<p>One week per year is the typical floor for individual contributors. Two weeks per year is common for managers and longer-tenured staff, and three to four weeks per year shows up in executive agreements. A flat "two months regardless of tenure" policy also exists and is worse for anyone past five years.</p>
+<p>Salary does the rest. At one week per year, a $60,000 employee with three years receives $3,461.54 gross; a $120,000 employee with eleven years at two weeks per year receives $50,769.23 before the cap and before PTO. Severance scales with both inputs, which is why the same layoff announcement produces wildly different cheques on the same team.</p>
+
+<h2>What Else Usually Sits in the Package</h2>
+<p>The weeks-of-pay number is rarely the whole offer, and comparing two offers on that figure alone is how people leave money behind.</p>
+<p><b>Unused PTO.</b> Often paid at your regular rate whether or not the policy requires it. In states like California, accrued vacation is treated as wages and must be paid at separation; elsewhere it depends on the handbook. Twelve days at $96,000 is worth $4,430.</p>
+<p><b>COBRA subsidy.</b> An employer-paid health premium period is worth the monthly premium times the number of months, and it can easily exceed a month of severance. Price it against the marketplace plan you would otherwise buy.</p>
+<p><b>Prorated bonus.</b> If the layoff lands after a strong year, a prorated bonus is a normal ask and sometimes already in the policy. Get the calculation in writing rather than a verbal assurance.</p>
+<p><b>Equity and outplacement.</b> Accelerated vesting has a real cash value that depends on the share price, and outplacement services are worth what you would pay for them, not what the vendor charges the company.</p>
+
+<h2>The Tax Layer, and Why 22% Is Not Your Rate</h2>
+<p>Severance is taxable wages. Employers generally withhold federal income tax on it as supplemental wages at a flat <b>22%</b> for amounts under $1 million, plus Social Security at 6.2% and Medicare at 1.45%. State withholding applies where the state has an income tax, and several states use their own supplemental rate.</p>
+<p>Two consequences worth understanding before the cheque clears. First, 22% is a prepayment, not your bracket. If your marginal rate is 24% or 32%, the difference is settled when you file, and a large lump sum received in a year with little other income can produce a refund instead. Second, the Social Security portion stops once wages pass the annual wage base, which is <b>$184,500</b> for 2026 — if your salary already crossed it, severance carries only the 1.45% Medicare piece. That is why the calculator offers both FICA settings.</p>
+<p>Some employers will pay severance as salary continuation instead of a lump sum. The gross is the same, but the withholding is computed as regular wages, which usually withholds more accurately, and the payment period sometimes keeps benefits active longer. Ask which method the offer uses before comparing net figures.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Sanity-check a written offer against the formula in the employee handbook</li>
+<li>Convert a gross package into monthly runway while you job search</li>
+<li>Compare a lump sum against salary continuation on an after-tax basis</li>
+<li>Value a COBRA subsidy or prorated bonus before accepting a revised offer</li>
+<li>Estimate the PTO payout you are owed if you leave mid-year</li>
+<li>Check the extra tax a package creates with the <a href="./income-tax-calculator.html" style="color:#2363e0">Income Tax Calculator</a></li>
+</ul>
+
+<h2>Where People Get This Wrong</h2>
+<p><b>Signing the release on day one.</b> Most packages are conditional on releasing claims against the employer, and that release is what you are actually being paid for. If you are 40 or older, the ADEA gives you at least 21 days to consider it in an individual termination and 45 days in a group layoff, plus 7 days to revoke after signing. A deadline shorter than that is a negotiation signal, not a formality.</p>
+<p><b>Treating 60 days of WARN notice as severance.</b> The WARN Act requires 60 days' notice, or pay in lieu, for qualifying mass layoffs at larger employers. That obligation is separate from a discretionary severance policy; some employers try to fold the two together and call the result generous.</p>
+<p><b>Budgeting the gross.</b> A $30,000 package is roughly $21,000 after withholding and less than four months of a $5,500 monthly budget. Divide the net figure by actual monthly expenses before deciding you have time to be selective.</p>
+<p><b>Assuming unemployment is unaffected.</b> States differ on whether a lump sum delays benefits, and salary continuation is more likely to postpone them than a single payment. File anyway; the determination is made from facts, not from what the HR letter implies.</p>
+<p>Finally, this tool cannot tell you what you are owed. Severance in the US is contractual or discretionary, and the policy document, any collective agreement, and the specific release language govern the outcome. Use the estimate to spot a package that is clearly below the stated formula, and take anything unusual to an employment attorney — most will review a release for a flat fee.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Is my employer legally required to pay severance?</h3>
+<p>Not under federal law. Private employers owe it only when a contract, union agreement, written policy or state rule creates the obligation, or when you negotiate it. WARN is a notice requirement for large layoffs, not a severance statute.</p>
+<h3>Is the 22% withholding on severance my actual tax rate?</h3>
+<p>No. It is a prepayment: employers commonly withhold a flat 22% federal plus 7.65% FICA on supplemental wages under $1 million. Your real liability is settled at filing at your marginal rate, so expect either a balance due or a refund depending on your other income that year.</p>
+<h3>What does signing the separation agreement cost me?</h3>
+<p>Usually your right to bring claims over the termination. If you are 40 or older, the ADEA gives you at least 21 days to review an individual release, 45 days for a group layoff, and 7 days to revoke after signing.</p>
+<h3>Does severance reduce unemployment benefits?</h3>
+<p>It depends on the state and on whether the money is a lump sum or salary continuation. Some states delay benefits while severance runs, others disregard a lump sum entirely. File and let the state determine it rather than assuming.</p>
+<h3>How is unused vacation time paid out at termination?</h3>
+<p>States like California require accrued vacation to be paid as wages at separation; elsewhere the handbook decides. This calculator uses salary divided by 260 working days, so swap in your company's daily rate if it differs.</p>
+<h3>Can a severance package include health coverage or equity?</h3>
+<p>Yes, and both change the value materially. A paid COBRA period is worth the premium times the months covered, and accelerated vesting has a cash value tied to the share price. Neither is in the formula-based figure, so price them separately.</p>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var salEl=document.getElementById('salary'), yrsEl=document.getElementById('years'), wpyEl=document.getElementById('wpy');
+var capEl=document.getElementById('cap'), ptoEl=document.getElementById('pto'), extraEl=document.getElementById('extra');
+var fedEl=document.getElementById('fed'), stEl=document.getElementById('state'), ficaEl=document.getElementById('fica');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+function num(el){ var v=parseFloat(el.value); return isNaN(v)?0:v; }
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+calcBtn.onclick=function(){
+  var sal=num(salEl), yrs=num(yrsEl), wpy=num(wpyEl), cap=num(capEl);
+  var ptoDays=num(ptoEl), extra=num(extraEl);
+  var fed=num(fedEl), st=num(stEl);
+  var ficaRate = ficaEl.value==='medicare' ? 1.45 : 7.65;
+  resTbl.innerHTML='';
+  if(sal<=0){ resOut.textContent='Enter an annual base salary'; return; }
+  if(yrs<0||wpy<=0){ resOut.textContent='Enter years of service and weeks per year of service'; return; }
+  if(fed<0||fed>60||st<0||st>20){ resOut.textContent='Check your withholding percentages'; return; }
+
+  var weekly=sal/52;
+  var weeksRaw=wpy*yrs;
+  var weeks=cap>0?Math.min(weeksRaw,cap):weeksRaw;
+  var sev=weekly*weeks;
+  var daily=sal/260;
+  var ptoPay=ptoDays*daily;
+  var gross=sev+ptoPay+extra;
+  var fedW=gross*fed/100, stW=gross*st/100, ficaW=gross*ficaRate/100;
+  var net=gross-fedW-stW-ficaW;
+
+  var rows='<tr><th>Line item</th><th>Amount</th></tr>'
+    +'<tr><td>Weekly pay (salary / 52)</td><td>$'+usd(weekly)+'</td></tr>'
+    +'<tr><td>Weeks granted'+((cap>0&&weeksRaw>cap)?' (capped from '+weeksRaw.toFixed(1)+')':'')+'</td><td>'+weeks.toFixed(1)+' weeks</td></tr>'
+    +'<tr><td><b>Severance pay</b></td><td><b>$'+usd(sev)+'</b></td></tr>'
+    +'<tr><td>PTO payout ('+ptoDays+' days @ $'+usd(daily)+')</td><td>$'+usd(ptoPay)+'</td></tr>'
+    +'<tr><td>Extra lump sum</td><td>$'+usd(extra)+'</td></tr>'
+    +'<tr><td><b>Total gross package</b></td><td><b>$'+usd(gross)+'</b></td></tr>'
+    +'<tr><td>Equivalent months of pay</td><td>'+((gross/weekly)/4.333).toFixed(1)+' mo</td></tr>'
+    +'<tr><td>Federal withholding ('+fed+'%)</td><td>- $'+usd(fedW)+'</td></tr>'
+    +'<tr><td>State withholding ('+st+'%)</td><td>- $'+usd(stW)+'</td></tr>'
+    +'<tr><td>FICA ('+ficaRate+'%)</td><td>- $'+usd(ficaW)+'</td></tr>'
+    +'<tr><td><b>Estimated take-home</b></td><td><b>$'+usd(net)+'</b></td></tr>';
+  resTbl.innerHTML=rows;
+
+  resOut.innerHTML='Gross <span style="color:#0f9d58;font-size:22px">$'+usd(gross)+'</span> &rarr; about $'+usd(net)+' after estimated withholding';
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>

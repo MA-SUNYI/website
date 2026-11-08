@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dollar-Cost Averaging Calculator | Monthly Investing Math</title>
+<meta name="description" content="Simulate dollar-cost averaging across 2,000 market paths. See median and worst-case ending value, average cost per share and volatility drag.">
+<link rel="canonical" href="https://www.xiake.icu/dca-calculator.html">
+<meta name="keywords" content="dollar cost averaging calculator, dca calculator, average cost basis, monthly investing calculator, dca vs lump sum, volatility drag, dca return">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Dollar-Cost Averaging Calculator","description":"Simulate dollar-cost averaging over 2,000 market paths to see the median and tenth-percentile ending value, the average cost per share versus the average price, and the effect of volatility on a fixed monthly contribution.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/dca-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does dollar-cost averaging beat investing a lump sum?","acceptedAnswer":{"@type":"Answer","text":"On average, no. With a constant positive expected return, money invested earlier compounds longer, so a lump sum wins the majority of the time in a rising market. DCA wins only when the market falls early in the period, which is exactly the case you cannot forecast."}},{"@type":"Question","name":"Why is average cost per share lower than the average share price?","acceptedAnswer":{"@type":"Answer","text":"Because a fixed dollar amount buys more shares when the price is low and fewer when it is high, the harmonic mean of the prices applies to your cost, not the arithmetic mean. A $100 purchase at $10 and another at $5 gives 20 shares for $200, an average cost of $10 against an average price of $7.50."}},{"@type":"Question","name":"Why is the median result below the steady 7% projection?","acceptedAnswer":{"@type":"Answer","text":"Volatility drag. A portfolio that drops 50% needs a 100% gain to recover, so the compounded median of a volatile series sits below the value produced by applying the average return every month without fluctuation. The gap widens with volatility and with time."}},{"@type":"Question","name":"Should expense ratios and dividends go into the expected return?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter a net figure: a fund returning 9% before a 0.05% expense ratio and a 1.5% dividend yield, with dividends reinvested, is roughly 8.5% net. Skipping costs is the most common way these projections end up too optimistic."}},{"@type":"Question","name":"Is weekly better than monthly for dollar-cost averaging?","acceptedAnswer":{"@type":"Answer","text":"The difference is small. Four weekly buys of $125 spread the price slightly better than one monthly buy of $500, but the effect is usually a fraction of a percentage point per year and can be wiped out by per-trade commissions on a brokerage that charges them."}},{"@type":"Question","name":"What happens to the projection if I pause contributions in a crash?","acceptedAnswer":{"@type":"Answer","text":"You lose the cheapest shares in the sample, which is the entire mechanism behind the average-cost advantage. Pausing after a 30% drawdown removes the purchases that would have pulled your cost basis down, so the plan stops behaving like dollar-cost averaging."}}]}
+</script>
+<meta property="og:title" content="Dollar-Cost Averaging Calculator | Monthly Investing Math">
+<meta property="og:description" content="Simulate dollar-cost averaging across 2,000 market paths. See median and worst-case ending value, average cost per share and volatility drag.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/dca-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dollar-Cost Averaging Calculator | Monthly Investing Math">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Simulate dollar-cost averaging across 2,000 market paths. See median and worst-case ending value, average cost per share and volatility drag.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./investment-return-calculator.html">Investment Return</a>
+    <a href="./compound-interest-calculator.html">Compound Interest</a>
+    <a href="./dividend-calculator.html">Dividend Reinvestment</a>
+</div>
+
+<h1>Dollar-Cost Averaging Calculator</h1>
+<p>A fixed monthly contribution is easy to run and hard to judge, because the result depends on the order the prices arrive in, not just the average return. This calculator runs 2,000 simulated price paths at the return and volatility you enter, so you see a median outcome, a bad-decade outcome, and how far your average cost per share drifted below the average price you paid. Same inputs always produce the same output: the random seed is fixed.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="start" placeholder="Starting amount $" value="0" step="100">
+        <input type="number" id="monthly" placeholder="Monthly contribution $" value="500" step="50">
+        <input type="number" id="years" placeholder="Years" value="20" step="1">
+    </div>
+    <div class="input-row">
+        <input type="number" id="ret" placeholder="Expected annual return %" value="7" step="0.5">
+        <input type="number" id="vol" placeholder="Annual volatility %" value="16" step="1">
+    </div>
+    <button id="calcBtn">Run Simulation</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">2,000 paths, lognormal monthly returns, contributions at month end. Volatility is the annual standard deviation of returns — 15% to 18% is typical for a broad US equity index.</p>
+</div>
+
+<h2>How the Calculator Works</h2>
+<p>The contribution side is simple arithmetic. Total invested equals the starting amount plus the monthly contribution times the number of months. Under a constant 7% return with no fluctuation, each contribution compounds for however many months remain, which is an ordinary annuity:</p>
+<p><b>Future value = C &times; [((1 + r)<sup>n</sup> - 1) &divide; r]</b>, where r is the monthly rate and n the number of months.</p>
+<p>At $500 a month for 20 years at 7%, n is 240, r is 0.005833, and the bracket works out to 520.93. Multiply by $500 and you get <b>$260,463</b> on <b>$120,000</b> contributed — a multiple of 2.17. Raise the contribution to $1,000 and everything doubles: $520,927. Stretch the same $500 to 30 years and the ending value is <b>$609,985</b> on $180,000, because the last decade's contributions compound on top of two decades of gains.</p>
+<p>The realistic version is not a smooth line. Each simulated month draws a return from a distribution centred on your expected return, with spread set by your volatility input. A path is a sequence of 240 such draws, and the portfolio is marked to that path. Two thousand paths give a distribution of outcomes rather than one number, which is the point: the median tells you what is likely, and the tenth percentile tells you what a bad run looks like.</p>
+<p>Worked example: $500 a month for 20 years at 7% expected return with 16% volatility produces a median of about <b>$228,900</b>, a tenth-percentile outcome near <b>$129,400</b> and a ninetieth percentile around <b>$416,800</b>. Contributions total $120,000 in every one of those paths. The gap between the tenth and ninetieth percentile is the honest price of not knowing the order in which future returns arrive.</p>
+
+<h2>What a Monthly Contribution Actually Builds</h2>
+<p>Steady 7% return, contributions at month end, no starting balance. Every figure below is arithmetic you can reproduce on a spreadsheet.</p>
+<table>
+<tr><th>Monthly</th><th>10 years</th><th>20 years</th><th>30 years</th></tr>
+<tr><td>$300</td><td>$36,000 &rarr; $51,925</td><td>$72,000 &rarr; $156,278</td><td>$108,000 &rarr; $365,991</td></tr>
+<tr><td>$500</td><td>$60,000 &rarr; $86,542</td><td>$120,000 &rarr; $260,463</td><td>$180,000 &rarr; $609,985</td></tr>
+<tr><td>$1,000</td><td>$120,000 &rarr; $173,085</td><td>$240,000 &rarr; $520,927</td><td>$360,000 &rarr; $1,219,971</td></tr>
+</table>
+<p>Return matters as much as time, and the two are not interchangeable. Holding $500 a month at 20 years fixed and moving the return from 4% to 10% changes the ending value from $183,387 to $379,684 — more than double, from the same $120,000 of deposits. A 2-point difference in what your funds actually earn, after fees, is worth more than several extra years of saving at a small contribution.</p>
+<table>
+<tr><th>Annual return</th><th>Ending value, $500/mo for 20 years</th><th>Growth on deposits</th></tr>
+<tr><td>4%</td><td>$183,387</td><td>$63,387</td></tr>
+<tr><td>5%</td><td>$205,517</td><td>$85,517</td></tr>
+<tr><td>6%</td><td>$231,020</td><td>$111,020</td></tr>
+<tr><td>7%</td><td>$260,463</td><td>$140,463</td></tr>
+<tr><td>8%</td><td>$294,510</td><td>$174,510</td></tr>
+<tr><td>9%</td><td>$333,943</td><td>$213,943</td></tr>
+<tr><td>10%</td><td>$379,684</td><td>$259,684</td></tr>
+</table>
+
+<h2>Why Your Average Cost Per Share Beats the Average Price</h2>
+<p>This is the one mechanical advantage dollar-cost averaging really has, and it is a small one that gets oversold. A fixed dollar amount buys more shares when prices are low. Spend $100 at $10 a share and you own 10 shares; spend another $100 at $5 and you own 20 more. You paid $200 for 30 shares, so your cost basis is $6.67, while the average price across your two purchases was $7.50. The cost sits 11% below the average price, and no forecasting was involved.</p>
+<p>Mathematically your cost per share is the <b>harmonic mean</b> of the prices, which sits at or below the arithmetic mean whenever prices move. Read the ratio the calculator prints carefully, though. On a rising path with 16% volatility it typically shows cost 13% below average price, and almost all of that gap is simply trend: the early purchases happened at lower prices. Strip the trend out and the pure volatility component is under 1% at that input. The harmonic-mean effect is real, but it is not where the money comes from.</p>
+<p>What it does not do is create return. Every share is still bought at a market price, and the shares bought cheap are only cheap in hindsight.</p>
+
+<h2>What Volatility Costs You</h2>
+<p>A return sequence matters, not just its average. Lose 50% then gain 50% and you are down 25%, because the second move applies to a smaller base. Two decades of that asymmetry produce the gap between the steady projection and the simulated median in this tool.</p>
+<p>The practical reading: a portfolio with an 8% average return and 20% volatility compounds closer to 6% over long periods. That is not a fee anyone charges you; it is arithmetic, and it is why the calculator asks for volatility at all rather than just a return figure. If you leave volatility at zero you get the smooth annuity result, which is a useful sanity check but a poor forecast.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Check whether $400 a month for 15 years plausibly reaches a retirement number</li>
+<li>Compare the median outcome at 5% against 8% before choosing a fund mix</li>
+<li>See how much of the ending balance came from deposits rather than growth</li>
+<li>Estimate the realistic bad case, not just the average, before setting a savings target</li>
+<li>Test a starting lump sum plus monthly top-ups instead of pure averaging</li>
+<li>Cross-check the annuity figure with the <a href="./investment-return-calculator.html" style="color:#2363e0">Investment Return Calculator</a> and the <a href="./compound-interest-calculator.html" style="color:#2363e0">Compound Interest Calculator</a></li>
+</ul>
+
+<h2>The Case Against Dollar-Cost Averaging</h2>
+<p>The honest version: if you already hold cash you intend to invest, spreading it over twelve months usually loses to investing it now. Markets rise more often than they fall, so the expected cost of waiting is positive. Studies that compare lump-sum against staged entry on historical US data typically find lump sum ahead in roughly two-thirds of rolling windows.</p>
+<p>Dollar-cost averaging earns its place for a different reason. It fits how people actually get paid — a salary arrives monthly, so the contribution is monthly — and it removes the timing decision that causes most investors to buy late and sell early. The behavioural benefit is real and large; the mathematical edge is small and often negative. Be clear about which one you are buying.</p>
+<p>Two more limits worth stating. Fees per trade can erase the benefit of frequent small purchases, so a commission-free structure matters. And the projection assumes your contribution rises with nothing — no raises, no inflation. A $500 contribution in year twenty buys far less than it does today, so treat the ending value as nominal dollars and discount it mentally before planning a lifestyle around it.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Does dollar-cost averaging beat investing a lump sum?</h3>
+<p>On average, no. With a positive expected return, money invested earlier compounds longer. Lump sum wins most rolling windows in US data; DCA wins when the market falls early, which is exactly what you cannot predict. Choose DCA for discipline and cash-flow fit, not for expected outperformance.</p>
+<h3>Why is average cost per share lower than the average share price?</h3>
+<p>Fixed dollar amounts buy more shares at low prices. Your cost per share is the harmonic mean of the prices paid, which sits at or below the arithmetic mean whenever prices move. The gap the calculator prints on a rising path is mostly trend, because early purchases happened at lower prices; the volatility-only part is under 1% at 16% volatility.</p>
+<h3>Why is the median result below the steady 7% projection?</h3>
+<p>Volatility drag. A 50% loss needs a 100% gain to recover, so a volatile series compounds to less than the same average return applied smoothly. The simulated median sits below the annuity value for that reason, and the gap grows with both volatility and time horizon.</p>
+<h3>Should expense ratios and dividends go into the expected return?</h3>
+<p>Enter a net number. A fund with a 9% gross return, a 0.05% expense ratio and 1.5% dividend yield reinvested is roughly 8.5% net. Using a gross figure quietly overstates every projection by the cost of owning the fund.</p>
+<h3>Is weekly better than monthly for dollar-cost averaging?</h3>
+<p>Barely. Four $125 buys spread prices a little better than one $500 buy, but the annual difference is usually well under half a percentage point and disappears entirely if your broker charges per trade. Match the schedule to your pay cycle instead.</p>
+<h3>What happens if I pause contributions during a crash?</h3>
+<p>You skip the cheapest shares in the sample, which is the entire source of the average-cost advantage. Pausing after a 30% drawdown removes the purchases that would have lowered your basis, and the plan stops behaving like dollar-cost averaging at the moment it matters most.</p>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var startEl=document.getElementById('start'), moEl=document.getElementById('monthly'), yrEl=document.getElementById('years');
+var retEl=document.getElementById('ret'), volEl=document.getElementById('vol');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+function num(el){ var v=parseFloat(el.value); return isNaN(v)?0:v; }
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0}); }
+function pct(n){ return n.toLocaleString('en-US',{minimumFractionDigits:1,maximumFractionDigits:1}); }
+
+var seed=20260101;
+function rnd(){
+  seed=(seed*1664525+1013904223)%4294967296;
+  return (seed+0.5)/4294967296;
+}
+function gauss(){
+  var u1=rnd(), u2=rnd();
+  return Math.sqrt(-2*Math.log(u1))*Math.cos(2*Math.PI*u2);
+}
+
+calcBtn.onclick=function(){
+  var start=num(startEl), monthly=num(moEl), years=num(yrEl), ret=num(retEl), vol=num(volEl);
+  var months=Math.round(years*12);
+  resTbl.innerHTML='';
+  if(months<1||months>720){ resOut.textContent='Enter a term between 1 month and 60 years'; return; }
+  if(monthly<=0&&start<=0){ resOut.textContent='Enter a starting amount or a monthly contribution'; return; }
+  if(ret<-20||ret>30){ resOut.textContent='Expected annual return should be between -20% and 30%'; return; }
+  if(vol<0||vol>60){ resOut.textContent='Annual volatility should be between 0% and 60%'; return; }
+
+  var driftM=Math.log(1+ret/1200);
+  var sigM=(vol/100)/Math.sqrt(12);
+  var paths=2000, ends=[], ratios=[];
+  seed=20260101;
+  for(var p=0;p<paths;p++){
+    var price=100, shares=start/100, contributed=start, priceSum=0;
+    for(var i=0;i<months;i++){
+      var lr=driftM-0.5*sigM*sigM+sigM*gauss();
+      price*=Math.exp(lr);
+      shares+=monthly/price;
+      contributed+=monthly;
+      priceSum+=price;
+    }
+    ends.push(shares*price);
+    ratios.push((contributed/shares)/(priceSum/months));
+  }
+  ends.sort(function(a,b){return a-b;});
+  ratios.sort(function(a,b){return a-b;});
+
+  var contributed=start+monthly*months;
+  var median=ends[Math.floor(paths*0.5)];
+  var p10=ends[Math.floor(paths*0.1)];
+  var p90=ends[Math.floor(paths*0.9)];
+  var below=0;
+  for(var k=0;k<paths;k++){ if(ends[k]<contributed){ below++; } }
+  var medRatio=ratios[Math.floor(paths*0.5)];
+
+  var mr=ret/1200;
+  var steady=mr===0 ? contributed : start*Math.pow(1+mr,months)+monthly*(Math.pow(1+mr,months)-1)/mr;
+
+  var rows='<tr><th>Result</th><th>Value</th></tr>'
+    +'<tr><td>Total contributed</td><td>$'+usd(contributed)+'</td></tr>'
+    +'<tr><td><b>Median ending value</b></td><td><b>$'+usd(median)+'</b></td></tr>'
+    +'<tr><td>Median gain</td><td>$'+usd(median-contributed)+'</td></tr>'
+    +'<tr><td>Multiple of deposits (median)</td><td>'+(median/contributed).toFixed(2)+'x</td></tr>'
+    +'<tr><td>Tenth percentile (bad run)</td><td>$'+usd(p10)+'</td></tr>'
+    +'<tr><td>Ninetieth percentile (good run)</td><td>$'+usd(p90)+'</td></tr>'
+    +'<tr><td>Steady '+ret+'% reference, no volatility</td><td>$'+usd(steady)+'</td></tr>'
+    +'<tr><td>Paths ending below total contributed</td><td>'+below+' of '+paths+' ('+pct(below/paths*100)+'%)</td></tr>'
+    +'<tr><td>Average cost per share vs average price</td><td>'+pct((1-medRatio)*100)+'% below</td></tr>';
+  resTbl.innerHTML=rows;
+
+  resOut.innerHTML='Median ending value <span style="color:#0f9d58;font-size:22px">$'+usd(median)+'</span>'
+    +' on $'+usd(contributed)+' contributed over '+(months/12).toFixed(months%12===0?0:1)+' years';
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>
