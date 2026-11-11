@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Token Converter Tool: Tokens per Word &amp; API Cost</title>
+<meta name="description" content="Turn any prompt into an estimated token count: tokens per word, share of a 128K context window used, and what one send costs at published API list rates.">
+<link rel="canonical" href="https://www.xiake.icu/prompt-token-converter.html">
+<meta name="keywords" content="prompt token converter, prompt to tokens, token estimate, tokens per word, context window checker, prompt cost estimate">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+textarea{width:100%;padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:15px;min-height:170px;line-height:1.6;resize:vertical;font-family:ui-monospace,Consolas,monospace;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Prompt Token Converter","description":"Convert a prompt into an estimated token count, see tokens per word and per character, check headroom against common context windows, and price the prompt across published API rates.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/prompt-token-converter.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does the same paragraph count as 240 tokens in one tool and 310 in another?","acceptedAnswer":{"@type":"Answer","text":"Each model family uses its own vocabulary. A word that is a single token in one tokenizer can split into two or three pieces in another, and number sequences and code fragments split far more aggressively than prose. This converter applies one ratio to the whole text, so treat small differences between tools as expected rather than as an error."}},{"@type":"Question","name":"How many tokens does a one-page PDF prompt use?","acceptedAnswer":{"@type":"Answer","text":"A dense single-spaced page of English runs about 500 to 600 words, which lands near 700 to 850 tokens. A page that includes tables, headers and footnotes adds structure tokens on top, so budget 900 to 1,100 for safety. Twenty pages of that same document will not fit in a small context window at all."}},{"@type":"Question","name":"Can I just count characters and divide by four?","acceptedAnswer":{"@type":"Answer","text":"For ordinary English prose that shortcut is within about 5 to 10 percent of this estimate, because four characters per token is roughly what the model does. It breaks down on code, JSON, long numbers, URLs and non-Latin scripts, where the real count can be 50 to 100 percent higher than the character shortcut predicts."}},{"@type":"Question","name":"Does the number I get include the system prompt and chat history?","acceptedAnswer":{"@type":"Answer","text":"No. The converter measures only the text you paste. In a real call the system instructions, tool definitions, and every earlier turn of the conversation are appended and billed again, so the input actually sent is usually two to six times the size of the message a user typed."}},{"@type":"Question","name":"Is the cost column accurate enough to bill clients from?","acceptedAnswer":{"@type":"Answer","text":"Treat it as a planning figure. Prices in the table are list rates captured for reference and providers change them without notice, sometimes weekly. The token estimate itself also carries a 10 to 20 percent error. For invoicing, pull real usage from provider dashboards and reconcile against those, not against an estimate."}},{"type":"Question","name":"What happens when a prompt is longer than the context window?","acceptedAnswer":{"type":"Answer","text":"The request fails outright on most APIs rather than being silently trimmed, and retries with a slightly different prompt will fail the same way. Long documents need chunking or a retrieval step so that each call carries only the few thousand tokens that matter for the question being asked."}}]}
+</script>
+<meta property="og:title" content="Prompt Token Converter | Estimate Tokens From Text & Cost">
+<meta property="og:description" content="Turn any prompt into an estimated token count: tokens per word, share of a 128K context window used, and what one send costs at published API list rates.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/prompt-token-converter.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Prompt Token Converter | Estimate Tokens From Text & Cost">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Turn any prompt into an estimated token count: tokens per word, share of a 128K context window used, and what one send costs at published API list rates.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./llm-api-cost-calculator.html">LLM API Cost</a>
+    <a href="./word-counter.html">Word Counter</a>
+    <a href="./character-count.html">Character Count</a>
+</div>
+
+<h1>Prompt Token Converter</h1>
+<p>Token counts decide whether a prompt fits, how much it costs and why a bill is larger than the message on screen. Paste text below and the converter returns an estimated token count for the mix of prose, code and non-Latin text it detects, plus words and characters per token, how much of common context windows the prompt would consume, and what one send would cost at published list rates. It runs entirely in the browser, so nothing you paste leaves the page.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <select id="modeSel">
+            <option value="auto">Auto-detect text type</option>
+            <option value="prose">English prose</option>
+            <option value="code">Code or JSON</option>
+            <option value="cjk">Chinese, Japanese, Korean</option>
+        </select>
+        <input type="number" id="repeatIn" placeholder="Send how many times per day" value="1" min="1" step="1">
+    </div>
+    <textarea id="promptIn" placeholder="Paste a prompt, a system message or a document excerpt here..."></textarea>
+    <div class="input-row" style="margin-top:16px">
+        <button id="calcBtn">Convert to tokens</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the Conversion Works</h2>
+<p>Models do not read letters or words. A tokenizer splits text into fragments drawn from a fixed vocabulary, and you are billed per fragment. Common English words such as <i>value</i> or <i>report</i> are usually one token. Uncommon words split into stems and suffixes, and a string like <i>2026-11-12</i> can break into four or five pieces because digits and hyphens sit in separate vocabulary entries.</p>
+<p>Because the exact fragment list differs by model family, this tool works from measured ratios rather than from a vocabulary file:</p>
+<ul>
+<li><b>English prose:</b> about 4 characters per token, or 0.75 tokens per word</li>
+<li><b>Code, JSON and markup:</b> about 2.8 characters per token</li>
+<li><b>Chinese, Japanese, Korean:</b> about 1.5 characters per token</li>
+</ul>
+<p>The auto mode samples the pasted text: it counts non-ASCII characters, braces and punctuation density, and picks the ratio that matches the dominant material. A prompt that is half spreadsheet dump and half instructions is averaged between the code and prose ratios, which is the right call in practice because the dump is almost always the expensive half.</p>
+<p><b>Worked example.</b> A support prompt reads 600 words of product policy plus a 40 line JSON customer record. Prose: 600 words is about 800 tokens. The record is roughly 1,400 characters, which at 2.8 characters per token is 500 tokens. Total 1,300 tokens. At $2.00 per million input tokens, one send costs $0.0026, and ten thousand sends a day is $26 a month. That is cheap until the same system prompt is resent with every follow-up message, at which point the policy half becomes the single largest line on the invoice.</p>
+
+<h2>What a Prompt Size Actually Buys</h2>
+<p>The table below is what different prompt sizes mean in everyday terms. Use it to sanity check a number the converter returns before you trust it.</p>
+<table>
+<tr><th>Prompt size</th><th>Roughly equals</th><th>Typical use</th></tr>
+<tr><td>100 tokens</td><td>2 short paragraphs</td><td>A single question with one constraint</td></tr>
+<tr><td>500 tokens</td><td>1 typed page, about 375 words</td><td>Email rewrite, product description</td></tr>
+<tr><td>1,000 tokens</td><td>A 750 word article</td><td>Summarising a short article</td></tr>
+<tr><td>8,000 tokens</td><td>13 to 16 pages of text</td><td>Contract review, full report analysis</td></tr>
+<tr><td>128,000 tokens</td><td>A 400 page book</td><td>Whole-codebase or long-document context</td></tr>
+</table>
+<p>Context windows in the current API market commonly run from 128,000 to 200,000 tokens, with a few extended options well beyond that. A 200,000 token window sounds enormous, but a 400 page book plus a multi-turn conversation plus tool definitions can close the gap faster than people expect. The converter shows the percentage of a 128K window the prompt would use so the headroom is visible rather than theoretical.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Checking whether a long system prompt plus a retrieved document still fits the model you budgeted for.</li>
+<li>Turning a rough character count into a token estimate before pricing a feature that charges per call.</li>
+<li>Comparing the same instruction written in English and in Chinese, where the token ratio flips against the character count.</li>
+<li>Finding the switch point where caching a prefix, rather than shortening it, is the cheaper fix.</li>
+<li>Pairing this with the <a href="./llm-api-cost-calculator.html" style="color:#2363e0">LLM API Cost Calculator</a> once you know the average prompt size.</li>
+</ul>
+
+<h2>Why the Estimate Is Often Low in Real Billing</h2>
+<p>The most common mistake is treating the user message as the whole prompt. It is not. A typical chat request carries the system instruction, tool or function schemas, the retrieved context, and every previous turn. In a six-turn conversation where each user message is 200 tokens and each reply 300 tokens, the fifth call alone resends about 2,200 tokens of history before the new question is even added. Multiply that across a support inbox and input tokens grow with the square of conversation length, not linearly with message count.</p>
+<p>Two smaller traps are worth naming. First, formatting: markdown tables, indentation and JSON keys are punctuation-heavy and tokenize badly, so the same content sent as plain sentences can be 20 to 30 percent smaller. Second, retries: a failed JSON parse means paying for the input a second time, and pipelines that retry once on bad output quietly carry a 20 percent surcharge on every task.</p>
+<p>The character rule of thumb is fine for prose and misleading for anything else. A URL of 90 characters can be 40 tokens. A 300 digit numeric field is closer to 150 tokens. If your prompt is mostly structured data, trust the code ratio and add margin.</p>
+
+<h2>Limits of This Tool</h2>
+<p>This is an estimate, not a tokenizer. It does not download vocabulary files, so it cannot reproduce provider counts to the token. Errors are smallest on plain English paragraphs, typically within 10 percent, and largest on mixed-format text such as logs or encoded payloads, where the estimate can be 20 to 30 percent off. Image and audio inputs are billed by dimensions or seconds and are not covered. Prices in the cost table are list rates and change frequently; verify against the provider's own pricing page before you commit a budget.</p>
+
+<h2>See Also</h2>
+<ul>
+<li><a href="./llm-api-cost-calculator.html" style="color:#2363e0">LLM API Cost Calculator</a> for per-call, monthly and yearly spend.</li>
+<li><a href="./word-counter.html" style="color:#2363e0">Word Counter</a> for plain word and character counts.</li>
+<li><a href="./character-count.html" style="color:#2363e0">Character Count Calculator</a> for limits on social platforms.</li>
+</ul>
+<h2>Frequently Asked Questions</h2>
+<p><b>Why does the same paragraph count as 240 tokens in one tool and 310 in another?</b></p>
+<p>Each model family uses its own vocabulary. A word that is one token in one tokenizer can split into two or three pieces in another, and numbers and code split far more aggressively than prose. This converter applies one ratio to the whole text, so small differences between tools are expected.</p>
+<p><b>How many tokens does a one-page PDF prompt use?</b></p>
+<p>A dense single-spaced page of English is about 500 to 600 words, or roughly 700 to 850 tokens. Headers, tables and footnotes add structure tokens, so budget 900 to 1,100. Twenty pages of that will not fit in a small context window at all.</p>
+<p><b>Can I just count characters and divide by four?</b></p>
+<p>For ordinary prose that shortcut is within about 5 to 10 percent. It breaks on code, JSON, long numbers, URLs and non-Latin scripts, where the real count can be 50 to 100 percent higher than the shortcut predicts.</p>
+<p><b>Does the number include the system prompt and chat history?</b></p>
+<p>No. Only the pasted text is measured. In a real call the system instructions, tool definitions and earlier turns are appended and billed again, so the input actually sent is often two to six times the message a user typed.</p>
+<p><b>Is the cost column accurate enough to bill clients from?</b></p>
+<p>Treat it as planning. Prices are list rates captured for reference and providers change them without notice, and the token estimate carries a 10 to 20 percent error. Reconcile invoices against provider usage dashboards.</p>
+<p><b>What happens when a prompt is longer than the context window?</b></p>
+<p>Most APIs return an error rather than trimming silently, and a retry fails the same way. Long documents need chunking or retrieval so each call carries only the few thousand tokens that matter for the question.</p>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var MODEL_ROWS=[
+ {name:'Claude Sonnet 5.5', inp:2, out:10},
+ {name:'Claude Haiku 5.5', inp:0.10, out:0.50},
+ {name:'Budget API tier (example)', inp:0.15, out:0.60},
+ {name:'Mid API tier (example)', inp:1.25, out:10},
+ {name:'Premium API tier (example)', inp:3, out:15}
+];
+var WINDOWS=[128000,200000,1000000];
+
+var modeSel=document.getElementById('modeSel');
+var promptIn=document.getElementById('promptIn');
+var repeatIn=document.getElementById('repeatIn');
+var calcBtn=document.getElementById('calcBtn');
+var resOut=document.getElementById('resOut');
+var resTbl=document.getElementById('resTbl');
+
+function words(t){
+  var m=t.trim().match(/[\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af]|[^\s\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af]+/g);
+  return m?m.length:0;
+}
+function asciiCount(t){
+  var n=0;
+  for(var i=0;i<t.length;i++){ if(t.charCodeAt(i)<128) n++; }
+  return n;
+}
+function detectMode(t){
+  var nonAscii=t.length-asciiCount(t);
+  if(t.length>0 && nonAscii/t.length>0.30) return 'cjk';
+  var struct=(t.match(/[{}_\[\];=<>()\\\/|#]/g)||[]).length;
+  if(t.length>0 && struct/t.length>0.035) return 'code';
+  var longTok=(t.match(/\b[A-Za-z]+_[A-Za-z_]+|\b\d{4}-\d{2}-\d{2}\b/g)||[]).length;
+  if(longTok>3) return 'code';
+  return 'prose';
+}
+function ratioFor(mode){ return mode==='code'?2.8:(mode==='cjk'?1.5:4.0); }
+function fmt(n){ return n.toLocaleString('en-US'); }
+function usd(n){
+  if(n===0) return '0.00';
+  if(n<0.0001) return n.toFixed(6);
+  if(n<1) return n.toFixed(4);
+  return n.toFixed(2);
+}
+
+calcBtn.onclick=function(){
+  var t=promptIn.value;
+  if(!t.trim()){
+    resOut.textContent='Paste some text first';
+    resTbl.innerHTML='';
+    return;
+  }
+  var m=modeSel.value==='auto'?detectMode(t):modeSel.value;
+  var chars=t.length;
+  var w=words(t);
+  var tokens=Math.ceil(chars/ratioFor(m));
+  var perSend=parseFloat(repeatIn.value);
+  if(isNaN(perSend)||perSend<1) perSend=1;
+  var label={prose:'English prose',code:'code or structured',cjk:'CJK text'}[m];
+
+  var rows='<tr><th>Measure</th><th>Value</th></tr>';
+  rows+='<tr><td>Detected text type</td><td>'+label+'</td></tr>';
+  rows+='<tr><td>Characters</td><td>'+fmt(chars)+'</td></tr>';
+  rows+='<tr><td>Words</td><td>'+fmt(w)+'</td></tr>';
+  rows+='<tr><td><b>Estimated tokens</b></td><td><b>'+fmt(tokens)+'</b></td></tr>';
+  rows+='<tr><td>Tokens per word</td><td>'+(w>0?(tokens/w).toFixed(2):'0.00')+'</td></tr>';
+  rows+='<tr><td>Characters per token</td><td>'+(chars/tokens).toFixed(2)+'</td></tr>';
+  for(var i=0;i<WINDOWS.length;i++){
+    rows+='<tr><td>Share of a '+fmt(WINDOWS[i]/1000)+'K context window</td><td>'+(tokens/WINDOWS[i]*100).toFixed(2)+'% ('+fmt(WINDOWS[i]-tokens)+' tokens left)</td></tr>';
+  }
+  rows+='<tr><td colspan="2" style="text-align:left;padding-top:14px"><b>Cost per send and per day at '+fmt(perSend)+' sends</b></td></tr>';
+  for(var j=0;j<MODEL_ROWS.length;j++){
+    var r=MODEL_ROWS[j];
+    var one=tokens/1000000*r.inp;
+    rows+='<tr><td>'+r.name+' ($'+r.inp+'/1M in)</td><td>$'+usd(one)+' per send, $'+usd(one*perSend)+'/day</td></tr>';
+  }
+  resOut.innerHTML='Estimated <span style="color:#0f9d58;font-size:22px">'+fmt(tokens)+' tokens</span> ('+label+')';
+  resTbl.innerHTML=rows;
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>

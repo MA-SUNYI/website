@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Subscription Cost Calculator: Monthly &amp; Yearly Total</title>
+<meta name="description" content="Total what your AI stack costs: enter each plan, billing cycle and hours used for monthly, yearly and per-hour cost, plus spend in barely used tools.">
+<link rel="canonical" href="https://www.xiake.icu/ai-subscription-cost-calculator.html">
+<meta name="keywords" content="ai subscription cost calculator, chatgpt plus cost per year, claude pro price, ai tools spend, subscription overlap, cost per hour of ai use">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AI Subscription Cost Calculator","description":"Add up every AI plan you pay for, convert monthly and annual billing to a common basis, and see yearly spend, cost per hour of use and the cheapest overlap to cut.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/ai-subscription-cost-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"I pay for ChatGPT Plus and Claude Pro. Is one of them wasted money?","acceptedAnswer":{"@type":"Answer","text":"Only if you use them for the same task. Two general assistants at $20 each can be redundant if one sits unused for weeks. The per-hour column here makes that visible: a plan used four hours a month costs $5 an hour, while one used forty hours costs $0.50. Cut the expensive per-hour one first, not the cheaper sticker one."}},{"@type":"Question","name":"Should I switch from monthly to annual billing to save money?","acceptedAnswer":{"@type":"Answer","text":"Annual plans typically save 15 to 20 percent against the monthly rate, which is real but locks you in. Switch only after three months on monthly billing where you used the tool every week. If you have not yet kept a full quarter of steady use, the discount is smaller than the risk of paying for eleven unused months."}},{"@type":"Question","name":"Does a free tier really replace a paid AI plan?","acceptedAnswer":{"@type":"Answer","text":"Often for a single low-volume task, rarely for daily work. Free tiers cap the newest models, message counts and file uploads, and the caps are the part that costs you time rather than money. If your usage is under a few hours a month and mostly short questions, run the free tier for a month and see whether you actually hit limits."}},{"@type":"Question","name":"Why does my total here differ from the charge on my card?","acceptedAnswer":{"@type":"Answer","text":"Sales tax and VAT are added at checkout in many countries, annual plans are charged once, and app store subscriptions can carry a markup over web prices. Enter the amount that actually leaves your account, including tax, if you want the figure to match your statement."}},{"type":"Question","name":"How do I count hours used for a work tool?","acceptedAnswer":{"@type":"Answer","text":"Estimate honestly rather than optimistically. If you open the tool three days a week for around an hour of real editing or coding support, that is about twelve hours a month, not forty. Most people overstate usage because they count the subscription as part of their workflow even when it sits idle."}},{"type":"Question","name":"Are bundled AI features inside software I already pay for worth counting?","acceptedAnswer":{"@type":"Answer","text":"Count the bundle once and note what it replaced. If a productivity suite you already bought now includes an assistant, its incremental cost is zero and it belongs in the comparison as a substitute rather than an addition. Many stacks shrink by two or three line items once existing bundles are allowed to do their job."}}]}
+</script>
+<meta property="og:title" content="AI Subscription Cost Calculator | Total Monthly Spend">
+<meta property="og:description" content="Total what your AI stack costs: enter each plan, billing cycle and hours used for monthly, yearly and per-hour cost, plus spend in barely used tools.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/ai-subscription-cost-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI Subscription Cost Calculator | Total Monthly Spend">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Total what your AI stack costs: enter each plan, billing cycle and hours used for monthly, yearly and per-hour cost, plus spend in barely used tools.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./subscription-cost-calculator.html">Subscription Cost</a>
+    <a href="./llm-api-cost-calculator.html">LLM API Cost</a>
+    <a href="./monthly-budget-calculator.html">Monthly Budget</a>
+</div>
+
+<h1>AI Subscription Cost Calculator</h1>
+<p>AI plans are priced individually and billed on different cycles, which is why a stack of five tools feels modest month to month and looks startling in January. Enter each plan with its billing cycle and the hours you actually use it, and this calculator returns one monthly figure, the yearly total, cost per hour of use, and how much of your spend sits in plans you barely open. Nothing is stored or sent anywhere.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input id="name1" type="text" placeholder="Tool 1 (e.g. ChatGPT Plus)" style="min-width:200px" value="ChatGPT Plus">
+        <input id="price1" type="number" placeholder="Price" value="20" step="0.01" min="0">
+        <select id="cycle1"><option value="12">per month</option><option value="1">per year</option></select>
+        <input id="hours1" type="number" placeholder="Hours per month" value="30" step="1" min="0">
+    </div>
+    <div class="input-row">
+        <input id="name2" type="text" placeholder="Tool 2" style="min-width:200px" value="Claude Pro">
+        <input id="price2" type="number" placeholder="Price" value="20" step="0.01" min="0">
+        <select id="cycle2"><option value="12">per month</option><option value="1">per year</option></select>
+        <input id="hours2" type="number" placeholder="Hours per month" value="8" step="1" min="0">
+    </div>
+    <div class="input-row">
+        <input id="name3" type="text" placeholder="Tool 3" style="min-width:200px" value="Cursor Pro">
+        <input id="price3" type="number" placeholder="Price" value="20" step="0.01" min="0">
+        <select id="cycle3"><option value="12">per month</option><option value="1">per year</option></select>
+        <input id="hours3" type="number" placeholder="Hours per month" value="25" step="1" min="0">
+    </div>
+    <div class="input-row">
+        <input id="name4" type="text" placeholder="Tool 4 (optional)" style="min-width:200px">
+        <input id="price4" type="number" placeholder="Price" value="0" step="0.01" min="0">
+        <select id="cycle4"><option value="12">per month</option><option value="1">per year</option></select>
+        <input id="hours4" type="number" placeholder="Hours per month" value="0" step="1" min="0">
+    </div>
+    <div class="input-row">
+        <input id="name5" type="text" placeholder="Tool 5 (optional)" style="min-width:200px">
+        <input id="price5" type="number" placeholder="Price" value="0" step="0.01" min="0">
+        <select id="cycle5"><option value="12">per month</option><option value="1">per year</option></select>
+        <input id="hours5" type="number" placeholder="Hours per month" value="0" step="1" min="0">
+    </div>
+    <div class="input-row">
+        <input id="taxRate" type="number" placeholder="Sales tax / VAT % (optional)" value="0" step="0.1" min="0">
+        <input id="cutHours" type="number" placeholder="Flag plans under X hours" value="10" step="1" min="0">
+    </div>
+    <button id="calcBtn">Calculate total</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the Total Is Built</h2>
+<p>Every plan is first converted to a monthly equivalent, because monthly and annual billing are not comparable as entered. An annual price is divided by twelve; a monthly price is left alone. Tax, if you enter a rate, is applied to each line before the sum.</p>
+<p><b>Monthly cost = price &divide; 12 for annual plans, or price for monthly plans, &times; (1 + tax rate)</b></p>
+<p><b>Cost per hour = monthly cost &divide; hours used per month</b></p>
+<p>The yearly total is simply the monthly figure times twelve, which is the number that matters most. A stack of five $20 plans is $1,200 a year, and most people have never added those five lines together.</p>
+<p><b>Worked example.</b> ChatGPT Plus at $20 a month used 30 hours, Claude Pro at $20 a month used 8 hours, and an annual Cursor Pro at $192 a year (a $16 monthly equivalent) used 25 hours. Monthly total $56, yearly $672. Cost per hour comes out at $0.67, $2.50 and $0.64 respectively. The least-used plan is roughly four times more expensive per hour of work than the others, which is the usual finding: the plan that feels harmless is the one subsidising your optimism.</p>
+
+<h2>Reference Rates and What They Imply</h2>
+<p>Consumer AI plans cluster tightly around a few price points. The table below is a planning reference, not a price list; check the provider page before you rely on a figure, since tiers and regional pricing move often.</p>
+<table>
+<tr><th>Plan type</th><th>Typical monthly price</th><th>Yearly equivalent</th></tr>
+<tr><td>Free tier</td><td>$0</td><td>$0</td></tr>
+<tr><td>Entry paid tier</td><td>$8 to $10</td><td>$96 to $120</td></tr>
+<tr><td>Standard assistant plan</td><td>$20</td><td>$240</td></tr>
+<tr><td>Coding tool subscription</td><td>$20 to $40</td><td>$240 to $480</td></tr>
+<tr><td>Image or video tool</td><td>$10 to $60</td><td>$120 to $720</td></tr>
+<tr><td>Heavy / pro usage tier</td><td>$100 to $200</td><td>$1,200 to $2,400</td></tr>
+</table>
+<p>Two things stand out in that table. First, the jump from $20 to $200 is an order of magnitude, and it is triggered by usage limits rather than by whether you can afford it. Second, most overlaps happen inside the $20 band, where four assistants cost $960 a year and answer roughly the same questions.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Year-end review of every AI charge before you renew annual plans.</li>
+<li>Deciding between one $200 pro tier and three $20 tiers with different strengths.</li>
+<li>Converting a team's mixed monthly and annual billing into a single monthly line for a budget sheet.</li>
+<li>Checking whether a tool justifies itself per hour compared with the rest of your stack.</li>
+<li>Adding the result to the <a href="./subscription-cost-calculator.html" style="color:#2363e0">general subscription tracker</a> alongside streaming and software.</li>
+</ul>
+
+<h2>Why AI Spend Creeps Up</h2>
+<p>Three forces push AI bills upward and none of them announce themselves. The first is trial conversions: a free week becomes a $20 line that nobody remembers adding. The second is overlap: two assistants, a coding tool and a research tool often cover the same three tasks from different angles, and the marginal value of the fourth is close to zero. The third is the upgrade path: hitting a usage cap at 4 p.m. on a deadline makes the $200 tier feel inevitable, and the subscription stays at $200 long after the deadline passes.</p>
+<p>The cost-per-hour column is the antidote. It converts a flat fee into a rate you can compare against what you would pay for the same hour of work done another way. A $20 plan used forty hours is fifty cents an hour and easy to defend. The same plan used three hours costs $6.67 an hour, which is more than most people earn, for work that a free tier might have handled. Nothing about the price changed; only the denominator did.</p>
+<p>Annual billing deserves its own warning. The discount is real, usually 15 to 20 percent, and the calculation is simple: $240 a year discounted to $192 saves $48. But it is a bet that you will still be using the tool in eleven months, and AI products change shape faster than most software. Three months of monthly billing is cheap insurance before you sign a year.</p>
+<p>One habit is worth building: review the stack quarterly, not annually. Cancel anything with no login in the past three weeks, downgrade anything you have used under ten hours in a month, and only then consider whether the saved money belongs in the pro tier of the one tool you actually live in.</p>
+
+<h2>What This Calculator Leaves Out</h2>
+<p>It covers subscription fees only. Usage-based add-ons such as extra credits, API keys used inside a chat app, and connector or seat fees are not included, so a bill with metered components will run higher than the total shown. Team seats are also not modelled: a five-seat plan at $25 per seat is $125 a month, so enter the real amount charged rather than the per-seat price. And the hours field is your own estimate, which is why it is the softest number in the whole calculation.</p>
+
+<h2>Frequently Asked Questions</h2>
+<p><b>I pay for two general AI assistants. Is one of them wasted money?</b></p>
+<p>Only if you use them for the same task. Two general assistants can be redundant if one sits unused for weeks. Cut the expensive per-hour one first, not the cheaper sticker one.</p>
+<p><b>Should I switch to annual billing to save money?</b></p>
+<p>Annual usually saves 15 to 20 percent but locks you in. Switch after a full quarter of steady weekly use, not before.</p>
+<p><b>Does a free tier really replace a paid plan?</b></p>
+<p>Often for a single low-volume task, rarely for daily work. Free tiers cap the newest models and uploads, and the caps cost you time rather than money.</p>
+<p><b>Why does my total differ from my card statement?</b></p>
+<p>Sales tax or VAT is added at checkout in many countries, annual plans are charged once, and app store purchases can carry a markup over web prices.</p>
+<p><b>How should I count hours used?</b></p>
+<p>Honestly. Three sessions a week of real work is about twelve hours a month, not forty. Count only the time you are actively editing, prompting or reviewing output.</p>
+<p><b>Are AI features bundled in software I already pay for worth counting?</b></p>
+<p>Count the bundle once and note what it replaced. Its incremental cost is zero, so it belongs in the comparison as a substitute rather than an addition.</p>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var N=5;
+var calcBtn=document.getElementById('calcBtn');
+var resOut=document.getElementById('resOut');
+var resTbl=document.getElementById('resTbl');
+
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+calcBtn.onclick=function(){
+  var tax=parseFloat(document.getElementById('taxRate').value);
+  if(isNaN(tax)||tax<0) tax=0;
+  var cut=parseFloat(document.getElementById('cutHours').value);
+  if(isNaN(cut)||cut<0) cut=0;
+
+  var items=[], total=0, idle=0;
+  for(var i=1;i<=N;i++){
+    var nm=(document.getElementById('name'+i).value||'').trim();
+    var pr=parseFloat(document.getElementById('price'+i).value);
+    var cy=parseFloat(document.getElementById('cycle'+i).value);
+    var hr=parseFloat(document.getElementById('hours'+i).value);
+    if(isNaN(pr)||pr<=0) continue;
+    if(isNaN(hr)||hr<0) hr=0;
+    var monthlyRaw=cy===1?pr/12:pr;
+    var monthly=monthlyRaw*(1+tax/100);
+    total+=monthly;
+    items.push({name:nm||('Tool '+i), monthly:monthly, hours:hr, cph:hr>0?monthly/hr:null});
+    if(hr<cut) idle+=monthly;
+  }
+  if(items.length===0){
+    resOut.textContent='Enter at least one plan with a price';
+    resTbl.innerHTML='';
+    return;
+  }
+  var yearly=total*12;
+  var rows='<tr><th>Plan</th><th>Per month</th><th>Per year</th><th>Hours/mo</th><th>Cost per hour</th></tr>';
+  for(var j=0;j<items.length;j++){
+    var it=items[j];
+    rows+='<tr><td>'+it.name+'</td><td>$'+usd(it.monthly)+'</td><td>$'+usd(it.monthly*12)+'</td><td>'+it.hours+'</td><td>'+(it.cph===null?'no usage logged':'$'+usd(it.cph))+'</td></tr>';
+  }
+  rows+='<tr><td><b>Total</b></td><td><b>$'+usd(total)+'</b></td><td><b>$'+usd(yearly)+'</b></td><td></td><td></td></tr>';
+  rows+='<tr><td>Plans under '+cut+' hours a month</td><td>$'+usd(idle)+'</td><td>$'+usd(idle*12)+'</td><td colspan="2">'+(total>0?(idle/total*100).toFixed(0)+'% of your AI spend':'')+'</td></tr>';
+
+  var totalHours=0;
+  for(var k=0;k<items.length;k++) totalHours+=items[k].hours;
+  if(totalHours>0){
+    rows+='<tr><td>Blended cost per hour across the stack</td><td colspan="4">$'+usd(total/totalHours)+'</td></tr>';
+  }
+  resOut.innerHTML='You spend <span style="color:#0f9d58;font-size:22px">$'+usd(total)+' a month</span>, or $'+usd(yearly)+' a year';
+  resTbl.innerHTML=rows;
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
