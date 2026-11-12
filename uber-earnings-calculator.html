@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uber Earnings Calculator | Net Pay Per Hour After Costs</title>
+<meta name="description" content="Uber earnings calculator: convert weekly gross, hours and miles into true net pay per hour, per mile and per year after fuel, wear and other costs.">
+<link rel="canonical" href="https://www.xiake.icu/uber-earnings-calculator.html">
+<meta name="keywords" content="uber earnings calculator, uber driver pay, net pay per hour, rideshare profit, cost per mile, gig driver income, doordash earnings">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#666;margin-top:14px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Uber Earnings Calculator","description":"Uber earnings calculator that converts weekly gross, hours and miles into net pay per hour, per mile and per year after fuel, maintenance and other driving costs.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/uber-earnings-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is my net per hour much lower than the hourly figure in the app?","acceptedAnswer":{"@type":"Answer","text":"The app reports gross earnings divided by online hours. It does not subtract fuel, maintenance, tires, depreciation or the extra insurance a rideshare policy costs. On a 450 mile week at about 32 cents a mile, those costs take roughly $144 out of the payout before you count anything else."}},{"@type":"Question","name":"Should I use the IRS standard mileage rate as my cost per mile?","acceptedAnswer":{"@type":"Answer","text":"Only as a ceiling. The standard rate is built for tax deduction and bundles depreciation, insurance and repairs into one number, so it overstates the cash you actually spend this month. For a net-pay figure, use real fuel and repair spending; keep the IRS rate for the deduction on your return."}},{"@type":"Question","name":"Do miles spent waiting or driving to a pickup count?","acceptedAnswer":{"@type":"Answer","text":"Yes, every mile on the clock burns fuel and adds wear, whether or not a passenger is aboard. Deadhead miles are typically 30 to 40 percent of total miles in suburban markets, so excluding them makes net pay look better than it is."}},{"@type":"Question","name":"Does this calculator work for Lyft, DoorDash and Instacart?","acceptedAnswer":{"@type":"Answer","text":"Yes. Any platform that pays per trip or per delivery can be modelled the same way: enter the gross you were paid, the hours online and the miles driven, and the cost per mile does the rest. Multi-app drivers should add all gross together and count all miles once."}},{"@type":"Question","name":"How much should I set aside for taxes as a gig driver?","acceptedAnswer":{"@type":"Answer","text":"Sole proprietors owe both income tax and the 15.3 percent self-employment tax on net profit, and the mileage deduction lowers that profit first. A set-aside of 20 to 30 percent of net is a common working range; the exact figure depends on your bracket and other income."}},{"@type":"Question","name":"Is a higher gross per hour always better?","acceptedAnswer":{"@type":"Answer","text":"No. A $30 gross hour that puts 40 miles on the car can net less than a $22 hour that covers 18 miles. Compare net per hour and net per mile together, because a long airport run at a good fare can still lose money once the empty return trip is counted."}}]}
+</script>
+<meta property="og:title" content="Uber Earnings Calculator | Net Pay Per Hour After Costs">
+<meta property="og:description" content="Uber earnings calculator: convert weekly gross, hours and miles into true net pay per hour, per mile and per year after fuel, wear and other costs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/uber-earnings-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Uber Earnings Calculator | Net Pay Per Hour After Costs">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Uber earnings calculator: convert weekly gross, hours and miles into true net pay per hour, per mile and per year after fuel, wear and other costs.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./mileage-deduction-calculator.html">Mileage Deduction</a>
+    <a href="./fuel-cost-calculator.html">Fuel Cost</a>
+    <a href="./self-employment-tax-calculator.html">Self-Employment Tax</a>
+</div>
+
+<h1>Uber Earnings Calculator</h1>
+<p>Gross earnings per hour is the number the app shows and the number most drivers quote, and it is misleading on its own. Fuel, tires, oil, brakes and the value the odometer takes off the car all come out of that same payout. This calculator subtracts them and returns what you actually keep per hour, per mile, and across a year, so a shift can be compared with a wage job on equal terms.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="hours" placeholder="Hours online per week" step="0.5">
+        <input type="number" id="gross" placeholder="Gross pay per week $" step="0.01">
+        <input type="number" id="miles" placeholder="Miles driven per week" step="1">
+    </div>
+    <div class="input-row">
+        <input type="number" id="cpm" placeholder="Cost per mile $ (0.32)" step="0.01">
+        <input type="number" id="extra" placeholder="Other weekly costs $ (optional)" step="0.01">
+        <input type="number" id="trips" placeholder="Trips per week (optional)" step="1">
+    </div>
+    <div class="input-row">
+        <input type="number" id="taxpct" placeholder="Tax set-aside % (optional)" step="1">
+    </div>
+    <button id="calcBtn">Calculate Net Pay</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">Cost per mile should reflect cash you really spend on fuel and upkeep plus the depreciation from extra miles. Leave it blank to use $0.32. If you only know fuel cost, start near $0.30 to $0.35 for a paid-off compact car and raise it for newer vehicles or larger ones.</p>
+</div>
+
+<h2>How the Uber Earnings Calculator Works</h2>
+<p>Five inputs and one subtraction do the work. Gross pay is what the platform deposited for the week, before expenses and before tax. Miles are all miles on the clock, including the empty miles driven to a pickup. Cost per mile is your own number for fuel plus wear, and other weekly costs catch the items that are not mileage-based, like a phone plan, car washes or a commercial insurance rider.</p>
+<p><b>Driving cost = Miles &times; Cost per mile</b><br>
+<b>Net pay = Gross pay &minus; Driving cost &minus; Other weekly costs</b><br>
+<b>Net per hour = Net pay &divide; Hours online</b><br>
+<b>Net per mile = Net pay &divide; Miles</b><br>
+<b>Take-home margin = Net pay &divide; Gross pay</b></p>
+<p>Worked example. Thirty hours online, $720 of gross pay, 450 miles driven, a cost per mile of $0.32 and $10 of other weekly costs. Driving cost is 450 &times; 0.32 = $144, total costs $154, so net pay is $720 &minus; $154 = <b>$566</b>. That is <b>$18.87 an hour</b>, $1.26 of net per mile, and a take-home margin of 78.6 percent. Gross per hour was $24.00, so roughly a fifth of the headline number was your car.</p>
+<p>Scale it up and the picture sharpens. Fifty-two weeks at this pace is $37,440 of gross and $8,008 of costs, leaving <b>$29,432</b> before tax. Monthly net is $566 &times; 52 &divide; 12 = $2,452.67. Nothing here is unusual: this is a normal 30-hour schedule, and the annual net still sits well below the gross figure that gets quoted in recruiting material.</p>
+<p>A second example shows how thin the margin gets when the miles climb. Twenty hours, $380 gross, 300 miles at the same cost per mile, no other costs: driving cost $96, net $284, which is <b>$14.20 an hour</b>. Same car, same city, close to five dollars an hour less than the first example, because the first driver earned more per mile. Earnings per mile, not earnings per hour, is what separates a sustainable schedule from one that quietly consumes a vehicle.</p>
+
+<h2>What a Mile Really Costs</h2>
+<p>The cost-per-mile input is where most estimates go wrong, usually by being too low. These bands are typical for a mid-size sedan in the United States and are meant to be added, not picked from.</p>
+<table>
+<tr><th>Cost component</th><th>Per mile</th><th>Note</th></tr>
+<tr><td>Fuel</td><td>$0.10 - $0.14</td><td>28 mpg at about $3.20 a gallon</td></tr>
+<tr><td>Oil and routine service</td><td>$0.04 - $0.07</td><td>Doubles in frequency under city driving</td></tr>
+<tr><td>Tires and brakes</td><td>$0.03 - $0.05</td><td>Rideshare wear is heavier than commuting</td></tr>
+<tr><td>Depreciation from extra miles</td><td>$0.08 - $0.12</td><td>Not cash today, real at resale</td></tr>
+<tr><td>Insurance and registration share</td><td>$0.03 - $0.06</td><td>Rideshare rider costs more than a personal policy</td></tr>
+<tr><td><b>Total</b></td><td><b>$0.28 - $0.44</b></td><td>Use the low end only for an old, efficient car</td></tr>
+</table>
+<p>Drivers who quote 15 cents a mile are usually counting fuel alone and ignoring the rest, which is why the car feels profitable right up until a transmission bill arrives. If depreciation is left out, a $566 net week becomes a $602 net week on paper, and the $36 difference is money that will be spent later whether or not it is budgeted.</p>
+
+<h2>Reading Your Net Hourly Rate</h2>
+<p>These bands describe net pay after driving costs, not gross. They are a rough map of what the arithmetic produces in different conditions, and they move with fuel prices and local demand.</p>
+<table>
+<tr><th>Net per hour</th><th>What it usually means</th></tr>
+<tr><td>Under $12</td><td>Miles too high for the fares, or a saturated market. Check deadhead and acceptance rate.</td></tr>
+<tr><td>$12 - $16</td><td>Common in low-density suburbs. Comparable to retail work before benefits.</td></tr>
+<tr><td>$16 - $22</td><td>Solid. Typical of a dense metro with disciplined positioning during peaks.</td></tr>
+<tr><td>$22 - $30</td><td>Strong. Usually multi-app, short trips and high utilisation, not long highway runs.</td></tr>
+<tr><td>Over $30</td><td>Rare and often temporary, driven by a promo or a surge window that will close.</td></tr>
+</table>
+<p>Any comparison with a wage job needs one more adjustment. A $19 net hour as a contractor is not the same as $19 an hour on a payroll, because the employee version usually carries paid time off, an employer share of payroll tax and some health cover. A rough rule of thumb is that self-employment needs 20 to 30 percent more per hour to match a comparable job, which pushes a $19 net hour toward needing $23 to $25.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Deciding whether a Saturday night shift beats a weekday morning shift in net, not gross</li>
+<li>Testing a new car against the current one: change the cost per mile and compare net per hour</li>
+<li>Checking whether a long airport run is worth it once the empty miles home are counted</li>
+<li>Estimating weekly and annual net before committing to a full-time schedule</li>
+<li>Setting a tax set-aside so a quarterly payment does not arrive as a surprise</li>
+<li>Comparing a rideshare week with a delivery week across two different apps</li>
+</ul>
+
+<h2>The Mistakes That Distort the Number</h2>
+<p>The biggest one is trusting the in-app hourly rate. It is gross pay divided by online hours. It knows nothing about the 450 miles behind that pay, and it treats an hour spent driving to a distant pickup the same as an hour with a passenger aboard. Over a 30-hour week the difference between gross and net per hour in the example above is $5.13, which compounds to more than $8,000 across a year.</p>
+<p>The second is counting only fuel. Fuel is roughly a third of the real per-mile cost, so a driver using a fuel-only figure will overstate net pay by a wide margin and will not have money set aside when the car needs work. The third is ignoring deadhead. In most suburban markets 30 to 40 percent of miles carry no passenger, and those miles still consume tyres, brakes and oil.</p>
+<p>The fourth is treating the mileage deduction as extra income. It reduces taxable profit, which lowers the tax bill, but it does not put cash in your pocket this week. The two numbers serve different purposes: use real spending for the net-pay calculation and the IRS standard rate for the return.</p>
+
+<h2>What This Calculator Leaves Out</h2>
+<p>It does not include health insurance, retirement contributions or the interest on a car loan, all of which are real costs of self-employment and none of which appear on a platform statement. It does not model surge, quests or tips separately, because those are already inside the gross figure you enter. It assumes the miles and cost per mile you supply are accurate, which is the weakest link in any estimate of this kind. And it is a personal finance tool, not affiliated with or endorsed by Uber Technologies, Lyft or any delivery platform.</p>
+
+<h2>Frequently Asked Questions</h2>
+<p><b>Why is my net per hour so much lower than the app's number?</b></p>
+<p>The app divides gross pay by online hours and stops there. Fuel, tyres, service, depreciation and a rideshare insurance rider all come out of that same gross, and on a 450-mile week at $0.32 a mile they add up to about $144 before any other cost.</p>
+<p><b>Should I use the IRS standard mileage rate as my cost per mile?</b></p>
+<p>Use it for the deduction, not for cash flow. The standard rate bundles depreciation, insurance and repairs into a single figure designed for tax purposes, so it overstates what you spend in a given month. Recent rates have sat near 70 cents a mile, which is roughly double a realistic cash cost for a paid-off compact.</p>
+<p><b>Do miles spent waiting or driving to a pickup count?</b></p>
+<p>They count, and excluding them is the most common way drivers overstate earnings. Every mile on the clock burns fuel and adds wear whether or not someone is in the back seat, and empty miles often make up a third of the total.</p>
+<p><b>Does this work for Lyft, DoorDash and Instacart?</b></p>
+<p>Yes. The arithmetic is platform-neutral: gross paid, hours worked, miles driven, cost per mile. If you run several apps in the same week, add the gross together and count each mile once, or the net figure will be understated twice over.</p>
+<p><b>How much should I set aside for taxes?</b></p>
+<p>Sole proprietors pay income tax plus the 15.3 percent self-employment tax on net profit, after the mileage deduction. Setting aside 20 to 30 percent of net is a common working range, and the field in the calculator shows the monthly figure at whatever percentage you choose.</p>
+<p><b>Is a higher gross per hour always better?</b></p>
+<p>No. A $30 gross hour that adds 40 miles can net less than a $22 hour that adds 18. Compare net per hour and net per mile together, and treat any trip whose return leg is empty as roughly half the fare it appears to be.</p>
+<script>
+function calcUber(o){
+  var hours = parseFloat(o.hours) || 0;
+  var gross = parseFloat(o.gross) || 0;
+  var miles = parseFloat(o.miles) || 0;
+  var cpm = parseFloat(o.cpm);
+  if (isNaN(cpm) || cpm <= 0) cpm = 0.32;
+  var extra = parseFloat(o.extra) || 0;
+  var trips = parseFloat(o.trips) || 0;
+  var taxpct = parseFloat(o.taxpct) || 0;
+
+  var driveCost = miles * cpm;
+  var totalCost = driveCost + extra;
+  var net = gross - totalCost;
+  var perHour = hours > 0 ? net / hours : 0;
+  var grossPerHour = hours > 0 ? gross / hours : 0;
+  var perMile = miles > 0 ? net / miles : 0;
+  var grossPerMile = miles > 0 ? gross / miles : 0;
+  var perTrip = trips > 0 ? net / trips : 0;
+  var margin = gross > 0 ? net / gross : 0;
+  var costShare = gross > 0 ? totalCost / gross : 0;
+  var tax = net > 0 ? net * taxpct / 100 : 0;
+  var afterTax = net - tax;
+
+  var monthFactor = 52 / 12;
+  return {
+    hours: hours,
+    gross: gross,
+    miles: miles,
+    cpm: cpm,
+    driveCost: driveCost,
+    extra: extra,
+    totalCost: totalCost,
+    net: net,
+    perHour: perHour,
+    grossPerHour: grossPerHour,
+    perMile: perMile,
+    grossPerMile: grossPerMile,
+    perTrip: perTrip,
+    margin: margin,
+    costShare: costShare,
+    tax: tax,
+    afterTax: afterTax,
+    taxpct: taxpct,
+    trips: trips,
+    week: { gross: gross, cost: totalCost, net: net },
+    month: { gross: gross * monthFactor, cost: totalCost * monthFactor, net: net * monthFactor },
+    year: { gross: gross * 52, cost: totalCost * 52, net: net * 52 }
+  };
+}
+
+if (typeof document !== 'undefined') {
+  var usd = function (v) {
+    var neg = v < 0;
+    return (neg ? '-$' : '$') + Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  };
+
+  document.getElementById('calcBtn').addEventListener('click', function () {
+    var r = calcUber({
+      hours: document.getElementById('hours').value,
+      gross: document.getElementById('gross').value,
+      miles: document.getElementById('miles').value,
+      cpm: document.getElementById('cpm').value,
+      extra: document.getElementById('extra').value,
+      trips: document.getElementById('trips').value,
+      taxpct: document.getElementById('taxpct').value
+    });
+
+    if (r.gross <= 0) {
+      document.getElementById('resOut').textContent = 'Enter your gross weekly pay first.';
+      document.getElementById('resTbl').innerHTML = '';
+      return;
+    }
+
+    var good = r.perHour >= 16;
+    document.getElementById('resOut').innerHTML = 'Net pay: <span style="font-size:22px">' + usd(r.perHour) + '/hour</span> '
+      + '<span style="color:' + (good ? '#0f9d58' : '#d93025') + '">(' + usd(r.net) + ' per week)</span>';
+
+    var rows = '<tr><th>Line</th><th>Week</th><th>Month</th><th>Year</th></tr>'
+      + '<tr><td>Gross pay</td><td>' + usd(r.week.gross) + '</td><td>' + usd(r.month.gross) + '</td><td>' + usd(r.year.gross) + '</td></tr>'
+      + '<tr><td>Driving cost (' + r.miles.toFixed(0) + ' mi &times; ' + usd(r.cpm) + ')</td><td>' + usd(r.driveCost) + '</td><td>' + usd(r.driveCost * 52 / 12) + '</td><td>' + usd(r.driveCost * 52) + '</td></tr>'
+      + '<tr><td>Other costs</td><td>' + usd(r.extra) + '</td><td>' + usd(r.extra * 52 / 12) + '</td><td>' + usd(r.extra * 52) + '</td></tr>'
+      + '<tr><td><b>Net pay</b></td><td><b>' + usd(r.week.net) + '</b></td><td><b>' + usd(r.month.net) + '</b></td><td><b>' + usd(r.year.net) + '</b></td></tr>';
+
+    if (r.taxpct > 0) {
+      rows += '<tr><td>Tax set-aside (' + r.taxpct.toFixed(0) + '%)</td><td>' + usd(r.tax) + '</td><td>' + usd(r.tax * 52 / 12) + '</td><td>' + usd(r.tax * 52) + '</td></tr>'
+        + '<tr><td>After set-aside</td><td>' + usd(r.afterTax) + '</td><td>' + usd(r.afterTax * 52 / 12) + '</td><td>' + usd(r.afterTax * 52) + '</td></tr>';
+    }
+
+    rows += '<tr><th>Per unit</th><th>Gross</th><th>Net</th></tr>'
+      + '<tr><td>Per hour</td><td>' + usd(r.grossPerHour) + '</td><td><b>' + usd(r.perHour) + '</b></td></tr>'
+      + '<tr><td>Per mile</td><td>' + usd(r.grossPerMile) + '</td><td><b>' + usd(r.perMile) + '</b></td></tr>';
+
+    if (r.trips > 0) {
+      rows += '<tr><td>Per trip</td><td>' + usd(r.gross / r.trips) + '</td><td><b>' + usd(r.perTrip) + '</b></td></tr>';
+    }
+
+    rows += '<tr><td>Costs as share of gross</td><td colspan="2">' + (r.costShare * 100).toFixed(1) + '%</td></tr>'
+      + '<tr><td>Take-home margin</td><td colspan="2">' + (r.margin * 100).toFixed(1) + '%</td></tr>';
+
+    document.getElementById('resTbl').innerHTML = rows;
+  });
+}
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>

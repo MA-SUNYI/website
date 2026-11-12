@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROAS Calculator | Return on Ad Spend and Break-Even ROAS</title>
+<meta name="description" content="Free ROAS calculator: turn ad spend and attributed revenue into return on ad spend, break-even ROAS from your margin, and profit after ad costs.">
+<link rel="canonical" href="https://www.xiake.icu/roas-calculator.html">
+<meta name="keywords" content="roas calculator, return on ad spend, break even roas, ad spend calculator, roas formula, marketing roi, max cpa">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#666;margin-top:14px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ROAS Calculator","description":"Free ROAS calculator. Convert ad spend and attributed revenue into return on ad spend, break-even ROAS from your gross margin, and profit after advertising costs.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/roas-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What ROAS do I need to break even at a 30% gross margin?","acceptedAnswer":{"@type":"Answer","text":"3.33x, which is 333%. Break-even ROAS is 1 divided by the gross margin expressed as a decimal, so 1 / 0.30 = 3.33. Any ROAS below that number means the ad spend cost more than the gross profit the sales produced."}},{"@type":"Question","name":"Why does a 4x ROAS still lose money?","acceptedAnswer":{"@type":"Answer","text":"Because ROAS compares revenue to spend, not profit to spend. At a 20 percent gross margin, 4x ROAS returns $0.80 of gross profit per $1 spent, a 20 cent loss. The calculator shows break-even ROAS alongside your result so the gap is visible."}},{"@type":"Question","name":"Does ROAS include agency fees, software and creative production?","acceptedAnswer":{"@type":"Answer","text":"Not in the standard definition. ROAS uses media spend only. Fees and tooling belong in ROI, which divides net profit by all marketing costs. If you pay an agency 15 percent of spend, add it to the spend figure to get a cost-inclusive view."}},{"@type":"Question","name":"How do returns and discounts distort a reported ROAS?","acceptedAnswer":{"@type":"Answer","text":"Platforms usually count revenue at the moment of purchase, before returns and promo codes land. A campaign with a 20 percent return rate on a 4x ROAS is closer to 3.2x in settled revenue, and the margin on discounted orders is thinner, so the true break-even point moves up."}},{"@type":"Question","name":"Should I budget against ROAS or against profit per order?","acceptedAnswer":{"@type":"Answer","text":"Budget against profit, then use ROAS as the daily control metric. ROAS is fast and available in the ad platform; profit per order needs margin and returns data. Set a floor ROAS from your margin, then check realised profit monthly."}},{"@type":"Question","name":"How is maximum CPA related to ROAS?","acceptedAnswer":{"@type":"Answer","text":"Maximum CPA equals average order value multiplied by gross margin, and it is the same limit as break-even ROAS written per order. At a $90 order value and 40 percent margin the ceiling is $36 per order, which corresponds to a 2.5x break-even ROAS."}}]}
+</script>
+<meta property="og:title" content="ROAS Calculator | Return on Ad Spend and Break-Even ROAS">
+<meta property="og:description" content="Free ROAS calculator: turn ad spend and attributed revenue into return on ad spend, break-even ROAS from your margin, and profit after ad costs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/roas-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ROAS Calculator | Return on Ad Spend and Break-Even ROAS">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free ROAS calculator: turn ad spend and attributed revenue into return on ad spend, break-even ROAS from your margin, and profit after ad costs.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./cpm-calculator.html">CPM Calculator</a>
+    <a href="./cac-calculator.html">CAC Calculator</a>
+    <a href="./profit-margin-calculator.html">Profit Margin</a>
+</div>
+
+<h1>ROAS Calculator</h1>
+<p>Return on ad spend answers one narrow question: how many dollars of revenue came back for each dollar of media spend. It does not answer whether you made money, because revenue is not profit. This calculator gives you both figures, plus the break-even ROAS implied by your gross margin, so a campaign that looks healthy at 3x can be checked against the number it actually needs to clear.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="spend" placeholder="Ad spend $" step="0.01">
+        <input type="number" id="revenue" placeholder="Attributed revenue $" step="0.01">
+        <select id="margin"><option value="10">10% margin</option><option value="15">15% margin</option><option value="20">20% margin</option><option value="25">25% margin</option><option value="30">30% margin</option><option value="35">35% margin</option><option value="40" selected>40% margin</option><option value="45">45% margin</option><option value="50">50% margin</option><option value="55">55% margin</option><option value="60">60% margin</option><option value="65">65% margin</option><option value="70">70% margin</option><option value="75">75% margin</option></select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="aov" placeholder="Average order value $ (optional)" step="0.01">
+        <input type="number" id="target" placeholder="Target ROAS x (optional)" step="0.1">
+    </div>
+    <button id="calcBtn">Calculate ROAS</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">Gross margin here means the share of revenue left after product cost, shipping and payment fees, before ad spend. If you are unsure, use your contribution margin from the last settled month rather than a catalogue figure.</p>
+</div>
+
+<h2>How the ROAS Calculator Works</h2>
+<p>Three numbers drive every result on this page. ROAS itself is revenue divided by media spend, usually written as a multiple like 3.5x. Break-even ROAS is one divided by the gross margin, and it is the number that decides whether the multiple is good. Profit after ads is revenue times margin, minus spend.</p>
+<p><b>ROAS = Attributed revenue &divide; Ad spend</b><br>
+<b>Break-even ROAS = 1 &divide; Gross margin</b><br>
+<b>Gross profit from ads = Attributed revenue &times; Gross margin</b><br>
+<b>Profit after ads = Gross profit &minus; Ad spend</b><br>
+<b>Max CPA = Average order value &times; Gross margin</b></p>
+<p>Worked example. You spend $4,000 in a month and the platform attributes $14,000 of revenue. ROAS is 14,000 / 4,000 = <b>3.5x</b>, or 350 percent if you prefer the percentage form. At a 40 percent gross margin, that revenue carries $5,600 of gross profit, so after the $4,000 of media the campaign leaves <b>$1,600</b>. Break-even ROAS at this margin is 1 / 0.40 = <b>2.5x</b>, which means the campaign cleared its threshold by a full point.</p>
+<p>Now hold the ROAS and change only the margin. The same 3.5x at a 20 percent margin produces $2,800 of gross profit against $4,000 of spend, a <b>$1,200 loss</b>. Break-even ROAS at 20 percent is 5.0x, so a campaign that a 40 percent margin business would call strong is under water for a 20 percent margin business. This is the single most common misreading of ROAS reports, and it is why the margin input sits next to the spend input rather than buried in a footnote.</p>
+<p>If you supply an average order value, the calculator also derives how many orders the revenue represents and what you paid per order. At a $90 order value, $14,000 is 155.6 orders, and $4,000 of spend works out to a $25.70 CPA against a $36.00 ceiling. The ceiling is the same limit as break-even ROAS, just expressed per order.</p>
+
+<h2>Break-Even ROAS by Gross Margin</h2>
+<p>Use this table to read your own result without touching the calculator. Find your margin, and the number beside it is the ROAS below which the campaign destroys cash.</p>
+<table>
+<tr><th>Gross margin</th><th>Break-even ROAS</th><th>Profit per $1 spent at 4x</th></tr>
+<tr><td>10%</td><td>10.00x</td><td>&minus;$0.60</td></tr>
+<tr><td>15%</td><td>6.67x</td><td>&minus;$0.40</td></tr>
+<tr><td>20%</td><td>5.00x</td><td>&minus;$0.20</td></tr>
+<tr><td>25%</td><td>4.00x</td><td>$0.00</td></tr>
+<tr><td>30%</td><td>3.33x</td><td>$0.20</td></tr>
+<tr><td>40%</td><td>2.50x</td><td>$0.60</td></tr>
+<tr><td>50%</td><td>2.00x</td><td>$1.00</td></tr>
+<tr><td>60%</td><td>1.67x</td><td>$1.40</td></tr>
+<tr><td>75%</td><td>1.33x</td><td>$2.00</td></tr>
+</table>
+<p>Read the pattern: every ten points of margin removes a large slice of the ROAS you need. Doubling margin from 20 to 40 percent halves the break-even multiple from 5x to 2.5x. That relationship is why a software product and a drop-shipped gadget cannot be judged with the same ROAS target, even when both sell through the same ad auction.</p>
+
+<h2>Planning Ranges by Category</h2>
+<p>The ranges below are planning bands that agencies commonly quote for paid social and paid search, expressed as break-even-plus-headroom rather than as averages. They are a sanity check, not a benchmark you should copy: your own margin and repeat-purchase rate dominate.</p>
+<table>
+<tr><th>Category</th><th>Typical margin</th><th>ROAS band quoted</th></tr>
+<tr><td>Apparel and accessories</td><td>45 - 65%</td><td>3x - 5x</td></tr>
+<tr><td>Beauty and skincare</td><td>55 - 75%</td><td>3x - 6x</td></tr>
+<tr><td>Home and furniture</td><td>35 - 50%</td><td>3x - 5x</td></tr>
+<tr><td>Consumer electronics</td><td>12 - 25%</td><td>6x - 10x</td></tr>
+<tr><td>Supplements</td><td>60 - 80%</td><td>2x - 4x</td></tr>
+<tr><td>B2B SaaS (first term)</td><td>70 - 85%</td><td>1.5x - 3x</td></tr>
+<tr><td>Local services and leads</td><td>40 - 60%</td><td>3x - 8x</td></tr>
+</table>
+<p>Electronics sit at the top of the band for a reason: thin margins force a high multiple before profit appears. Supplements sit low because the margin is wide, not because the campaigns are cheap. Comparing the two on ROAS alone would rank the electronics campaign as twice as efficient while it may be the less profitable of the pair.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Setting a floor ROAS before a campaign launches, so optimisation has a target other than "higher"</li>
+<li>Comparing the same product across Google, Meta and TikTok when each platform reports its own attribution</li>
+<li>Checking whether a spend increase that dropped ROAS still added absolute profit</li>
+<li>Deciding the maximum CPA a bidding strategy can pay before margin disappears</li>
+<li>Sanity-checking an agency report that quotes revenue without a margin line</li>
+<li>Testing a price or discount change: a 10 percent price cut usually lowers margin more than it lifts conversion</li>
+</ul>
+
+<h2>The Mistake That Costs the Most</h2>
+<p>Treating ROAS as a profit metric. It is a ratio of two revenue-side numbers, and it is blind to what the goods cost, what shipping and returns consume, and what you pay an agency. A 5x ROAS on a 15 percent margin business is a slow leak: every $1,000 of spend returns $5,000 of revenue, $750 of gross profit, and a $250 loss. The report says 500 percent and the bank account says otherwise.</p>
+<p>The second mistake is comparing ROAS across channels with different order values. A channel selling $40 accessories and a channel selling $400 furniture cannot share a target, because the same ROAS leaves very different absolute profit per order. Compare profit per order, or compare each channel against its own break-even line.</p>
+<p>Third, watch attribution windows. A seven-day click window will credit revenue that would have arrived anyway, and a long window flatters retargeting in particular. The 2025-era default of a seven-day click plus one-day view is generous; if you want a conservative read, switch the platform to a one-day click view and see how much of the ROAS survives. What remains is closer to incremental revenue, which is the number a budget decision should rest on.</p>
+
+<h2>What This Calculator Leaves Out</h2>
+<p>It does not model customer lifetime value, so a first-order loss can still be a good acquisition if repeat rate is high. It does not split new from returning customers, which matters because retargeting usually reports a much higher ROAS than prospecting. It does not account for organic cannibalisation, seasonal demand or inventory limits. And it treats the revenue figure as settled, when returns typically shave one to ten percent depending on category. Use it to set the floor and to catch the obvious mismatch between a headline multiple and your actual margin; use settled monthly numbers to confirm.</p>
+
+<h2>Frequently Asked Questions</h2>
+<p><b>What ROAS do I need to break even at a 30% gross margin?</b></p>
+<p>3.33x. Break-even ROAS is 1 divided by the margin as a decimal, so 1 / 0.30 = 3.33. Below that, the media cost more than the gross profit it generated.</p>
+<p><b>Why does a 4x ROAS still lose money?</b></p>
+<p>Because revenue is not profit. At a 20 percent margin, 4x returns $0.80 of gross profit per dollar spent, a 20 cent loss. The break-even figure at that margin is 5x.</p>
+<p><b>Does ROAS include agency fees, software and creative production?</b></p>
+<p>Not in the standard definition, which uses media spend only. If you pay an agency a percentage of spend, add it to the spend field to see a cost-inclusive ROAS. Full ROI, which divides net profit by all marketing costs, will always be lower than ROAS.</p>
+<p><b>How do returns and discounts distort a reported ROAS?</b></p>
+<p>Platforms credit revenue at purchase, before refunds and promo codes settle. A 4x with a 20 percent return rate is nearer 3.2x in kept revenue, and discounted orders carry thinner margin, so the real break-even line is higher than the one you computed.</p>
+<p><b>Should I budget against ROAS or against profit per order?</b></p>
+<p>Budget against profit, control with ROAS. ROAS is available hourly inside the ad platform; profit per order needs margin, returns and fee data that arrives monthly. Set the floor from margin, then reconcile monthly.</p>
+<p><b>How is maximum CPA related to ROAS?</b></p>
+<p>They are the same constraint at different altitudes. Max CPA is order value times margin, and break-even ROAS is 1 divided by margin. At a $90 order value and 40 percent margin the ceiling is $36 per order, identical to a 2.5x break-even ROAS.</p>
+
+<script>
+function calcROAS(o){
+  var spend = parseFloat(o.spend) || 0;
+  var revenue = parseFloat(o.revenue) || 0;
+  var marginPct = parseFloat(o.margin);
+  if (isNaN(marginPct)) marginPct = 0;
+  var aov = parseFloat(o.aov) || 0;
+  var target = parseFloat(o.target) || 0;
+
+  var m = marginPct / 100;
+  var roas = spend > 0 ? revenue / spend : 0;
+  var breakEven = m > 0 ? 1 / m : 0;
+  var grossProfit = revenue * m;
+  var profit = grossProfit - spend;
+  var profitPerDollar = spend > 0 ? profit / spend : 0;
+  var orders = aov > 0 ? revenue / aov : 0;
+  var cpa = orders > 0 ? spend / orders : 0;
+  var maxCpa = aov > 0 ? aov * m : 0;
+  var headroom = spend > 0 ? roas - breakEven : 0;
+  var targetGap = target > 0 ? roas - target : 0;
+
+  var scenarios = [];
+  var steps = [1.5, 2, 2.5, 3, 4, 5];
+  for (var i = 0; i < steps.length; i++) {
+    var sc = steps[i];
+    var rev = sc * spend;
+    scenarios.push({
+      roas: sc,
+      revenue: rev,
+      profit: rev * m - spend,
+      breakEven: breakEven
+    });
+  }
+
+  return {
+    spend: spend,
+    revenue: revenue,
+    marginPct: marginPct,
+    roas: roas,
+    roasPct: roas * 100,
+    breakEven: breakEven,
+    grossProfit: grossProfit,
+    profit: profit,
+    profitPerDollar: profitPerDollar,
+    orders: orders,
+    cpa: cpa,
+    maxCpa: maxCpa,
+    headroom: headroom,
+    target: target,
+    targetGap: targetGap,
+    scenarios: scenarios
+  };
+}
+
+if (typeof document !== 'undefined') {
+  var usd = function (v) {
+    var neg = v < 0;
+    return (neg ? '-$' : '$') + Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  };
+
+  document.getElementById('calcBtn').addEventListener('click', function () {
+    var r = calcROAS({
+      spend: document.getElementById('spend').value,
+      revenue: document.getElementById('revenue').value,
+      margin: document.getElementById('margin').value,
+      aov: document.getElementById('aov').value,
+      target: document.getElementById('target').value
+    });
+
+    if (r.spend <= 0) {
+      document.getElementById('resOut').textContent = 'Enter an ad spend greater than zero.';
+      document.getElementById('resTbl').innerHTML = '';
+      return;
+    }
+
+    var verdict = r.profit >= 0
+      ? '<span style="color:#0f9d58">profitable by ' + usd(r.profit) + '</span>'
+      : '<span style="color:#d93025">losing ' + usd(-r.profit) + '</span>';
+
+    document.getElementById('resOut').innerHTML = 'ROAS: <span style="font-size:22px">' + r.roas.toFixed(2) + 'x</span> (' + r.roasPct.toFixed(0) + '%) &mdash; ' + verdict;
+
+    var rows = '<tr><th>Metric</th><th>Value</th></tr>'
+      + '<tr><td>Ad spend</td><td>' + usd(r.spend) + '</td></tr>'
+      + '<tr><td>Attributed revenue</td><td>' + usd(r.revenue) + '</td></tr>'
+      + '<tr><td><b>ROAS</b></td><td><b>' + r.roas.toFixed(2) + 'x</b></td></tr>'
+      + '<tr><td>Break-even ROAS at ' + r.marginPct.toFixed(0) + '% margin</td><td>' + r.breakEven.toFixed(2) + 'x</td></tr>'
+      + '<tr><td>Headroom vs break-even</td><td>' + (r.headroom >= 0 ? '+' : '') + r.headroom.toFixed(2) + 'x</td></tr>'
+      + '<tr><td>Gross profit from ad revenue</td><td>' + usd(r.grossProfit) + '</td></tr>'
+      + '<tr><td><b>Profit after ad spend</b></td><td><b>' + usd(r.profit) + '</b></td></tr>'
+      + '<tr><td>Profit per $1 of ad spend</td><td>' + usd(r.profitPerDollar) + '</td></tr>';
+
+    if (r.orders > 0) {
+      rows += '<tr><td>Implied orders</td><td>' + r.orders.toFixed(1) + '</td></tr>'
+        + '<tr><td>Cost per order</td><td>' + usd(r.cpa) + '</td></tr>'
+        + '<tr><td>Maximum cost per order</td><td>' + usd(r.maxCpa) + '</td></tr>';
+    }
+    if (r.target > 0) {
+      rows += '<tr><td>Gap vs ' + r.target.toFixed(1) + 'x target</td><td>' + (r.targetGap >= 0 ? '+' : '') + r.targetGap.toFixed(2) + 'x</td></tr>';
+    }
+
+    rows += '<tr><th>ROAS scenario</th><th>Profit at your spend</th></tr>';
+    for (var i = 0; i < r.scenarios.length; i++) {
+      var s = r.scenarios[i];
+      rows += '<tr><td>' + s.roas.toFixed(1) + 'x' + (Math.abs(s.roas - r.roas) < 0.001 ? ' (yours)' : '') + '</td><td>' + usd(s.profit) + '</td></tr>';
+    }
+
+    document.getElementById('resTbl').innerHTML = rows;
+  });
+}
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
