@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Ratio Calculator | Coffee to Water Ratio in Grams</title>
+<meta name="description" content="Set a brew ratio and get the exact grams of coffee and water for any cup size, plus the yield left in the cup after the wet grounds absorb water.">
+<link rel="canonical" href="https://www.xiake.icu/coffee-ratio-calculator.html">
+<meta name="keywords" content="coffee ratio calculator, coffee to water ratio, grams of coffee per cup, pour over ratio, french press ratio, cold brew ratio, brew ratio calculator">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+h3{font-size:17px;margin:18px 0 6px;color:#1d4ed8;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Coffee Ratio Calculator","description":"Convert between grams of ground coffee and grams of water at any brew ratio, for pour-over, drip, French press, AeroPress, cold brew or espresso. Reports cup yield after grounds absorption and coffee per cup.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/coffee-ratio-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does a 1 to 16 coffee ratio actually mean?","acceptedAnswer":{"@type":"Answer","text":"It means 16 grams of water for every 1 gram of ground coffee, measured by weight. With a 20 gram dose you pour 320 grams of water. Because 1 gram of water is about 1 millilitre, the water figure doubles as a volume reading on a kettle or carafe."}},{"@type":"Question","name":"Why is the cup smaller than the water I poured?","acceptedAnswer":{"@type":"Answer","text":"Ground coffee holds on to roughly twice its own weight in water. A 20 gram dose at a 1 to 16 ratio takes 320 grams of water, but the wet bed keeps about 40 grams, so roughly 280 grams, or 9.5 fluid ounces, reaches the cup. The calculator subtracts that loss and shows both figures."}},{"@type":"Question","name":"Is a 1 to 12 ratio twice as strong as 1 to 24?","acceptedAnswer":{"@type":"Answer","text":"Nearly, because strength is proportional to coffee divided by water. Doubling the water at the same dose halves the dissolved coffee per millilitre, so 1 to 12 is about twice the concentration of 1 to 24. What changes is strength, not how much of the coffee was extracted; that is set by grind, time and temperature."}},{"@type":"Question","name":"What ratio should I use for cold brew?","acceptedAnswer":{"@type":"Answer","text":"Steep a concentrate at about 1 to 8 for 12 to 18 hours at room temperature, then dilute it with water or milk, usually one to one or one to two. Drinking a 1 to 8 concentrate straight is common but very strong, and the caffeine per serving is easy to underestimate."}},{"@type":"Question","name":"My coffee tastes sour or bitter. Is the ratio wrong?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Sour, thin coffee usually means under-extraction, which calls for a finer grind, hotter water or a longer contact time. Bitter, drying coffee usually means over-extraction. Change the ratio only after the grind and time are in a sensible range, otherwise you will be chasing the wrong variable."}},{"@type":"Question","name":"Can I skip the scale and use tablespoons?","acceptedAnswer":{"@type":"Answer","text":"You can, but a level tablespoon of ground coffee ranges from about 5 to 7 grams depending on roast and grind, and a two-tablespoon scoop from 10 to 12 grams. That spread is a 20 percent swing in strength. A cheap digital scale reading to 0.1 gram removes the guesswork for the price of two bags of beans."}}]}
+</script>
+<meta property="og:title" content="Coffee Ratio Calculator | Coffee to Water Ratio in Grams">
+<meta property="og:description" content="Set a brew ratio and get the exact grams of coffee and water for any cup size, plus the yield left in the cup after the wet grounds absorb water.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/coffee-ratio-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coffee Ratio Calculator | Coffee to Water Ratio in Grams">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Set a brew ratio and get the exact grams of coffee and water for any cup size, plus the yield left in the cup after the wet grounds absorb water.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./recipe-scaler-calculator.html">Recipe Scaler</a>
+    <a href="./oven-temperature-converter.html">Oven Temperature</a>
+    <a href="./unit-price-calculator.html">Unit Price</a>
+</div>
+
+<h1>Coffee Ratio Calculator</h1>
+<p>A brew ratio is the one number that makes coffee repeatable: grams of coffee against grams of water. Fix the ratio and every other variable, grind, time and temperature, can be adjusted one at a time instead of all at once. This calculator converts between the two sides of that ratio, so you can start from the dose you have already weighed or from the number of cups you want in the pot. It also subtracts the water that stays trapped in the wet grounds, which is the difference between the brew you planned and the cup you actually pour.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <select id="mode">
+            <option value="dose" selected>I know my coffee dose (grams)</option>
+            <option value="cups">I want a set number of cups</option>
+        </select>
+        <select id="method">
+            <option value="16" selected>Pour-over (1:16)</option>
+            <option value="17">Drip machine (1:17)</option>
+            <option value="15">French press (1:15)</option>
+            <option value="13">AeroPress (1:13)</option>
+            <option value="8">Cold brew concentrate (1:8)</option>
+            <option value="2">Espresso (1:2)</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="dose" step="0.1" min="0.1" placeholder="Coffee dose (g)">
+        <input type="number" id="cups" step="0.5" min="0.5" placeholder="Cups wanted" style="display:none;">
+        <input type="number" id="cupOz" step="0.5" min="4" value="8" placeholder="Cup size (fl oz)">
+        <input type="number" id="ratio" step="0.5" min="1.5" max="30" value="16" placeholder="Ratio (1 : X)">
+    </div>
+    <button id="calcBtn">Calculate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the ratio math works</h2>
+<p>Water weight equals coffee weight multiplied by the second number in the ratio. A 20 gram dose at 1 to 16 needs 20 times 16, which is 320 grams of water. A 60 gram batch at 1 to 15 needs 60 times 15, which is 900 grams, enough for a large French press. Going the other way, divide instead of multiplying: 500 grams of water at 1 to 15 needs 500 divided by 15, which is 33.3 grams of coffee.</p>
+<p>Working in grams is what makes this reliable, because 1 gram of water is 1 millilitre to within about 4 percent across brewing temperatures. Grams of coffee, however, do not convert to spoons with any consistency: a level tablespoon of a dark roast fines-heavy grind can weigh nearly double a tablespoon of a coarse light roast. That is why every serious recipe is written by weight and why the ratio only holds if both sides are weighed.</p>
+<p>The second piece of math is yield. Wet grounds retain roughly twice their own weight in water, so a 20 gram dose keeps back about 40 grams of the 320 you poured. The cup gets around 280 grams, or 9.5 fluid ounces, not 10.8. If you need an exact 8 ounce cup, the dose has to rise to compensate: solving 16 times dose equals 236.6 plus 2 times dose gives a dose of about 16.9 grams. That is the calculation most brewing charts leave out, and it is why the same recipe can taste weak in one dripper and fine in another with a different bed depth.</p>
+
+<h2>Typical ratios by brew method</h2>
+<p>These are starting points, not rules. Move the second number down for a stronger cup and up for a lighter one, then keep it fixed while you tune the grind.</p>
+<table>
+<tr><th>Method</th><th>Ratio (1:X)</th><th>Grind</th><th>Contact time</th><th>Water temp</th></tr>
+<tr><td>Espresso</td><td>1:2</td><td>Fine</td><td>25 to 30 sec</td><td>93 C</td></tr>
+<tr><td>Moka pot</td><td>1:10</td><td>Fine-medium</td><td>3 to 4 min</td><td>Off boil</td></tr>
+<tr><td>AeroPress</td><td>1:13</td><td>Medium-fine</td><td>1 to 1.5 min</td><td>85 to 92 C</td></tr>
+<tr><td>French press</td><td>1:15</td><td>Coarse</td><td>4 min</td><td>95 C</td></tr>
+<tr><td>Pour-over</td><td>1:16</td><td>Medium</td><td>2.5 to 3 min</td><td>93 to 96 C</td></tr>
+<tr><td>Drip machine</td><td>1:17</td><td>Medium</td><td>4 to 6 min</td><td>90 to 96 C</td></tr>
+<tr><td>Cold brew</td><td>1:8 concentrate</td><td>Coarse</td><td>12 to 18 hr</td><td>Room temp</td></tr>
+</table>
+<p>Espresso is the odd one out. Its ratio is quoted as dry dose to liquid in the cup, not to water through the puck, so an 18 gram basket yielding 36 grams of espresso is a 1 to 2 shot. Do not carry that convention over to a dripper, where a 1 to 2 ratio would mean almost no water at all.</p>
+
+<h2>Strength is not the same as extraction</h2>
+<p>Two variables get mixed up constantly. The ratio controls strength, meaning how much dissolved coffee ends up in each millilitre. Grind, contact time and temperature control extraction, meaning what percentage of the dry grounds actually dissolves. You can brew a very strong cup that is badly under-extracted, and a weak cup that is over-extracted, which is why adding coffee to fix a bitter cup usually makes it worse.</p>
+<p>A useful sequence when a cup disappoints: check the ratio first, because it is the easiest to measure; then the grind; then the time; then the water temperature. If the cup is sour or salty, extraction is low, so grind finer before adding dose. If it is bitter or drying, extraction is high, so grind coarser or shorten the contact time. Only adjust the ratio when the cup is well extracted but simply too strong or too weak for your taste.</p>
+
+<h2>Common usage</h2>
+<ul>
+<li>Scale a pour-over recipe up to a full carafe without losing the ratio.</li>
+<li>Work out how many grams a 12 cup drip batch needs before you grind.</li>
+<li>Convert a 1:8 cold brew concentrate into a drinking-strength dilution.</li>
+<li>Check whether a bag of beans will last the week at your current dose.</li>
+<li>Match a cafe recipe at home with the <a href="./recipe-scaler-calculator.html" style="color:#2363e0">Recipe Scaler Calculator</a> for the food side of the same batch.</li>
+<li>Compare bags by cost per brewed cup with the <a href="./unit-price-calculator.html" style="color:#2363e0">Unit Price Calculator</a>.</li>
+</ul>
+
+<h2>Mistakes that make the ratio useless</h2>
+<p>The most common is measuring coffee with a scoop and water with a carafe marking. Neither is accurate enough for a ratio to mean anything, and the errors compound: a 12 gram scoop where the recipe assumes 15 grams, plus a carafe line that is 5 percent off, can turn a 1 to 16 recipe into something closer to 1 to 20. Weigh both sides.</p>
+<p>The second is forgetting absorption when brewing small doses. A 15 gram dose holds back about 30 grams, which is over an ounce, so a single-cup recipe loses a noticeable share of its water to the bed. The third is scaling a batch without touching the grind: a 900 gram French press steeps differently from a 300 gram one, and a deep pour-over bed drains slower than a shallow one, so large batches usually need a slightly coarser grind or a slightly shorter time to land in the same place on the extraction curve.</p>
+<p>Finally, do not treat water as neutral. If your tap water is very hard or heavily chlorinated, the same recipe will taste flatter or harsher than the numbers predict. Filtered water in the 50 to 150 ppm hardness range is a reasonable target, and it costs less than the beans it is ruining.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>How many grams of coffee for one cup?</h3>
+<p>For an 8 fluid ounce cup at 1 to 16, plan on about 17 grams of coffee and 270 grams of water. The extra water above the 237 grams in the cup covers what the grounds retain. At 1 to 15 use roughly 18 grams, and at 1 to 17 about 16 grams.</p>
+<h3>Does the calculator work in ounces instead of grams?</h3>
+<p>The ratio is unit-free, so 1 to 16 holds whether you weigh in grams or ounces. The outputs here are in grams and millilitres because scales and kettles are marked that way, and because a 0.1 gram resolution is easy to find. A 1 ounce dose at 1 to 16 means 16 ounces of water, which is the same ratio in a clumsier unit.</p>
+<h3>What about milk drinks?</h3>
+<p>Ratio only describes the coffee and water. A 1 to 2 espresso shot pulled as 36 grams of liquid then blended with 150 grams of milk is still a 1 to 2 shot; the milk changes strength in the cup, not extraction. If you want a consistent flat white, fix the shot weight and the milk weight separately rather than adjusting the brew ratio.</p>
+<h3>Why does my batch taste weaker than the same ratio brewed one cup at a time?</h3>
+<p>Usually because of bed depth and flow. A tall bed of grounds in a big batch drains unevenly, with some of the bed over-extracted and some barely wetted, and the average lands thin. Grinding slightly coarser and stirring the bloom helps, and so does splitting a large batch into two pours rather than one.</p>
+<h3>Is a 1 to 15 ratio the same as 1:15 by volume?</h3>
+<p>No, and volume ratios always flatter themselves. Ground coffee sits at roughly 0.4 grams per millilitre against 1 gram per millilitre for water, so a volume ratio of 1 to N lands near 1 to 2.5N by weight. A 1 to 15 volume recipe is therefore about 1 to 37 by weight, roughly half the strength of a standard drip brew, and a two tablespoon scoop in a 6 ounce cup works out near 1 to 18 rather than the 1 to 6 it looks like on paper.</p>
+<h3>Can I use this for tea or matcha?</h3>
+<p>The arithmetic works for any leaf-to-water infusion, and the same absorption correction applies to loose leaf. What does not transfer is the benchmark ratio: tea is usually brewed far weaker by weight, around 1 to 50 for a standard black tea infusion, so treat the method presets here as coffee-only guidance.</p>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+function num(el,def){ var v=parseFloat(el.value); return isNaN(v)?def:v; }
+
+var OZ_G = 29.5735;
+var ABSORB = 2.0;
+
+function brew(dose, ratio, cupOz){
+  var water = dose * ratio;
+  var absorbed = ratio >= 6 ? ABSORB * dose : 0;
+  var yieldG = Math.max(water - absorbed, 0);
+  var floz = water / OZ_G;
+  var cupG = cupOz * OZ_G;
+  return {
+    water: water,
+    ml: water,
+    absorbed: absorbed,
+    yieldG: yieldG,
+    yieldOz: yieldG / OZ_G,
+    floz: floz,
+    cups: floz / cupOz,
+    cupG: cupG,
+    cupsInCup: yieldG / cupG,
+    perCup: dose / (floz / cupOz),
+    gramPerOz: dose / floz
+  };
+}
+
+function doseForCups(cups, cupOz, ratio){
+  var targetG = cups * cupOz * OZ_G;
+  if(ratio <= ABSORB + 0.5){ return null; }
+  var dose = targetG / (ratio - ABSORB);
+  return {dose: dose, targetG: targetG};
+}
+
+var modeEl = document.getElementById('mode');
+var doseEl = document.getElementById('dose');
+var cupsEl = document.getElementById('cups');
+var cupOzEl = document.getElementById('cupOz');
+var ratioEl = document.getElementById('ratio');
+var methodEl = document.getElementById('method');
+
+methodEl.onchange = function(){
+  ratioEl.value = methodEl.value;
+};
+
+modeEl.onchange = function(){
+  if(modeEl.value === 'cups'){
+    doseEl.style.display = 'none';
+    cupsEl.style.display = '';
+  } else {
+    doseEl.style.display = '';
+    cupsEl.style.display = 'none';
+  }
+};
+
+document.getElementById('calcBtn').onclick = function(){
+  var ratio = num(ratioEl, 16);
+  var cupOz = num(cupOzEl, 8);
+  var out = document.getElementById('resOut');
+  var tbl = document.getElementById('resTbl');
+  if(ratio < 1.5 || ratio > 30){
+    out.textContent = 'Enter a ratio between 1:1.5 and 1:30';
+    tbl.innerHTML = '';
+    return;
+  }
+  var dose, extra = '';
+  if(modeEl.value === 'cups'){
+    var c = num(cupsEl, 0);
+    if(c <= 0){
+      out.textContent = 'Enter how many cups you want';
+      tbl.innerHTML = '';
+      return;
+    }
+    var d = doseForCups(c, cupOz, ratio);
+    if(!d){
+      out.textContent = 'That ratio is too strong for a cup target. Use 1:6 or weaker, or work from a coffee dose instead.';
+      tbl.innerHTML = '';
+      return;
+    }
+    dose = d.dose;
+    extra = 'For ' + c + ' cups of ' + cupOz + ' fl oz, allowing for loss to the bed: ';
+  } else {
+    dose = num(doseEl, 0);
+    if(dose <= 0){
+      out.textContent = 'Enter a coffee dose in grams';
+      tbl.innerHTML = '';
+      return;
+    }
+  }
+  var r = brew(dose, ratio, cupOz);
+  out.innerHTML = extra + 'Coffee: <span style="color:#0f9d58;font-size:22px">'
+    + dose.toFixed(1) + ' g</span> &nbsp;|&nbsp; Water: '
+    + r.water.toFixed(0) + ' g &nbsp;|&nbsp; In cup: ' + r.yieldG.toFixed(0) + ' g ('
+    + (r.yieldG / OZ_G).toFixed(1) + ' fl oz)';
+  var rows = '<tr><th>Item</th><th>Amount</th></tr>'
+    + '<tr><td>Brew ratio</td><td>1 : ' + ratio + '</td></tr>'
+    + '<tr><td>Ground coffee</td><td>' + dose.toFixed(1) + ' g</td></tr>'
+    + '<tr><td>Water to pour</td><td>' + r.water.toFixed(0) + ' g</td></tr>'
+    + '<tr><td>Water volume (approx)</td><td>' + r.ml.toFixed(0) + ' ml</td></tr>'
+    + '<tr><td>Water in fluid ounces</td><td>' + r.floz.toFixed(1) + ' fl oz</td></tr>'
+    + '<tr><td>Water in ' + cupOz + ' oz cups</td><td>' + r.cups.toFixed(2) + '</td></tr>'
+    + '<tr><td>Retained by wet grounds</td><td>' + r.absorbed.toFixed(0) + ' g</td></tr>'
+    + '<tr><td>Liquid in the cup</td><td>' + r.yieldG.toFixed(0) + ' g</td></tr>'
+    + '<tr><td>Liquid in the cup (fl oz)</td><td>' + r.yieldOz.toFixed(1) + ' fl oz</td></tr>'
+    + '<tr><td>Cups of ' + cupOz + ' oz actually poured</td><td>' + r.cupsInCup.toFixed(2) + '</td></tr>'
+    + '<tr><td>Coffee per ' + cupOz + ' oz cup</td><td>' + r.perCup.toFixed(1) + ' g</td></tr>';
+  tbl.innerHTML = rows;
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>

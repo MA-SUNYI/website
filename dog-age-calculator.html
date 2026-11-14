@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dog Age Calculator | Dog Years to Human Years by Breed Size</title>
+<meta name="description" content="Convert dog years to human years with two published models side by side: the AKC size-adjusted method and the DNA methylation equation, plus life stage.">
+<link rel="canonical" href="https://www.xiake.icu/dog-age-calculator.html">
+<meta name="keywords" content="dog age calculator, dog years to human years, how old is my dog in human years, dog age chart, senior dog age, large breed aging, puppy age in human years">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+h3{font-size:17px;margin:18px 0 6px;color:#1d4ed8;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Dog Age Calculator","description":"Convert dog years to human years with two published models displayed side by side: the AKC and AVMA size-adjusted step method and the Wang 2020 DNA-methylation equation. Also returns the dog life stage and the age at which senior screening should start.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/dog-age-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does a one-year-old dog come out as 15 in one method and 31 in the other?","acceptedAnswer":{"@type":"Answer","text":"The step method treats the first birthday as roughly the end of adolescence, about 15 human years. The DNA-methylation equation was fitted on Labrador retrievers and describes biological age, where a one-year-old dog sits near a 31-year-old human. Below about two years the two models answer different questions, so read the step figure for development and the log figure from early adulthood onward."}},{"@type":"Question","name":"How do I estimate the age of a rescue dog with no known birthday?","acceptedAnswer":{"@type":"Answer","text":"A veterinarian grades dental wear, tartar, muscle tone, lens clarity and coat greying, which usually narrows age to within one or two years. Dental eruption puts puppies under about seven months, and heavy tartar with worn incisors usually means five years or more. Enter that estimate and read the range as a band, not a precise number."}},{"@type":"Question","name":"Do large dogs age faster or do they simply live shorter lives?","acceptedAnswer":{"@type":"Answer","text":"Both. Large and giant breeds reach adult size in roughly a year, and the rapid growth is associated with earlier cellular aging, higher cancer rates and earlier joint disease. A Great Dane is commonly treated as senior at six, while a Jack Russell may not be senior until ten. The size factor in the step method exists to capture that gap."}},{"@type":"Question","name":"Do spayed and neutered dogs age differently?","acceptedAnswer":{"@type":"Answer","text":"Their aging rate is essentially unchanged, but expected lifespan is longer. Population data puts the gain at roughly one to three years, mostly from avoided reproductive cancers, pyometra and roaming injuries. Because the senior threshold is defined as the last quarter of expected lifespan, a neutered dog may stay in the adult stage slightly longer."}},{"@type":"Question","name":"At what age should senior bloodwork start?","acceptedAnswer":{"@type":"Answer","text":"Guidance ties it to size rather than to a single number: around six years for giant breeds, seven for large, nine for medium and ten for small and toy breeds. From that point most vets move to twice-yearly visits with a chemistry panel, complete blood count, urinalysis and blood pressure check."}},{"@type":"Question","name":"Can I use this calculator for a puppy under six months?","acceptedAnswer":{"@type":"Answer","text":"Yes, but only the step method is meaningful. The logarithmic equation is not calibrated below about one year and produces figures that overstate development in young puppies. Decimal ages such as 0.4 are accepted, and the output switches to a linear 15-per-year ramp so that a four-month puppy reads as about five human years."}}]}
+</script>
+<meta property="og:title" content="Dog Age Calculator | Dog Years to Human Years by Breed Size">
+<meta property="og:description" content="Convert dog years to human years with two published models side by side: the AKC size-adjusted method and the DNA methylation equation, plus life stage.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/dog-age-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dog Age Calculator | Dog Years to Human Years by Breed Size">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Convert dog years to human years with two published models side by side: the AKC size-adjusted method and the DNA methylation equation, plus life stage.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./pet-cost-calculator.html">Pet Cost</a>
+    <a href="./age-calculator.html">Age Calculator</a>
+    <a href="./calorie-calculator.html">Calorie Calculator</a>
+</div>
+
+<h1>Dog Age Calculator</h1>
+<p>A dog is not seven human years per birthday, and the gap between a Chihuahua and a Great Dane of the same age is wider than most owners expect. This calculator converts your dog's age into a human-age equivalent using two published models at once: the size-adjusted step method that the AKC and AVMA describe, and the DNA-methylation equation published by Wang and colleagues in 2020. It also returns the life stage your dog is in and the age at which senior screening usually starts, because those two facts change what you actually do next. Enter the age in years, decimals included, and choose the weight class your dog will reach as an adult rather than the weight it carries today.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="age" step="0.1" min="0.1" max="25" placeholder="Dog age in years (e.g. 3.5)">
+        <select id="size">
+            <option value="toy">Toy (under 12 lb)</option>
+            <option value="small">Small (12 to 25 lb)</option>
+            <option value="medium" selected>Medium (26 to 60 lb)</option>
+            <option value="large">Large (61 to 90 lb)</option>
+            <option value="giant">Giant (over 90 lb)</option>
+        </select>
+        <button id="calcBtn">Convert</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the two conversion methods work</h2>
+<p>The first model is a step function with a size factor. It assigns 15 human years to the first year, nine more to the second, which puts a two-year-old dog at 24 regardless of breed, and then adds a fixed number of human years for every year after that depending on adult size. The increments are about four years per calendar year for toy and small breeds, five for medium, six for large and seven for giant breeds. A four-year-old Labrador retriever, a large breed, therefore lands at 24 plus two increments of six, which is 36. The same four-year-old as a small terrier lands at 24 plus two increments of four, which is 32. The whole point of the size factor is that a dog's metabolic and orthopedic clock runs at a different speed once it has finished growing.</p>
+<p>The second model comes from a 2020 study in Cell Systems that compared DNA methylation patterns in dogs and humans. Its equation is human age equals 16 times the natural logarithm of dog age, plus 31. At four years that gives 16 times 1.386 plus 31, or 53.2 human years. At ten years it gives 16 times 2.303 plus 31, or 67.8. At one year the logarithm is zero, so the result is simply 31. The curve rises steeply through the first two years and then flattens, which is the shape you want: dogs sprint through adolescence and then age slowly relative to humans.</p>
+<p>Because the two models disagree, the calculator shows both. The step figure is easier to read against life events such as adulthood, breeding age and senior status. The logarithmic figure is a better description of biological wear in middle and old age. Neither is a measurement of your individual dog; both are population averages with real spread around them.</p>
+
+<h2>Human-age equivalents by size</h2>
+<p>The table below applies the step method to common ages. Read it down a column to see how fast a dog moves through human-equivalent time, and across a row to see what adult size does to the same birthday.</p>
+<table>
+<tr><th>Dog age</th><th>Toy (4/yr)</th><th>Small (4.5/yr)</th><th>Medium (5/yr)</th><th>Large (6/yr)</th><th>Giant (7/yr)</th></tr>
+<tr><td>1 year</td><td>15</td><td>15</td><td>15</td><td>15</td><td>15</td></tr>
+<tr><td>2 years</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td></tr>
+<tr><td>3 years</td><td>28</td><td>28.5</td><td>29</td><td>30</td><td>31</td></tr>
+<tr><td>5 years</td><td>36</td><td>37.5</td><td>39</td><td>42</td><td>45</td></tr>
+<tr><td>8 years</td><td>48</td><td>51</td><td>54</td><td>60</td><td>66</td></tr>
+<tr><td>10 years</td><td>56</td><td>60</td><td>64</td><td>72</td><td>80</td></tr>
+<tr><td>12 years</td><td>64</td><td>69</td><td>74</td><td>84</td><td>94</td></tr>
+</table>
+<p>The spread at twelve years is thirty human years between a toy breed and a giant breed, which is why a single multiplier was never going to work. It is also why insurance premiums, screening schedules and diet formulas are quoted by weight class rather than by birthday.</p>
+
+<h2>Life stages and when senior care begins</h2>
+<p>Life stage matters more than the human-age number on its own, because stage drives the care calendar. A dog is a puppy until about twelve months, a junior until two, an adult through its prime years, then mature, senior and geriatric. The thresholds shift with size: giant breeds are commonly treated as senior around six years, large breeds at seven, medium breeds at nine, and small or toy breeds at ten. Geriatric status usually follows three to four years later. AAHA guidance frames senior as the last quarter of expected lifespan, which is why a six-year-old Great Dane and a ten-year-old Poodle can sit in the same bracket.</p>
+<table>
+<tr><th>Adult size</th><th>Senior from</th><th>Geriatric from</th><th>Typical lifespan</th></tr>
+<tr><td>Toy</td><td>10 years</td><td>13 years</td><td>13 to 16 years</td></tr>
+<tr><td>Small</td><td>10 years</td><td>13 years</td><td>12 to 15 years</td></tr>
+<tr><td>Medium</td><td>9 years</td><td>12 years</td><td>11 to 14 years</td></tr>
+<tr><td>Large</td><td>7 years</td><td>10 years</td><td>10 to 12 years</td></tr>
+<tr><td>Giant</td><td>6 years</td><td>8 years</td><td>7 to 10 years</td></tr>
+</table>
+
+<h2>Common usage</h2>
+<ul>
+<li>Decide when to move from annual wellness visits to twice-yearly checks with bloodwork.</li>
+<li>Sanity-check a rescue dog's estimated age before committing to a senior diet.</li>
+<li>Compare two dogs of different sizes that are the same calendar age, for example when rehoming.</li>
+<li>Budget lifetime care with the <a href="./pet-cost-calculator.html" style="color:#2363e0">Pet Cost Calculator</a>, where the senior years carry the highest annual spend.</li>
+<li>Set a human point of reference for a child learning how old the family dog is, using the <a href="./age-calculator.html" style="color:#2363e0">Age Calculator</a> for the human side.</li>
+</ul>
+
+<h2>Why the seven-year rule fails, and where both formulas still mislead</h2>
+<p>The seven-to-one rule is folklore from the middle of the last century, probably chosen because average human lifespan divided neatly by average dog lifespan. It fails at both ends. A one-year-old dog is sexually mature and physically adult, which is closer to a human mid-teen than a seven-year-old child, and a fifteen-year-old dog is not a 105-year-old human, it is an old dog of a small breed with a few years left. The step method fixes the early years; the logarithmic model fixes the curve; neither fixes the fact that the number is an average.</p>
+<p>Three caveats are worth stating plainly. First, the DNA-methylation equation was derived from a cohort of Labrador retrievers, so applying it to a Chihuahua or a Borzoi stretches it well past its calibration. Second, mixed breeds are not an average of their parents' curves, and body size at maturity predicts the curve better than breed name does. Third, body condition beats every formula as a predictor of how long a dog will actually last: in the Purina lifespan study, Labradors fed to a lean body condition lived a median 1.8 years longer than littermates fed freely, which is close to a decade of human-equivalent time. If you only track one number about an aging dog, track weight and body condition score rather than the conversion.</p>
+<p>Two practical notes. Puppies under six months read better on the linear ramp than on the log curve, and the calculator handles that by scaling the first year at fifteen per year. Dogs with no documented birthday should be entered at the midpoint of the vet's estimate, then read as a band: a dog estimated at eight to ten years is best planned for as a nine-year-old with a three-year spread in either direction.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>Why is my four-year-old Labrador 36 by one method and 53 by the other?</h3>
+<p>Because they measure different things. The step method is a life-stage translation calibrated to milestones such as adulthood and senior status. The log equation is a biological-age estimate from methylation data, and at four years a large dog's tissues look considerably older than a human thirty-six. For care decisions use the step figure and the stage label; for a rough biological comparison use the log figure.</p>
+<h3>My dog is 14 and still runs five miles. Does the calculator know that?</h3>
+<p>No, and it should not pretend to. Fitness, dental care, weight control and genetics move real biological age by years in either direction. A lean, exercised fourteen-year-old small breed can behave like the table's twelve-year-old. Treat a good result as permission to keep doing what you are doing, not as proof the dog is younger than its records say.</p>
+<h3>Does the calculator work for cats or horses?</h3>
+<p>Not directly. Cats follow a different step pattern, roughly 15 for the first year and 24 by the second, then about four per year, and horses are usually scored on wear and dentition rather than on a formula. Use this page for dogs only and expect a cat's curve to sit closer to the small-breed dog column without matching it.</p>
+<h3>Should I use adult weight or current weight for the size class?</h3>
+<p>Adult weight. A six-month-old Great Dane puppy may weigh 70 lb today and finish near 140 lb, so selecting the current weight puts it in the wrong aging lane for the rest of its life. If you do not know the adult weight, use the breed's typical range, or ask the breeder or rescue for the dam and sire's weights.</p>
+<h3>How accurate is the conversion at the very old end?</h3>
+<p>Least accurate there. Above twelve years the sample sizes in every published study shrink, and the formulas were never designed to distinguish a fourteen-year-old from a fifteen-year-old. Past that point, quality-of-life scoring and mobility checks tell you more than any human-age number.</p>
+<h3>Does the number change anything about feeding?</h3>
+<p>Indirectly. Once a dog is senior by size, resting energy requirement drops while protein needs stay flat or rise, so most owners are overfeeding an older dog by ten to twenty percent without noticing. Weigh the food rather than scooping it, and recheck body condition every couple of months.</p>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+function num(el,def){ var v=parseFloat(el.value); return isNaN(v)?def:v; }
+
+var SIZE = {
+  toy:    {rate:4,   senior:10, life:'13 to 16 years', lifeMin:13, lifeMax:16, label:'Toy (under 12 lb)'},
+  small:  {rate:4.5, senior:10, life:'12 to 15 years', lifeMin:12, lifeMax:15, label:'Small (12 to 25 lb)'},
+  medium: {rate:5,   senior:9,  life:'11 to 14 years', lifeMin:11, lifeMax:14, label:'Medium (26 to 60 lb)'},
+  large:  {rate:6,   senior:7,  life:'10 to 12 years', lifeMin:10, lifeMax:12, label:'Large (61 to 90 lb)'},
+  giant:  {rate:7,   senior:6,  life:'7 to 10 years',  lifeMin:7,  lifeMax:10, label:'Giant (over 90 lb)'}
+};
+
+function dogAge(age, key){
+  var s = SIZE[key] || SIZE.medium;
+  var step;
+  if(age <= 1){ step = 15 * age; }
+  else if(age <= 2){ step = 15 + 9 * (age - 1); }
+  else { step = 24 + s.rate * (age - 2); }
+  var logAge = 16 * Math.log(Math.max(age, 0.25)) + 31;
+  var stage;
+  if(age < 1){ stage = 'Puppy'; }
+  else if(age < 2){ stage = 'Junior'; }
+  else if(age < s.senior - 1.5){ stage = 'Adult'; }
+  else if(age < s.senior){ stage = 'Mature adult'; }
+  else if(age < s.senior + 3){ stage = 'Senior'; }
+  else { stage = 'Geriatric'; }
+  return {
+    step: step,
+    log: logAge,
+    stage: stage,
+    rate: s.rate,
+    senior: s.senior,
+    geriatric: s.senior + 3,
+    life: s.life,
+    label: s.label,
+    pctLife: Math.min(100, age / ((s.lifeMin + s.lifeMax) / 2) * 100)
+  };
+}
+
+document.getElementById('calcBtn').onclick = function(){
+  var age = num(document.getElementById('age'), 0);
+  var key = document.getElementById('size').value;
+  var out = document.getElementById('resOut');
+  var tbl = document.getElementById('resTbl');
+  if(age <= 0 || age > 25){
+    out.textContent = 'Enter an age between 0.1 and 25 years';
+    tbl.innerHTML = '';
+    return;
+  }
+  var r = dogAge(age, key);
+  out.innerHTML = 'Human-age equivalent: <span style="color:#0f9d58;font-size:22px">'
+    + r.step.toFixed(1) + '</span> years (step method) &nbsp;|&nbsp; '
+    + r.log.toFixed(1) + ' years (biological model)';
+  var rows = '<tr><th>Measure</th><th>Result</th></tr>'
+    + '<tr><td>Size class</td><td>' + r.label + '</td></tr>'
+    + '<tr><td>Step method (AKC / AVMA)</td><td>' + r.step.toFixed(1) + ' human years</td></tr>'
+    + '<tr><td>DNA-methylation model</td><td>' + r.log.toFixed(1) + ' human years</td></tr>'
+    + '<tr><td>Years added per dog year now</td><td>' + (age < 1 ? 15 : (age < 2 ? 9 : r.rate)) + '</td></tr>'
+    + '<tr><td>Life stage</td><td>' + r.stage + '</td></tr>'
+    + '<tr><td>Senior screening from</td><td>' + r.senior + ' years</td></tr>'
+    + '<tr><td>Geriatric stage from</td><td>' + r.geriatric + ' years</td></tr>'
+    + '<tr><td>Typical lifespan for size</td><td>' + r.life + '</td></tr>'
+    + '<tr><td>Share of typical lifespan elapsed</td><td>' + r.pctLife.toFixed(0) + '%</td></tr>';
+  if(age < 1){
+    rows += '<tr><td>Age in months</td><td>' + Math.round(age * 12) + '</td></tr>';
+  }
+  tbl.innerHTML = rows;
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
