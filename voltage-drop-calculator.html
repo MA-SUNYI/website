@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltage Drop Calculator | AWG Wire Size &amp; 3% Rule Check</title>
+<meta name="description" content="Free voltage drop calculator for copper and aluminum wire: pick AWG size, length, amps and voltage to see drop, percent and whether it meets the 3% mark.">
+<link rel="canonical" href="https://www.xiake.icu/voltage-drop-calculator.html">
+<meta name="keywords" content="voltage drop calculator, voltage drop formula, wire size calculator, copper wire voltage drop, aluminum wire voltage drop, 3 percent voltage drop, NEC 210.19, feeder voltage drop">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Voltage Drop Calculator","description":"Free voltage drop calculator for copper and aluminum conductors that reports the voltage lost along a run, the percentage drop, the delivered voltage and whether the run meets the 3 percent branch circuit guideline.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/voltage-drop-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does the calculator double the one-way length?","acceptedAnswer":{"@type":"Answer","text":"Current must travel out along the hot conductor and back along the neutral, so the resistance the load sees is that of both conductors in series. A 100 foot run of 12 AWG to a garage has 200 feet of copper in the circuit. Enter the one-way distance and let the tool double it, or the drop will come out at half the truth."}},{"@type":"Question","name":"Does a voltage drop over 3 percent violate the electrical code?","acceptedAnswer":{"@type":"Answer","text":"Usually not. In the National Electrical Code the 3 percent branch circuit and 5 percent total figures appear in informational notes in Article 210 and Article 215, which are guidance rather than enforceable requirements. Ampacity limits in Article 310 and 240 are enforceable. Some local amendments and many equipment warranties do make voltage drop mandatory, so check with the authority having jurisdiction for your project."}},{"@type":"Question","name":"Why does 240 volt wiring drop less than 120 volt wiring with the same load?","acceptedAnswer":{"@type":"Answer","text":"The drop in volts depends on the current, not the voltage. A 1,800 watt load draws 15 amps at 120 volts but only 7.5 amps at 240 volts, so the resistance loss is halved twice over and the drop in volts falls to roughly a quarter. The percentage drop falls by the same factor, which is why long runs to wells and shops are often wired at 240 volts."}},{"@type":"Question","name":"Why does the same aluminum wire drop more than copper?","acceptedAnswer":{"@type":"Answer","text":"Aluminum has about 64 percent more resistance than copper for the same cross section, roughly 21.2 circular mil ohms per foot against 12.9 for copper at 75 degrees Celsius. To match a copper conductor you generally go up two AWG sizes, for example 8 AWG aluminum in place of 10 AWG copper, and that larger size also removes much of the drop."}},{"@type":"Question","name":"Is the voltage drop worse in summer heat?","acceptedAnswer":{"@type":"Answer","text":"Yes. Copper resistance rises about 0.4 percent for every degree Celsius, so a conductor running at 75 degrees Celsius instead of 20 degrees Celsius carries roughly 21 percent more resistance and 21 percent more drop. Attic runs and conduits packed with current-carrying conductors are where this matters most, and it is one reason code ampacity tables use 60 and 75 degree columns."}},{"@type":"Question","name":"Can I fix a failed voltage drop check by increasing the breaker size?","acceptedAnswer":{"@type":"Answer","text":"No. A larger breaker lets more current flow before tripping; it does nothing to reduce resistance along the wire and can overheat a conductor that was correctly sized for the load. The effective fixes are a larger conductor, a shorter run, a higher system voltage, or moving the load closer to the source."}}]}
+</script>
+<meta property="og:title" content="Voltage Drop Calculator | AWG Wire Size &amp; 3% Rule Check">
+<meta property="og:description" content="Free voltage drop calculator for copper and aluminum wire: pick AWG size, length, amps and voltage to see drop, percent and whether it meets the 3% mark.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/voltage-drop-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Voltage Drop Calculator | AWG Wire Size &amp; 3% Rule Check">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free voltage drop calculator for copper and aluminum wire: pick AWG size, length, amps and voltage to see drop, percent and whether it meets the 3% mark.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./wire-gauge-calculator.html">Wire Gauge</a>
+    <a href="./electricity-cost-calculator.html">Electricity Cost</a>
+    <a href="./ev-charging-cost-calculator.html">EV Charging Cost</a>
+</div>
+
+<h1>Voltage Drop Calculator</h1>
+<p>A 100 foot run of 14 AWG carrying a 12 amp saw loses about 7.5 volts before the current ever reaches the tool. That is 6.3 percent of a 120 volt circuit, enough to make a motor run hot and a light dim, and it is the reason electricians size long runs by distance rather than by ampacity alone. Enter the conductor, the one-way length, the load current and the system voltage, and this tool reports the volts lost, the percentage drop, the voltage the equipment actually sees, and how many feet of that conductor would stay inside 3 percent.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <select id="gauge">
+            <option value="14">14 AWG</option>
+            <option value="12" selected>12 AWG</option>
+            <option value="10">10 AWG</option>
+            <option value="8">8 AWG</option>
+            <option value="6">6 AWG</option>
+            <option value="4">4 AWG</option>
+            <option value="2">2 AWG</option>
+            <option value="1/0">1/0 AWG</option>
+            <option value="2/0">2/0 AWG</option>
+            <option value="4/0">4/0 AWG</option>
+        </select>
+        <select id="material">
+            <option value="cu" selected>Copper</option>
+            <option value="al">Aluminum</option>
+        </select>
+        <input type="number" id="amps" placeholder="Load current (A)" value="20" step="0.1">
+        <input type="number" id="length" placeholder="One-way length (ft)" value="75" step="1">
+    </div>
+    <div class="input-row">
+        <input type="number" id="volts" placeholder="System voltage (V)" value="120" step="1">
+        <select id="phase">
+            <option value="1" selected>Single phase (120/240 V)</option>
+            <option value="3">Three phase (208/480 V)</option>
+        </select>
+        <select id="temp">
+            <option value="20">Conductor at 20 C (cold)</option>
+            <option value="60">Conductor at 60 C</option>
+            <option value="75" selected>Conductor at 75 C (typical)</option>
+        </select>
+        <select id="pf">
+            <option value="1" selected>Power factor 1.00 (motors off, resistive)</option>
+            <option value="0.9">Power factor 0.90</option>
+            <option value="0.85">Power factor 0.85 (induction motors)</option>
+        </select>
+    </div>
+    <button id="calcBtn">Calculate Voltage Drop</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>The Formula Behind the Numbers</h2>
+<p>Voltage drop is Ohm's law applied to the conductor instead of the load. The conductor has resistance, current flows through it, and the product of the two is the voltage that never reaches the equipment.</p>
+<p><b>Single phase: Vdrop = 2 x K x I x L / CM</b>, where K is the resistivity in circular mil ohms per foot, I is current in amps, L is one-way length in feet and CM is the circular mil area of the conductor. <b>Three phase: Vdrop = 1.732 x K x I x L / CM</b>. The 2 and the 1.732 are the reason single phase counts the return path and three phase splits the load across three conductors.</p>
+<p>This page uses the resistance-per-1000-feet method, which is the same arithmetic written differently: <b>Vdrop = I x R x 2L / 1000</b> for single phase, with R taken from the copper or aluminum resistance table at 75 degrees Celsius. For 12 AWG copper R is 1.93 ohms per 1000 feet, so 20 amps over 150 feet of conductor (75 feet each way) gives 20 x 1.93 x 0.150 = 5.79 volts, which is 4.83 percent of 120 volts. The tool reports 114.2 volts at the load and tells you that 46 feet is the longest one-way run that holds 3 percent at 20 amps.</p>
+<p>Worked example two, a 240 volt well pump at 8 amps on 10 AWG copper, 250 feet away. R for 10 AWG is 1.21 ohms per 1000 feet. Vdrop = 8 x 1.21 x 0.5 = 4.84 volts, or 2.02 percent, leaving 235.2 volts at the pump. That passes. Drop the wire to 14 AWG (3.14 ohms per 1000 feet) and the same run loses 12.56 volts, 5.23 percent, which is why a pump that trips on low voltage is usually a wire size problem rather than a pump problem.</p>
+
+<h2>Reference Table: Drop Per 100 Feet, One-Way, Copper at 75 C</h2>
+<p>Volts lost in a 100 foot one-way run (200 feet of conductor) at the currents shown. Values are computed with the same resistance table the calculator uses.</p>
+<table>
+<tr><th>AWG</th><th>Ohms / 1000 ft</th><th>at 10 A</th><th>at 15 A</th><th>at 20 A</th><th>at 30 A</th><th>at 50 A</th></tr>
+<tr><td>14 AWG</td><td>3.14</td><td>6.28</td><td>9.42</td><td>12.56</td><td>18.84</td><td>31.40</td></tr>
+<tr><td>12 AWG</td><td>1.93</td><td>3.86</td><td>5.79</td><td>7.72</td><td>11.58</td><td>19.30</td></tr>
+<tr><td>10 AWG</td><td>1.21</td><td>2.42</td><td>3.63</td><td>4.84</td><td>7.26</td><td>12.10</td></tr>
+<tr><td>8 AWG</td><td>0.764</td><td>1.53</td><td>2.29</td><td>3.06</td><td>4.58</td><td>7.64</td></tr>
+<tr><td>6 AWG</td><td>0.491</td><td>0.98</td><td>1.47</td><td>1.96</td><td>2.95</td><td>4.91</td></tr>
+<tr><td>4 AWG</td><td>0.308</td><td>0.62</td><td>0.92</td><td>1.23</td><td>1.85</td><td>3.08</td></tr>
+<tr><td>2 AWG</td><td>0.194</td><td>0.39</td><td>0.58</td><td>0.78</td><td>1.16</td><td>1.94</td></tr>
+</table>
+<p>Read the table with the voltage in mind. On a 120 volt circuit, 3 percent is 3.6 volts, which a 12 AWG run at 20 amps hits at about 46 feet one-way. On a 240 volt circuit the same 3.6 volts buys twice the distance, and on 480 volts it buys four times.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Sizing a subpanel feeder from the house to a detached garage or shop, where 100 to 150 foot runs are normal.</li>
+<li>Checking a well pump, irrigation controller or gate opener at the far end of a rural property.</li>
+<li>Planning level 2 EV charging, where a 40 amp continuous load over a long driveway run is a classic drop problem.</li>
+<li>Deciding between 120 and 240 volts for a woodworking shop or welder in an outbuilding.</li>
+<li>Verifying a lighting circuit where the last fixture on a 150 foot run flickers when the heater cycles.</li>
+<li>Comparing conductor options before buying: <a href="./wire-gauge-calculator.html" style="color:#2363e0">wire gauge calculator</a> picks ampacity, this page checks the length penalty.</li>
+</ul>
+
+<h2>Why This Matters More Than the Manufacturer Admits</h2>
+<p>Most equipment is rated to operate within 10 percent of nominal voltage, and motors inside the voltage tolerance band described in NEMA MG 1, but running near the bottom of that band is expensive. An induction motor operating at 90 percent of nameplate voltage draws more current for the same mechanical output, runs hotter, and loses roughly 10 percent of its lifespan for every 10 degrees Celsius of extra winding temperature. A compressor that starts hard on a long run is often a voltage drop symptom, not a compressor defect.</p>
+<p>Electronic loads are less forgiving in a different way. Switch mode supplies, LED drivers and variable frequency drives may accept 100 to 240 volts, but the current they draw rises as input voltage falls, which increases drop further and can push a marginal circuit into shutdown on the hottest day of the year. That is why the drop should be calculated at the full load current, not the nameplate rating of the breaker.</p>
+<p>The most common error in the field is using one-way length in the formula and forgetting the return conductor, which halves the answer and makes a failing run look acceptable. The second is sizing the conductor for the breaker instead of the load: a 20 amp breaker on 12 AWG feeding a 16 amp continuous load has a different drop profile than the same wire feeding a 2 amp LED fixture, and only the load current belongs in the calculation. The third is ignoring ambient temperature, since a conductor at 75 degrees Celsius has about 20 percent more resistance than the same conductor at 20 degrees.</p>
+<p>A last limitation worth stating plainly: this calculator assumes a single conductor per phase and no parallel runs. Parallel conductors divide the drop by the number of sets, and transformers, reactors and long service drops have their own impedance that this tool does not model. For a service entrance or anything above 600 volts, use the engineered drawings.</p>
+
+<h2>Frequently Asked Questions</h2>
+<ul>
+<li><b>Why does the calculator double the one-way length?</b> Current travels out on the hot conductor and back on the neutral, so the loop resistance is that of both conductors. A 100 foot run of 12 AWG has 200 feet of copper in the circuit. Enter the one-way distance and let the tool double it, or the drop comes out at half the real value.</li>
+<li><b>Does a voltage drop over 3 percent violate the electrical code?</b> Usually not. The 3 percent branch circuit and 5 percent total figures are informational notes in Article 210 and Article 215 of the NEC, which are guidance rather than enforceable rules; ampacity limits in Article 310 and 240 are enforceable. Some local amendments and equipment warranties do make drop mandatory, so confirm with the authority having jurisdiction.</li>
+<li><b>Why does 240 volt wiring drop less than 120 volt wiring with the same load?</b> The drop in volts depends on current. A 1,800 watt load draws 15 amps at 120 volts but 7.5 amps at 240 volts, so the loss falls to about a quarter and the percentage drop falls by the same factor. That is why long runs to wells and shops are wired at 240 volts.</li>
+<li><b>Why does the same aluminum wire drop more than copper?</b> Aluminum has about 64 percent more resistance for the same cross section, roughly 21.2 against 12.9 circular mil ohms per foot at 75 degrees Celsius. The usual fix is to go up two AWG sizes, such as 8 AWG aluminum in place of 10 AWG copper, which also removes much of the drop.</li>
+<li><b>Is the voltage drop worse in summer heat?</b> Yes. Copper resistance rises about 0.4 percent per degree Celsius, so a conductor at 75 degrees Celsius carries roughly 21 percent more resistance than at 20 degrees and drops 21 percent more voltage. Attic runs and crowded conduits are where this shows up.</li>
+<li><b>Can I fix a failed voltage drop check by increasing the breaker size?</b> No. A larger breaker lets more current flow before tripping and does nothing about resistance along the wire. The real fixes are a larger conductor, a shorter run, a higher system voltage, or moving the load closer to the source.</li>
+</ul>
+
+<h2>Related Tools</h2>
+<ul>
+<li><a href="./wire-gauge-calculator.html" style="color:#2363e0">Wire Gauge Calculator</a> for ampacity-based conductor selection by circuit.</li>
+<li><a href="./electricity-cost-calculator.html" style="color:#2363e0">Electricity Cost Calculator</a> to price what a circuit actually costs to run.</li>
+<li><a href="./ev-charging-cost-calculator.html" style="color:#2363e0">EV Charging Cost Calculator</a> before you commit to a 40 amp home charger install.</li>
+<li><a href="./board-foot-calculator.html" style="color:#2363e0">Board Foot Calculator</a> if the project also needs lumber quantities.</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var gaugeEl = document.getElementById('gauge'),
+    materialEl = document.getElementById('material'),
+    ampsEl = document.getElementById('amps'),
+    lengthEl = document.getElementById('length'),
+    voltsEl = document.getElementById('volts'),
+    phaseEl = document.getElementById('phase'),
+    tempEl = document.getElementById('temp'),
+    pfEl = document.getElementById('pf'),
+    calcBtn = document.getElementById('calcBtn'),
+    resOut = document.getElementById('resOut'),
+    resTbl = document.getElementById('resTbl');
+
+var CU = {'14':3.14,'12':1.93,'10':1.21,'8':0.764,'6':0.491,'4':0.308,'2':0.194,
+          '1/0':0.122,'2/0':0.0967,'4/0':0.0608};
+var AL = {'14':5.17,'12':3.18,'10':2.00,'8':1.26,'6':0.808,'4':0.508,'2':0.319,
+          '1/0':0.201,'2/0':0.159,'4/0':0.100};
+var GAUGE_ORDER = ['14','12','10','8','6','4','2','1/0','2/0','4/0'];
+var TEMP_FACTOR = {'20':0.868,'60':0.963,'75':1.0};
+
+function resist(material, gauge){
+  var table = material === 'al' ? AL : CU;
+  return table[gauge];
+}
+function num(el, fallback){
+  var v = parseFloat(el.value);
+  return isFinite(v) ? v : fallback;
+}
+
+function calculate(){
+  var gauge = gaugeEl.value,
+      material = materialEl.value,
+      amps = num(ampsEl, 0),
+      oneWay = num(lengthEl, 0),
+      volts = num(voltsEl, 1),
+      phase = parseFloat(phaseEl.value) || 1,
+      pf = num(pfEl, 1),
+      tf = TEMP_FACTOR[tempEl.value] || 1;
+
+  if(amps <= 0 || oneWay <= 0 || volts <= 0){
+    resOut.textContent = 'Enter a load current, a one-way length and a system voltage greater than zero.';
+    resTbl.innerHTML = '';
+    return;
+  }
+
+  var baseR = resist(material, gauge);
+  var r = baseR * tf;                         // ohms per 1000 ft at chosen temp
+  var phaseFactor = phase === 3 ? 1.732 : 2;
+  var conductorFt = oneWay * phaseFactor;     // effective conductor length
+  // resistance-only drop plus reactive term for power factor below 1
+  var xReact = r * 0.09;                      // approximate X/R for building wire
+  var drop = amps * conductorFt * (r * pf + xReact * Math.sqrt(Math.max(0, 1 - pf * pf))) / 1000;
+  var pct = drop / volts * 100;
+  var delivered = volts - drop;
+  var allowed = volts * 0.03;
+  var maxOneWay = 0;
+
+  // longest one-way distance that stays within 3 percent
+  var perFoot = amps * phaseFactor * (r * pf + xReact * Math.sqrt(Math.max(0, 1 - pf * pf))) / 1000;
+  maxOneWay = perFoot > 0 ? allowed / perFoot : 0;
+
+  var verdict = pct <= 3 ? '<span style="color:#0f9d58">Within 3%</span>'
+              : pct <= 5 ? '<span style="color:#e08b00">Above 3%, inside 5%</span>'
+              : '<span style="color:#d93025">Over 5% - upsize the conductor</span>';
+
+  resOut.innerHTML = drop.toFixed(2) + ' V drop (' + pct.toFixed(2) + '%) &middot; ' +
+    delivered.toFixed(1) + ' V at the load &middot; ' + verdict;
+
+  var rows = '<tr><th>Item</th><th>Value</th></tr>'
+    + '<tr><td>Conductor</td><td>' + gauge + ' AWG ' + (material === 'al' ? 'aluminum' : 'copper') + '</td></tr>'
+    + '<tr><td>Resistance used</td><td>' + r.toFixed(3) + ' ohms / 1000 ft</td></tr>'
+    + '<tr><td>Circuit conductor length</td><td>' + conductorFt.toFixed(0) + ' ft</td></tr>'
+    + '<tr><td><b>Voltage drop</b></td><td><b>' + drop.toFixed(2) + ' V</b></td></tr>'
+    + '<tr><td><b>Percent drop</b></td><td><b>' + pct.toFixed(2) + '%</b></td></tr>'
+    + '<tr><td>Voltage at the load</td><td>' + delivered.toFixed(1) + ' V</td></tr>'
+    + '<tr><td>Longest run at 3% (' + (phase === 3 ? 'three' : 'single') + ' phase)</td><td>' + Math.floor(maxOneWay) + ' ft one-way</td></tr>'
+    + '<tr><td>Power lost in the conductor</td><td>' + (amps * drop).toFixed(1) + ' W</td></tr>';
+  resTbl.innerHTML = rows;
+}
+
+calcBtn.addEventListener('click', calculate);
+[ampsEl, lengthEl, voltsEl].forEach(function(el){
+  el.addEventListener('input', calculate);
+});
+[gaugeEl, materialEl, phaseEl, tempEl, pfEl].forEach(function(el){
+  el.addEventListener('change', calculate);
+});
+calculate();
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Board Foot Calculator | Lumber Board Feet & Cost Estimator</title>
+<meta name="description" content="Free board foot calculator: enter thickness, width, length and quantity to get board feet and lumber cost, plus an estimated weight for hauling or drying.">
+<link rel="canonical" href="https://www.xiake.icu/board-foot-calculator.html">
+<meta name="keywords" content="board foot calculator, board feet calculator, lumber calculator, board footage, hardwood cost calculator, lumber weight calculator, how to calculate board feet">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Board Foot Calculator","description":"Free board foot calculator that converts lumber dimensions and quantity into board feet, cost per board foot and an estimated weight in pounds.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/board-foot-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I measure board feet with nominal or actual lumber sizes?","acceptedAnswer":{"@type":"Answer","text":"Milled hardwood is sold by its actual measured size, so a 4/4 board that planes down to about 13/16 inch still bills as 1 inch thick. Construction lumber is the opposite: a 2x4 is a 2x4 on the price tag but measures 1-1/2 by 3-1/2 inches. Bill dimensional lumber on the nominal figures, and bill rough hardwood on the size you actually cut."}},{"@type":"Question","name":"Why does my hardwood quote not match the calculator when I enter 1 inch thickness?","acceptedAnswer":{"@type":"Answer","text":"Many yards add a rough-milling allowance on top of the nominal quarter. A 4/4 board may be billed at 1-1/8 inch, a 6/4 at 1-5/8 inch and an 8/4 at 2-1/8 inch, which raises board feet by 12 to 12.5 percent. Ask for the yard's billing thickness and use that figure in the thickness field instead of the quarter number."}},{"@type":"Question","name":"How much does 100 board feet of walnut weigh?","acceptedAnswer":{"@type":"Answer","text":"Black walnut averages about 38 pounds per cubic foot at 12 percent moisture content, and a board foot is one twelfth of a cubic foot, so 100 board feet weighs roughly 317 pounds. That is more than most half-ton pickups can carry comfortably once you add the driver, which is why large lumber runs are often quoted with delivery."}},{"@type":"Question","name":"Does a wider board cost more per board foot?","acceptedAnswer":{"@type":"Answer","text":"Usually yes, but not because of the board foot math. Wide boards are cut from wider logs, yield less clear material per log, and are graded more harshly, so a yard may charge more per board foot for the 8 inch and up lines than for 4 inch stock of the same species and grade. Compare price per board foot within a width class, not across classes."}},{"@type":"Question","name":"How many board feet are in a typical tree or log?","acceptedAnswer":{"@type":"Answer","text":"The Doyle rule, still used on many scale sticks, for a 16 foot log with a 16 inch small-end diameter reads roughly 94 board feet, while the International 1/4 inch rule reads about 180 board feet on the same log. Mill yield is lower than scale because of slabs, edging and defects, so treat log scale as an upper bound rather than a promise of finished lumber."}},{"@type":"Question","name":"Can I use board feet for plywood and sheet goods?","acceptedAnswer":{"@type":"Answer","text":"No. Plywood, MDF and particle board are sold and priced by the sheet or by square feet, because their thickness is fixed by the manufacturer and they are not re-sawn. Using board feet on a 3/4 inch 4 by 8 foot sheet would suggest 8 board feet, but nobody sells it that way, so the number would just confuse a quote."}}]}
+</script>
+<meta property="og:title" content="Board Foot Calculator | Lumber Board Feet & Cost Estimator">
+<meta property="og:description" content="Free board foot calculator: enter thickness, width, length and quantity to get board feet and lumber cost, plus an estimated weight for hauling or drying.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/board-foot-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Board Foot Calculator | Lumber Board Feet & Cost Estimator">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free board foot calculator: enter thickness, width, length and quantity to get board feet and lumber cost, plus an estimated weight for hauling or drying.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./deck-board-calculator.html">Deck Boards</a>
+    <a href="./roof-rafter-calculator.html">Roof Rafters</a>
+    <a href="./firewood-cord-calculator.html">Firewood Cord</a>
+</div>
+
+<h1>Board Foot Calculator</h1>
+<p>Hardwood is not priced by the piece or by the square foot. It is priced by the board foot, a unit that mixes thickness, width and length into one number so a narrow 8/4 plank and a wide 4/4 plank can sit on the same invoice. This calculator converts your dimensions and quantity into board feet, tells you what the load costs at your price per board foot, and estimates the weight so you know whether the trip home needs a trailer.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="thick" placeholder="Thickness (in)" value="1" step="0.125">
+        <select id="thickPreset">
+            <option value="">Common thickness</option>
+            <option value="0.75">3/4 in (1x stock, S4S)</option>
+            <option value="1">4/4 rough (1 in)</option>
+            <option value="1.125">4/4 rough milled (1-1/8 in)</option>
+            <option value="1.5">6/4 (1-1/2 in)</option>
+            <option value="1.625">6/4 milled (1-5/8 in)</option>
+            <option value="2">8/4 (2 in)</option>
+            <option value="2.125">8/4 milled (2-1/8 in)</option>
+            <option value="3">12/4 (3 in)</option>
+            <option value="3.5">2x4 nominal</option>
+            <option value="5.5">2x6 nominal</option>
+            <option value="7.25">2x8 nominal</option>
+            <option value="9.25">2x10 nominal</option>
+            <option value="11.25">2x12 nominal</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="width" placeholder="Width (in)" value="6" step="0.25">
+        <input type="number" id="length" placeholder="Length (ft)" value="8" step="1">
+        <input type="number" id="qty" placeholder="Quantity (pieces)" value="10" step="1">
+    </div>
+    <div class="input-row">
+        <select id="species">
+            <option value="36">Red oak (36 lb/ft3)</option>
+            <option value="38" selected>Black walnut (38 lb/ft3)</option>
+            <option value="44">Hard maple (44 lb/ft3)</option>
+            <option value="41">White oak (41 lb/ft3)</option>
+            <option value="29">Cherry (29 lb/ft3)</option>
+            <option value="26">Basswood (26 lb/ft3)</option>
+            <option value="34">Ash (34 lb/ft3)</option>
+            <option value="26">Poplar (26 lb/ft3)</option>
+            <option value="23">Pine, white (23 lb/ft3)</option>
+            <option value="34">Pine, southern yellow (34 lb/ft3)</option>
+            <option value="30">Douglas fir (30 lb/ft3)</option>
+        </select>
+        <input type="number" id="price" placeholder="Price per bd ft $" value="9.50" step="0.01">
+        <select id="unit">
+            <option value="in">Width &amp; thickness in inches</option>
+            <option value="cm">Width &amp; thickness in cm</option>
+        </select>
+    </div>
+    <button id="calcBtn">Calculate Board Feet</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the Board Foot Math Works</h2>
+<p>The definition is fixed: one board foot is 144 cubic inches, the volume of a board 1 inch thick, 12 inches wide and 12 inches long. The formula just counts how many 144 cubic inch blocks your board contains.</p>
+<p><b>Board feet = (thickness in inches x width in inches x length in feet) / 12</b>, measured on each piece, then multiplied by the number of pieces. Length stays in feet on purpose: since a board foot is 12 inches long, dividing by 12 folds the inch-to-foot conversion into the same step.</p>
+<p>Worked example. You need ten boards at 8/4 (2 inches) thick, 6 inches wide and 8 feet long. Each board is 2 x 6 x 8 / 12 = 8 board feet. Ten boards is 80 board feet. At $9.50 per board foot of black walnut that is $760.00, and at 38 pounds per cubic foot the load weighs about 253 pounds, which is 80 / 12 = 6.67 cubic feet times 38.</p>
+<p>A second check with dimensional lumber. A nominal 2x6 that is 12 feet long is 2 x 6 x 12 / 12 = 12 board feet. Three of them is 36 board feet. Since a 2x6 actually measures 1-1/2 by 5-1/2 inches, its real volume is 1.5 x 5.5 x 12 / 12 = 8.25 board feet, so about 31 percent of what you paid for is air, planing and drying. That gap is why framing lumber is quoted by the piece and hardwood by the board foot.</p>
+
+<h2>Reference Table: Board Feet for Common Sizes</h2>
+<p>Board feet in a single piece, calculated with the formula above. Multiply by your piece count.</p>
+<table>
+<tr><th>Size</th><th>6 ft</th><th>8 ft</th><th>10 ft</th><th>12 ft</th></tr>
+<tr><td>4/4 x 4 in</td><td>2.00</td><td>2.67</td><td>3.33</td><td>4.00</td></tr>
+<tr><td>4/4 x 6 in</td><td>3.00</td><td>4.00</td><td>5.00</td><td>6.00</td></tr>
+<tr><td>4/4 x 8 in</td><td>4.00</td><td>5.33</td><td>6.67</td><td>8.00</td></tr>
+<tr><td>4/4 x 12 in</td><td>6.00</td><td>8.00</td><td>10.00</td><td>12.00</td></tr>
+<tr><td>6/4 x 6 in</td><td>4.50</td><td>6.00</td><td>7.50</td><td>9.00</td></tr>
+<tr><td>8/4 x 6 in</td><td>6.00</td><td>8.00</td><td>10.00</td><td>12.00</td></tr>
+<tr><td>8/4 x 10 in</td><td>10.00</td><td>13.33</td><td>16.67</td><td>20.00</td></tr>
+<tr><td>2x4 nominal</td><td>4.00</td><td>5.33</td><td>6.67</td><td>8.00</td></tr>
+<tr><td>2x6 nominal</td><td>6.00</td><td>8.00</td><td>10.00</td><td>12.00</td></tr>
+<tr><td>2x10 nominal</td><td>10.00</td><td>13.33</td><td>16.67</td><td>20.00</td></tr>
+</table>
+<p>Weight per board foot follows the same cubic foot logic. Softwoods such as white pine (about 23 lb per cubic foot) run near 1.9 pounds per board foot, while hard maple at 44 lb per cubic foot runs near 3.7 pounds per board foot, a two-times spread on the same invoice.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Pricing a furniture build before you drive to the yard, so the quote at the counter matches what you budgeted.</li>
+<li>Comparing two suppliers who quote different widths, since board feet normalise 4 inch and 10 inch stock to one unit.</li>
+<li>Deciding between 4/4 and 8/4 for a tabletop: a 2 inch slab is double the board feet of a 1 inch board of the same face area.</li>
+<li>Sizing a vehicle. Anything above roughly 300 board feet of green hardwood usually needs a trailer or a delivery fee.</li>
+<li>Estimating drying loss. Kiln-dried stock loses about 6 to 8 percent of its width, which shows up as fewer usable board feet on the finished piece.</li>
+<li>Planning a deck frame: use the <a href="./deck-board-calculator.html" style="color:#2363e0">deck board calculator</a> for surfacing, and this page for the joists and beams.</li>
+</ul>
+
+<h2>Why Board Feet Still Confuse Buyers</h2>
+<p>The most common mistake is using the wrong thickness. A 4/4 board is nominally 1 inch, but many yards bill it at 1-1/8 inches to cover rough milling, which quietly adds 12.5 percent. A 40 board foot order becomes 45. Ask what billing thickness the yard uses before you compare prices, and put that number into the thickness field.</p>
+<p>The second mistake is treating <b>nominal</b> and <b>actual</b> size as the same thing on construction lumber. A 2x10 nominal is 1.5 by 9.25 inches, not 2 by 10, so its real volume is about 13 percent smaller than the nominal board foot figure. Both conventions are legitimate; mixing them is not.</p>
+<p>The third is forgetting waste. Board feet describe the lumber you buy, not the parts you get. A furniture project with 20 percent cut-off waste and a 10 percent planing loss needs about 1.4 times the finished board feet. The calculator gives you the honest starting number, but you should add your own waste factor before you order.</p>
+<p>Finally, board feet say nothing about grade or figure. A Select and Better board and a Number 2 Common board of the same size are the same board feet but not the same value, so compare price per board foot only within the same grade and species.</p>
+
+<h2>Frequently Asked Questions</h2>
+<ul>
+<li><b>Do I measure board feet with nominal or actual lumber sizes?</b> Milled hardwood is sold by its actual measured size, so a 4/4 board that planes down to about 13/16 inch still bills as 1 inch thick. Construction lumber is the opposite: a 2x4 is a 2x4 on the price tag but measures 1-1/2 by 3-1/2 inches. Bill dimensional lumber on the nominal figures, and bill rough hardwood on the size you actually cut.</li>
+<li><b>Why does my hardwood quote not match the calculator when I enter 1 inch thickness?</b> Many yards add a rough-milling allowance on top of the nominal quarter. A 4/4 board may be billed at 1-1/8 inch, a 6/4 at 1-5/8 inch and an 8/4 at 2-1/8 inch, which raises board feet by 12 to 12.5 percent. Use the yard's billing thickness, not the quarter number.</li>
+<li><b>How much does 100 board feet of walnut weigh?</b> Black walnut averages about 38 pounds per cubic foot at 12 percent moisture content, and a board foot is one twelfth of a cubic foot, so 100 board feet weighs roughly 317 pounds. Add the driver and tools and a half-ton pickup is close to its limit.</li>
+<li><b>Does a wider board cost more per board foot?</b> Usually yes, but not because of the board foot math. Wide boards come from wider logs, yield less clear material and are graded more harshly, so 8 inch and up lines often carry a higher price per board foot than 4 inch stock of the same species and grade.</li>
+<li><b>How many board feet are in a log?</b> The Doyle rule still on many scale sticks reads roughly 94 board feet for a 16 foot log with a 16 inch small-end diameter, while the International 1/4 inch rule reads about 180. Mill yield is lower than scale because of slabs, edging and defects, so log scale is an upper bound.</li>
+<li><b>Can I use board feet for plywood and sheet goods?</b> No. Plywood, MDF and particle board are sold by the sheet or by the square foot, with thickness fixed by the manufacturer. Applying board feet to a 3/4 inch 4 by 8 foot sheet would give 8 board feet, which nobody quotes, so keep sheet goods out of this math.</li>
+</ul>
+
+<h2>Related Tools</h2>
+<ul>
+<li><a href="./deck-board-calculator.html" style="color:#2363e0">Deck Board Calculator</a> for surfacing boards, joist spacing and fasteners.</li>
+<li><a href="./roof-rafter-calculator.html" style="color:#2363e0">Roof Rafter Calculator</a> for rafter length and common lumber cuts.</li>
+<li><a href="./firewood-cord-calculator.html" style="color:#2363e0">Firewood Cord Calculator</a> to check whether a stacked pile is really a full cord.</li>
+<li><a href="./wire-gauge-calculator.html" style="color:#2363e0">Wire Gauge Calculator</a> if your next job is electrical rather than carpentry.</li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var thickEl = document.getElementById('thick'),
+    widthEl = document.getElementById('width'),
+    lengthEl = document.getElementById('length'),
+    qtyEl = document.getElementById('qty'),
+    speciesEl = document.getElementById('species'),
+    priceEl = document.getElementById('price'),
+    unitEl = document.getElementById('unit'),
+    presetEl = document.getElementById('thickPreset'),
+    calcBtn = document.getElementById('calcBtn'),
+    resOut = document.getElementById('resOut'),
+    resTbl = document.getElementById('resTbl');
+
+function num(el, fallback){
+  var v = parseFloat(el.value);
+  return isFinite(v) ? v : fallback;
+}
+function money(n){
+  return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+function boardFeet(thicknessIn, widthIn, lengthFt){
+  return (thicknessIn * widthIn * lengthFt) / 12;
+}
+
+function calculate(){
+  var factor = unitEl.value === 'cm' ? 1 / 2.54 : 1;
+  var t = num(thickEl, 0) * factor,
+      w = num(widthEl, 0) * factor,
+      len = num(lengthEl, 0),
+      qty = Math.max(1, Math.round(num(qtyEl, 1))),
+      price = num(priceEl, 0),
+      density = parseFloat(speciesEl.value) || 0;
+
+  if(t <= 0 || w <= 0 || len <= 0){
+    resOut.textContent = 'Enter a thickness, width and length greater than zero.';
+    resTbl.innerHTML = '';
+    return;
+  }
+
+  var perPiece = boardFeet(t, w, len);
+  var total = perPiece * qty;
+  var cubicFeet = total / 12;
+  var weight = cubicFeet * density;
+  var cost = total * price;
+  var perCubicFoot = cubicFeet > 0 ? cost / cubicFeet : 0;
+  var weightPerBf = density / 12;
+
+  resOut.innerHTML = '<b>' + total.toFixed(2) + '</b> board feet for ' + qty +
+    ' piece' + (qty > 1 ? 's' : '') + ' &middot; <b>$' + money(cost) + '</b> of lumber';
+
+  var rows = '<tr><th>Item</th><th>Value</th></tr>'
+    + '<tr><td>Board feet per piece</td><td>' + perPiece.toFixed(2) + '</td></tr>'
+    + '<tr><td><b>Total board feet</b></td><td><b>' + total.toFixed(2) + '</b></td></tr>'
+    + '<tr><td>Cubic feet of lumber</td><td>' + cubicFeet.toFixed(2) + '</td></tr>'
+    + '<tr><td>Estimated weight (' + density + ' lb/ft3)</td><td>' + Math.round(weight) + ' lb</td></tr>'
+    + '<tr><td>Weight per board foot</td><td>' + weightPerBf.toFixed(2) + ' lb</td></tr>'
+    + '<tr><td>Lumber cost at $' + money(price) + '/bd ft</td><td>$' + money(cost) + '</td></tr>'
+    + '<tr><td>Cost per cubic foot</td><td>$' + money(perCubicFoot) + '</td></tr>';
+  resTbl.innerHTML = rows;
+}
+
+presetEl.addEventListener('change', function(){
+  if(presetEl.value){
+    thickEl.value = presetEl.value;
+    calculate();
+  }
+});
+calcBtn.addEventListener('click', calculate);
+[thickEl, widthEl, lengthEl, qtyEl, priceEl].forEach(function(el){
+  el.addEventListener('input', calculate);
+});
+speciesEl.addEventListener('change', calculate);
+unitEl.addEventListener('change', calculate);
+calculate();
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
