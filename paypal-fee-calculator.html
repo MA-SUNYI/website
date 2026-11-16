@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PayPal Fee Calculator | Fee, Net Payout and Effective Rate</title>
+<meta name="description" content="Free PayPal fee calculator: enter an amount and transaction type to see the exact fee, net payout, effective rate and the price needed to net a target.">
+<link rel="canonical" href="https://www.xiake.icu/paypal-fee-calculator.html">
+<meta name="keywords" content="paypal fee calculator, paypal fees, paypal goods and services fee, paypal merchant fees, paypal net payout, paypal fee chart, how much does paypal take">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PayPal Fee Calculator","description":"Free PayPal fee calculator for US accounts. Enter the amount, choose the transaction type and whether the buyer is international to see the fee, net payout, effective rate and the gross needed to net a target amount.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/paypal-fee-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does a $10 sale cost 8.4% instead of 3.49%?","acceptedAnswer":{"@type":"Answer","text":"The fixed fee does not shrink with the order. At 3.49% plus $0.49, a $10 payment costs $0.35 in percentage fees plus $0.49 flat, or $0.84 total, which is 8.4% of the order. The percentage stays the same at every size; the flat fee is what turns a 3.49% rate into 8% on small tickets."}},{"@type":"Question","name":"What rate applies when I invoice a client through PayPal?","acceptedAnswer":{"@type":"Answer","text":"A standard PayPal invoice paid by a US buyer is a commercial transaction at 3.49% plus $0.49. If the client pays with a credit or debit card rather than a PayPal balance, the card rate of 2.99% plus $0.49 can apply instead. Both are domestic rates, so no 1.5% cross-border fee is added."}},{"@type":"Question","name":"My buyer is abroad but paid in US dollars. Is the 1.5% international fee still charged?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. PayPal decides whether a payment is international from the countries the two accounts are registered in, not from the currency on the invoice. A USD invoice from a buyer whose account is registered outside the US still attracts the additional 1.5%, and only the currency conversion spread is avoided."}},{"@type":"Question","name":"Can I add the PayPal fee as a surcharge at checkout?","acceptedAnswer":{"@type":"Answer","text":"PayPal's user agreement does not allow a separate checkout surcharge for using PayPal, so the workable approach is to build the fee into your list price. That is what the reverse mode is for: enter the amount you want to keep and it returns the price that leaves you with that figure after fees."}},{"@type":"Question","name":"How much do I invoice to net exactly $1,000?","acceptedAnswer":{"@type":"Answer","text":"At 3.49% plus $0.49, the gross-up is ($1,000 + $0.49) divided by 0.9651, which is $1,036.67. Fees take $36.67 and $1,000 lands in the balance. Simply adding 3.49% to the price would leave you roughly $1.71 short, because the fixed fee has to be recovered inside the marked-up amount too."}},{"@type":"Question","name":"Do refunds return the PayPal fee?","acceptedAnswer":{"@type":"Answer","text":"Partially. On a full refund PayPal returns the percentage portion of the fee but keeps the fixed per-transaction amount, so a refunded $100 sale still costs $0.49. On a partial refund the percentage portion is returned in proportion to the amount refunded."}}]}
+</script>
+<meta property="og:title" content="PayPal Fee Calculator | Fee, Net Payout and Effective Rate">
+<meta property="og:description" content="Free PayPal fee calculator: enter an amount and transaction type to see the exact fee, net payout, effective rate and the price needed to net a target.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/paypal-fee-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PayPal Fee Calculator | Fee, Net Payout and Effective Rate">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free PayPal fee calculator: enter an amount and transaction type to see the exact fee, net payout, effective rate and the price needed to net a target.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./etsy-fee-calculator.html">Etsy Fees</a>
+    <a href="./shopify-fee-calculator.html">Shopify Fees</a>
+    <a href="./gumroad-fee-calculator.html">Gumroad Fees</a>
+</div>
+
+<h1>PayPal Fee Calculator</h1>
+<p>PayPal charges a percentage plus a fixed amount on every commercial payment, so the headline rate is never the rate you actually pay. On a $5 order the standard 3.49% + $0.49 takes 13.2% of the money. On a $1,000 invoice the same rate takes 3.54%. This calculator works in both directions: enter what the buyer pays to see the fee and your net, or enter what you want to keep and it returns the price to quote.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="amt" placeholder="Amount $" value="100" step="0.01">
+        <select id="type">
+            <option value="checkout">PayPal Checkout 3.49% + $0.49</option>
+            <option value="card">Card / guest checkout 2.99% + $0.49</option>
+            <option value="gs">Goods &amp; services 2.99% + $0.00</option>
+            <option value="qr">QR code 2.29% + $0.09</option>
+            <option value="later">Pay Later 4.99% + $0.49</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <select id="intl">
+            <option value="0">Domestic buyer (US)</option>
+            <option value="1">International buyer (+1.50%)</option>
+        </select>
+        <select id="mode">
+            <option value="gross">I know what the buyer pays</option>
+            <option value="net">I want to net a fixed amount</option>
+        </select>
+        <input type="number" id="mo" placeholder="Sales per month" value="30" step="1">
+    </div>
+    <button id="calcBtn">Calculate Fees</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the fee is calculated</h2>
+<p>Every commercial transaction follows the same two-part formula. The percentage is applied to the full amount the buyer is charged, including shipping and sales tax, and the fixed fee is added once per payment regardless of size:</p>
+<p><b>Fee = (Amount × percentage rate) + fixed fee</b><br><b>Net received = Amount − Fee</b></p>
+<p>A $100 PayPal Checkout payment at 3.49% + $0.49 costs $3.49 in percentage fees plus $0.49 flat, or $3.98 in total. You receive $96.02, which is an effective rate of 3.98% — half a point worse than the advertised number.</p>
+<p>Going the other way is where most people get it wrong. To net a target amount you cannot just add the percentage, because the fee is charged on the higher marked-up figure. The correct gross-up divides by one minus the rate:</p>
+<p><b>Amount to charge = (Target net + fixed fee) ÷ (1 − percentage rate)</b></p>
+<p>To keep $500 from a domestic Checkout payment: ($500 + $0.49) ÷ 0.9651 = $518.59. PayPal deducts $18.59 and $500 arrives. Adding 3.49% to $500 would give $517.45 and leave you $1.10 short.</p>
+<p>International buyers add a straight 1.5 percentage points on top of the domestic rate. A $250 payment from a UK buyer costs 250 × 4.99% + $0.49 = $12.97, leaving $237.03, an effective 5.19%. If the buyer pays in a currency you do not hold, PayPal also converts at a spread of roughly 4% around the mid-market rate, which is a separate cost from the transaction fee and is not shown on your fee statement.</p>
+
+<h2>US rates by transaction type</h2>
+<p>These are the published domestic rates on PayPal's US commercial fee schedule. Fixed fees below are in US dollars and change with the currency received.</p>
+<table>
+<tr><th>Transaction type</th><th>Rate</th><th>Fixed</th></tr>
+<tr><td>PayPal Checkout / website button</td><td>3.49%</td><td>$0.49</td></tr>
+<tr><td>PayPal Guest Checkout</td><td>3.49%</td><td>$0.49</td></tr>
+<tr><td>Credit or debit card payment</td><td>2.99%</td><td>$0.49</td></tr>
+<tr><td>Send/receive for goods &amp; services</td><td>2.99%</td><td>$0.00</td></tr>
+<tr><td>QR code payment</td><td>2.29%</td><td>$0.09</td></tr>
+<tr><td>Pay Later options</td><td>4.99%</td><td>$0.49</td></tr>
+<tr><td>International add-on</td><td>+1.50%</td><td>—</td></tr>
+</table>
+
+<h2>What the fixed fee does to small orders</h2>
+<p>The percentage is flat, so the effective rate on any payment is simply the headline percentage plus the fixed fee divided by the amount. That second term is why a coffee-sized order and a consulting invoice behave nothing alike.</p>
+<table>
+<tr><th>Order amount</th><th>Fee at 3.49% + $0.49</th><th>Effective rate</th></tr>
+<tr><td>$5</td><td>$0.66</td><td>13.20%</td></tr>
+<tr><td>$10</td><td>$0.84</td><td>8.40%</td></tr>
+<tr><td>$25</td><td>$1.36</td><td>5.44%</td></tr>
+<tr><td>$50</td><td>$2.24</td><td>4.48%</td></tr>
+<tr><td>$100</td><td>$3.98</td><td>3.98%</td></tr>
+<tr><td>$500</td><td>$17.94</td><td>3.59%</td></tr>
+<tr><td>$1,000</td><td>$35.39</td><td>3.54%</td></tr>
+</table>
+<p>Under $12 the fixed fee pushes the effective cost past 7.5%, and no pricing trick fixes that. The only real levers are a minimum order value, bundling several items into one cart, or moving that traffic to a cheaper rail such as a card processor at 2.9% + $0.30.</p>
+
+<h2>Common usage</h2>
+<ul>
+<li>Pricing a freelance invoice so the quoted number equals what you actually bank</li>
+<li>Checking whether a $10 digital product is worth selling at 8.4% all-in cost</li>
+<li>Comparing PayPal against a card processor before routing volume — the <a href="./shopify-fee-calculator.html" style="color:#2363e0">Shopify fee calculator</a> covers the storefront side</li>
+<li>Budgeting marketplace payouts when the platform already takes a cut, as on <a href="./etsy-fee-calculator.html" style="color:#2363e0">Etsy</a> or <a href="./gumroad-fee-calculator.html" style="color:#2363e0">Gumroad</a></li>
+<li>Deciding whether to absorb the fee or build it into the list price</li>
+</ul>
+
+<h2>Why the published rate is not your cost</h2>
+<p>Three costs sit outside the 3.49% headline and they are easy to miss in a spreadsheet.</p>
+<p><b>The fixed fee is not refundable.</b> Refund a $100 order and PayPal returns the percentage portion of the fee but keeps the $0.49. A seller with a 10% return rate is quietly paying that flat fee twice on one in ten orders, and there is no line item for it anywhere.</p>
+<p><b>Cross-border pricing compounds.</b> The 1.5% international add-on plus a currency conversion spread near 4% means a $100 sale to an overseas buyer can settle at $92 or less before you pay for shipping. Sellers who quote the domestic rate on international orders are usually losing money on those orders without noticing, because the loss is spread across thousands of small conversions instead of appearing as one charge.</p>
+<p><b>Instant transfers are a separate charge.</b> Moving money to a bank account on the standard one-to-three day schedule is free. The instant option costs 1.75% of the amount, with a $0.25 minimum and $25 maximum, and it is charged on top of everything above. Freelancers who withdraw every payment the moment it lands pay that fee dozens of times a year for nothing.</p>
+<p>One thing that does not matter: a business account pays exactly the same published rates as a personal account. Upgrading buys invoicing tools, multi-user access and reporting, not a discount. Negotiated pricing exists for high volume, but it is offered case by case and is not something a small seller can assume.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Why does a $10 sale cost 8.4% instead of 3.49%?</h3>
+<p>The fixed fee does not shrink with the order. At 3.49% plus $0.49, a $10 payment costs $0.35 in percentage fees plus $0.49 flat, or $0.84 total, which is 8.4% of the order. The percentage stays the same at every size; the flat fee is what turns 3.49% into 8% on small tickets.</p>
+<h3>What rate applies when I invoice a client through PayPal?</h3>
+<p>A standard PayPal invoice paid by a US buyer is a commercial transaction at 3.49% plus $0.49. If the client pays with a credit or debit card rather than a PayPal balance, the card rate of 2.99% plus $0.49 can apply instead. Both are domestic rates, so no 1.5% cross-border fee is added.</p>
+<h3>My buyer is abroad but paid in US dollars — is the 1.5% still charged?</h3>
+<p>Usually yes. PayPal decides whether a payment is international from the countries the two accounts are registered in, not from the currency on the invoice. A USD invoice to a buyer registered outside the US still attracts the extra 1.5%; what you avoid by billing in dollars is the currency conversion spread.</p>
+<h3>Can I add the fee as a surcharge at checkout?</h3>
+<p>PayPal's user agreement does not allow a separate checkout surcharge for using PayPal, so the workable approach is to build the fee into your list price. That is what the reverse mode is for: enter the amount you want to keep and it returns the price that leaves you with that figure after fees.</p>
+<h3>How much do I invoice to net exactly $1,000?</h3>
+<p>At 3.49% plus $0.49 the gross-up is ($1,000 + $0.49) ÷ 0.9651 = $1,036.67. Fees take $36.67 and $1,000 lands in the balance. Simply adding 3.49% to the price leaves you about $1.71 short, because the flat fee has to be recovered inside the marked-up amount too.</p>
+<h3>Do refunds return the PayPal fee?</h3>
+<p>Partially. On a full refund PayPal returns the percentage portion of the fee but keeps the fixed per-transaction amount, so a refunded $100 sale still costs $0.49. On a partial refund the percentage portion is returned in proportion to the amount refunded.</p>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var RATES={
+  checkout:{p:3.49,f:0.49},
+  card:{p:2.99,f:0.49},
+  gs:{p:2.99,f:0},
+  qr:{p:2.29,f:0.09},
+  later:{p:4.99,f:0.49}
+};
+var amtEl=document.getElementById('amt'),
+    typeEl=document.getElementById('type'),
+    intlEl=document.getElementById('intl'),
+    modeEl=document.getElementById('mode'),
+    moEl=document.getElementById('mo'),
+    resOut=document.getElementById('resOut'),
+    resTbl=document.getElementById('resTbl');
+
+function money(n){
+  return '$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+
+function run(){
+  var amt=parseFloat(amtEl.value), r=RATES[typeEl.value];
+  if(isNaN(amt)||amt<=0){
+    resOut.textContent='Enter an amount greater than zero';
+    resTbl.innerHTML='';
+    return;
+  }
+  var p=r.p+(intlEl.value==='1'?1.5:0);
+  var f=r.f;
+  var gross,fee,net;
+  if(modeEl.value==='net'){
+    gross=Math.round(((amt+f)/(1-p/100))*100)/100;
+    fee=Math.round((gross*p/100+f)*100)/100;
+    net=Math.round((gross-fee)*100)/100;
+  }else{
+    gross=Math.round(amt*100)/100;
+    fee=Math.round((gross*p/100+f)*100)/100;
+    net=Math.round((gross-fee)*100)/100;
+  }
+  var eff=fee/gross*100;
+  var mo=parseFloat(moEl.value);
+
+  var rows='<tr><th>Line</th><th>Amount</th></tr>'
+    +'<tr><td>Amount charged to buyer</td><td>'+money(gross)+'</td></tr>'
+    +'<tr><td>Percentage fee at '+p.toFixed(2)+'%</td><td>'+money(Math.round(gross*p/100*100)/100)+'</td></tr>'
+    +'<tr><td>Fixed fee</td><td>'+money(f)+'</td></tr>'
+    +'<tr><td><b>Total fee</b></td><td><b>'+money(fee)+'</b></td></tr>'
+    +'<tr><td><b>Net you receive</b></td><td><b>'+money(net)+'</b></td></tr>'
+    +'<tr><td>Effective rate</td><td>'+eff.toFixed(2)+'%</td></tr>';
+
+  if(!isNaN(mo)&&mo>0){
+    rows+='<tr><td>Fees per month ('+mo+' sales)</td><td>'+money(fee*mo)+'</td></tr>'
+      +'<tr><td>Net per month</td><td>'+money(net*mo)+'</td></tr>'
+      +'<tr><td>Fees per year</td><td>'+money(fee*mo*12)+'</td></tr>';
+  }
+  resTbl.innerHTML=rows;
+
+  if(modeEl.value==='net'){
+    resOut.innerHTML='Charge <span style="color:#0f9d58;font-size:22px">'+money(gross)+'</span> to net '+money(net)+' after '+money(fee)+' in fees';
+  }else{
+    resOut.innerHTML='You keep <span style="color:#0f9d58;font-size:22px">'+money(net)+'</span> of '+money(gross)+' ('+eff.toFixed(2)+'% in fees)';
+  }
+}
+
+document.getElementById('calcBtn').onclick=run;
+[typeEl,intlEl,modeEl].forEach(function(el){el.addEventListener('change',run);});
+run();
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>

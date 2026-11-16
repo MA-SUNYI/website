@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Target Heart Rate Calculator | Zones 1-5 by Age and Pulse</title>
+<meta name="description" content="Free heart rate zone calculator: find max heart rate, reserve and five training zones in bpm by age and resting pulse, Karvonen or percent of max.">
+<link rel="canonical" href="https://www.xiake.icu/target-heart-rate-calculator.html">
+<meta name="keywords" content="target heart rate calculator, heart rate zones, zone 2 calculator, karvonen formula, max heart rate, heart rate reserve, training zones by age">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Target Heart Rate Calculator","description":"Free target heart rate calculator that estimates maximum heart rate and heart rate reserve from age and resting pulse, then returns the five training zones in beats per minute using either the Karvonen or percent-of-max method.","applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/target-heart-rate-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I use the Karvonen method or percent of max?","acceptedAnswer":{"@type":"Answer","text":"For anything below threshold pace, Karvonen is the better anchor because it accounts for how far your resting pulse sits below your maximum. Percent of max ignores that, which is why it puts easy aerobic work twenty-four beats too low for someone with a resting pulse near 60."}},{"@type":"Question","name":"My watch recorded a maximum of 191 but the formula says 180. Which is correct?","acceptedAnswer":{"@type":"Answer","text":"The observed number, if it came from a genuine all-out effort lasting several minutes, is far more reliable than any age formula. Population equations carry a standard deviation of roughly 10 to 12 beats, so a 11-beat gap is normal rather than a measurement error."}},{"@type":"Question","name":"Does the Gulati formula work for men?","acceptedAnswer":{"@type":"Answer","text":"It should not be used as a man's primary estimate. The 206 minus 0.88 times age equation was derived from a large cohort of women, and applying it to men tends to understate maximum heart rate by several beats."}},{"@type":"Question","name":"I take a beta blocker. Are these zones still usable?","acceptedAnswer":{"@type":"Answer","text":"Not directly. Beta blockers blunt both resting and peak heart rate, often by 20 to 30 beats, so any zone built from a predicted maximum will sit far above what you can reach. Rate of perceived exertion and the talk test are more dependable guides under medication, and dosage changes should be discussed with the prescribing clinician."}},{"@type":"Question","name":"Why is the Karvonen Zone 2 so much higher than percent of max?","acceptedAnswer":{"@type":"Answer","text":"Because the two methods measure from different baselines. Sixty percent of a 180-beat maximum is 108, but sixty percent of a 120-beat reserve is 72 beats above a resting pulse of 60, which lands at 132. The reserve method assigns every zone a slice of the range you can actually use."}},{"@type":"Question","name":"How much should I trust a wrist optical monitor during intervals?","acceptedAnswer":{"@type":"Answer","text":"Less than the numbers suggest. Wrist sensors lag five to fifteen seconds behind a sudden change in effort and can lock onto your running cadence instead of your pulse, which produces readings that look plausible but sit 10 to 20 beats high. A chest strap stays accurate through short repeats."}}]}
+</script>
+<meta property="og:title" content="Target Heart Rate Calculator | Zones 1-5 by Age and Pulse">
+<meta property="og:description" content="Free heart rate zone calculator: find max heart rate, reserve and five training zones in bpm by age and resting pulse, Karvonen or percent of max.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/target-heart-rate-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Target Heart Rate Calculator | Zones 1-5 by Age and Pulse">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free heart rate zone calculator: find max heart rate, reserve and five training zones in bpm by age and resting pulse, Karvonen or percent of max.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./one-rep-max-calculator.html">One Rep Max</a>
+    <a href="./running-pace-calculator.html">Running Pace</a>
+    <a href="./calorie-calculator.html">Calories</a>
+</div>
+
+<h1>Target Heart Rate Calculator</h1>
+<p>Two people the same age can have maximum heart rates fifteen beats apart, and the zone boundaries that follow from that difference decide whether an easy run is actually easy. This calculator estimates your maximum from age, subtracts your resting pulse to get heart rate reserve, and returns all five training zones in beats per minute using either the Karvonen or the simpler percent-of-max method.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="age" placeholder="Age" value="40" min="10" max="100" step="1">
+        <input type="number" id="rest" placeholder="Resting heart rate" value="60" min="30" max="120" step="1">
+    </div>
+    <div class="input-row">
+        <select id="formula">
+            <option value="tanaka">Tanaka 208 − 0.7 × age</option>
+            <option value="fox">Fox 220 − age</option>
+            <option value="gulati">Gulati 206 − 0.88 × age</option>
+            <option value="nes">Nes 211 − 0.64 × age</option>
+        </select>
+        <select id="method">
+            <option value="karvonen">Karvonen (% of reserve)</option>
+            <option value="maxpct">Percent of max</option>
+        </select>
+    </div>
+    <button id="calcBtn">Calculate Zones</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How it works</h2>
+<p>The calculation is two steps: estimate a maximum, then decide what percentage of what you are taking percentages of.</p>
+<p><b>Maximum heart rate</b> is predicted from age. The Fox equation of 220 minus age is the one everyone quotes, but it was never fitted to a large dataset. Tanaka's 208 − 0.7 × age comes from a meta-analysis of roughly 18,700 subjects and holds up better across ages, and Gulati's 206 − 0.88 × age was derived specifically from women. Nes's 211 − 0.64 × age came from a Norwegian population study.</p>
+<p><b>Heart rate reserve</b> is maximum minus resting: the range you can actually move through. A 40-year-old with a resting pulse of 60 and a Tanaka maximum of 180 has a reserve of 120 beats.</p>
+<p><b>Percent of max</b> multiplies directly: Zone 2 at 60 to 70 percent of 180 is 108 to 126 bpm.</p>
+<p><b>Karvonen</b> applies the percentage to the reserve and then adds rest back: 60 + 120 × 0.60 = 132 on the low end and 60 + 120 × 0.70 = 144 on the high end. Same person, same zone, twenty-four beats apart — one of these numbers is useful and the other is not, and which one depends on the person, not the formula.</p>
+<p>That gap is the single most useful thing this calculator shows. For anyone with a resting pulse under about 65, percent-of-max produces zone floors that are too low to be aerobic at all: 108 bpm for a fit 40-year-old is a brisk walk, not a Zone 2 run. For someone with a resting pulse of 85 the two methods converge, because there is less reserve to redistribute.</p>
+
+<h2>The five zones</h2>
+<p>Zone boundaries below are percentages of maximum heart rate, which is the convention most watches and training plans use. The purpose column is what the zone is for, not how it feels on a given day.</p>
+<table>
+<tr><th>Zone</th><th>% of max</th><th>What it trains</th><th>Talk test</th></tr>
+<tr><td>Zone 1 — recovery</td><td>50–60%</td><td>Warm-up, cool-down, blood flow</td><td>Full conversation, could sing</td></tr>
+<tr><td>Zone 2 — base</td><td>60–70%</td><td>Aerobic capacity, fat oxidation, capillaries</td><td>Full sentences, slightly nasal</td></tr>
+<tr><td>Zone 3 — tempo</td><td>70–80%</td><td>Sustained effort, lactate clearance</td><td>Short phrases only</td></tr>
+<tr><td>Zone 4 — threshold</td><td>80–90%</td><td>Race pace, lactate threshold</td><td>A few words at a time</td></tr>
+<tr><td>Zone 5 — max</td><td>90–100%</td><td>VO2 max, speed, neuromuscular power</td><td>No speech, minutes at most</td></tr>
+</table>
+<p>Weekly distribution matters more than the exact beat boundaries. A common endurance split is 80 percent of training time in Zones 1 and 2 with the remaining 20 percent in Zones 3 to 5. Most amateur runners invert that ratio without realising it, spending the easy days in Zone 3 and the hard days in Zone 4, which is why progress stalls at the same pace for months.</p>
+
+<h2>Maximum heart rate by age and formula</h2>
+<p>Predicted maximums diverge as you get older, and the spread is why a single formula should be treated as a starting point rather than a measurement.</p>
+<table>
+<tr><th>Age</th><th>Fox 220−age</th><th>Tanaka</th><th>Gulati</th><th>Nes</th></tr>
+<tr><td>30</td><td>190</td><td>187</td><td>180</td><td>192</td></tr>
+<tr><td>40</td><td>180</td><td>180</td><td>171</td><td>185</td></tr>
+<tr><td>50</td><td>170</td><td>173</td><td>162</td><td>179</td></tr>
+<tr><td>60</td><td>160</td><td>166</td><td>153</td><td>173</td></tr>
+<tr><td>70</td><td>150</td><td>159</td><td>144</td><td>166</td></tr>
+</table>
+<p>At 30 the four estimates sit within twelve beats of each other. At 70 they span twenty-two. Note also that Fox declines faster than every other equation, which is the main reason it reads low for older athletes.</p>
+
+<h2>Common usage</h2>
+<ul>
+<li>Setting an upper limit for easy runs so the aerobic days stay genuinely easy</li>
+<li>Building interval targets for track sessions or a bike trainer</li>
+<li>Checking whether a watch's auto-detected zones match a formula you trust</li>
+<li>Tracking resting pulse over months as a rough marker of aerobic fitness</li>
+<li>Pacing a long effort where you want to stay under threshold, cross-checked with the <a href="./running-pace-calculator.html" style="color:#2363e0">running pace calculator</a></li>
+</ul>
+
+<h2>Why 220 minus age is a weak default</h2>
+<p>The equation is a convenience that hardened into folklore. Its standard deviation is around 10 to 12 beats per minute, which means roughly one person in three has a true maximum more than ten beats away from the prediction, and about one in twenty is more than twenty beats away. For a 45-year-old predicted at 175, a real maximum of 191 is entirely ordinary.</p>
+<p>The practical consequence is asymmetric. If your predicted max is too low, every zone target is set low and your hard sessions become moderate ones — annoying, but safe. If it is too high, Zone 2 becomes Zone 3, and the classic failure mode follows: months of training where nothing is easy enough to build base and nothing is hard enough to raise the ceiling.</p>
+<p>Three things move heart rate without changing fitness at all: heat and dehydration, which add five to fifteen beats at the same pace; caffeine, which adds a few; and a hard session the day before, which leaves it elevated for up to 24 hours. A single reading above a zone boundary is not a verdict. A weekly average is.</p>
+<p>Field testing beats any formula if you are willing to do it. A supervised ramp test on a treadmill or bike, or a hard 5K race where you finish genuinely spent, gives a maximum you can use for a year. The formulas here are best used to set a starting point and to sanity-check a number that looks implausible.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Should I use the Karvonen method or percent of max?</h3>
+<p>For anything below threshold pace, Karvonen is the better anchor because it accounts for how far your resting pulse sits below your maximum. Percent of max ignores that, which is why it puts easy aerobic work twenty-four beats too low for someone with a resting pulse near 60.</p>
+<h3>My watch recorded a maximum of 191 but the formula says 180. Which is correct?</h3>
+<p>The observed number, if it came from a genuine all-out effort lasting several minutes, is far more reliable than any age formula. Population equations carry a standard deviation of roughly 10 to 12 beats, so an 11-beat gap is normal rather than a measurement error.</p>
+<h3>Does the Gulati formula work for men?</h3>
+<p>It should not be used as a man's primary estimate. The 206 − 0.88 × age equation was derived from a large cohort of women, and applying it to men tends to understate maximum heart rate by several beats.</p>
+<h3>I take a beta blocker. Are these zones still usable?</h3>
+<p>Not directly. Beta blockers blunt both resting and peak heart rate, often by 20 to 30 beats, so any zone built from a predicted maximum will sit far above what you can reach. Perceived exertion and the talk test are more dependable under medication, and dosage questions belong with the prescribing clinician.</p>
+<h3>Why is the Karvonen Zone 2 so much higher than percent of max?</h3>
+<p>Because the two methods measure from different baselines. Sixty percent of a 180-beat maximum is 108, but sixty percent of a 120-beat reserve is 72 beats above a resting pulse of 60, landing at 132 — a 24-beat gap at the bottom of the same zone. The reserve method assigns every zone a slice of the range you can actually use.</p>
+<h3>How much should I trust a wrist optical monitor during intervals?</h3>
+<p>Less than the numbers suggest. Wrist sensors lag five to fifteen seconds behind a sudden change in effort and can lock onto running cadence instead of pulse, producing readings that look plausible but sit 10 to 20 beats high. A chest strap stays accurate through short repeats.</p>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var ageEl=document.getElementById('age'),
+    restEl=document.getElementById('rest'),
+    formulaEl=document.getElementById('formula'),
+    methodEl=document.getElementById('method'),
+    resOut=document.getElementById('resOut'),
+    resTbl=document.getElementById('resTbl');
+
+var ZONES=[
+  {n:'Zone 1 — recovery',lo:0.50,hi:0.60},
+  {n:'Zone 2 — base',lo:0.60,hi:0.70},
+  {n:'Zone 3 — tempo',lo:0.70,hi:0.80},
+  {n:'Zone 4 — threshold',lo:0.80,hi:0.90},
+  {n:'Zone 5 — max',lo:0.90,hi:1.00}
+];
+
+function maxHr(age,f){
+  if(f==='fox') return 220-age;
+  if(f==='gulati') return 206-0.88*age;
+  if(f==='nes') return 211-0.64*age;
+  return 208-0.7*age;
+}
+
+function run(){
+  var age=parseFloat(ageEl.value), rest=parseFloat(restEl.value);
+  if(isNaN(age)||age<10||age>100){
+    resOut.textContent='Enter an age between 10 and 100';
+    resTbl.innerHTML='';return;
+  }
+  if(isNaN(rest)||rest<30||rest>120){
+    resOut.textContent='Enter a resting heart rate between 30 and 120';
+    resTbl.innerHTML='';return;
+  }
+  var mx=maxHr(age,formulaEl.value);
+  var hrr=mx-rest;
+  var useK=methodEl.value==='karvonen';
+
+  function bpm(pct){
+    var v=useK ? rest+hrr*pct : mx*pct;
+    return Math.round(v);
+  }
+
+  var rows='<tr><th>Zone</th><th>Intensity</th><th>Target bpm</th></tr>';
+  for(var i=0;i<ZONES.length;i++){
+    var z=ZONES[i];
+    rows+='<tr><td>'+z.n+'</td><td>'+Math.round(z.lo*100)+'–'+Math.round(z.hi*100)+'%</td><td><b>'+bpm(z.lo)+'–'+bpm(z.hi)+'</b></td></tr>';
+  }
+  rows+='<tr><td>Predicted max HR</td><td>—</td><td>'+Math.round(mx)+' bpm</td></tr>'
+      +'<tr><td>Heart rate reserve</td><td>—</td><td>'+Math.round(hrr)+' bpm</td></tr>';
+  resTbl.innerHTML=rows;
+
+  var z2lo=bpm(0.60), z2hi=bpm(0.70);
+  resOut.innerHTML='Estimated max <span style="color:#0f9d58;font-size:22px">'+Math.round(mx)+' bpm</span> · Zone 2 target '+z2lo+'–'+z2hi+' bpm';
+}
+
+document.getElementById('calcBtn').onclick=run;
+[formulaEl,methodEl].forEach(function(el){el.addEventListener('change',run);});
+run();
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
