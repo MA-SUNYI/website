@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSU Tax Calculator | Net Shares and Withholding on Vest</title>
+<meta name="description" content="See what lands in your account after RSU vesting. Enter grant size, price, withholding rate and sell price to get net shares, tax gap and capital gain.">
+<link rel="canonical" href="https://www.xiake.icu/rsu-tax-calculator.html">
+<meta name="keywords" content="rsu tax calculator, restricted stock units tax, rsu vesting net shares, rsu withholding rate, 22 percent supplemental withholding, rsu capital gains">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RSU Tax Calculator","description":"Free RSU tax calculator. Enter shares vesting, the vest price, your withholding rate and an optional sell price to see net shares received, the tax gap versus your marginal rate, and the capital gain if you sell later.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/rsu-tax-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How many shares do I actually receive when my RSUs vest?","acceptedAnswer":{"@type":"Answer","text":"Vesting shares minus the shares withheld for taxes. If 200 shares vest at a $50 price and your withholding is 22 percent federal plus 7.65 percent FICA, about 29.65 percent of the value is withheld and roughly 141 shares land in your account. Brokers usually withhold whole shares and send the leftover cash to tax withholding."}},
+{"@type":"Question","name":"Why does my tax bill exceed what was withheld from the vest?","acceptedAnswer":{"@type":"Answer","text":"Most employers withhold at the flat 22 percent supplemental wage rate no matter what you earn. If your marginal federal rate is 32 percent, the vest under-withheld 10 percentage points on every dollar. That shortfall is added to your return at filing time, and it is what people mean when they say the vest created a surprise tax bill."}},
+{"@type":"Question","name":"Do I owe tax twice when I sell the shares?","acceptedAnswer":{"@type":"Answer","text":"No. The vest price becomes your cost basis, so only the change in price after vesting is taxed again, and that is a capital gain. Shares held more than one year after vesting qualify for long-term rates. Selling at the vest price produces no additional tax at all."}},
+{"@type":"Question","name":"Does selling RSUs at vest count as a wash sale if I buy the same stock back?","acceptedAnswer":{"@type":"Answer","text":"No. A wash sale rule applies to losses, and shares sold at vest for the same price produce no loss. Selling later at a loss while buying replacement shares within 30 days can trigger the wash sale rule, which disallows the loss on that sale."}},
+{"@type":"Question","name":"Are the shares withheld for taxes actually sold for me?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. The broker sells shares equal to the withholding amount, pays the employer, and deposits the remaining shares or cash into your brokerage account. The withheld value is included in your W-2 wages, so the withholding already shows up as tax paid."}},
+{"@type":"Question","name":"What happens if my company is private and the stock has no market price?","acceptedAnswer":{"@type":"Answer","text":"The 409A valuation is used as the fair market value at vest and becomes your basis, but you usually cannot sell to cover the tax. Some private companies allow a sell-to-cover transaction during a tender offer. Budget cash for the tax even when the shares are illiquid."}}
+]}
+</script>
+<meta property="og:title" content="RSU Tax Calculator | Net Shares and Withholding on Vest">
+<meta property="og:description" content="See what lands in your account after RSU vesting. Enter grant size, price, withholding rate and sell price to get net shares, tax gap and capital gain.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/rsu-tax-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RSU Tax Calculator | Net Shares and Withholding on Vest">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="See what lands in your account after RSU vesting. Enter grant size, price, withholding rate and sell price to get net shares, tax gap and capital gain.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./capital-gains-tax-calculator.html">Capital Gains Tax</a>
+    <a href="./income-tax-calculator.html">Income Tax</a>
+    <a href="./paycheck-calculator.html">Paycheck</a>
+</div>
+
+<h1>RSU Tax Calculator</h1>
+<p>Restricted stock units are taxed the moment they vest, not the day they are granted. The shares your employer withholds rarely cover the bill, because most payroll systems use the flat 22 percent supplemental rate regardless of what you earn. This calculator shows the value that vests, how many shares survive withholding, the gap between withholding and your real marginal rate, and the capital gain if you sell later. Enter your own numbers rather than relying on the broker screen, which often ignores state tax entirely.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="shares" placeholder="Shares vesting">
+        <input type="number" id="vestPrice" placeholder="Vest price per share $" step="0.01">
+    </div>
+    <div class="input-row">
+        <input type="number" id="fedRate" placeholder="Federal withholding %" value="22" step="0.1">
+        <input type="number" id="ficaRate" placeholder="FICA % (7.65 from 2026)" value="7.65" step="0.01">
+    </div>
+    <div class="input-row">
+        <input type="number" id="stateRate" placeholder="State withholding %" value="0" step="0.1">
+        <input type="number" id="margRate" placeholder="Your marginal fed rate %" value="24" step="0.1">
+    </div>
+    <div class="input-row">
+        <input type="number" id="sellPrice" placeholder="Sell price per share $ (optional)" step="0.01">
+        <input type="number" id="holdMonths" placeholder="Months held after vest (optional)" value="0">
+    </div>
+    <button id="calcBtn">Calculate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the RSU Tax Calculator Works</h2>
+<p>Every vesting event has two parts and they are taxed differently. The first is ordinary income: shares multiplied by the fair market value on the vest date. That amount is added to your W-2 wages and taxed at ordinary rates plus FICA. The second is a capital gain: whatever the price does after vesting, taxed only when you sell. Keeping the two apart is the whole point, because people routinely mix them up and conclude they were taxed twice.</p>
+<p>The net-share formula is short. Taxable income equals shares times vest price. Total withholding rate equals federal plus FICA plus state. Withheld value equals taxable income times that rate, and net shares equal shares times one minus the withholding rate. The tax gap is the difference between withholding and what you would owe at your true marginal rate.</p>
+<p>Run the numbers on a typical grant. 400 shares vest at $85, so the vest value is $34,000. Withholding is 22 percent federal, 7.65 percent FICA and 5 percent state, or 34.65 percent total, which is $11,781. Net shares come to 261.4, and because brokers withhold whole shares you would receive 261 shares with a small cash residual. Now suppose your real marginal federal rate is 32 percent, not 22. The true federal tax on $34,000 is $10,880, but payroll withheld $7,480. That $3,400 shortfall lands on your April return, which is why a big vest often turns into an unexpected payment rather than a refund.</p>
+<p>The calculator also handles the second leg. If you sell those 261 shares three months later at $95, the proceeds are $24,795. Your basis is $22,185, the vest price times those shares, so the gain is $2,610 and it is taxed at short-term rates. Hold past twelve months and the same gain is taxed at long-term rates, often 15 percent instead of 35 percent or more.</p>
+
+<h2>Withholding Benchmarks by Income</h2>
+<p>The table below shows how far the standard 22 percent federal withholding falls short. The gap column is the additional federal tax you should plan to set aside on a $50,000 vest when your marginal rate differs from the withholding rate.</p>
+<table>
+<tr><th>Taxable income (single)</th><th>Marginal rate</th><th>Withheld on $10,000 vest</th><th>Federal tax on that $10,000</th><th>Gap</th></tr>
+<tr><td>Up to $12,400</td><td>10%</td><td>$2,200</td><td>$1,000</td><td>$1,200 refund</td></tr>
+<tr><td>$12,400 - $50,400</td><td>12%</td><td>$2,200</td><td>$1,200</td><td>$1,000 refund</td></tr>
+<tr><td>$50,400 - $105,700</td><td>22%</td><td>$2,200</td><td>$2,200</td><td>$0</td></tr>
+<tr><td>$105,700 - $201,775</td><td>24%</td><td>$2,200</td><td>$2,400</td><td>$200 owed</td></tr>
+<tr><td>$201,775 - $256,225</td><td>32%</td><td>$2,200</td><td>$3,200</td><td>$1,000 owed</td></tr>
+<tr><td>$256,225 - $640,600</td><td>35%</td><td>$2,200</td><td>$3,500</td><td>$1,300 owed</td></tr>
+<tr><td>Above $640,600</td><td>37% plus 0.9%</td><td>$2,200</td><td>$3,700 plus $90</td><td>$1,590 owed</td></tr>
+</table>
+<p>Brackets are 2025 single-filer rates applied to the vest alone, ignoring the rest of your income, so real numbers shift with every dollar you earn elsewhere. The pattern holds either way: below the 22 percent bracket you are over-withheld and get money back, above it you owe the difference. Multiply the gap column by your vest size to size the surprise, and note that a $100,000 vest at the 35 percent rate leaves a $13,000 shortfall. Many large employers now let you elect a higher supplemental withholding rate, and switching is usually better than writing a check in April.</p>
+
+<h2>Tool Features</h2>
+<ul>
+<li>Net shares after federal, FICA and state withholding</li>
+<li>Tax gap versus your own marginal rate, so you know what to set aside</li>
+<li>Capital gain on a later sale using vest price as basis</li>
+<li>Short-term and long-term labeling based on months held</li>
+</ul>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Check the value of a single vest before you spend it</li>
+<li>Estimate the April shortfall after a large grant vests</li>
+<li>Decide whether to hold for long-term capital gains or sell to diversify</li>
+<li>Cross-check the cost basis you will report with the <a href="./capital-gains-tax-calculator.html" style="color:#2363e0">Capital Gains Tax Calculator</a></li>
+<li>See how the extra wages shift your overall bill in the <a href="./income-tax-calculator.html" style="color:#2363e0">Income Tax Calculator</a></li>
+<li>Confirm take-home pay after the vest in the <a href="./paycheck-calculator.html" style="color:#2363e0">Paycheck Calculator</a></li>
+</ul>
+
+<h2>The Mistake That Costs the Most</h2>
+<p>The expensive error is not selling at vest, or holding too long, or picking the wrong bracket. It is failing to sell enough shares to cover the tax. When a vest delivers 261 shares you own a concentrated position in the company that also pays your salary, and the same 261 shares are quietly standing in for money you owe the IRS. If the stock drops 30 percent between vest and filing, the tax bill does not drop with it, because it was calculated on the vest price. You still owe tax on value that no longer exists.</p>
+<p>The second most common error is double counting. People see the withholding on their pay stub, see the vested shares in their brokerage account, and assume they were taxed on the full grant, then pay again. They were not. Only the withheld portion was taxed, and the shares you received already carry the vest price as basis.</p>
+<p>There are limits worth naming. This calculator does not know your other income, deductions, or the Alternative Minimum Tax, and it treats FICA as applying in full. Above the Social Security wage base, roughly $184,500 for 2026, the 6.2 percent portion stops, so the FICA rate drops to 1.45 percent on the excess. Employers often handle that automatically, but the rate you enter here is yours to confirm. State tax also varies from zero in Texas and Washington to double digits in California, and some states tax RSU income where you worked, not where you live. Treat the output as a planning estimate and confirm the final number with payroll or a tax preparer.</p>
+
+<h2>Frequently Asked Questions</h2>
+<p><b>Why did only part of my grant land in my brokerage account?</b> Only part of it ever became yours in economic terms. The withheld shares were sold to pay the employer's share of payroll tax and your income tax. The cash shows up on your W-2 as wages, and the withholding appears as tax already paid, so nothing is missing, it simply went to the IRS and your state instead of your account.</p>
+<p><b>Is it better to sell my RSUs the day they vest?</b> Most financial planners say yes for anyone whose paycheck already depends on the same company. Holding is a deliberate bet that this one stock will beat a diversified portfolio, and it doubles your exposure if the company struggles. The counterargument is that holding lets you reach long-term rates, but the tax saved is usually smaller than the concentration risk taken.</p>
+<p><b>My grant vests over four years, so do I need to redo this every year?</b> Yes, and the price will differ each time. A vest at $40 and one at $90 create two separate cost bases. Your broker's 1099-B should list each lot separately, and if you sell after several vest dates you will need to identify which lots were sold, using specific identification rather than the default first-in-first-out.</p>
+<p><b>What does the calculator do if I leave the company before vesting?</b> Nothing, because unvested units are forfeited. This tool only models a vest that happened. Unvested RSUs have no value you can calculate or sell, which is also why job-change decisions rarely hinge on them once you account for the vesting schedule.</p>
+<p><b>Does the 22 percent rate change in 2026?</b> The supplemental wage rate has been fixed at 22 percent for years, with a 37 percent rate applying above $1 million in supplemental wages in a single year. California and several other states apply their own supplemental rates, commonly 10.23 percent in California, which is higher than many people expect.</p>
+<p><b>Is the gain on shares sold at a loss deductible?</b> Yes as a capital loss, and it can offset other capital gains plus up to $3,000 of ordinary income per year. If the price fell before vest and recovered by the time you sold, you may see a loss on paper at vest with no cash loss at all, which is why brokers often track a supplemental basis separately.</p>
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var $=function(id){return document.getElementById(id);};
+function fmt(n){return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+
+function computeRSU(p){
+  var shares=p.shares, price=p.vestPrice;
+  var vestValue=shares*price;
+  var whRate=(p.fedRate+p.ficaRate+p.stateRate)/100;
+  var withheld=vestValue*whRate;
+  var netShares=shares*(1-whRate);
+  var netSharesWhole=Math.floor(netShares);
+  var trueFed=vestValue*p.margRate/100;
+  var whFed=vestValue*p.fedRate/100;
+  var gap=trueFed-whFed;
+  var gainPerShare=(p.sellPrice!=null&&p.sellPrice>0)?(p.sellPrice-price):0;
+  var netValue=(p.sellPrice!=null&&p.sellPrice>0)?netSharesWhole*p.sellPrice:netSharesWhole*price;
+  var gain=netSharesWhole*gainPerShare;
+  var longTerm=p.holdMonths>=12;
+  var rate=gain>=0?(longTerm?15:32):(longTerm?15:35);
+  var gainTax=gain>0?gain*rate/100:0;
+  return {vestValue:vestValue,withheld:withheld,netShares:netShares,netSharesWhole:netSharesWhole,
+    netValue:netValue,gap:gap,gain:gain,longTerm:longTerm,gainTax:gainTax,rate:rate,whRate:whRate*100};
+}
+
+$('calcBtn').onclick=function(){
+  var shares=parseFloat($('shares').value), price=parseFloat($('vestPrice').value);
+  if(!(shares>0)||!(price>0)){$('resOut').textContent='Enter shares vesting and a vest price';$('resTbl').innerHTML='';return;}
+  var sell=parseFloat($('sellPrice').value);
+  var hm=parseFloat($('holdMonths').value);
+  var r=computeRSU({
+    shares:shares,vestPrice:price,
+    fedRate:parseFloat($('fedRate').value)||0,
+    ficaRate:parseFloat($('ficaRate').value)||0,
+    stateRate:parseFloat($('stateRate').value)||0,
+    margRate:parseFloat($('margRate').value)||0,
+    sellPrice:isNaN(sell)?null:sell,
+    holdMonths:isNaN(hm)?0:hm
+  });
+  var whUsed=shares-r.netShares;
+  var rows='<tr><th>Item</th><th>Amount</th></tr>'
+    +'<tr><td>Vest value (taxable wages)</td><td>$'+fmt(r.vestValue)+'</td></tr>'
+    +'<tr><td>Total withholding rate</td><td>'+r.whRate.toFixed(2)+'%</td></tr>'
+    +'<tr><td>Tax withheld</td><td>$'+fmt(r.withheld)+'</td></tr>'
+    +'<tr><td>Shares withheld (approx)</td><td>'+whUsed.toFixed(1)+'</td></tr>'
+    +'<tr><td><b>Shares you receive</b></td><td><b>'+r.netSharesWhole+'</b> (exact '+r.netShares.toFixed(2)+')</td></tr>'
+    +'<tr><td>Value at vest price</td><td>$'+fmt(r.netValue)+'</td></tr>'
+    +'<tr><td>Withholding vs marginal rate gap</td><td>'+((r.gap>=0?'Owe ':'Refund ')+'$'+fmt(Math.abs(r.gap)))+'</td></tr>';
+  if(sell>0){
+    rows+='<tr><td>Capital gain per share</td><td>$'+fmt(r.gain>0?r.gain/r.netSharesWhole:0)+'</td></tr>'
+      +'<tr><td>Capital gain ('+(r.longTerm?'long-term':'short-term')+')</td><td>$'+fmt(r.gain)+'</td></tr>'
+      +'<tr><td>Estimated capital gains tax @'+r.rate+'%</td><td>$'+fmt(r.gainTax)+'</td></tr>';
+  }
+  $('resTbl').innerHTML=rows;
+  $('resOut').innerHTML='You keep <span style="color:#0f9d58;font-size:22px">'+r.netSharesWhole+' shares</span> worth $'+fmt(r.netValue)+' at vest'
+    +(r.gap>0?' · set aside <span style="color:#d93025">$'+fmt(r.gap)+'</span> for April':'');
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>
