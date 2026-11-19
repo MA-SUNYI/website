@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Royalty Calculator | Streams to Actual Artist Pay</title>
+<meta name="description" content="Free Spotify royalty calculator: turn streams into gross and net artist payout on six streaming services, after distributor cuts and the 1,000-stream cap.">
+<link rel="canonical" href="https://www.xiake.icu/spotify-royalty-calculator.html">
+<meta name="keywords" content="spotify royalty calculator, streams to money, spotify payout per stream, how much does spotify pay per stream, streaming royalties, apple music payout, distributor cut">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+h3{font-size:17px;margin:18px 0 6px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Spotify Royalty Calculator","description":"Free Spotify royalty calculator. Convert monthly streams into gross and net artist payout for Spotify, Apple Music, Tidal, Amazon Music, YouTube Music and Deezer, after distributor commission and yearly tracks.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/spotify-royalty-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does Spotify pay me less than three cents a stream when blogs say it pays four?","acceptedAnswer":{"@type":"Answer","text":"The four cent figure is a blended average for listeners in high-revenue countries on paid plans. If most of your plays come from free-tier listeners or from markets with cheaper subscriptions, the pool behind each of your streams is smaller. The calculator gives you a low, mid and high band so you can see the gap instead of trusting one number."}},{"@type":"Question","name":"Does my distributor really take a percentage of my royalties?","acceptedAnswer":{"@type":"Answer","text":"Only some do. Flat-fee distributors keep the recording royalty whole, while percentage distributors commonly keep nine to fifteen percent. If you also split with a producer or a label, the calculator applies those two deductions one after another, which is how a statement actually reads."}},{"@type":"Question","name":"What happens to my streams before a track reaches 1,000 plays?","acceptedAnswer":{"@type":"Answer","text":"Spotify does not pay recording royalties on those plays. The track has to pass 1,000 streams within a rolling twelve-month window before qualifying, so a catalogue of twenty small tracks can sit at nine hundred plays each and earn nothing. The tool flags your per-track average when it falls under that line."}},{"@type":"Question","name":"Why does Tidal pay so much more than Spotify for the same listener?","acceptedAnswer":{"@type":"Answer","text":"Tidal has no free tier and a much smaller listener base, so each subscription is divided across fewer streams. The revenue share is similar; the divisor is not. That is also why a service with more streams can show a lower average payout even when it pays out more money in total."}},{"@type":"Question","name":"Are songwriting royalties counted in this estimate?","acceptedAnswer":{"@type":"Answer","text":"No. Every figure here is the recording side only, the one your distributor pays. Mechanical royalties go through the MLC and performance royalties through your PRO, both on a separate schedule. Songwriters who register with neither can lose a large slice of the total pool."}},{"@type":"Question","name":"If one of my tracks goes viral, can I use this to predict next month?","acceptedAnswer":{"@type":"Answer","text":"Treat the output as a planning range, not a forecast. A viral spike lands in one or two months at a premium-heavy rate and then decays, so the average across the year will be lower than the spike month. Annual net divided by twelve is the number worth budgeting against."}}]}
+</script>
+<meta property="og:title" content="Spotify Royalty Calculator | Streams to Actual Artist Pay">
+<meta property="og:description" content="Free Spotify royalty calculator: turn streams into gross and net artist payout on six streaming services, after distributor cuts and the 1,000-stream cap.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/spotify-royalty-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spotify Royalty Calculator | Streams to Actual Artist Pay">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free Spotify royalty calculator: turn streams into gross and net artist payout on six streaming services, after distributor cuts and the 1,000-stream cap.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./youtube-money-calculator.html">YouTube Money</a>
+    <a href="./podcast-ad-revenue-calculator.html">Podcast Ad Revenue</a>
+    <a href="./twitch-revenue-calculator.html">Twitch Revenue</a>
+</div>
+
+<h1>Spotify Royalty Calculator</h1>
+<p>Streaming pays per share of a pool, not per play, so the only number worth planning around is a range. Enter the plays a release gathered and your contract terms, and this tool prices the same listening on six services, then subtracts your distributor percentage and any collaborator split to show what actually lands in your account. It also tells you how many plays you would need to clear a target, which is the question most artists ask after their first statement looks small.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="streams" placeholder="Streams in the period" value="250000">
+        <select id="platform">
+            <option value="spotify">Spotify</option>
+            <option value="apple">Apple Music</option>
+            <option value="tidal">Tidal</option>
+            <option value="amazon">Amazon Music</option>
+            <option value="ytmusic">YouTube Music</option>
+            <option value="deezer">Deezer</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <input type="number" id="dist" placeholder="Distributor cut %" value="9" step="0.1">
+        <input type="number" id="split" placeholder="Other rights holders %" value="0" step="1">
+        <input type="number" id="tracks" placeholder="Tracks in release" value="1" min="1">
+    </div>
+    <div class="input-row">
+        <input type="number" id="target" placeholder="Target payout $" value="1000">
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the Royalty Math Works</h2>
+<p>No major service publishes a fixed rate. Each month Spotify pools subscription and advertising revenue, hands roughly seventy percent of it to rights holders, and then divides that money by the total number of streams on the platform. Your share is your streams divided by everyone's streams, applied to the money pool. Because the pool and the denominator both move, the same thousand plays can be worth four dollars in December and three dollars in February. Every per-stream figure you read, including the ones in this tool, is a backward-looking average, which is why the output is presented as three bands.</p>
+<p>The arithmetic for the mid band is deliberately plain:</p>
+<ul>
+<li>Gross recording royalty = streams multiplied by the platform rate. 250,000 Spotify streams at $0.0038 gives $950.</li>
+<li>Distribution step = gross multiplied by (1 minus distributor percentage). With a nine percent distributor, $950 becomes $864.50.</li>
+<li>Collaborator step = that result multiplied by (1 minus the other rights holders percentage). Splitting a third with a producer turns $864.50 into $576.33.</li>
+<li>Per thousand streams = your net divided by streams, times 1,000. Here it is $2.31, which is the number to compare against your statement.</li>
+</ul>
+<p>The same 250,000 plays on Apple Music at $0.0085 gross $2,125 and net $1,933.75 after the distributor. On Tidal at $0.0125 the same plays gross $3,125 and net $2,843.75. Nothing about the music changed; only the divisor of each service's pool did. That single comparison explains most of the arguments artists have about which platform is best, and it is also the reason those arguments rarely settle: the platform with the highest rate has the fewest listeners to reach.</p>
+
+<h2>Where the Bands Come From</h2>
+<p>The low, mid and high figures below are planning bands drawn from publicly reported 2026 averages, not quoted rates. Use them to sanity-check a statement, not to settle a negotiation.</p>
+<table>
+<tr><th>Service</th><th>Low per stream</th><th>Mid per stream</th><th>High per stream</th><th>Mid payout on 100,000 plays</th></tr>
+<tr><td>Spotify</td><td>$0.0030</td><td>$0.0038</td><td>$0.0050</td><td>$380</td></tr>
+<tr><td>Apple Music</td><td>$0.0070</td><td>$0.0085</td><td>$0.0100</td><td>$850</td></tr>
+<tr><td>Tidal</td><td>$0.0100</td><td>$0.0125</td><td>$0.0150</td><td>$1,250</td></tr>
+<tr><td>Amazon Music</td><td>$0.0040</td><td>$0.0060</td><td>$0.0080</td><td>$600</td></tr>
+<tr><td>YouTube Music</td><td>$0.0020</td><td>$0.0048</td><td>$0.0071</td><td>$480</td></tr>
+<tr><td>Deezer</td><td>$0.0040</td><td>$0.0060</td><td>$0.0080</td><td>$600</td></tr>
+</table>
+<p>Two patterns are worth memorising. First, the services without a free tier sit at the top, because every play is funded by a subscription rather than by an advertisement. Second, the gap between low and high on the same service is often wider than the gap between two services at their midpoints. A Spotify artist with an audience concentrated in the United States and Northern Europe can outearn an Apple Music artist whose plays are spread across lower-priced markets. Geography moves your rate more than the logo on the app does.</p>
+
+<h2>Why the Headline Rate Is Misleading</h2>
+<p>The most common mistake is treating a published per-stream rate as a promise. It is an average across millions of listeners you will never have, and it hides three things that decide your own number.</p>
+<h3>Free listeners pay a fraction of what subscribers pay</h3>
+<p>On Spotify a paid subscriber contributes several times more revenue than a free listener hearing ads. If your growth came from a playlist that skews toward students on the free tier, your effective rate will land near the bottom of the band even though your stream count looks healthy. There is no way to fix this directly, but it explains why two artists with identical monthly plays can differ by forty percent in payout.</p>
+<h3>Geography is a multiplier, not a detail</h3>
+<p>A play in a market with a two-dollar-a-month subscription contributes a small slice to the pool. When a campaign targets cheaper markets to grow numbers quickly, the stream count rises faster than the revenue. If a sponsor or a label is judging you by streams, that gap is worth flagging before a deal is signed.</p>
+<h3>The threshold quietly deletes small tracks</h3>
+<p>Spotify only pays recording royalties on a track once it passes 1,000 streams in a rolling twelve-month window. A catalogue of thirty album cuts sitting at six hundred plays each earns nothing at all, and the money is redistributed to tracks that did clear the line. This tool divides your net by the number of tracks you enter, and warns you when that average falls below two thousand, meaning a meaningful share of the release may not qualify.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Check a monthly statement: enter the plays and your distributor percentage, then compare the per-thousand figure against what the statement shows.</li>
+<li>Set a release goal: put a dollar target in and read the plays required on each service, which is usually far higher than expected.</li>
+<li>Compare platforms before a campaign: the same budget spent buying playlisting in two markets will not produce the same net.</li>
+<li>Model a label or producer split before signing, so the offer is compared against the net figure rather than the gross.</li>
+<li>Pair it with the <a href="./youtube-money-calculator.html" style="color:#2363e0">YouTube Money Calculator</a> when a video and a track share an audience, and use the <a href="./podcast-ad-revenue-calculator.html" style="color:#2363e0">Podcast Ad Revenue Calculator</a> if you also sell host-read ads.</li>
+<li>Bring a sponsorship offer back to per-episode value with the <a href="./podcast-sponsorship-rate-calculator.html" style="color:#2363e0">Podcast Sponsorship Rate Calculator</a>.</li>
+</ul>
+
+<h2>What This Estimate Leaves Out</h2>
+<p>Three exclusions matter. Songwriting royalties are separate money: mechanical payments arrive through the Mechanical Licensing Collective and performance payments through a performing rights organization, and neither passes through your distributor. Failing to register with both is the most common reason an artist's total income is far below the pool's real size. Second, the tool does not model the publishing share of a cover or a sample clearance, which can pull a quarter of a track's income away permanently. Third, currency conversion and withholding on foreign royalties are ignored, and both can shave a few percent off a statement for non-US artists.</p>
+<p>There is also a timing issue the arithmetic cannot solve. Streaming statements lag two to three months, a viral month is followed by a decay, and a playlist add that lifts one month may not renew. The honest way to use any of these numbers is to average four quarters before deciding that a lane is working.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Why does Spotify pay me less than three cents a stream when blogs say four?</h3>
+<p>The four-cent figure is a blended average for listeners in high-revenue countries on paid plans. If most of your plays come from free-tier listeners or cheaper markets, the pool behind each stream is smaller. The bands exist so you can see that gap instead of trusting one number.</p>
+<h3>Does my distributor really take a percentage?</h3>
+<p>Some do. Flat-fee services keep the royalty whole, while percentage services commonly keep nine to fifteen percent. The tool applies the distributor cut first, then any collaborator split, which mirrors how a statement reads.</p>
+<h3>What happens to plays before a track reaches 1,000 streams?</h3>
+<p>Spotify pays nothing on them until the track passes 1,000 streams inside a rolling twelve months. A catalogue of small tracks can sit just under the line and earn zero, with that money redistributed to tracks that qualified.</p>
+<h3>Why does Tidal pay more than Spotify for the same listener?</h3>
+<p>Tidal has no free tier and far fewer listeners, so each subscription is divided across fewer streams. The revenue share is similar; the divisor is not. That is also why a bigger service can show a lower average and still pay more in total.</p>
+<h3>Are songwriting royalties in this number?</h3>
+<p>No, this is the recording side only. Mechanical royalties flow through the MLC and performance royalties through your PRO on separate schedules. Artists who register with neither can lose a large share of the full pool.</p>
+<h3>Can I use this to predict next month if a track goes viral?</h3>
+<p>Treat the output as a range, not a forecast. A viral month lands at a premium-heavy rate and then decays, so the twelve-month average will be lower. Budget against annual net divided by twelve.</p>
+</body>
+<script>
+(function(){
+  var rates = {
+    spotify: {name:'Spotify', low:0.0030, mid:0.0038, high:0.0050},
+    apple:   {name:'Apple Music', low:0.0070, mid:0.0085, high:0.0100},
+    tidal:   {name:'Tidal', low:0.0100, mid:0.0125, high:0.0150},
+    amazon:  {name:'Amazon Music', low:0.0040, mid:0.0060, high:0.0080},
+    ytmusic: {name:'YouTube Music', low:0.0020, mid:0.0048, high:0.0071},
+    deezer:  {name:'Deezer', low:0.0040, mid:0.0060, high:0.0080}
+  };
+  function fmt(n){
+    return n.toLocaleString('en-US',{minimumFractionDigits:2, maximumFractionDigits:2});
+  }
+  function compute(input){
+    var streams = Number(input.streams);
+    var dist = Number(input.dist);
+    var split = Number(input.split);
+    var tracks = Number(input.tracks);
+    var target = Number(input.target);
+    var key = rates[input.platform] ? input.platform : 'spotify';
+    if(!isFinite(streams) || streams <= 0){ return {error:'Enter a stream count above zero'}; }
+    if(!isFinite(dist) || dist < 0 || dist >= 100){ return {error:'Distributor cut must be between 0 and 99 percent'}; }
+    if(!isFinite(split) || split < 0 || split >= 100){ return {error:'Other rights holders must be between 0 and 99.9 percent'}; }
+    if(!isFinite(tracks) || tracks < 1){ tracks = 1; }
+    var keep = (1 - dist/100) * (1 - split/100);
+    var rows = [];
+    var order = ['spotify','apple','tidal','amazon','ytmusic','deezer'];
+    order.forEach(function(k){
+      var r = rates[k];
+      var grossMid = streams * r.mid;
+      var netMid = grossMid * keep;
+      rows.push({
+        key:k, name:r.name, grossMid:grossMid, netMid:netMid,
+        netLow: streams * r.low * keep, netHigh: streams * r.high * keep,
+        perThousand: streams > 0 ? (netMid/streams)*1000 : 0,
+        streamsForTarget: r.mid * keep > 0 ? target / (r.mid * keep) : Infinity
+      });
+    });
+    var sel = rows.filter(function(x){ return x.key === key; })[0];
+    return {
+      keep: keep,
+      netMid: sel.netMid,
+      netLow: sel.netLow,
+      netHigh: sel.netHigh,
+      perThousand: sel.perThousand,
+      perTrack: sel.netMid / tracks,
+      monthly: sel.netMid / 12,
+      streamsForTarget: sel.streamsForTarget,
+      perTrackAvgStreams: streams / tracks,
+      thresholdRisk: (streams / tracks) < 2000,
+      selected: sel.name,
+      rows: rows
+    };
+  }
+  function render(res){
+    var out = document.getElementById('resOut');
+    var tbl = document.getElementById('resTbl');
+    if(res.error){ out.textContent = res.error; tbl.innerHTML=''; return; }
+    out.innerHTML = 'Net to you on ' + res.selected + ': <span style="color:#0f9d58;font-size:22px">$' + fmt(res.netMid) + '</span> per period, $' + fmt(res.perThousand) + ' per 1,000 streams';
+    var html = '<tr><th>Service</th><th>Gross (mid)</th><th>Net (low)</th><th>Net (mid)</th><th>Net (high)</th><th>Per 1,000</th><th>Plays for target</th></tr>';
+    res.rows.forEach(function(r){
+      html += '<tr><td>' + r.name + '</td><td>$' + fmt(r.grossMid) + '</td><td>$' + fmt(r.netLow) + '</td><td><b>$' + fmt(r.netMid) + '</b></td><td>$' + fmt(r.netHigh) + '</td><td>$' + fmt(r.perThousand) + '</td><td>' + (isFinite(r.streamsForTarget) ? Math.ceil(r.streamsForTarget).toLocaleString('en-US') : '&mdash;') + '</td></tr>';
+    });
+    html += '<tr><td>Your per-track average</td><td colspan="5">' + Math.round(res.perTrackAvgStreams).toLocaleString('en-US') + ' plays per track, $' + fmt(res.perTrack) + ' per track</td><td>' + (res.thresholdRisk ? 'Under 2,000: threshold risk' : 'Above threshold') + '</td></tr>';
+    html += '<tr><td>Annualised net</td><td colspan="6">$' + fmt(res.netMid * 12) + '</td></tr>';
+    tbl.innerHTML = html;
+  }
+  function run(){
+    var res = compute({
+      streams: document.getElementById('streams').value,
+      platform: document.getElementById('platform').value,
+      dist: document.getElementById('dist').value,
+      split: document.getElementById('split').value,
+      tracks: document.getElementById('tracks').value,
+      target: document.getElementById('target').value
+    });
+    render(res);
+    return res;
+  }
+  window.xiakeCalc = run;
+  window.xiakeCompute = compute;
+  document.getElementById('calcBtn').onclick = run;
+  run();
+})();
+</script>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
