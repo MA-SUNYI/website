@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cost to Charge an EV Calculator | Home & Public Charging</title>
+<meta name="description" content="Work out what a full EV charge or 100 miles costs at your home rate, a supercharger or a public station, with overnight rates and charge loss included.">
+<link rel="canonical" href="https://www.xiake.icu/cost-to-charge-ev-calculator.html">
+<meta name="keywords" content="cost to charge ev calculator, ev charging cost per mile, home charging cost, supercharger cost, time of use ev rate, kwh per 100 miles">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cost to Charge an EV Calculator","description":"An EV charging cost tool. Enter battery size, charge added, miles driven and the price per kWh at home, at a network DC fast charger and at a level 2 station to compare cost per charge, cost per 100 miles and cost per year.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/cost-to-charge-ev-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Why is the grid energy figure larger than the battery capacity?","acceptedAnswer":{"@type":"Answer","text":"Because charging is not perfectly efficient. A level 2 home charger typically returns about 88 to 92 percent of what it pulls from the wall to the pack, and DC fast charging runs somewhat lower partly because it also conditions the battery. A 75 kWh pack filled from 10 to 90 percent is 60 kWh in the pack, but roughly 66 kWh pulled from the meter at 91 percent efficiency, and it is the meter figure you pay for."}},
+{"type":"Question","name":"How do I find the miles-per-kWh figure for my car?","acceptedAnswer":{"@type":"Answer","text":"Use the EPA combined rating divided by 33.7, which is the kWh in one gallon of gasoline used for the MPGe conversion. A car rated 110 MPGe is about 3.26 miles per kWh on the EPA cycle. Real-world highway driving at 75 mph usually lands 15 to 25 percent below that, so subtract before you trust an annual estimate."}},
+{"type":"Question","name":"Is a time-of-use plan always cheaper for an EV?","acceptedAnswer":{"@type":"Answer","text":"Only if the overnight window covers most of your charging and the daytime rate does not punish your household. A plan that drops overnight power to 9 cents but raises the 4 pm to 9 pm rate to 50 cents can cost more once air conditioning, cooking and laundry are counted. Compare the total bill on both plans for one billing cycle before switching."}},
+{"type":"Question","name":"What does a 20 percent battery health loss do to my cost per mile?","acceptedAnswer":{"@type":"Answer","text":"It raises it directly. The same 60 kWh put into the pack moves fewer miles once range is down a fifth, so cost per mile rises by about 25 percent if the price per kWh is unchanged. Usable capacity, not nameplate capacity, is the number that matters when a car is several years old."}},
+{"type":"Question","name":"Should public charging cost be compared with gasoline per gallon or per mile?","acceptedAnswer":{"@type":"Answer","text":"Per mile. A DC fast charge at 45 cents per kWh often looks expensive per kilowatt-hour, but a car doing 3.2 miles per kWh still pays about 14 cents a mile, which is competitive with a 30 mpg car at $4.20 a gallon. Per-gallon comparisons flatter gasoline because it ignores how far each unit actually moves the car."}},
+{"type":"Question","name":"Does the calculator include charging losses when the price is per minute?","acceptedAnswer":{"@type":"Answer","text":"No, and that is a real limitation. Some networks bill by the minute rather than by the kilowatt-hour, so the effective price depends on how fast your car accepts power above 80 percent state of charge, where the curve tapers. Convert a per-minute session to an effective price per kWh from your own receipt before entering it here."}}
+]}
+</script>
+<meta property="og:title" content="Cost to Charge an EV Calculator | Home & Public Charging">
+<meta property="og:description" content="Work out what a full EV charge or 100 miles costs at your home rate, a supercharger or a public station, with overnight rates and charge loss included.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/cost-to-charge-ev-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cost to Charge an EV Calculator | Home & Public Charging">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Work out what a full EV charge or 100 miles costs at your home rate, a supercharger or a public station, with overnight rates and charge loss included.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./ev-charging-cost-calculator.html">EV Charging</a>
+    <a href="./gas-mileage-calculator.html">Gas Mileage</a>
+    <a href="./electricity-cost-calculator.html">Electricity Cost</a>
+</div>
+
+<h1>Cost to Charge an EV Calculator</h1>
+<p>The sticker price of a charge is rarely the price you pay. You pay for the kilowatt-hours that leave the meter, not the ones that land in the pack, and the miles you get from those kilowatt-hours fall faster than most drivers expect at highway speed, in cold weather, or as the battery ages. This tool converts a pack size, a charge added and a driving distance into cost per charge, per 100 miles, per mile and per year, at three different prices so you can see what switching from the driveway to a fast charger actually costs.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="batt" placeholder="Usable battery kWh" value="75">
+        <input type="number" id="socStart" placeholder="Start charge %" value="10">
+        <input type="number" id="socEnd" placeholder="End charge %" value="90">
+        <input type="number" id="eff" placeholder="Miles per kWh" value="3.2">
+    </div>
+    <div class="input-row">
+        <input type="number" id="loss" placeholder="Charging loss %" value="9">
+        <input type="number" id="home" placeholder="Home $/kWh" value="0.17">
+        <input type="number" id="l2" placeholder="Public L2 $/kWh" value="0.28">
+        <input type="number" id="dc" placeholder="DC fast $/kWh" value="0.45">
+    </div>
+    <div class="input-row">
+        <input type="number" id="miles" placeholder="Miles driven per year" value="12000">
+        <input type="number" id="dcShare" placeholder="Share charged away from home %" value="20">
+        <button id="calcBtn">Calculate Cost</button>
+    </div>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the cost is worked out</h2>
+<p>Two conversions do all the work. The first is from battery percentage to energy: kilowatt-hours added to the pack equals usable capacity times the change in state of charge, divided by 100. The second is from pack energy to meter energy, which is where charging loss enters. Meter energy equals pack energy divided by one minus the loss rate expressed as a decimal. Every dollar in the table is charged on the meter figure, because that is what the utility or the network bills.</p>
+<p>From there, cost per 100 miles is meter energy per session divided by the miles that session delivers, then multiplied by 100. Miles per session equals pack kilowatt-hours added times miles per kWh. Cost per mile is simply cost per hundred divided by 100, and the annual figure scales the per-mile number by yearly distance.</p>
+<p>A worked example. A 75 kWh usable battery charged from 10 percent to 90 percent takes on 60 kWh in the pack. At 9 percent charging loss the meter supplies 60 divided by 0.91, about 65.93 kWh. At 3.2 miles per kWh that session moves 192 miles. At the US average residential price of about 17 cents per kWh, the charge costs about $11.21, which is $0.058 per mile or $5.84 per 100 miles. The same 60 kWh at a 45 cent fast charger costs about $29.67 for the same 192 miles, or $15.45 per 100 miles.</p>
+<p>The annual line blends the two, using the share you charge away from home at the public level 2 price, since most drivers who use a fast charger do so on trips rather than as routine. Raising the loss rate, lowering miles per kWh, or shifting more charging to public stations all push the annual number up, and the tool shows the sensitivity immediately.</p>
+
+<h2>Typical prices and efficiency bands</h2>
+<table>
+<tr><th>Charging situation</th><th>Price per kWh</th><th>Effort</th></tr>
+<tr><td>Carport or garage, flat residential tariff</td><td>15 to 20 cents</td><td>Low, plug in overnight</td></tr>
+<tr><td>Switched overnight time-of-use window</td><td>7 to 12 cents</td><td>Medium, plan the plan change</td></tr>
+<tr><td>Workplace or shopping plaza level 2</td><td>20 to 35 cents</td><td>Low, but parking turnover limits dwell time</td></tr>
+<tr><td>Highway DC fast charger</td><td>35 to 55 cents</td><td>High speed, lowest efficiency window</td></tr>
+</table>
+<table>
+<tr><th>Body type and season</th><th>miles per kWh</th><th>Dollars per 100 miles at 17 cents</th></tr>
+<tr><td>Aero sedan, urban route</td><td>4.0</td><td>$4.67</td></tr>
+<tr><td>Aero sedan, steady highway</td><td>3.3</td><td>$5.66</td></tr>
+<tr><td>Crossover, mixed use</td><td>3.0</td><td>$6.23</td></tr>
+<tr><td>Full-size SUV or pickup</td><td>2.2</td><td>$8.49</td></tr>
+<tr><td>Any of the above in a cold snap</td><td>1.8</td><td>$10.38</td></tr>
+</table>
+
+<p>A fair comparison with gasoline has to use the same distance. Take a 12,000 mile year, 3.2 miles per kWh, and a 17 cent home rate with 20 percent of charging at a 28 cent public station. The blended figure comes out near $791 a year, about $66 a month, because 12,000 miles needs roughly 4,121 kWh at the meter once the 9 percent charge loss is counted. A 30 mpg car on the same 12,000 miles burns 400 gallons, which at $3.10 a gallon is $1,240. The gap is real, but it shrinks quickly if the home rate is 30 cents, if winter efficiency drops to 2.4 miles per kWh, or if most charging happens at a fast charger.</p>
+<p>Price changes fast and by region, so the planner is only as good as the per-kWh number you type. Hawaii can sit above 45 cents, while parts of Louisiana and Washington run near 11 cents, and two neighboring utilities can differ by 6 cents on the same street. The honest approach is to take the energy charge plus the delivery charge from your own bill, divide by total kilowatt-hours used, and add any per-kWh riders. Rebates and free-charging perks at work are real but should be modelled separately, because they tend to end.</p>
+<p>Two habits change the arithmetic more than any app. The first is setting the car to stop at 80 percent on a daily basis, which keeps the majority of sessions inside the fast part of the charging curve and avoids paying for slow kilowatt-hours. The second is scheduling the home session to start after the overnight window opens rather than when the car is parked, so a flat 17 cent tariff becomes a 9 cent one for the same energy. Neither changes how you drive, and together they can move the yearly figure by a third.</p>
+<h2>Common Usage</h2>
+<ul>
+<li>Compare the true monthly fuel cost of an EV against a 30 mpg gasoline car before buying</li>
+<li>Decide whether a DC fast charger on a road trip is worth the premium over a nearby level 2 station</li>
+<li>Check whether an overnight time-of-use plan still wins once the rest of the household is on it</li>
+<li>Price a charge-and-drive trip by entering the roundtrip distance as yearly miles</li>
+<li>Estimate electricity used with the <a href="./electricity-cost-calculator.html" style="color:#2363e0">Electricity Cost Calculator</a></li>
+<li>Compare the same trip in a gasoline car with the <a href="./gas-mileage-calculator.html" style="color:#2363e0">Gas Mileage Calculator</a></li>
+<li>Plan a charging stop's energy with the <a href="./ev-charging-cost-calculator.html" style="color:#2363e0">EV Charging Cost Calculator</a></li>
+</ul>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
+
+<script>
+(function(){
+var el=function(id){return document.getElementById(id);};
+var batt=el('batt'), socStart=el('socStart'), socEnd=el('socEnd'), eff=el('eff');
+var loss=el('loss'), home=el('home'), l2=el('l2'), dc=el('dc');
+var miles=el('miles'), dcShare=el('dcShare');
+var calcBtn=el('calcBtn'), resOut=el('resOut'), resTbl=el('resTbl');
+
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+window.evCost=function(i){
+  var b=Number(i.batt), s0=Number(i.socStart), s1=Number(i.socEnd);
+  var e=Number(i.eff), l=Number(i.loss);
+  var pH=Number(i.home), pL=Number(i.l2), pD=Number(i.dc);
+  var yr=Number(i.miles), share=Number(i.dcShare);
+  if(!(b>0)) return {ok:false,msg:'Enter a usable battery size in kWh'};
+  if(!(s1>s0)||s0<0||s1>100||(s1-s0)<0.5) return {ok:false,msg:'End state of charge must be above the start, e.g. 10 to 90'};
+  if(!(e>0)) return {ok:false,msg:'Enter miles per kWh, for example 3.2'};
+  if(!(l>=0&&l<40)) return {ok:false,msg:'Charging loss must be between 0 and 39 percent'};
+  if(!(pH>=0&&pL>=0&&pD>=0)) return {ok:false,msg:'Prices cannot be negative'};
+  if(!(yr>=0)) return {ok:false,msg:'Yearly miles cannot be negative'};
+  if(!(share>=0&&share<=100)) return {ok:false,msg:'Share charged away from home must be 0 to 100'};
+
+  var packKwh=b*(s1-s0)/100;
+  var meter=packKwh/(1-l/100);
+  var range=packKwh*e;
+  var costH=meter*pH, costL=meter*pL, costD=meter*pD;
+  var per100=function(c){return range>0?c/range*100:0;};
+  var dayAvg=yr/365;
+  var homeKwhYr=dayAvg*365*(1-share/100)/e/(1-l/100);
+  var pubKwhYr=dayAvg*365*(share/100)/e/(1-l/100);
+  var annual=homeKwhYr*pH+pubKwhYr*pL;
+  return {ok:true,packKwh:packKwh,meter:meter,range:range,
+    costH:costH,costL:costL,costD:costD,
+    p100H:per100(costH),p100L:per100(costL),p100D:per100(costD),
+    miH:range>0?costH/range:0,miL:range>0?costL/range:0,miD:range>0?costD/range:0,
+    annual:annual,kwhYr:homeKwhYr+pubKwhYr,monthly:annual/12};
+};
+
+function render(){
+  var r=window.evCost({batt:batt.value,socStart:socStart.value,socEnd:socEnd.value,eff:eff.value,
+    loss:loss.value,home:home.value,l2:l2.value,dc:dc.value,miles:miles.value,dcShare:dcShare.value});
+  if(!r.ok){ resOut.textContent=r.msg; resTbl.innerHTML=''; return; }
+  var rows='<tr><th>Line</th><th>Home</th><th>Public L2</th><th>DC fast</th></tr>'
+    +'<tr><td>Energy added to pack</td><td colspan="3">'+r.packKwh.toFixed(1)+' kWh</td></tr>'
+    +'<tr><td>Energy billed at the meter</td><td colspan="3">'+r.meter.toFixed(2)+' kWh</td></tr>'
+    +'<tr><td>Miles from this charge</td><td colspan="3">'+Math.round(r.range).toLocaleString('en-US')+' mi</td></tr>'
+    +'<tr><td><b>Cost of this charge</b></td><td><b>$'+usd(r.costH)+'</b></td><td><b>$'+usd(r.costL)+'</b></td><td><b>$'+usd(r.costD)+'</b></td></tr>'
+    +'<tr><td>Cost per 100 miles</td><td>$'+usd(r.p100H)+'</td><td>$'+usd(r.p100L)+'</td><td>$'+usd(r.p100D)+'</td></tr>'
+    +'<tr><td>Cost per mile</td><td>$'+(r.miH).toFixed(3)+'</td><td>$'+(r.miL).toFixed(3)+'</td><td>$'+(r.miD).toFixed(3)+'</td></tr>'
+    +'<tr><td>Yearly energy drawn</td><td colspan="3">'+Math.round(r.kwhYr).toLocaleString('en-US')+' kWh</td></tr>'
+    +'<tr><td><b>Yearly charging cost (blended)</b></td><td colspan="3"><b>$'+usd(r.annual)+'</b></td></tr>'
+    +'<tr><td>Monthly average</td><td colspan="3">$'+usd(r.monthly)+'</td></tr>';
+  resTbl.innerHTML=rows;
+  resOut.innerHTML='Home charging: <span style="color:#0f9d58;font-size:22px">$'+usd(r.p100H)+' per 100 miles</span> — the same energy at a fast charger is $'+usd(r.p100D)+'.';
+}
+
+calcBtn.onclick=render;
+render();
+})();
+</script>
+</body>
+</html>
