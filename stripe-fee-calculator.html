@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stripe Fee Calculator | What You Net After Every Charge</title>
+<meta name="description" content="Stripe fee calculator for US sellers: the processing deduction, net payout and effective rate on card, ACH, keyed and international payments at 2026 rates.">
+<link rel="canonical" href="https://www.xiake.icu/stripe-fee-calculator.html">
+<meta name="keywords" content="stripe fee calculator, stripe fees 2026, stripe processing fee, net payout calculator, stripe ach fee, stripe international card fee, effective rate, gross up calculator">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stripe Fee Calculator","description":"Stripe fee calculator using 2026 US standard pricing. Enter a charge to see the deduction, net payout, effective rate, and the sum to quote to net a target on card, ACH, keyed and international payments.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/stripe-fee-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Stripe charge per transaction in 2026?","acceptedAnswer":{"@type":"Answer","text":"For US accounts on standard pricing, Stripe charges 2.9% plus 30 cents per successful online card charge, 2.7% plus 5 cents for card-present payments through Stripe Terminal, and 0.8% capped at $5 for ACH Direct Debit. Manually keyed cards carry 0.5 percentage points more, cards issued abroad 1.5 more, and currency conversion 1."}},{"@type":"Question","name":"Why is my effective Stripe rate higher than 2.9%?","acceptedAnswer":{"@type":"Answer","text":"The 30 cent fixed component is billed on every payment regardless of size, so it lifts the rate most on small tickets. A $10 charge costs $0.59, which is 5.9%, not 2.9%. Cards issued abroad, keyed entries, currency conversion and dispute fees push the blended rate higher again."}},{"@type":"Question","name":"Does Stripe refund its fee when I refund a customer?","acceptedAnswer":{"@type":"Answer","text":"No. The customer receives the full sum back, but the original deduction is not returned to you, so a refunded sale still leaves you down the fee. Refunding a $200 charge at 2.9% plus 30 cents costs you $6.10 with nothing to show for it."}},{"@type":"Question","name":"Is ACH cheaper than cards for large amounts?","acceptedAnswer":{"@type":"Answer","text":"Far cheaper. ACH Direct Debit costs 0.8% and stops at $5, a cap reached at $625. A $10,000 bill costs $5 by ACH against $290.30 on a 2.9% plus 30 cents card, a difference of $285.30 on one payment."}},{"@type":"Question","name":"How much does a chargeback cost on Stripe?","acceptedAnswer":{"@type":"Answer","text":"Stripe bills a $15 dispute fee for every dispute opened, win or lose. Contesting it by hand adds another $15, returned only if you win. Losing also gives back the sale amount, and Smart Disputes takes 30% of the disputed amount on disputes it wins."}},{"@type":"Question","name":"Can I add the Stripe fee to the customer's bill?","acceptedAnswer":{"@type":"Answer","text":"Sometimes, within limits. US rules allow a card surcharge up to 3% on credit cards with clear disclosure before payment, and several states restrict surcharging entirely. Covering 2.9% plus 30 cents exceeds 3% on any payment under about $2,300, so a flat pass-through is rarely compliant."}}]}
+</script>
+<meta property="og:title" content="Stripe Fee Calculator | What You Net After Every Charge">
+<meta property="og:description" content="Stripe fee calculator for US sellers: the processing deduction, net payout and effective rate on card, ACH, keyed and international payments at 2026 rates.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/stripe-fee-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stripe Fee Calculator | What You Net After Every Charge">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Stripe fee calculator for US sellers: the processing deduction, net payout and effective rate on card, ACH, keyed and international payments at 2026 rates.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./paypal-fee-calculator.html">PayPal Fees</a>
+    <a href="./shopify-fee-calculator.html">Shopify Fees</a>
+    <a href="./substack-fee-calculator.html">Substack Fees</a>
+</div>
+
+<h1>Stripe Fee Calculator</h1>
+<p>Stripe publishes one headline number, 2.9% + $0.30, and the rest of the rate card sits further down a pricing page most merchants never finish reading. What you actually pay depends on how the money comes in: a tapped card, a typed card number, a bank debit or a card issued abroad each carries its own price. This tool takes the amount and the rail, applies the 2026 US standard rates, and shows the deduction, your net payout, the effective rate you really paid, and the sum to quote if you need a fixed figure to land in your account.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="amt" placeholder="Charge amount $" step="0.01" min="0">
+        <select id="method">
+            <option value="card">Online card or wallet</option>
+            <option value="inperson">Card present (Terminal)</option>
+            <option value="keyed">Manually keyed card</option>
+            <option value="ach">ACH Direct Debit</option>
+        </select>
+    </div>
+    <div class="input-row">
+        <label><input type="checkbox" id="intl" style="min-width:auto;padding:0;margin-right:6px;">International card (+1.5%)</label>
+        <label><input type="checkbox" id="fx" style="min-width:auto;padding:0;margin-right:6px;">Currency conversion (+1%)</label>
+    </div>
+    <div class="input-row">
+        <input type="number" id="volume" placeholder="Charges per month" step="1" min="0">
+        <input type="number" id="target" placeholder="Target net $ (optional)" step="0.01" min="0">
+    </div>
+    <button id="calcBtn">Calculate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">US standard pricing, verified November 2026. Figures exclude custom pricing, Radar for Fraud Teams, Billing at 0.7% of Billing volume and Stripe Tax at 0.5% per transaction.</p>
+</div>
+
+<h2>How the fee is built</h2>
+<p>Every Stripe charge is a percentage of the amount plus a fixed component, and the add-ons are further percentage points rather than their own line items on your dashboard. The general form is:</p>
+<p><b>Fee = Amount x percentage rate + fixed fee</b></p>
+<p>A $250 online card payment costs 250 x 2.9% + $0.30 = $7.25 + $0.30 = $7.55. You bank $242.45, an effective rate of 3.02% against the quoted 2.9%. The difference is the fixed component carried across one ticket. On a $10 charge the same rate costs $0.59, which is 5.9% of the money, and on a $1,000 bill it costs $29.30, or 2.93%.</p>
+<p>Working backwards is where merchants lose money. To net a fixed sum you cannot bolt the percentage onto your price, because Stripe deducts from the higher figure too. Divide by one minus the rate and put the fixed component back first:</p>
+<p><b>Amount to charge = (Target net + fixed fee) / (1 - percentage rate)</b></p>
+<p>To end up with $1,000 from a domestic card charge: ($1,000 + $0.30) / 0.971 = $1,030.18. Stripe takes $30.18 and your $1,000 lands. Bolting 2.9% and 30 cents onto $1,000 gives $1,029.30, a gap of $0.87 every time you quote that way.</p>
+
+<h2>What each payment method costs</h2>
+<p>The rail matters more than the headline rate. The same customer paying the same bill can cost you 0.8% or 5.4% depending on how the money moves.</p>
+<table>
+<tr><th>Payment method</th><th>Rate</th><th>Fee on $100</th><th>Fee on $1,000</th></tr>
+<tr><td>Online card or wallet</td><td>2.9% + $0.30</td><td>$3.20</td><td>$29.30</td></tr>
+<tr><td>Card present (Terminal)</td><td>2.7% + $0.05</td><td>$2.75</td><td>$27.05</td></tr>
+<tr><td>Manually keyed card</td><td>3.4% + $0.30</td><td>$3.70</td><td>$34.30</td></tr>
+<tr><td>ACH Direct Debit</td><td>0.8%, capped $5</td><td>$0.80</td><td>$5.00</td></tr>
+<tr><td>International card</td><td>4.4% + $0.30</td><td>$4.70</td><td>$44.30</td></tr>
+<tr><td>International plus FX</td><td>5.4% + $0.30</td><td>$5.70</td><td>$54.30</td></tr>
+</table>
+<p>The ACH row is the one to memorise. Because the 0.8% stops at $5, the cap is reached at $625, and every dollar beyond that carries no processing cost. A $10,000 bill costs $5 by bank debit and $290.30 by card. That single switch beats any negotiation over a tenth of a percentage point, though it only works where the customer accepts a bank debit and slower settlement.</p>
+
+<h2>The effective rate at real ticket sizes</h2>
+<p>Two merchants on identical pricing can run wildly different blended rates simply because of what they sell. A $6 sticker order and a $6,000 equipment bill both pay 2.9% + $0.30, and only one of them feels it.</p>
+<table>
+<tr><th>Charge amount</th><th>Fee (card)</th><th>Effective rate</th></tr>
+<tr><td>$10</td><td>$0.59</td><td>5.90%</td></tr>
+<tr><td>$25</td><td>$1.03</td><td>4.10%</td></tr>
+<tr><td>$50</td><td>$1.75</td><td>3.50%</td></tr>
+<tr><td>$100</td><td>$3.20</td><td>3.20%</td></tr>
+<tr><td>$250</td><td>$7.55</td><td>3.02%</td></tr>
+<tr><td>$1,000</td><td>$29.30</td><td>2.93%</td></tr>
+<tr><td>$10,000</td><td>$290.30</td><td>2.90%</td></tr>
+</table>
+<p>Below roughly $12 the fixed component alone pushes the effective rate past 5.5%, and no repricing fixes that. The realistic options are a minimum order size, combining items into one charge, or collecting small recurring sums monthly rather than weekly. A $5 weekly charge costs $0.45 each time, $23.14 a year, against $21.00 monthly for the same money.</p>
+
+<h2>The add-ons most merchants trigger quietly</h2>
+<p><b>International cards.</b> A card issued abroad adds 1.5 percentage points. On a $99 download sold to a Canadian buyer the deduction is $4.66 rather than $3.17, and that is the good case where the price is already in dollars.</p>
+<p><b>Currency conversion.</b> If the buyer pays in euros and you settle in dollars, another point goes on top, so a cross-border sale with conversion costs 5.4% + $0.30. That is $5.70 on a $100 sale, nearly double the domestic rate.</p>
+<p><b>Instant Payouts.</b> Standard payouts in one to two business days are free. Moving the balance to a debit card within minutes costs 1.5% with a $0.50 floor, so pulling $1,000 forward for a weekend costs $15, and pulling $100 costs $1.50, which is 1.5% of a small balance for a day or two of earlier access.</p>
+<p><b>Disputes.</b> Stripe bills $15 for every dispute opened, win or lose. Contesting one by hand adds another $15, returned only if you win. Losing also gives back the sale amount, so a $120 chargeback can cost $150 plus the inventory. Smart Disputes, which assembles the evidence, takes 30% of the disputed amount on the disputes it wins.</p>
+
+<h2>Refunds, subscriptions and where this model stops</h2>
+<p>A refund returns the money to the customer but not the deduction to you. Refunding a $200 charge leaves you $6.10 down with nothing to show for it, which is why heavy send-back volumes have to be priced into the margin rather than treated as an occasional annoyance. Refunding a fraction of a charge works the same way: the deduction stands as calculated on the original charge.</p>
+<p>Two Stripe products stack on top of the payment fee. Billing, which handles subscriptions and recurring bills, adds 0.7% of Billing volume on pay-as-you-go terms. Stripe Tax adds 0.5% per transaction where it calculates and files sales tax. A subscription business using both is really paying 4.1% + $0.30 on domestic card volume, not 2.9%, so a 20% margin loses a fifth of a point more than the payment page suggests.</p>
+<p>The calculator uses the standard US rate card and assumes one charge per payment. Custom and IC+ pricing for high volume is not modelled, nor are network fees on some dispute outcomes, so treat the output as a planning estimate and your processor's report as the record.</p>
+
+<h2>Common usage</h2>
+<ul>
+<li>Choosing whether to swallow processing costs or set a minimum order size</li>
+<li>Quoting a client the exact sum that nets your target</li>
+<li>Weighing a card rail against ACH for bills beyond $625</li>
+<li>Testing what an overseas customer really costs before pricing in euros or pounds</li>
+<li>Projecting monthly processing cost from average ticket and volume</li>
+</ul>
+<p>Elsewhere on the site: the <a href="./paypal-fee-calculator.html" style="color:#2363e0">PayPal Fee Calculator</a> runs the same math on another rate card, the <a href="./shopify-fee-calculator.html" style="color:#2363e0">Shopify Fee Calculator</a> drops a store plan on top of the stack, and the <a href="./profit-margin-calculator.html" style="color:#2363e0">Profit Margin Calculator</a> turns the deduction into a margin you can compare.</p>
+
+<h2>Why the effective rate is the number to track</h2>
+<p>Most merchants compare processors on the headline percentage and then wonder why the deposit does not match. The recurring mistake is treating 2.9% as a cost control problem when the fixed component, the mix of payment methods and the refund rate are doing the damage. A store on 2.9% + $0.30 with an $18 average order pays 4.57% of revenue in processing alone, and a 4% refund rate pushes that past 4.7%, so switching processors to save 0.2 points recovers far less than lifting the average order by $5 or moving bills beyond $625 to bank debit.</p>
+<p>Run the arithmetic on your own average ticket before trusting any rate comparison, from any provider, including this page.</p>
+
+<script>
+function money(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function rateFor(method,intl,fx){
+  if(method==='ach') return {pct:0.008,fixed:0,capped:true};
+  var pct = method==='inperson' ? 0.027 : (method==='keyed' ? 0.034 : 0.029);
+  var fixed = method==='inperson' ? 0.05 : 0.30;
+  if(intl) pct += 0.015;
+  if(fx) pct += 0.01;
+  return {pct:pct,fixed:fixed,capped:false};
+}
+function feeOf(amount,r){
+  if(r.capped) return Math.min(amount*r.pct,5);
+  return amount*r.pct + r.fixed;
+}
+function grossUp(target,r){
+  if(r.capped){
+    var a1 = target/(1-r.pct);
+    if(a1*r.pct <= 5) return a1;
+    return target + 5;
+  }
+  return (target + r.fixed)/(1-r.pct);
+}
+document.getElementById('calcBtn').onclick=function(){
+  var amt=parseFloat(document.getElementById('amt').value);
+  var method=document.getElementById('method').value;
+  var intl=document.getElementById('intl').checked;
+  var fx=document.getElementById('fx').checked;
+  var vol=parseFloat(document.getElementById('volume').value);
+  var target=parseFloat(document.getElementById('target').value);
+  var out=document.getElementById('resOut'), tbl=document.getElementById('resTbl');
+  if(isNaN(amt)||amt<=0){ out.textContent='Enter a charge amount to calculate'; tbl.innerHTML=''; return; }
+  var r=rateFor(method,intl,fx);
+  var fee=feeOf(amt,r), net=amt-fee, eff=fee/amt*100;
+  var rows='<tr><th>Item</th><th>Amount</th></tr>'
+    + '<tr><td>Charge</td><td>$'+money(amt)+'</td></tr>'
+    + '<tr><td>Percentage portion'+(r.capped?' (0.8% of charge)':' ('+(r.pct*100).toFixed(1)+'%)')+'</td><td>$'+money(fee-(r.capped?0:r.fixed))+'</td></tr>'
+    + (r.capped ? '' : '<tr><td>Fixed fee</td><td>$'+money(r.fixed)+'</td></tr>')
+    + '<tr><td><b>Stripe fee</b></td><td><b>$'+money(fee)+'</b></td></tr>'
+    + '<tr><td><b>Net payout</b></td><td><b>$'+money(net)+'</b></td></tr>'
+    + '<tr><td>Effective rate</td><td>'+eff.toFixed(2)+'%</td></tr>';
+  if(!isNaN(target)&&target>0){
+    rows += '<tr><td>Charge to net $'+money(target)+'</td><td>$'+money(grossUp(target,r))+'</td></tr>';
+  }
+  if(!isNaN(vol)&&vol>0){
+    rows += '<tr><td>Fees per month ('+vol+' charges)</td><td>$'+money(fee*vol)+'</td></tr>'
+      + '<tr><td>Fees per year</td><td>$'+money(fee*vol*12)+'</td></tr>'
+      + '<tr><td>Net per year</td><td>$'+money(net*vol*12)+'</td></tr>';
+  }
+  if(method!=='ach'){
+    var ach=Math.min(amt*0.008,5);
+    rows += '<tr><td>Same charge by ACH</td><td>$'+money(ach)+'</td></tr>';
+    if(ach<fee) rows += '<tr><td>Saved by ACH</td><td>$'+money(fee-ach)+'</td></tr>';
+  }
+  out.innerHTML='You keep <span style="color:#0f9d58;font-size:22px">$'+money(net)+'</span> of $'+money(amt)+' &middot; fee $'+money(fee)+' ('+eff.toFixed(2)+'%)';
+  tbl.innerHTML=rows;
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>
