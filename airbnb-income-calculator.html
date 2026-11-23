@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airbnb Income Calculator | Net Revenue After Fees & Costs</title>
+<meta name="description" content="Free Airbnb income calculator: enter rate, occupancy, platform fee, cleaning and fixed costs to see gross bookings, net income and break-even occupancy.">
+<link rel="canonical" href="https://www.xiake.icu/airbnb-income-calculator.html">
+<meta name="keywords" content="airbnb income calculator, airbnb calculator, airbnb revenue calculator, short term rental calculator, airbnb profit calculator, airbnb host fee, break even occupancy">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Airbnb Income Calculator","description":"Free Airbnb income calculator for hosts. Enter nightly rate, available nights, occupancy, platform fee, cleaning costs and fixed expenses to get gross booking revenue, net annual and monthly income, and the occupancy needed to break even.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/airbnb-income-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"@type":"Question","name":"What occupancy rate is realistic for a first year on Airbnb?","acceptedAnswer":{"@type":"Answer","text":"Budget 45 to 55 percent for a brand-new listing in a competitive market, even if comparable listings show 65 percent. A new listing has no reviews, no ranking history and no repeat guests, and it typically takes two to four months to reach mature occupancy. Modeling year one at the mature rate is the most common way hosts overpay for a property."}},{"@type":"Question","name":"Why does my payout look smaller than nightly rate times nights booked?","acceptedAnswer":{"@type":"Answer","text":"Because the platform fee, cleaning payouts and your own costs move in different directions. The service fee is charged on room revenue plus the cleaning fee you collect, while the cleaning cost you pay out is usually close to what you charge the guest. The gap between those two cleaning numbers is often a quiet loss of several hundred dollars a year."}},{"@type":"Question","name":"Are cleaning fees profitable for hosts?","acceptedAnswer":{"@type":"Answer","text":"Only when the fee you charge is at least what the cleaner charges plus the platform fee on that fee. On a 15.5 percent host fee, a 150 dollar cleaning charge nets about 127 dollars, so a 150 dollar cleaning bill loses roughly 23 dollars per stay. Short stays multiply that loss fastest."}},{"@type":"Question","name":"What does the average length of stay change in the math?","acceptedAnswer":{"@type":"Answer","text":"It sets the number of turnovers. The same 237 booked nights are 59 stays at four nights or 30 stays at eight nights, and every extra turnover adds a cleaning cost plus the wear and supplies of a check-in. Longer stays usually produce more net income at the same occupancy, which is why weekly discounts often pay for themselves."}},{"@type":"Question","name":"Does this calculator include lodging tax and insurance?","acceptedAnswer":{"@type":"Answer","text":"Lodging tax is excluded because hosts usually collect and remit it on top of the nightly rate, so it does not belong in your revenue. Short-term rental insurance, permits and licensing fees are excluded too. If you self-manage, add the annual policy cost and permit fees to the fixed monthly figure."}},{"@type":"Question","name":"Is short-term renting still worth it compared with a long-term lease?","acceptedAnswer":{"@type":"Answer","text":"It depends on the spread between gross short-term revenue and twelve months of market rent, minus the extra costs. Furnishing, utilities, supplies, platform fees and management commonly consume 45 to 60 percent of gross short-term revenue, so a market only works if short-term gross revenue beats annual rent by a wide margin."}}]}
+</script>
+<meta property="og:title" content="Airbnb Income Calculator | Net Revenue After Fees & Costs">
+<meta property="og:description" content="Free Airbnb income calculator: enter rate, occupancy, platform fee, cleaning and fixed costs to see gross bookings, net income and break-even occupancy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/airbnb-income-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Airbnb Income Calculator | Net Revenue After Fees & Costs">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free Airbnb income calculator: enter rate, occupancy, platform fee, cleaning and fixed costs to see gross bookings, net income and break-even occupancy.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./cap-rate-calculator.html">Cap Rate</a>
+    <a href="./rent-vs-buy-calculator.html">Rent vs Buy</a>
+    <a href="./roi-calculator.html">ROI</a>
+</div>
+
+<h1>Airbnb Income Calculator</h1>
+<p>Most hosting projections stop at nightly rate times booked nights, which is the one number that never reaches your bank account. This calculator starts from room revenue and cleaning charges, takes out the platform fee and your cleaning bill, then subtracts the fixed monthly costs that run whether a guest shows up or not. You get net annual and monthly income plus the occupancy rate you need just to break even, which is usually a lot higher than hosts expect.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="rate" placeholder="Average nightly rate $" step="5">
+        <input type="number" id="nights" placeholder="Nights available per year" value="365" step="1">
+        <input type="number" id="occ" placeholder="Occupancy %" value="65" step="1">
+    </div>
+    <div class="input-row">
+        <input type="number" id="fee" placeholder="Platform fee %" value="15.5" step="0.5">
+        <input type="number" id="mgmt" placeholder="Property management %" value="0" step="1">
+        <input type="number" id="alos" placeholder="Avg stay length (nights)" value="4" step="1">
+    </div>
+    <div class="input-row">
+        <input type="number" id="clnCharge" placeholder="Cleaning fee to guest $" value="0" step="10">
+        <input type="number" id="clnCost" placeholder="Your cleaning cost per stay $" value="0" step="10">
+        <input type="number" id="fixed" placeholder="Fixed monthly costs $" step="50">
+    </div>
+    <button id="calcBtn">Calculate Net Income</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the Airbnb Income Calculator Works</h2>
+<p>Three layers sit between the nightly rate and your net income: how many nights actually sell, what the platform keeps, and what it costs to run the place.</p>
+<p><b>Booked nights and stays.</b> Occupancy applies to the nights you make available, not to 365 by default. A property you block for two weeks of personal use offers 351 nights, and at 65 percent that is 228 booked nights, not 237. Stays are booked nights divided by average length of stay, and that quotient drives how many cleanings you pay for.</p>
+<p><b>Revenue.</b> <b>Gross revenue = (nightly rate &times; booked nights) + (cleaning fee &times; number of stays)</b></p>
+<p><b>Platform and management fees.</b> Airbnb moved to a single host-only service fee, roughly 15.5 percent of the booking subtotal in most markets as of late 2026, replacing the older split of about 3 percent from the host and 14 percent from the guest. Firms running older 3 percent assumptions are quoting a fee structure that no longer exists for most listings. The field here is editable because the rate varies by market and by account, and because VRBO and Booking.com charge differently.</p>
+<p><b>Costs.</b> Cleaning cost per stay is a real cash cost, and it is not offset by the cleaning fee unless you charge at least what you pay plus the platform fee on that charge. Fixed monthly costs cover the mortgage or rent, insurance, utilities, internet, supplies and software; multiply by 12 for the annual figure.</p>
+<p><b>Net income = gross revenue &minus; platform fee &minus; management fee &minus; cleaning costs &minus; annual fixed costs</b></p>
+<p><b>Worked example.</b> A one-bedroom at $180 a night, 365 nights available, 65 percent occupancy, a 15.5 percent platform fee, $150 cleaning fee charged and $180 cleaning cost, four-night average stay and $2,200 a month in fixed costs. Booked nights are 237.25 and stays are 59.3. Room revenue is $42,705 and cleaning revenue $8,897, for gross revenue of <b>$51,602</b>. The platform keeps <b>$7,998</b> and cleaning costs <b>$10,676</b>, which is $1,779 more than guests paid for cleaning. Fixed costs are $26,400. Net income is <b>$6,527 a year, or $544 a month</b>, and break-even occupancy is <b>52.1 percent</b>.</p>
+<p>Notice how little of that $51,602 survives. The gap between a 52 percent break-even and a 65 percent actual is only 13 occupancy points, and a bad winter can erase it entirely.</p>
+
+<h2>What Occupancy and Fees Do to Revenue</h2>
+<p>Gross room revenue at $180 a night across 365 available nights, before cleaning fees and before any cost:</p>
+<table>
+<tr><th>Occupancy</th><th>Booked nights</th><th>Annual room revenue</th></tr>
+<tr><td>40% (new or oversupplied market)</td><td>146.0</td><td>$26,280</td></tr>
+<tr><td>55% (established, mixed reviews)</td><td>200.8</td><td>$36,135</td></tr>
+<tr><td>65% (solid listing, good reviews)</td><td>237.3</td><td>$42,705</td></tr>
+<tr><td>75% (strong market, Superhost)</td><td>273.8</td><td>$49,275</td></tr>
+<tr><td>85% (tight supply, rare)</td><td>310.3</td><td>$55,845</td></tr>
+</table>
+<p>On the example property, moving from 55 percent to 75 percent occupancy adds about <b>$10,100</b> of annual net income, because most of the extra revenue arrives after fixed costs are already paid. That is the single largest lever in the model, and it is also the one hosts control least.</p>
+<p>What the platform fee costs at a 15.5 percent rate:</p>
+<table>
+<tr><th>Annual gross revenue</th><th>Platform fee</th><th>Left before other costs</th></tr>
+<tr><td>$30,000</td><td>$4,650</td><td>$25,350</td></tr>
+<tr><td>$45,000</td><td>$6,975</td><td>$38,025</td></tr>
+<tr><td>$60,000</td><td>$9,300</td><td>$50,700</td></tr>
+<tr><td>$80,000</td><td>$12,400</td><td>$67,600</td></tr>
+</table>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Test a purchase before you make an offer, using conservative occupancy rather than the listing's best month</li>
+<li>Decide whether a weekly discount is worth the lost nightly rate</li>
+<li>Compare self-managing against a 20 to 25 percent management fee</li>
+<li>Find the occupancy floor that still covers the mortgage</li>
+<li>Check the gross revenue against a long-term lease with the <a href="./rent-vs-buy-calculator.html" style="color:#2363e0">Rent vs Buy Calculator</a></li>
+<li>Price the property on income with the <a href="./cap-rate-calculator.html" style="color:#2363e0">Cap Rate Calculator</a> once you have a stabilized revenue figure</li>
+<li>See the return on cash invested with the <a href="./roi-calculator.html" style="color:#2363e0">ROI Calculator</a></li>
+</ul>
+
+<h2>Where Hosts Get the Math Wrong</h2>
+<p><b>Using revenue from a good month.</b> Peak-season nightly rates and occupancy are not annual averages. Take twelve months of data from comparable listings, then cut the number by 10 percent for the optimism that every host projects onto their own property.</p>
+<p><b>Forgetting that furnishing is a recurring cost.</b> A short-term rental needs furniture, linens, kitchen gear and electronics replaced every few years, and guests break things. Setting aside 3 to 5 percent of gross revenue for replacement and damage is realistic; skipping it produces a profit figure that only exists on paper.</p>
+<p><b>Treating cleaning as free money.</b> If you charge $150 and pay $180 plus 15.5 percent on the charge, you lose money on every stay. Cleaning is a pass-through cost at best. Many experienced hosts fold cleaning into the nightly rate instead, which removes the fee from the platform's cut and encourages longer stays.</p>
+<p><b>Ignoring regulation until after the purchase.</b> Many US cities cap non-owner-occupied nights, require a permit, or ban short-term rentals in residential zones outright, and HOAs add their own rules. A property that models at 70 percent occupancy under a 90-night annual cap is a different investment entirely, and the cap is not negotiable.</p>
+<p><b>Assuming the mortgage is the only fixed cost.</b> Insurance for a rental is higher than for an owner-occupied home, utilities run higher with guests, and software, supplies and permits are small lines that add up to a few thousand a year. Those belong in the fixed monthly field, not in a footnote.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>What occupancy rate is realistic for a first year on Airbnb?</h3>
+<p>Budget 45 to 55 percent for a brand-new listing in a competitive market, even if comparable listings show 65 percent. A new listing has no reviews and no ranking history, and reaching mature occupancy usually takes two to four months. Modeling year one at the mature rate is the most common way hosts overpay.</p>
+<h3>Why does my payout look smaller than nightly rate times nights booked?</h3>
+<p>Because the platform fee, the cleaning you collect and the cleaning you pay move in different directions. The fee is charged on room revenue plus the cleaning fee, while your cleaning bill is separate, and the gap between those two cleaning numbers is often a quiet annual loss.</p>
+<h3>Are cleaning fees profitable for hosts?</h3>
+<p>Only when the fee you charge exceeds what the cleaner charges plus the platform fee on that charge. On a 15.5 percent fee, a $150 cleaning charge nets about $127, so a $150 bill loses roughly $23 per stay. Short stays multiply that fastest.</p>
+<h3>What does the average length of stay change in the math?</h3>
+<p>It sets the number of turnovers. The same 237 booked nights are 59 stays at four nights or 30 stays at eight nights, and every extra turnover adds a cleaning cost plus supplies and wear. Longer stays usually produce more net income at the same occupancy.</p>
+<h3>Does this calculator include lodging tax and insurance?</h3>
+<p>Lodging tax is excluded because hosts collect and remit it on top of the nightly rate, so it is not your revenue. Short-term rental insurance, permits and licensing are excluded as well; add the annual policy and permit fees to the fixed monthly figure.</p>
+<h3>Is short-term renting still worth it compared with a long-term lease?</h3>
+<p>Only when gross short-term revenue beats twelve months of market rent by a wide margin. Furnishing, utilities, supplies, platform fees and management commonly consume 45 to 60 percent of gross short-term revenue, so a thin premium over annual rent disappears quickly.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+function el(id){ return document.getElementById(id); }
+function val(id){ var v=parseFloat(el(id).value); return isNaN(v)?0:v; }
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0}); }
+function usd2(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+function computeAirbnb(inp){
+  var avail=inp.nights>0?inp.nights:365;
+  var alos=inp.alos>0?inp.alos:1;
+  var booked=avail*inp.occ/100;
+  var stays=booked/alos;
+  var roomRev=inp.rate*booked;
+  var cleanRev=inp.clnCharge*stays;
+  var gross=roomRev+cleanRev;
+  var platform=gross*inp.fee/100;
+  var mgmt=gross*inp.mgmt/100;
+  var cleanCost=inp.clnCost*stays;
+  var fixedY=inp.fixed*12;
+  var net=gross-platform-mgmt-cleanCost-fixedY;
+  var contribution=inp.rate*(1-(inp.fee+inp.mgmt)/100)+((inp.clnCharge*(1-(inp.fee+inp.mgmt)/100))-inp.clnCost)/alos;
+  var beOcc=0;
+  if(avail*contribution>0){ beOcc=fixedY/(avail*contribution)*100; }
+  var revpar=avail>0?gross/avail:0;
+  var netPerNight=booked>0?net/booked:0;
+  return {avail:avail,booked:booked,stays:stays,roomRev:roomRev,cleanRev:cleanRev,gross:gross,
+    platform:platform,mgmt:mgmt,cleanCost:cleanCost,fixedY:fixedY,net:net,
+    contribution:contribution,beOcc:beOcc,revpar:revpar,netPerNight:netPerNight};
+}
+
+el('calcBtn').onclick=function(){
+  var rate=val('rate');
+  var out=el('resOut'), tbl=el('resTbl');
+  if(rate<=0){
+    out.textContent="Enter your average nightly rate";
+    tbl.innerHTML='';
+    return;
+  }
+  var inp={rate:rate,nights:val('nights'),occ:val('occ'),fee:val('fee'),mgmt:val('mgmt'),
+    alos:val('alos'),clnCharge:val('clnCharge'),clnCost:val('clnCost'),fixed:val('fixed')};
+  if(inp.occ<=0){ inp.occ=0; }
+  if(inp.occ>100){ inp.occ=100; }
+  var r=computeAirbnb(inp);
+  var rows='<tr><th>Line</th><th>Amount</th></tr>'
+    +'<tr><td>Nights available / booked</td><td>'+r.avail.toFixed(0)+' / '+r.booked.toFixed(1)+'</td></tr>'
+    +'<tr><td>Stays per year</td><td>'+r.stays.toFixed(1)+'</td></tr>'
+    +'<tr><td>Room revenue</td><td>$'+usd(r.roomRev)+'</td></tr>'
+    +'<tr><td>Cleaning fees collected</td><td>$'+usd(r.cleanRev)+'</td></tr>'
+    +'<tr><td><b>Gross revenue</b></td><td><b>$'+usd(r.gross)+'</b></td></tr>'
+    +'<tr><td>Platform fee ('+inp.fee+'%)</td><td>&minus;$'+usd(r.platform)+'</td></tr>'
+    +'<tr><td>Management fee ('+inp.mgmt+'%)</td><td>&minus;$'+usd(r.mgmt)+'</td></tr>'
+    +'<tr><td>Cleaning costs</td><td>&minus;$'+usd(r.cleanCost)+'</td></tr>'
+    +'<tr><td>Fixed costs (annual)</td><td>&minus;$'+usd(r.fixedY)+'</td></tr>'
+    +'<tr><td><b>Net annual income</b></td><td><b>$'+usd(r.net)+'</b></td></tr>'
+    +'<tr><td>Net month, average</td><td>$'+usd2(r.net/12)+'</td></tr>'
+    +'<tr><td>Net per booked night</td><td>$'+usd2(r.netPerNight)+'</td></tr>'
+    +'<tr><td>Revenue per available night</td><td>$'+usd2(r.revpar)+'</td></tr>'
+    +'<tr><td>Break-even occupancy</td><td>'+(r.beOcc<=0?'covered at any occupancy':(r.beOcc>100?'over 100% - never breaks even':r.beOcc.toFixed(1)+'%'))+'</td></tr>';
+  tbl.innerHTML=rows;
+  out.innerHTML=(r.net>=0?'Net income: ':'Loss: ')
+    +'<span style="color:'+(r.net>=0?'#0f9d58':'#d93025')+';font-size:22px">$'+usd(Math.abs(r.net))+'/yr</span>'
+    +' &nbsp;|&nbsp; <span style="color:#2563eb">$'+usd2(Math.abs(r.net)/12)+'/mo</span>';
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>

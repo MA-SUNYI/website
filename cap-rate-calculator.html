@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cap Rate Calculator | Find NOI, Cap Rate & Property Value</title>
+<meta name="description" content="Free cap rate calculator: turn rent, vacancy and expenses into net operating income, then get the cap rate and the value a target cap rate supports.">
+<link rel="canonical" href="https://www.xiake.icu/cap-rate-calculator.html">
+<meta name="keywords" content="cap rate calculator, capitalization rate, net operating income calculator, noi calculator, rental property cap rate, property value calculator, real estate cap rate">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;white-space:nowrap;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;font-weight:400;color:#333;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cap Rate Calculator","description":"Free cap rate calculator for rental property. Enter price, rent, vacancy and operating expenses to get net operating income, the capitalization rate, the implied value at a target cap rate and break-even occupancy.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/cap-rate-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should the mortgage payment be included in cap rate?","acceptedAnswer":{"@type":"Answer","text":"No. Cap rate measures the property before financing, so loan principal and interest are excluded. Folding a mortgage payment into operating expenses makes the cap rate depend on how the buyer financed the deal, which destroys comparability between two otherwise identical buildings."}},{"@type":"Question","name":"What vacancy rate should I use for a single-family rental?","acceptedAnswer":{"@type":"Answer","text":"Most US markets support 5 to 8 percent for a well-located single-family home, and that allowance should cover both empty months and credit loss from a tenant who stops paying. Tighter markets justify the low end, but a zero vacancy assumption is almost never honest over a ten-year hold."}},{"@type":"Question","name":"Is a higher cap rate always the better deal?","acceptedAnswer":{"@type":"Answer","text":"No. A 9 percent cap rate in a declining neighborhood can underperform a 5 percent cap rate in a supply-constrained one, because cap rate prices current income and says nothing about rent growth or resale value. Read it as a risk signal, not a score."}},{"@type":"Question","name":"How do I turn a cap rate into a purchase offer?","acceptedAnswer":{"@type":"Answer","text":"Divide the property's net operating income by the cap rate you require, then subtract estimated closing costs and immediate repairs. If a building produces 24,000 dollars of NOI and you need 7 percent, the income supports about 342,857 dollars before those adjustments."}},{"@type":"Question","name":"Does cap rate work for a duplex or a fourplex?","acceptedAnswer":{"@type":"Answer","text":"Yes, and it works best there. Small multifamily is valued mainly on income, so a cap rate built from all units' rent and one shared expense list is a fair comparison against similar buildings nearby. Owner-occupied portions should be excluded or charged market rent."}},{"@type":"Question","name":"What is a good operating expense ratio?","acceptedAnswer":{"@type":"Answer","text":"For US residential rentals, 35 to 45 percent of effective gross income is typical once taxes, insurance, management, maintenance and a repair reserve are counted. A ratio far below 30 percent usually means something is missing from the expense list."}}]}
+</script>
+<meta property="og:title" content="Cap Rate Calculator | Find NOI, Cap Rate & Property Value">
+<meta property="og:description" content="Free cap rate calculator: turn rent, vacancy and expenses into net operating income, then get the cap rate and the value a target cap rate supports.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/cap-rate-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cap Rate Calculator | Find NOI, Cap Rate & Property Value">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Free cap rate calculator: turn rent, vacancy and expenses into net operating income, then get the cap rate and the value a target cap rate supports.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./rent-vs-buy-calculator.html">Rent vs Buy</a>
+    <a href="./airbnb-income-calculator.html">Airbnb Income</a>
+    <a href="./roi-calculator.html">ROI</a>
+</div>
+
+<h1>Cap Rate Calculator</h1>
+<p>A cap rate is the one number that lets you compare a duplex in Ohio with a strip mall in Texas without arguing about financing. This calculator builds net operating income from rent, a vacancy allowance and real operating costs, divides it by price, then reverses the formula to show what the same income is worth at the cap rate you require. It also flags the case most buyers miss: when the loan costs more than the cap rate, borrowing makes the return worse, not better.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="price" placeholder="Price or value $" step="1000">
+        <input type="number" id="rent" placeholder="Gross monthly rent $" step="50">
+        <input type="number" id="other" placeholder="Other annual income $" step="100" value="0">
+    </div>
+    <div class="input-row">
+        <input type="number" id="vac" placeholder="Vacancy & credit loss %" step="0.5" value="5">
+        <input type="number" id="opex" placeholder="Annual operating expenses $" step="100">
+        <input type="number" id="target" placeholder="Target cap rate %" step="0.1" value="6">
+    </div>
+    <button id="calcBtn">Calculate Cap Rate</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+</div>
+
+<h2>How the Cap Rate Calculator Works</h2>
+<p>Cap rate is built in two steps, and almost every bad valuation skips the first one.</p>
+<p><b>Step 1, net operating income.</b> Start with gross annual rent, subtract a vacancy and credit loss allowance, add any other recurring income such as parking, laundry or storage, then subtract operating expenses. Operating expenses are the costs of running the building: property tax, insurance, repairs, maintenance, property management, owner-paid utilities, HOA dues and a reserve for replacing the roof or the furnace. Mortgage payments, depreciation, income tax and one-off capital improvements are not operating expenses.</p>
+<p><b>NOI = (gross annual rent &minus; vacancy loss) + other income &minus; operating expenses</b></p>
+<p><b>Step 2, divide by price.</b></p>
+<p><b>Cap rate = NOI &divide; price &times; 100</b></p>
+<p>Because the formula is linear, it can be run backwards. If you know the income and the cap rate buyers in that market accept, you get a value: <b>value = NOI &divide; target cap rate</b>. That is how an appraiser reconciles an income approach and how you decide whether a listing is priced above or below its income.</p>
+<p><b>Worked example.</b> A $350,000 single-family rental rents for $2,800 a month, or $33,600 a year. Allow 5 percent for vacancy, which is $1,680, leaving effective gross income of $31,920. Taxes, insurance, management, maintenance and a repair reserve total $9,500, so NOI is $22,420. Divide by $350,000 and the cap rate is <b>6.41 percent</b>. At a target cap rate of 6.5 percent, that same $22,420 of income supports a value of <b>$344,923</b>, so the asking price is roughly $5,000 above what the income justifies. The gross rent multiplier, price divided by gross annual rent, is 10.4.</p>
+<p>The expense ratio in that example is 29.8 percent of effective gross income, which is on the lean side for a single-family home that pays a manager. Push expenses to $12,000 and the cap rate falls to 5.69 percent on the same price, a 0.72 point swing from one line item. That sensitivity is why the expense list deserves more attention than the rent estimate.</p>
+
+<h2>What Counts as a Normal Cap Rate</h2>
+<p>Cap rates are local and asset-specific, so treat these ranges as a starting point for a conversation with a broker, not a rule. Lower numbers mean buyers are paying more per dollar of income, usually because they expect rent growth or a safer location.</p>
+<table>
+<tr><th>Property type</th><th>Typical cap rate range</th><th>What drives it</th></tr>
+<tr><td>Class A apartment, coastal metro</td><td>4.0% &ndash; 5.5%</td><td>Rent growth, institutional demand</td></tr>
+<tr><td>Class B/C apartment, Midwest or Sun Belt</td><td>5.5% &ndash; 7.0%</td><td>Higher expenses, thinner buyer pool</td></tr>
+<tr><td>Single-family rental</td><td>5.0% &ndash; 7.5%</td><td>Small deal size, retail buyers</td></tr>
+<tr><td>Retail, net lease</td><td>5.5% &ndash; 7.5%</td><td>Tenant credit and lease term</td></tr>
+<tr><td>Self-storage</td><td>5.5% &ndash; 7.5%</td><td>Low operating cost, high turnover</td></tr>
+<tr><td>Small office or mixed-use</td><td>7.0% &ndash; 10.0%</td><td>Vacancy risk, single-tenant exposure</td></tr>
+</table>
+<p>A useful sanity check is the spread over the 10-year Treasury yield. Look up the current yield, then ask whether the extra return covers the risk of owning a building you cannot sell in a week. When the spread compresses toward one percentage point, buyers are paying for appreciation rather than income.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Screen a listing before you tour it, then re-run with the seller's actual tax and insurance bills</li>
+<li>Decide a maximum offer by dividing your required-return NOI by the cap rate you want</li>
+<li>Compare two buildings in different markets on income alone, ignoring how each would be financed</li>
+<li>Test how a 2 point jump in the insurance premium moves the cap rate on a small deal</li>
+<li>Check the purchase against the <a href="./rent-vs-buy-calculator.html" style="color:#2363e0">Rent vs Buy Calculator</a> if you might live in one unit</li>
+<li>Move from cap rate to a full return with the <a href="./roi-calculator.html" style="color:#2363e0">ROI Calculator</a> once you know the cash invested</li>
+<li>Run a short-term rental scenario with the <a href="./airbnb-income-calculator.html" style="color:#2363e0">Airbnb Income Calculator</a></li>
+</ul>
+
+<h2>Why Cap Rate Is Not Your Return</h2>
+<p><b>It ignores debt.</b> Two buyers can pay the same price for the same building and earn very different returns, because one used 25 percent down and the other paid cash. Cap rate deliberately hides that difference so the property can be compared on its own merits. If you want the return on your money, use cash-on-cash, which divides annual pre-tax cash flow by the cash you actually put in.</p>
+<p><b>It cuts both ways with leverage.</b> When the loan rate is below the cap rate, borrowing amplifies your return. When the loan rate is above the cap rate, borrowing subtracts from it, the condition known as negative leverage. A 6.4 percent cap rate financed at 7.5 percent on 75 percent of the price produces a cash-on-cash return well below 6.4 percent, and each extra point of rate makes it worse. In a market where cap rates have compressed while loan rates have not, this is not a theoretical problem.</p>
+<p><b>It prices today only.</b> A 4.5 percent cap rate in a supply-constrained neighborhood may beat a 9 percent cap rate next to a plant that is closing. Cap rate tells you what current income costs; it says nothing about rent growth, capital needs or exit value. Treat the number as a screening filter and read the rent roll before you trust it.</p>
+<p><b>The expense list is where deals are won.</b> Sellers present NOI with a repair budget that has never been spent. Add a reserve of 8 to 10 percent of gross rent for capital replacements, use the actual property tax reassessment rather than the seller's legacy bill, and price insurance at what a new owner would pay. Those three adjustments routinely move a cap rate by a full point.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Should the mortgage payment be included in cap rate?</h3>
+<p>No. Cap rate measures the property before financing, so loan principal and interest are excluded. Putting a mortgage payment into operating expenses makes the cap rate depend on how the buyer financed, which destroys comparability between two otherwise identical buildings.</p>
+<h3>What vacancy rate should I use for a single-family rental?</h3>
+<p>Most US markets support 5 to 8 percent for a well-located home, and the allowance should cover both empty months and credit loss. Tighter markets justify the low end, but a zero vacancy assumption is almost never honest over a ten-year hold.</p>
+<h3>Is a higher cap rate always the better deal?</h3>
+<p>No. A 9 percent cap rate in a declining neighborhood can underperform a 5 percent cap rate in a supply-constrained one. Cap rate prices current income and says nothing about rent growth or resale value, so read it as a risk signal rather than a score.</p>
+<h3>How do I turn a cap rate into a purchase offer?</h3>
+<p>Divide net operating income by the cap rate you require, then subtract closing costs and immediate repairs. A building producing $24,000 of NOI supports about $342,857 at a 7 percent requirement, before those adjustments.</p>
+<h3>Does cap rate work for a duplex or a fourplex?</h3>
+<p>Yes, and it works best there. Small multifamily is valued mainly on income, so one cap rate built from all units' rent and a shared expense list compares fairly with similar buildings nearby. Charge market rent for any unit the owner occupies.</p>
+<h3>What is a good operating expense ratio?</h3>
+<p>For US residential rentals, 35 to 45 percent of effective gross income is typical once taxes, insurance, management, maintenance and a repair reserve are counted. A ratio far below 30 percent usually means something is missing from the expense list.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+function el(id){ return document.getElementById(id); }
+function val(id){ var v=parseFloat(el(id).value); return isNaN(v)?0:v; }
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0}); }
+function usd2(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+function computeCap(inp){
+  var rentY=inp.rent*12;
+  var gpi=rentY+inp.other;
+  var vacLoss=rentY*inp.vac/100;
+  var egi=gpi-vacLoss;
+  var noi=egi-inp.opex;
+  var cap=inp.price>0?noi/inp.price*100:0;
+  var expRatio=egi!==0?inp.opex/egi*100:0;
+  var implied=inp.target>0?noi/(inp.target/100):0;
+  var grm=rentY>0?inp.price/rentY:0;
+  var beOcc=rentY>0?(inp.opex-inp.other)/rentY*100:0;
+  return {rentY:rentY,gpi:gpi,vacLoss:vacLoss,egi:egi,noi:noi,cap:cap,expRatio:expRatio,implied:implied,grm:grm,beOcc:beOcc};
+}
+
+el('calcBtn').onclick=function(){
+  var price=val('price'), rent=val('rent');
+  var out=el('resOut'), tbl=el('resTbl');
+  if(price<=0||rent<=0){
+    out.textContent="Enter a property price and the gross monthly rent";
+    tbl.innerHTML='';
+    return;
+  }
+  var inp={price:price,rent:rent,other:val('other'),vac:val('vac'),opex:val('opex'),target:val('target')};
+  var r=computeCap(inp);
+  var gap = r.implied>0 ? price-r.implied : 0;
+  var rows='<tr><th>Line</th><th>Amount</th></tr>'
+    +'<tr><td>Gross annual rent</td><td>$'+usd(r.rentY)+'</td></tr>'
+    +'<tr><td>Other income</td><td>$'+usd(inp.other)+'</td></tr>'
+    +'<tr><td>Vacancy and credit loss ('+inp.vac+'%)</td><td>&minus;$'+usd(r.vacLoss)+'</td></tr>'
+    +'<tr><td>Effective gross income</td><td>$'+usd(r.egi)+'</td></tr>'
+    +'<tr><td>Operating expenses</td><td>&minus;$'+usd(inp.opex)+'</td></tr>'
+    +'<tr><td><b>Net operating income</b></td><td><b>$'+usd(r.noi)+'</b></td></tr>'
+    +'<tr><td><b>Cap rate</b></td><td><b>'+r.cap.toFixed(2)+'%</b></td></tr>'
+    +'<tr><td>Operating expense ratio</td><td>'+r.expRatio.toFixed(1)+'%</td></tr>'
+    +'<tr><td>NOI per month</td><td>$'+usd2(r.noi/12)+'</td></tr>'
+    +'<tr><td>Gross rent multiplier</td><td>'+r.grm.toFixed(2)+'x</td></tr>'
+    +'<tr><td>Break-even occupancy</td><td>'+(r.beOcc<0?'0.0% (covered)':Math.min(r.beOcc,100).toFixed(1)+'%')+'</td></tr>';
+  if(inp.target>0){
+    rows+='<tr><td>Value at '+inp.target+'% target cap</td><td>$'+usd(r.implied)+'</td></tr>'
+      +'<tr><td>'+(gap>0?'Price above income value':'Price below income value')+'</td><td>$'+usd(Math.abs(gap))+'</td></tr>';
+  }
+  tbl.innerHTML=rows;
+  out.innerHTML='Cap rate: <span style="color:#2563eb;font-size:22px">'+r.cap.toFixed(2)+'%</span>'
+    +' &nbsp;|&nbsp; NOI: <span style="color:#0f9d58;font-size:22px">$'+usd(r.noi)+'</span>'
+    +(r.cap<0?'<br>Negative NOI: expenses exceed income at this price.':'');
+};
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){{
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {{}};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+}})({{}})
+</script>
+</body>
+</html>
