@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Panel Payback Calculator | Break-Even Years &amp; ROI</title>
+<meta name="description" content="Enter system size, cost per watt and your electric rate to see how many years solar takes to pay back, plus 25-year savings and total return on cost.">
+<link rel="canonical" href="https://www.xiake.icu/solar-payback-calculator.html">
+<meta name="keywords" content="solar payback calculator, solar panel payback period, solar break even calculator, is solar worth it calculator, solar roi calculator, solar savings calculator, solar panel cost per watt">
+<meta name="referrer" content="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI,sans-serif;}
+body{max-width:920px;margin:0 auto;padding:22px;background:#f6f8fc;color:#333;}
+.nav{margin-bottom:32px;}
+.nav a{color:#2363e0;text-decoration:none;margin-right:16px;font-size:16px;}
+.nav a:hover{text-decoration:underline;}
+h1{font-size:27px;margin:18px 0;color:#111;}
+h2{font-size:21px;margin:28px 0 10px;color:#222;}
+h3{font-size:18px;margin:16px 0 8px;color:#333;}
+p{font-size:16px;line-height:1.7;margin:10px 0;color:#444;}
+.tool-card{background:#ffffff;padding:26px;border-radius:13px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin:24px 0;}
+.input-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+input,select{padding:13px;border:1px solid #dde0e7;border-radius:8px;font-size:16px;min-width:140px;}
+button{padding:13px 22px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:16px;}
+button:hover{background:#1d5bcc;}
+.result-text{font-size:18px;font-weight:600;color:#2563eb;margin-top:12px;line-height:2;}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px;}
+th,td{padding:9px 8px;border-bottom:1px solid #e6e9f0;text-align:right;}
+th:first-child,td:first-child{text-align:left;}
+th{background:#eef2fb;color:#1d4ed8;font-weight:600;}
+ul{padding-left:22px;margin:14px 0;}
+li{margin:8px 0;line-height:1.6;}
+.hint{font-size:14px;color:#667;margin-top:10px;}
+.tool-card input[type=number]{min-width:180px;}
+.ad-box{width:100%;min-height:105px;margin:26px auto;border-radius:9px;text-align:center;overflow:hidden;}
+</style>
+<script src="https://quge5.com/88/tag.min.js" data-zone="245739" async data-cfasync="false"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Solar Panel Payback Calculator","description":"Free solar payback calculator that estimates break-even years, first-year bill savings and 25-year cumulative savings from system size, installed cost and electric rate.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.xiake.icu/solar-payback-calculator.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the 30 percent federal solar tax credit still available in 2026?","acceptedAnswer":{"@type":"Answer","text":"Not for systems you buy. The residential clean energy credit expired for property placed in service after December 31, 2025, so a purchased system installed in 2026 gets no federal credit. The commercial credit still applies to third party owned systems, which is how leases and power purchase agreements keep some of that value. Enter 0 in the incentive field unless you have a state or utility rebate."}},{"@type":"Question","name":"What counts as a good solar payback period?","acceptedAnswer":{"@type":"Answer","text":"Most residential arrays land between 8 and 15 years on a system that should produce for 25 to 30 years. Under 10 years is strong and usually needs an electric rate above 20 cents or a local rebate. Anything past 15 years leaves little margin for inverter replacement."}},{"@type":"Question","name":"How do I account for net metering in the calculation?","acceptedAnswer":{"@type":"Answer","text":"Use the bill offset field. At 100 percent, every kilowatt hour produced is credited at your retail rate, which is roughly how one to one net metering works. California under NEM 3.0 pays far less for exports, so a system without a battery often offsets closer to 50 or 60 percent of production at full retail value."}},{"@type":"Question","name":"What does an 8 kW system cost in 2026?","acceptedAnswer":{"@type":"Answer","text":"Installed prices commonly fall between 2.50 and 3.25 dollars per watt before any local incentive, so an 8 kW array runs about 20,000 to 26,000 dollars. That is 22,000 dollars at 2.75 per watt, which is the default in this calculator."}},{"@type":"Question","name":"Does panel output really decline every year?","acceptedAnswer":{"@type":"Answer","text":"Yes, at roughly 0.4 to 0.6 percent a year for modern panels, which leaves about 87 percent of original output at year 25. Warranties typically guarantee 85 to 92 percent, so the 0.5 percent default is realistic rather than pessimistic."}},{"@type":"Question","name":"Should I count a new roof or inverter replacement in the payback?","acceptedAnswer":{"@type":"Answer","text":"Yes if the roof is near the end of its life, because removing and reinstalling panels later costs real money, often 2,000 to 4,000 dollars. String inverters usually need replacement around year 12 to 15 for 1,000 to 2,000 dollars, which is why this tool lets you enter annual maintenance and why the payback year on a spreadsheet is not the end of the story."}}]}
+</script>
+<meta property="og:title" content="Solar Panel Payback Calculator | Break-Even Years &amp; ROI">
+<meta property="og:description" content="Enter system size, cost per watt and your electric rate to see how many years solar takes to pay back, plus 25-year savings and total return on cost.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.xiake.icu/solar-payback-calculator.html">
+<meta property="og:site_name" content="xiake.icu">
+<meta property="og:image" content="https://www.xiake.icu/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Solar Panel Payback Calculator | Break-Even Years &amp; ROI">
+<meta name="twitter:image" content="https://www.xiake.icu/og-default.png">
+<meta name="twitter:description" content="Enter system size, cost per watt and your electric rate to see how many years solar takes to pay back, plus 25-year savings and total return on cost.">
+</head>
+<body>
+<div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./solar-payback-calculator.html">Solar Payback</a>
+    <a href="./electricity-cost-calculator.html">Electricity Cost</a>
+    <a href="./ev-charging-cost-calculator.html">EV Charging Cost</a>
+    <a href="./space-heater-cost-calculator.html">Space Heater Cost</a>
+</div>
+
+<h1>Solar Panel Payback Calculator</h1>
+<p>Payback is the number every solar quote leads with and the one most often computed with an assumption that no longer holds. The 30 percent federal residential credit ended for systems placed in service after December 31, 2025, so a purchased array in 2026 has to earn its money back on electricity savings alone. Enter the system size, installed cost and your real electric rate to see break-even in years, first-year savings and a 25-year cumulative total that includes degradation and rate increases.</p>
+<div class="ad-box"></div>
+
+<div class="tool-card">
+    <div class="input-row">
+        <input type="number" id="kw" placeholder="System size (kW)" step="0.1" min="0">
+        <input type="number" id="cpw" placeholder="Cost per watt ($/W)" step="0.05" min="0">
+        <input type="number" id="inc" placeholder="Rebate or incentive ($)" step="100" min="0">
+    </div>
+    <div class="input-row">
+        <input type="number" id="perkw" placeholder="kWh per kW per year" step="10" min="0">
+        <input type="number" id="rate" placeholder="Electric rate ($/kWh)" step="0.01" min="0">
+        <input type="number" id="off" placeholder="Bill offset %" step="1" min="0" max="100">
+    </div>
+    <div class="input-row">
+        <input type="number" id="esc" placeholder="Rate increase %/yr" step="0.1" min="0">
+        <input type="number" id="deg" placeholder="Degradation %/yr" step="0.1" min="0" max="5">
+        <input type="number" id="om" placeholder="Annual upkeep ($)" step="10" min="0">
+    </div>
+    <button id="calcBtn">Calculate Payback</button>
+    <div class="result-text" id="resOut">Result:</div>
+    <table id="resTbl"></table>
+    <p class="hint">No federal residential credit is applied by default. Add a state or utility rebate in the incentive field if you have one, and use 0 if you do not.</p>
+</div>
+
+<h2>How the Solar Payback Calculator Works</h2>
+<p>The model is deliberately simple enough to check by hand, because a payback figure you cannot audit is a sales number rather than a financial one. Four steps produce everything else:</p>
+<p><b>Net cost = system size x 1,000 x cost per watt - incentives</b><br>
+<b>Year 1 production = system size x kWh per kW</b><br>
+<b>Year 1 savings = production x bill offset x electric rate - upkeep</b><br>
+<b>Payback = the year cumulative savings first exceed net cost</b></p>
+<p>Worked example: an 8 kW array at $2.75 per watt costs $22,000, and with no federal credit the net cost stays at $22,000. At 1,400 kWh per kW the system produces 11,200 kWh in year one. Offsetting 90 percent of that at 17 cents is 10,080 kWh of avoided purchases, worth <b>$1,714</b>. Divide one by the other and the simple payback looks like 12.8 years.</p>
+<p>The calculator does not stop there. Each later year applies 0.5 percent panel degradation to production and a 3 percent increase to the electric rate, then compounds the two against the original cost. Cheap production early plus expensive grid power later moves break-even forward to <b>11.3 years</b>, and the 25-year cumulative savings reach about <b>$58,400</b>. Subtract the $22,000 cost and the net gain is roughly $36,400, a 166 percent return over 25 years.</p>
+<p>That last number is the honest way to read payback: 11.3 years is not 11.3 years of waiting and then pure profit, it is the point where a 25-year asset has returned its purchase price. Inverter replacement around year 12 to 15 is the usual interruption, which is why the annual upkeep field exists.</p>
+
+<h2>Payback by Electric Rate</h2>
+<p>Electricity price is the dominant variable. This table holds an 8 kW system at $2.75 per watt, 11,200 kWh in year one, 90 percent offset, 3 percent rate escalation and 0.5 percent degradation, then varies only the rate.</p>
+<table>
+<tr><th>Electric rate</th><th>Year 1 savings</th><th>Payback</th><th>25-year savings</th></tr>
+<tr><td>$0.12 / kWh</td><td>$1,210</td><td>15.2 years</td><td>$41,200</td></tr>
+<tr><td>$0.15 / kWh</td><td>$1,512</td><td>12.6 years</td><td>$51,500</td></tr>
+<tr><td>$0.18 / kWh</td><td>$1,814</td><td>10.7 years</td><td>$61,900</td></tr>
+<tr><td>$0.22 / kWh</td><td>$2,218</td><td>9.0 years</td><td>$75,600</td></tr>
+<tr><td>$0.28 / kWh</td><td>$2,822</td><td>7.2 years</td><td>$96,200</td></tr>
+</table>
+<p>The spread is the whole story. The same hardware pays back twice as fast in a 28 cent market as in a 12 cent one, which is why national average payback figures are close to useless for an individual house.</p>
+
+<h2>Production per kW by Region</h2>
+<p>One kilowatt of panels does not produce the same electricity everywhere. These are typical annual yields for a south-facing roof at a reasonable tilt with no shading.</p>
+<table>
+<tr><th>Region</th><th>kWh per kW per year</th></tr>
+<tr><td>Northeast (New York, Massachusetts, Maine)</td><td>1,100 - 1,250</td></tr>
+<tr><td>Midwest (Ohio, Michigan, Illinois)</td><td>1,200 - 1,350</td></tr>
+<tr><td>Mid-Atlantic (Pennsylvania, Virginia, Maryland)</td><td>1,250 - 1,400</td></tr>
+<tr><td>Southeast (Georgia, Florida, Carolinas)</td><td>1,300 - 1,450</td></tr>
+<tr><td>Texas and Oklahoma</td><td>1,400 - 1,550</td></tr>
+<tr><td>California</td><td>1,500 - 1,650</td></tr>
+<tr><td>Southwest desert (Arizona, Nevada, New Mexico)</td><td>1,550 - 1,750</td></tr>
+</table>
+<p>Shading, roof pitch and panel orientation can pull any of these down by 20 percent or more. A north-facing roof in the Northeast might manage only 850 kWh per kW, which pushes payback past 20 years and usually kills the case.</p>
+
+<h2>Common Usage</h2>
+<ul>
+<li>Sanity-checking a quote before signing, using the installer's own kWh estimate</li>
+<li>Comparing a cash purchase against a lease with an annual escalator</li>
+<li>Deciding whether to add a battery when export credits are low</li>
+<li>Testing how much a local rebate actually shortens payback</li>
+<li>Estimating the electricity cost of an EV before sizing an array, with the <a href="./ev-charging-cost-calculator.html" style="color:#2363e0">EV charging cost calculator</a></li>
+<li>Checking whether a rate increase assumption is doing all the work in a sales pitch</li>
+</ul>
+
+<h2>Why Payback Numbers Mislead</h2>
+<p><b>The expired credit is still in the pitch.</b> Many calculators on the web still subtract 30 percent by default. For an owned system installed in 2026 that produces an artificially short payback of about 8.9 years instead of 11.3 on the example above. If a quote shows a federal credit, ask which tax code section it relies on.</p>
+<p><b>Net metering rules changed faster than the calculators.</b> One-to-one net metering made every exported kilowatt worth retail price. Several states now credit exports at a fraction of retail, which pushes the value into self-consumption instead. Without a battery, a house that exports most of its midday production can see the effective offset fall to 50 or 60 percent, and payback nearly doubles.</p>
+<p><b>Payback ignores timing and alternatives.</b> Money spent on solar is money not invested elsewhere. An 11-year payback on a 25-year asset returns roughly twice the principal, which is respectable but not remarkable next to a broad index fund over the same period. The case gets stronger when the comparison is a utility bill that rises every year, and weaker when the homeowner plans to move in four years and cannot recover the full cost in resale.</p>
+<p><b>Roof age and inverter life are real costs.</b> Panels last 25 to 30 years; asphalt roofs do not. Installing on a 20-year-old roof usually means paying to remove and reinstall the array within a decade. String inverters fail around year 12 to 15 and cost $1,000 to $2,000 to replace. Neither shows up unless you put it in the upkeep field.</p>
+<p><b>Production estimates are optimistic by nature.</b> Installers model a clean array on a clear day. Dust, snow, pollen, shade from a new tree and the occasional cracked panel all reduce real output. A 10 percent haircut on the production number is a reasonable stress test before signing.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Is the 30 percent federal solar tax credit still available in 2026?</h3>
+<p>Not for a system you buy. The residential clean energy credit does not apply to property placed in service after December 31, 2025, and installation completion is what counts. A purchased array in 2026 gets nothing federally. Leases and power purchase agreements still work because the system owner claims a commercial credit, and that value may show up in your payment rather than your tax return.</p>
+<h3>What counts as a good solar payback period?</h3>
+<p>Eight to fifteen years on hardware that should run 25 to 30. Under 10 years is strong and generally needs a rate above 20 cents or a local rebate. Past 15 years the margin for an inverter replacement and a roof repair gets thin.</p>
+<h3>How do I account for net metering in the calculation?</h3>
+<p>Use the bill offset field. At 100 percent you are assuming every kilowatt hour is credited at full retail, which matches classic one-to-one net metering. Where exports are paid at a lower rate, or where most production is exported, drop the offset to 50 or 60 and add a battery scenario separately.</p>
+<h3>What does an 8 kW system cost in 2026?</h3>
+<p>Roughly $2.50 to $3.25 per watt installed before local incentives, so $20,000 to $26,000. The default of $2.75 per watt produces $22,000, which is a fair mid-market figure for a straightforward roof mount.</p>
+<h3>Does panel output really decline every year?</h3>
+<p>Yes, about 0.4 to 0.6 percent annually for modern modules, leaving roughly 87 percent of original output at year 25. Warranties usually guarantee 85 to 92 percent, so 0.5 percent is a realistic default rather than a cautious one.</p>
+<h3>Should I count a new roof or inverter replacement in the payback?</h3>
+<p>Yes when either is likely inside the payback window. Removing and reinstalling an array for a roof replacement commonly costs $2,000 to $4,000, and a string inverter replacement runs $1,000 to $2,000 around year 12 to 15. Entering an annual upkeep figure spreads those costs across the model instead of hiding them.</p>
+
+<div class="ad-box" style="margin-top:42px;"></div>
+
+<script>
+var kwEl=document.getElementById('kw'), cpwEl=document.getElementById('cpw'), incEl=document.getElementById('inc');
+var perkwEl=document.getElementById('perkw'), rateEl=document.getElementById('rate'), offEl=document.getElementById('off');
+var escEl=document.getElementById('esc'), degEl=document.getElementById('deg'), omEl=document.getElementById('om');
+var calcBtn=document.getElementById('calcBtn'), resOut=document.getElementById('resOut'), resTbl=document.getElementById('resTbl');
+
+function num(el,def){ var v=parseFloat(el.value); if(isNaN(v)){ return (def===undefined?0:def); } return v; }
+function usd(n){ return n.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0}); }
+function usd2(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+calcBtn.onclick=function(){
+  var kw=num(kwEl,8), cpw=num(cpwEl,2.75), inc=num(incEl), perkw=num(perkwEl,1400);
+  var rate=num(rateEl,0.17), off=num(offEl,90), esc=num(escEl,3), deg=num(degEl,0.5), om=num(omEl);
+  if(kw<=0||cpw<=0){ resOut.textContent="Enter system size and cost per watt"; resTbl.innerHTML=''; return; }
+  if(off<0||off>100){ resOut.textContent="Bill offset must be between 0 and 100"; resTbl.innerHTML=''; return; }
+  var cost=kw*1000*cpw;
+  var net=Math.max(0,cost-inc);
+  var prod=kw*perkw;
+  var cum=0, y1=0, payback=null;
+  var yearly=[];
+  for(var y=1;y<=25;y++){
+    var p=prod*Math.pow(1-deg/100,y-1);
+    var s=p*(off/100)*rate*Math.pow(1+esc/100,y-1)-om;
+    if(y===1) y1=s;
+    var prev=cum;
+    cum+=s;
+    yearly.push({y:y,s:s,cum:cum});
+    if(payback===null && s>0 && cum>=net){ payback=(y-1)+(net-prev)/s; }
+  }
+  if(y1<=0){ resOut.textContent="Year 1 savings are zero. Check the electric rate and bill offset"; resTbl.innerHTML=''; return; }
+  if(payback===null){
+    resOut.innerHTML='Payback not reached within 25 years at these inputs';
+  } else {
+    resOut.innerHTML='Break-even in <span style="color:#0f9d58;font-size:22px">'+payback.toFixed(1)+' years</span>';
+  }
+  var total=yearly[24].cum;
+  var roi=net>0?((total-net)/net*100):0;
+  rows='<tr><th>Line</th><th>Value</th></tr>'
+   +'<tr><td>Gross installed cost</td><td>$'+usd(cost)+'</td></tr>'
+   +'<tr><td>Incentives applied</td><td>$'+usd(inc)+'</td></tr>'
+   +'<tr><td><b>Net cost</b></td><td><b>$'+usd(net)+'</b></td></tr>'
+   +'<tr><td>Year 1 production</td><td>'+usd(prod)+' kWh</td></tr>'
+   +'<tr><td>Year 1 savings</td><td>$'+usd2(y1)+'</td></tr>'
+   +'<tr><td><b>Simple payback (no escalation)</b></td><td><b>'+(y1>0?(net/y1).toFixed(1):'0')+' years</b></td></tr>'
+   +'<tr><td><b>Payback with rate escalation</b></td><td><b>'+(payback===null?'over 25':payback.toFixed(1))+' years</b></td></tr>'
+   +'<tr><td>25-year cumulative savings</td><td>$'+usd(total)+'</td></tr>'
+   +'<tr><td>25-year net gain</td><td>$'+usd(total-net)+'</td></tr>'
+   +'<tr><td>25-year return on cost</td><td>'+roi.toFixed(0)+'%</td></tr>'
+   +'<tr><td>Average monthly savings</td><td>$'+usd2(total/300)+'</td></tr>'
+   +'<tr><th>Year</th><th>Cumulative savings</th></tr>'
+   +'<tr><td>5 years</td><td>$'+usd(yearly[4].cum)+'</td></tr>'
+   +'<tr><td>10 years</td><td>$'+usd(yearly[9].cum)+'</td></tr>'
+   +'<tr><td>15 years</td><td>$'+usd(yearly[14].cum)+'</td></tr>'
+   +'<tr><td>20 years</td><td>$'+usd(yearly[19].cum)+'</td></tr>'
+   +'<tr><td>25 years</td><td>$'+usd(yearly[24].cum)+'</td></tr>';
+  resTbl.innerHTML=rows;
+}
+</script>
+<div class="ad-box" style="margin-top:42px;"></div>
+<script>
+(function(jwl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jwl || {};
+s.src = "\/\/pricklyassociation.com\/b.XwVdsndNGNlV0FYkW\/cJ\/Se\/mT9iugZoUflRk\/PqTfcoxzMoD\/Yy2YMIjkUYt\/N-zuEkwcNvjgYuyNOrQJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>
